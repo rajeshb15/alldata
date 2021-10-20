@@ -59,67 +59,6 @@ paths:
             text/plain:
               schema:
                 $ref: '#/components/schemas/TenantProviderResponse'
-  /v1/apis:
-    post:
-      tags:
-        - Specs
-      x-group-name: Specs
-      x-proxy-name: apis
-      summary: Returns OpenAPI Spec.
-      operationId: APISpecProviderId
-      requestBody:
-        description: Filter Request
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/SpecsFilterRequest'
-        required: false
-      responses:
-        200:
-          description: ""
-          content: {}
-      x-codegen-request-body-name: Body
-  /v1/docs:
-    get:
-      tags:
-        - Documents
-      x-group-name: Documents
-      x-proxy-name: docs
-      summary: Returns Docs in markdown format.
-      operationId: DocsAPIId
-      parameters:
-        - in: query
-          name: path
-          schema:
-            type: string
-          required: true
-          description: Markdown document path
-      responses:
-        200:
-          description: ""
-          content: {}
-      x-codegen-request-body-name: Body
-  /v1/layouts:
-    get:
-      tags:
-        - Layout
-      x-group-name: Layout
-      x-proxy-name: layouts
-      summary: Returns the product page layout.
-      operationId: LayoutAPIId
-      responses:
-        200:
-          description: This text will appear as description of your response body.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-            text/yaml:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
-            text/plain:
-              schema:
-                $ref: '#/components/schemas/PageLayoutResponse'
   /live:
     get:
       tags:
@@ -157,104 +96,6 @@ components:
         message:
           type: string
           description: Message
-    PageLayoutResponse:
-      type: array
-      items:
-        type: object
-        properties:
-          hero:
-            type: array
-            items:
-              type: object
-              properties:
-                descrption:
-                  type: string
-                  description: Descrption
-                image:
-                  type: string
-                  description: Image
-            description: Hero
-          journey Cards:
-            type: array
-            items:
-              type: object
-              properties:
-                journeyCard:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      contextualNavigationCards:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            contextualNavigationCard:
-                              type: array
-                              items:
-                                type: object
-                                properties:
-                                  description:
-                                    type: string
-                                    description: Description
-                                  link:
-                                    type: array
-                                    items:
-                                      type: object
-                                      properties:
-                                        type:
-                                          type: string
-                                          description: Type
-                                        uri:
-                                          type: string
-                                          description: URI
-                                    description: Link
-                                  title:
-                                    type: string
-                                    description: Title
-                              description: ContextualNavigationCard
-                        description: ContextualNavigationCards
-                      description:
-                        type: string
-                        description: Description
-                      link:
-                        type: array
-                        items:
-                          type: object
-                          properties:
-                            type:
-                              type: string
-                              description: Type
-                            uri:
-                              type: string
-                              description: URI
-                        description: Link
-                      title:
-                        type: string
-                        description: Title
-                  description: JourneyCard
-            description: JourneyCards
-    SpecsFilterRequest:
-      type: object
-      properties:
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                description: Subcategories
-          description: Categories
     TenantProviderResponse:
       type: object
       properties:
@@ -267,30 +108,6 @@ components:
         brandLogoURL:
           type: string
           description: BrandLogoURL
-        categories:
-          type: array
-          items:
-            type: object
-            properties:
-              name:
-                type: string
-                description: Name
-              subcategories:
-                type: array
-                items:
-                  type: object
-                  properties:
-                    name:
-                      type: string
-                      description: Name
-                    value:
-                      type: string
-                      description: Value
-                description: Subcategories
-              value:
-                type: string
-                description: Value
-          description: Categories
         name:
           type: string
           description: Name
@@ -323,12 +140,6 @@ components:
           type: string
           description: Title
   responses:
-    apiSpecResponseWrapper:
-      description: OpenAPI Spec for the APIs. 
-      content: {}
-    docsResponseWrapper:
-      description: Markdown files.
-      content: {}
     liveResponse:
       description: Health check.
       content:
@@ -341,30 +152,6 @@ components:
         text/plain:
           schema:
             $ref: '#/components/schemas/LiveProbeResponse'
-    productPage:
-      description: This text will appear as description of your response body. 
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
-        text/yaml:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
-        text/plain:
-          schema:
-            $ref: '#/components/schemas/PageLayoutResponse'
-    tenant:
-      description: This text will appear as description of your response body. 
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/TenantProviderResponse'
-        text/yaml:
-          schema:
-            $ref: '#/components/schemas/TenantProviderResponse'
-        text/plain:
-          schema:
-            $ref: '#/components/schemas/TenantProviderResponse'
   securitySchemes:
     basic:
       type: http
