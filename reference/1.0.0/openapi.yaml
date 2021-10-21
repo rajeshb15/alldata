@@ -6,6 +6,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Account Details
       summary: ' getAccountDetails service'
       description: "This API can be used to retrieve information about one or more\
         \ login accounts. If no id is specified, information about all of user’s FI\
@@ -73,6 +75,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Account Update Summary
       summary: ' getAccountUpdateSummary service'
       description: This API is used to retrieve update summary for accounts.<a href="./examples.jsp?category=AccountDataInq&amp;service=getAccountUpdateSummary"
         target="_blank"><i><b>WorkingSamples</i></b></a>
@@ -137,6 +141,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Account Summary
       summary: ' getAccountsSummary service'
       description: This API is used to fetch the Account Summary information for a
         specified FI Account. <a href="./examples.jsp?category=AccountDataInq&amp;service=getAccountsSummary"
@@ -203,6 +209,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Bank Stmt Details
       summary: ' getBankStmtDetails service'
       description: This API is used to get Bank statement details of the user<a href="./examples.jsp?category=AccountDataInq&amp;service=getBankStmtDetails"
         target="_blank"><i><b>WorkingSamples</i></b></a>
@@ -271,6 +279,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Banking Trans
       summary: ' getBankingTrans service'
       description: This API is used to fetch the transactions for a banking account.
         The transactions for the specified date range will be returned. <a href="./examples.jsp?category=AccountDataInq&amp;service=getBankingTrans"
@@ -357,6 +367,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Credit Card Trans
       summary: ' getCreditCardTrans service'
       description: This API is used to fetch the transactions for a credit card account.
         The transactions for the specified date range will be returned. <a href="./examples.jsp?category=AccountDataInq&amp;service=getCreditCardTrans"
@@ -424,6 +436,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Deleted Trans
       summary: ' getDeletedTrans service'
       description: " This API is used to get the deleted transactions of all accounts\
         \ in the home or by account group with a specified date range and row index\
@@ -516,6 +530,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Employer Stock Options
       summary: ' getEmployerStockOptions service'
       description: This API is used to retrieve the Stock Options details of an ESOP
         account.<a href="./examples.jsp?category=AccountDataInq&amp;service=getEmployerStockOptions"
@@ -596,6 +612,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Investment Pos
       summary: ' getInvestmentPos service'
       description: "This API is used for searching for transactions in specified FI\
         \ Login accounts according to specified search criterion.TrnType can be used\
@@ -685,7 +703,9 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
-      summary: ' getInvestmentTrans service'
+      x-group-name: Account Data
+      x-proxy-name: Investment Trans
+     summary: ' getInvestmentTrans service'
       description: This API is used to fetch the transactions for an Investment account.
         The transactions for the specified date range will be returned. <a href="./examples.jsp?category=AccountDataInq&amp;service=getInvestmentTrans"
         target="_blank"><i><b>WorkingSamples</i></b></a>
@@ -761,6 +781,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Other Account Trans
       summary: ' getOtherAccountTrans service'
       description: This API is used to fetch the transactions for Other Asset/Liability/Biller
         account. The transactions for the specified date range will be returned.<a
@@ -844,7 +866,9 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
-      summary: ' getTaxDocDetails service'
+      x-group-name: Account Data
+      x-proxy-name: Tax Doc Details
+     summary: ' getTaxDocDetails service'
       description: This API is used to get Bank statement details of the user<a href="./examples.jsp?category=AccountDataInq&amp;service=getTaxDocDetails"
         target="_blank"><i><b>WorkingSamples</i></b></a>
       operationId: getTaxDocDetails
@@ -891,6 +915,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Transactions
       summary: ' getTransactions service'
       description: "This API is used for searching for transactions in specified FI\
         \ Login accounts according to specified search criterion.TrnType can be used\
@@ -976,6 +1002,8 @@ paths:
     post:
       tags:
       - Account Data Inquiry Service
+      x-group-name: Account Data
+      x-proxy-name: Ping
       summary: ' Ping service'
       description: This API is used to ping Aggregation service.<a href="./examples.jsp?category=AccountDataInq&amp;service=ping"
         target="_blank"><i><b>WorkingSamples</i></b></a>
