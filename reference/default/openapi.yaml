@@ -1,6 +1,7 @@
 openapi: 3.0.1
 info:
   title: AllData API Documentation
+  version: 1.0.0
 paths:
   /WealthManagementWeb/ws/AccountDataInq/getAccountDetails:
     post:
@@ -705,7 +706,7 @@ paths:
       - Account Data Inquiry Service
       x-group-name: Account Data
       x-proxy-name: Investment Trans
-     summary: ' getInvestmentTrans service'
+      summary: ' getInvestmentTrans service'
       description: This API is used to fetch the transactions for an Investment account.
         The transactions for the specified date range will be returned. <a href="./examples.jsp?category=AccountDataInq&amp;service=getInvestmentTrans"
         target="_blank"><i><b>WorkingSamples</i></b></a>
@@ -868,7 +869,7 @@ paths:
       - Account Data Inquiry Service
       x-group-name: Account Data
       x-proxy-name: Tax Doc Details
-     summary: ' getTaxDocDetails service'
+      summary: ' getTaxDocDetails service'
       description: This API is used to get Bank statement details of the user<a href="./examples.jsp?category=AccountDataInq&amp;service=getTaxDocDetails"
         target="_blank"><i><b>WorkingSamples</i></b></a>
       operationId: getTaxDocDetails
@@ -1022,6 +1023,7 @@ paths:
         required: true
       responses:
         "200":
+          description: Success
           content:
             application/xml:
               schema:
