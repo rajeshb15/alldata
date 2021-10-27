@@ -1,6 +1,7 @@
 openapi: 3.0.1
 info:
   title: AllData API Documentation
+  version: 1.0.0
 paths:
   /WealthManagementWeb/ws/AccountDataInq/getAccountDetails:
     post:
@@ -1022,6 +1023,7 @@ paths:
         required: true
       responses:
         "200":
+          description: Success
           content:
             application/xml:
               schema:
