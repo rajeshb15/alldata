@@ -3152,6 +3152,8 @@ paths:
     post:
       tags:
       - Goal Management Service PFM
+      x-group-name: Goal Management Service PFM
+      x-proxy-name: Create      
       summary: createGoal service
       description: This API used to set a goal for the future or desired result that
         a person plans and commits to achieve goals within a finite time by setting
