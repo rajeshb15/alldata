@@ -1,4 +1,4 @@
-# Create a tenant TEST
+# Create a tenant
 
 ## Documentation Quickstart Guide
 
