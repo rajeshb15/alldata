@@ -47,13 +47,7 @@ paths:
             \ the request was carried out successfully. </td> </tr> <tr> <td><b>HTMLInfo</b></td>\
             \ <td> This element is present if HTMLSniplet or XML_AND_HTMLSniplet have\
             \ been provided in the request. This aggregate will be present only if\
-            \ the request was carried out successfully.<br><br><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr> </tr> </tbody></table> "
+            \ the request was carried out successfully.</td> </tr> </tbody></table> "
           content:
             application/xml:
               schema:
