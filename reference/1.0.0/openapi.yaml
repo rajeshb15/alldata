@@ -97,18 +97,82 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>Status</b></td><td>The status of the request.</td></tr>\
-            \ <tr><td><b>RqUID</b></td><td>The Unique Request Identifier sent by the Server Site. </td></tr>\
-            \ <tr><td><b>AccountUpdateSummaryRs</b></td><td>The aggregate containing recent account update details for the requested account.This aggregate \
-            \ will be present only of the request was carried out successfully. </td></tr><tr><td><b>FILoginAcctId</b></td><td>FI Login identifier.</td></tr>\
-            \ <tr><td><b>FIId</b></td><td> FI Identifier.</td></tr><tr><td><b>LastUpdateAttempt</b></td><td>Time of last account details update.</td></tr\
-            \ <tr><td><b>AcctId</b></td><td>Account Identifier.</td></tr><tr><td><b>AcctNickName</b></td><td> Account nickname for AcctID.</td></tr>\
-            \ <tr><td><b>LastUpdateSuccess</b></td><td>Last successful update time.</td></tr><tr><td><b>LastUpdateStatusCode</b></td><td>Last update status code.\
-            \ <BR><BR><span style="font-family: sans-serif;font-size: 14px;">Possible Status Code</span><br><br>\
-            \ <table class='error_code_table'><thead><tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th>\
-            \ <th>Action API Partner should take to resolve the error</th></tr></thead><tbody><tr><td>4070</td><td>Error</td>\
-            \ <td>Validation failure</td><td>One or more input fields were not valid.</td><td>Partner should make sure the mandatory parameters \
-            \ are sent in the request and in the defined format as in the corresponding XSD.</td></tr></tbody></table></td></tr></tbody></table>"
+          description: "
+            <table>
+              <thead>
+                <th>Element/property</th>
+                <th>Description</th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><b>Status</b></td>
+                  <td>The status of the request.</td>
+                </tr>
+                <tr>
+                  <td><b>RqUID</b></td>
+                  <td>The Unique Request Identifier sent by the Server Site. </td>
+                </tr>
+                <tr>
+                  <td><b>AccountUpdateSummaryRs</b></td>
+                  <td>The aggregate containing recent account update details for the requested account. This aggregate will be present only of the request was carried out successfully. 
+                  </td>
+                </tr>
+                <tr>
+                  <td><b>FILoginAcctId</b></td>
+                  <td>FI Login identifier.</td>
+                </tr>
+                <tr>
+                  <td><b>FIId</b></td>
+                  <td>FI Identifier.</td>
+                </tr>
+                <tr>
+                  <td><b>LastUpdateAttempt</b></td>
+                  <td>Time of last account details update.</td>
+                </tr>
+                <tr>
+                  <td><b>AcctId</b></td>
+                  <td>Account Identifier.</td>
+                </tr>
+                <tr>
+                  <td><b>AcctNickName</b></td>
+                  <td>Account nickname for AcctID.</td>
+                </tr>
+                <tr>
+                  <td><b>LastUpdateSuccess</b></td>
+                  <td>Last successful update time.</td>
+                </tr>
+                <tr>
+                  <td><b>LastUpdateStatusCode</b></td>
+                  <td>Last update status code</td>
+                </tr>
+              </tbody>
+            </table>
+            <table>
+              <tr>
+                <td>Possible Status Code</td>
+              <tr>
+                <tr>
+                  <td>StatusCode</td>
+                  <td>4070</td>
+                </tr>
+                <tr>
+                  <td>Severity</td>
+                  <td>Error</td>
+                </tr>
+                <tr>
+                  <td>StatusDesc</td>
+                  <td>Validation failure</td>
+                </tr>
+                <tr>
+                  <td>Condition</td>
+                  <td>One or more input fields were not valid.</td>
+                </tr>
+                <tr>
+                  <td>Action API Partner should take to resolve the error</td>
+                  <td>Partner should make sure the mandatory parameters are sent in the request and in the defined format as in the corresponding XSD.</td>
+                </tr>
+              </table>          
+          "
           content:
             application/xml:
               schema:
