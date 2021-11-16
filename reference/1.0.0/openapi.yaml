@@ -97,8 +97,8 @@ paths:
         required: true
       responses:
         "200":
-          description: "
-            <table>
+          description: 
+           "<table>
               <thead>
                 <th>Element/property</th>
                 <th>Description</th>
@@ -148,9 +148,9 @@ paths:
               </tbody>
             </table>
             <table>
-              <tr>
-                <td>Possible Status Code</td>
-              <tr>
+                <tr>
+                  <td>Possible Status Code</td>
+                <tr>
                 <tr>
                   <td>StatusCode</td>
                   <td>4070</td>
@@ -171,8 +171,7 @@ paths:
                   <td>Action API Partner should take to resolve the error</td>
                   <td>Partner should make sure the mandatory parameters are sent in the request and in the defined format as in the corresponding XSD.</td>
                 </tr>
-              </table>          
-          "
+            </table>"
           content:
             application/xml:
               schema:
@@ -221,26 +220,82 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
-            \ </thead> <tbody> <tr> <td><b>Status</b></td> <td> The status of the\
-            \ request.</td> </tr> <tr> <td><b>RqUID</b></td> <td> The Unique Request\
-            \ Identifier sent by the Server Site. </td> </tr> <tr> <td><b>FIAcctSummary</b></td>\
-            \  </tr><tr><td>Status</td><td>The status of the FIAcctSummaryInqRq</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr></table></td></tr> </tbody></table> "
+          description: "
+          <table> 
+              <thead> <th>Element/property</th> <th>Description</th></thead> 
+              <tbody> 
+                <tr> 
+                  <td><b>Status</b></td> 
+                  <td> The status of the request.</td> 
+                </tr> 
+                <tr> 
+                  <td><b>RqUID</b></td> 
+                  <td> The Unique Request Identifier sent by the Server Site</td
+                </tr> 
+                <tr> 
+                  <td><b>FIAcctSummary</b></td> 
+                </tr>
+                <tr> 
+                  <td>Status</td><td>The status of the FIAcctSummaryInqRq</td>
+                </tr>
+                <tr> 
+                  <td></td><td> 
+                </tr>
+              </tbody>
+           </table>
+           <table>
+              <thead>
+                <tr> <th>Possible Status Code </th> </tr>
+              </thead>
+           </table>
+           <table>
+              <thead>
+                <tr>
+                    <th>StatusCode</th>
+                    <th>Severity</th>
+                    <th>StatusDesc</th>
+                    <th>Condition</th>
+                    <th>Action API Partner should take to resolve the error</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0</td>
+                  <td>Info</td>
+                  <td>Success</td>
+                  <td>The service provider successfully processed the request.</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>100</td>
+                  <td>Error</td>
+                  <td>General Error</td>
+                  <td>There was an error that prevented the service provider from processing the   transaction. No additional information is provided.</td>
+                  <td>If this error continues to occur, please reach out to us the timestamp and CEUserId.</td>
+                </tr>
+                <tr>
+                  <td>1740</td>
+                  <td>Error</td>
+                  <td>Authentication Failed</td>
+                  <td>The customer could not be authenticated due to an incorrect HomeID, login ID or password.</td>
+                  <td>Verify the user Login ID and Password</td>
+                </tr>
+                <tr>
+                  <td>4070</td>
+                  <td>Error</td>
+                  <td>Validation failure</td>
+                  <td>One or more input fields were not valid.</td>
+                  <td>Partner should make sure the mandatory parameters are sent in the request and in the defined format as in the corresponding XSD.</td>
+                </tr>
+                <tr>
+                  <td>4130</td>
+                  <td>Error</td>
+                  <td>Invalid role</td>
+                  <td>A signon has been attempted by a user in a role other than the authorized role.</td>
+                  <td></td>
+                </tr>
+              </tbody>    
+            </table>"
           content:
             application/xml:
               schema:
@@ -287,30 +342,58 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>UserBankStmtConsent</b></td>\
-            \ <td>Contains the user opt-in  / opt-out status for Bank statement.</td></tr><tr><td><b>FIAcctsStmtList</b></td><td>List\
-            \ of FILoginAcctIds and their corresponding consent status is provided.</td></tr><tr><td><b>AcctBankStmtDetail</b></td>\
-            \ <td>Provides AcctID and corresponding bank statement document lists.</td></tr><tr><td></td><td><table\
-            \ class='error_code_table'><span style=\"font-family: sans-serif;font-size:\
-            \ 14px;\">Possible Status Code</span><br><br></td></tr><tr><td></td><td><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1087</td><td>Error</td><td>Bank Statement\
-            \ download not enabled at home.</td><td>This service is disabled for the\
-            \ requested home. Contact FISERV for enabling the property.</td><td></td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr></tbody></table> "
+          description: "
+          <table>
+            <thead>
+              <th>Element / property</th>
+              <th>Description</th>
+            </thead>
+            <tbody>
+              <tr>
+                <td><b>RqUID</b></td>
+                <td>Unique Request Identifier. The Client Site sends this element with the request.</td>
+              </tr>
+              <tr>
+                <td><b>Status</b></td> 
+                <td>The status of the request.</td>
+              </tr>
+              <tr>
+                <td><b>UserBankStmtConsent</b></td>
+                <td>Contains the user opt-in opt-out status for Bank statement.</td>
+              </tr>
+              <tr>
+                <td><b>FIAcctsStmtList</b></td>
+                <td>List of FILoginAcctIds and their corresponding consent status is provided.</td>
+              </tr>
+              <tr>
+                <td><b>AcctBankStmtDetail</b></td>
+                <td>Provides AcctID and corresponding bank statement document lists.</td>
+              </tr>
+            </tbody>
+          </table>
+          <table>
+              <tr>
+                <td>Possible Status Code</td>
+              </tr>
+              <tr>
+                <td>StatusCode: 0; Severity: Info; StatusDesc: Success; Codition: The service provider successfully processed the request; Action API Partner should take to resolve the error: NA</td>
+              </tr>
+              <tr>
+                <td>StatusCode: 100; Severity: Error; StatusDesc: General Error; Codition: There was an error that prevented the service provider from processing the transaction. No additional information is provided; Action API Partner should take to resolve the error: If this error continues to occur, please reach out to us the timestamp and CEUserId.</td>
+              </tr>
+              <tr>
+                <td>StatusCode: 1087; Severity: Error; StatusDesc: Bank Statement download not enabled at home; Codition: This service is disabled for the requested home. Contact FISERV for enabling the property; Action API Partner should take to resolve the error: NA</td>
+              </tr>
+              <tr>
+                <td>StatusCode: 4130; Severity: Error; StatusDesc: Invalid role; Codition: A signon has been attempted by a user in a role other than the authorized role; Action API Partner should take to resolve the error: NA</td>
+              </tr>
+              <tr>
+                <td>StatusCode: 1740; Severity: Error; StatusDesc: Authentication Failed; Codition: The customer could not be authenticated due to an incorrect HomeID, login ID or password; Action API Partner should take to resolve the error: Verify the user Login ID and Password</td>
+              </tr>
+              <tr>
+                <td>StatusCode: 4070; Severity: Error; StatusDesc: Validation failure; Codition: One or more input fields were not valid; Action API Partner should take to resolve the error: Partner should make sure the mandatory parameters are sent in the request and in the defined format as in the corresponding XSD</td>
+              </tr> 
+          </table>"
           content:
             application/xml:
               schema:
