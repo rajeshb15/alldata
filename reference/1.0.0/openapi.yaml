@@ -3861,21 +3861,17 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>Status</b></td><td>\
-            \ The status of the request.</td></tr><tr><td><b>RqUID</b></td><td> Unique\
-            \ Request Identifier. The Client Site sends this element with the request.\
-            \ </td></tr><tr><td><b>FIInfoDataList</b></td><td> List of FI along with\
-            \ their requisite information.<br>This aggregate will be present, only\
-            \ if the request was carried out successfully and this option was desired\
-            \ in the request. </td></tr><tr><td><b>FIIdList</b></td><td> List of FI\
-            \ id’s.<br>This aggregate will be present, only if the request was carried\
-            \ out successfully and this option was desired in the request.</td></tr>\
-            \ <tr><td>Status</td><td>The status of the FIInfoRs <br><br>For Sevirity:\
-            \ Info<br> StatusCode - StatusDesc: <br><br> 0 - Success<br><br>For Sevirity:\
-            \ Error<br> StatusCode - StatusDesc: <br><br>100  - General Error<br>4060\
-            \ - No data available<br>4070 - Invalid data in request<br>4260 - Invalid\
-            \ Date<br>9001 - Support for this ABA routing number coming soon.<br>9002\
-            \ - ABA number is not supported.<br></td></tr>  </tbody></table>"
+          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody> \
+\ <tr><td><b>Status</b></td><td>The status of the request.</td></tr> \ 
+\ <tr><td><b>RqUID</b></td><td> Unique Request Identifier. The Client Site sends this element with the request.</td> \
+\ </tr><tr><td><b>FIInfoDataList</b></td><td> List of FI along with their requisite information.<br>This aggregate \
+\ will be present, only if the request was carried out successfully and this option was desired in the request. </td> \
+\ </tr><tr><td><b>FIIdList</b></td><td> List of FI id’s.<br>This aggregate will be present, only if the request was \
+\ carried out successfully and this option was desired in the request.</td></tr><tr><td>Status</td><td>The status of \
+\ the FIInfoRs </tr></tbody></table><table><tr><td>StatusCode</td><td>StatusDesc</td></tr><tr><td>0</td><td>Success</td> \
+\ </tr><tr><td>100</td><td>General Error</td></tr><tr><td>4060</td><td>No data available</td></tr><tr><td>4070</td> \
+\ <td>Invalid data in request</td></tr><tr><td>4260</td><td>Invalid Date</td></tr><tr><td>9001</td><td>Support for this \
+\ ABA routing number coming soon.</td></tr><tr><td>9002</td><td>ABA number is not supported.</td></tr></table>"
           content:
             application/xml:
               schema:
@@ -3934,21 +3930,18 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table> <thead><th>Element / property</th><th>Description</th></thead>\
-            \ <tbody><tr><td><b>RqUID</b></td><td>Unique Request Identifier. The Client\
-            \ Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The status of the request.</td></tr><tr><td><b>FIInfoDataList</b></td><td>List\
-            \ of FI along with their requisite information.<br>This aggregate will\
-            \ be present, only if the request was carried out successfully and this\
-            \ option was desired in the request.</td></tr><tr><td><b>FIIdList</b></td><td>List\
-            \ of FI id’s.<br>This aggregate will be present, only if the request was\
-            \ carried out successfully and this option was desired in the request.\
-            \ </td></tr>  <tr><td>Status</td><td>The status of the FISearchRs <br><br>For\
-            \ Sevirity: Info<br> StatusCode - StatusDesc: <br><br> 0 - Success<br><br>For\
-            \ Sevirity: Error<br> StatusCode - StatusDesc: <br><br>100  - General\
-            \ Error<br>4060 - No data available<br>4070 - Invalid data in request<br>4360\
-            \ - Data insufficient to carry out request<br>4591 - No FIs found matching\
-            \ the search criteria provided<br></td></tr> </tbody></table> "
+          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td> \
+\ <td>Unique Request Identifier. The ClientSite sends this element with the request.</td></tr> \
+\ <tr><td><b>Status</b></td><td>The status of the request.</td></tr><tr><td><b>FIInfoDataList</b></td> \
+\ <td>Listof FI along with their requisite information.<br>This aggregate willbe present, only if the  \
+\ request was carried out successfully and thisoption was desired in the request.</td></tr> \
+\ <tr><td><b>FIIdList</b></td><td>Listof FI id’s.<br>This aggregate will be present, only if the request \
+\ was carried out successfully and this option was desired in the request.</td></tr><tr><td>Status</td> \
+\ <td>The status of the FISearchRs</td></tr></tbody></table><table><tr><td>0</td><td>Success</td> \
+\ <tr>	<tr><td>100</td><td>General Error</td><tr><tr><td>4060</td><td>No Data Available</td><tr> \
+\ <tr><td>4070</td><td>Invalid data in request</td><tr><tr><td>4591</td><td>No FIs found matching  \
+\ the search criteria provided</td><tr></table>"
+
           content:
             application/xml:
               schema:
@@ -3995,37 +3988,17 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns  the  status  of  the API request.</td></tr> <tr><td><b>SignonRs</b></td><td>The\
-            \ Admin credentials are received as part of this request.</td></tr><tr><td><b>Status</b></td><td>\
-            \ \tThe status of the Transscation Categories Info Request.<br></td></tr><tr><td><b>CategoryRec</b></td><td>This\
-            \ Aggregate will return the Category Name and ID for transactions. <br>\
-            \ </td></tr><tr><td>Name</td> <td>This Aggregate will return the Category\
-            \ Name for transaction <br></td></tr><tr><td>Id </td><td> This Aggregate\
-            \ will return the Category Id for transaction <br> This element will be\
-            \ present only if the user registration is successful. <br></td></tr><tr><td>Status</td><td>The\
-            \ status of the TransCategoriesInfoRq</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4060</td><td>Info</td><td>No\
-            \ data available</td><td>No data is available to satisfy the request.\
-            \ This could mean that the user has not registered any financial institutions;\
-            \ there are no transactions in the specified date range and so on.</td><td>If\
-            \ this error occurs on invoking getAccountDetails API, it means user has\
-            \ not added any financial institutions. Please make sure user has added\
-            \ accounts successfully under any financial institutions. If this error\
-            \ occurs on invoking transactions APIs, make sure the 'LastSuccessfulUpdate'\
-            \ date is returned in getAccountDetails API for that specific account\
-            \ and the specified date range lies within the 'LastSuccessfulUpdate'\
-            \ date.</td></tr></table></td></tr> </tbody></table> "
+          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A \
+\ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td><td>This Aggregate returns the status of the \ 
+\ API request.</td></tr><tr><td><b>SignonRs</b></td><td>TheAdmin credentials are received as part of this request.</td> \
+\ </tr><tr><td><b>Status</b></td><td>tThe status of the Transscation Categories Info Request.<br/></tr> \
+\ <tr><td><b>CategoryRec</b></td><td>This Aggregate will return the Category Name and ID for transactions.</td> \
+\ </tr><tr><td>Name</td><td>This Aggregate will return the Category Name for transaction</tr><tr><td>Id </td> \
+\ <td> This Aggregate will return the Category Id for transaction <br> This element will be present only if the \
+\ user registration is successful. <br/></tr><tr><td>Status</td><td>The status of the TransCategoriesInfoRq</td></tr> \
+\ </tbody></table><table><tr><td>0</td><td>Success</td></tr><tr><td>100</td><td>General Error</td></tr> \
+\ <tr><td>1740</td><td>Authentication Failed</td></tr><tr><td>4060</td><td>No data available&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>"
+
           content:
             application/xml:
               schema:
@@ -4528,25 +4501,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>SignonRs</b></td>\
-            \ <td>Data containing signon information to login to Fiserv System, it\
-            \ is used to authenticate user to access service.</td></tr><tr><td><b>RTVInfoRs</b></td><td>Response\
-            \ container for the list of RTV Info.</td></tr><tr><td><b>RTVInfo</b></td>\
-            \ <td> Its give the RTV Status.</td></tr><tr><td> Status </td><td> The\
-            \ status of the request</td></tr><tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr></tbody></table> "
+          description: Success
           content:
             application/xml:
               schema:
@@ -4596,24 +4551,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>SignonRs</b></td>\
-            \ <td>Data containing signon information to login to Fiserv System, it\
-            \ is used to authenticate user to access service.</td></tr><tr><td><b>AckRTVResultRs</b></td><td>Response\
-            \ container for the RTV Result.</td></tr><tr><td> Status </td><td> The\
-            \ status of the request</td></tr><tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr></tbody></table> "
+          description: Success
           content:
             application/xml:
               schema:
@@ -4662,24 +4600,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>SignonRs</b></td>\
-            \ <td>Data containing signon information to login to Fiserv System, it\
-            \ is used to authenticate user to access service.</td></tr><tr><td><b>AdvanceRTVFI</b></td><td>Response\
-            \ container for the RTV FI.</td></tr><tr><td> Status </td><td> The status\
-            \ of the request</td></tr><tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr></tbody></table> "
+          description: Success
           content:
             application/xml:
               schema:
@@ -4729,26 +4650,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>SignonRs</b></td>\
-            \ <td>Data containing signon information to login to Fiserv System, it\
-            \ is used to authenticate user to access service.</td></tr><tr><td><b>FIHarvestStatus</b></td><td>Just\
-            \ give the Fi harvesting status is enabled or disabled.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4410</td><td>Error</td><td>Invalid\
-            \ FIId</td><td>FI ID should be valid to process the request</td><td>Parnter\
-            \ has make sure passing correct FI ID in request</td></tr></tbody></table> "
+          description: Success
           content:
             application/xml:
               schema:
@@ -4801,41 +4703,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>SignonRs</b></td>\
-            \ <td>Data containing signon information to login to Fiserv System, it\
-            \ is used to authenticate user to access service.</td></tr><tr><td><b>FISearchRs</b></td><td>Response\
-            \ container for the FI information.</td></tr><tr><td><b>RunId</b></td>\
-            \ <td>Harvest request identification.</td></tr><tr><td><b>FIVerifyInfoList</b></td>\
-            \ <td>An array list of fiverifyInfo, such as FIID, FIURL, loginParams,\
-            \ oauthFI.</td></tr><tr><td><b>LoginParams</b></td> <td>contains the FI\
-            \ login parameters details.</td></tr><tr><td> Status </td><td> The status\
-            \ of the request</td></tr><tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4360</td><td>Error</td><td>Incomplete\
-            \ Data For Request Completion.</td><td>The data provided for Request completion\
-            \ is not sufficient. Typically insufficient data provided for “add new\
-            \ accounts”, “add more accounts” or “account maintenance” operations and\
-            \ so on.</td><td></td></tr><tr><td>4060</td><td>Info</td><td>No data available</td><td>No\
-            \ data is available to satisfy the request. This could mean that the user\
-            \ has not registered any financial institutions; there are no transactions\
-            \ in the specified date range and so on.</td><td>If this error occurs\
-            \ on invoking getAccountDetails API, it means user has not added any financial\
-            \ institutions. Please make sure user has added accounts successfully\
-            \ under any financial institutions. If this error occurs on invoking transactions\
-            \ APIs, make sure the 'LastSuccessfulUpdate' date is returned in getAccountDetails\
-            \ API for that specific account and the specified date range lies within\
-            \ the 'LastSuccessfulUpdate' date.</td></tr></tbody></table> "
+          description: Success
           content:
             application/xml:
               schema:
@@ -4885,33 +4753,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>SignonRs</b></td>\
-            \ <td>Data containing signon information to login to Fiserv System, it\
-            \ is used to authenticate user to access service.</td></tr><tr><td><b>RunId</b></td>\
-            \ <td>Harvest request identification.</td></tr><tr><td><b>OAuthInfo</b></td>\
-            \ <td>This will give the OAuth related info.</td></tr><tr><td> Status\
-            \ </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4322</td><td>Error</td><td>Avoid\
-            \ gathering and sending User Credentials in OAuth FI</td><td></td></tr><tr><td>4322</td><td>Error</td><td>Avoid\
-            \ gathering and sending User Credentials in OAuth FI</td><td></td></tr><tr><td>4460</td><td>Error</td><td>FI\
-            \ Login Credential exceed max length</td><td>Login credentials entered\
-            \ by user exceed the maximum length allowed at financial institution web\
-            \ site</td><td></td></tr><tr><td>4320</td><td>Error</td><td>FI Login Credentials\
-            \ Required.</td><td>Error code generated when an “add more account” operation\
-            \ is attempted for a low trust account without providing the login credentials.</td><td></td></tr><tr><td>7619</td><td>Error</td><td>FI\
-            \ Not Available.</td><td></td><td></td></tr></tbody></table> "
+          description: Success
           content:
             application/xml:
               schema:
@@ -4959,11 +4801,44 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status</b></td><td>The\
-            \ status of the request.</td></tr><tr><td><b>Status Code: 7620</b></td><td>Unable\
-            \ to get WM Access Key.</td></tr><tr><td><b>Status Code: 100</b></td><td>General\
-            \ error.</td></tr><tr><td><b>Status Code: 0</b></td><td>Success.</td></tr></tbody></table> "
+          description: "<div style='display:block;'>
+                <div style='display:block;'>
+                    <div style='display:inline-block;'>Element / Property
+                    </div>
+                    <div style='display:inline-block;'>Description
+                    </div>
+                </div>
+                <div style='display:block;'>
+                    <div style='display:inline-block;'>RqUID
+                    </div>
+                    <div style='display:inline-block;'>A Unique Request Identifier.
+                    </div>
+                </div>
+                <div style='display:block;'>
+                    <div style='display:inline-block;'>Status
+                    </div>
+                    <div style='display:inline-block;'>	The status of the request.
+                    </div>
+                </div>
+                <div style='display:block;'>
+                    <div style='display:inline-block;'>0
+                    </div>
+                    <div style='display:inline-block;'>Success
+                    </div>
+                </div>
+                <div style='display:block;'>
+                    <div style='display:inline-block;'>100
+                    </div>
+                    <div style='display:inline-block;'>General Error
+                    </div>
+                </div>
+                <div style='display:block;'>
+                    <div style='display:inline-block;'>7620
+                    </div>
+                    <div style='display:inline-block;'>Unable to get WM Access Key.
+                    </div>
+                </div>
+            </div> "
           content:
             application/xml:
               schema:
