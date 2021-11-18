@@ -34,11 +34,12 @@ header:
                     Fiserv has been in the data aggregation business for more than 20 years. Thousands of businesses and millions of consumers trust Fiserv to help them maximize the power of data aggregation by easily integrating the data they need with any new or existing application, regardless of the underlying technology platform.
   whoIsItFor: Testing...
 featuredFeatures:
-  - title: Apple Pay
+  - title: Account Verification
     description: >
-      One of the most popular mobile payment and digital wallets. Customers can make payments 
-      in-store, mobile or online. To leverage, customers use an Apple devices - iPhone, Apple Watch, 
-      iPad, Mac, etc.
+      AllData Aggregation from Fiserv makes setting up ACH payments easier for senders. A user provides
+      their credentials, and AllData Aggregation® retrieves their account and routing numbers. This
+      not only simplifies the entire process, it also verifies the account provided is owned by the
+      same person trying to initiate the ACH transfer.
     tags: ["tag1", "tag2"]
     bullets: ["Faster acceptance than credit or debit", "Biometric security", "Global offering and acceptance"]
     #links: ["docs/Online-Mobile-Digital/Wallets-AltPayments/Apple-Pay/Apple-Pay.md"]
@@ -71,10 +72,11 @@ featuredFeatures:
         description: Remove sensitive customer data from your environment and reduce PCI compliance scope.Transaction data is protected by a randomly-generated identifier known as a "token".
         type: "post"        
         path: "/payments-vas/v1/tokens"
-  - title: Omni Channel
+  - title: Money Movement
     description: >
-      Leverage your existing infrastructure and UI to accept payments online, in-store or on mobile 
-      devices.
+      Through AllData® Aggregation, that all changes. Accessing financial data needed for credit decisions
+      happens quickly, eliminating the traditional paper chase. AllData Aggregation also streamlines
+      the process for the borrower. Rather than gathering documents and downloaded pdf’s from multiple sources.
     tags: ["tag1", "tag2"]
     bullets: ["Modern technology stack", "Automated backoffice", "Fast testing, certification and implementation"]
     #links: ["docs/Resources/API-Documents/Use-Our-APIs.md"]
@@ -99,8 +101,11 @@ featuredFeatures:
         description: Remove sensitive customer data from your environment and reduce PCI compliance scope.Transaction data is protected by a randomly-generated identifier known as a "token".
         type: "post"        
         path: "/payments-vas/v1/tokens"
-  - title: Point of Sale
-    description: Point-of-Sale (POS) is the point at which a product is paid for. In-person transactions are conducted by a terminal or software. Online transactions are conducted by a software on their online store or mobile app.
+  - title: Lending & Account Opening
+    description: > 
+      AllData Aggregation from Fiserv is used by businesses to provide consumers with a comprehensive view
+      of their finances, for advisors to provide deeper insight and better analysis, and for fintechs to
+      develop innovative products and services with speed and agility.
     tags: ["tag1", "tag2"]
     bullets: ["Modern technology stack", "Automated backoffice", "Fast testing, certification and implementation"]
     relatedDocs:
