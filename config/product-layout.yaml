@@ -29,9 +29,9 @@
 ################################################################################
 header:
   productionDescription: > 
-                    Built to deliver innovation through simple, fast integrations, the Commerce Hub is the most powerful omnichannel platform. With developer-friendly, flexible communication standards, unified APIs, and pre-certified integrations the Commerce Hub reduces development time and accelerates speed to market. </br></br>
+                    Leading financial institutions and technology providers use AllData Aggregation to gather financial data for millions of consumers, from more than 18,000 distinct data sources, including bank accounts, liability accounts including credit cards, investment and retirement accounts, as well as insurance and billers. </br></br>
 
-                    A true single entry point and intelligent orchestration layer means you now have access to the latest, most popular commerce experiences through your existing infrastructure. With less ongoing maintenance and fewer operational costs, you can focus on creating new ways for consumers to discover and interact with you.
+                    Fiserv has been in the data aggregation business for more than 20 years. Thousands of businesses and millions of consumers trust Fiserv to help them maximize the power of data aggregation by easily integrating the data they need with any new or existing application, regardless of the underlying technology platform.
   whoIsItFor: Testing...
 featuredFeatures:
   - title: Apple Pay
@@ -46,7 +46,7 @@ featuredFeatures:
       - relatedDoc: 
         title: Getting Started 
         description: Commerce Hub allows developers to quickly enable secure and convenient Apple Pay payments in their app or website.
-        link: "/docs/Online-Mobile-Digital/Wallets-AltPayments/Apple-Pay/Apple-Pay.md"
+        link: "/docs/documentation/samplepdf.pdf"
       - relatedDoc: 
         title: Apple Pay on the Web 
         description: Commerce Hub's RESTful API integration allows the merchant to create a custom UI integration with Apple Pay. The merchant will host the payment processing on their server and has full control over the look and feel. 
