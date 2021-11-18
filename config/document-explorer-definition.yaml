@@ -31,6 +31,18 @@
   - title: Getting Started
     link: docs/getting-started.md
 - sections:
+  - title: Add Account
+    link: docs/add-account.md
+- sections:
+  - title: AllData WS API
+    link: docs/alldata-ws-api.md
+- sections:
+  - title: AllData Next-Gen
+    link: docs/alldata-next-gen.md
+- sections:
+  - title: AllData Common Use Cases API Solution
+    link: docs/alldata-common-use-cases.md
+- sections:
   - title: Resources
     sections:
     - title: API Guide
