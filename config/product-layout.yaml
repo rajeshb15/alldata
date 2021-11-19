@@ -50,7 +50,10 @@ featuredFeatures:
       - relatedDoc: 
         description: <h1>How to Use AllData APIs and Add Account Widget for Various Use Cases</h1>
       - relatedDoc: 
-        description: <p>Next-Gen Widgets Integration Guide</p>
+        description: > 
+          <center><h1>Next-Gen Widgets Integration Guide</h1></center><br><br>
+          <a href="../docs?path=docs/documentation/samplepdf.pdf" target="_blank" download>Learn more</a><br><br>
+          <center><img src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/pdf-icon.png"></center>
     relatedAPIs:
       - relatedAPI: 
         title: Charges 
