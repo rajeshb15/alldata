@@ -46,7 +46,12 @@ featuredFeatures:
     relatedDocs:
       - relatedDoc: 
         title: Common Data Aggregation Use Cases and AllData API Solutions 
-        description: <a href="../docs?path=docs/documentation/samplepdf.pdf" target="_blank" download>Learn more</a>
+        description: > 
+          <a href="../docs?path=docs/documentation/samplepdf.pdf" target="_blank" download>Learn more</a><br><br>
+          <center>
+            <a href="../docs?path=docs/documentation/samplepdf.pdf" target="_blank" download><img src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/pdf-icon.png"></a><br>
+            Common Agg Use Cases
+          </center>
       - relatedDoc: 
         description: <h1>How to Use AllData APIs and Add Account Widget for Various Use Cases</h1>
       - relatedDoc: 
