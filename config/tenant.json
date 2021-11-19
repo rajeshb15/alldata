@@ -43,5 +43,22 @@
         "value": false
       }
   ]
-  }
+  },
+  "supportConfig": [{ 
+    "bug": {
+      "label": "bug,AllData",
+      "template": "bug.md",
+      "assignees": "kai.zhu@fiserv.com"
+    },  
+    "feedback": {
+      "label": "feedback,AllData",
+      "template": "feedback.md",
+      "assignees": "kai.zhu@fiserv.com"
+    },
+    "enhancement": {
+      "label": "enhancement,AllData",
+      "template": "feature.md",
+      "assignees": "kai.zhu@fiserv.com"
+    }
+  }]
 }
