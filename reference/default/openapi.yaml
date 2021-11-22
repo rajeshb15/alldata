@@ -806,27 +806,6 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
-            example: 
-              RqUID: RqUID0
-              OtherAcctTrnInqRq:
-                FIAcctId:
-                  AcctId: '5585107'
-                  AcctType: OLA
-                  ExtAcctType: ILA
-                SelectionCriterion:
-                  SelRangeDt:
-                    EndDt: '2017-12-30'
-                    StartDt: '2017-12-01'
-              partnerID: '50120000'
-              version: version1
-              SignonRq:
-                UserInfo:
-                  Role: User
-                  UserPassword:
-                    CryptVal: cashedge1
-                    CryptType: None
-                  UserID: AUTO_JSON_FLClt83405
-                  HomeID: '50120001'
           text/xml:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
@@ -873,45 +852,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
-              example: 
-                Status:
-                  StatusCode: 0
-                  Severity: Info
-                  StatusDesc: Success
-                SignonRs:
-                  Status:
-                    StatusCode: 0
-                    Severity: Info
-                    StatusDesc: Success
-                  CEUserID: 3752308
-                RqUID: RqUID0
-                partnerID: 50120000
-                OtherAcctTrnInqRs:
-                  Status:
-                    StatusCode: 0
-                    Severity: Info
-                    StatusDesc: Success
-                  OtherAcctTrns:
-                    FIAcctId:
-                      AcctId: 5585107
-                      AcctType: OLA
-                      ExtAcctType: ILA
-                    SelectionCriterion:
-                      SelRangeDt:
-                        StartDt: '2017-12-01'
-                        EndDt: '2017-12-30'
-                    OtherAcctTrnRec:
-                    - TrnID: 2966186
-                      TrnType: Credit
-                      PostedDt: '2017-12-14'
-                      CurAmt:
-                        Amt: 2910.45
-                        CurCode: USD
-                      Memo: Escrow mute-bursement
-                      TrnPrincipal: 278.13
-                      TrnInterest: 945.18
-                      CreatedOnDt: '2021-11-08T22:04:57-08:00'
-                version: 1.4.6
             text/xml:
               schema:
                 $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
