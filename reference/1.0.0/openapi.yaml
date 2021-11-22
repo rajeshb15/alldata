@@ -30,7 +30,8 @@ paths:
             schema:
               $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
           application/json:
-            schema: {$ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'}
+            schema: 
+              $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
             examples:
               getAccountDetails: {$ref: '#/components/examples/GetAccountDetailsRequest'}
           text/xml:
@@ -56,6 +57,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
+              examples:
+                getAccountDetails: {$ref: '#/components/examples/GetAccountDetailsResponse'}
             text/xml:
               schema:
                 $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
@@ -5343,6 +5346,7 @@ components:
       properties:
         RqUID:
           type: string
+          description: The Unique Request Identifier sent by the Server Site.
         Status:
           $ref: '#/components/schemas/StatusType'
         SignonRs:
@@ -5370,10 +5374,12 @@ components:
           $ref: '#/components/schemas/FILoginAcctInfoListType'
         HTMLInfo:
           type: string
+          description: This element is present if HTMLSniplet or XML_AND_HTMLSniplet have been provided in the request. This aggregate will be present only if the request was carried out successfully.
     FILoginAcctInfoListType:
       required:
       - FILoginAcctInfo
       type: object
+      description: List of FILoginAcctInfo aggregates, one for each FI Login Account specified in the request.This aggregate list will be present only if the request was carried out successfully.
       properties:
         FILoginAcctInfo:
           type: array
@@ -5806,6 +5812,7 @@ components:
     MFAQuestionType:
       required:
       - Questions
+      type: object
       properties:
         Questions:
           type: array
@@ -5984,6 +5991,7 @@ components:
       required:
       - Severity
       type: object
+      description: The status of the request.
       properties:
         StatusCode:
           type: integer
@@ -6289,6 +6297,7 @@ components:
       xml:
         name: FILoginAcctInfoListInqRqHeader
     FILoginAcctInfoListInqRqType:
+      type: object
       properties:
         FILoginAcctList:
           $ref: '#/components/schemas/FILoginAcctListType'
@@ -6300,6 +6309,7 @@ components:
             xml:
               name: IncludeDetail
     FILoginAcctListType:
+      type: object
       description: List of FI Login Accounts for which the FILoginAcctInfo is to be returned.
       properties:
         HomeID:
@@ -6373,6 +6383,7 @@ components:
     SessionInfoType:
       required:
       - SessionToken
+      type: object
       properties:
         Role:
           type: string
@@ -6381,6 +6392,7 @@ components:
         HomeID:
           type: string
     SignonRqType:
+      type: object
       properties:
         UserInfo:
           $ref: '#/components/schemas/UserInfoType'
@@ -6401,6 +6413,7 @@ components:
         MFAQuestions:
           $ref: '#/components/schemas/MFAQuestionType'
     SimulatedUserDetailsType:
+      type: object
       properties:
         IdType:
           type: string
@@ -6420,6 +6433,7 @@ components:
       - Role
       - UserID
       - UserPassword
+      type: object
       properties:
         UserID:
           type: string
@@ -12768,3 +12782,658 @@ components:
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
+    GetAccountDetailsResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752296
+          SessInfo: 78744e78634a436b41465542673870584442756757413d3d
+        FILoginAcctInfoListInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FILoginAcctInfoList:
+            FILoginAcctInfo:
+            - FILoginAcctId: 5585101
+              FILoginAcctCreator: UserCreated
+              FIInfo:
+                FIId: '505004'
+                FIName: CashEdge Bank - ESOP
+                Country: US
+                FIHarvestStatus: Enabled
+                FICrawlable: Enabled
+                URL:
+                - ParamName: FILogin
+                  ParamVal: https://testbank.wm.cashedge.com/jsp/cashedge/fiserver/cefi/fiServerLogin.jsp?FI_ID=505004
+                FIAvailability:
+                  CurrentStatus: Active
+                  CurrentStatusShortDesc: Active
+                  CurrentStatusDetailDesc: Active
+                  CurrentStatusStartDate: '2013-06-03T07:11:17-07:00'
+              FIUserLoginAcctInfo:
+                TrustMode: High
+                ClassifiedStatus: Classified
+                AcctHarvestStatus: Enabled
+                AcctDiscoveryStatus: AsIs
+                URL:
+                - ParamName: FIAutoLogin
+                  ParamVal: "/jsp/aggr/partner/CEServices.jsp?action=FIAutoLogin&FIAutoLoginURL=https://testbank.wm.cashedge.com/jsp/cashedge/fiserver/cefi/fiServerLogin.jsp?FI_ID=505004"
+                - ParamName: FIHarvest
+                  ParamVal: "/jsp/aggr/partner/CEServices.jsp?action=FIHarvest&FILoginAcctId=5585101"
+                - ParamName: AddAccount
+                  ParamVal: "/jsp/aggr/NotImplemented.jsp"
+              FIAcctSummary:
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585112
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: 1234-4321
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: Employer Stock Plan
+                  - ParamName: NickNameAtCE
+                    ParamVal: Employer Stock Plan
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T13:14:07-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T13:14:25-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 209075.15
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 209075.15
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Non Retirement
+                - ParamName: Instrument
+                  ParamVal: Brokerage
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+            - FILoginAcctId: 5585095
+              FILoginAcctCreator: UserCreated
+              FIInfo:
+                FIId: '505002'
+                FIName: CashEdge Bank - Retail Investment
+                Country: US
+                FIHarvestStatus: Enabled
+                FICrawlable: Enabled
+                URL:
+                - ParamName: FILogin
+                  ParamVal: https://testbank.wm.cashedge.com/jsp/cashedge/fiserver/cefi/fiServerLogin.jsp?FI_ID=505002
+                FIAvailability:
+                  CurrentStatus: Active
+                  CurrentStatusShortDesc: Active
+                  CurrentStatusDetailDesc: Active
+                  CurrentStatusStartDate: '2019-09-05T11:29:40-07:00'
+              FIUserLoginAcctInfo:
+                TrustMode: High
+                ClassifiedStatus: Classified
+                AcctHarvestStatus: Enabled
+                AcctDiscoveryStatus: AsIs
+                URL:
+                - ParamName: FIAutoLogin
+                  ParamVal: "/jsp/aggr/partner/CEServices.jsp?action=FIAutoLogin&FIAutoLoginURL=https://testbank.wm.cashedge.com/jsp/cashedge/fiserver/cefi/fiServerLogin.jsp?FI_ID=505002"
+                - ParamName: FIHarvest
+                  ParamVal: "/jsp/aggr/partner/CEServices.jsp?action=FIHarvest&FILoginAcctId=5585095"
+                - ParamName: AddAccount
+                  ParamVal: "/jsp/aggr/NotImplemented.jsp"
+              FIAcctSummary:
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585096
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: '1258713'
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: Fiserv 401 (k) Plan - A
+                  - ParamName: NickNameAtCE
+                    ParamVal: Fiserv 401 (k) Plan - A
+                  AcctOwnerName: Walter Rhodes
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T13:09:21-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T13:09:45-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 11111
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 11111
+                    CurCode: USD
+                - BalType: TotalAmountOfContributions
+                  CurAmt:
+                    Amt: 240659
+                    CurCode: USD
+                - BalType: EmployerProfitSharing
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: TotalAmountOfCompanyMatch
+                  CurAmt:
+                    Amt: 27654
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 11111
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Retirement
+                - ParamName: Instrument
+                  ParamVal: 401 (k)
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585097
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: '98765'
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: Fiserv 401 (k) Plan - B
+                  - ParamName: NickNameAtCE
+                    ParamVal: Fiserv 401 (k) Plan - B
+                  AcctOwnerName: Nicole Feldman
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T13:09:46-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T13:10:17-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 149858.91
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 149858.91
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Retirement
+                - ParamName: Instrument
+                  ParamVal: 401 (k)
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585098
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: '1258654'
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: Fiserv 401 (k) Plan - C
+                  - ParamName: NickNameAtCE
+                    ParamVal: Fiserv 401 (k) Plan - C
+                  AcctOwnerName: Walter Rhodes
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T13:10:19-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T13:11:52-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 336400
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 336400
+                    CurCode: USD
+                - BalType: TotalAmountOfContributions
+                  CurAmt:
+                    Amt: 240659
+                    CurCode: USD
+                - BalType: EmployerProfitSharing
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: TotalAmountOfCompanyMatch
+                  CurAmt:
+                    Amt: 27654
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 336400
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Retirement
+                - ParamName: Instrument
+                  ParamVal: 401 (k)
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585099
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: '1235489'
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: Fiserv 401 (k) Plan - D
+                  - ParamName: NickNameAtCE
+                    ParamVal: Fiserv 401 (k) Plan - D
+                  AcctOwnerName: Nicole Feldman
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T13:12:06-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T13:14:37-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 149800.91
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 149800.91
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 0
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Retirement
+                - ParamName: Instrument
+                  ParamVal: 401 (k)
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+            - FILoginAcctId: 5585057
+              FILoginAcctCreator: UserCreated
+              FIInfo:
+                FIId: '21038'
+                FIName: CashEdge Test Bank (Agg) - Advisor Access
+                Country: US
+                FIHarvestStatus: Enabled
+                FICrawlable: Enabled
+                URL:
+                - ParamName: FILogin
+                  ParamVal: https://cashbank.cashedge.com/cashedgeBank/AdvisorAggr/LoginPage.jsp
+                FIAvailability:
+                  CurrentStatus: Active
+                  CurrentStatusShortDesc: Active
+                  CurrentStatusDetailDesc: Active
+                  CurrentStatusStartDate: '2019-06-19T11:48:16-07:00'
+              FIUserLoginAcctInfo:
+                TrustMode: High
+                ClassifiedStatus: Classified
+                AcctHarvestStatus: Enabled
+                AcctDiscoveryStatus: AsIs
+                URL:
+                - ParamName: FIAutoLogin
+                  ParamVal: "/jsp/aggr/partner/CEServices.jsp?action=FIAutoLogin&FIAutoLoginURL=https://cashbank.cashedge.com/cashedgeBank/AdvisorAggr/LoginPage.jsp"
+                - ParamName: FIHarvest
+                  ParamVal: "/jsp/aggr/partner/CEServices.jsp?action=FIHarvest&FILoginAcctId=5585057"
+                - ParamName: AddAccount
+                  ParamVal: "/jsp/aggr/NotImplemented.jsp"
+              FIAcctSummary:
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585059
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: A000005
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: A000005
+                  - ParamName: NickNameAtCE
+                    ParamVal: A000005
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T12:39:57-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T12:39:58-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 200
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 100
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 32200.7
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Non Retirement
+                - ParamName: Instrument
+                  ParamVal: Brokerage
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585060
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: A000006
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: A000006
+                  - ParamName: NickNameAtCE
+                    ParamVal: A000006
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T12:39:59-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T12:40:00-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 200
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 100
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 32200.7
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Non Retirement
+                - ParamName: Instrument
+                  ParamVal: Brokerage
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585061
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: A000007
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: A000007
+                  - ParamName: NickNameAtCE
+                    ParamVal: A000007
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T12:40:00-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T12:40:03-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 200
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 100
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 32200.7
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Non Retirement
+                - ParamName: Instrument
+                  ParamVal: Brokerage
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585062
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: A000008
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: A000008
+                  - ParamName: NickNameAtCE
+                    ParamVal: A000008
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T12:40:03-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T12:40:06-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 200
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 100
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 32200.7
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Non Retirement
+                - ParamName: Instrument
+                  ParamVal: Brokerage
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585063
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: A000009
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: A000009
+                  - ParamName: NickNameAtCE
+                    ParamVal: A000009
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T12:40:06-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T12:40:10-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 200
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 100
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 32200.7
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Non Retirement
+                - ParamName: Instrument
+                  ParamVal: Brokerage
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+              - FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5585064
+                    AcctType: INV
+                    ExtAcctType: INV
+                    AcctNumber: A000010
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Investment
+                  - ParamName: NickNameAtFI
+                    ParamVal: A000010
+                  - ParamName: NickNameAtCE
+                    ParamVal: A000010
+                IncludeInDisplay: 'Yes'
+                LastUpdateStatusCode: Success
+                AcctDateTime:
+                - DateTimeType: LastUpdateAttempt
+                  DateTimeVal: '2021-11-21T12:40:10-08:00'
+                - DateTimeType: LastSuccessfulUpdate
+                  DateTimeVal: '2021-11-21T12:40:15-08:00'
+                AcctBal:
+                - BalType: Cash
+                  CurAmt:
+                    Amt: 200
+                    CurCode: USD
+                - BalType: MMF
+                  CurAmt:
+                    Amt: 100
+                    CurCode: USD
+                - BalType: TotalBrokerageAccountValue
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                - BalType: Securities
+                  CurAmt:
+                    Amt: 32200.7
+                    CurCode: USD
+                - BalType: CurrentVestedBalance
+                  CurAmt:
+                    Amt: 32500.7
+                    CurCode: USD
+                Property:
+                - ParamName: RetirementStatus
+                  ParamVal: Non Retirement
+                - ParamName: Instrument
+                  ParamVal: Brokerage
+                - ParamName: AccountOwnership
+                  ParamVal: Individual
+        partnerID: 50120000
+        version: 1.4.6
+
