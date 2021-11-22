@@ -30,8 +30,9 @@ paths:
             schema:
               $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
           application/json:
-            schema:
-              $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
+            schema: {$ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'}
+            examples:
+              getAccountDetails: {$ref: '#/components/examples/GetAccountDetailsRequest'}
           text/xml:
             schema:
               $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
@@ -5805,7 +5806,6 @@ components:
     MFAQuestionType:
       required:
       - Questions
-      type: object
       properties:
         Questions:
           type: array
@@ -6273,6 +6273,7 @@ components:
       properties:
         RqUID:
           type: string
+          description: Unique Request Identifier. The Client Site sends this element with the request.
         SignonRq:
           $ref: '#/components/schemas/SignonRqType'
         FILoginAcctInfoListInqRq:
@@ -6288,18 +6289,18 @@ components:
       xml:
         name: FILoginAcctInfoListInqRqHeader
     FILoginAcctInfoListInqRqType:
-      type: object
       properties:
         FILoginAcctList:
           $ref: '#/components/schemas/FILoginAcctListType'
         IncludeDetail:
           type: array
+          description: The specified detail information should be returned in the response. Possible values [FIAcctSummary, InvAcctPosAcctIdentifier]
           items:
             type: string
             xml:
               name: IncludeDetail
     FILoginAcctListType:
-      type: object
+      description: List of FI Login Accounts for which the FILoginAcctInfo is to be returned.
       properties:
         HomeID:
           type: integer
@@ -6372,7 +6373,6 @@ components:
     SessionInfoType:
       required:
       - SessionToken
-      type: object
       properties:
         Role:
           type: string
@@ -6381,7 +6381,6 @@ components:
         HomeID:
           type: string
     SignonRqType:
-      type: object
       properties:
         UserInfo:
           $ref: '#/components/schemas/UserInfoType'
@@ -6402,7 +6401,6 @@ components:
         MFAQuestions:
           $ref: '#/components/schemas/MFAQuestionType'
     SimulatedUserDetailsType:
-      type: object
       properties:
         IdType:
           type: string
@@ -6422,7 +6420,6 @@ components:
       - Role
       - UserID
       - UserPassword
-      type: object
       properties:
         UserID:
           type: string
@@ -12754,3 +12751,20 @@ components:
           $ref: '#/components/schemas/SignonRqType'
       xml:
         name: GetWMAccessKeyRqHeader
+  examples:
+    GetAccountDetailsRequest:
+      value:
+        FILoginAcctInfoListInqRq:
+          IncludeDetail:
+          - FIAcctSummary
+        RqUID: RqUID0
+        partnerID: '50120000'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserID: JHWSUSER755976
+            HomeID: '50120001'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
