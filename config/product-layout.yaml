@@ -46,11 +46,10 @@ featuredFeatures:
     relatedDocs:
       - relatedDoc: 
         title: Common Data Aggregation Use Cases and AllData API Solutions 
-        description: <a href="../docs?path=docs/documentation/samplepdf.pdf" target="_blank" download>Learn more</a>
       - relatedDoc: 
-        description: <h1>How to Use AllData APIs and Add Account Widget for Various Use Cases</h1>
+        title: How to Use AllData APIs and Add Account Widget for Various Use Cases
       - relatedDoc: 
-        description: <p>Next-Gen Widgets Integration Guide</p>
+        title: Next-Gen Widgets Integration Guide
     relatedAPIs:
       - relatedAPI: 
         title: Charges 
