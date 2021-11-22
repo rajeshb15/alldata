@@ -947,7 +947,7 @@ paths:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
             example: 
-              $ref: '#/components/schemas/getOtherAccountTransRequest'
+              $ref: '#/components/examples/getOtherAccountTransRequest'
           text/xml:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
