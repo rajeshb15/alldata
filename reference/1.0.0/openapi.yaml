@@ -12268,57 +12268,6 @@ components:
         FILoginAcctId:
           type: integer
           format: int32
-    GetWMAccessKeyRsHeader:
-      required:
-      - Status
-      type: object
-      properties:
-        partnerID:
-          type: integer
-          xml:
-            attribute: true
-        version:
-          type: string
-          xml:
-            attribute: true
-        RqUID:
-          type: string
-        Status:
-          $ref: '#/components/schemas/StatusType'
-        SignonRs:
-          $ref: '#/components/schemas/SignonRsType'
-        GetWMAccessKeyRs:
-          $ref: '#/components/schemas/GetWMAccessKeyRsType'
-      xml:
-        name: GetWMAccessKeyRsHeader
-    GetWMAccessKeyRsType:
-      required:
-      - Status
-      type: object
-      properties:
-        Status:
-          $ref: '#/components/schemas/StatusType'
-        WMAccessKey:
-          type: string
-    GetWMAccessKeyRqHeader:
-      required:
-      - SignonRq
-      type: object
-      properties:
-        partnerID:
-          type: integer
-          xml:
-            attribute: true
-        version:
-          type: string
-          xml:
-            attribute: true
-        RqUID:
-          type: string
-        SignonRq:
-          $ref: '#/components/schemas/SignonRqType'
-      xml:
-        name: GetWMAccessKeyRqHeader
   examples:
     GetAccountDetailsRequest:
       value:
