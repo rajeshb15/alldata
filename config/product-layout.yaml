@@ -52,20 +52,20 @@ featuredFeatures:
         title: Next-Gen Widgets Integration Guide
     relatedAPIs:
       - relatedAPI: 
-        title: Charges 
-        description: Charges can be initiated in two ways; either as Sale or Pre-Auth and is defined with the captureFlag sent in the request.
+        title: Sign On 
+        description: Description here
         type: "post"        
-        path: "/payments/v1/charges"
+        path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
-        title: Refunds
-        description: If the customer returns product or requests to cancel the transaction after the batch has been settled, the merchant will need to release the original authorization by issuing a refund request to the original transactionId or orderId. 
+        title: Get Account Details
+        description: Description here
         type: "post"        
-        path: "/payments/v1/charges/{transactionId}/refund"
+        path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
-        title: Tokenization
-        description: Remove sensitive customer data from your environment and reduce PCI compliance scope.Transaction data is protected by a randomly-generated identifier known as a "token".
+        title: Get Bank Account Transactions
+        description: Description here
         type: "post"        
-        path: "/payments-vas/v1/tokens"
+        path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Money Movement
     description: >
       Through AllData® Aggregation, that all changes. Accessing financial data needed for credit decisions
@@ -81,20 +81,20 @@ featuredFeatures:
         link: "/docs/Getting-Started/Getting-Started-UCOM.md"
     relatedAPIs:
       - relatedAPI: 
-        title: Charges 
-        description: Charges can be initiated in two ways; either as Sale or Pre-Auth and is defined with the captureFlag sent in the request.
+        title: Sign On 
+        description: Description here
         type: "post"        
-        path: "/payments/v1/charges"
+        path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
-        title: Refunds
-        description: If the customer returns product or requests to cancel the transaction after the batch has been settled, the merchant will need to release the original authorization by issuing a refund request to the original transactionId or orderId. 
+        title: Get Account Details
+        description: Description here
         type: "post"        
-        path: "/payments/v1/charges/{transactionId}/refund"
+        path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
-        title: Tokenization
-        description: Remove sensitive customer data from your environment and reduce PCI compliance scope.Transaction data is protected by a randomly-generated identifier known as a "token".
+        title: Get Bank Account Transactions
+        description: Description here
         type: "post"        
-        path: "/payments-vas/v1/tokens"
+        path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Lending & Account Opening
     description: > 
       AllData Aggregation from Fiserv is used by businesses to provide consumers with a comprehensive view
@@ -113,17 +113,17 @@ featuredFeatures:
         link: "/docs/In-Person/Encrypted-Payments/EMV.md"
     relatedAPIs:
       - relatedAPI: 
-        title: Charges 
-        description: Charges can be initiated in two ways; either as Sale or Pre-Auth and is defined with the captureFlag sent in the request.
+        title: Sign On 
+        description: Description here
         type: "post"        
-        path: "/payments/v1/charges"
+        path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
-        title: Refunds
-        description: If the customer returns product or requests to cancel the transaction after the batch has been settled, the merchant will need to release the original authorization by issuing a refund request to the original transactionId or orderId. 
+        title: Get Account Details
+        description: Description here
         type: "post"        
-        path: "/payments/v1/charges/{transactionId}/refund"
+        path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
-        title: Tokenization
-        description: Remove sensitive customer data from your environment and reduce PCI compliance scope.Transaction data is protected by a randomly-generated identifier known as a "token".
+        title: Get Bank Account Transactions
+        description: Description here
         type: "post"        
-        path: "/payments-vas/v1/tokens"
+        path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
