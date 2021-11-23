@@ -1,6 +1,6 @@
 # AllData Common Use Cases API Solution
 
-[Common Agg Use Cases](https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/common-agg-use-cases.pdf)
+[Common Agg Use Cases](https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/Common%20Agg%20Use%20Cases.pdf)
 
 ## AllData Common Use Cases API Solutiont Placeholder
 
