@@ -1,6 +1,6 @@
 {
   "title": "AllData Aggregation",
-  "name": "AllData",
+  "name": "AllDataAggregation",
   "brand": "Fiserv",
   "brandLogoURL": "https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/Fiserv_Logo.jpg",
   "solution": "financial-institutions",
@@ -19,12 +19,12 @@
     "logoURL": "https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/Fiserv_Logo.png",
     "description": "To onboard properly into the Developer Studio as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
     "longDescription":"To onboard properly into the Developer Studi as a tenant each product must support these APIs so that we can retrieve product specific API specifications and documentation.",
-    "apiSpecification": "/v1/apis/AllData",
-    "layout": "/v1/layouts/AllData",
-    "documentation": "/v1/docs/AllData",
-    "documenttree": "/v1/docs/AllData",
-    "documenttreeV2": "/v2/docs/AllData",
-    "sandbox": "/v1/sandboxrun/AllData",
+    "apiSpecification": "/v1/apis/AllDataAggregation",
+    "layout": "/v1/layouts/AllDataAggregation",
+    "documentation": "/v1/docs/AllDataAggregation",
+    "documenttree": "/v1/docs/AllDataAggregation",
+    "documenttreeV2": "/v2/docs/AllDataAggregation",
+    "sandbox": "/v1/sandboxrun/AllDataAggregation",
     "feature":[
       {
         "name": "sandBox",
