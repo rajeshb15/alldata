@@ -46,17 +46,17 @@
   },
   "supportConfig": [{ 
     "bug": {
-      "label": "bug,AllData",
+      "label": "bug,AllDataAggregation",
       "template": "bug.md",
       "assignees": "kai.zhu@fiserv.com"
     },  
     "feedback": {
-      "label": "feedback,AllData",
+      "label": "feedback,AllDataAggregation",
       "template": "feedback.md",
       "assignees": "kai.zhu@fiserv.com"
     },
     "enhancement": {
-      "label": "enhancement,AllData",
+      "label": "enhancement,AllDataAggregation",
       "template": "feature.md",
       "assignees": "kai.zhu@fiserv.com"
     }
