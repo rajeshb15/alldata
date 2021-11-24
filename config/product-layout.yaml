@@ -36,8 +36,8 @@ header:
 featuredFeatures:
   - title: Account Verification
     description: >
-      AllData Aggregation from Fiserv makes setting up ACH payments easier for senders. A user provides
-      their credentials, and AllData Aggregation® retrieves their account and routing numbers. This
+      AllData® Aggregation from Fiserv makes setting up ACH payments easier for senders. A user provides
+      their credentials, and AllData® Aggregation retrieves their account and routing numbers. This
       not only simplifies the entire process, it also verifies the account provided is owned by the
       same person trying to initiate the ACH transfer.
     tags: []
@@ -70,7 +70,7 @@ featuredFeatures:
   - title: Money Movement
     description: >
       Through AllData® Aggregation, that all changes. Accessing financial data needed for credit decisions
-      happens quickly, eliminating the traditional paper chase. AllData Aggregation also streamlines
+      happens quickly, eliminating the traditional paper chase. AllData® Aggregation also streamlines
       the process for the borrower. Rather than gathering documents and downloaded pdf’s from multiple sources.
     tags: []
     bullets: []
@@ -98,7 +98,7 @@ featuredFeatures:
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Lending & Account Opening
     description: > 
-      AllData Aggregation from Fiserv is used by businesses to provide consumers with a comprehensive view
+      AllData® Aggregation from Fiserv is used by businesses to provide consumers with a comprehensive view
       of their finances, for advisors to provide deeper insight and better analysis, and for fintechs to
       develop innovative products and services with speed and agility.
     tags: []
