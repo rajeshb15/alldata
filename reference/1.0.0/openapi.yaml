@@ -950,8 +950,9 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
-            example: 
-              $ref: '#/components/examples/getOtherAccountTransRequest'
+            examples:
+              # TEST : JUST PUTTING THE SUMMARY
+              getAccountDetails: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
           text/xml:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
@@ -992,54 +993,18 @@ paths:
             \ Date.</td><td>Default maximum range is 90 days; this is configurable\
             \ for the Partner requesting extended transaction history.</td></tr></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
+            # TEST : REMOVE XML RELATED
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
-              example: 
-                Status:
-                  StatusCode: 0
-                  Severity: Info
-                  StatusDesc: Success
-                SignonRs:
-                  Status:
-                    StatusCode: 0
-                    Severity: Info
-                    StatusDesc: Success
-                  CEUserID: 3752308
-                RqUID: RqUID0
-                partnerID: 50120000
-                OtherAcctTrnInqRs:
-                  Status:
-                    StatusCode: 0
-                    Severity: Info
-                    StatusDesc: Success
-                  OtherAcctTrns:
-                    FIAcctId:
-                      AcctId: 5585107
-                      AcctType: OLA
-                      ExtAcctType: ILA
-                    SelectionCriterion:
-                      SelRangeDt:
-                        StartDt: '2017-12-01'
-                        EndDt: '2017-12-30'
-                    OtherAcctTrnRec:
-                    - TrnID: 2966186
-                      TrnType: Credit
-                      PostedDt: '2017-12-14'
-                      CurAmt:
-                        Amt: 2910.45
-                        CurCode: USD
-                      Memo: Escrow mute-bursement
-                      TrnPrincipal: 278.13
-                      TrnInterest: 945.18
-                      CreatedOnDt: '2021-11-08T22:04:57-08:00'
-                version: 1.4.6
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
+              examples: 
+                getAccountDetails: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -12943,6 +12908,7 @@ components:
                   ParamVal: Individual
         partnerID: 50120000
         version: 1.4.6
+    
     getOtherAccountTransRequest:
       value:
         RqUID: RqUID0
@@ -12965,6 +12931,47 @@ components:
               CryptType: None
             UserID: AUTO_JSON_FLClt83405
             HomeID: '50120001'
+
+    getOtherAccountTransResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752308
+        RqUID: RqUID0
+        partnerID: 50120000
+        OtherAcctTrnInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          OtherAcctTrns:
+            FIAcctId:
+              AcctId: 5585107
+              AcctType: OLA
+              ExtAcctType: ILA
+            SelectionCriterion:
+              SelRangeDt:
+                StartDt: '2017-12-01'
+                EndDt: '2017-12-30'
+            OtherAcctTrnRec:
+            - TrnID: 2966186
+              TrnType: Credit
+              PostedDt: '2017-12-14'
+              CurAmt:
+                Amt: 2910.45
+                CurCode: USD
+              Memo: Escrow mute-bursement
+              TrnPrincipal: 278.13
+              TrnInterest: 945.18
+              CreatedOnDt: '2021-11-08T22:04:57-08:00'
+        version: 1.4.6
 
     getDeletedTransRequest:
       value:
