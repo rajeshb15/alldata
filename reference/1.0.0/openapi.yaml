@@ -26,17 +26,11 @@ paths:
           \ FIAcctSummary InvAcctPosAcctIdentifier</td> </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getAccountDetails'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
             examples:
-              getAccountDetails: {$ref: '#/components/examples/GetAccountDetailsRequest'}
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
+              getAccountDetails: {summary: Request Account Details, $ref: '#/components/examples/GetAccountDetailsRequest'}
         required: true
       responses:
         "200":
@@ -51,17 +45,11 @@ paths:
             \ been provided in the request. This aggregate will be present only if\
             \ the request was carried out successfully.</td> </tr> </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
               examples:
-                getAccountDetails: {$ref: '#/components/examples/GetAccountDetailsResponse'}
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
+                getAccountDetails: {summary: Response Account Details, $ref: '#/components/examples/GetAccountDetailsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -607,6 +595,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/DeletedTrnInqRqHeader'
+            example:
+              $ref: '#/components/examples/getDeletedTransRequest'
           text/xml:
             schema:
               $ref: '#/components/schemas/DeletedTrnInqRqHeader'
@@ -656,6 +646,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DeletedTrnInqRsHeader'
+              example:
+                $ref: '#/components/examples/getDeletedTransResponse'
             text/xml:
               schema:
                 $ref: '#/components/schemas/DeletedTrnInqRsHeader'
@@ -692,6 +684,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/EmployerStockOptionRqHeader'
+            example:
+              $ref: '#/components/examples/getEmployerStockOptionsRequest'
           text/xml:
             schema:
               $ref: '#/components/schemas/EmployerStockOptionRqHeader'
@@ -738,6 +732,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/EmployerStockOptionRsHeader'
+              example:
+                $ref: '#/components/examples/getEmployerStockOptionsResponse'
             text/xml:
               schema:
                 $ref: '#/components/schemas/EmployerStockOptionRsHeader'
@@ -775,6 +771,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/InvAcctPosInqRqHeader'
+            example:
+              $ref: '#/components/examples/getInvestmentPosRequest'
           text/xml:
             schema:
               $ref: '#/components/schemas/InvAcctPosInqRqHeader'
@@ -829,6 +827,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/InvAcctPosInqRsHeader'
+              example:
+                $ref: '#/components/examples/getInvestmentPosResponse'
             text/xml:
               schema:
                 $ref: '#/components/schemas/InvAcctPosInqRsHeader'
@@ -866,6 +866,8 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/InvAcctTrnInqRqHeader'
+            example:
+              $ref: '#/components/examples/getInvestmentTransRequest'
           text/xml:
             schema:
               $ref: '#/components/schemas/InvAcctTrnInqRqHeader'
@@ -907,6 +909,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/InvAcctTrnInqRsHeader'
+              example:
+                $ref: '#/components/examples/getInvestmentTransResponse'
             text/xml:
               schema:
                 $ref: '#/components/schemas/InvAcctTrnInqRsHeader'
@@ -12961,3 +12965,5245 @@ components:
               CryptType: None
             UserID: AUTO_JSON_FLClt83405
             HomeID: '50120001'
+
+    getDeletedTransRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: XMLAdminx33qtl
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: Cashedge1$
+            Role: Admin
+        DeletedTrnInqRq:
+          SelRangeDt:
+            StartDt: '2019-09-23'
+            EndDt: '2019-09-24'
+          StartRowNum: 1
+        partnerID: 8885504
+        version: version1
+
+    getDeletedTransResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 2185517
+        DeletedTrnInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          SelRangeDt:
+            StartDt: '2019-09-23'
+            EndDt: '2019-09-24'
+          BankAcctTrnInfo:
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495243
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -29
+                CurCode: USD
+              Memo: DELTA AIR XXXXX8791 MYRTLE BEAC
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495242
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -37
+                CurCode: USD
+              Memo: VALERO 1703
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495241
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -82
+                CurCode: USD
+              Memo: Online Payment 2661188784 To Xcel Energy 05/10
+              CreatedOnDt: '2019-09-23T14:24:05-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495240
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -231
+                CurCode: USD
+              Memo: DISH NETWORK DISH NTWRK 120318
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495239
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -12
+                CurCode: USD
+              Memo: Testexpenseaafromaccod
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495238
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 29
+                CurCode: USD
+              Memo: Testdepositaatomyacodc
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495237
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -52
+                CurCode: USD
+              Memo: Online Banking transfer from CHK 1303 Confirmation# 3832777748
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495236
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -543
+                CurCode: USD
+              Memo: Electronic Payment to Macy's
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495235
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 532
+                CurCode: USD
+              Memo: KEEPTHECHANGE CREDIT FROM ACCT3612 EFFECTIVE 05/10
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495234
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -34
+                CurCode: USD
+              Memo: 'OFFICE DEPOT 0 05/06 #000824934'
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495233
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -231
+                CurCode: USD
+              Memo: 'BEST BUY #112 THOUSAND O903108 05/11BEST BUY'
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495232
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -4
+                CurCode: USD
+              Memo: Quills Coffee Louisville KyDate 05/09/12 000000095007822526 5814
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495231
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -52.23
+                CurCode: USD
+              Memo: Dominicks Store 3109 BAN051231 05/10Dominicks
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495230
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -15
+                CurCode: USD
+              Memo: KFC 051 CHAMBERSBURG
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495229
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -32
+                CurCode: USD
+              Memo: VISTA WINE & SPIRITS VIS881689 05/10VISTA WIN
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495228
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2
+                CurCode: USD
+              Memo: 'NON-BANK CARD ATM FEE ON 05-11 #000625719 CUSTOMER 9518 AT TERMINAL LK528692
+                PAULS QUIK STO 709 STOCKTON AVE SAN JOSE CA'
+              CreatedOnDt: '2019-09-23T14:24:05-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495227
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -42
+                CurCode: USD
+              Memo: CARMIKE 554
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320424
+            BankAcctTrnRec:
+              TrnID: 10495226
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 872
+                CurCode: USD
+              Memo: 'MERCURY INSURANC DES:PAYROLL ID:'
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495218
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -543
+                CurCode: USD
+              Memo: Electronic Payment to Macy's
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495207
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -29
+                CurCode: USD
+              Memo: DELTA AIR XXXXX8791 MYRTLE BEAC
+              CreatedOnDt: '2019-09-23T14:24:05-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495206
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -37
+                CurCode: USD
+              Memo: VALERO 1703
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495205
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -82
+                CurCode: USD
+              Memo: Online Payment 2661188784 To Xcel Energy 05/10
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495204
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -231
+                CurCode: USD
+              Memo: DISH NETWORK DISH NTWRK 120318
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495203
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -12
+                CurCode: USD
+              Memo: Testexpenseaafromaccod
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495202
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 29
+                CurCode: USD
+              Memo: Testdepositaatomyacodc
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495201
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -52
+                CurCode: USD
+              Memo: Online Banking transfer from CHK 1303 Confirmation# 3832777748
+              CreatedOnDt: '2019-09-23T14:24:08-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495199
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 532
+                CurCode: USD
+              Memo: KEEPTHECHANGE CREDIT FROM ACCT3612 EFFECTIVE 05/10
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495198
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -34
+                CurCode: USD
+              Memo: 'OFFICE DEPOT 0 05/06 #000824934'
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495197
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -231
+                CurCode: USD
+              Memo: 'BEST BUY #112 THOUSAND O903108 05/11BEST BUY'
+              CreatedOnDt: '2019-09-23T14:24:05-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495196
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -4
+                CurCode: USD
+              Memo: Quills Coffee Louisville KyDate 05/09/12 000000095007822526 5814
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495195
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -52.23
+                CurCode: USD
+              Memo: Dominicks Store 3109 BAN051231 05/10Dominicks
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495194
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -15
+                CurCode: USD
+              Memo: KFC 051 CHAMBERSBURG
+              CreatedOnDt: '2019-09-23T14:24:07-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495193
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -32
+                CurCode: USD
+              Memo: VISTA WINE & SPIRITS VIS881689 05/10VISTA WIN
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495192
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2
+                CurCode: USD
+              Memo: 'NON-BANK CARD ATM FEE ON 05-11 #000625719 CUSTOMER 9518 AT TERMINAL LK528692
+                PAULS QUIK STO 709 STOCKTON AVE SAN JOSE CA'
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495191
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -42
+                CurCode: USD
+              Memo: CARMIKE 554
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304151
+            BankAcctTrnRec:
+              TrnID: 10495190
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 872
+                CurCode: USD
+              Memo: 'MERCURY INSURANC DES:PAYROLL ID:'
+              CreatedOnDt: '2019-09-23T14:24:06-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495189
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: JETBLUE 27921724 SAL 02/26JETBLUE
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495187
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1212
+                CurCode: USD
+              Memo: ACH Transaction - XCEL ENERGY XCELENERGY 1490
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495186
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -543
+                CurCode: USD
+              Memo: CENTURYLINK ONLINE PMT
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495185
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testexpenseaafromacccmm
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495183
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: ATM WITHDRAWAL PUBLIX 12975 COLLIER BLVD NAPLES FLUS
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495182
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1192
+                CurCode: USD
+              Memo: Electronic Payment to CAPITAL ON
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495181
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: ACH deposit POTOMAC MANAGEME DIRECT DEP HERRERA,JOSE RAUL ...3120023UB
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495180
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'POS SIGNATURE- VISA #6455 OFFICE DEPOT #304 AUSTIN TX'
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495178
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -61
+                CurCode: USD
+              Memo: ESQUIRES COFFEE
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495177
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -817
+                CurCode: USD
+              Memo: '7-ELEVEN 03/14 #000992620 PURCHA'
+              CreatedOnDt: '2019-09-23T14:24:02-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495176
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -112
+                CurCode: USD
+              Memo: CHECKCARD 0320 TACO BELL5640 000
+              CreatedOnDt: '2019-09-23T14:24:02-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495175
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -98.651
+                CurCode: USD
+              Memo: DANAHY WINE & SPIRITS BUFFALO
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495174
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1987
+                CurCode: USD
+              Memo: 'ATM Fee / PUBLIX 1025 VETERANS MEMORIAL MABLETON GA %% Card 15 #9463'
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495173
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2112
+                CurCode: USD
+              Memo: CARMIKE 075770 WEST MIFFLI PA
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495172
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: MOTOR COACH INDU PAYROLL ***********5104
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495170
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -576
+                CurCode: USD
+              Memo: 'SUNSHINE # 10 03/01 #000158284 P'
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495166
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testdepositaatomyacccmm
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320423
+            BankAcctTrnRec:
+              TrnID: 10495161
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: 'APPLE STORE #R019'
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495151
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1212
+                CurCode: USD
+              Memo: ACH Transaction - XCEL ENERGY XCELENERGY 1490
+              CreatedOnDt: '2019-09-23T14:23:58-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495150
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -543
+                CurCode: USD
+              Memo: CENTURYLINK ONLINE PMT
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495149
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testexpenseaafromacccmm
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495147
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: ATM WITHDRAWAL PUBLIX 12975 COLLIER BLVD NAPLES FLUS
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495146
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1192
+                CurCode: USD
+              Memo: Electronic Payment to CAPITAL ON
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495145
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: ACH deposit POTOMAC MANAGEME DIRECT DEP HERRERA,JOSE RAUL ...3120023UB
+              CreatedOnDt: '2019-09-23T14:23:59-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495144
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'POS SIGNATURE- VISA #6455 OFFICE DEPOT #304 AUSTIN TX'
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495142
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -61
+                CurCode: USD
+              Memo: ESQUIRES COFFEE
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495141
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -817
+                CurCode: USD
+              Memo: '7-ELEVEN 03/14 #000992620 PURCHA'
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495140
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -112
+                CurCode: USD
+              Memo: CHECKCARD 0320 TACO BELL5640 000
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495138
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1987
+                CurCode: USD
+              Memo: 'ATM Fee / PUBLIX 1025 VETERANS MEMORIAL MABLETON GA %% Card 15 #9463'
+              CreatedOnDt: '2019-09-23T14:24:00-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495137
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2112
+                CurCode: USD
+              Memo: CARMIKE 075770 WEST MIFFLI PA
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495136
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: MOTOR COACH INDU PAYROLL ***********5104
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495135
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: JETBLUE 27921724 SAL 02/26JETBLUE
+              CreatedOnDt: '2019-09-23T14:24:02-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495134
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -576
+                CurCode: USD
+              Memo: 'SUNSHINE # 10 03/01 #000158284 P'
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495130
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testdepositaatomyacccmm
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495125
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: 'APPLE STORE #R019'
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304150
+            BankAcctTrnRec:
+              TrnID: 10495121
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -98.651
+                CurCode: USD
+              Memo: DANAHY WINE & SPIRITS BUFFALO
+              CreatedOnDt: '2019-09-23T14:24:01-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495112
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testsavingdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:55-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495108
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -214
+                CurCode: USD
+              Memo: 'Staples, Inc 05-01 CUSTOMER 1337 PURCHASE #917342 LAKE FOREST CA'
+              CreatedOnDt: '2019-09-23T14:23:55-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495107
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: MS *Microsoft Store 877- 02/17MS *Micro
+              CreatedOnDt: '2019-09-23T14:23:55-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495102
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -987
+                CurCode: USD
+              Memo: ATM Fee Wells Fargo Ban TIME-WARNER CENTER TAMPA FLUS
+              CreatedOnDt: '2019-09-23T14:23:54-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495101
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: TM *TICKETMASTER T
+              CreatedOnDt: '2019-09-23T14:23:54-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495099
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: 'AIRTRAN AIRWAYS DIRECT DEP PPD ID: 9111111101'
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495098
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1576
+                CurCode: USD
+              Memo: CHEVRON QUALITY EXPR BAT 05/04CHEVRON Q
+              CreatedOnDt: '2019-09-23T14:23:54-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495097
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: Xcel Energy
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495096
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -524
+                CurCode: USD
+              Memo: SPRINT *WIRELESS 800-639 04/17SPRINT *W
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495095
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testsavingexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:55-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495093
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: 'BKOFAMERICA ATM 05/05 #000001248'
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495092
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1912
+                CurCode: USD
+              Memo: HSBC Credit Cards Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495091
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1981
+                CurCode: USD
+              Memo: ATM DEPOSIT
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495088
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'THOMAS HAMMER COFFEE #6 05/06 CARD #8289 PURCHASE #24013392128010236117810
+                PULLMAN, WA'
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495087
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -870
+                CurCode: USD
+              Memo: WAWA 676 0000
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495086
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1112
+                CurCode: USD
+              Memo: WAFFLE HOUSE 00206482 ATLA
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495085
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1198.651
+                CurCode: USD
+              Memo: SOMA WINE & SPIRITS
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320422
+            BankAcctTrnRec:
+              TrnID: 10495082
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: CVS PAYROLL
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495081
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: 'AIRTRAN AIRWAYS DIRECT DEP PPD ID: 9111111101'
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495071
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: MS *Microsoft Store 877- 02/17MS *Micro
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495062
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1576
+                CurCode: USD
+              Memo: CHEVRON QUALITY EXPR BAT 05/04CHEVRON Q
+              CreatedOnDt: '2019-09-23T14:23:55-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495061
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: Xcel Energy
+              CreatedOnDt: '2019-09-23T14:23:55-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495060
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -524
+                CurCode: USD
+              Memo: SPRINT *WIRELESS 800-639 04/17SPRINT *W
+              CreatedOnDt: '2019-09-23T14:23:54-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495059
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testsavingexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:54-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495058
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testsavingdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:54-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495057
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: 'BKOFAMERICA ATM 05/05 #000001248'
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495056
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1912
+                CurCode: USD
+              Memo: HSBC Credit Cards Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495055
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1981
+                CurCode: USD
+              Memo: ATM DEPOSIT
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495054
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -214
+                CurCode: USD
+              Memo: 'Staples, Inc 05-01 CUSTOMER 1337 PURCHASE #917342 LAKE FOREST CA'
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495052
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'THOMAS HAMMER COFFEE #6 05/06 CARD #8289 PURCHASE #24013392128010236117810
+                PULLMAN, WA'
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495051
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -870
+                CurCode: USD
+              Memo: WAWA 676 0000
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495050
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1112
+                CurCode: USD
+              Memo: WAFFLE HOUSE 00206482 ATLA
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495049
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1198.651
+                CurCode: USD
+              Memo: SOMA WINE & SPIRITS
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495048
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -987
+                CurCode: USD
+              Memo: ATM Fee Wells Fargo Ban TIME-WARNER CENTER TAMPA FLUS
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495047
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: TM *TICKETMASTER T
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304149
+            BankAcctTrnRec:
+              TrnID: 10495046
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: CVS PAYROLL
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495027
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: ALASKA AIRLINES VISA Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495026
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1272
+                CurCode: USD
+              Memo: 'EXXONMOBIL 04/05 #000611101 PURC'
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495025
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -185.93
+                CurCode: USD
+              Memo: XCELENERGY XCEL ENERGY
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495024
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -243.87
+                CurCode: USD
+              Memo: COMCAST CABLE COMM 800-C 03/17COMCAST C
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495023
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1671
+                CurCode: USD
+              Memo: Testexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495022
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 2200
+                CurCode: USD
+              Memo: Testdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495021
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1560
+                CurCode: USD
+              Memo: ATM WITHDRAWAL 002130 05/06320 N NEW
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495020
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: Electronic Payment to Discover C
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495019
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1276.98
+                CurCode: USD
+              Memo: REVERSE DIRECT DEPOSIT DISCOUNT
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495018
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -962.22
+                CurCode: USD
+              Memo: 'OFFICE DEPOT 0 05/06 #000824934'
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495017
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1761
+                CurCode: USD
+              Memo: 'BEST BUY #404 SOUTHFIELD 05/05BEST BUY'
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495016
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1298
+                CurCode: USD
+              Memo: PAESANOS COFFEE
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495015
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1100
+                CurCode: USD
+              Memo: 'FOOD LION #2600'
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495014
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1287
+                CurCode: USD
+              Memo: POPEYES LOUISIANA KI BAT 05/04POPEYES L
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495013
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1981
+                CurCode: USD
+              Memo: SPEC'S LIQUORS SPRING TX 05/11SPEC'S LI
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495012
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: ADJUST FEE CHARGED ATM FEE REBATE
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495011
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1200
+                CurCode: USD
+              Memo: CENTURY THEATRES 470
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320421
+            BankAcctTrnRec:
+              TrnID: 10495010
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: 'PAYCHEX PAYROLL 44897500001035X CCD ID: 1161124166'
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494993
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1200
+                CurCode: USD
+              Memo: CENTURY THEATRES 470
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494991
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: ALASKA AIRLINES VISA Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494990
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1272
+                CurCode: USD
+              Memo: 'EXXONMOBIL 04/05 #000611101 PURC'
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494989
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -185.93
+                CurCode: USD
+              Memo: XCELENERGY XCEL ENERGY
+              CreatedOnDt: '2019-09-23T14:23:48-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494988
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -243.87
+                CurCode: USD
+              Memo: COMCAST CABLE COMM 800-C 03/17COMCAST C
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494987
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1671
+                CurCode: USD
+              Memo: Testexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494986
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 2200
+                CurCode: USD
+              Memo: Testdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494985
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1560
+                CurCode: USD
+              Memo: ATM WITHDRAWAL 002130 05/06320 N NEW
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494984
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: Electronic Payment to Discover C
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494983
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1276.98
+                CurCode: USD
+              Memo: REVERSE DIRECT DEPOSIT DISCOUNT
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494982
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -962.22
+                CurCode: USD
+              Memo: 'OFFICE DEPOT 0 05/06 #000824934'
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494981
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1761
+                CurCode: USD
+              Memo: 'BEST BUY #404 SOUTHFIELD 05/05BEST BUY'
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494980
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1298
+                CurCode: USD
+              Memo: PAESANOS COFFEE
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494979
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1100
+                CurCode: USD
+              Memo: 'FOOD LION #2600'
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494978
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1287
+                CurCode: USD
+              Memo: POPEYES LOUISIANA KI BAT 05/04POPEYES L
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494977
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1981
+                CurCode: USD
+              Memo: SPEC'S LIQUORS SPRING TX 05/11SPEC'S LI
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494976
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: ADJUST FEE CHARGED ATM FEE REBATE
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304148
+            BankAcctTrnRec:
+              TrnID: 10494974
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: 'PAYCHEX PAYROLL 44897500001035X CCD ID: 1161124166'
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494964
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -214
+                CurCode: USD
+              Memo: 'Staples, Inc 05-01 CUSTOMER 1337 PURCHASE #917342 LAKE FOREST CA'
+              CreatedOnDt: '2019-09-23T14:23:37-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494955
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: 'AIRTRAN AIRWAYS DIRECT DEP PPD ID: 9111111101'
+              CreatedOnDt: '2019-09-23T14:23:40-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494954
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1576
+                CurCode: USD
+              Memo: CHEVRON QUALITY EXPR BAT 05/04CHEVRON Q
+              CreatedOnDt: '2019-09-23T14:23:40-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494953
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: Xcel Energy
+              CreatedOnDt: '2019-09-23T14:23:39-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494952
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -524
+                CurCode: USD
+              Memo: SPRINT *WIRELESS 800-639 04/17SPRINT *W
+              CreatedOnDt: '2019-09-23T14:23:39-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494951
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testsavingexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:39-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494950
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testsavingdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:39-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494949
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: 'BKOFAMERICA ATM 05/05 #000001248'
+              CreatedOnDt: '2019-09-23T14:23:39-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494948
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1912
+                CurCode: USD
+              Memo: HSBC Credit Cards Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:39-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494947
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1981
+                CurCode: USD
+              Memo: ATM DEPOSIT
+              CreatedOnDt: '2019-09-23T14:23:38-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494945
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: MS *Microsoft Store 877- 02/17MS *Micro
+              CreatedOnDt: '2019-09-23T14:23:38-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494944
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'THOMAS HAMMER COFFEE #6 05/06 CARD #8289 PURCHASE #24013392128010236117810
+                PULLMAN, WA'
+              CreatedOnDt: '2019-09-23T14:23:38-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494943
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -870
+                CurCode: USD
+              Memo: WAWA 676 0000
+              CreatedOnDt: '2019-09-23T14:23:38-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494942
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1112
+                CurCode: USD
+              Memo: WAFFLE HOUSE 00206482 ATLA
+              CreatedOnDt: '2019-09-23T14:23:38-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494941
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1198.651
+                CurCode: USD
+              Memo: SOMA WINE & SPIRITS
+              CreatedOnDt: '2019-09-23T14:23:37-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494940
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -987
+                CurCode: USD
+              Memo: ATM Fee Wells Fargo Ban TIME-WARNER CENTER TAMPA FLUS
+              CreatedOnDt: '2019-09-23T14:23:37-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494939
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: TM *TICKETMASTER T
+              CreatedOnDt: '2019-09-23T14:23:37-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322091
+            BankAcctTrnRec:
+              TrnID: 10494938
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: CVS PAYROLL
+              CreatedOnDt: '2019-09-23T14:23:37-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494927
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: MS *Microsoft Store 877- 02/17MS *Micro
+              CreatedOnDt: '2019-09-23T14:23:42-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494919
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: 'AIRTRAN AIRWAYS DIRECT DEP PPD ID: 9111111101'
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494918
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1576
+                CurCode: USD
+              Memo: CHEVRON QUALITY EXPR BAT 05/04CHEVRON Q
+              CreatedOnDt: '2019-09-23T14:23:47-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494917
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: Xcel Energy
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494916
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -524
+                CurCode: USD
+              Memo: SPRINT *WIRELESS 800-639 04/17SPRINT *W
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494915
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testsavingexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494914
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testsavingdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494913
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: 'BKOFAMERICA ATM 05/05 #000001248'
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494912
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1912
+                CurCode: USD
+              Memo: HSBC Credit Cards Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494911
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1981
+                CurCode: USD
+              Memo: ATM DEPOSIT
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494910
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -214
+                CurCode: USD
+              Memo: 'Staples, Inc 05-01 CUSTOMER 1337 PURCHASE #917342 LAKE FOREST CA'
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494908
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'THOMAS HAMMER COFFEE #6 05/06 CARD #8289 PURCHASE #24013392128010236117810
+                PULLMAN, WA'
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494907
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -870
+                CurCode: USD
+              Memo: WAWA 676 0000
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494906
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1112
+                CurCode: USD
+              Memo: WAFFLE HOUSE 00206482 ATLA
+              CreatedOnDt: '2019-09-23T14:23:44-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494905
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1198.651
+                CurCode: USD
+              Memo: SOMA WINE & SPIRITS
+              CreatedOnDt: '2019-09-23T14:23:43-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494904
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -987
+                CurCode: USD
+              Memo: ATM Fee Wells Fargo Ban TIME-WARNER CENTER TAMPA FLUS
+              CreatedOnDt: '2019-09-23T14:23:44-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494903
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: TM *TICKETMASTER T
+              CreatedOnDt: '2019-09-23T14:23:44-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326796
+            BankAcctTrnRec:
+              TrnID: 10494902
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: CVS PAYROLL
+              CreatedOnDt: '2019-09-23T14:23:43-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494901
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: JETBLUE 27921724 SAL 02/26JETBLUE
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494899
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1212
+                CurCode: USD
+              Memo: ACH Transaction - XCEL ENERGY XCELENERGY 1490
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494898
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -543
+                CurCode: USD
+              Memo: CENTURYLINK ONLINE PMT
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494897
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testexpenseaafromacccmm
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494895
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: ATM WITHDRAWAL PUBLIX 12975 COLLIER BLVD NAPLES FLUS
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494894
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1192
+                CurCode: USD
+              Memo: Electronic Payment to CAPITAL ON
+              CreatedOnDt: '2019-09-23T14:23:35-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494893
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: ACH deposit POTOMAC MANAGEME DIRECT DEP HERRERA,JOSE RAUL ...3120023UB
+              CreatedOnDt: '2019-09-23T14:23:35-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494892
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'POS SIGNATURE- VISA #6455 OFFICE DEPOT #304 AUSTIN TX'
+              CreatedOnDt: '2019-09-23T14:23:35-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494891
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: 'APPLE STORE #R019'
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494890
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -61
+                CurCode: USD
+              Memo: ESQUIRES COFFEE
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494889
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -817
+                CurCode: USD
+              Memo: '7-ELEVEN 03/14 #000992620 PURCHA'
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494888
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -112
+                CurCode: USD
+              Memo: CHECKCARD 0320 TACO BELL5640 000
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494887
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -98.651
+                CurCode: USD
+              Memo: DANAHY WINE & SPIRITS BUFFALO
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494886
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1987
+                CurCode: USD
+              Memo: 'ATM Fee / PUBLIX 1025 VETERANS MEMORIAL MABLETON GA %% Card 15 #9463'
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494885
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2112
+                CurCode: USD
+              Memo: CARMIKE 075770 WEST MIFFLI PA
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494884
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: MOTOR COACH INDU PAYROLL ***********5104
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494882
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -576
+                CurCode: USD
+              Memo: 'SUNSHINE # 10 03/01 #000158284 P'
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494878
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: JETBLUE 27921724 SAL 02/26JETBLUE
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326797
+            BankAcctTrnRec:
+              TrnID: 10494877
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testdepositaatomyacccmm
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494875
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1212
+                CurCode: USD
+              Memo: ACH Transaction - XCEL ENERGY XCELENERGY 1490
+              CreatedOnDt: '2019-09-23T14:23:31-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494873
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -543
+                CurCode: USD
+              Memo: CENTURYLINK ONLINE PMT
+              CreatedOnDt: '2019-09-23T14:23:31-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494871
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testexpenseaafromacccmm
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494867
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: ATM WITHDRAWAL PUBLIX 12975 COLLIER BLVD NAPLES FLUS
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494865
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1192
+                CurCode: USD
+              Memo: Electronic Payment to CAPITAL ON
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494863
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: ACH deposit POTOMAC MANAGEME DIRECT DEP HERRERA,JOSE RAUL ...3120023UB
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494861
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'POS SIGNATURE- VISA #6455 OFFICE DEPOT #304 AUSTIN TX'
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494858
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -61
+                CurCode: USD
+              Memo: ESQUIRES COFFEE
+              CreatedOnDt: '2019-09-23T14:23:32-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494855
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -817
+                CurCode: USD
+              Memo: '7-ELEVEN 03/14 #000992620 PURCHA'
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494853
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -112
+                CurCode: USD
+              Memo: CHECKCARD 0320 TACO BELL5640 000
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494851
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -98.651
+                CurCode: USD
+              Memo: DANAHY WINE & SPIRITS BUFFALO
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494850
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1987
+                CurCode: USD
+              Memo: 'ATM Fee / PUBLIX 1025 VETERANS MEMORIAL MABLETON GA %% Card 15 #9463'
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494849
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2112
+                CurCode: USD
+              Memo: CARMIKE 075770 WEST MIFFLI PA
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494848
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: MOTOR COACH INDU PAYROLL ***********5104
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494846
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -576
+                CurCode: USD
+              Memo: 'SUNSHINE # 10 03/01 #000158284 P'
+              CreatedOnDt: '2019-09-23T14:23:33-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494842
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testdepositaatomyacccmm
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322092
+            BankAcctTrnRec:
+              TrnID: 10494837
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: 'APPLE STORE #R019'
+              CreatedOnDt: '2019-09-23T14:23:34-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494811
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -29
+                CurCode: USD
+              Memo: DELTA AIR XXXXX8791 MYRTLE BEAC
+              CreatedOnDt: '2019-09-23T14:23:29-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494810
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -37
+                CurCode: USD
+              Memo: VALERO 1703
+              CreatedOnDt: '2019-09-23T14:23:29-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494809
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -82
+                CurCode: USD
+              Memo: Online Payment 2661188784 To Xcel Energy 05/10
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494808
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -231
+                CurCode: USD
+              Memo: DISH NETWORK DISH NTWRK 120318
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494807
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -12
+                CurCode: USD
+              Memo: Testexpenseaafromaccod
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494806
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 29
+                CurCode: USD
+              Memo: Testdepositaatomyacodc
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494805
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -52
+                CurCode: USD
+              Memo: Online Banking transfer from CHK 1303 Confirmation# 3832777748
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494804
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -543
+                CurCode: USD
+              Memo: Electronic Payment to Macy's
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494803
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 532
+                CurCode: USD
+              Memo: KEEPTHECHANGE CREDIT FROM ACCT3612 EFFECTIVE 05/10
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494802
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -34
+                CurCode: USD
+              Memo: 'OFFICE DEPOT 0 05/06 #000824934'
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494800
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -231
+                CurCode: USD
+              Memo: 'BEST BUY #112 THOUSAND O903108 05/11BEST BUY'
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494798
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -4
+                CurCode: USD
+              Memo: Quills Coffee Louisville KyDate 05/09/12 000000095007822526 5814
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494796
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -52.23
+                CurCode: USD
+              Memo: Dominicks Store 3109 BAN051231 05/10Dominicks
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494795
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -15
+                CurCode: USD
+              Memo: KFC 051 CHAMBERSBURG
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494793
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -32
+                CurCode: USD
+              Memo: VISTA WINE & SPIRITS VIS881689 05/10VISTA WIN
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494792
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2
+                CurCode: USD
+              Memo: 'NON-BANK CARD ATM FEE ON 05-11 #000625719 CUSTOMER 9518 AT TERMINAL LK528692
+                PAULS QUIK STO 709 STOCKTON AVE SAN JOSE CA'
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494790
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -42
+                CurCode: USD
+              Memo: CARMIKE 554
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326798
+            BankAcctTrnRec:
+              TrnID: 10494788
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 872
+                CurCode: USD
+              Memo: 'MERCURY INSURANC DES:PAYROLL ID:'
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494786
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -543
+                CurCode: USD
+              Memo: Electronic Payment to Macy's
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494775
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -29
+                CurCode: USD
+              Memo: DELTA AIR XXXXX8791 MYRTLE BEAC
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494774
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -37
+                CurCode: USD
+              Memo: VALERO 1703
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494773
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -82
+                CurCode: USD
+              Memo: Online Payment 2661188784 To Xcel Energy 05/10
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494772
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -231
+                CurCode: USD
+              Memo: DISH NETWORK DISH NTWRK 120318
+              CreatedOnDt: '2019-09-23T14:23:25-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494771
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -12
+                CurCode: USD
+              Memo: Testexpenseaafromaccod
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494770
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 29
+                CurCode: USD
+              Memo: Testdepositaatomyacodc
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494769
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -52
+                CurCode: USD
+              Memo: Online Banking transfer from CHK 1303 Confirmation# 3832777748
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494767
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 532
+                CurCode: USD
+              Memo: KEEPTHECHANGE CREDIT FROM ACCT3612 EFFECTIVE 05/10
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494766
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -34
+                CurCode: USD
+              Memo: 'OFFICE DEPOT 0 05/06 #000824934'
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494765
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -231
+                CurCode: USD
+              Memo: 'BEST BUY #112 THOUSAND O903108 05/11BEST BUY'
+              CreatedOnDt: '2019-09-23T14:23:26-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494764
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -4
+                CurCode: USD
+              Memo: Quills Coffee Louisville KyDate 05/09/12 000000095007822526 5814
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494763
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -52.23
+                CurCode: USD
+              Memo: Dominicks Store 3109 BAN051231 05/10Dominicks
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494762
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -15
+                CurCode: USD
+              Memo: KFC 051 CHAMBERSBURG
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494761
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -32
+                CurCode: USD
+              Memo: VISTA WINE & SPIRITS VIS881689 05/10VISTA WIN
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494760
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2
+                CurCode: USD
+              Memo: 'NON-BANK CARD ATM FEE ON 05-11 #000625719 CUSTOMER 9518 AT TERMINAL LK528692
+                PAULS QUIK STO 709 STOCKTON AVE SAN JOSE CA'
+              CreatedOnDt: '2019-09-23T14:23:28-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494759
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -42
+                CurCode: USD
+              Memo: CARMIKE 554
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322093
+            BankAcctTrnRec:
+              TrnID: 10494758
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 872
+                CurCode: USD
+              Memo: 'MERCURY INSURANC DES:PAYROLL ID:'
+              CreatedOnDt: '2019-09-23T14:23:27-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494700
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: ALASKA AIRLINES VISA Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:23-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494698
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1272
+                CurCode: USD
+              Memo: 'EXXONMOBIL 04/05 #000611101 PURC'
+              CreatedOnDt: '2019-09-23T14:23:23-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494696
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -185.93
+                CurCode: USD
+              Memo: XCELENERGY XCEL ENERGY
+              CreatedOnDt: '2019-09-23T14:23:23-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494694
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -243.87
+                CurCode: USD
+              Memo: COMCAST CABLE COMM 800-C 03/17COMCAST C
+              CreatedOnDt: '2019-09-23T14:23:23-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494692
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1671
+                CurCode: USD
+              Memo: Testexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494690
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 2200
+                CurCode: USD
+              Memo: Testdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494688
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1560
+                CurCode: USD
+              Memo: ATM WITHDRAWAL 002130 05/06320 N NEW
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494686
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: Electronic Payment to Discover C
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494684
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1276.98
+                CurCode: USD
+              Memo: REVERSE DIRECT DEPOSIT DISCOUNT
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494681
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -962.22
+                CurCode: USD
+              Memo: 'OFFICE DEPOT 0 05/06 #000824934'
+              CreatedOnDt: '2019-09-23T14:23:20-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494679
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1761
+                CurCode: USD
+              Memo: 'BEST BUY #404 SOUTHFIELD 05/05BEST BUY'
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494676
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1298
+                CurCode: USD
+              Memo: PAESANOS COFFEE
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494674
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1100
+                CurCode: USD
+              Memo: 'FOOD LION #2600'
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494671
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1287
+                CurCode: USD
+              Memo: POPEYES LOUISIANA KI BAT 05/04POPEYES L
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494668
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1200
+                CurCode: USD
+              Memo: CENTURY THEATRES 470
+              CreatedOnDt: '2019-09-23T14:23:23-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494666
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1981
+                CurCode: USD
+              Memo: SPEC'S LIQUORS SPRING TX 05/11SPEC'S LI
+              CreatedOnDt: '2019-09-23T14:23:20-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494662
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: ADJUST FEE CHARGED ATM FEE REBATE
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494659
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: ALASKA AIRLINES VISA Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494658
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1200
+                CurCode: USD
+              Memo: CENTURY THEATRES 470
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494656
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1272
+                CurCode: USD
+              Memo: 'EXXONMOBIL 04/05 #000611101 PURC'
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326795
+            BankAcctTrnRec:
+              TrnID: 10494655
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: 'PAYCHEX PAYROLL 44897500001035X CCD ID: 1161124166'
+              CreatedOnDt: '2019-09-23T14:23:20-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494653
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -185.93
+                CurCode: USD
+              Memo: XCELENERGY XCEL ENERGY
+              CreatedOnDt: '2019-09-23T14:23:20-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494650
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -243.87
+                CurCode: USD
+              Memo: COMCAST CABLE COMM 800-C 03/17COMCAST C
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494648
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1671
+                CurCode: USD
+              Memo: Testexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494646
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 2200
+                CurCode: USD
+              Memo: Testdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494644
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1560
+                CurCode: USD
+              Memo: ATM WITHDRAWAL 002130 05/06320 N NEW
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494643
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: Electronic Payment to Discover C
+              CreatedOnDt: '2019-09-23T14:23:20-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494640
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1276.98
+                CurCode: USD
+              Memo: REVERSE DIRECT DEPOSIT DISCOUNT
+              CreatedOnDt: '2019-09-23T14:23:20-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494638
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -962.22
+                CurCode: USD
+              Memo: 'OFFICE DEPOT 0 05/06 #000824934'
+              CreatedOnDt: '2019-09-23T14:23:20-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494636
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1761
+                CurCode: USD
+              Memo: 'BEST BUY #404 SOUTHFIELD 05/05BEST BUY'
+              CreatedOnDt: '2019-09-23T14:23:20-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494634
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1298
+                CurCode: USD
+              Memo: PAESANOS COFFEE
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494632
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1100
+                CurCode: USD
+              Memo: 'FOOD LION #2600'
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494630
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1287
+                CurCode: USD
+              Memo: POPEYES LOUISIANA KI BAT 05/04POPEYES L
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494628
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1981
+                CurCode: USD
+              Memo: SPEC'S LIQUORS SPRING TX 05/11SPEC'S LI
+              CreatedOnDt: '2019-09-23T14:23:22-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494626
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: ADJUST FEE CHARGED ATM FEE REBATE
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322090
+            BankAcctTrnRec:
+              TrnID: 10494623
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: 'PAYCHEX PAYROLL 44897500001035X CCD ID: 1161124166'
+              CreatedOnDt: '2019-09-23T14:23:21-07:00'
+              Category: NA
+              SubCategory: NA
+          CCAcctTrnInfo:
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127016
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: TM *TICKETMASTER T
+              CreatedOnDt: '2019-09-23T14:23:50-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127014
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: 'AIRTRAN AIRWAYS DIRECT DEP PPD ID: 9111111101'
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127013
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1576
+                CurCode: USD
+              Memo: CHEVRON QUALITY EXPR BAT 05/04CHEVRON Q
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127012
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: Xcel Energy
+              CreatedOnDt: '2019-09-23T14:23:53-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127011
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -524
+                CurCode: USD
+              Memo: SPRINT *WIRELESS 800-639 04/17SPRINT *W
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127010
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testsavingexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127009
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testsavingdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127008
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: 'BKOFAMERICA ATM 05/05 #000001248'
+              CreatedOnDt: '2019-09-23T14:23:52-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127007
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1912
+                CurCode: USD
+              Memo: HSBC Credit Cards Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127006
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1981
+                CurCode: USD
+              Memo: ATM DEPOSIT
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127005
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -214
+                CurCode: USD
+              Memo: 'Staples, Inc 05-01 CUSTOMER 1337 PURCHASE #917342 LAKE FOREST CA'
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127004
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: MS *Microsoft Store 877- 02/17MS *Micro
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127003
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'THOMAS HAMMER COFFEE #6 05/06 CARD #8289 PURCHASE #24013392128010236117810
+                PULLMAN, WA'
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127002
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -870
+                CurCode: USD
+              Memo: WAWA 676 0000
+              CreatedOnDt: '2019-09-23T14:23:51-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127001
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1112
+                CurCode: USD
+              Memo: WAFFLE HOUSE 00206482 ATLA
+              CreatedOnDt: '2019-09-23T14:23:50-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5127000
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1198.651
+                CurCode: USD
+              Memo: SOMA WINE & SPIRITS
+              CreatedOnDt: '2019-09-23T14:23:50-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5126999
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -987
+                CurCode: USD
+              Memo: ATM Fee Wells Fargo Ban TIME-WARNER CENTER TAMPA FLUS
+              CreatedOnDt: '2019-09-23T14:23:50-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 2017217
+            FILoginAcctId: 5326793
+            AcctId: 5326794
+            BankAcctTrnRec:
+              TrnID: 5126997
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: CVS PAYROLL
+              CreatedOnDt: '2019-09-23T14:23:49-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126986
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -121
+                CurCode: USD
+              Memo: MS *Microsoft Store 877- 02/17MS *Micro
+              CreatedOnDt: '2019-09-23T14:23:42-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126978
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -312
+                CurCode: USD
+              Memo: 'AIRTRAN AIRWAYS DIRECT DEP PPD ID: 9111111101'
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126977
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1576
+                CurCode: USD
+              Memo: CHEVRON QUALITY EXPR BAT 05/04CHEVRON Q
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126976
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: Xcel Energy
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126975
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -524
+                CurCode: USD
+              Memo: SPRINT *WIRELESS 800-639 04/17SPRINT *W
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126974
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1712
+                CurCode: USD
+              Memo: Testsavingexpenseaafromacc
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126973
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1911
+                CurCode: USD
+              Memo: Testsavingdepositaatomyacc
+              CreatedOnDt: '2019-09-23T14:23:46-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126972
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1871
+                CurCode: USD
+              Memo: 'BKOFAMERICA ATM 05/05 #000001248'
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126971
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1912
+                CurCode: USD
+              Memo: HSBC Credit Cards Bill Payment
+              CreatedOnDt: '2019-09-23T14:23:44-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126970
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1981
+                CurCode: USD
+              Memo: ATM DEPOSIT
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126969
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -214
+                CurCode: USD
+              Memo: 'Staples, Inc 05-01 CUSTOMER 1337 PURCHASE #917342 LAKE FOREST CA'
+              CreatedOnDt: '2019-09-23T14:23:45-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126967
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 0
+                CurCode: USD
+              Memo: 'THOMAS HAMMER COFFEE #6 05/06 CARD #8289 PURCHASE #24013392128010236117810
+                PULLMAN, WA'
+              CreatedOnDt: '2019-09-23T14:23:44-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126966
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -870
+                CurCode: USD
+              Memo: WAWA 676 0000
+              CreatedOnDt: '2019-09-23T14:23:44-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126965
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1112
+                CurCode: USD
+              Memo: WAFFLE HOUSE 00206482 ATLA
+              CreatedOnDt: '2019-09-23T14:23:44-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126964
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -1198.651
+                CurCode: USD
+              Memo: SOMA WINE & SPIRITS
+              CreatedOnDt: '2019-09-23T14:23:43-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126963
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -987
+                CurCode: USD
+              Memo: ATM Fee Wells Fargo Ban TIME-WARNER CENTER TAMPA FLUS
+              CreatedOnDt: '2019-09-23T14:23:43-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126962
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -212
+                CurCode: USD
+              Memo: TM *TICKETMASTER T
+              CreatedOnDt: '2019-09-23T14:23:43-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5322088
+            AcctId: 5322089
+            BankAcctTrnRec:
+              TrnID: 5126961
+              TrnType: Credit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: 1500
+                CurCode: USD
+              Memo: CVS PAYROLL
+              CreatedOnDt: '2019-09-23T14:23:43-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320420
+            BankAcctTrnRec:
+              TrnID: 5126941
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -82
+                CurCode: USD
+              Memo: SAFEWAY STORE00040030
+              CreatedOnDt: '2019-09-23T14:23:41-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320420
+            BankAcctTrnRec:
+              TrnID: 5126940
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -12
+                CurCode: USD
+              Memo: JOY WINE & SPIRITS
+              CreatedOnDt: '2019-09-23T14:23:41-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320420
+            BankAcctTrnRec:
+              TrnID: 5126939
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2.7
+                CurCode: USD
+              Memo: TM *TICKETMASTER INTER
+              CreatedOnDt: '2019-09-23T14:23:40-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320420
+            BankAcctTrnRec:
+              TrnID: 5126938
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -221
+                CurCode: USD
+              Memo: TWINS BALLPARK LLC TMINNEAPOLIS MN
+              CreatedOnDt: '2019-09-23T14:23:41-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 3211375
+            FILoginAcctId: 5320419
+            AcctId: 5320420
+            BankAcctTrnRec:
+              TrnID: 5126937
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -762
+                CurCode: USD
+              Memo: REGAL CINEMAS WEBSTER CHICAGO IL
+              CreatedOnDt: '2019-09-23T14:23:41-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304147
+            BankAcctTrnRec:
+              TrnID: 5126917
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -82
+                CurCode: USD
+              Memo: SAFEWAY STORE00040030
+              CreatedOnDt: '2019-09-23T14:23:40-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304147
+            BankAcctTrnRec:
+              TrnID: 5126916
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -12
+                CurCode: USD
+              Memo: JOY WINE & SPIRITS
+              CreatedOnDt: '2019-09-23T14:23:41-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304147
+            BankAcctTrnRec:
+              TrnID: 5126915
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -2.7
+                CurCode: USD
+              Memo: TM *TICKETMASTER INTER
+              CreatedOnDt: '2019-09-23T14:23:40-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304147
+            BankAcctTrnRec:
+              TrnID: 5126914
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -221
+                CurCode: USD
+              Memo: TWINS BALLPARK LLC TMINNEAPOLIS MN
+              CreatedOnDt: '2019-09-23T14:23:41-07:00'
+              Category: NA
+              SubCategory: NA
+          - CEUserID: 1979099
+            FILoginAcctId: 5304145
+            AcctId: 5304147
+            BankAcctTrnRec:
+              TrnID: 5126913
+              TrnType: Debit
+              PostedDt: '2019-09-22'
+              CurAmt:
+                Amt: -762
+                CurCode: USD
+              Memo: REGAL CINEMAS WEBSTER CHICAGO IL
+              CreatedOnDt: '2019-09-23T14:23:40-07:00'
+              Category: NA
+              SubCategory: NA
+          InvAcctTrnInfo:
+          - CEUserID: 3272926
+            FILoginAcctId: 5340278
+            AcctId: 5340281
+            InvAcctTrnRec:
+              TrnID: 13897448
+              TrnDate: '2014-02-11'
+              TrnAction: SYSTEMATIC CONTRIBUTION
+              NetTrnAmt:
+                Amt: 150
+                CurCode: USD
+              Desc: Fidelity Advisor 529 Mid Cap Portfolio - Class C(1166)-SYSTEMATIC CONTRIBUTION
+              Units: 9.146
+              UnitPrice:
+                Amt: 16.4
+                CurCode: USD
+          - CEUserID: 3272926
+            FILoginAcctId: 5340270
+            AcctId: 5340273
+            InvAcctTrnRec:
+              TrnID: 13897447
+              TrnDate: '2018-03-22'
+              TrnAction: SYSTEMATIC CONTRIBUTION
+              NetTrnAmt:
+                Amt: 150
+                CurCode: USD
+              Desc: Fidelity Advisor 529 Mid Cap Portfolio - Class C(1166)-SYSTEMATIC CONTRIBUTION
+              Units: 6.56
+              UnitPrice:
+                Amt: 22.87
+                CurCode: USD
+        partnerID: 8885504
+        version: 1.4.6
+
+    
+    getEmployerStockOptionsRequest:
+      value:
+        EmployerStockOptionRq:
+          FIAcctId:
+            AcctId: '5585548'
+            AcctType: INV
+            ExtAcctType: ESO
+        RqUID: RqUID0
+        partnerID: '50120000'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt14478
+            HomeID: '50120001'
+            
+    getEmployerStockOptionsResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752332
+        EmployerStockOptionRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          EmployerStockOption:
+            FIAcctId:
+              AcctId: 5585548
+              AcctType: INV
+              ExtAcctType: ESO
+              AcctNumber: '987654'
+            StockOption:
+              Symbol: BAC
+              Desc: Bank of America
+              Cusip: '060505104'
+              Price:
+                Amt: 10.8
+                CurCode: USD
+              MarketValue:
+                Amt: 5627913.16
+                CurCode: USD
+              GrantTypeList: NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU
+              DtAsOf: '2021-11-21T13:10:15-08:00'
+              Grants:
+                Grant:
+                - GrantId: '301231'
+                  GrantNo: '0000.23809'
+                  GrantDt: '2011-02-11'
+                  GrantType: NQO
+                  ExercisePrice:
+                    Amt: 10.55
+                    CurCode: USD
+                  FirstVestDt: '2012-02-11'
+                  ExpirationDt: '2021-02-11'
+                  SharesGranted: 94700
+                  NxtVestDt: '2012-02-11'
+                  VestPeriods: 3
+                  VestPeriodsPerYr: 1
+                  SharesVested: 0
+                  SharesSold: 0
+                  SharesAvail: 0
+                  OptionPlan: Awards
+                - GrantId: '301232'
+                  GrantNo: '0000.21429'
+                  GrantDt: '2009-12-08'
+                  GrantType: NQO
+                  ExercisePrice:
+                    Amt: 9.45
+                    CurCode: USD
+                  FirstVestDt: '2010-12-08'
+                  ExpirationDt: '2019-12-08'
+                  SharesGranted: 89700
+                  NxtVestDt: '2011-12-08'
+                  VestPeriods: 3
+                  VestPeriodsPerYr: 1
+                  SharesVested: 29900
+                  SharesSold: 0
+                  SharesAvail: 29900
+                  OptionPlan: Awards
+                - GrantId: '301233'
+                  GrantNo: '0000.16717'
+                  GrantDt: '2008-12-08'
+                  GrantType: NQO
+                  ExercisePrice:
+                    Amt: 8.65
+                    CurCode: USD
+                  FirstVestDt: '2009-12-08'
+                  ExpirationDt: '2018-12-08'
+                  SharesGranted: 111800
+                  NxtVestDt: '2011-12-08'
+                  VestPeriods: 3
+                  VestPeriodsPerYr: 1
+                  SharesVested: 74534
+                  SharesSold: 0
+                  SharesAvail: 74534
+                  OptionPlan: Awards
+                - GrantId: '301234'
+                  GrantNo: '0000.6317'
+                  GrantDt: '2007-12-10'
+                  GrantType: NQO
+                  ExercisePrice:
+                    Amt: 8.15
+                    CurCode: USD
+                  FirstVestDt: '2008-12-10'
+                  ExpirationDt: '2017-12-10'
+                  SharesGranted: 59300
+                  NxtVestDt:
+                  VestPeriods: 3
+                  VestPeriodsPerYr: 1
+                  SharesVested: 59300
+                  SharesSold: 0
+                  SharesAvail: 59300
+                  OptionPlan: Awards
+                - GrantId: '301235'
+                  GrantNo: '0000.1217'
+                  GrantDt: '2006-12-12'
+                  GrantType: NQO
+                  ExercisePrice:
+                    Amt: 6.55
+                    CurCode: USD
+                  FirstVestDt: '2007-12-12'
+                  ExpirationDt: '2016-12-12'
+                  SharesGranted: 71100
+                  NxtVestDt:
+                  VestPeriods: 3
+                  VestPeriodsPerYr: 1
+                  SharesVested: 71100
+                  SharesSold: 0
+                  SharesAvail: 71100
+                  OptionPlan: Awards
+                - GrantId: '301236'
+                  GrantNo: '0000.148'
+                  GrantDt: '2005-12-12'
+                  GrantType: NQO
+                  ExercisePrice:
+                    Amt: 5.75
+                    CurCode: USD
+                  FirstVestDt: '2006-12-12'
+                  ExpirationDt: '2015-12-12'
+                  SharesGranted: 55042
+                  NxtVestDt:
+                  VestPeriods: 3
+                  VestPeriodsPerYr: 1
+                  SharesVested: 55042
+                  SharesSold: 55042
+                  SharesAvail: 0
+                  OptionPlan: Awards
+                - GrantId: '301237'
+                  GrantNo: '0000.24010'
+                  GrantDt: '2011-02-11'
+                  GrantType: RSU
+                  ExercisePrice:
+                    Amt: 0
+                    CurCode: USD
+                  FirstVestDt: '2014-02-11'
+                  ExpirationDt:
+                  SharesGranted: 13958
+                  NxtVestDt: '2014-02-11'
+                  VestPeriods: 1
+                  VestPeriodsPerYr: 1
+                  SharesVested: 0
+                  SharesSold: 0
+                  SharesAvail: 0
+                  OptionPlan: Restricted Stock
+                - GrantId: '301238'
+                  GrantNo: '0000.22176'
+                  GrantDt: '2010-02-04'
+                  GrantType: RSU
+                  ExercisePrice:
+                    Amt: 0
+                    CurCode: USD
+                  FirstVestDt: '2013-02-04'
+                  ExpirationDt:
+                  SharesGranted: 22340
+                  NxtVestDt: '2013-02-04'
+                  VestPeriods: 1
+                  VestPeriodsPerYr: 1
+                  SharesVested: 0
+                  SharesSold: 0
+                  SharesAvail: 0
+                  OptionPlan: Restricted Stock
+                - GrantId: '301239'
+                  GrantNo: DER0000.21630
+                  GrantDt: '2010-01-09'
+                  GrantType: RSU
+                  ExercisePrice:
+                    Amt: 0
+                    CurCode: USD
+                  FirstVestDt: '2011-01-09'
+                  ExpirationDt:
+                  SharesGranted: 15
+                  NxtVestDt:
+                  VestPeriods: 1
+                  VestPeriodsPerYr: 1
+                  SharesVested: 15
+                  SharesSold: 0
+                  SharesAvail: 15
+                  OptionPlan: Restricted Stock
+                - GrantId: '301240'
+                  GrantNo: DER0000.20858
+                  GrantDt: '2009-10-06'
+                  GrantType: RSU
+                  ExercisePrice:
+                    Amt: 0
+                    CurCode: USD
+                  FirstVestDt: '2010-10-06'
+                  ExpirationDt:
+                  SharesGranted: 16
+                  NxtVestDt:
+                  VestPeriods: 1
+                  VestPeriodsPerYr: 1
+                  SharesVested: 16
+                  SharesSold: 0
+                  SharesAvail: 16
+                  OptionPlan: Restricted Stock
+                - GrantId: '301241'
+                  GrantNo: '0000.8817'
+                  GrantDt: '2008-02-04'
+                  GrantType: RSU
+                  ExercisePrice:
+                    Amt: 0
+                    CurCode: USD
+                  FirstVestDt: '2011-02-04'
+                  ExpirationDt:
+                  SharesGranted: 10011
+                  NxtVestDt:
+                  VestPeriods: 1
+                  VestPeriodsPerYr: 1
+                  SharesVested: 10011
+                  SharesSold: 0
+                  SharesAvail: 10011
+                  OptionPlan: Restricted Stock
+                - GrantId: '301242'
+                  GrantNo: '0000.24211'
+                  GrantDt: '2011-02-11'
+                  GrantType: PSU
+                  ExercisePrice:
+                    Amt: 0
+                    CurCode: USD
+                  FirstVestDt: '2014-02-11'
+                  ExpirationDt:
+                  SharesGranted: 9305
+                  NxtVestDt: '2014-02-11'
+                  VestPeriods: 1
+                  VestPeriodsPerYr: 1
+                  SharesVested: 0
+                  SharesSold: 0
+                  SharesAvail: 0
+                  OptionPlan: Performance Shares
+        partnerID: 50120000
+        version: 1.4.6
+
+    getInvestmentPosRequest:
+      value:
+        RqUID: RqUID0
+        partnerID: '50040000'
+        InvAcctPosInqRq:
+          FIAcctId:
+            AcctId: '5586109'
+            AcctType: INV
+            ExtAcctType: INV
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt81782
+            HomeID: '50040009'
+            
+    getInvestmentPosResponse:
+      value:
+        partnerID: 50040000
+        version: 1.4.6
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752566
+        InvAcctPosInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          InvAcctPos:
+            FIAcctId:
+              AcctId: 5586109
+              AcctType: INV
+              ExtAcctType: INV
+            DtAsOf: '2021-11-21T13:01:08-08:00'
+            InvPos:
+            - PosID: UBvkWKUPO6lx0aZvfxWd4g==
+              SecInfo:
+                Ticker: VWSUX
+                SecDesc: VANGUARD MUN BD FD INC
+                Property:
+                - ParamName: AssetID
+                  ParamVal: '922907803'
+                - ParamName: AssetIDType
+                  ParamVal: CUSIP
+              SecPos:
+                UnitPrice:
+                  Amt: 11
+                  CurCode: USD
+                Units: 101
+                MarketValue:
+                  Amt: 1111
+                  CurCode: USD
+                CostBasis:
+                  Amt: 12356.7125
+                  CurCode: USD
+            - PosID: VFyCWXRfIA/ui5LpKJxDGg==
+              SecInfo:
+                Ticker: VMMXX
+                SecDesc: BARC PARTICIPATING GOLD NOTE
+                Property:
+                - ParamName: AssetID
+                  ParamVal: '922906201'
+                - ParamName: AssetIDType
+                  ParamVal: CUSIP
+              SecPos:
+                UnitPrice:
+                  Amt: 101
+                  CurCode: USD
+                Units: 10
+                MarketValue:
+                  Amt: 15487
+                  CurCode: USD
+                CostBasis:
+                  Amt: 11237.7631
+                  CurCode: USD
+            - PosID: yND4gLISIkEjOH6flcJ/hg==
+              SecInfo:
+                Ticker: VWIUX
+                SecDesc: VANGUARD INTERMEDIATE TERM TAX
+                Property:
+                - ParamName: AssetID
+                  ParamVal: '922907878'
+                - ParamName: AssetIDType
+                  ParamVal: CUSIP
+              SecPos:
+                UnitPrice:
+                  Amt: 21
+                  CurCode: USD
+                Units: 25
+                MarketValue:
+                  Amt: 501
+                  CurCode: USD
+                CostBasis:
+                  Amt: 8245.3426
+                  CurCode: USD
+
+    getInvestmentTransRequest:
+      value:
+        InvAcctTrnInqRq:
+          FIAcctId:
+            AcctId: '5585109'
+            AcctType: INV
+            ExtAcctType: INV
+          SelectionCriterion:
+            SelRangeDt:
+              EndDt: '2020-10-30'
+              StartDt: '2020-10-01'
+        RqUID: RqUID0
+        partnerID: '50120000'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt83405
+            HomeID: '50120001'
+    
+    getInvestmentTransResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752308
+        InvAcctTrnInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          InvAcctTrns:
+            FIAcctId:
+              AcctId: 5585109
+              AcctType: INV
+              ExtAcctType: INV
+            SelectionCriterion:
+              SelRangeDt:
+                StartDt: '2020-10-01'
+                EndDt: '2020-10-30'
+            InvAcctTrnRec:
+            - TrnID: 16826176
+              TrnDate: '2020-10-27'
+              NetTrnAmt:
+                Amt: 12206.6224
+                CurCode: USD
+              Desc: VANGUARD INDEX FUNDS VANGUARD SMALL-CAP
+              SecInfo:
+                Ticker: '922908751'
+                SecDesc: VANGUARD INDEX FUNDS VANGUARD SMALL-CAP
+              Units: 12206.6224
+              UnitPrice:
+                Amt: 1
+                CurCode: USD
+            - TrnID: 16826177
+              TrnDate: '2020-10-18'
+              NetTrnAmt:
+                Amt: 9997.44
+                CurCode: USD
+              Desc: VANGUARD INDEX FUNDS VANGUARD LARGE-CAP
+              SecInfo:
+                Ticker: '922908637'
+                SecDesc: VANGUARD INDEX FUNDS VANGUARD LARGE-CAP
+              Units: 82
+              UnitPrice:
+                Amt: 121.92
+                CurCode: USD
+            - TrnID: 16826178
+              TrnDate: '2020-10-10'
+              TrnAction: REINVEST
+              NetTrnAmt:
+                Amt: 76.82
+                CurCode: USD
+              Desc: STARWOOD HOTELS & RESORTS WORLDWIDE INC
+              SecInfo:
+                Ticker: 85590A203
+                SecDesc: STARWOOD HOTELS & RESORTS WORLDWIDE INC
+              Units: 76.82
+              UnitPrice:
+                Amt: 1
+                CurCode: USD
+            - TrnID: 16826179
+              TrnDate: '2020-10-01'
+              TrnAction: Investment Earnings-Employer
+              NetTrnAmt:
+                Amt: 76.8252
+                CurCode: USD
+              Desc: EURO PAC GROWTH FUND CL C REINVEST
+              SecInfo:
+                Ticker: '298706300'
+                SecDesc: EURO PAC GROWTH FUND CL C REINVEST
+              Units: 76.8252
+              UnitPrice:
+                Amt: 1
+                CurCode: USD
+        partnerID: 50120000
+        version: 1.4.6
