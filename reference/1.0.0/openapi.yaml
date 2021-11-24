@@ -26,17 +26,11 @@ paths:
           \ FIAcctSummary InvAcctPosAcctIdentifier</td> </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getAccountDetails'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
             examples:
-              getAccountDetails: {$ref: '#/components/examples/GetAccountDetailsRequest'}
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
+              getAccountDetails: {summary: Request Account Details, $ref: '#/components/examples/GetAccountDetailsRequest'}
         required: true
       responses:
         "200":
@@ -51,17 +45,11 @@ paths:
             \ been provided in the request. This aggregate will be present only if\
             \ the request was carried out successfully.</td> </tr> </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
               examples:
-                getAccountDetails: {$ref: '#/components/examples/GetAccountDetailsResponse'}
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
+                getAccountDetails: {summary: Response Account Details, $ref: '#/components/examples/GetAccountDetailsResponse'}
         "400":
           description: Bad Request
         "401":
