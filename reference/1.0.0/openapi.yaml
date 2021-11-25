@@ -1161,29 +1161,33 @@ paths:
       operationId: ping
       requestBody:
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/PingRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/PingRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/PingRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/PingRqHeader'
+            examples: 
+              ping: {summary: Request Ping, $ref: '#/components/examples/pingRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/PingRqHeader'
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/PingRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/PingRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/PingRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/PingRsHeader'
+              examples:
+                ping: {summary: Response Ping, $ref: '#/components/examples/pingResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/PingRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -12972,6 +12976,29 @@ components:
               TrnInterest: 945.18
               CreatedOnDt: '2021-11-08T22:04:57-08:00'
         version: 1.4.6
+
+    pingRequest:
+      value:
+        partnerID: '50120000'
+        version: version1
+        RqUID: '1'
+        SignonRq:
+          UserInfo:
+            UserID: XMLAdminu50lgw
+            HomeID: '50120001'
+            UserPassword:
+              CryptType: None
+              CryptVal: Cashedge1$
+            Role: Admin
+          GenSessInfo: 'true'
+
+    pingResponse: 
+      value:
+        PingRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Aggregation Service is Up and Running.
 
     getDeletedTransRequest:
       value:
