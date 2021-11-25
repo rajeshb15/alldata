@@ -854,18 +854,17 @@ paths:
           </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getOtherAccountTrans'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
             examples:
-              # TEST : JUST PUTTING THE SUMMARY
               WorkingSample: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
         required: true
       responses:
         "200":
@@ -903,7 +902,6 @@ paths:
             \ Date.</td><td>Default maximum range is 90 days; this is configurable\
             \ for the Partner requesting extended transaction history.</td></tr></table></td></tr></tbody></table>"
           content:
-            # TEST : REMOVE XML RELATED
             # application/xml:
             #   schema:
             #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
