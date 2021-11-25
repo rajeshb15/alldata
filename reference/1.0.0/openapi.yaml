@@ -306,15 +306,11 @@ paths:
           href='elementDescription.jsp#AccountMgmt_getBankStmtDetails' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BankStatementRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BankStatementRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/BankStatementRqHeader'
+            examples:
+              WorkingSample: {summary: Request Bank Statement Details, $ref: '#/components/examples/getBankStmtDetailsRequest'}
         required: true
       responses:
         "200":
@@ -371,15 +367,11 @@ paths:
               </tr> 
           </table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BankStatementRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BankStatementRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/BankStatementRsHeader'
+              examples:
+                WorkingSample: {summary: Response Bank Statement Details, $ref: '#/components/examples/getBankStmtDetailsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -862,18 +854,17 @@ paths:
           </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getOtherAccountTrans'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
             examples:
-              # TEST : JUST PUTTING THE SUMMARY
               WorkingSample: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
         required: true
       responses:
         "200":
@@ -911,7 +902,6 @@ paths:
             \ Date.</td><td>Default maximum range is 90 days; this is configurable\
             \ for the Partner requesting extended transaction history.</td></tr></table></td></tr></tbody></table>"
           content:
-            # TEST : REMOVE XML RELATED
             # application/xml:
             #   schema:
             #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
@@ -947,15 +937,17 @@ paths:
           href='elementDescription.jsp#AccountMgmt_getBankStmtDetails' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/TaxDocumentInqRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/TaxDocumentInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/TaxDocumentInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/TaxDocumentInqRqHeader'
+            examples: 
+              WorkingSample: {summary: Request TaxDocDetails, $ref: '#/components/examples/getTaxDocDetailsRequest'}          
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/TaxDocumentInqRqHeader'
         required: true
       responses:
         "200":
@@ -963,15 +955,17 @@ paths:
             href="./examples.jsp?category=AccountDataInq&amp;service=getTaxDocDetails"
             target="_blank"><i><b>WorkingSamples</i></b></a>
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/TaxDocumentInqRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/TaxDocumentInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/TaxDocumentInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/TaxDocumentInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response TaxDocDetails, $ref: '#/components/examples/getTaxDocDetailsResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/TaxDocumentInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -12955,6 +12949,58 @@ components:
         partnerID: 50120000
         version: version1
 
+    getBankStmtDetailsRequest:
+      value:
+        RqUID: RqUID12129921
+        SignonRq:
+          UserInfo:
+            UserID: KeerthanaPerfTest1
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: KeerthanaPerfTest1
+            Role: User
+        partnerID: 8885504
+        version: version1
+    
+    getBankStmtDetailsResponse:
+      value:
+        RqUID: RqUID12129921
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752064
+        BankStatementInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          UserBankStmtConsent:
+            UserConsent: enabled
+          FIAcctsStmtList:
+            FIAcctsStmtDetail:
+            - FILoginAcctId: 5584789
+              FIConsent: NA
+            - FILoginAcctId: 5584806
+              FIConsent: enabled
+              AcctBankStmtDetail:
+              - AcctId: 5584807
+                AvailableBankStatements: 8-2020,9-2020,10-2020,11-2020,12-2020,1-2021,2-2021,3-2021,4-2021,5-2021,6-2021
+              - AcctId: 5584809
+                AvailableBankStatements: ''
+              - AcctId: 5584808
+                AvailableBankStatements: 8-2020,9-2020,10-2020,11-2020,12-2020,1-2021,2-2021,3-2021,4-2021,5-2021
+            - FILoginAcctId: 5586370
+              FIConsent: NA
+        partnerID: 8885504
+        version: version1
+
     getOtherAccountTransRequest:
       value:
         RqUID: RqUID0
@@ -13041,6 +13087,102 @@ components:
             StatusCode: 0
             Severity: Info
             StatusDesc: Aggregation Service is Up and Running.
+
+    getTaxDocDetailsRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: murugatest
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: murugatest
+            Role: User
+        partnerID: 8885504
+        version: version1
+
+    getTaxDocDetailsResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 1857898
+          SessInfo:
+          Roles:
+          ResetPasswordRequired:
+          SecurityQuesSetUpRequired:
+          PasswordExpired:
+          LastSuccessfullLogin:
+          MFAQuestions:
+        TaxDocumentInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          UserTaxDocConsent:
+            UserConsent: enabled
+          FILoginAcctTaxDocList:
+            FILoginAcctTaxDocDetail:
+            - FILoginAcctId: 5291042
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+            - FILoginAcctId: 5290978
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+            - FILoginAcctId: 5290980
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+            - FILoginAcctId: 5289749
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+            - FILoginAcctId: 5287207
+              TaxDocumentID:
+              FIConsent: enabled
+              AcctTaxDocDetail:
+              - AcctId: 5287210
+                TaxDocumentID:
+            - FILoginAcctId: 5289928
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+            - FILoginAcctId: 5284936
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+            - FILoginAcctId: 5290345
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+            - FILoginAcctId: 5290636
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+            - FILoginAcctId: 5289790
+              TaxDocumentID:
+              FIConsent: enabled
+              AcctTaxDocDetail:
+              - AcctId: 5289796
+                TaxDocumentID:
+              - AcctId: 5289797
+                TaxDocumentID: YWxsZGF0YV8yMDE4XzUyODk3OTdfaW52ZXN0Mi5wZGY=
+            - FILoginAcctId: 5291247
+              TaxDocumentID:
+              FIConsent: NA
+              AcctTaxDocDetail:
+        partnerID: 8885504
+        version: version1
     
     getBankingTransRequest:
       value:
