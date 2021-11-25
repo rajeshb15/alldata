@@ -30,7 +30,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
             examples:
-              getAccountDetails: {summary: Request Account Details, $ref: '#/components/examples/GetAccountDetailsRequest'}
+              WorkingSample: {summary: Request Account Details, $ref: '#/components/examples/getAccountDetailsRequest'}
         required: true
       responses:
         "200":
@@ -49,7 +49,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
               examples:
-                getAccountDetails: {summary: Response Account Details, $ref: '#/components/examples/GetAccountDetailsResponse'}
+                WorkingSample: {summary: Response Account Details, $ref: '#/components/examples/getAccountDetailsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -200,15 +200,11 @@ paths:
           <td> Account identifier.</td> </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getAccountsSummary'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FIAcctSummaryInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FIAcctSummaryInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FIAcctSummaryInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Accounts Summary, $ref: '#/components/examples/getAccountsSummaryRequest'}
         required: true
       responses:
         "200":
@@ -289,15 +285,11 @@ paths:
               </tbody>    
             </table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FIAcctSummaryInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FIAcctSummaryInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FIAcctSummaryInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Accounts Summary, $ref: '#/components/examples/getAccountsSummaryResponse'}
         "400":
           description: Bad Request
         "401":
@@ -952,7 +944,7 @@ paths:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
             examples:
               # TEST : JUST PUTTING THE SUMMARY
-              getOtherAccountTrans: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
+              WorkingSample: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
           text/xml:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
@@ -1001,7 +993,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
               examples: 
-                getOtherAccountTrans: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
+                WorkingSample: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
             # text/xml:
             #   schema:
             #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
@@ -1161,29 +1153,33 @@ paths:
       operationId: ping
       requestBody:
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/PingRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/PingRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/PingRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/PingRqHeader'
+            examples: 
+              WorkingSample: {summary: Request Ping, $ref: '#/components/examples/pingRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/PingRqHeader'
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/PingRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/PingRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/PingRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/PingRsHeader'
+              examples:
+                WorkingSample: {summary: Response Ping, $ref: '#/components/examples/pingResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/PingRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -12238,7 +12234,7 @@ components:
           type: integer
           format: int32
   examples:
-    GetAccountDetailsRequest:
+    getAccountDetailsRequest:
       value:
         FILoginAcctInfoListInqRq:
           IncludeDetail:
@@ -12254,7 +12250,8 @@ components:
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
-    GetAccountDetailsResponse:
+    
+    getAccountDetailsResponse:
       value:
         RqUID: RqUID0
         Status:
@@ -12909,6 +12906,84 @@ components:
         partnerID: 50120000
         version: 1.4.6
     
+    getAccountsSummaryRequest:
+      value:
+        RqUID: RqUID0
+        partnerID: '50120000'
+        version: version1
+        FIAcctSummaryInqRq:
+          FIAcctId:
+            AcctId: '5585065'
+            AcctType: SDA
+            ExtAcctType: SDA
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: wstest236973
+            HomeID: '50120001'
+
+    getAccountsSummaryResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        RqUID: RqUID0
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752297
+        FIAcctSummaryInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIAcctSummary:
+            FIAcctInfo:
+              FIAcctId:
+                AcctId: 5585065
+                AcctType: SDA
+                ExtAcctType: SDA
+              FIAcctName:
+              - ParamName: NameAtFI
+                ParamVal: Savings
+              - ParamName: NickNameAtFI
+                ParamVal: Banking
+              - ParamName: NickNameAtCE
+                ParamVal: Banking
+              AcctOwnerName: James Hudson
+            IncludeInDisplay: 'Yes'
+            LastUpdateStatusCode: Success
+            AcctDateTime:
+            - DateTimeType: LastUpdateAttempt
+              DateTimeVal: '2021-11-24T12:51:26-08:00'
+            - DateTimeType: LastSuccessfulUpdate
+              DateTimeVal: '2021-11-24T12:51:28-08:00'
+            AcctBal:
+            - BalType: Current
+              CurAmt:
+                Amt: 3897.52
+                CurCode: USD
+            - BalType: Avail
+              CurAmt:
+                Amt: 3897.52
+                CurCode: USD
+            Property:
+            - ParamName: RetirementStatus
+              ParamVal: Not Selected
+            - ParamName: Instrument
+              ParamVal: N/A
+            - ParamName: AccountOwnership
+              ParamVal: N/A
+            RoutingNumber: '042000314'
+        partnerID: 50120000
+        version: 1.4.6
+
     getOtherAccountTransRequest:
       value:
         RqUID: RqUID0
@@ -12972,6 +13047,29 @@ components:
               TrnInterest: 945.18
               CreatedOnDt: '2021-11-08T22:04:57-08:00'
         version: 1.4.6
+
+    pingRequest:
+      value:
+        partnerID: '50120000'
+        version: version1
+        RqUID: '1'
+        SignonRq:
+          UserInfo:
+            UserID: XMLAdminu50lgw
+            HomeID: '50120001'
+            UserPassword:
+              CryptType: None
+              CryptVal: Cashedge1$
+            Role: Admin
+          GenSessInfo: 'true'
+
+    pingResponse: 
+      value:
+        PingRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Aggregation Service is Up and Running.
 
     getDeletedTransRequest:
       value:
