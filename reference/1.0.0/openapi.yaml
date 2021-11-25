@@ -77,15 +77,11 @@ paths:
           href='elementDescription.jsp#AccountDataInq_getAccountUpdateSummary' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
+            examples:
+              WorkingSample: {summary: Request Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryRequest'}
         required: true
       responses:
         "200":
@@ -165,15 +161,11 @@ paths:
                 </tr>
             </table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
+              examples:
+                WorkingSample: {summary: Response Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryResponse'}
         "400":
           description: Bad Request
         "401":
@@ -12921,6 +12913,47 @@ components:
             RoutingNumber: '042000314'
         partnerID: 50120000
         version: 1.4.6
+
+    getAccountUpdateSummaryRequest:
+      value:
+        partnerID: '50120000'
+        version: version1
+        RqUID: '123232'
+        SignonRq:
+          UserInfo:
+            UserID: wstest236973
+            HomeID: '50120001'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+          GenSessInfo: 'true'
+        AccountUpdateSummaryRq:
+          RqUID: '123232'
+
+    getAccountUpdateSummaryResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        RqUID: '123232'
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752297
+          SessInfo: 483577735a4a645365706a5a494c55674968676772513d3d
+        AccountUpdateSummaryRs:
+          RqUID: '123232'
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FILoginAccountList: {}
+        partnerID: 50120000
+        version: version1
 
     getOtherAccountTransRequest:
       value:
