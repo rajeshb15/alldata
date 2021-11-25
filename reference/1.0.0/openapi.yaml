@@ -952,7 +952,7 @@ paths:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
             examples:
               # TEST : JUST PUTTING THE SUMMARY
-              getOtherAccountTrans: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
+              WorkingSample: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
           text/xml:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
@@ -1001,7 +1001,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
               examples: 
-                getOtherAccountTrans: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
+                WorkingSample: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
             # text/xml:
             #   schema:
             #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
@@ -1168,7 +1168,7 @@ paths:
             schema:
               $ref: '#/components/schemas/PingRqHeader'
             examples: 
-              ping: {summary: Request Ping, $ref: '#/components/examples/pingRequest'}
+              WorkingSample: {summary: Request Ping, $ref: '#/components/examples/pingRequest'}
           # text/xml:
           #   schema:
           #     $ref: '#/components/schemas/PingRqHeader'
@@ -1184,7 +1184,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/PingRsHeader'
               examples:
-                ping: {summary: Response Ping, $ref: '#/components/examples/pingResponse'}
+                WorkingSample: {summary: Response Ping, $ref: '#/components/examples/pingResponse'}
             # text/xml:
             #   schema:
             #     $ref: '#/components/schemas/PingRsHeader'
