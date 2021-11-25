@@ -306,15 +306,11 @@ paths:
           href='elementDescription.jsp#AccountMgmt_getBankStmtDetails' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BankStatementRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BankStatementRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/BankStatementRqHeader'
+            examples:
+              WorkingSample: {summary: Request Bank Statement Details, $ref: '#/components/examples/getBankStmtDetailsRequest'}
         required: true
       responses:
         "200":
@@ -371,15 +367,11 @@ paths:
               </tr> 
           </table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BankStatementRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BankStatementRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/BankStatementRsHeader'
+              examples:
+                WorkingSample: {summary: Response Bank Statement Details, $ref: '#/components/examples/getBankStmtDetailsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -12953,6 +12945,58 @@ components:
             StatusDesc: Success
           FILoginAccountList: {}
         partnerID: 50120000
+        version: version1
+
+    getBankStmtDetailsRequest:
+      value:
+        RqUID: RqUID12129921
+        SignonRq:
+          UserInfo:
+            UserID: KeerthanaPerfTest1
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: KeerthanaPerfTest1
+            Role: User
+        partnerID: 8885504
+        version: version1
+    
+    getBankStmtDetailsResponse:
+      value:
+        RqUID: RqUID12129921
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752064
+        BankStatementInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          UserBankStmtConsent:
+            UserConsent: enabled
+          FIAcctsStmtList:
+            FIAcctsStmtDetail:
+            - FILoginAcctId: 5584789
+              FIConsent: NA
+            - FILoginAcctId: 5584806
+              FIConsent: enabled
+              AcctBankStmtDetail:
+              - AcctId: 5584807
+                AvailableBankStatements: 8-2020,9-2020,10-2020,11-2020,12-2020,1-2021,2-2021,3-2021,4-2021,5-2021,6-2021
+              - AcctId: 5584809
+                AvailableBankStatements: ''
+              - AcctId: 5584808
+                AvailableBankStatements: 8-2020,9-2020,10-2020,11-2020,12-2020,1-2021,2-2021,3-2021,4-2021,5-2021
+            - FILoginAcctId: 5586370
+              FIConsent: NA
+        partnerID: 8885504
         version: version1
 
     getOtherAccountTransRequest:
