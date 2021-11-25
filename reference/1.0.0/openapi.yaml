@@ -30,7 +30,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
             examples:
-              getAccountDetails: {summary: Request Account Details, $ref: '#/components/examples/GetAccountDetailsRequest'}
+              WorkingSample: {summary: Request Account Details, $ref: '#/components/examples/getAccountDetailsRequest'}
         required: true
       responses:
         "200":
@@ -49,7 +49,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
               examples:
-                getAccountDetails: {summary: Response Account Details, $ref: '#/components/examples/GetAccountDetailsResponse'}
+                WorkingSample: {summary: Response Account Details, $ref: '#/components/examples/getAccountDetailsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -200,15 +200,11 @@ paths:
           <td> Account identifier.</td> </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getAccountsSummary'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FIAcctSummaryInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FIAcctSummaryInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FIAcctSummaryInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Accounts Summary, $ref: '#/components/examples/getAccountsSummaryRequest'}
         required: true
       responses:
         "200":
@@ -289,15 +285,11 @@ paths:
               </tbody>    
             </table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FIAcctSummaryInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FIAcctSummaryInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FIAcctSummaryInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Accounts Summary, $ref: '#/components/examples/getAccountsSummaryResponse'}
         "400":
           description: Bad Request
         "401":
@@ -952,7 +944,7 @@ paths:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
             examples:
               # TEST : JUST PUTTING THE SUMMARY
-              getOtherAccountTrans: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
+              WorkingSample: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
           text/xml:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
@@ -1001,7 +993,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
               examples: 
-                getOtherAccountTrans: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
+                WorkingSample: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
             # text/xml:
             #   schema:
             #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
@@ -1093,15 +1085,17 @@ paths:
           \ href='elementDescription.jsp#AccountDataInq_getTransactions' target='_blank'>More\
           \ Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FindTrnsInqRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/FindTrnsInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FindTrnsInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FindTrnsInqRqHeader'
+            examples: 
+              WorkingSample: {summary: Request getTransactions, $ref: '#/components/examples/getTransactionsRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/FindTrnsInqRqHeader'
         required: true
       responses:
         "200":
@@ -1132,15 +1126,17 @@ paths:
             \ amount</td><td>Amount specified in the request is invalid.</td><td></td></tr>\
             \ </tr> </tbody></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FindTrnsInqRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/FindTrnsInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FindTrnsInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FindTrnsInqRsHeader'
+              examples: 
+                WorkingSample: {summary: Response getTransactions, $ref: '#/components/examples/getTransactionsResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/FindTrnsInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -1161,29 +1157,33 @@ paths:
       operationId: ping
       requestBody:
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/PingRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/PingRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/PingRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/PingRqHeader'
+            examples: 
+              WorkingSample: {summary: Request Ping, $ref: '#/components/examples/pingRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/PingRqHeader'
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/PingRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/PingRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/PingRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/PingRsHeader'
+              examples:
+                WorkingSample: {summary: Response Ping, $ref: '#/components/examples/pingResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/PingRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -12238,7 +12238,7 @@ components:
           type: integer
           format: int32
   examples:
-    GetAccountDetailsRequest:
+    getAccountDetailsRequest:
       value:
         FILoginAcctInfoListInqRq:
           IncludeDetail:
@@ -12254,7 +12254,8 @@ components:
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
-    GetAccountDetailsResponse:
+    
+    getAccountDetailsResponse:
       value:
         RqUID: RqUID0
         Status:
@@ -12909,6 +12910,84 @@ components:
         partnerID: 50120000
         version: 1.4.6
     
+    getAccountsSummaryRequest:
+      value:
+        RqUID: RqUID0
+        partnerID: '50120000'
+        version: version1
+        FIAcctSummaryInqRq:
+          FIAcctId:
+            AcctId: '5585065'
+            AcctType: SDA
+            ExtAcctType: SDA
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: wstest236973
+            HomeID: '50120001'
+
+    getAccountsSummaryResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        RqUID: RqUID0
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752297
+        FIAcctSummaryInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIAcctSummary:
+            FIAcctInfo:
+              FIAcctId:
+                AcctId: 5585065
+                AcctType: SDA
+                ExtAcctType: SDA
+              FIAcctName:
+              - ParamName: NameAtFI
+                ParamVal: Savings
+              - ParamName: NickNameAtFI
+                ParamVal: Banking
+              - ParamName: NickNameAtCE
+                ParamVal: Banking
+              AcctOwnerName: James Hudson
+            IncludeInDisplay: 'Yes'
+            LastUpdateStatusCode: Success
+            AcctDateTime:
+            - DateTimeType: LastUpdateAttempt
+              DateTimeVal: '2021-11-24T12:51:26-08:00'
+            - DateTimeType: LastSuccessfulUpdate
+              DateTimeVal: '2021-11-24T12:51:28-08:00'
+            AcctBal:
+            - BalType: Current
+              CurAmt:
+                Amt: 3897.52
+                CurCode: USD
+            - BalType: Avail
+              CurAmt:
+                Amt: 3897.52
+                CurCode: USD
+            Property:
+            - ParamName: RetirementStatus
+              ParamVal: Not Selected
+            - ParamName: Instrument
+              ParamVal: N/A
+            - ParamName: AccountOwnership
+              ParamVal: N/A
+            RoutingNumber: '042000314'
+        partnerID: 50120000
+        version: 1.4.6
+
     getOtherAccountTransRequest:
       value:
         RqUID: RqUID0
@@ -12973,6 +13052,1160 @@ components:
               CreatedOnDt: '2021-11-08T22:04:57-08:00'
         version: 1.4.6
 
+    pingRequest:
+      value:
+        partnerID: '50120000'
+        version: version1
+        RqUID: '1'
+        SignonRq:
+          UserInfo:
+            UserID: XMLAdminu50lgw
+            HomeID: '50120001'
+            UserPassword:
+              CryptType: None
+              CryptVal: Cashedge1$
+            Role: Admin
+          GenSessInfo: 'true'
+
+    pingResponse: 
+      value:
+        PingRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Aggregation Service is Up and Running.
+
+    getTransactionsRequest:
+      value:
+        RqUID: JSONAutomationTst_FindTrnsInqRq01
+        partnerID: '50040000'
+        FindTrnsInqRq:
+          SearchCriterion:
+            SelRangeDt:
+              EndDt: '2021-11-12'
+              StartDt: '2007-01-01'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: JHWSUSER295289
+            HomeID: '50040009'
+
+    getTransactionsResponse:
+      value:
+        RqUID: JSONAutomationTst_FindTrnsInqRq01
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752992
+        FindTrnsInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIAcctTrnsList:
+            SearchCriterion:
+              SelRangeDt:
+                StartDt: '2007-01-01'
+                EndDt: '2021-11-12'
+            FILoginAcctTrns:
+            - FILoginAcctId: 5586742
+              FIInfo:
+                FIId: '505003'
+                FIName: CashEdgeBank - Retail MFA
+                Country: US
+                FIHarvestStatus: Enabled
+                FICrawlable: Enabled
+                URL:
+                - ParamName: FILogin
+                  ParamVal: https://testbank.wm.cashedge.com/jsp/cashedge/fiserver/cefi/fiServerLogin.jsp?FI_ID=505003
+              FIAcctTrns:
+              - FIAcctId:
+                  AcctId: 5586752
+                  AcctType: SDA
+                  ExtAcctType: MMA
+                FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5586752
+                    AcctType: SDA
+                    ExtAcctType: MMA
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Money Market Account
+                  - ParamName: NickNameAtFI
+                    ParamVal: MoneyMarketAccount
+                  - ParamName: NickNameAtCE
+                    ParamVal: Money Market Account
+                  AcctOwnerName: Rebecca Simpson
+                BankAcctTrnRec:
+                - TrnID: 14839163
+                  TrnType: Debit
+                  PostedDt: '2021-10-09'
+                  CurAmt:
+                    Amt: -308.62
+                    CurCode: USD
+                  Memo: ABC SUPPLY 638 10210 HIGHWAY 78 LADSON SCUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Miscellaneous Equipment, Materials & Supplies
+                - TrnID: 14839164
+                  TrnType: Debit
+                  PostedDt: '2021-10-06'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: FELLOWSHIP OF CH EFT GIFTS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Contributions
+                  SubCategory: Other Charitable Contributions
+                - TrnID: 14839165
+                  TrnType: Debit
+                  PostedDt: '2021-09-29'
+                  CurAmt:
+                    Amt: -18
+                    CurCode: USD
+                  Memo: DEBIT PURCHASE -VISA UNITED Download from usbank.com. UNITED 0169800-932-2732TX
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Air Travel
+                - TrnID: 14839166
+                  TrnType: Credit
+                  PostedDt: '2021-09-17'
+                  CurAmt:
+                    Amt: 308.99
+                    CurCode: USD
+                  Memo: ATM ADJUSTMENT CREDIT
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Credit Card Payment
+                - TrnID: 14839167
+                  TrnType: Debit
+                  PostedDt: '2021-09-15'
+                  CurAmt:
+                    Amt: -86
+                    CurCode: USD
+                  Memo: GIGGLE FINANCE 20210426011509GFIACH 9549149646 TfvtGFIACH16194 Sabrina
+                    Avis 042621GIGGLE FINANCE 20210426011509GFI
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Children & Toys
+                - TrnID: 14839168
+                  TrnType: Debit
+                  PostedDt: '2021-09-12'
+                  CurAmt:
+                    Amt: -80
+                    CurCode: USD
+                  Memo: DEBIT CARD DEBIT VERIZONWRLSS*RTCCR 800-922-0204 FL
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Utilities
+                  SubCategory: TV, Internet, Phone
+                - TrnID: 14839169
+                  TrnType: Credit
+                  PostedDt: '2021-09-09'
+                  CurAmt:
+                    Amt: 452.3
+                    CurCode: USD
+                  Memo: Auto insurance - balance to Ken
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Auto/Vehicle Insurance
+                - TrnID: 14839170
+                  TrnType: Debit
+                  PostedDt: '2021-09-01'
+                  CurAmt:
+                    Amt: -39.41
+                    CurCode: USD
+                  Memo: STRAIGHTTALK*AIRTIM877-430-2355 FLUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Utilities
+                  SubCategory: Wireless/Cellular
+                - TrnID: 14839171
+                  TrnType: Debit
+                  PostedDt: '2021-08-30'
+                  CurAmt:
+                    Amt: -89.82
+                    CurCode: USD
+                  Memo: 314050 DDA PURCHASE TRUGREEN LP
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: NA
+                  SubCategory: NA
+                - TrnID: 14839172
+                  TrnType: Credit
+                  PostedDt: '2021-08-27'
+                  CurAmt:
+                    Amt: 25
+                    CurCode: USD
+                  Memo: POS RTN 0878 DREAMSTIME DREAMSTIME.COM HTTPSWWW.DREA TN
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Services
+                  SubCategory: Printing & Shipping
+                - TrnID: 14839173
+                  TrnType: Debit
+                  PostedDt: '2021-08-25'
+                  CurAmt:
+                    Amt: -22.65
+                    CurCode: USD
+                  Memo: STARBUCKS STORE 114VICTORVILLE CAUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Food & Dining
+                  SubCategory: Coffee Shops
+                - TrnID: 14839174
+                  TrnType: Debit
+                  PostedDt: '2021-08-23'
+                  CurAmt:
+                    Amt: -308.62
+                    CurCode: USD
+                  Memo: ABC SUPPLY 638 10210 HIGHWAY 78 LADSON SCUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Miscellaneous Equipment, Materials & Supplies
+                - TrnID: 14839175
+                  TrnType: Debit
+                  PostedDt: '2021-08-21'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: FELLOWSHIP OF CH EFT GIFTS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Contributions
+                  SubCategory: Other Charitable Contributions
+                - TrnID: 14839176
+                  TrnType: Debit
+                  PostedDt: '2021-08-12'
+                  CurAmt:
+                    Amt: -18
+                    CurCode: USD
+                  Memo: DEBIT PURCHASE -VISA UNITED Download from usbank.com. UNITED 0169800-932-2732TX
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Air Travel
+                - TrnID: 14839177
+                  TrnType: Credit
+                  PostedDt: '2021-07-29'
+                  CurAmt:
+                    Amt: 308.99
+                    CurCode: USD
+                  Memo: ATM ADJUSTMENT CREDIT
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Credit Card Payment
+                - TrnID: 14839178
+                  TrnType: Debit
+                  PostedDt: '2021-07-26'
+                  CurAmt:
+                    Amt: -86
+                    CurCode: USD
+                  Memo: GIGGLE FINANCE 20210426011509GFIACH 9549149646 TfvtGFIACH16194 Sabrina
+                    Avis 042621GIGGLE FINANCE 20210426011509GFI
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Children & Toys
+                - TrnID: 14839179
+                  TrnType: Debit
+                  PostedDt: '2021-07-22'
+                  CurAmt:
+                    Amt: -78
+                    CurCode: USD
+                  Memo: Nonsufficient Funds Fee
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Fees & Charges
+                  SubCategory: Other Fees & Charges
+                - TrnID: 14839180
+                  TrnType: Debit
+                  PostedDt: '2021-07-17'
+                  CurAmt:
+                    Amt: -22.65
+                    CurCode: USD
+                  Memo: STARBUCKS STORE 114VICTORVILLE CAUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Food & Dining
+                  SubCategory: Coffee Shops
+                - TrnID: 14839181
+                  TrnType: Debit
+                  PostedDt: '2021-07-09'
+                  CurAmt:
+                    Amt: -308.62
+                    CurCode: USD
+                  Memo: ABC SUPPLY 638 10210 HIGHWAY 78 LADSON SCUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Miscellaneous Equipment, Materials & Supplies
+                - TrnID: 14839182
+                  TrnType: Debit
+                  PostedDt: '2021-07-01'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: FELLOWSHIP OF CH EFT GIFTS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Contributions
+                  SubCategory: Other Charitable Contributions
+                - TrnID: 14839183
+                  TrnType: Debit
+                  PostedDt: '2021-06-28'
+                  CurAmt:
+                    Amt: -18
+                    CurCode: USD
+                  Memo: DEBIT PURCHASE -VISA UNITED Download from usbank.com. UNITED 0169800-932-2732TX
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Air Travel
+                - TrnID: 14839184
+                  TrnType: Credit
+                  PostedDt: '2021-06-15'
+                  CurAmt:
+                    Amt: 308.99
+                    CurCode: USD
+                  Memo: ATM ADJUSTMENT CREDIT
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Credit Card Payment
+                - TrnID: 14839185
+                  TrnType: Debit
+                  PostedDt: '2021-06-11'
+                  CurAmt:
+                    Amt: -86
+                    CurCode: USD
+                  Memo: GIGGLE FINANCE 20210426011509GFIACH 9549149646 TfvtGFIACH16194 Sabrina
+                    Avis 042621GIGGLE FINANCE 20210426011509GFI
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Children & Toys
+                - TrnID: 14839186
+                  TrnType: Debit
+                  PostedDt: '2021-06-02'
+                  CurAmt:
+                    Amt: -80
+                    CurCode: USD
+                  Memo: DEBIT CARD DEBIT VERIZONWRLSS*RTCCR 800-922-0204 FL
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Utilities
+                  SubCategory: TV, Internet, Phone
+                - TrnID: 14839187
+                  TrnType: Credit
+                  PostedDt: '2021-06-01'
+                  CurAmt:
+                    Amt: 452.3
+                    CurCode: USD
+                  Memo: Auto insurance - balance to Ken
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Auto/Vehicle Insurance
+                - TrnID: 14839188
+                  TrnType: Debit
+                  PostedDt: '2021-06-01'
+                  CurAmt:
+                    Amt: -39.41
+                    CurCode: USD
+                  Memo: STRAIGHTTALK*AIRTIM877-430-2355 FLUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Utilities
+                  SubCategory: Wireless/Cellular
+                - TrnID: 14839189
+                  TrnType: Debit
+                  PostedDt: '2021-05-24'
+                  CurAmt:
+                    Amt: -89.82
+                    CurCode: USD
+                  Memo: 314050 DDA PURCHASE TRUGREEN LP
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: NA
+                  SubCategory: NA
+                - TrnID: 14839190
+                  TrnType: Credit
+                  PostedDt: '2021-05-24'
+                  CurAmt:
+                    Amt: 25
+                    CurCode: USD
+                  Memo: POS RTN 0878 DREAMSTIME DREAMSTIME.COM HTTPSWWW.DREA TN
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Services
+                  SubCategory: Printing & Shipping
+                - TrnID: 14839191
+                  TrnType: Debit
+                  PostedDt: '2021-05-22'
+                  CurAmt:
+                    Amt: -22.65
+                    CurCode: USD
+                  Memo: STARBUCKS STORE 114VICTORVILLE CAUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Food & Dining
+                  SubCategory: Coffee Shops
+                - TrnID: 14839192
+                  TrnType: Debit
+                  PostedDt: '2021-05-21'
+                  CurAmt:
+                    Amt: -308.62
+                    CurCode: USD
+                  Memo: ABC SUPPLY 638 10210 HIGHWAY 78 LADSON SCUS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Miscellaneous Equipment, Materials & Supplies
+                - TrnID: 14839193
+                  TrnType: Debit
+                  PostedDt: '2021-05-20'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: FELLOWSHIP OF CH EFT GIFTS
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Contributions
+                  SubCategory: Other Charitable Contributions
+                - TrnID: 14839194
+                  TrnType: Debit
+                  PostedDt: '2021-05-13'
+                  CurAmt:
+                    Amt: -18
+                    CurCode: USD
+                  Memo: DEBIT PURCHASE -VISA UNITED Download from usbank.com. UNITED 0169800-932-2732TX
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Air Travel
+                - TrnID: 14839195
+                  TrnType: Credit
+                  PostedDt: '2021-04-29'
+                  CurAmt:
+                    Amt: 308.99
+                    CurCode: USD
+                  Memo: ATM ADJUSTMENT CREDIT
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Credit Card Payment
+                - TrnID: 14839196
+                  TrnType: Debit
+                  PostedDt: '2021-04-26'
+                  CurAmt:
+                    Amt: -86
+                    CurCode: USD
+                  Memo: GIGGLE FINANCE 20210426011509GFIACH 9549149646 TfvtGFIACH16194 Sabrina
+                    Avis 042621GIGGLE FINANCE 20210426011509GFI
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Children & Toys
+                - TrnID: 14839197
+                  TrnType: Credit
+                  PostedDt: '2021-03-31'
+                  CurAmt:
+                    Amt: 0.05
+                    CurCode: USD
+                  Memo: DIVIDEND
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: NA
+                  SubCategory: NA
+                - TrnID: 14839198
+                  TrnType: Debit
+                  PostedDt: '2021-03-24'
+                  CurAmt:
+                    Amt: -1.99
+                    CurCode: USD
+                  Memo: 'Debit Card Purchase 03/22 12:38a #8775HLU*HULU 475608196573- HULU.COM/BILL
+                    CA 21082'
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Books & Other Media
+                - TrnID: 14839199
+                  TrnType: Credit
+                  PostedDt: '2021-03-23'
+                  CurAmt:
+                    Amt: 6.5
+                    CurCode: USD
+                  Memo: ATM REBATE
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Miscellaneous Expenses
+                  SubCategory: Awards & Rebate Credits
+                - TrnID: 14839200
+                  TrnType: Credit
+                  PostedDt: '2021-03-12'
+                  CurAmt:
+                    Amt: 2800
+                    CurCode: USD
+                  Memo: 'Credit: Direct Deposit from IRS TREAS 310 for TAXEIP3'
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Miscellaneous Income
+                  SubCategory: Deposit
+                - TrnID: 14839201
+                  TrnType: Debit
+                  PostedDt: '2021-03-03'
+                  CurAmt:
+                    Amt: -29.6
+                    CurCode: USD
+                  Memo: Georgesville Gre HOA Fees XXXXX0620 030321Georgesville Gre HOA Fees
+                    XXXXX0
+                  CreatedOnDt: '2021-11-11T23:14:16-08:00'
+                  Category: Home Expenses
+                  SubCategory: HOA Fees
+                - TrnID: 14839202
+                  TrnType: Debit
+                  PostedDt: '2021-02-24'
+                  CurAmt:
+                    Amt: -160
+                    CurCode: USD
+                  Memo: GARVEY PET HOSPI 11149 EL MONTE
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: NA
+                  SubCategory: NA
+                - TrnID: 14839203
+                  TrnType: Debit
+                  PostedDt: '2021-01-29'
+                  CurAmt:
+                    Amt: -600
+                    CurCode: USD
+                  Memo: 'TO DABADIE ANDRE ON 01/29 RZELLE EF #PP09Q72Y6K CHILD SUPPORT FOR
+                    SILAS'
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: Health & Lifestyle
+                  SubCategory: Child Support
+                - TrnID: 14839204
+                  TrnType: Debit
+                  PostedDt: '2021-01-05'
+                  CurAmt:
+                    Amt: -34
+                    CurCode: USD
+                  Memo: INSUFFICIENT FUNDS FEE FOR CHECK
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: Fees & Charges
+                  SubCategory: Other Fees & Charges
+                - TrnID: 14839205
+                  TrnType: Debit
+                  PostedDt: '2020-10-09'
+                  CurAmt:
+                    Amt: -5
+                    CurCode: USD
+                  Memo: FEDLOANSERVICING STDNT LOAN201008 6O3QIFVK0R1 WANESHIA ELMORE
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: Education
+                  SubCategory: Student Loans
+                - TrnID: 14839206
+                  TrnType: Debit
+                  PostedDt: '2020-08-31'
+                  CurAmt:
+                    Amt: -11
+                    CurCode: USD
+                  Memo: ACTBLUE*DNCRECURRING PAYMENT 08/30 617-5177600 MA CARD 6433
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: Contributions
+                  SubCategory: Charities
+                - TrnID: 14839207
+                  TrnType: Credit
+                  PostedDt: '2020-08-11'
+                  CurAmt:
+                    Amt: 0.02
+                    CurCode: USD
+                  Memo: Digit.co DES:Bonus ID:y8Trsa6TRW
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: Earned Income
+                  SubCategory: Bonus
+                - TrnID: 14839208
+                  TrnType: Debit
+                  PostedDt: '2020-07-27'
+                  CurAmt:
+                    Amt: -115
+                    CurCode: USD
+                  Memo: HAPPY VALLEY NAILSPURCHASE 07/25 PHOENIX AZ CARD 2968
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: NA
+                  SubCategory: NA
+                - TrnID: 14839209
+                  TrnType: Debit
+                  PostedDt: '2020-05-20'
+                  CurAmt:
+                    Amt: -140
+                    CurCode: USD
+                  Memo: Withdrawal SIG Trnsctn 05.19 - GRANTSVILLE HIGH SCHOOL R - GRANTSVILLE
+                    HIGH SCHOOL HARTFORD CT
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: Education
+                  SubCategory: Tuition & School Fees
+                - TrnID: 14839210
+                  TrnType: Credit
+                  PostedDt: '2020-01-24'
+                  CurAmt:
+                    Amt: 20
+                    CurCode: USD
+                  Memo: Online Banking transfer from CHK
+                  CreatedOnDt: '2021-11-11T23:14:17-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Other Transfers & Adjustments
+              - FIAcctId:
+                  AcctId: 5586757
+                  AcctType: CCA
+                  ExtAcctType: CCA
+                FIAcctInfo:
+                  FIAcctId:
+                    AcctId: 5586757
+                    AcctType: CCA
+                    ExtAcctType: CCA
+                  FIAcctName:
+                  - ParamName: NameAtFI
+                    ParamVal: Credit Card
+                  - ParamName: NickNameAtFI
+                    ParamVal: Credit Card
+                  - ParamName: NickNameAtCE
+                    ParamVal: Credit Card
+                  AcctOwnerName: Rebecca Simpson
+                BankAcctTrnRec:
+                - TrnID: 6727777
+                  TrnType: Debit
+                  PostedDt: '2021-10-06'
+                  OrigDt: '2021-10-06'
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  Memo: PizzHut
+                  CreatedOnDt: '2021-11-11T23:14:24-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727778
+                  TrnType: Credit
+                  PostedDt: '2021-09-29'
+                  OrigDt: '2021-09-29'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727779
+                  TrnType: Debit
+                  PostedDt: '2021-09-24'
+                  OrigDt: '2021-09-24'
+                  CurAmt:
+                    Amt: -25
+                    CurCode: USD
+                  Memo: McDonalds
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Fast Food
+                - TrnID: 6727780
+                  TrnType: Credit
+                  PostedDt: '2021-09-13'
+                  OrigDt: '2021-09-13'
+                  CurAmt:
+                    Amt: 1000
+                    CurCode: USD
+                  Memo: ONLINE PAYMENT MADE
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Credit Card Payment
+                - TrnID: 6727781
+                  TrnType: Debit
+                  PostedDt: '2021-08-30'
+                  OrigDt: '2021-08-30'
+                  CurAmt:
+                    Amt: -50
+                    CurCode: USD
+                  Memo: COUGAR MINI MART C BOSWELL PA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Gas & Fuel
+                - TrnID: 6727782
+                  TrnType: Debit
+                  PostedDt: '2021-08-16'
+                  OrigDt: '2021-08-16'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+                - TrnID: 6727783
+                  TrnType: Debit
+                  PostedDt: '2021-08-10'
+                  OrigDt: '2021-08-10'
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  Memo: PizzHut
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727784
+                  TrnType: Credit
+                  PostedDt: '2021-07-29'
+                  OrigDt: '2021-07-29'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727785
+                  TrnType: Debit
+                  PostedDt: '2021-07-20'
+                  OrigDt: '2021-07-20'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+                - TrnID: 6727786
+                  TrnType: Credit
+                  PostedDt: '2021-07-02'
+                  OrigDt: '2021-07-02'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727787
+                  TrnType: Debit
+                  PostedDt: '2021-06-23'
+                  OrigDt: '2021-06-23'
+                  CurAmt:
+                    Amt: -25
+                    CurCode: USD
+                  Memo: McDonalds
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Fast Food
+                - TrnID: 6727788
+                  TrnType: Debit
+                  PostedDt: '2021-06-11'
+                  OrigDt: '2021-06-11'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+                - TrnID: 6727789
+                  TrnType: Debit
+                  PostedDt: '2021-05-23'
+                  OrigDt: '2021-05-23'
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  Memo: PizzHut
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727790
+                  TrnType: Debit
+                  PostedDt: '2021-05-11'
+                  OrigDt: '2021-05-11'
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  Memo: PizzHut
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727791
+                  TrnType: Credit
+                  PostedDt: '2021-04-25'
+                  OrigDt: '2021-04-25'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727792
+                  TrnType: Debit
+                  PostedDt: '2021-04-04'
+                  OrigDt: '2021-04-04'
+                  CurAmt:
+                    Amt: -25
+                    CurCode: USD
+                  Memo: McDonalds
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Fast Food
+                - TrnID: 6727793
+                  TrnType: Credit
+                  PostedDt: '2021-03-23'
+                  OrigDt: '2021-03-23'
+                  CurAmt:
+                    Amt: 1000
+                    CurCode: USD
+                  Memo: ONLINE PAYMENT MADE
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Credit Card Payment
+                - TrnID: 6727794
+                  TrnType: Debit
+                  PostedDt: '2021-03-13'
+                  OrigDt: '2021-03-13'
+                  CurAmt:
+                    Amt: -50
+                    CurCode: USD
+                  Memo: COUGAR MINI MART C BOSWELL PA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Gas & Fuel
+                - TrnID: 6727795
+                  TrnType: Debit
+                  PostedDt: '2021-03-11'
+                  OrigDt: '2021-03-11'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+                - TrnID: 6727796
+                  TrnType: Debit
+                  PostedDt: '2021-02-17'
+                  OrigDt: '2021-02-17'
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  Memo: PizzHut
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727797
+                  TrnType: Credit
+                  PostedDt: '2021-02-07'
+                  OrigDt: '2021-02-07'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727798
+                  TrnType: Debit
+                  PostedDt: '2021-01-28'
+                  OrigDt: '2021-01-28'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+                - TrnID: 6727799
+                  TrnType: Credit
+                  PostedDt: '2021-01-25'
+                  OrigDt: '2021-01-25'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727800
+                  TrnType: Debit
+                  PostedDt: '2021-01-21'
+                  OrigDt: '2021-01-21'
+                  CurAmt:
+                    Amt: -25
+                    CurCode: USD
+                  Memo: McDonalds
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Fast Food
+                - TrnID: 6727801
+                  TrnType: Credit
+                  PostedDt: '2021-01-16'
+                  OrigDt: '2021-01-16'
+                  CurAmt:
+                    Amt: 1000
+                    CurCode: USD
+                  Memo: ONLINE PAYMENT MADE
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Credit Card Payment
+                - TrnID: 6727802
+                  TrnType: Debit
+                  PostedDt: '2021-01-13'
+                  OrigDt: '2021-01-13'
+                  CurAmt:
+                    Amt: -50
+                    CurCode: USD
+                  Memo: COUGAR MINI MART C BOSWELL PA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Gas & Fuel
+                - TrnID: 6727803
+                  TrnType: Debit
+                  PostedDt: '2021-01-11'
+                  OrigDt: '2021-01-11'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+                - TrnID: 6727804
+                  TrnType: Debit
+                  PostedDt: '2021-01-06'
+                  OrigDt: '2021-01-06'
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  Memo: PizzHut
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727805
+                  TrnType: Credit
+                  PostedDt: '2021-01-04'
+                  OrigDt: '2021-01-04'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727806
+                  TrnType: Debit
+                  PostedDt: '2020-12-26'
+                  OrigDt: '2020-12-26'
+                  CurAmt:
+                    Amt: -526.6
+                    CurCode: USD
+                  Memo: ORIGINAL PARTS GROUP
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Auto/Vehicle Repair & Maintenance
+                - TrnID: 6727807
+                  TrnType: Debit
+                  PostedDt: '2020-12-23'
+                  OrigDt: '2020-12-23'
+                  CurAmt:
+                    Amt: -1311.61
+                    CurCode: USD
+                  Memo: ATS TRANSMISSIONS IN M OH
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Auto/Vehicle Repair & Maintenance
+                - TrnID: 6727808
+                  TrnType: Credit
+                  PostedDt: '2020-12-21'
+                  OrigDt: '2020-12-21'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727809
+                  TrnType: Debit
+                  PostedDt: '2020-12-17'
+                  OrigDt: '2020-12-17'
+                  CurAmt:
+                    Amt: -50
+                    CurCode: USD
+                  Memo: COUGAR MINI MART C BOSWELL PA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Gas & Fuel
+                - TrnID: 6727810
+                  TrnType: Debit
+                  PostedDt: '2020-12-14'
+                  OrigDt: '2020-12-14'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+                - TrnID: 6727811
+                  TrnType: Debit
+                  PostedDt: '2020-12-10'
+                  OrigDt: '2020-12-10'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: T J MAXX COEUR D ALENE ID
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727812
+                  TrnType: Debit
+                  PostedDt: '2020-12-07'
+                  OrigDt: '2020-12-07'
+                  CurAmt:
+                    Amt: -200
+                    CurCode: USD
+                  Memo: RITE AID STORE - 531SPOKANE WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Goods & Merchandise
+                  SubCategory: Health & Beauty
+                - TrnID: 6727813
+                  TrnType: Debit
+                  PostedDt: '2020-12-04'
+                  OrigDt: '2020-12-04'
+                  CurAmt:
+                    Amt: -300
+                    CurCode: USD
+                  Memo: THE DAVENPORT GRAND SPOKANE WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Hotel & Lodging
+                - TrnID: 6727814
+                  TrnType: Debit
+                  PostedDt: '2020-11-27'
+                  OrigDt: '2020-11-27'
+                  CurAmt:
+                    Amt: -400
+                    CurCode: USD
+                  Memo: WANDERING TABLE 6500SPOKANE WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727815
+                  TrnType: Credit
+                  PostedDt: '2020-11-26'
+                  OrigDt: '2020-11-26'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727816
+                  TrnType: Debit
+                  PostedDt: '2020-11-21'
+                  OrigDt: '2020-11-21'
+                  CurAmt:
+                    Amt: -50
+                    CurCode: USD
+                  Memo: COUGAR MINI MART C BOSWELL PA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Gas & Fuel
+                - TrnID: 6727817
+                  TrnType: Debit
+                  PostedDt: '2020-11-18'
+                  OrigDt: '2020-11-18'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+                - TrnID: 6727818
+                  TrnType: Credit
+                  PostedDt: '2020-11-17'
+                  OrigDt: '2020-11-17'
+                  CurAmt:
+                    Amt: 1000
+                    CurCode: USD
+                  Memo: ONLINE PAYMENT MADE
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Transfers & Adjustments
+                  SubCategory: Credit Card Payment
+                - TrnID: 6727819
+                  TrnType: Debit
+                  PostedDt: '2020-11-11'
+                  OrigDt: '2020-11-11'
+                  CurAmt:
+                    Amt: -526.6
+                    CurCode: USD
+                  Memo: ORIGINAL PARTS GROUP
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Auto/Vehicle Repair & Maintenance
+                - TrnID: 6727820
+                  TrnType: Debit
+                  PostedDt: '2020-11-09'
+                  OrigDt: '2020-11-09'
+                  CurAmt:
+                    Amt: -1311.61
+                    CurCode: USD
+                  Memo: ATS TRANSMISSIONS IN M OH
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Travel & Transportation
+                  SubCategory: Auto/Vehicle Repair & Maintenance
+                - TrnID: 6727821
+                  TrnType: Debit
+                  PostedDt: '2020-11-08'
+                  OrigDt: '2020-11-08'
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  Memo: PizzHut
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727822
+                  TrnType: Debit
+                  PostedDt: '2020-11-07'
+                  OrigDt: '2020-11-07'
+                  CurAmt:
+                    Amt: -25
+                    CurCode: USD
+                  Memo: McDonalds
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Fast Food
+                - TrnID: 6727823
+                  TrnType: Debit
+                  PostedDt: '2020-11-04'
+                  OrigDt: '2020-11-04'
+                  CurAmt:
+                    Amt: -50
+                    CurCode: USD
+                  Memo: ComcastCable Bill
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Utilities
+                  SubCategory: TV, Internet, Phone
+                - TrnID: 6727826
+                  TrnType: Debit
+                  PostedDt: '2016-11-16'
+                  OrigDt: '2016-11-16'
+                  CurAmt:
+                    Amt: -25
+                    CurCode: USD
+                  Memo: McDonalds
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Fast Food
+                - TrnID: 6727825
+                  TrnType: Credit
+                  PostedDt: '2016-10-15'
+                  OrigDt: '2016-10-15'
+                  CurAmt:
+                    Amt: 300
+                    CurCode: USD
+                  Memo: PITA PALACE ATLANTA GA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Food & Dining
+                  SubCategory: Restaurants
+                - TrnID: 6727824
+                  TrnType: Debit
+                  PostedDt: '2016-09-14'
+                  OrigDt: '2016-09-14'
+                  CurAmt:
+                    Amt: -100
+                    CurCode: USD
+                  Memo: CHAMBERS BAY GOLF COUNIVERSITY PL WA
+                  CreatedOnDt: '2021-11-11T23:14:25-08:00'
+                  Category: Entertainment
+                  SubCategory: Activities
+        partnerID: 50040000
+        version: 1.4.6
+    
     getDeletedTransRequest:
       value:
         RqUID: RqUID0
