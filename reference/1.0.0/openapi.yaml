@@ -77,15 +77,11 @@ paths:
           href='elementDescription.jsp#AccountDataInq_getAccountUpdateSummary' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
+            examples:
+              WorkingSample: {summary: Request Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryRequest'}
         required: true
       responses:
         "200":
@@ -165,15 +161,11 @@ paths:
                 </tr>
             </table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
+              examples:
+                WorkingSample: {summary: Response Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryResponse'}
         "400":
           description: Bad Request
         "401":
@@ -404,8 +396,7 @@ paths:
       x-proxy-name: Banking Transactions
       summary: ' getBankingTrans service'
       description: This API is used to fetch the transactions for a banking account.
-        The transactions for the specified date range will be returned. <a href="./examples.jsp?category=AccountDataInq&amp;service=getBankingTrans"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        The transactions for the specified date range will be returned.
       operationId: getBankingTrans
       requestBody:
         description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
@@ -421,15 +412,11 @@ paths:
           \ which transactions are to be returned.</td> </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getBankingTrans'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/DepAcctTrnInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/DepAcctTrnInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/DepAcctTrnInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Banking Transactions, $ref: '#/components/examples/getBankingTransRequest'}
         required: true
       responses:
         "200":
@@ -473,6 +460,8 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Banking Transactions, $ref: '#/components/examples/getBankingTransResponse'}
             text/xml:
               schema:
                 $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
@@ -492,8 +481,7 @@ paths:
       x-proxy-name: Credit Card Transactions
       summary: ' getCreditCardTrans service'
       description: This API is used to fetch the transactions for a credit card account.
-        The transactions for the specified date range will be returned. <a href="./examples.jsp?category=AccountDataInq&amp;service=getCreditCardTrans"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        The transactions for the specified date range will be returned.
       operationId: getCreditCardTrans
       requestBody:
         description: <table> <thead> <th>Element/property</th> <th>Description</th>
@@ -506,15 +494,11 @@ paths:
           href='elementDescription.jsp#AccountDataInq_getCreditCardTrans' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/CCAcctTrnInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/CCAcctTrnInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/CCAcctTrnInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Credit Card Transactions, $ref: '#/components/examples/getCreditCardTransRequest'}
         required: true
       responses:
         "200":
@@ -536,15 +520,11 @@ paths:
             \ for the Partner requesting extended transaction history.</td></tr> </tr>\
             \ </tbody></table> </td> </tr> </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/CCAcctTrnInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/CCAcctTrnInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/CCAcctTrnInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Credit Card Transactions, $ref: '#/components/examples/getCreditCardTransResponse'}
         "400":
           description: Bad Request
         "401":
@@ -567,9 +547,7 @@ paths:
         \ of transactions in their system. The process is referred to as Transaction\
         \ deduping, which is done to keep the Transaction data in Alldata system to\
         \ be in sync with FI data. Any changes in the old transactions posted in FI\
-        \ source will get updated in Alldata system through this process.      <a\
-        \ href=\"./examples.jsp?category=AccountDataInq&amp;service=getDeletedTrans\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ source will get updated in Alldata system through this process."
       operationId: getDeletedTrans
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -581,17 +559,11 @@ paths:
           \ href='elementDescription.jsp#AccountMgmt_addHostAccountsRq' target='_blank'>More\
           \ Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/DeletedTrnInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/DeletedTrnInqRqHeader'
-            example:
-              $ref: '#/components/examples/getDeletedTransRequest'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/DeletedTrnInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Deleted Transactions, $ref: '#/components/examples/getDeletedTransRequest'}
         required: true
       responses:
         "200":
@@ -632,17 +604,11 @@ paths:
             \ Date.</td><td>Default maximum range is 90 days; this is configurable\
             \ for the Partner requesting extended transaction history.</td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/DeletedTrnInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/DeletedTrnInqRsHeader'
-              example:
-                $ref: '#/components/examples/getDeletedTransResponse'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/DeletedTrnInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Deleted Transactions, $ref: '#/components/examples/getDeletedTransResponse'}
         "400":
           description: Bad Request
         "401":
@@ -659,8 +625,7 @@ paths:
       x-proxy-name: Employer Stock Options
       summary: ' getEmployerStockOptions service'
       description: This API is used to retrieve the Stock Options details of an ESOP
-        account.<a href="./examples.jsp?category=AccountDataInq&amp;service=getEmployerStockOptions"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        account.
       operationId: getEmployerStockOptions
       requestBody:
         description: <table> <thead> <th>Element/property</th> <th>Description</th>
@@ -670,17 +635,11 @@ paths:
           positions are requested.</td> </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getEmployerStockOptions'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/EmployerStockOptionRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/EmployerStockOptionRqHeader'
-            example:
-              $ref: '#/components/examples/getEmployerStockOptionsRequest'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/EmployerStockOptionRqHeader'
+            examples:
+              WorkingSample: {summary: Request Employer Stock Options, $ref: '#/components/examples/getEmployerStockOptionsRequest'}
         required: true
       responses:
         "200":
@@ -718,17 +677,11 @@ paths:
             \ should make sure the mandatory parameters are sent in the request and\
             \ in the defined format as in the corresponding XSD.</td></tr> </tr> </tbody></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/EmployerStockOptionRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/EmployerStockOptionRsHeader'
-              example:
-                $ref: '#/components/examples/getEmployerStockOptionsResponse'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/EmployerStockOptionRsHeader'
+              examples:
+                WorkingSample: {summary: Response Employer Stock Options, $ref: '#/components/examples/getEmployerStockOptionsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -746,9 +699,7 @@ paths:
       summary: ' getInvestmentPos service'
       description: "This API is used for searching for transactions in specified FI\
         \ Login accounts according to specified search criterion.TrnType can be used\
-        \ to either retrieve debit transactions, credit transactions or both <a href=\"\
-        ./examples.jsp?category=AccountDataInq&amp;service=getInvestmentPos\" target=\"\
-        _blank\"><i><b>WorkingSamples</i></b></a>"
+        \ to either retrieve debit transactions, credit transactions or both"
       operationId: getInvestmentPos
       requestBody:
         description: <table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>
@@ -757,17 +708,11 @@ paths:
           are requested.</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getInvestmentPos'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/InvAcctPosInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/InvAcctPosInqRqHeader'
-            example:
-              $ref: '#/components/examples/getInvestmentPosRequest'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/InvAcctPosInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Investment Position, $ref: '#/components/examples/getInvestmentPosRequest'}
         required: true
       responses:
         "200":
@@ -813,17 +758,11 @@ paths:
             \ role</td><td>A signon has been attempted by a user in a role other than\
             \ the authorized role.</td><td></td></tr></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/InvAcctPosInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/InvAcctPosInqRsHeader'
-              example:
-                $ref: '#/components/examples/getInvestmentPosResponse'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/InvAcctPosInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Investment Position, $ref: '#/components/examples/getInvestmentPosResponse'}
         "400":
           description: Bad Request
         "401":
@@ -840,8 +779,7 @@ paths:
       x-proxy-name: Investment Transactions
       summary: ' getInvestmentTrans service'
       description: This API is used to fetch the transactions for an Investment account.
-        The transactions for the specified date range will be returned. <a href="./examples.jsp?category=AccountDataInq&amp;service=getInvestmentTrans"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        The transactions for the specified date range will be returned.
       operationId: getInvestmentTrans
       requestBody:
         description: <table><thead><th>Element/Property</th><th>Usage</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td><b>Required</b></td><td>Unique
@@ -852,17 +790,11 @@ paths:
           href='elementDescription.jsp#AccountDataInq_getInvestmentTrans' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/InvAcctTrnInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/InvAcctTrnInqRqHeader'
-            example:
-              $ref: '#/components/examples/getInvestmentTransRequest'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/InvAcctTrnInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Investment Transactions, $ref: '#/components/examples/getInvestmentTransRequest'}
         required: true
       responses:
         "200":
@@ -895,17 +827,11 @@ paths:
             \ Date.</td><td>Default maximum range is 90 days; this is configurable\
             \ for the Partner requesting extended transaction history.</td></tr></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/InvAcctTrnInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/InvAcctTrnInqRsHeader'
-              example:
-                $ref: '#/components/examples/getInvestmentTransResponse'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/InvAcctTrnInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Investment Transactions, $ref: '#/components/examples/getInvestmentTransResponse'}
         "400":
           description: Bad Request
         "401":
@@ -12988,6 +12914,47 @@ components:
         partnerID: 50120000
         version: 1.4.6
 
+    getAccountUpdateSummaryRequest:
+      value:
+        partnerID: '50120000'
+        version: version1
+        RqUID: '123232'
+        SignonRq:
+          UserInfo:
+            UserID: wstest236973
+            HomeID: '50120001'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+          GenSessInfo: 'true'
+        AccountUpdateSummaryRq:
+          RqUID: '123232'
+
+    getAccountUpdateSummaryResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        RqUID: '123232'
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752297
+          SessInfo: 483577735a4a645365706a5a494c55674968676772513d3d
+        AccountUpdateSummaryRs:
+          RqUID: '123232'
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FILoginAccountList: {}
+        partnerID: 50120000
+        version: version1
+
     getOtherAccountTransRequest:
       value:
         RqUID: RqUID0
@@ -13074,6 +13041,206 @@ components:
             StatusCode: 0
             Severity: Info
             StatusDesc: Aggregation Service is Up and Running.
+    
+    getBankingTransRequest:
+      value:
+        RqUID: RqUID0
+        DepAcctTrnInqRq:
+          FIAcctId:
+            AcctId: '5585457'
+            AcctType: SDA
+            ExtAcctType: SDA
+          SelectionCriterion:
+            SelRangeDt:
+              EndDt: '2015-08-30'
+              StartDt: '2015-07-01'
+        partnerID: '50120000'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt25580
+            HomeID: '50120001'
+    
+    getBankingTransResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752317
+        DepAcctTrnInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          DepAcctTrns:
+            FIAcctId:
+              AcctId: 5585457
+              AcctType: SDA
+              ExtAcctType: SDA
+            SelectionCriterion:
+              SelRangeDt:
+                StartDt: '2015-07-01'
+                EndDt: '2015-08-30'
+            BankAcctTrnRec:
+            - TrnID: 14811734
+              TrnType: Debit
+              PostedDt: '2015-08-28'
+              CurAmt:
+                Amt: -200
+                CurCode: USD
+              Memo: AMAZON.COM - AMZN.COM/BILL
+              CheckNumber: 456780
+              CreatedOnDt: '2021-11-08T22:27:32-08:00'
+              Category: Goods & Merchandise
+              SubCategory: Books & Other Media
+            - TrnID: 14811735
+              TrnType: Debit
+              PostedDt: '2015-08-28'
+              CurAmt:
+                Amt: -600
+                CurCode: USD
+              Memo: Amazon.com AMZN.COM
+              CheckNumber: 546721
+              CreatedOnDt: '2021-11-08T22:27:32-08:00'
+              Category: Goods & Merchandise
+              SubCategory: Books & Other Media
+            - TrnID: 14811737
+              TrnType: Debit
+              PostedDt: '2015-07-30'
+              CurAmt:
+                Amt: -800
+                CurCode: USD
+              Memo: BEST BUY - 1022 LEESBU
+              CheckNumber: 768900
+              CreatedOnDt: '2021-11-08T22:27:32-08:00'
+              Category: Goods & Merchandise
+              SubCategory: Electronics & Computers
+            - TrnID: 14811736
+              TrnType: Debit
+              PostedDt: '2015-07-29'
+              CurAmt:
+                Amt: -760
+                CurCode: USD
+              Memo: AmazonLocal WA
+              CheckNumber: 312146
+              CreatedOnDt: '2021-11-08T22:27:32-08:00'
+              Category: Goods & Merchandise
+              SubCategory: Books & Other Media
+        partnerID: 50120000
+        version: 1.4.6
+    
+    getCreditCardTransRequest:
+      value:
+        RqUID: RqUID0
+        partnerID: '50120000'
+        CCAcctTrnInqRq:
+          FIAcctId:
+            AcctId: '5585463'
+            AcctType: CCA
+            ExtAcctType: CCA
+          SelectionCriterion:
+            SelRangeDt:
+              EndDt: '2015-08-30'
+              StartDt: '2015-07-01'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt25580
+            HomeID: '50120001'
+    
+    getCreditCardTransResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752317
+        CCAcctTrnInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CCAcctTrns:
+            FIAcctId:
+              AcctId: 5585463
+              AcctType: CCA
+              ExtAcctType: CCA
+            SelectionCriterion:
+              SelRangeDt:
+                StartDt: '2015-07-01'
+                EndDt: '2015-08-30'
+            BankAcctTrnRec:
+            - TrnID: 6719589
+              TrnType: Debit
+              PostedDt: '2015-08-26'
+              OrigDt: '2015-08-26'
+              CurAmt:
+                Amt: -454
+                CurCode: USD
+              Memo: 'WAL-MART STORE - #1067 HALLETTSVILLETX'
+              CheckNumber: 312146
+              CreatedOnDt: '2021-11-08T22:27:47-08:00'
+              Category: Goods & Merchandise
+              SubCategory: General Merchandise
+            - TrnID: 6719588
+              TrnType: Debit
+              PostedDt: '2015-08-25'
+              OrigDt: '2015-08-25'
+              CurAmt:
+                Amt: -980
+                CurCode: USD
+              Memo: WALMART PORTRAITS23098
+              CheckNumber: 546721
+              CreatedOnDt: '2021-11-08T22:27:47-08:00'
+              Category: Goods & Merchandise
+              SubCategory: General Merchandise
+            - TrnID: 6719591
+              TrnType: Debit
+              PostedDt: '2015-07-28'
+              OrigDt: '2015-07-28'
+              CurAmt:
+                Amt: -900
+                CurCode: USD
+              Memo: WAL-MART SUPERCENTER BATTLE CREEK MI
+              CheckNumber: 867890
+              CreatedOnDt: '2021-11-08T22:27:47-08:00'
+              Category: Food & Dining
+              SubCategory: Fast Food
+            - TrnID: 6719590
+              TrnType: Debit
+              PostedDt: '2015-07-27'
+              OrigDt: '2015-07-27'
+              CurAmt:
+                Amt: -676
+                CurCode: USD
+              Memo: WAL-MART STORE%232177 2177 SAN DIEGO CA
+              CheckNumber: 768900
+              CreatedOnDt: '2021-11-08T22:27:47-08:00'
+              Category: Goods & Merchandise
+              SubCategory: General Merchandise
+        partnerID: 50120000
+        version: 1.4.6
 
     getTransactionsRequest:
       value:
