@@ -82,7 +82,7 @@ featuredFeatures:
         title: Common Data Aggregation Use Cases and AllData API Solutions 
         link:
           - type: externalLink
-          - uri: https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/Common%20Agg%20Use%20Cases.pdf
+          - uri: "https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/Common%20Agg%20Use%20Cases.pdf"
       - relatedDoc: 
         title: How to Use AllData APIs and Add Account Widget for Various Use Cases
         link: "/docs/add-account.md"
