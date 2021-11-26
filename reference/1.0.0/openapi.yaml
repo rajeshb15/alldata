@@ -1121,8 +1121,7 @@ paths:
       summary: addHostAccounts Service
       description: This API will be used to add the client’s host accounts.<br/>The
         Response API will notify the partner about the status of each host account
-        processed as part of the request API.     <a href="./examples.jsp?category=AccountMgmt&amp;service=addHostAccounts"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        processed as part of the request API.
       operationId: addHostAccounts
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  Unique
@@ -1132,15 +1131,11 @@ paths:
           </td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_addHostAccountsRq'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/AddHostAcctsRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AddHostAcctsRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/AddHostAcctsRqHeader'
+            examples:
+              WorkingSample: {summary: Request Add Host Account, $ref: '#/components/examples/addHostAccountsRequest'}          
         required: true
       responses:
         "200":
@@ -1168,15 +1163,11 @@ paths:
             \ role</td><td>A signon has been attempted by a user in a role other than\
             \ the authorized role.</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/AddHostAcctsRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AddHostAcctsRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/AddHostAcctsRsHeader'
+              examples:
+                WorkingSample: {summary: Response Add Host Account, $ref: '#/components/examples/addHostAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1198,8 +1189,7 @@ paths:
         \ or AcctId matches between the AllData and the API request, API will update\
         \ the account attributes (balance, account name, transactions) in AllData.\
         \ <br/>The Response API will notify the partner about the status of each host\
-        \ account processed as part of the request API.    <a href=\"./examples.jsp?category=AccountMgmt&amp;service=addUpdateHostAccounts\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ account processed as part of the request API."
       operationId: addUpdateHostAccounts
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  Unique
@@ -1209,15 +1199,11 @@ paths:
           </td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_addUpdateHostAccounts'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/AddHostAcctsRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AddHostAcctsRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/AddHostAcctsRqHeader'
+            examples:
+              WorkingSample: {summary: Request Add Update Host Account, $ref: '#/components/examples/addUpdateHostAccountsRequest'}
         required: true
       responses:
         "200":
@@ -1256,15 +1242,11 @@ paths:
             \ failure. Re-initiate the request with same set of transactions.</td><td></td></tr><tr><td>9006</td><td>Error</td><td>Info</td><td>Invalid\
             \ combination of Transaction Type and Amount.</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/AddHostAcctsRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AddHostAcctsRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/AddHostAcctsRsHeader'
+              examples:
+                WorkingSample: {summary: Response Add Update Host Account, $ref: '#/components/examples/addUpdateHostAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1280,8 +1262,7 @@ paths:
       x-group-name: Account Management Service
       x-proxy-name: Bank Statement Consent
       summary: ' bankStatementConsent service'
-      description: This API is used to User and FI Consent document.<a href="./examples.jsp?category=AccountMgmt&amp;service=bankStatementConsent"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API is used to User and FI Consent document.
       operationId: bankStatementConsent
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>
@@ -1290,15 +1271,11 @@ paths:
           was carried out successfully.</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_bankStatementConsent'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BankStatementConsentRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BankStatementConsentRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/BankStatementConsentRqHeader'
+            examples:
+              WorkingSample: {summary: Request Bank Statement Consent, $ref: '#/components/examples/bankStatementConsentRequest'}
         required: true
       responses:
         "200":
@@ -1323,15 +1300,11 @@ paths:
             \ should make sure the mandatory parameters are sent in the request and\
             \ in the defined format as in the corresponding XSD.</td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BankStatementConsentRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BankStatementConsentRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/BankStatementConsentRsHeader'
+              examples:
+                WorkingSample: {summary: Response Bank Statement Consent, $ref: '#/components/examples/bankStatementConsentResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1351,8 +1324,7 @@ paths:
         accounts based on certain account classification rules. The user can either
         override this classification or provide the classification if it not already
         set. <br/>After successfully adding accounts make sure to call update account
-        APIs to run on demand harvesting to retrieve account data.     <a href="./examples.jsp?category=AccountMgmt&amp;service=createAccounts"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        APIs to run on demand harvesting to retrieve account data.
       operationId: createAccounts
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -1362,15 +1334,11 @@ paths:
           \ which have been classified.</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_createAccounts'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestAddCreateAcctsRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestAddCreateAcctsRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestAddCreateAcctsRqHeader'
+            examples:
+              WorkingSample: {summary: Request Create Accounts, $ref: '#/components/examples/createAccountsRequest'}
         required: true
       responses:
         "200":
@@ -1405,15 +1373,11 @@ paths:
             \ • RetirementStatus</td><td>Partner has to reach out to us with CEUserID\
             \ and timestamp.</td></tr></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestAddCreateAcctsRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestAddCreateAcctsRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestAddCreateAcctsRsHeader'
+              examples:
+                WorkingSample: {summary: Response Create Accounts, $ref: '#/components/examples/createAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1432,8 +1396,7 @@ paths:
       description: This API is used to delete either a parent CFI (FILoginAcctId)
         or a given financial account. <br/>If parent CFI ID is given all associated
         financial accounts are also deleted. <br/>All account data including transactions
-        and positions are deleted     <a href="./examples.jsp?category=AccountMgmt&amp;service=deleteAccounts"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        and positions are deleted
       operationId: deleteAccounts
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -1443,15 +1406,11 @@ paths:
           \ which have been classified.</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_deleteAccounts'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FIDeleteRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FIDeleteRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FIDeleteRqHeader'
+            examples:
+              WorkingSample: {summary: Request Delete Accounts, $ref: '#/components/examples/deleteAccountsRequest'}
         required: true
       responses:
         "200":
@@ -1486,15 +1445,11 @@ paths:
             \ is completed.</td><td>Partner should not invoke update or add until\
             \ the existing update completes.</td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FIDeleteRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FIDeleteRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FIDeleteRsHeader'
+              examples:
+                WorkingSample: {summary: Response Delete Accounts, $ref: '#/components/examples/deleteAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1593,8 +1548,7 @@ paths:
         \ harvests accounts, errors out or times out. <br/>Handle errors such as login\
         \ failure (301), multi-factor authentication (303), wrong MFA answer (304),\
         \ etc. <br/>Additional information is needed in case of MFA. <br/> Use HarvestAddRq-AddMoreAccts\
-        \ element to address above errors     <a href=\"./examples.jsp?category=AccountMgmt&amp;service=getAddAccountStatus\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ element to address above errors"
       operationId: getAddAccountStatus
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -1607,15 +1561,11 @@ paths:
           \ href='elementDescription.jsp#AccountMgmt_getAddAccountStatus' target='_blank'>More\
           \ Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestAddStsInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestAddStsInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestAddStsInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Add Account Status, $ref: '#/components/examples/getAddAccountStatusRequest'}
         required: true
       responses:
         "200":
@@ -1655,15 +1605,11 @@ paths:
             \ refer the returned 'UpdateErrorCode' in the Harvester Error Codes section\
             \ of this document for corresponding action.</td></tr></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestAddStsInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestAddStsInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestAddStsInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Add Account Status, $ref: '#/components/examples/getAddAccountStatusResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1684,8 +1630,7 @@ paths:
         \ the FI website. <br/>At this point these accounts are not created in CashEdge\
         \ database. <br/>The basic account information available after login to FI\
         \ site is scraped but information such as balance, transactions, positions,\
-        \ etc. may not be available.     <a href=\"./examples.jsp?category=AccountMgmt&amp;service=getNewAccounts\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ etc. may not be available."
       operationId: getNewAccounts
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -1698,15 +1643,11 @@ paths:
           \ href='elementDescription.jsp#AccountMgmt_getNewAccounts' target='_blank'>More\
           \ Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestAddFetchRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestAddFetchRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestAddFetchRqHeader'
+            examples:
+              WorkingSample: {summary: Request Get New Accounts, $ref: '#/components/examples/getNewAccountsRequest'}
         required: true
       responses:
         "200":
@@ -1744,15 +1685,11 @@ paths:
             \ from the FI site. This could be a scripting error or there are no new\
             \ accounts to add.</td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestAddFetchRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestAddFetchRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestAddFetchRsHeader'
+              examples:
+                WorkingSample: {summary: Response Get New Accounts, $ref: '#/components/examples/getNewAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1768,8 +1705,7 @@ paths:
       x-group-name: Account Management Service
       x-proxy-name: Host Accounts Status
       summary: ' HostAccountsStatus service'
-      description: This API is used to get the host accounts status     <a href="./examples.jsp?category=AccountMgmt&amp;service=hostAccountsStatus"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API is used to get the host accounts status
       operationId: hostAccountsStatus
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>
@@ -1777,15 +1713,11 @@ paths:
           Account Status id its Unique id</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_hostAccountsStatus'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/HostAcctStsInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HostAcctStsInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/HostAcctStsInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request Host Account Status, $ref: '#/components/examples/hostAccountsStatusRequest'}
         required: true
       responses:
         "200":
@@ -1815,15 +1747,11 @@ paths:
             \ and the specified date range lies within the 'LastSuccessfulUpdate'\
             \ date.</td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/HostAcctStsInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HostAcctStsInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/HostAcctStsInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response Host Account Status, $ref: '#/components/examples/hostAccountsStatusResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1849,8 +1777,7 @@ paths:
         \ at FI and is required while checking status. <br/> Returns FILoginAccountID\
         \ – This identifier uniquely identifies the online login account of the user\
         \ with an FI. <br/>Account already exist error – if user tries to add same\
-        \ login name again      <a href=\"./examples.jsp?category=AccountMgmt&amp;service=initiateAddAccounts\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ login name again"
       operationId: initiateAddAccounts
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -1863,15 +1790,11 @@ paths:
           \ href='elementDescription.jsp#AccountMgmt_initiateAddAccounts' target='_blank'>More\
           \ Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestAddRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestAddRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestAddRqHeader'
+            examples:
+              WorkingSample: {summary: Request Initiate Add Account, $ref: '#/components/examples/initiateAddAccountRequest'}
         required: true
       responses:
         "200":
@@ -1934,15 +1857,11 @@ paths:
             \ to convey that the account is locked in the CashEdge system and the\
             \ institution login credentials should be corrected.</td><td></td></tr></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestAddRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestAddRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestAddRsHeader'
+              examples:
+                WorkingSample: {summary: Response Initiate Add Account, $ref: '#/components/examples/initiateAddAccountResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1960,8 +1879,7 @@ paths:
       summary: ' maintainAccount service'
       description: "To modify nickname at CashEdge, account type, and properties such\
         \ as retirement status, etc. <br/>Provide extended account type while modifying\
-        \ account type.     <a href=\"./examples.jsp?category=AccountMgmt&amp;service=maintainAccount\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ account type"
       operationId: maintainAccount
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -1971,15 +1889,11 @@ paths:
           \ which have been classified.</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_maintainAccount'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UserAcctModRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UserAcctModRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UserAcctModRqHeader'
+            examples:
+              WorkingSample: {summary: Request Maintain Account, $ref: '#/components/examples/maintainAccountRequest'}
         required: true
       responses:
         "200":
@@ -2027,15 +1941,11 @@ paths:
             \ • RetirementStatus</td><td>Partner has to reach out to us with CEUserID\
             \ and timestamp.</td></tr></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UserAcctModRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UserAcctModRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UserAcctModRsHeader'
+              examples:
+                WorkingSample: {summary: Response Maintain Account, $ref: '#/components/examples/maintainAccountResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2051,8 +1961,7 @@ paths:
       x-group-name: Account Management Service
       x-proxy-name: Tax Statement Consent
       summary: ' taxStatementConsent service'
-      description: This API is used to User and FI Consent document.<a href="./examples.jsp?category=AccountMgmt&amp;service=taxStatementConsent"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API is used to User and FI Consent document.
       operationId: taxStatementConsent
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>
@@ -2060,15 +1969,11 @@ paths:
           Enable or Disable the Tax Document.</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_taxStatementConsent'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/TaxStatementConsentRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/TaxStatementConsentRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/TaxStatementConsentRqHeader'
+            examples:
+              WorkingSample: {summary: Request Tax Statement Consent, $ref: '#/components/examples/taxStatementConsentRequest'}
         required: true
       responses:
         "200":
@@ -2088,15 +1993,11 @@ paths:
             \ role</td><td>A signon has been attempted by a user in a role other than\
             \ the authorized role.</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/TaxStatementConsentRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/TaxStatementConsentRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/TaxStatementConsentRsHeader'
+              examples:
+                WorkingSample: {summary: Response Tax Statement Consent, $ref: '#/components/examples/taxStatementConsentResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2115,8 +2016,7 @@ paths:
       description: "This API can be used to update the user credentials information\
         \ stored with CashEdge database such as Trust Mode. <br/>After updating credentials\
         \ in CashEdge, validate credentials by invoking on demand account harvesting\
-        \ flow.     <a href=\"./examples.jsp?category=AccountMgmt&amp;service=updateAccountCredentials\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ flow."
       operationId: updateAccountCredentials
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -2126,15 +2026,11 @@ paths:
           \ which have been classified.</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_updateAccountCredentials'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UserOFILoginCredentialsModRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UserOFILoginCredentialsModRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UserOFILoginCredentialsModRqHeader'
+            examples:
+              WorkingSample: {summary: Request Update Account Credentials, $ref: '#/components/examples/updateAccountCredentialsRequest'}
         required: true
       responses:
         "200":
@@ -2186,15 +2082,11 @@ paths:
             \ mode only.</td><td>This error occurs when Partner sends other trust\
             \ modes (Low or Medium trust) when editing the FI credentials.</td></tr></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UserOFILoginCredentialsModRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UserOFILoginCredentialsModRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UserOFILoginCredentialsModRsHeader'
+              examples:
+                WorkingSample: {summary: Response Update Account Credentials, $ref: '#/components/examples/updateAccountCredentialsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2218,8 +2110,7 @@ paths:
         \ the combination of (FIId + AcctNumber) or AcctId does not match, The API\
         \ will add a new host account in the AllData system. <br/>The Response API\
         \ will notify the partner about the status of each host account processed\
-        \ as part of the request API.     <a href=\"./examples.jsp?category=AccountMgmt&amp;service=updateHostAccounts\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ as part of the request API."
       operationId: updateHostAccounts
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  Unique
@@ -2229,15 +2120,11 @@ paths:
           accounts.</td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_updateHostAccounts'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/ModHostAcctsRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/ModHostAcctsRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/ModHostAcctsRqHeader'
+            examples:
+              WorkingSample: {summary: Request Update Host Account, $ref: '#/components/examples/updateHostAccountsRequest'}
         required: true
       responses:
         "200":
@@ -2262,15 +2149,11 @@ paths:
             \ role</td><td>A signon has been attempted by a user in a role other than\
             \ the authorized role.</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/ModHostAcctsRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/ModHostAcctsRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/ModHostAcctsRsHeader'
+              examples:
+                WorkingSample: {summary: Response Update Host Account, $ref: '#/components/examples/updateHostAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -19756,3 +19639,1727 @@ components:
                 CurCode: USD
         partnerID: 50120000
         version: 1.4.6
+        
+    addHostAccountsRequest:
+      value:
+        RqUID: RqUID0_0813-099
+        SignonRq:
+          UserInfo:
+            UserID: Newport_client7235afc
+            HomeID: '66664001'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        AddHostAcctsRq:
+          UserInfo:
+            UserID: Newport_client7235afc
+            HomeID: '66664001'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+          AddFILoginHostAcctRq:
+            FIId: '20349'
+            FIUserLoginHostAcctInfo:
+              TrustMode: High
+              ClassifiedStatus: Classified
+            FIHostAcctSummary:
+            - FIHostAcctInfo:
+                FIHostAcctId:
+                  AcctNumber: '1278756'
+                  AcctType: CCA
+                  ExtAcctType: CCA
+                FIAcctName:
+                  ParamName: NickNameAtFI
+                  ParamVal: Master Card
+              IncludeInDisplay: 'Yes'
+              AcctBal:
+              - BalType: CreditLimit
+                CurAmt:
+                  Amt: '75000.0'
+                  CurCode: USD
+              - BalType: AvailCredit
+                CurAmt:
+                  Amt: '50000.0'
+                  CurCode: USD
+              - BalType: Outstanding
+                CurAmt:
+                  Amt: '20000.0'
+                  CurCode: USD
+              - BalType: PurchasesApr
+                CurAmt:
+                  Amt: '250.0'
+                  CurCode: USD
+              - BalType: PastDueAmount
+                CurAmt:
+                  Amt: '1000.0'
+                  CurCode: USD
+              - BalType: PointsRedeemedInPoints
+                CurAmt:
+                  Amt: '45.0'
+                  CurCode: USD
+              - BalType: CurrentRewardsBalanceInPoints
+                CurAmt:
+                  Amt: '75.0'
+                  CurCode: USD
+              - BalType: CurrentRewardsBalance
+                CurAmt:
+                  Amt: '600.0'
+                  CurCode: USD
+              - BalType: AvailableCashLimit
+                CurAmt:
+                  Amt: '5000.0'
+                  CurCode: USD
+              - BalType: PointsRedeemed
+                CurAmt:
+                  Amt: '25.0'
+                  CurCode: USD
+              - BalType: PreviousAmountDue
+                CurAmt:
+                  Amt: '15000.0'
+                  CurCode: USD
+              - BalType: MinimumPaymentDue
+                CurAmt:
+                  Amt: '5000.0'
+                  CurCode: USD
+              - BalType: PointsAccrued
+                CurAmt:
+                  Amt: '150.0'
+                  CurCode: USD
+              - BalType: CashAdvanceLimit
+                CurAmt:
+                  Amt: '3000.0'
+                  CurCode: USD
+              - BalType: AdvancesApr
+                CurAmt:
+                  Amt: '350.0'
+                  CurCode: USD
+              - BalType: FinanceCharges
+                CurAmt:
+                  Amt: '10.0'
+                  CurCode: USD
+              - BalType: PointsAccruedInPoints
+                CurAmt:
+                  Amt: '35.0'
+                  CurCode: USD
+              - BalType: StatementBalance
+                CurAmt:
+                  Amt: '2000.0'
+                  CurCode: USD
+              Property:
+              - ParamName: Instrument
+                ParamVal: N/A
+              - ParamName: RetirementStatus
+                ParamVal: Non Retirement
+              - ParamName: AccountOwnership
+                ParamVal: Individual
+            - FIHostAcctInfo:
+                FIHostAcctId:
+                  AcctNumber: 126071120_L1
+                  AcctType: OLA
+                  ExtAcctType: OLA
+                FIAcctName:
+                  ParamName: NickNameAtFI
+                  ParamVal: Mortgage
+              IncludeInDisplay: 'Yes'
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: '5971.0'
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: '5971.0'
+                  CurCode: USD
+              - BalType: Term
+                CurAmt:
+                  Amt: '6.0'
+                  CurCode: USD
+              - BalType: InterestYTD
+                CurAmt:
+                  Amt: '6.0'
+                  CurCode: USD
+              - BalType: APY
+                CurAmt:
+                  Amt: '54.0'
+                  CurCode: USD
+              Property:
+              - ParamName: Instrument
+                ParamVal: N/A
+              - ParamName: RetirementStatus
+                ParamVal: Non Retirement
+              - ParamName: AccountOwnership
+                ParamVal: Individual
+            - FIHostAcctInfo:
+                FIHostAcctId:
+                  AcctNumber: 13033412043_A
+                  AcctType: INV
+                  ExtAcctType: INV
+                FIAcctName:
+                  ParamName: NickNameAtFI
+                  ParamVal: Investment Birla
+              IncludeInDisplay: 'Yes'
+              AcctBal:
+              - BalType: TotalBrokerageAccountValue
+                CurAmt:
+                  Amt: '21478.0'
+                  CurCode: USD
+              - BalType: TotalAmountOfCompanyMatch
+                CurAmt:
+                  Amt: '245.0'
+                  CurCode: USD
+              - BalType: InsurancePremium
+                CurAmt:
+                  Amt: '5488.0'
+                  CurCode: USD
+              - BalType: EmployerProfitSharing
+                CurAmt:
+                  Amt: '159753.0'
+                  CurCode: USD
+              - BalType: CurrentVestedBalance
+                CurAmt:
+                  Amt: '1248.0'
+                  CurCode: USD
+              - BalType: DeferralPercentage
+                CurAmt:
+                  Amt: '214785.0'
+                  CurCode: USD
+              - BalType: LoanAmount
+                CurAmt:
+                  Amt: '5555.0'
+                  CurCode: USD
+              - BalType: TotalAmountOfContributions
+                CurAmt:
+                  Amt: '24789.0'
+                  CurCode: USD
+              - BalType: CashSurrenderValue
+                CurAmt:
+                  Amt: '1478.0'
+                  CurCode: USD
+              - BalType: DeathBenefit
+                CurAmt:
+                  Amt: '2136.0'
+                  CurCode: USD
+              Property:
+              - ParamName: Instrument
+                ParamVal: IRA
+              - ParamName: RetirementStatus
+                ParamVal: Retirement
+              - ParamName: AccountOwnership
+                ParamVal: Individual
+              InvAcctSecInfo:
+                InvSecPos:
+                  FISecID: '20349'
+                  SecInfo:
+                    Ticker: ABC
+                  SecPos:
+                    MarketValue:
+                      Amt: '100'
+                      CurCode: USD
+        version: version1
+        partnerID: '66664000'
+
+    addHostAccountsResponse:
+      value:
+        RqUID: RqUID0_0813-099
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 450172
+          SessInfo:
+          Roles:
+          ResetPasswordRequired:
+          SecurityQuesSetUpRequired:
+          PasswordExpired:
+          LastSuccessfullLogin:
+          MFAQuestions:
+        AddHostAcctsRs:
+          Status:
+          AddFILoginHostAcctRs:
+          - FILoginAcctId: 708595
+            FIHostAcctIds:
+            - AcctId: 708596
+              FIAcctNumber:
+                FIId: '20349'
+                AcctNumber: '1278756'
+              InvAcctSecIds:
+            - AcctId: 708597
+              FIAcctNumber:
+                FIId: '20349'
+                AcctNumber: 126071120_L1
+              InvAcctSecIds:
+            - AcctId: 708598
+              FIAcctNumber:
+                FIId: '20349'
+                AcctNumber: 13033412043_A
+              InvAcctSecIds:
+              - SecID: 3847761
+                FISecID: '20349'
+        partnerID: 66664000
+        version: version1
+              
+    
+    addUpdateHostAccountsRequest:
+      value:
+        RqUID: RqUID0
+        AddUpdateHostAccountsRq:
+          AddUpdateFILoginHostAcctRq:
+          - FIHostAcctSummary:
+            - FIHostAcctInfo:
+                FIAcctName:
+                - ParamVal: Checking 01
+                  ParamName: NickNameAtFI
+                FIHostAcctId:
+                  AcctNumber: '020616100888888'
+                  ExtAcctType: DDA
+                  AcctType: DDA
+              FIHostAcctTxnDetails:
+              - HostAcctTrnRec:
+                - TrnType: Credit
+                  CurAmt:
+                    Amt: 1.31
+                    CurCode: USD
+                  CheckNumber: '5467'
+                  PostedDt: '2009-10-10'
+                  Memo: Checking transaction 1
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  CheckNumber: '49500'
+                  PostedDt: '2009-10-05'
+                  Memo: Checking transaction 2
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -61
+                    CurCode: USD
+                  CheckNumber: '5467'
+                  PostedDt: '2009-09-30'
+                  Memo: Checking transaction 3
+              Property:
+              - ParamVal: N/A
+                ParamName: Instrument
+              - ParamVal: Non Retirement
+                ParamName: RetirementStatus
+              - ParamVal: Individual
+                ParamName: AccountOwnership
+              AcctBal:
+              - Desc: adf
+                EffDt: '2010-07-30'
+                CurAmt:
+                  Amt: 300
+                  CurCode: USD
+                BalType: Current
+              - Desc: afd
+                EffDt: '2010-07-30'
+                CurAmt:
+                  Amt: 300
+                  CurCode: USD
+                BalType: Avail
+            - FIHostAcctInfo:
+                FIAcctName:
+                - ParamVal: Savings 01
+                  ParamName: NickNameAtFI
+                FIHostAcctId:
+                  AcctNumber: '678916100887890'
+                  ExtAcctType: DDA
+                  AcctType: DDA
+              FIHostAcctTxnDetails:
+              - HostAcctTrnRec:
+                - TrnType: Credit
+                  CurAmt:
+                    Amt: 1.31
+                    CurCode: USD
+                  CheckNumber: '5467'
+                  PostedDt: '2009-10-10'
+                  Memo: Savings transaction 1
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  CheckNumber: '5678'
+                  PostedDt: '2009-10-05'
+                  Memo: Savings transaction 2
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -61
+                    CurCode: USD
+                  CheckNumber: '8976'
+                  PostedDt: '2009-09-30'
+                  Memo: Savings transaction 3
+              Property:
+              - ParamVal: N/A
+                ParamName: Instrument
+              - ParamVal: Non Retirement
+                ParamName: RetirementStatus
+              - ParamVal: Individual
+                ParamName: AccountOwnership
+              AcctBal:
+              - Desc: adf
+                EffDt: '2010-07-30'
+                CurAmt:
+                  Amt: 300
+                  CurCode: USD
+                BalType: Current
+              - Desc: afd
+                EffDt: '2010-07-30'
+                CurAmt:
+                  Amt: 300
+                  CurCode: USD
+                BalType: Avail
+            - FIHostAcctInfo:
+                FIAcctName:
+                - ParamVal: Credit card Act1
+                  ParamName: NickNameAtFI
+                FIHostAcctId:
+                  AcctNumber: '897890654'
+                  ExtAcctType: CCA
+                  AcctType: CCA
+              FIHostAcctTxnDetails:
+              - HostAcctTrnRec:
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  CheckNumber: '49500'
+                  PostedDt: '2009-10-05'
+                  Memo: CC transaction 1
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -61
+                    CurCode: USD
+                  PostedDt: '2009-09-30'
+                  Memo: CC transaction 2
+              Property:
+              - ParamVal: N/A
+                ParamName: Instrument
+              - ParamVal: Non Retirement
+                ParamName: RetirementStatus
+              - ParamVal: Individual
+                ParamName: AccountOwnership
+              AcctBal:
+              - BalType: CreditLimit
+                CurAmt:
+                  Amt: 75000
+                  CurCode: USD
+              - BalType: AvailCredit
+                CurAmt:
+                  Amt: 50000
+                  CurCode: USD
+              - BalType: Outstanding
+                CurAmt:
+                  Amt: 20000
+                  CurCode: USD
+              - BalType: PurchasesApr
+                CurAmt:
+                  Amt: 250
+                  CurCode: USD
+              - BalType: PastDueAmount
+                CurAmt:
+                  Amt: 1000
+                  CurCode: USD
+              - BalType: PointsRedeemedInPoints
+                CurAmt:
+                  Amt: 45
+                  CurCode: USD
+              - BalType: CurrentRewardsBalanceInPoints
+                CurAmt:
+                  Amt: 75
+                  CurCode: USD
+              - BalType: CurrentRewardsBalance
+                CurAmt:
+                  Amt: 600
+                  CurCode: USD
+              - BalType: AvailableCashLimit
+                CurAmt:
+                  Amt: 5000
+                  CurCode: USD
+              - BalType: PointsRedeemed
+                CurAmt:
+                  Amt: 25
+                  CurCode: USD
+              - BalType: PreviousAmountDue
+                CurAmt:
+                  Amt: 15000
+                  CurCode: USD
+              - BalType: MinimumPaymentDue
+                CurAmt:
+                  Amt: 5000
+                  CurCode: USD
+              - BalType: PointsAccrued
+                CurAmt:
+                  Amt: 150
+                  CurCode: USD
+              - BalType: CashAdvanceLimit
+                CurAmt:
+                  Amt: 3000
+                  CurCode: USD
+              - BalType: AdvancesApr
+                CurAmt:
+                  Amt: 350
+                  CurCode: USD
+              - BalType: FinanceCharges
+                CurAmt:
+                  Amt: 10
+                  CurCode: USD
+              - BalType: PointsAccruedInPoints
+                CurAmt:
+                  Amt: 35
+                  CurCode: USD
+              - BalType: StatementBalance
+                CurAmt:
+                  Amt: 2000
+                  CurCode: USD
+            - FIHostAcctInfo:
+                FIAcctName:
+                - ParamVal: Rewards
+                  ParamName: NickNameAtFI
+                FIHostAcctId:
+                  AcctNumber: '349340340'
+                  ExtAcctType: CCA
+                  AcctType: CCA
+              FIHostAcctTxnDetails:
+              - HostAcctTrnRec:
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -20
+                    CurCode: USD
+                  CheckNumber: '49500'
+                  PostedDt: '2009-10-05'
+                  Memo: CC transaction 3
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -21
+                    CurCode: USD
+                  PostedDt: '2009-09-30'
+                  Memo: CC transaction 4
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -98
+                    CurCode: USD
+                  PostedDt: '2009-09-30'
+                  Memo: CC loan trn
+                - TrnType: Debit
+                  CurAmt:
+                    Amt: -61
+                    CurCode: USD
+                  PostedDt: '2009-09-30'
+                  Memo: CC Bill trn
+              Property:
+              - ParamVal: N/A
+                ParamName: Instrument
+              - ParamVal: Non Retirement
+                ParamName: RetirementStatus
+              - ParamVal: Individual
+                ParamName: AccountOwnership
+              AcctBal:
+              - BalType: CreditLimit
+                CurAmt:
+                  Amt: 75000
+                  CurCode: USD
+              - BalType: AvailCredit
+                CurAmt:
+                  Amt: 50000
+                  CurCode: USD
+              - BalType: Outstanding
+                CurAmt:
+                  Amt: 20000
+                  CurCode: USD
+              - BalType: PurchasesApr
+                CurAmt:
+                  Amt: 250
+                  CurCode: USD
+              - BalType: PastDueAmount
+                CurAmt:
+                  Amt: 1000
+                  CurCode: USD
+              - BalType: PointsRedeemedInPoints
+                CurAmt:
+                  Amt: 45
+                  CurCode: USD
+              - BalType: CurrentRewardsBalanceInPoints
+                CurAmt:
+                  Amt: 75
+                  CurCode: USD
+              - BalType: CurrentRewardsBalance
+                CurAmt:
+                  Amt: 600
+                  CurCode: USD
+              - BalType: AvailableCashLimit
+                CurAmt:
+                  Amt: 5000
+                  CurCode: USD
+              - BalType: PointsRedeemed
+                CurAmt:
+                  Amt: 25
+                  CurCode: USD
+              - BalType: PreviousAmountDue
+                CurAmt:
+                  Amt: 15000
+                  CurCode: USD
+              - BalType: MinimumPaymentDue
+                CurAmt:
+                  Amt: 5000
+                  CurCode: USD
+              - BalType: PointsAccrued
+                CurAmt:
+                  Amt: 150
+                  CurCode: USD
+              - BalType: CashAdvanceLimit
+                CurAmt:
+                  Amt: 3000
+                  CurCode: USD
+              - BalType: AdvancesApr
+                CurAmt:
+                  Amt: 350
+                  CurCode: USD
+              - BalType: FinanceCharges
+                CurAmt:
+                  Amt: 10
+                  CurCode: USD
+              - BalType: PointsAccruedInPoints
+                CurAmt:
+                  Amt: 35
+                  CurCode: USD
+              - BalType: StatementBalance
+                CurAmt:
+                  Amt: 2000
+                  CurCode: USD
+            FIId: '505001'
+        partnerID: 50550000
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: verifyclincdemo
+            HomeID: 50550001
+
+    
+    addUpdateHostAccountsResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3693514
+          SessInfo: 757352794f2f74597665795a6d572f4f46575a3347513d3d
+        AddUpdateHostAccountsRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          AddUpdateFILoginHostAcctRs:
+          - HostAcctStatusID: 7000
+            FILoginAcctId: 5496570
+            FIHostAcctIds:
+            - AcctId: 5587457
+              FIAcctNumber:
+                FIId: '505001'
+                AcctNumber: '020616100888888'
+            - AcctId: 5587458
+              FIAcctNumber:
+                FIId: '505001'
+                AcctNumber: '678916100887890'
+            - AcctId: 5587459
+              FIAcctNumber:
+                FIId: '505001'
+                AcctNumber: '897890654'
+            - AcctId: 5587460
+              FIAcctNumber:
+                FIId: '505001'
+                AcctNumber: '349340340'
+        partnerID: 50550000
+        version: version1
+              
+    
+    bankStatementConsentRequest:
+      value:
+        RqUID: string
+        SignonRq:
+          UserInfo:
+            UserID: AUTO_JSON_FLClt73123
+            HomeID: '50040009'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+          GenSessInfo: 'true'
+        BankStatementConsentRq:
+          FIConsentList:
+            Consent:
+            - FILoginAcctId: 5588538
+              DownloadBankStatement: Enable
+            - FILoginAcctId: 5588529
+              DownloadBankStatement: Disable
+        partnerID: 50040000
+        version: version1
+             
+      
+    bankStatementConsentResponse:
+      value:
+        RqUID: string
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3753067
+        BankStatementConsentRs:
+          FIConsentRs:
+            Status:
+              StatusCode: 0
+              Severity: Info
+              StatusDesc: Success
+            ConsentStatusList:
+              ConsentStatus:
+              - FILoginAcctId: 5588529
+                Status:
+                  StatusCode: 0
+                  Severity: Info
+                  StatusDesc: Success
+              - FILoginAcctId: 5588538
+                Status:
+                  StatusCode: 0
+                  Severity: Info
+                  StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+
+
+    createAccountsRequest:
+      value:
+        RqUID: WSTst createAccounts
+        partnerID: '50040000'
+        version: version1
+        SignonRq:
+          SessionInfo:
+            SessionToken: 467270395475464e496f6a716f624e47334f4e7861513d3d
+        HarvestAddCreateAcctsRq:
+          HarvestAddFetchAcctList:
+            HarvestAddFetchAcct:
+            - AcctTypeId: '50500104'
+              CurCode: USD
+              FIAcctName:
+              - ParamVal: Banking
+                ParamName: NickNameAtFI
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 3897.52
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 3897.52
+                  CurCode: USD
+              AcctOwnerName: James Hudson
+              AcctNumber: '102237375016'
+              FIId: '505001'
+            - AcctTypeId: '50500105'
+              CurCode: USD
+              FIAcctName:
+              - ParamVal: MoneyMarketAccount
+                ParamName: NickNameAtFI
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 4633.52
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 4633.52
+                  CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+              AcctNumber: '32553990146'
+              FIId: '505001'
+            - AcctTypeId: '50500128'
+              CurCode: USD
+              FIAcctName:
+              - ParamVal: Insurance
+                ParamName: NickNameAtFI
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 36448.32
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 36448.32
+                  CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+              AcctNumber: S614219
+              FIId: '505001'
+            - AcctTypeId: '50500122'
+              CurCode: USD
+              FIAcctName:
+              - ParamVal: BILL
+                ParamName: NickNameAtFI
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 65.06
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 65.06
+                  CurCode: USD
+              AcctOwnerName: James Hudson
+              AcctNumber: '90579031773'
+              FIId: '505001'
+            - AcctTypeId: '50500121'
+              CurCode: USD
+              FIAcctName:
+              - ParamVal: Mortgage_INSTL
+                ParamName: NickNameAtFI
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 173952.27
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 173952.27
+                  CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+              AcctNumber: '0602001826'
+              FIId: '505001'
+            - AcctTypeId: '50500119'
+              CurCode: USD
+              FIAcctName:
+              - ParamVal: Loan_201
+                ParamName: NickNameAtFI
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 32099.72
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 32099.72
+                  CurCode: USD
+              AcctOwnerName: James Hudson
+              Misc: classified
+              AcctNumber: '3521563'
+              FIId: '505001'
+            - AcctTypeId: '50500107'
+              CurCode: USD
+              FIAcctName:
+              - ParamVal: Credit Card
+                ParamName: NickNameAtFI
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 1882.16
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 3117
+                  CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+              AcctNumber: XXXX-XXXX-XXXX-3962
+              FIId: '505001'
+            - AcctTypeId: '50500108'
+              CurCode: USD
+              FIAcctName:
+              - ParamVal: Kevins Securities Account
+                ParamName: NickNameAtFI
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 17599
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 17599
+                  CurCode: USD
+              AcctOwnerName: James Hudson
+              AcctNumber: Kevins Securities Account
+              FIId: '505001'
+          RunId: '18816644'
+          HarvestAddID: 467270395475464e496f6a716f624e47334f4e7861513d3d
+
+
+    createAccountsResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        HarvestAddCreateAcctsRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FILoginAcctId: 5586100
+          FIUserLoginAcctInfo:
+            TrustMode: High
+            ClassifiedStatus: Classified
+            URL:
+            - ParamName: FIAutoLogin
+              ParamVal: "/jsp/aggr/partner/CEServices.jsp?action=FIAutoLogin&FIAutoLoginURL=https://testbank.wm.cashedge.com/jsp/cashedge/fiserver/cefi/fiServerLogin.jsp?FI_ID=505001"
+            - ParamName: FIHarvest
+              ParamVal: "/jsp/aggr/partner/CEServices.jsp?action=FIHarvest&FILoginAcctId=5586100"
+            - ParamName: AddAccount
+              ParamVal: "/jsp/aggr/NotImplemented.jsp"
+          FIAcctIdentifierList:
+            FIAcctIdentifier:
+            - FIAcctId:
+                AcctId: 5586102
+                AcctType: SDA
+                ExtAcctType: SDA
+              HarvestAddFetchAcct:
+                FIId: '505001'
+                AcctNumber: '102237375016'
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: Banking
+                AcctBal:
+                - BalType: Current
+                  CurAmt:
+                    Amt: 3897.52
+                    CurCode: USD
+                - BalType: Avail
+                  CurAmt:
+                    Amt: 3897.52
+                    CurCode: USD
+                AcctTypeId: '50500104'
+                Misc: ''
+                CurCode: USD
+                AcctOwnerName: James Hudson
+            - FIAcctId:
+                AcctId: 5586103
+                AcctType: SDA
+                ExtAcctType: MMA
+              HarvestAddFetchAcct:
+                FIId: '505001'
+                AcctNumber: '32553990146'
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: MoneyMarketAccount
+                AcctBal:
+                - BalType: Current
+                  CurAmt:
+                    Amt: 4633.52
+                    CurCode: USD
+                - BalType: Avail
+                  CurAmt:
+                    Amt: 4633.52
+                    CurCode: USD
+                AcctTypeId: '50500105'
+                Misc: ''
+                CurCode: USD
+                AcctOwnerName: Rebecca Simpson
+            - FIAcctId:
+                AcctId: 5586104
+                AcctType: INS
+                ExtAcctType: WLI
+              HarvestAddFetchAcct:
+                FIId: '505001'
+                AcctNumber: S614219
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: Insurance
+                AcctBal:
+                - BalType: Current
+                  CurAmt:
+                    Amt: 36448.32
+                    CurCode: USD
+                - BalType: Avail
+                  CurAmt:
+                    Amt: 36448.32
+                    CurCode: USD
+                AcctTypeId: '50500128'
+                Misc: ''
+                CurCode: USD
+                AcctOwnerName: Rebecca Simpson
+            - FIAcctId:
+                AcctId: 5586105
+                AcctType: BPA
+                ExtAcctType: BPA
+              HarvestAddFetchAcct:
+                FIId: '505001'
+                AcctNumber: '90579031773'
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: BILL
+                AcctBal:
+                - BalType: Current
+                  CurAmt:
+                    Amt: 65.06
+                    CurCode: USD
+                - BalType: Avail
+                  CurAmt:
+                    Amt: 65.06
+                    CurCode: USD
+                AcctTypeId: '50500122'
+                Misc: ''
+                CurCode: USD
+                AcctOwnerName: James Hudson
+            - FIAcctId:
+                AcctId: 5586106
+                AcctType: OLA
+                ExtAcctType: MLA
+              HarvestAddFetchAcct:
+                FIId: '505001'
+                AcctNumber: '0602001826'
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: Mortgage_INSTL
+                AcctBal:
+                - BalType: Current
+                  CurAmt:
+                    Amt: 173952.27
+                    CurCode: USD
+                - BalType: Avail
+                  CurAmt:
+                    Amt: 173952.27
+                    CurCode: USD
+                AcctTypeId: '50500121'
+                Misc: ''
+                CurCode: USD
+                AcctOwnerName: Rebecca Simpson
+            - FIAcctId:
+                AcctId: 5586107
+                AcctType: OLA
+                ExtAcctType: ILA
+              HarvestAddFetchAcct:
+                FIId: '505001'
+                AcctNumber: '3521563'
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: Loan_201
+                AcctBal:
+                - BalType: Current
+                  CurAmt:
+                    Amt: 32099.72
+                    CurCode: USD
+                - BalType: Avail
+                  CurAmt:
+                    Amt: 32099.72
+                    CurCode: USD
+                AcctTypeId: '50500119'
+                Misc: classified
+                CurCode: USD
+                AcctOwnerName: James Hudson
+            - FIAcctId:
+                AcctId: 5586108
+                AcctType: CCA
+                ExtAcctType: CCA
+              HarvestAddFetchAcct:
+                FIId: '505001'
+                AcctNumber: XXXX-XXXX-XXXX-3962
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: Credit Card
+                AcctBal:
+                - BalType: Current
+                  CurAmt:
+                    Amt: 1882.16
+                    CurCode: USD
+                - BalType: Avail
+                  CurAmt:
+                    Amt: 3117
+                    CurCode: USD
+                AcctTypeId: '50500107'
+                Misc: ''
+                CurCode: USD
+                AcctOwnerName: Rebecca Simpson
+            - FIAcctId:
+                AcctId: 5586109
+                AcctType: INV
+                ExtAcctType: INV
+              HarvestAddFetchAcct:
+                FIId: '505001'
+                AcctNumber: Kevins Securities Account
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: Kevins Securities Account
+                AcctBal:
+                - BalType: Current
+                  CurAmt:
+                    Amt: 17599
+                    CurCode: USD
+                - BalType: Avail
+                  CurAmt:
+                    Amt: 17599
+                    CurCode: USD
+                AcctTypeId: '50500108'
+                Misc: ''
+                CurCode: USD
+                AcctOwnerName: James Hudson
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752566
+        RqUID: WSTst createAccounts
+        partnerID: 50040000
+        version: 1.4.6
+
+
+    deleteAccountsRequest:
+      value:
+        RqUID: JSONAutomationTst_FIDeleteRq01
+        FIDeleteRq:
+          FIAcctId:
+            ExtAcctType: INV
+            AcctId: '5586120'
+            AcctType: INV
+        partnerID: '50040000'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt13458
+            HomeID: '50040009'
+
+
+    deleteAccountsResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        FIDeleteRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752564
+        RqUID: JSONAutomationTst_FIDeleteRq01
+        partnerID: 50040000
+        version: 1.4.6
+
+
+    getAddAccountStatusRequest:
+      value:
+        RqUID: RqUID0
+        partnerID: '50120000'
+        version: version1
+        SignonRq:
+          SessionInfo:
+            SessionToken: 34626776314179795a306e6e65337468546233735a413d3d
+            HomeID: '50120001'
+        HarvestAddStsInqRq:
+          RunId: '18792974'
+          HarvestAddID: 34626776314179795a306e6e65337468546233735a413d3d
+
+
+    getAddAccountStatusResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752308
+        RqUID: RqUID0
+        partnerID: 50120000
+        HarvestAddStsInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          HarvestSts:
+            HarvestID: 18792974
+            HarvestRqStatus: Completed
+        version: 1.4.6
+
+
+    getNewAccountsRequest:
+      value:
+        HarvestAddFetchRq:
+          RunId: '18816631'
+          HarvestAddID: 6d70454239722b534957774c55586872614d4a4367513d3d
+        RqUID: RqUID0
+        partnerID: '50040000'
+        version: version1
+        SignonRq:
+          SessionInfo:
+            SessionToken: 6d70454239722b534957774c55586872614d4a4367513d3d
+            HomeID: '50040009'
+
+
+    getNewAccountsResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        HarvestAddFetchRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          HarvestAddFetchAcctList:
+            HarvestAddFetchAcct:
+            - FIId: '505001'
+              AcctNumber: '102237375016'
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Banking
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 3897.52
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 3897.52
+                  CurCode: USD
+              AcctTypeId: '50500104'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: James Hudson
+            - FIId: '505001'
+              AcctNumber: '32553990146'
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: MoneyMarketAccount
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 4633.52
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 4633.52
+                  CurCode: USD
+              AcctTypeId: '50500105'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+            - FIId: '505001'
+              AcctNumber: S614219
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Insurance
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 36448.32
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 36448.32
+                  CurCode: USD
+              AcctTypeId: '50500128'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+            - FIId: '505001'
+              AcctNumber: '90579031773'
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: BILL
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 65.06
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 65.06
+                  CurCode: USD
+              AcctTypeId: '50500122'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: James Hudson
+            - FIId: '505001'
+              AcctNumber: '0602001826'
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Mortgage_INSTL
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 173952.27
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 173952.27
+                  CurCode: USD
+              AcctTypeId: '50500121'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+            - FIId: '505001'
+              AcctNumber: '3521563'
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Loan_201
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 32099.72
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 32099.72
+                  CurCode: USD
+              AcctTypeId: '50500119'
+              Misc: classified
+              CurCode: USD
+              AcctOwnerName: James Hudson
+            - FIId: '505001'
+              AcctNumber: XXXX-XXXX-XXXX-3962
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Credit Card
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 1882.16
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 3117
+                  CurCode: USD
+              AcctTypeId: '50500107'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+            - FIId: '505001'
+              AcctNumber: Red Wing Shoe Company
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Red Wing Shoe Company
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 56509
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 56509
+                  CurCode: USD
+              AcctTypeId: '50500108'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: James Hudson
+            - FIId: '505001'
+              AcctNumber: Kevins Securities Account
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Kevins Securities Account
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 17599
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 17599
+                  CurCode: USD
+              AcctTypeId: '50500108'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: James Hudson
+            - FIId: '505001'
+              AcctNumber: '54321701'
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Investment1
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 19398
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 19398
+                  CurCode: USD
+              AcctTypeId: '50500108'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+            - FIId: '505001'
+              AcctNumber: '54321701'
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Investment3
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 6830
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 6830
+                  CurCode: USD
+              AcctTypeId: '50500108'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+            - FIId: '505001'
+              AcctNumber: '54321701'
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Investment5 - Cash & MMF in Securities
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 3500
+                  CurCode: USD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 3500
+                  CurCode: USD
+              AcctTypeId: '50500108'
+              Misc: ''
+              CurCode: USD
+              AcctOwnerName: Rebecca Simpson
+            - FIId: '505001'
+              AcctNumber: Canadian45H650A
+              FIAcctName:
+              - ParamName: NickNameAtFI
+                ParamVal: Investment
+              AcctBal:
+              - BalType: Current
+                CurAmt:
+                  Amt: 406279.84
+                  CurCode: CAD
+              - BalType: Avail
+                CurAmt:
+                  Amt: 406279.84
+                  CurCode: CAD
+              AcctTypeId: '50500108'
+              Misc: ''
+              CurCode: CAD
+              AcctOwnerName: Rebecca Simpson
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752563
+        RqUID: RqUID0
+        partnerID: 50040000
+        version: 1.4.6
+
+
+    hostAccountsStatusRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          SessionInfo:
+            SessionToken: 36326f53316e61757657527966474f2b3841306736673d3d
+        HostAcctStsInqRq:
+          HostAcctStatusID: '84594505'
+        partnerID: 50550000
+        version: version1
+
+
+    hostAccountsStatusResponse:
+      value:
+        RqUID: RqUID0
+        SignonRs:
+          Status:
+            StatusCode: '0'
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: '475521'
+        HostAcctStsInqRs:
+          Status:
+            StatusCode: '0'
+            Severity: Info
+            StatusDesc: Success
+          HostAcctStatusID: '84594505'
+          HostAcctStatus: Completed
+        partnerID: 50550000
+        version: 1.4.6
+
+
+    initiateAddAccountRequest:
+      value:
+        HarvestAddRq:
+          AddNewAccts:
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            TrustMode: High
+            FILoginParamList:
+              FILoginParam:
+              - CryptParamVal:
+                  CryptVal: script1
+                  CryptType: None
+                ParamName: '2068730'
+              - CryptParamVal:
+                  CryptVal: cashedge1
+                  CryptType: None
+                ParamName: '2068731'
+            UserID: AUTO_JSON_FLClt14455
+            FIId: '505001'
+        RqUID: RqUID0
+        partnerID: '50040000'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt14455
+            HomeID: '50040009'
+
+    initiateAddAccountResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752563
+        RqUID: RqUID0
+        partnerID: 50040000
+        version: 1.4.6
+        HarvestAddRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          RunId: 18816631
+          HarvestAddID: 6d70454239722b534957774c55586872614d4a4367513d3d
+          FILoginAcctId: 5586076
+          FIUserLoginAcctInfo:
+          - TrustMode: High
+            ClassifiedStatus: Pending
+            AcctHarvestStatus: Enabled
+
+
+    maintainAccountRequest:
+      value:
+        RqUID: JSONAutomationTst_UserActModRq01
+        partnerID: '50040000'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt46385
+            HomeID: '50040009'
+        UserAcctModRq:
+          FIAcctMod:
+          - AcctTypeId: '50500307'
+            FIAcctId:
+              AcctId: '5586126'
+              AcctType: CCA
+              ExtAcctType: CCA
+            FIAcctName:
+              ParamVal: ActNameModifiedJSONCCA
+              ParamName: NickNameAtCE
+            Property:
+            - ParamVal: Non Retirement
+              ParamName: RetirementStatus
+            - ParamVal: N/A
+              ParamName: Instrument
+            - ParamVal: Individual
+              ParamName: AccountOwnerShip
+            FIId: '505003'
+
+
+    maintainAccountResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752567
+        UserAcctModRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        RqUID: JSONAutomationTst_UserActModRq01
+        partnerID: 50040000
+        version: 1.4.6
+
+    taxStatementConsentRequest:
+      value:
+        RqUID: Tx_Doc_User_Consent_Set
+        SignonRq:
+          UserInfo:
+            UserID: AUTO_JSON_FLClt73123
+            HomeID: '50040009'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+          GenSessInfo: 'true'
+        TaxStatementConsentRq:
+          UserTaxStmtConsent:
+            DownloadTaxStatement: enable
+        partnerID: 50040000
+        version: version1
+
+
+    taxStatementConsentResponse:
+      value:
+        RqUID: Tx_Doc_User_Consent_Set
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3753067
+        TaxStatementConsentRs:
+          UserConsentRs:
+            Status:
+              StatusCode: 0
+              Severity: Info
+              StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+
+
+    updateAccountCredentialsRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: JHWSUSER245762
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            AlldataToken:
+            Role: User
+            OBOUserID:
+            CreateUserIfNotExists:
+        UserOFILoginCredentialsModRq:
+          FILoginAcctId: 5586311
+          TrustMode: High
+          FILoginParamList:
+            FILoginParam:
+            - ParamName: '2068130'
+              CryptParamVal:
+                CryptType: None
+                CryptVal: sudhamfa
+            - ParamName: '2068131'
+              CryptParamVal:
+                CryptType: None
+                CryptVal: sudhamfa
+        partnerID: 50040000
+        version: version1
+
+
+    updateAccountCredentialsResponse:
+      value:
+        partnerID: 50040000
+        version: 1.4.6
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        RqUID: RqUID0
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752654
+        UserOFILoginCredentialsModRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+
+
+    updateHostAccountsRequest:
+      value:
+        RqUID: UpdateHostAcct_0813
+        SignonRq:
+          UserInfo:
+            UserID: Newport_client7235afc
+            HomeID: 66664001
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        ModHostAcctsRq:
+          ModFILoginHostAcctRq:
+          - FIAcctNumber:
+              FIId: '20349'
+              AcctNumber: '1278756'
+            FIHostAcctSummary:
+              FIHostAcctInfo:
+                FIHostAcctId:
+                  AcctNumber: '1278756'
+                  AcctType: CCA
+                  ExtAcctType: CCA
+                FIAcctName:
+                - ParamName: NickNameAtFI
+                  ParamVal: Master Card_Updated
+              IncludeInDisplay: 'Yes'
+              AcctBal:
+              - BalType: CreditLimit
+                CurAmt:
+                  Amt: 75000
+                  CurCode: INR
+        partnerID: 66664000
+        version: version1
+
+    updateHostAccountsResponse:
+      value:
+        RqUID:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 450172
+        partnerID:
+        version:
+
+    
