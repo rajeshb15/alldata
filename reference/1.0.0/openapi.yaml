@@ -162,8 +162,8 @@ paths:
             </table>"
           content:
             application/json:
-              schema:
-                $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
+              #schema:
+                #$ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
               examples:
                 WorkingSample: {summary: Response Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryResponse'}
         "400":
