@@ -78,8 +78,8 @@ paths:
           Info</a></td></tr></tbody></table>
         content:
           application/json:
-            schema:
-              $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
+            #schema:
+              #$ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
             examples:
               WorkingSample: {summary: Request Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryRequest'}
         required: true
