@@ -56,17 +56,25 @@ featuredFeatures:
     relatedAPIs:
       - relatedAPI: 
         title: Sign On 
-        description: Description here
+        description: >
+          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
+          The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
+          This session token is also required to launch the Add Account widget flow.
         type: "post"        
         path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
         title: Get Account Details
-        description: Description here
+        description: >
+          This API can be used to fetch detail information about one or more FI login accounts of a user.
+
+          • It can be used to retrieve information about one or more login accounts.
+          
+          • If no ID is specified, it returns information about all of user’s FI login accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
         title: Get Bank Account Transactions
-        description: Description here
+        description: This API is used to fetch the transactions for a banking account. It returns the transactions for the specified date range.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Money Movement
@@ -92,17 +100,25 @@ featuredFeatures:
     relatedAPIs:
       - relatedAPI: 
         title: Sign On 
-        description: Description here
+        description: >
+          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
+          The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
+          This session token is also required to launch the Add Account widget flow.
         type: "post"        
         path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
         title: Get Account Details
-        description: Description here
+        description: >
+          This API can be used to fetch detail information about one or more FI login accounts of a user.
+
+          • It can be used to retrieve information about one or more login accounts.
+          
+          • If no ID is specified, it returns information about all of user’s FI login accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
         title: Get Bank Account Transactions
-        description: Description here
+        description: This API is used to fetch the transactions for a banking account. It returns the transactions for the specified date range.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Lending & Account Opening
@@ -125,16 +141,24 @@ featuredFeatures:
     relatedAPIs:
       - relatedAPI: 
         title: Sign On 
-        description: Description here
+        description: >
+          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
+          The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
+          This session token is also required to launch the Add Account widget flow.
         type: "post"        
         path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
         title: Get Account Details
-        description: Description here
+        description: >
+          This API can be used to fetch detail information about one or more FI login accounts of a user.
+
+          • It can be used to retrieve information about one or more login accounts.
+          
+          • If no ID is specified, it returns information about all of user’s FI login accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
         title: Get Bank Account Transactions
-        description: Description here
+        description: This API is used to fetch the transactions for a banking account. It returns the transactions for the specified date range.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
