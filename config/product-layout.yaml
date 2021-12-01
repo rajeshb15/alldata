@@ -107,11 +107,8 @@ featuredFeatures:
       - relatedAPI: 
         title: Get Account Details
         description: >
-          This API can be used to fetch detail information about one or more FI login accounts of a user.
-
-          • It can be used to retrieve information about one or more login accounts.
-          
-          • If no ID is specified, it returns information about all of user’s FI login accounts.
+          This API can be used to fetch detail information about one or more FI login accounts of a user. It can be used to retrieve information about one or more login accounts.
+          If no ID is specified, it returns information about all of user’s FI login accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
