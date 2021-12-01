@@ -78,8 +78,8 @@ paths:
           Info</a></td></tr></tbody></table>
         content:
           application/json:
-            #schema:
-              #$ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
+            schema:
+              $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
             examples:
               WorkingSample: {summary: Request Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryRequest'}
         required: true
@@ -162,8 +162,8 @@ paths:
             </table>"
           content:
             application/json:
-              #schema:
-                #$ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
+              schema:
+                $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
               examples:
                 WorkingSample: {summary: Response Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryResponse'}
         "400":
@@ -21362,4 +21362,4 @@ components:
         partnerID:
         version:
 
-    
+  
