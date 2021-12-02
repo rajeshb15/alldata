@@ -2901,15 +2901,17 @@ paths:
           Unique Request Identifier.</td></tr> <tr><td><b>SignonRq</b></td><td> The
           Admin credentials are received as part of this request.</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FIMessagesInfoRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/FIMessagesInfoRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FIMessagesInfoRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FIMessagesInfoRqHeader'
+            examples:
+              WorkingSample: {summary: Request FI Message Info, $ref: '#/components/examples/getFIMessageInfoRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/FIMessagesInfoRqHeader'
         required: true
       responses:
         "200":
@@ -2943,15 +2945,17 @@ paths:
             \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4010</td><td>Error</td><td>Invalid\
             \ partnerID</td><td>The partnerID specified in the request is invalid.</td><td></td></tr></tbody></table></td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FIMessagesInfoRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/FIMessagesInfoRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FIMessagesInfoRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FIMessagesInfoRsHeader'
+              examples:
+                WorkingSample: {summary: Response FI Message Info, $ref: '#/components/examples/getFIMessageInfoResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/FIMessagesInfoRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -13027,6 +13031,579 @@ components:
                 StatusDesc: Success
         partnerID: 50020000
         version: version1
+
+    getFIMessageInfoRequest:
+      value:
+        RqUID: FIMESSAGE_AUTO_TESTING
+        SignonRq:
+          UserInfo:
+            UserID: XMLAdminx33qtl
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: Cashedge1$
+            Role: Admin
+        partnerID: 8885504
+        version: 1.4.6
+
+    getFIMessageInfoResponse:
+      value:
+        RqUID: FIMESSAGE_AUTO_TESTING
+        Status:
+          StatusCode: 0
+          Severity: Info
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 2185517
+        FIMessagesRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIMessageDetails:
+            FIMessageInfo:
+            - FIID: 25920
+              FIMessage:
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <div>Your Financial Institution has created aggregator read only
+                  account for the service providers like us to aggregate the account information.
+                  Please follow the below mentioned steps to enable and create aggregator
+                  account login with the new set of credentials.<ul start="1"><li>Login to
+                  your account at [plan website]</li><li>Select "Profile & Documents" > Select
+                  "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" > Create new Password.</li><li>Enter the Aggregator
+                  UserName and Password in our dashboard and try adding the accounts.</li></ul></div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+            - FIID: 25921
+              FIMessage:
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <div>Your Financial Institution has created aggregator read only
+                  account for the service providers like us to aggregate the account information.
+                  Please follow the below mentioned steps to enable and create aggregator
+                  account login with the new set of credentials.<ul start="1"><li>Login to
+                  your account at [plan website]</li><li>Select "Profile & Documents" > Select
+                  "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" > Create new Password.</li><li>Enter the Aggregator
+                  UserName and Password in our dashboard and try adding the accounts.</li></ul></div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+            - FIID: 2817
+              FIMessage:
+              - Message: "<div width=750 border=0 cellspacing=4><strong>T. Rowe Price Retirement
+                  Plan Services Customers,</strong><br></br>If you have Non-Retirement Plan(s)
+                  as part of your T. Rowe Price Retirement Plan Services account, you may
+                  not see them because of a recent update we made to our connection with T.
+                  Rowe Price Retirement Plan Services website. To add back your Non-Retirement
+                  Plan accounts, please search for 'T. Rowe Price' and try adding the accounts.<br></br></div>"
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+              - Message: "<div width=750 border=0 cellspacing=4><strong>T. Rowe Price Retirement
+                  Plan Services Customers,</strong><br></br>If you have Non-Retirement Plan(s)
+                  as part of your T. Rowe Price Retirement Plan Services account, you may
+                  not see them because of a recent update we made to our connection with T.
+                  Rowe Price Retirement Plan Services website. To add back your Non-Retirement
+                  Plan accounts, please search for 'T. Rowe Price' and try adding the accounts.<br></br></div>"
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: "<div width=750 border=0 cellspacing=4><strong>T. Rowe Price Retirement
+                  Plan Services Customers,</strong><br></br>If you have Non-Retirement Plan(s)
+                  as part of your T. Rowe Price Retirement Plan Services account, you may
+                  not see them because of a recent update we made to our connection with T.
+                  Rowe Price Retirement Plan Services website. To add back your Non-Retirement
+                  Plan accounts, please search for 'T. Rowe Price' and try adding the accounts.<br></br></div>"
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+            - FIID: 705
+              FIMessage:
+              - Message: <div>USAA currently offers different secure login options -  Computer
+                  Recognition (MFA Security question & Answer), CyberCode text (OTP) and Cybercode
+                  Token (Security Token) for its users. We currently support only the Computer
+                  Recognition (MFA Security question & Answer) login method to access USAA's
+                  online banking. Please enable the Computer Recognition logon method on your
+                  USAA online banking site under "My Profile & Preferences -> Security" before
+                  attempting to add an account.</div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-09-22-00:00
+              - Message: <div>USAA currently offers different secure login options -  Computer
+                  Recognition (MFA Security question & Answer), CyberCode text (OTP) and Cybercode
+                  Token (Security Token) for its users. We currently support only the Computer
+                  Recognition (MFA Security question & Answer) login method to access USAA's
+                  online banking. Please enable the Computer Recognition logon method on your
+                  USAA online banking site under "My Profile & Preferences -> Security" before
+                  attempting to add an account.</div>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-09-22-00:00
+              - Message: <div>USAA currently offers different secure login options -  Computer
+                  Recognition (MFA Security question & Answer), CyberCode text (OTP) and Cybercode
+                  Token (Security Token) for its users. We currently support only the Computer
+                  Recognition (MFA Security question & Answer) login method to access USAA's
+                  online banking. Please enable the Computer Recognition logon method on your
+                  USAA online banking site under "My Profile & Preferences -> Security" before
+                  attempting to add an account.</div>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-09-22-00:00
+              - Message: <div>USAA currently offers different secure login options -  Computer
+                  Recognition (MFA Security question & Answer), CyberCode text (OTP) and Cybercode
+                  Token (Security Token) for its users. We currently support only the Computer
+                  Recognition (MFA Security question & Answer) login method to access USAA's
+                  online banking. Please enable the Computer Recognition logon method on your
+                  USAA online banking site under "My Profile & Preferences -> Security" before
+                  attempting to add an account.</div>
+                UpdateErrorCode: 303
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-09-22-00:00
+            - FIID: 65
+              FIMessage:
+              - Message: |-
+                  <div>In order for us to connect your accounts to this application, you consent to share data with us and this application by providing your login credentials here; note that this site is not affiliated with Capital One. These credentials will be used to obtain information from Capital One which may include account information including account and routing numbers, account balances, and transactional detail, as well as personal information including owner names, email addresses and phone numbers. Account information may be refreshed on a nightly basis to obtain updated information. Account information will only be used to support this application.
+                  Your credentials and associated account information will be retained until you delete the account from this application or revoke the consent you are providing today. You may revoke consent by deleting the accounts within the application or by contacting your application provider.</div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2021-10-26-00:00
+            - FIID: 25922
+              FIMessage:
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <div>Your Financial Institution has created aggregator read only
+                  account for the service providers like us to aggregate the account information.
+                  Please follow the below mentioned steps to enable and create aggregator
+                  account login with the new set of credentials.<ul start="1"><li>Login to
+                  your account at [plan website]</li><li>Select "Profile & Documents" > Select
+                  "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" > Create new Password.</li><li>Enter the Aggregator
+                  UserName and Password in our dashboard and try adding the accounts.</li></ul></div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+            - FIID: 25923
+              FIMessage:
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <div>Your Financial Institution has created aggregator read only
+                  account for the service providers like us to aggregate the account information.
+                  Please follow the below mentioned steps to enable and create aggregator
+                  account login with the new set of credentials.<ul start="1"><li>Login to
+                  your account at [plan website]</li><li>Select "Profile & Documents" > Select
+                  "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" > Create new Password.</li><li>Enter the Aggregator
+                  UserName and Password in our dashboard and try adding the accounts.</li></ul></div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+            - FIID: 713
+              FIMessage:
+              - Message: '<div><p>  UBS now requires you to enroll for Account Aggregation
+                  Services before adding accounts. If you haven''t already enrolled, please
+                  follow the steps below: </p><div></div><ul start="1"><li>Log into UBS Online
+                  Services at <a href="http://www.ubs.com/onlineservices" target="_blank">http://www.ubs.com/onlineservices</a>  </li><li>  Click
+                  on Profile Settings.  </li><li>  Click on Enroll for Account Aggregation
+                  Services. </li><li>  Click the Enroll button next to "Fiserv - AllData by
+                  Fiserv". </li></ul></div>'
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+              - Message: '<p> UBS now requires you to enroll for the Account Aggregation Services
+                  before adding accounts. If you haven''t already enrolled, please follow
+                  the steps below: </p> <ol start="1"><li>  Log into UBS Online Services at
+                  <a href="http://www.ubs.com/onlineservices" target="_blank">http://www.ubs.com/onlineservices</a>  </li><li>  Click
+                  on Profile Settings.  </li><li>  Click on Enroll for Account Aggregation
+                  Services. </li><li>  Click the Enroll button next to "Fiserv - AllData by
+                  Fiserv".  </li><li>  Return to this application. </li><li>  Enter your User
+                  Name and Password and try adding the accounts. </li></ol>'
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: '<p> UBS now requires you to enroll for the Account Aggregation Services
+                  before adding accounts. If you haven''t already enrolled, please follow
+                  the steps below: </p> <ol start="1"><li>  Log into UBS Online Services at
+                  <a href="http://www.ubs.com/onlineservices" target="_blank">http://www.ubs.com/onlineservices</a>  </li><li>  Click
+                  on Profile Settings.  </li><li>  Click on Enroll for Account Aggregation
+                  Services. </li><li>  Click the Enroll button next to "Fiserv - AllData by
+                  Fiserv".  </li><li>  Return to this application. </li><li>  Enter your User
+                  Name and Password and try adding the accounts. </li></ol>'
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+            - FIID: 41
+              FIMessage:
+              - Message: "<div width=750 border=0 cellspacing=4><strong>T. Rowe Price Customers,</strong><br></br>If
+                  you have retirement plans as part of your T. Rowe Price account, you may
+                  not see them because of a recent update we made to our connection with T.
+                  Rowe Price website. To add back your retirement accounts, please search
+                  for 'T. Rowe Price - Retirement Plan Services' and try adding the accounts.<br></br></div>"
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+              - Message: "<div width=750 border=0 cellspacing=4><strong>T. Rowe Price Customers,</strong><br></br>If
+                  you have retirement plans as part of your T. Rowe Price account, you may
+                  not see them because of a recent update we made to our connection with T.
+                  Rowe Price website. To add back your retirement accounts, please search
+                  for 'T. Rowe Price - Retirement Plan Services' and try adding the accounts.<br></br></div>"
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: "<div width=750 border=0 cellspacing=4><strong>T. Rowe Price Customers,</strong><br></br>If
+                  you have retirement plans as part of your T. Rowe Price account, you may
+                  not see them because of a recent update we made to our connection with T.
+                  Rowe Price website. To add back your retirement accounts, please search
+                  for 'T. Rowe Price - Retirement Plan Services' and try adding the accounts.<br></br></div>"
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+            - FIID: 18442
+              FIMessage:
+              - Message: '<div>Key Bank now requires you to set up data sharing permission
+                  for third party access before you connect to KeyBank accounts to use account
+                  aggregation services. If you haven''t already done, please follow the steps
+                  below <ol start="1"><li>Sign on to online banking (url: <a href="https://ibx.key.com/ibxolb/login/index.html#/login"
+                  target="_blank">https://ibx.key.com/ibxolb/login/index.html#/login</a>)
+                  (This is not available in the mobile app).</li><li>Select "User Profile",</li><li>then
+                  scroll down to "Password and Security"</li><li>Toggle "Third Party Access"
+                  off or on</li><li>Confirm</li></ol></div><div>For more information please
+                  see url: <a href="https://www.key.com/personal/online-banking/third-party-access.jsp"
+                  target="_blank">https://www.key.com/personal/online-banking/third-party-access.jsp</a></div>'
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+              - Message: '<div>Key Bank now requires you to set up data sharing permission
+                  for third party access before you connect to KeyBank accounts to use account
+                  aggregation services. If you haven''t already done, please follow the steps
+                  below <ol start="1"><li>Sign on to online banking (url: <a href="https://ibx.key.com/ibxolb/login/index.html#/login"
+                  target="_blank">https://ibx.key.com/ibxolb/login/index.html#/login</a>)
+                  (This is not available in the mobile app).</li><li>Select "User Profile",</li><li>then
+                  scroll down to "Password and Security"</li><li>Toggle "Third Party Access"
+                  off or on</li><li>Confirm</li></ol></div><div>For more information please
+                  see url: <a href="https://www.key.com/personal/online-banking/third-party-access.jsp"
+                  target="_blank">https://www.key.com/personal/online-banking/third-party-access.jsp</a></div>'
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: '<div>Key Bank now requires you to set up data sharing permission
+                  for third party access before you connect to KeyBank accounts to use account
+                  aggregation services. If you haven''t already done, please follow the steps
+                  below <ol start="1"><li>Sign on to online banking (url: <a href="https://ibx.key.com/ibxolb/login/index.html#/login"
+                  target="_blank">https://ibx.key.com/ibxolb/login/index.html#/login</a>)
+                  (This is not available in the mobile app).</li><li>Select "User Profile",</li><li>then
+                  scroll down to "Password and Security"</li><li>Toggle "Third Party Access"
+                  off or on</li><li>Confirm</li></ol></div><div>For more information please
+                  see url: <a href="https://www.key.com/personal/online-banking/third-party-access.jsp"
+                  target="_blank">https://www.key.com/personal/online-banking/third-party-access.jsp</a></div>'
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+            - FIID: 50096
+              FIMessage:
+              - Message: |-
+                  <div>In order for us to connect your accounts to this application, you consent to share data with us and this application by providing your login credentials here; note that this site is not affiliated with Capital One. These credentials will be used to obtain information from Capital One which may include account information including account and routing numbers, account balances, and transactional detail, as well as personal information including owner names, email addresses and phone numbers. Account information may be refreshed on a nightly basis to obtain updated information. Account information will only be used to support this application.
+                  Your credentials and associated account information will be retained until you delete the account from this application or revoke the consent you are providing today. You may revoke consent by deleting the accounts within the application or by contacting your application provider.</div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2021-10-26-00:00
+            - FIID: 25907
+              FIMessage:
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <div>Your Financial Institution has created aggregator read only
+                  account for the service providers like us to aggregate the account information.
+                  Please follow the below mentioned steps to enable and create aggregator
+                  account login with the new set of credentials.<ul start="1"><li>Login to
+                  your account at [plan website]</li><li>Select "Profile & Documents" > Select
+                  "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" > Create new Password.</li><li>Enter the Aggregator
+                  UserName and Password in our dashboard and try adding the accounts.</li></ul></div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+            - FIID: 17843
+              FIMessage:
+              - Message: '<div>Huntington Bank now requires you to allow access to account
+                  aggregators before you connect to Huntington Bank accounts to use account
+                  aggregation services. If you haven''t already done, please follow the steps
+                  below<ol start="1"><li>Sign on to Huntington Bank online banking (url: <a
+                  href="https://onlinebanking.huntington.com/rol/Auth/login.aspx" target="_blank">https://onlinebanking.huntington.com/rol/Auth/login.aspx</a></li><li>Go
+                  to Customer Service > My Profile > Financial Management Tool Settings</li><li>Review
+                  the ''Terms and Conditions''</li><li>Select the ''On'' Option</li><li>Click
+                  ''Save''</li></ol></div>'
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+              - Message: '<div>Huntington Bank now requires you to allow access to account
+                  aggregators before you connect to Huntington Bank accounts to use account
+                  aggregation services. If you haven''t already done, please follow the steps
+                  below<ol start="1"><li>Sign on to Huntington Bank online banking (url: <a
+                  href="https://onlinebanking.huntington.com/rol/Auth/login.aspx" target="_blank">https://onlinebanking.huntington.com/rol/Auth/login.aspx</a></li><li>Go
+                  to Customer Service > My Profile > Financial Management Tool Settings</li><li>Review
+                  the ''Terms and Conditions''</li><li>Select the ''On'' Option</li><li>Click
+                  ''Save''</li></ol></div>'
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: '<div>Huntington Bank now requires you to allow access to account
+                  aggregators before you connect to Huntington Bank accounts to use account
+                  aggregation services. If you haven''t already done, please follow the steps
+                  below<ol start="1"><li>Sign on to Huntington Bank online banking (url: <a
+                  href="https://onlinebanking.huntington.com/rol/Auth/login.aspx" target="_blank">https://onlinebanking.huntington.com/rol/Auth/login.aspx</a></li><li>Go
+                  to Customer Service > My Profile > Financial Management Tool Settings</li><li>Review
+                  the ''Terms and Conditions''</li><li>Select the ''On'' Option</li><li>Click
+                  ''Save''</li></ol></div>'
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+            - FIID: 1620
+              FIMessage:
+              - Message: <p> Interactive Brokers uses service credentials to support financial
+                  management tools such as this. If you haven't already, activate a third-party
+                  token at the Interactive Brokers website. To Create Secure Access Code,
+                  </p> <ol start="1"><li><a href="https://www.interactivebrokers.com/en/software/am3/am.htm#am/settings/thirdpartyservices.htm"  target="_blank">Click
+                  here</a> for instructions to set your third-party services token at Interactive
+                  Brokers.</li><li>  Return to this application </li><li>  Select 'Interactive
+                  Brokers'  </li><li>  Enter your Token </li><li>  Enter your Query ID </li></ol>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+              - Message: <p> Interactive Brokers uses service credentials to support financial
+                  management tools such as this. If you haven't already, activate a third-party
+                  token at the Interactive Brokers website. To Create Secure Access Code,
+                  </p> <ol start="1"><li><a href="https://www.interactivebrokers.com/en/software/am3/am.htm#am/settings/thirdpartyservices.htm"  target="_blank">Click
+                  here</a> for instructions to set your third-party services token at Interactive
+                  Brokers.</li><li>  Return to this application </li><li>  Select 'Interactive
+                  Brokers'  </li><li>  Enter your Token </li><li>  Enter your Query ID </li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p> Interactive Brokers uses service credentials to support financial
+                  management tools such as this. If you haven't already, activate a third-party
+                  token at the Interactive Brokers website. To Create Secure Access Code,
+                  </p> <ol start="1"><li><a href="https://www.interactivebrokers.com/en/software/am3/am.htm#am/settings/thirdpartyservices.htm"  target="_blank">Click
+                  here</a> for instructions to set your third-party services token at Interactive
+                  Brokers.</li><li>  Return to this application </li><li>  Select 'Interactive
+                  Brokers'  </li><li>  Enter your Token </li><li>  Enter your Query ID </li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+            - FIID: 4020
+              FIMessage:
+              - Message: <p> Equitable now requires 'Secure Access Code' along with login
+                  credentials to support financial management tools such as this. To Create
+                  Secure Access Code, </p> <ol start="1"><li>Login to equitable.com  </li><li>  Select
+                  'Secure Access Code' option in the 'Personal Settings' dropdown  </li><li>  Click
+                  'Generate my code' button & Accept Terms and Conditions to get the Secure
+                  Access Code </li><li>  Enter User ID and 'Secure Access Code' </li></ol>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+              - Message: <p> Equitable now requires 'Secure Access Code' along with login
+                  credentials to support financial management tools such as this. To Create
+                  Secure Access Code, </p> <ol start="1"><li>Login to equitable.com  </li><li>  Select
+                  'Secure Access Code' option in the 'Personal Settings' dropdown  </li><li>  Click
+                  'Generate my code' button & Accept Terms and Conditions to get the Secure
+                  Access Code </li><li>  Enter User ID and 'Secure Access Code' </li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p> Equitable now requires 'Secure Access Code' along with login
+                  credentials to support financial management tools such as this. To Create
+                  Secure Access Code, </p> <ol start="1"><li>Login to equitable.com  </li><li>  Select
+                  'Secure Access Code' option in the 'Personal Settings' dropdown  </li><li>  Click
+                  'Generate my code' button & Accept Terms and Conditions to get the Secure
+                  Access Code </li><li>  Enter User ID and 'Secure Access Code' </li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+            - FIID: 25917
+              FIMessage:
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <div>Your Financial Institution has created aggregator read only
+                  account for the service providers like us to aggregate the account information.
+                  Please follow the below mentioned steps to enable and create aggregator
+                  account login with the new set of credentials.<ul start="1"><li>Login to
+                  your account at [plan website]</li><li>Select "Profile & Documents" > Select
+                  "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" > Create new Password.</li><li>Enter the Aggregator
+                  UserName and Password in our dashboard and try adding the accounts.</li></ul></div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+            - FIID: 17501
+              FIMessage:
+              - Message: |-
+                  <div>In order for us to connect your accounts to this application, you consent to share data with us and this application by providing your login credentials here; note that this site is not affiliated with Capital One. These credentials will be used to obtain information from Capital One which may include account information including account and routing numbers, account balances, and transactional detail, as well as personal information including owner names, email addresses and phone numbers. Account information may be refreshed on a nightly basis to obtain updated information. Account information will only be used to support this application.
+                  Your credentials and associated account information will be retained until you delete the account from this application or revoke the consent you are providing today. You may revoke consent by deleting the accounts within the application or by contacting your application provider.</div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2021-10-26-00:00
+            - FIID: 25918
+              FIMessage:
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <div>Your Financial Institution has created aggregator read only
+                  account for the service providers like us to aggregate the account information.
+                  Please follow the below mentioned steps to enable and create aggregator
+                  account login with the new set of credentials.<ul start="1"><li>Login to
+                  your account at [plan website]</li><li>Select "Profile & Documents" > Select
+                  "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" > Create new Password.</li><li>Enter the Aggregator
+                  UserName and Password in our dashboard and try adding the accounts.</li></ul></div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+            - FIID: 25919
+              FIMessage:
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 301
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <p>The Aggregator site login credentials entered is wrong. To verify
+                  the login credentials, please follow the below mentioned steps.</p><ol start="1"><li>Login
+                  to your account at [plan website]</li><li>Select "Profile & Documents" >
+                  Select "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" </li><li>Verify the Aggregator UserName and Password
+                  available in this page</li><li>Edit the correct Aggregator UserName and
+                  Password in our dashboard and retry the attempt.</li></ol>
+                UpdateErrorCode: 300
+                MessageType: API-ERRORRESOLUTION
+                StartDate: 2020-06-07-00:00
+              - Message: <div>Your Financial Institution has created aggregator read only
+                  account for the service providers like us to aggregate the account information.
+                  Please follow the below mentioned steps to enable and create aggregator
+                  account login with the new set of credentials.<ul start="1"><li>Login to
+                  your account at [plan website]</li><li>Select "Profile & Documents" > Select
+                  "Password & Security Features"</li><li>Under "Manage Financial Aggregator
+                  Access", select "Edit" > Create new Password.</li><li>Enter the Aggregator
+                  UserName and Password in our dashboard and try adding the accounts.</li></ul></div>
+                MessageType: API-ADDACCOUNTS
+                StartDate: 2020-06-07-00:00
+        partnerID: 8885504
+        version: 1.4.6
 
     getTaxDocDetailsRequest:
       value:
