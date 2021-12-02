@@ -2366,15 +2366,17 @@ paths:
           \ Category details of a Transaction.</td></tr><tr><td><b>SubCategory</b></td><td>\
           \ SubCategory details of a Transaction.</td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
+          # application/xml:
+          #   schema:
+              # $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
+            examples:
+              WorkingSample: {summary: Request CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
         required: true
       responses:
         "200":
@@ -2429,15 +2431,17 @@ paths:
             \ to us to whitelist any new IP's or make the request from whitelisted\
             \ Ips.</td></tr></table></td></tr> </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
+              examples:
+                WorkingSample: {summary: Response CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -12970,6 +12974,59 @@ components:
             StatusCode: 0
             Severity: Info
             StatusDesc: Aggregation Service is Up and Running.
+
+    categorizeTransactionRequest:
+      value:
+        RqUID: JSON_UpdateTxnCategoryRqChk_Adv
+        SignonRq:
+          UserInfo:
+            UserID: Amr_Test_Adv_001_Temp
+            HomeID: 50020001
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: Advisor
+        UpdateTxnCategoryRq:
+          FIAcctId:
+            AcctId: 5590095
+            AcctType: CCA
+            ExtAcctType: CCA
+          TransList:
+            Transaction:
+            - TransID: 6754432
+              Category: Food & Dining
+              SubCategory:
+                content: Restaurants
+        partnerID: 50020000
+        version: version1
+
+    categorizeTransactionResponse:
+      value:
+        RqUID: JSON_UpdateTxnCategoryRqChk_Adv
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3754664
+        UpdateTxnCategoryRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          TransCategoryList:
+            TransStatus:
+            - transID: 6754432
+              status:
+                StatusCode: 0
+                Severity: Info
+                StatusDesc: Success
+        partnerID: 50020000
+        version: version1
 
     getTaxDocDetailsRequest:
       value:
