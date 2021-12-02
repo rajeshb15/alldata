@@ -12,8 +12,7 @@ paths:
       summary: ' getAccountDetails service'
       description: "This API can be used to retrieve information about one or more\
         \ login accounts. If no id is specified, information about all of user’s FI\
-        \ login accounts is returned. <a href=\"./examples.jsp?category=AccountDataInq&amp;service=getAccountDetails\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ login accounts is returned."
       operationId: getAccountDetails
       requestBody:
         description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
@@ -65,8 +64,7 @@ paths:
       x-group-name: Account Data Inquiry Service
       x-proxy-name: Account Update Summary
       summary: ' getAccountUpdateSummary service'
-      description: This API is used to retrieve update summary for accounts.<a href="./examples.jsp?category=AccountDataInq&amp;service=getAccountUpdateSummary"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API is used to retrieve update summary for accounts.
       operationId: getAccountUpdateSummary
       requestBody:
         description: <table> <thead> <th>Element/property</th> <th>Description</th>
@@ -182,8 +180,7 @@ paths:
       x-proxy-name: Account Summary
       summary: ' getAccountsSummary service'
       description: This API is used to fetch the Account Summary information for a
-        specified FI Account. <a href="./examples.jsp?category=AccountDataInq&amp;service=getAccountsSummary"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        specified FI Account.
       operationId: getAccountsSummary
       requestBody:
         description: <table> <thead> <th>Element/property</th> <th>Description</th>
@@ -297,8 +294,7 @@ paths:
       x-group-name: Account Data Inquiry Service
       x-proxy-name: Bank Statement Details
       summary: ' getBankStmtDetails service'
-      description: This API is used to get Bank statement details of the user<a href="./examples.jsp?category=AccountDataInq&amp;service=getBankStmtDetails"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API is used to get Bank statement details of the user.
       operationId: getBankStmtDetails
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>
@@ -840,9 +836,7 @@ paths:
       x-proxy-name: Other Account Transactions
       summary: ' getOtherAccountTrans service'
       description: This API is used to fetch the transactions for Other Asset/Liability/Biller
-        account. The transactions for the specified date range will be returned.<a
-        href="./examples.jsp?category=AccountDataInq&amp;service=getOtherAccountTrans"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        account. The transactions for the specified date range will be returned.
       operationId: getOtherAccountTrans
       requestBody:
         description: <table> <thead> <th>Element/property</th> <th>Description</th>
@@ -928,8 +922,7 @@ paths:
       x-group-name: Account Data Inquiry Service
       x-proxy-name: Tax Document Details
       summary: ' getTaxDocDetails service'
-      description: This API is used to get Bank statement details of the user<a href="./examples.jsp?category=AccountDataInq&amp;service=getTaxDocDetails"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API is used to get Bank statement details of the user.
       operationId: getTaxDocDetails
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>
@@ -951,9 +944,7 @@ paths:
         required: true
       responses:
         "200":
-          description: This API is used to get Bank statement details of the user<a
-            href="./examples.jsp?category=AccountDataInq&amp;service=getTaxDocDetails"
-            target="_blank"><i><b>WorkingSamples</i></b></a>
+          description: This API is used to get Bank statement details of the user.
           content:
             # application/xml:
             #   schema:
@@ -983,9 +974,7 @@ paths:
       summary: ' getTransactions service'
       description: "This API is used for searching for transactions in specified FI\
         \ Login accounts according to specified search criterion.TrnType can be used\
-        \ to either retrieve debit transactions, credit transactions or both <a href=\"\
-        ./examples.jsp?category=AccountDataInq&amp;service=getTransactions\" target=\"\
-        _blank\"><i><b>WorkingSamples</i></b></a>"
+        \ to either retrieve debit transactions, credit transactions or both."
       operationId: getTransactions
       requestBody:
         description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -1072,8 +1061,7 @@ paths:
       x-group-name: Account Data Inquiry Service
       x-proxy-name: Ping
       summary: ' Ping service'
-      description: This API is used to ping Aggregation service.<a href="./examples.jsp?category=AccountDataInq&amp;service=ping"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API is used to ping Aggregation service.
       operationId: ping
       requestBody:
         content:
@@ -2170,8 +2158,7 @@ paths:
       x-proxy-name: Categorize Transaction
       summary: ' categorizeTransaction service'
       description: This API will be used to update the Transactions Categories to
-        the AllData system.<a href="./examples.jsp?category=TxnMgmt&amp;service=categorizeTransaction"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        the AllData system.
       operationId: categorizeTransaction
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -2275,8 +2262,7 @@ paths:
       x-proxy-name: Delete Subcategory
       summary: ' delete subcategory'
       description: This API will be used to delete a personal sub category which is
-        already created.<a href="./examples.jsp?category=TxnMgmt&amp;service=deleteSubCategory"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        already created.
       operationId: deleteSubcategory
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -2349,8 +2335,7 @@ paths:
       x-proxy-name: CategorizeTransaction
       summary: ' categorizeTransaction service'
       description: This API will be used to update the Transactions Categories to
-        the AllData system.<a href="./examples.jsp?category=TxnMgmt&amp;service=categorizeTransaction"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        the AllData system.
       operationId: categorizeTransaction_1
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -2454,8 +2439,7 @@ paths:
       x-proxy-name: Create
       summary: ' create budget'
       description: This API will be used to create a personal budget and track this
-        budget monthly and start the budget over at the beginning of each month.     <a
-        href="./examples.jsp?category=BudgetMgmt&amp;service=createBudget" target="_blank"><i><b>WorkingSamples</i></b></a>
+        budget monthly and start the budget over at the beginning of each month.
       operationId: createBudget
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -2533,8 +2517,7 @@ paths:
       x-proxy-name: Delete
       summary: ' delete budget'
       description: This API will be used to delete a personal budget which is already
-        created.<a href="./examples.jsp?category=BudgetMgmt&amp;service=deleteBudget"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        created.
       operationId: deleteBudget
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -2603,8 +2586,7 @@ paths:
       x-proxy-name: Edit
       summary: ' editBudget service'
       description: This API will be used to edit a personal budget which is already
-        created.<a href="./examples.jsp?category=BudgetMgmt&amp;service=editBudget"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        created.
       operationId: editBudget
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -2682,8 +2664,7 @@ paths:
       x-proxy-name: Find
       summary: ' find budget'
       description: This API will be used to find budget based on Budget Id/Person
-        Id        <a href="./examples.jsp?category=BudgetMgmt&amp;service=findBudget"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        Id.
       operationId: findBudget
       requestBody:
         description: '<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -2753,8 +2734,7 @@ paths:
       x-group-name: Client Management Service
       x-proxy-name: Add Offline Account
       summary: ' addOfflineAccount service'
-      description: This API will be used to add offline accounts to client. <a href="./examples.jsp?category=ClientMgmt&amp;service=addOfflineAccount"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API will be used to add offline accounts to client.
       operationId: addOfflineAccount
       requestBody:
         description: <table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -2819,9 +2799,7 @@ paths:
       x-group-name: Client Management Service
       x-proxy-name: Update Offline Account
       summary: ' updateOfflineAccount service'
-      description: This API will be used to modify offline accounts to client. <a
-        href="./examples.jsp?category=ClientMgmt&amp;service=updateOfflineAccount"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API will be used to modify offline accounts to client.
       operationId: updateOfflineAccount
       requestBody:
         description: <table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -2888,9 +2866,7 @@ paths:
       x-proxy-name: FI Message Info
       summary: ' getFIMessageInfo Service'
       description: "This API is used to get the FI Messages, which were special instructions\
-        \ provided for the users to follow to aggregate information from that FI.\
-        \ <a href=\"./examples.jsp?category=FIMessaegesInq&amp;service=getFIMessageInfo\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ provided for the users to follow to aggregate information from that FI."
       operationId: getFIMessageInfo
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -2965,8 +2941,7 @@ paths:
       summary: createGoal service
       description: This API used to set a goal for the future or desired result that
         a person plans and commits to achieve goals within a finite time by setting
-        deadlines.     <a href="./examples.jsp?category=GoalMgmt&amp;service=createGoal"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        deadlines.
       operationId: createGoal
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -3055,8 +3030,7 @@ paths:
       x-proxy-name: Delete
       summary: ' delete Goal'
       description: This API will be used to delete goal based on Goal Id/Person Id
-        level.     <a href="./examples.jsp?category=GoalMgmt&amp;service=deleteGoal"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        level.
       operationId: deleteGoal
       requestBody:
         description: '<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -3130,8 +3104,7 @@ paths:
       x-group-name: Goal Management Service PFM
       x-proxy-name: Edit
       summary: editGoal service
-      description: This API will be used to edit a goal which is already created.<a
-        href="./examples.jsp?category=GoalMgmt&amp;service=editGoal" target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API will be used to edit a goal which is already created.
       operationId: editGoal
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -3222,8 +3195,7 @@ paths:
       x-group-name: Goal Management Service PFM
       x-proxy-name: Find
       summary: findGoal service
-      description: This API will be used to find goal based on Goal Id/Person Id level.     <a
-        href="./examples.jsp?category=GoalMgmt&amp;service=findGoal" target="_blank"><i><b>WorkingSamples</i></b></a>
+      description: This API will be used to find goal based on Goal Id/Person Id level.
       operationId: findGoal
       requestBody:
         description: '<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -3315,8 +3287,7 @@ paths:
         \ API.<br><b>Acct Status : </b>Returns back the status of accounts of FI specified\
         \ in the updateAccounts API.<br>If the above values are not specified, API\
         \ returns back the status of all the accounts specified in the updateAccounts\
-        \ API. <a href=\"./examples.jsp?category=HarvestAccountData&amp;service=getHarvestStatus\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ API."
       operationId: getHarvestStatus
       requestBody:
         description: "<table><thead><th>Element/Property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td>\
@@ -3401,8 +3372,7 @@ paths:
         \ from list of FIs, all accounts under list of parent CFI IDs, or list of\
         \ individual accountsUpdate accounts under single parent CFI ID after initial\
         \ addThe HarvestID (run ID) returned in the response will be needed while\
-        \ checking status of the call  <a href=\"./examples.jsp?category=HarvestAccountData&amp;service=updateAccounts\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ checking status of the call."
       operationId: updateAccounts
       requestBody:
         description: <table> <thead> <th>Element/property</th> <th>Description</th>
@@ -3504,8 +3474,7 @@ paths:
       description: "This API can be used in three different ways: Retrieve FI Ids\
         \ of all FIs CashEdge supports. Retrieve FI details given a set of FI Ids.\
         \ Incremental refresh of FI seed data for a specific timeframe (typically\
-        \ everyday). <a href=\"./examples.jsp?category=SeedDataInq&amp;service=getFinancialInstInfo\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ everyday)."
       operationId: getFinancialInstInfo
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -3573,8 +3542,7 @@ paths:
         ‘FIInfoRequired’ -a) FIIDInfo - retrieves only IDsb) FIIDInfoList - retrieves
         list of FIs with detail informationc) FINameInfoList – retrieved list of FIs
         with just ID and name By default returns list of FI IDs Number records in
-        the result can be limited by parameter ‘FISearchSize’  <a href="./examples.jsp?category=SeedDataInq&amp;service=searchFinancialInst"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        the result can be limited by parameter ‘FISearchSize’.
       operationId: searchFinancialInst
       requestBody:
         description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -3640,8 +3608,7 @@ paths:
       x-proxy-name: Transactions Categories Info
       summary: TxnCategoriesInfo service
       description: This API will be used to get the Transactions Categories from the
-        AllData system for a specific home.<a href="./examples.jsp?category=SeedDataInq&amp;service=TxnCategoriesInfo"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        AllData system for a specific home.
       operationId: updateAccounts_1
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -3705,9 +3672,7 @@ paths:
         \ long Password is case sensitive.Password should not contain space. Password\
         \ should not contain Non-printable characters (space,tab,..etc). Returns numeric\
         \ CEUserID if the user is successfully created. It is useful while debugging\
-        \ any issues. Users with “Admin” role cannot be added using this API.<a href=\"\
-        ./examples.jsp?category=UserMgmt&amp;service=createUser\" target=\"_blank\"\
-        ><i><b>WorkingSamples</i></b></a>"
+        \ any issues. Users with “Admin” role cannot be added using this API."
       operationId: createUser
       requestBody:
         description: <table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A
@@ -3795,8 +3760,7 @@ paths:
       summary: ' deleteUser service'
       description: "This API is used to unregister a previously registered user. User\
         \ data including accounts, transactions, etc. will be deleted. Admin users\
-        \ cannot be deleted using this service <a href=\"./examples.jsp?category=UserMgmt&amp;service=deleteUser\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ cannot be deleted using this service."
       operationId: deleteUser
       requestBody:
         description: <table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A
@@ -3864,8 +3828,7 @@ paths:
       x-proxy-name: User Profile
       summary: ' getUserProfile service'
       description: "This API is used to retrieve user profile information such as\
-        \ name, address contact details, etc. <a href=\"./examples.jsp?category=UserMgmt&amp;service=getUserProfile\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ name, address contact details, etc."
       operationId: getUserProfile
       requestBody:
         description: <table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -3930,8 +3893,7 @@ paths:
       description: This API will be used to signon to the PI Service. This API will
         authenticate the user and generate a session token. The session token can
         be used for subsequent calls and this token will expire after 18 minutes of
-        ideal time. <a href="./examples.jsp?category=UserMgmt&amp;service=signon"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        ideal time.
       operationId: signon
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>UserInfo</b></td><td>\
@@ -4022,8 +3984,7 @@ paths:
       summary: ' updateUserPassword service'
       description: This API is used to change the password of the current user identified
         by the credentials in this request’s SignonRq section. Admin user’s password
-        cannot be modified using this request.<a href="./examples.jsp?category=UserMgmt&amp;service=updateUserPassword"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        cannot be modified using this request.
       operationId: updateUserPassword
       requestBody:
         description: <table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -4084,8 +4045,7 @@ paths:
       summary: ' updateUserProfile service'
       description: "This API is used to update user profile information such as name,\
         \ address contact details, etc. Please note that CashEdge does not validate\
-        \ address or email. <a href=\"./examples.jsp?category=UserMgmt&amp;service=updateUserProfile\"\
-        \ target=\"_blank\"><i><b>WorkingSamples</i></b></a>"
+        \ address or email."
       operationId: updateUserProfile
       requestBody:
         description: <table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>  A
@@ -4151,8 +4111,7 @@ paths:
       x-proxy-name: RTV Info
       summary: ' RTVInfo service'
       description: This document provides a design overview of the API interfaces
-        for the VerifyNow RTVInfo <a href="./examples.jsp?category=VerifyNow&amp;service=RTVInfo"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        for the VerifyNow RTVInfo.
       operationId: RTVInfo
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -4200,8 +4159,7 @@ paths:
       x-proxy-name: AckRTV Result
       summary: ' ackRTVResult service'
       description: This document provides a design overview of the API interfaces
-        for the VerifyNow RTVToken <a href="./examples.jsp?category=VerifyNow&amp;service=RTVToken"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        for the VerifyNow RTVToken.
       operationId: ackRTVResult
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -4250,8 +4208,7 @@ paths:
       x-proxy-name: Advance RTV Enable FI
       summary: ' AdvanceRTVEnableFI service'
       description: This document provides a design overview of the API interfaces
-        for the VerifyNow AdvanceRTVEnableFI <a href="./examples.jsp?category=VerifyNow&amp;service=AdvanceRTVEnableFI"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        for the VerifyNow AdvanceRTVEnableFI.
       operationId: advanceRTVEnableFI
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -4299,8 +4256,7 @@ paths:
       x-proxy-name: RTV Token
       summary: ' rtvToken service'
       description: This document provides a design overview of the API interfaces
-        for the VerifyNow RTVToken <a href="./examples.jsp?category=VerifyNow&amp;service=RTVToken"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        for the VerifyNow RTVToken.
       operationId: rtvToken
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -4349,8 +4305,7 @@ paths:
       x-proxy-name: Search FI
       summary: ' searchFI service'
       description: This document provides a design overview of the API interfaces
-        for the VerifyNow Search FI <a href="./examples.jsp?category=VerifyNow&amp;service=searchFI"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        for the VerifyNow Search FI.
       operationId: searchFI
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -4402,8 +4357,7 @@ paths:
       x-proxy-name: Verify Account
       summary: ' verifyAccount service'
       description: This document provides a design overview of the API interfaces
-        for the VerifyNow VerifyAccount <a href="./examples.jsp?category=VerifyNow&amp;service=verifyAccount"
-        target="_blank"><i><b>WorkingSamples</i></b></a>
+        for the VerifyNow VerifyAccount.
       operationId: verifyAccount
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
