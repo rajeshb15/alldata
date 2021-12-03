@@ -21814,57 +21814,6 @@ components:
         partnerID:
         version:
 
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     categorizeTransactionRequest:
       value:
         RqUID: UpdateTxnCategoryRq_update_check
@@ -21921,7 +21870,6 @@ components:
         partnerID: 50040000
         version: 1.4.6
 
-
     deleteSubCategoryRequest:
       value:
         RqUID: RqUID0
@@ -21938,7 +21886,6 @@ components:
           SubCategory: Test_services
         partnerID: 50040000
         version: version1
-
 
     deleteSubCategoryResponse:
       value:
