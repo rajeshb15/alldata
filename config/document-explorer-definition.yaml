@@ -28,9 +28,6 @@
 # the delivery of this work
 ################################################################################
 - sections:
-  - title: Getting Started
-    link: docs/getting-started.md
-- sections:
   - title: Add Account
     link: docs/add-account.md
 - sections:
@@ -42,8 +39,3 @@
 - sections:
   - title: AllData Common Use Cases API Solution
     link: docs/alldata-common-use-cases.md
-- sections:
-  - title: Resources
-    sections:
-    - title: API Guide
-      link: docs/resources/guides/api-guide.md
