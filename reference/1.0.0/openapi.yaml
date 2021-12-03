@@ -12009,7 +12009,7 @@ components:
           IncludeDetail:
           - FIAcctSummary
         RqUID: RqUID0
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         SignonRq:
           UserInfo:
@@ -12678,7 +12678,7 @@ components:
     getAccountsSummaryRequest:
       value:
         RqUID: RqUID0
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         FIAcctSummaryInqRq:
           FIAcctId:
@@ -12755,7 +12755,7 @@ components:
 
     getAccountUpdateSummaryRequest:
       value:
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         RqUID: '123232'
         SignonRq:
@@ -12858,7 +12858,7 @@ components:
             SelRangeDt:
               EndDt: '2017-12-30'
               StartDt: '2017-12-01'
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         SignonRq:
           UserInfo:
@@ -12912,7 +12912,7 @@ components:
 
     pingRequest:
       value:
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         RqUID: '1'
         SignonRq:
@@ -13667,7 +13667,7 @@ components:
             SelRangeDt:
               EndDt: '2015-08-30'
               StartDt: '2015-07-01'
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         SignonRq:
           UserInfo:
@@ -13756,7 +13756,7 @@ components:
     getCreditCardTransRequest:
       value:
         RqUID: RqUID0
-        partnerID: '50120000'
+        partnerID: 50120000
         CCAcctTrnInqRq:
           FIAcctId:
             AcctId: '5585463'
@@ -13858,7 +13858,7 @@ components:
     getTransactionsRequest:
       value:
         RqUID: JSONAutomationTst_FindTrnsInqRq01
-        partnerID: '50040000'
+        partnerID: 50040000
         FindTrnsInqRq:
           SearchCriterion:
             SelRangeDt:
@@ -19757,7 +19757,7 @@ components:
             AcctType: INV
             ExtAcctType: ESO
         RqUID: RqUID0
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         SignonRq:
           UserInfo:
@@ -20016,7 +20016,7 @@ components:
     getInvestmentPosRequest:
       value:
         RqUID: RqUID0
-        partnerID: '50040000'
+        partnerID: 50040000
         InvAcctPosInqRq:
           FIAcctId:
             AcctId: '5586109'
@@ -20132,7 +20132,7 @@ components:
               EndDt: '2020-10-30'
               StartDt: '2020-10-01'
         RqUID: RqUID0
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         SignonRq:
           UserInfo:
@@ -20446,7 +20446,7 @@ components:
                       Amt: '100'
                       CurCode: USD
         version: version1
-        partnerID: '66664000'
+        partnerID: 66664000
 
     addHostAccountsResponse:
       value:
@@ -20937,7 +20937,7 @@ components:
     createAccountsRequest:
       value:
         RqUID: WSTst createAccounts
-        partnerID: '50040000'
+        partnerID: 50040000
         version: version1
         SignonRq:
           SessionInfo:
@@ -21313,7 +21313,7 @@ components:
             ExtAcctType: INV
             AcctId: '5586120'
             AcctType: INV
-        partnerID: '50040000'
+        partnerID: 50040000
         version: version1
         SignonRq:
           UserInfo:
@@ -21350,7 +21350,7 @@ components:
     getAddAccountStatusRequest:
       value:
         RqUID: RqUID0
-        partnerID: '50120000'
+        partnerID: 50120000
         version: version1
         SignonRq:
           SessionInfo:
@@ -21392,7 +21392,7 @@ components:
           RunId: '18816631'
           HarvestAddID: 6d70454239722b534957774c55586872614d4a4367513d3d
         RqUID: RqUID0
-        partnerID: '50040000'
+        partnerID: 50040000
         version: version1
         SignonRq:
           SessionInfo:
@@ -21711,7 +21711,7 @@ components:
             UserID: AUTO_JSON_FLClt14455
             FIId: '505001'
         RqUID: RqUID0
-        partnerID: '50040000'
+        partnerID: 50040000
         version: version1
         SignonRq:
           UserInfo:
@@ -21754,7 +21754,7 @@ components:
     maintainAccountRequest:
       value:
         RqUID: JSONAutomationTst_UserActModRq01
-        partnerID: '50040000'
+        partnerID: 50040000
         version: version1
         SignonRq:
           UserInfo:
