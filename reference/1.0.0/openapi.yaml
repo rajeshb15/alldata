@@ -22004,7 +22004,7 @@ components:
 
     searchFinancialInstRequest:
       value:
-        partnerID: '50040000'
+        partnerID: 50040000
         version: version1
         RqUID: RqUID0
         SignonRq:
@@ -22136,7 +22136,7 @@ components:
     createUserRequest:
       value:
         RqUID: WSTst createUser with Opt element
-        partnerID: '50040000'
+        partnerID: 50040000
         UserAddRq:
           UserProfile:
             PersonInfo:
@@ -22200,7 +22200,7 @@ components:
     deleteUserRequest:
       value:
         RqUID: RqUID0
-        partnerID: '50040000'
+        partnerID: 50040000
         UserDelRq:
           HomeID: '50040009'
           UserID: AUTO_JSON_FLClt76741
@@ -22290,7 +22290,7 @@ components:
     signonRequest:
       value:
         RqUID: '1'
-        partnerID: '50040000'
+        partnerID: 50040000
         version: version1
         SignonRq:
           UserInfo:
@@ -22361,7 +22361,7 @@ components:
     updateUserProfileRequest:
       value:
         RqUID: RqUID0
-        partnerID: '50040000'
+        partnerID: 50040000
         UserProfileModRq:
           UserProfile:
             PersonInfo:
@@ -22415,7 +22415,7 @@ components:
     RTVInfoRequest:
       value:
         RqUID: RqUID0
-        partnerID: '50050000'
+        partnerID: 50050000
         version: version1
         SignonRq:
           SessionInfo:
@@ -22458,7 +22458,7 @@ components:
     AckRTVResultRequest:
       value:
         RqUID: RqUID1
-        partnerID: '50050000'
+        partnerID: 50050000
         RTVTokenRq:
           AddAccountRetryAttempts: 2
           FIName: CashEdge Bank
@@ -23184,7 +23184,7 @@ components:
     RTVTokenRequest:
       value:
         RqUID: RqUID1
-        partnerID: '50050000'
+        partnerID: 50050000
         RTVTokenRq:
           AddAccountRetryAttempts: 2
           FIName: CashEdge Bank
@@ -23230,7 +23230,7 @@ components:
 
     searchFIRequest:
       value:
-        partnerID: '50050000'
+        partnerID: 50050000
         version: version1
         RqUID: RqUID0
         SignonRq:
@@ -23293,7 +23293,7 @@ components:
 
     verifyAccountRequest:
       value:
-        partnerID: '50050000'
+        partnerID: 50050000
         version: version1
         RqUID: '8484739231'
         SignonRq:
