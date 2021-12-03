@@ -2771,15 +2771,18 @@ paths:
           type.</td></tr><tr><td></td><td><a href='elementDescription.jsp#ClientMgmt_addOfflineAccount'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/AddOfflineAcctRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/AddOfflineAcctRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AddOfflineAcctRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/AddOfflineAcctRqHeader'
+            examples:
+              AdvisorHome: {summary: Request Add Offline Account Advisor Home, $ref: '#/components/examples/addOfflineAccountAdvisorRequest'}
+              RetailHome: {summary: Request Add Offline Account Retail Home, $ref: '#/components/examples/addOfflineAccountRetailRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/AddOfflineAcctRqHeader'
         required: true
       responses:
         "200":
@@ -2799,15 +2802,18 @@ paths:
             \ of the added offline account.<br><tr><td><b>AcctId</b></td><td>ID of\
             \ the added offline account.</td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/AddOfflineAcctRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/AddOfflineAcctRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AddOfflineAcctRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/AddOfflineAcctRsHeader'
+              examples:
+                AdvisorHome: {summary: Response Add Offline Account Advisor Home, $ref: '#/components/examples/addOfflineAccountAdvisorResponse'}
+                RetailHome: {summary: Response Add Offline Account Retail Home, $ref: '#/components/examples/addOfflineAccountRetailResponse'}
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/AddOfflineAcctRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -2839,15 +2845,17 @@ paths:
           type.</td></tr><tr><td></td><td><a href='elementDescription.jsp#ClientMgmt_updateOfflineAccount'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/OfflineAcctModRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/OfflineAcctModRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/OfflineAcctModRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/OfflineAcctModRqHeader'
+            examples:
+              WorkingSample: {summary: Request Update Offline Account, $ref: '#/components/examples/updateOfflineAccountRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/OfflineAcctModRqHeader'
         required: true
       responses:
         "200":
@@ -2867,15 +2875,17 @@ paths:
             \ and RetirementStatus.</td></tr><tr><td><b>Status Code: 100</b></td><td>General\
             \ error.</td></tr><tr><td><b>Status Code: 0</b></td><td>Success.</td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/OfflineAcctModRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/OfflineAcctModRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/OfflineAcctModRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/OfflineAcctModRsHeader'
+              examples:
+                WorkingSample: {summary: Response Update Offline Account, $ref: '#/components/examples/updateOfflineAccountResponse'}            
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/OfflineAcctModRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -13604,6 +13614,151 @@ components:
                 StartDate: 2020-06-07-00:00
         partnerID: 8885504
         version: 1.4.6
+
+    addOfflineAccountAdvisorRequest: 
+      value:
+        RqUID: 1857dcf:1065aa857f9:-7ffa
+        SignonRq:
+          UserInfo:
+            UserID: Clientahahdda
+            HomeID: 88881067
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        AddOfflineAcctRq:
+          AddOfflineAcct:
+            AdvisorAccess: Full Account
+            AcctName: Test_Offline2
+            AcctBal:
+            - BalType: Avail
+              CurAmt:
+                Amt: 5000.05
+                CurCode: USD
+              EffDt: '2021-05-03T12:00:00Z'
+              Desc: OfflineTest
+            AcctTypeId: '3283'
+        partnerID: 8885502
+        version: 1.4.6
+    
+    addOfflineAccountAdvisorResponse: 
+      value:
+        RqUID: 1857dcf:1065aa857f9:-7ffa
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3745277
+        AddOfflineAcctRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          AcctName: Test_Offline2
+          AcctId: 5585730
+        partnerID: 8885502
+        version: 1.4.6
+      
+    addOfflineAccountRetailRequest: 
+      value:
+        RqUID: 1857dcf:1065aa857f9:-7ffa
+        SignonRq:
+          UserInfo:
+            UserID: newpfm48user02
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: newpfm48user02
+            Role: User
+        AddOfflineAcctRq:
+          AddOfflineAcct:
+            AcctName: Test_Offline4
+            AcctBal:
+            - BalType: Avail
+              CurAmt:
+                Amt: 1500.32
+                CurCode: USD
+              EffDt: '2020-05-03T12:00:00Z'
+              Desc: OfflineTest
+            AcctTypeId: '3284'
+        partnerID: 8885504
+        version: 1.4.6
+
+    addOfflineAccountRetailResponse: 
+      value:
+        RqUID: 1857dcf:1065aa857f9:-7ffa
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752337
+        AddOfflineAcctRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          AcctName: Test_Offline4
+          AcctId: 5585597
+        partnerID: 8885504
+        version: 1.4.6
+
+    updateOfflineAccountRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: Clientahahdda
+            HomeID: 88881067
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        OfflineAcctModRq:
+          OfflineAcctMod:
+            AcctId: '5586366'
+            AcctName: Test_Offline4
+            AdvisorAccess: None
+            AcctBal:
+            - BalType: Avail
+              CurAmt:
+                Amt: 123321.123321
+                CurCode: USD
+              EffDt: '2021-05-03T12:00:00Z'
+              Desc: DescModified
+            AcctTypeId: '3283'
+        partnerID: 8885502
+        version: 1.4.6
+
+    updateOfflineAccountResponse:
+      value:
+        partnerID: 8885502
+        version: 1.4.6
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3745277
+        OfflineAcctModRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
 
     getTaxDocDetailsRequest:
       value:
