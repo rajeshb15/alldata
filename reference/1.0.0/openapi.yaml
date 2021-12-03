@@ -3349,15 +3349,17 @@ paths:
           \ will be returned.</td> </tr><tr><td></td><td><a href='elementDescription.jsp#HarvestAccountData_getHarvestStatus'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestStsInqRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/HarvestStsInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestStsInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestStsInqRqHeader'
+            examples:
+              getHarvestStatus: {summary: Request Harvest Status, $ref: '#/components/examples/getHarvestStatusRequest'}
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/HarvestStsInqRqHeader'
         required: true
       responses:
         "200":
@@ -3387,15 +3389,16 @@ paths:
             \ not enabled for this home. Please reach out to CashEdge team for enabling\
             \ the same.</td><td></td></tr></table></td></tr> </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestStsInqRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/HarvestStsInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestStsInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestStsInqRsHeader'
+              examples:
+                getHarvestStatus: {summary: Response Harvest Status, $ref: '#/components/examples/getHarvestStatusResponse'}            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/HarvestStsInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -3430,15 +3433,17 @@ paths:
           href='elementDescription.jsp#HarvestAccountData_updateAccounts' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestRqHeader'
+          # application/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/HarvestRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/HarvestRqHeader'
+            examples:
+              updateAccounts: {summary: Request Update Accounts, $ref: '#/components/examples/updateAccountsRequest'}            
+          # text/xml:
+          #   schema:
+          #     $ref: '#/components/schemas/HarvestRqHeader'
         required: true
       responses:
         "200":
@@ -3495,15 +3500,17 @@ paths:
             \ institution login credentials should be corrected.</td><td></td></tr></table></td></tr>\
             \ </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestRsHeader'
+            # application/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/HarvestRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/HarvestRsHeader'
+              examples:
+                updateAccounts: {summary: Response Update Accounts, $ref: '#/components/examples/updateAccountsResponse'}                
+            # text/xml:
+            #   schema:
+            #     $ref: '#/components/schemas/HarvestRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -13759,6 +13766,91 @@ components:
             StatusCode: 0
             Severity: Info
             StatusDesc: Success
+
+    getHarvestStatusRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: newpfm48user02
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: newpfm48user02
+            Role: User
+        HarvestStsInqRq:
+          HarvestAddID: 744b617561785375476f696864677a5943484d3779413d3d
+          RunId: '18951349'
+        partnerID: 8885504
+        version: 1.4.6
+
+    getHarvestStatusResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752337
+        HarvestStsInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          HarvestSts:
+            HarvestID: 18951349
+            HarvestRqStatus: Completed
+            HarvestFISts:
+            - FILoginAcctId: 5593448
+              HarvestRqStatusType: Completed
+        partnerID: 8885504
+        version: 1.4.6      
+
+    updateAccountsRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: newpfm48user02
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: newpfm48user02
+            Role: User
+        HarvestRq:
+          HarvestFILoginAcctList:
+            HarvestFILoginAcct:
+            - FILoginAcctId: 5593448
+        partnerID: 8885504
+        version: version1
+
+    updateAccountsResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        RqUID: RqUID0
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752337
+        HarvestRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          RunId: 18951363
+          HarvestAddID: 65626d5a6265785a6f303239375052623755626d6e673d3d
+        partnerID: 8885504
+        version: 1.4.6
 
     getTaxDocDetailsRequest:
       value:
