@@ -442,17 +442,11 @@ paths:
             \ for the Partner requesting extended transaction history.</td></tr></table></td></tr>\
             \ </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
               examples:
                 WorkingSample: {summary: Response Banking Transactions, $ref: '#/components/examples/getBankingTransResponse'}
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -2174,16 +2168,12 @@ paths:
           \ Category details of a Transaction.</td></tr><tr><td><b>SubCategory</b></td><td>\
           \ SubCategory details of a Transaction.</td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
-        required: true
+            examples:
+              WorkingSample: {summary: Request Categorize Transaction, $ref: '#/components/examples/categorizeTransactionRequest'}
+          required: true
       responses:
         "200":
           description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
@@ -2237,15 +2227,11 @@ paths:
             \ to us to whitelist any new IP's or make the request from whitelisted\
             \ Ips.</td></tr></table></td></tr> </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
+              examples:
+                WorkingSample: {summary: Response Categorize Transaction, $ref: '#/components/examples/categorizeTransactionResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2269,16 +2255,12 @@ paths:
           Unique Request Identifier.</td></tr> <tr><td><b>SignonRq</b></td><td> The
           signon request will be used for user authentication.</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/DeleteSubCategoryRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/DeleteSubCategoryRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/DeleteSubCategoryRqHeader'
-        required: true
+            examples:
+              WorkingSample: {summary: Request Delete Subcategory, $ref: '#/components/examples/deleteSubCategoryRequest'}
+          required: true
       responses:
         "200":
           description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
@@ -2310,15 +2292,11 @@ paths:
             \ the authorized role.</td><td></td></tr><tr><td>7603</td><td>Error</td><td>Validation\
             \ failure</td><td>SubCategory Not Found.</td><td></td></tr></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/DeleteSubCategoryRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/DeleteSubCategoryRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/DeleteSubCategoryRsHeader'
+              examples:
+                WorkingSample: {summary: Response Delete Subcategory, $ref: '#/components/examples/deleteSubCategoryResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3515,39 +3493,31 @@ paths:
           \ will be assumed.</td></tr><tr><td></td><td><a href='elementDescription.jsp#SeedDataInq_getFinancialInstInfo'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FIInfoRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FIInfoRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FIInfoRqHeader'
+            examples:
+              WorkingSample: {summary: Request Financial Institution Info, $ref: '#/components/examples/getFinancialInstInfoRequest'}
         required: true
       responses:
         "200":
           description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody> \
-\ <tr><td><b>Status</b></td><td>The status of the request.</td></tr> \ 
-\ <tr><td><b>RqUID</b></td><td> Unique Request Identifier. The Client Site sends this element with the request.</td> \
-\ </tr><tr><td><b>FIInfoDataList</b></td><td> List of FI along with their requisite information.<br>This aggregate \
-\ will be present, only if the request was carried out successfully and this option was desired in the request. </td> \
-\ </tr><tr><td><b>FIIdList</b></td><td> List of FI id’s.<br>This aggregate will be present, only if the request was \
-\ carried out successfully and this option was desired in the request.</td></tr><tr><td>Status</td><td>The status of \
-\ the FIInfoRs </tr></tbody></table><table><tr><td>StatusCode</td><td>StatusDesc</td></tr><tr><td>0</td><td>Success</td> \
-\ </tr><tr><td>100</td><td>General Error</td></tr><tr><td>4060</td><td>No data available</td></tr><tr><td>4070</td> \
-\ <td>Invalid data in request</td></tr><tr><td>4260</td><td>Invalid Date</td></tr><tr><td>9001</td><td>Support for this \
-\ ABA routing number coming soon.</td></tr><tr><td>9002</td><td>ABA number is not supported.</td></tr></table>"
+            \ <tr><td><b>Status</b></td><td>The status of the request.</td></tr> \ 
+            \ <tr><td><b>RqUID</b></td><td> Unique Request Identifier. The Client Site sends this element with the request.</td> \
+            \ </tr><tr><td><b>FIInfoDataList</b></td><td> List of FI along with their requisite information.<br>This aggregate \
+            \ will be present, only if the request was carried out successfully and this option was desired in the request. </td> \
+            \ </tr><tr><td><b>FIIdList</b></td><td> List of FI id’s.<br>This aggregate will be present, only if the request was \
+            \ carried out successfully and this option was desired in the request.</td></tr><tr><td>Status</td><td>The status of \
+            \ the FIInfoRs </tr></tbody></table><table><tr><td>StatusCode</td><td>StatusDesc</td></tr><tr><td>0</td><td>Success</td> \
+            \ </tr><tr><td>100</td><td>General Error</td></tr><tr><td>4060</td><td>No data available</td></tr><tr><td>4070</td> \
+            \ <td>Invalid data in request</td></tr><tr><td>4260</td><td>Invalid Date</td></tr><tr><td>9001</td><td>Support for this \
+            \ ABA routing number coming soon.</td></tr><tr><td>9002</td><td>ABA number is not supported.</td></tr></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FIInfoRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FIInfoRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FIInfoRsHeader'
+              examples:
+                WorkingSample: {summary: Response Financial Institution Info, $ref: '#/components/examples/getFinancialInstInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3583,40 +3553,32 @@ paths:
           \ href='elementDescription.jsp#SeedDataInq_searchFinancialInst' target='_blank'>More\
           \ Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FISearchRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FISearchRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FISearchRqHeader'
+            examples:
+              WorkingSample: {summary: Request Search Financial Institution, $ref: '#/components/examples/searchFinancialInstRequest'}
         required: true
       responses:
         "200":
           description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td> \
-\ <td>Unique Request Identifier. The ClientSite sends this element with the request.</td></tr> \
-\ <tr><td><b>Status</b></td><td>The status of the request.</td></tr><tr><td><b>FIInfoDataList</b></td> \
-\ <td>Listof FI along with their requisite information.<br>This aggregate willbe present, only if the  \
-\ request was carried out successfully and thisoption was desired in the request.</td></tr> \
-\ <tr><td><b>FIIdList</b></td><td>Listof FI id’s.<br>This aggregate will be present, only if the request \
-\ was carried out successfully and this option was desired in the request.</td></tr><tr><td>Status</td> \
-\ <td>The status of the FISearchRs</td></tr></tbody></table><table><tr><td>0</td><td>Success</td> \
-\ <tr>	<tr><td>100</td><td>General Error</td><tr><tr><td>4060</td><td>No Data Available</td><tr> \
-\ <tr><td>4070</td><td>Invalid data in request</td><tr><tr><td>4591</td><td>No FIs found matching  \
-\ the search criteria provided</td><tr></table>"
+            \ <td>Unique Request Identifier. The ClientSite sends this element with the request.</td></tr> \
+            \ <tr><td><b>Status</b></td><td>The status of the request.</td></tr><tr><td><b>FIInfoDataList</b></td> \
+            \ <td>Listof FI along with their requisite information.<br>This aggregate willbe present, only if the  \
+            \ request was carried out successfully and thisoption was desired in the request.</td></tr> \
+            \ <tr><td><b>FIIdList</b></td><td>Listof FI id’s.<br>This aggregate will be present, only if the request \
+            \ was carried out successfully and this option was desired in the request.</td></tr><tr><td>Status</td> \
+            \ <td>The status of the FISearchRs</td></tr></tbody></table><table><tr><td>0</td><td>Success</td> \
+            \ <tr>	<tr><td>100</td><td>General Error</td><tr><tr><td>4060</td><td>No Data Available</td><tr> \
+            \ <tr><td>4070</td><td>Invalid data in request</td><tr><tr><td>4591</td><td>No FIs found matching  \
+            \ the search criteria provided</td><tr></table>"
 
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FISearchRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FISearchRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FISearchRsHeader'
+              examples:
+                WorkingSample: {summary: Response Search Financial Institution, $ref: '#/components/examples/searchFinancialInstResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3640,39 +3602,31 @@ paths:
           Unique Request Identifier.</td></tr> <tr><td><b>SignonRq</b></td><td> The
           Admin credentials are received as part of this request.</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/TxnCategoriesInfoRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/TxnCategoriesInfoRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/TxnCategoriesInfoRqHeader'
+            examples:
+              WorkingSample: {summary: Request Transactions Categories Info, $ref: '#/components/examples/getTxnCategoriesInfoRequest'}
+            
         required: true
       responses:
         "200":
           description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A \
-\ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td><td>This Aggregate returns the status of the \ 
-\ API request.</td></tr><tr><td><b>SignonRs</b></td><td>TheAdmin credentials are received as part of this request.</td> \
-\ </tr><tr><td><b>Status</b></td><td>tThe status of the Transscation Categories Info Request.<br/></tr> \
-\ <tr><td><b>CategoryRec</b></td><td>This Aggregate will return the Category Name and ID for transactions.</td> \
-\ </tr><tr><td>Name</td><td>This Aggregate will return the Category Name for transaction</tr><tr><td>Id </td> \
-\ <td> This Aggregate will return the Category Id for transaction <br> This element will be present only if the \
-\ user registration is successful. <br/></tr><tr><td>Status</td><td>The status of the TransCategoriesInfoRq</td></tr> \
-\ </tbody></table><table><tr><td>0</td><td>Success</td></tr><tr><td>100</td><td>General Error</td></tr> \
-\ <tr><td>1740</td><td>Authentication Failed</td></tr><tr><td>4060</td><td>No data available&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table>"
-
+            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td><td>This Aggregate returns the status of the \ 
+            \ API request.</td></tr><tr><td><b>SignonRs</b></td><td>TheAdmin credentials are received as part of this request.</td> \
+            \ </tr><tr><td><b>Status</b></td><td>tThe status of the Transscation Categories Info Request.<br/></tr> \
+            \ <tr><td><b>CategoryRec</b></td><td>This Aggregate will return the Category Name and ID for transactions.</td> \
+            \ </tr><tr><td>Name</td><td>This Aggregate will return the Category Name for transaction</tr><tr><td>Id </td> \
+            \ <td> This Aggregate will return the Category Id for transaction <br> This element will be present only if the \
+            \ user registration is successful. <br/></tr><tr><td>Status</td><td>The status of the TransCategoriesInfoRq</td></tr> \
+            \ </tbody></table><table><tr><td>0</td><td>Success</td></tr><tr><td>100</td><td>General Error</td></tr> \
+            \ <tr><td>1740</td><td>Authentication Failed</td></tr><tr><td>4060</td><td>No data available</td></tr></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/TxnCategoriesInfoRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/TxnCategoriesInfoRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/TxnCategoriesInfoRsHeader'
+              examples:
+                WorkingSample: {summary: Response Transactions Categories Info, $ref: '#/components/examples/getTxnCategoriesInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3709,15 +3663,11 @@ paths:
           user profile.</td></tr><tr><td></td><td><a href='elementDescription.jsp#UserMgmt_createUser'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UserAddRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UserAddRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UserAddRqHeader'
+            examples:
+              WorkingSample: {summary: Request Create User, $ref: '#/components/examples/createUserRequest'}
         required: true
       responses:
         "200":
@@ -3759,15 +3709,11 @@ paths:
             \ <br> This element will be present only if the user registration is successful.\
             \ <br></td></tr> </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UserAddRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UserAddRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UserAddRsHeader'
+              examples:
+                WorkingSample: {summary: Response Create User, $ref: '#/components/examples/createUserResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3794,15 +3740,11 @@ paths:
           is the login ID of the customer into the Server site.</td></tr><tr><td></td><td><a
           href='elementDescription.jsp#UserMgmt_deleteUser' target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UserDelRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UserDelRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UserDelRqHeader'
+            examples:
+              WorkingSample: {summary: Request Delete User, $ref: '#/components/examples/deleteUserRequest'}
         required: true
       responses:
         "200":
@@ -3828,15 +3770,11 @@ paths:
             \ is completed.</td><td>Partner should not invoke update or add until\
             \ the existing update completes.</td></tr></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UserDelRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UserDelRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UserDelRsHeader'
+              examples:
+                WorkingSample: {summary: Response Delete User, $ref: '#/components/examples/deleteUserResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3860,15 +3798,11 @@ paths:
           Unique Request Identifier.</td></tr><tr><td></td><td><a href='elementDescription.jsp#UserMgmt_getUserProfile'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UserProfileInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UserProfileInqRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UserProfileInqRqHeader'
+            examples:
+              WorkingSample: {summary: Request User Profile, $ref: '#/components/examples/getUserProfileRequest'}
         required: true
       responses:
         "200":
@@ -3891,15 +3825,11 @@ paths:
             \ user profile.<br>This aggregate will be present only if the request\
             \ was carried out successfully.</td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UserProfileInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UserProfileInqRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UserProfileInqRsHeader'
+              examples:
+                WorkingSample: {summary: Response User Profile, $ref: '#/components/examples/getUserProfileResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3927,15 +3857,11 @@ paths:
           \ in the Signon response. Possible values are:  <br> True OR False</td></tr><tr><td></td><td><a\
           \ href='elementDescription.jsp#UserMgmt_signon' target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/SignonRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/SignonRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/SignonRqHeader'
+            examples:
+              WorkingSample: {summary: Request Sign On, $ref: '#/components/examples/signonRequest'}
         required: true
       responses:
         "200":
@@ -3983,15 +3909,11 @@ paths:
             \ to us to whitelist any new IP's or make the request from whitelisted\
             \ Ips.</td></tr></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/SignonRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/SignonRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/SignonRsHeader'
+              examples:
+                WorkingSample: {summary: Response Sign On, $ref: '#/components/examples/signonResponse'}
         "400":
           description: Bad Request
         "401":
@@ -4017,15 +3939,11 @@ paths:
           new password for the user.</td></tr><tr><td></td><td><a href='elementDescription.jsp#UserMgmt_updateUserPassword'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UserPasswordModRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UserPasswordModRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UserPasswordModRqHeader'
+            examples:
+              WorkingSample: {summary: Request Update Password, $ref: '#/components/examples/updateUserPasswordRequest'}
         required: true
       responses:
         "200":
@@ -4044,15 +3962,11 @@ paths:
             \ and CEUserId.</td></tr><tr><td>0</td><td>Info</td><td>Success</td><td>The\
             \ service provider successfully processed the request.</td><td></td></tr></table></tr></td></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UserPasswordModRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UserPasswordModRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UserPasswordModRsHeader'
+              examples:
+                WorkingSample: {summary: Response Update Password, $ref: '#/components/examples/updateUserPasswordResponse'}    
         "400":
           description: Bad Request
         "401":
@@ -4077,15 +3991,11 @@ paths:
           Unique Request Identifier.</td></tr><tr><td></td><td><a href='elementDescription.jsp#UserMgmt_updateUserProfile'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/UserProfileModRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UserProfileModRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/UserProfileModRqHeader'
+            examples:
+              WorkingSample: {summary: Request Update Profile, $ref: '#/components/examples/updateUserProfileRequest'}
         required: true
       responses:
         "200":
@@ -4111,15 +4021,11 @@ paths:
             \ user profile.<br>This aggregate will be present only if the request\
             \ was carried out successfully.</td></tr></tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/UserProfileModRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UserProfileModRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/UserProfileModRsHeader'
+              examples:
+                WorkingSample: {summary: Response Update Profile, $ref: '#/components/examples/updateUserProfileResponse'}
         "400":
           description: Bad Request
         "401":
@@ -4145,29 +4051,21 @@ paths:
           \ to authenticate user to access service.<tr><td></td><td><a href='elementDescription.jsp#VerifyNow_RTVInfo'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/RTVInfoRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/RTVInfoRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/RTVInfoRqHeader'
+            examples:
+              WorkingSample: {summary: Request RTV Info, $ref: '#/components/examples/RTVInfoRequest'}
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/RTVInfoRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/RTVInfoRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/RTVInfoRsHeader'
+              examples:
+                WorkingSample: {summary: Response RTV Info, $ref: '#/components/examples/RTVInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -4194,29 +4092,21 @@ paths:
           \ containing the RTV result rqquest</td></tr><tr><td></td><td><a href='elementDescription.jsp#VerifyNow_AckRTVResult'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/AckRTVResultRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/AckRTVResultRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AckRTVResultRqHeader'
+            examples:
+              WorkingSample: {summary: Request AckRTV Result, $ref: '#/components/examples/AckRTVResultRequest'}
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/AckRTVResultRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/AckRTVResultRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AckRTVResultRsHeader'
+              examples:
+                WorkingSample: {summary: Response AckRTV Result, $ref: '#/components/examples/AckRTVResultResponse'}
         "400":
           description: Bad Request
         "401":
@@ -4242,29 +4132,21 @@ paths:
           \ to authenticate user to access service.</td></tr><tr><td></td><td><a href='elementDescription.jsp#VerifyNow_AdvanceRTVEnableFI'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/AdvanceRTVEnableFIRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/AdvanceRTVEnableFIRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AdvanceRTVEnableFIRqHeader'
+            examples:
+              WorkingSample: {summary: Request Advance RTV Enable FI, $ref: '#/components/examples/AdvanceRTVEnableFIRequest'}
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/AdvanceRTVEnableFIRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/AdvanceRTVEnableFIRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AdvanceRTVEnableFIRsHeader'
+              examples:
+                WorkingSample: {summary: Response Advance RTV Enable FI, $ref: '#/components/examples/AdvanceRTVEnableFIResponse'}
         "400":
           description: Bad Request
         "401":
@@ -4291,29 +4173,21 @@ paths:
           \ </td></tr><tr><td></td><td><a href='elementDescription.jsp#VerifyNow_RTVToken'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/RTVTokenRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/RTVTokenRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/RTVTokenRqHeader'
+            examples:
+              WorkingSample: {summary: Request RTV Token, $ref: '#/components/examples/RTVTokenRequest'}
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/RTVTokenRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/RTVTokenRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/RTVTokenRsHeader'
+              examples:
+                WorkingSample: {summary: Response RTV Token, $ref: '#/components/examples/RTVTokenResponse'}
         "400":
           description: Bad Request
         "401":
@@ -4343,29 +4217,21 @@ paths:
           \ href='elementDescription.jsp#VerifyNow_searchFI' target='_blank'>More\
           \ Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/FISearchRqHeaderType'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/FISearchRqHeaderType'
           application/json:
             schema:
               $ref: '#/components/schemas/FISearchRqHeaderType'
+            examples:
+              WorkingSample: {summary: Request Search FI, $ref: '#/components/examples/searchFIRequest'}
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/FISearchRsHeaderType'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/FISearchRsHeaderType'
             application/json:
               schema:
                 $ref: '#/components/schemas/FISearchRsHeaderType'
+              examples:
+                WorkingSample: {summary: Response Search FI, $ref: '#/components/examples/searchFIResponse'}
         "400":
           description: Bad Request
         "401":
@@ -4392,29 +4258,21 @@ paths:
           \ .</td></tr><tr><td></td><td><a href='elementDescription.jsp#VerifyNow_verifyAccount'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/AcctVerificationRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/AcctVerificationRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AcctVerificationRqHeader'
+            examples:
+              WorkingSample: {summary: Request Verify Account, $ref: '#/components/examples/verifyAccountRequest'}
         required: true
       responses:
         "200":
           description: Success
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/AcctVerificationRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/AcctVerificationRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AcctVerificationRsHeader'
+              examples:
+                WorkingSample: {summary: Response Verify Account, $ref: '#/components/examples/verifyAccountResponse'}
         "400":
           description: Bad Request
         "401":
@@ -22197,4 +22055,1478 @@ components:
         partnerID:
         version:
 
-  
+    categorizeTransactionRequest:
+      value:
+        RqUID: UpdateTxnCategoryRq_update_check
+        SignonRq:
+          UserInfo:
+            UserID: AUTO_JSON_FLClt65633
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        UpdateTxnCategoryRq:
+          FIAcctId:
+            AcctId: 5587318
+            AcctType: CCA
+            ExtAcctType: CCA
+          TransList:
+            Transaction:
+            - TransID: 6728644
+              Category: Home Expenses
+              SubCategory:
+                content: Mortgage
+              ApplyToFutureTxns:
+                MatchCriteria:
+                  type: SimilarTxns
+        partnerID: 50040000
+        version: version1
+
+    categorizeTransactionResponse:
+      value:
+        RqUID: UpdateTxnCategoryRq_update_check
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3753066
+        UpdateTxnCategoryRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          TransCategoryList:
+            TransStatus:
+            - TransID: 6728644
+              Status:
+                StatusCode: 0
+                Severity: Info
+                StatusDesc: Success
+        partnerID: 50040000
+        version: 1.4.6
+
+    deleteSubCategoryRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: AUTO_JSON_FLClt65633
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        DeleteSubCategoryRq:
+          Category: Services
+          SubCategory: Test_services
+        partnerID: 50040000
+        version: version1
+
+    deleteSubCategoryResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3753066
+        DeleteSubCategoryRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+
+    getFinancialInstInfoRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: XMLAdminxle300
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: Cashedge1$
+            Role: Admin
+        FIInfoRq:
+          ABARoutingNumber: 263178070
+          FIInfoRequired: FIIDInfo
+        partnerID: 50040000
+        version: version1
+
+    getFinancialInstInfoResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752561
+        FIInfoRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIIdList:
+            FIId:
+            - '2398'
+        partnerID: 50040000
+        version: 1.4.6
+
+    searchFinancialInstRequest:
+      value:
+        partnerID: 50040000
+        version: version1
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: XMLAdminxle300
+            HomeID: '50040009'
+            UserPassword:
+              CryptType: None
+              CryptVal: Cashedge1$
+            Role: Admin
+        FISearchRq:
+          FIName: Cashedge
+          FIInfoRequired: FIIDInfo
+
+    searchFinancialInstResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752561
+        FISearchRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIIdList:
+            FIId:
+            - '21649'
+            - '2655'
+            - '21010'
+            - '21011'
+            - '505004'
+            - '505005'
+            - '4161'
+            - '505002'
+            - '505001'
+            - '21038'
+            - '20404'
+            - '20349'
+            - '21044'
+            - '3252'
+            - '10153'
+            - '21045'
+            - '21046'
+            - '21047'
+            - '21048'
+            - '21051'
+            - '21052'
+            - '21053'
+            - '21026'
+            - '200111'
+            - '505003'
+            - '704'
+            - '20294'
+            - '20917'
+            - '21181'
+            - '21220'
+        partnerID: 50040000
+        version: 1.4.6
+
+    getTxnCategoriesInfoRequest:
+      value:
+        RqUID: TxnCategoriesInfoRq_0628
+        SignonRq:
+          UserInfo:
+            UserID: AUTO_JSON_FLClt65633
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        partnerID: 50040000
+        version: version1
+
+    getTxnCategoriesInfoResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3753066
+        TransCategoriesInfoRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CategoryRec:
+          - Name: Education
+            SubCategoryRec:
+            - Name: Test_education
+          - Name: Taxes
+            SubCategoryRec:
+            - Name: Test_taxes
+          - Name: Utilities
+            SubCategoryRec:
+            - Name: Test_utilities
+          - Name: Services
+            SubCategoryRec:
+            - Name: Test_services
+          - Name: Entertainment
+            SubCategoryRec:
+            - Name: Test_entertainment
+          - Name: Contributions
+            SubCategoryRec:
+            - Name: Test_contributions
+          - Name: Goods & Merchandise
+            SubCategoryRec:
+            - Name: Customcatgnew_abc001
+            - Name: Verifyinwsapiinalbridge1
+            - Name: Verifyinwsapiinalbridge
+            - Name: Newcustomcatg_001
+            - Name: Newcustomcatg_003
+          - Name: Earned Income
+            SubCategoryRec:
+            - Name: Test_earned Income
+
+    createUserRequest:
+      value:
+        RqUID: WSTst createUser with Opt element
+        partnerID: 50040000
+        UserAddRq:
+          UserProfile:
+            PersonInfo:
+              PersonName:
+                MiddleName: MN
+                FirstName: JsonTstFN
+                LastName: JsonTstLN
+              ContactInfo:
+                EmailAddr: jsontstclnt.001@fiserv.com
+                PostAddr:
+                  PostalCode: '98048'
+                  Country: USA
+                  Addr1: 123 Junction Ave
+                  Addr2: 'suit #123'
+                  City: Milpitas
+                  StateProv: California
+                PhoneNum:
+                - PhoneType: EveningPhone
+                  Phone: '4085432400'
+              NameAddrType: Customer
+            HomeID: '50040009'
+            UserID: AUTO_JSON_FLClt14455
+          UserInfo:
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt14455
+            HomeID: '50040009'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: Admin
+            UserPassword:
+              CryptVal: Cashedge1$
+              CryptType: None
+            UserID: XMLAdminxle300
+            HomeID: '50040009'
+
+    createUserResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        UserAddRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752563
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752561
+        RqUID: WSTst createUser with Opt element
+        partnerID: 50040000
+        version: 1.4.6
+
+    deleteUserRequest:
+      value:
+        RqUID: RqUID0
+        partnerID: 50040000
+        UserDelRq:
+          HomeID: '50040009'
+          UserID: AUTO_JSON_FLClt76741
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: Admin
+            UserPassword:
+              CryptVal: Cashedge1$
+              CryptType: None
+            UserID: XMLAdminxle300
+            HomeID: '50040009'
+
+    deleteUserResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752561
+        RqUID: RqUID0
+        UserDelRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: 1.4.6
+
+    getUserProfileRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: wstest262659
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        UserProfileInqRq:
+        partnerID: 50040000
+        version: version1
+
+    getUserProfileResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        RqUID: RqUID0
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752650
+        UserProfileInqRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          UserProfile:
+            HomeID: 50040009
+            UserID: wstest262659
+            CEUserID: 3752650
+            PersonInfo:
+              NameAddrType: Customer
+              PersonName:
+                DisplayName: WSdisplay4996
+              ContactInfo:
+                PhoneNum:
+                - PhoneType: EveningPhone
+                  Phone: '1234567890'
+                EmailAddr: tstclnt@fiserv.com
+                PostAddr:
+                  Addr1: 12 new street
+                  Country: USA
+        partnerID: 50040000
+        version: 1.4.6
+
+    signonRequest:
+      value:
+        RqUID: '1'
+        partnerID: 50040000
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge3
+              CryptType: None
+            UserID: AUTO_JSON_FLClt35132
+            HomeID: '50040009'
+          GenSessInfo: 'true'
+
+    signonResponse:
+      value:
+        RqUID: '1'
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752568
+          SessInfo: 6c346a476b55476f61624c55444d5a4b4149674274513d3d
+        partnerID: 50040000
+        version: 1.4.6
+
+    updateUserPasswordRequest:
+      value:
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: wstest682278
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        UserPasswordModRq:
+          UserPassword:
+            CryptType: None
+            CryptVal: cashedge3
+        partnerID: 50040000
+        version: version1
+
+    updateUserPasswordResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752660
+        UserPasswordModRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: 1.4.6
+
+    updateUserProfileRequest:
+      value:
+        RqUID: RqUID0
+        partnerID: 50040000
+        UserProfileModRq:
+          UserProfile:
+            PersonInfo:
+              PersonName:
+                MiddleName: JSONFLClntModifiedMN
+                FirstName: JSONFLClntModifiedFN
+                LastName: JSONFLClntModifiedLN
+              ContactInfo:
+                EmailAddr: jsonflclntupdatedemail@fiserv.com
+                PostAddr:
+                  Country: USA
+                  Addr1: adddf 12
+                PhoneNum:
+                - PhoneType: Eveningphone
+                  Phone: '1234567890'
+              NameAddrType: customer
+            HomeID: '50040009'
+            UserID: AUTO_JSON_FLClt37144
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: User
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AUTO_JSON_FLClt37144
+            HomeID: '50040009'
+
+
+    updateUserProfileResponse:
+      value:
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        UserProfileModRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752570
+        RqUID: RqUID0
+        partnerID: 50040000
+        version: 1.4.6
+
+    RTVInfoRequest:
+      value:
+        RqUID: RqUID0
+        partnerID: 50050000
+        version: version1
+        SignonRq:
+          SessionInfo:
+            SessionToken: 6752344e566576786f4a3050686d4f763172742f62673d3d
+
+    RTVInfoResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 2031506
+          SessInfo: 6752344e566576786f4a3050686d4f763172742f62673d3d
+        RTVInfoRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          RTVInfoList:
+            RTVInfo:
+            - RunId: 18799749
+              Date: '2021-11-09T08:27:47-08:00'
+              RTVStatus: Success
+              CustomerNameList:
+                CustomerName: James H Hardy-Martin Iii
+              FIAcctList:
+                Acct:
+                - AcctNumber: '5555444488'
+                  AccountType: Savings
+                  RoutingNumber: '999999998'
+        partnerID: 50050000
+        version: version1
+
+    AckRTVResultRequest:
+      value:
+        RqUID: RqUID1
+        partnerID: 50050000
+        RTVTokenRq:
+          AddAccountRetryAttempts: 2
+          FIName: CashEdge Bank
+          MonitoringCode: '1000'
+          FirstName: Tom
+          LastName: Bruce
+          RTVHomeID: '88850031'
+          AcctNumber: xxxx4444
+          FIId: '2655'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: Admin
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AlldataVerifyNowadmn
+            HomeID: '50050001'
+
+    AckRTVResultResponse:
+      value:
+        RqUID: RqUID1
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 2031506
+          SessInfo: 6752344e566576786f4a3050686d4f763172742f62673d3d
+        RTVTokenRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIId: '2655'
+          FIHarvestStatus: Enabled
+        partnerID: 50050000
+        version: version1
+
+    AdvanceRTVEnableFIRequest:
+      value:
+        RqUID: RqUID11223912
+        SignonRq:
+          UserInfo:
+            UserID: AlldataVerifyNowadmn
+            HomeID: 50050001
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: Admin
+        AdvanceRTVEnableFIRq: {}
+        partnerID: 50050000
+        version: 1.4.6
+
+    AdvanceRTVEnableFIResponse:
+      value:
+        RqUID: RqUID11223912
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 2031506
+          SessInfo: 6e4d6b34476938575a4357654d6f6c79546f366870673d3d
+        AdvanceRTVEnableFIRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          AdvanceRTVFIList:
+            AdvanceRTVFI:
+            - FIID: '6'
+              FIName: Wells Fargo Bank Online
+              Status: Enabled
+              RoutingNumbers:
+                RoutingNumber:
+                - '026004077'
+                - '026005092'
+                - '026012881'
+                - '026073079'
+                - '031000011'
+                - '031000024'
+                - '031000095'
+                - '031000503'
+                - '031000765'
+                - '031100131'
+                - '031100225'
+                - '031100869'
+                - '031200730'
+                - '031201467'
+                - '031202547'
+                - '031203261'
+                - '031203533'
+                - '031204260'
+                - '031205269'
+                - '031206543'
+                - '031288820'
+                - '031300041'
+                - '031300054'
+                - '031300465'
+                - '031300546'
+                - '031301312'
+                - '031301545'
+                - '031302557'
+                - '031302777'
+                - '031302816'
+                - '031311412'
+                - '031901686'
+                - '031901783'
+                - '031907813'
+                - '031916707'
+                - '036001772'
+                - '011100106'
+                - '011101024'
+                - '011102094'
+                - '011103022'
+                - '011103284'
+                - '011104102'
+                - '011104115'
+                - '011104270'
+                - '021052943'
+                - '021101108'
+                - '021102042'
+                - '021103957'
+                - '021200025'
+                - '021200096'
+                - '021200326'
+                - '021200559'
+                - '021200986'
+                - '021201011'
+                - '021201794'
+                - '021202175'
+                - '021202683'
+                - '021203475'
+                - '021203572'
+                - '021207264'
+                - '021473027'
+                - '021606001'
+                - '051404778'
+                - '051404969'
+                - '051404985'
+                - '051405036'
+                - '051405890'
+                - '051406381'
+                - '051406598'
+                - '051407128'
+                - '052000016'
+                - '052001963'
+                - '053000183'
+                - '053000219'
+                - '053100038'
+                - '053100355'
+                - '053100410'
+                - '053100494'
+                - '053100672'
+                - '053100740'
+                - '053100782'
+                - '053100902'
+                - '053100928'
+                - '053101118'
+                - '053101163'
+                - '053101273'
+                - '053101309'
+                - '053101367'
+                - '053101406'
+                - '053101435'
+                - '053101529'
+                - '053101545'
+                - '053101561'
+                - '053101626'
+                - '053101639'
+                - '053101668'
+                - '053101820'
+                - '053101833'
+                - '053101930'
+                - '053101998'
+                - '053102010'
+                - '053102104'
+                - '053102162'
+                - '053102243'
+                - '053102285'
+                - '053102308'
+                - '053102324'
+                - '053102434'
+                - '053102531'
+                - '053102557'
+                - '053102609'
+                - '053102641'
+                - '053102667'
+                - '053102722'
+                - '053102764'
+                - '053102803'
+                - '053102942'
+                - '053102997'
+                - '053103064'
+                - '053103132'
+                - '053103161'
+                - '053103200'
+                - '053103242'
+                - '053103271'
+                - '053103297'
+                - '053103307'
+                - '053103365'
+                - '053103404'
+                - '053103420'
+                - '053103459'
+                - '053103695'
+                - '053103886'
+                - '053103912'
+                - '053103983'
+                - '053104241'
+                - '053104393'
+                - '053104416'
+                - '053104526'
+                - '053104681'
+                - '053104762'
+                - '053104898'
+                - '053105143'
+                - '053105208'
+                - '053105509'
+                - '053105868'
+                - '053106113'
+                - '053106168'
+                - '053106223'
+                - '053106553'
+                - '053107549'
+                - '053107633'
+                - '053107659'
+                - '053107963'
+                - '053108137'
+                - '053108247'
+                - '053108344'
+                - '053108373'
+                - '053108580'
+                - '053108658'
+                - '053108713'
+                - '053108726'
+                - '053108755'
+                - '053108904'
+                - '053108959'
+                - '053108988'
+                - '053109084'
+                - '053109165'
+                - '053109181'
+                - '053109288'
+                - '053109327'
+                - '053109330'
+                - '053109343'
+                - '053109495'
+                - '053109521'
+                - '053109699'
+                - '053109822'
+                - '053109835'
+                - '053109848'
+                - '053109851'
+                - '053110057'
+                - '053110086'
+                - '053110112'
+                - '053110183'
+                - '053110251'
+                - '053110303'
+                - '053110329'
+                - '053110345'
+                - '053110358'
+                - '053110400'
+                - '053110497'
+                - '053110507'
+                - '053110730'
+                - '053110882'
+                - '053111030'
+                - '053111124'
+                - '053111182'
+                - '053111412'
+                - '053112000'
+                - '053200019'
+                - '053200051'
+                - '053202127'
+                - '053204963'
+                - '053206712'
+                - '053207766'
+                - '053900225'
+                - '053901473'
+                - '053902168'
+                - '054000043'
+                - '054000807'
+                - '054001220'
+                - '054001259'
+                - '055002532'
+                - '055003094'
+                - '055003201'
+                - '055073477'
+                - '056001532'
+                - '056004089'
+                - '056004241'
+                - '056004791'
+                - '056005237'
+                - '056007604'
+                - '061000010'
+                - '061000227'
+                - '061000256'
+                - '061091647'
+                - '061100350'
+                - '061100583'
+                - '061100855'
+                - '061101155'
+                - '061101689'
+                - '061101731'
+                - '061102798'
+                - '061103056'
+                - '061103593'
+                - '061104440'
+                - '061104453'
+                - '061104673'
+                - '061113143'
+                - '061113279'
+                - '061200043'
+                - '061200522'
+                - '061202229'
+                - '061209756'
+                - '061211320'
+                - '062000080'
+                - '062100812'
+                - '062102276'
+                - '062105587'
+                - '062200534'
+                - '062201148'
+                - '062201368'
+                - '062201818'
+                - '062202176'
+                - '062202338'
+                - '062202419'
+                - '062202561'
+                - '062203201'
+                - '062203748'
+                - '062203751'
+                - '062204035'
+                - '062204187'
+                - '062205364'
+                - '063000021'
+                - '063000050'
+                - '063000212'
+                - '063006290'
+                - '063009569'
+                - '063100730'
+                - '063100918'
+                - '063101166'
+                - '063101315'
+                - '063101522'
+                - '063101797'
+                - '063101865'
+                - '063102631'
+                - '063102767'
+                - '063104066'
+                - '063104956'
+                - '063104969'
+                - '063105023'
+                - '063105078'
+                - '063105081'
+                - '063105298'
+                - '063105324'
+                - '063105609'
+                - '063105793'
+                - '063106624'
+                - '063107063'
+                - '063107270'
+                - '063107380'
+                - '063107490'
+                - '063107513'
+                - '063108774'
+                - '063108981'
+                - '063109139'
+                - '063109430'
+                - '063109993'
+                - '063110050'
+                - '063110157'
+                - '063111907'
+                - '063112663'
+                - '063112757'
+                - '041203824'
+                - '041215537'
+                - '051000253'
+                - '051001414'
+                - '051005245'
+                - '051006778'
+                - '051006998'
+                - '051400549'
+                - '051400701'
+                - '051400730'
+                - '051401315'
+                - '051401328'
+                - '051401564'
+                - '051402314'
+                - '051402385'
+                - '051402961'
+                - '051403290'
+                - '051403423'
+                - '051403863'
+                - '051404095'
+                - '051404202'
+                - '051404765'
+                - '063112838'
+                - '063113659'
+                - '063113688'
+                - '063113840'
+                - '063200368'
+                - '063201066'
+                - '063205363'
+                - '063205745'
+                - '063206524'
+                - '063210125'
+                - '064003768'
+                - '065101423'
+                - '065102587'
+                - '065502789'
+                - '066000581'
+                - '066001263'
+                - '066005120'
+                - '066006307'
+                - '067000412'
+                - '067004832'
+                - '067005336'
+                - '067005433'
+                - '067005491'
+                - '067006173'
+                - '067006364'
+                - '067006432'
+                - '067006610'
+                - '067006830'
+                - '067007033'
+                - '067007172'
+                - '067007211'
+                - '067007240'
+                - '067007732'
+                - '067008087'
+                - '067009248'
+                - '067009824'
+                - '067010211'
+                - '067010460'
+                - '067011582'
+                - '067011715'
+                - '067011841'
+                - '067012028'
+                - '067012222'
+                - '067012523'
+                - '067012552'
+                - '067012840'
+                - '067012934'
+                - '067013153'
+                - '067013357'
+                - '067013425'
+                - '067013564'
+                - '067091586'
+                - '067091780'
+                - '071101307'
+                - '071974372'
+                - '073000228'
+                - '073000820'
+                - '073900098'
+                - '074900275'
+                - '084004158'
+                - '091000019'
+                - '091000051'
+                - '091001267'
+                - '091005755'
+                - '091016647'
+                - '091071611'
+                - '091101455'
+                - '091201300'
+                - '091202079'
+                - '091300010'
+                - '091400046'
+                - '091409047'
+                - '091800303'
+                - '091900012'
+                - '091900465'
+                - '091900533'
+                - '091900698'
+                - '091901493'
+                - '091914419'
+                - '091915117'
+                - '091915573'
+                - '092905168'
+                - '092905278'
+                - '096001123'
+                - '101089292'
+                - '102000018'
+                - '102000076'
+                - '102006407'
+                - '102100400'
+                - '102100918'
+                - '102189285'
+                - '102200546'
+                - '102201875'
+                - '102300242'
+                - '102300501'
+                - '102301092'
+                - '102301209'
+                - '102301979'
+                - '102305412'
+                - '102307164'
+                - '104000045'
+                - '104000058'
+                - '104900323'
+                - '075901626'
+                - '075910989'
+                - '075911988'
+                - '107000275'
+                - '107002192'
+                - '107002383'
+                - '107002451'
+                - '107003382'
+                - '107004899'
+                - '107005432'
+                - '107006279'
+                - '107006622'
+                - '111015159'
+                - '111025013'
+                - '111300903'
+                - '111304378'
+                - '111900109'
+                - '111900659'
+                - '111904215'
+                - '111905094'
+                - '111905395'
+                - '111906035'
+                - '111906336'
+                - '111909634'
+                - '111914742'
+                - '111915563'
+                - '111915657'
+                - '111917325'
+                - '111920095'
+                - '112000066'
+                - '112201991'
+                - '113001064'
+                - '113002186'
+                - '113002982'
+                - '113013081'
+                - '113017870'
+                - '113023246'
+                - '113024520'
+                - '113093852'
+                - '113102138'
+                - '113102316'
+                - '113102578'
+                - '113102756'
+                - '113105449'
+                - '113108815'
+                - '113108912'
+                - '113111080'
+                - '113117767'
+                - '113120725'
+                - '113123052'
+                - '114000080'
+                - '114000792'
+                - '114000860'
+                - '114000886'
+                - '114016553'
+                - '114093592'
+                - '114093644'
+                - '114900685'
+                - '114902722'
+                - '114904597'
+                - '114912660'
+                - '114921282'
+                - '114993566'
+                - '116303895'
+                - '121000248'
+                - '121000578'
+                - '121036157'
+                - '121042882'
+                - '121133513'
+                - '121137661'
+                - '121138233'
+                - '121138673'
+                - '121139096'
+                - '121139216'
+                - '121139517'
+                - '121139562'
+                - '121139627'
+                - '121140726'
+                - '121141152'
+                - '121141288'
+                - '121141534'
+                - '121141550'
+                - '121142261'
+                - '121181866'
+                - '121200019'
+                - '122000218'
+                - '122000247'
+                - '122100011'
+                - '122101191'
+                - '122102653'
+                - '122102831'
+                - '122103966'
+                - '122105278'
+                - '122105524'
+                - '122187076'
+                - '122227444'
+                - '122234372'
+                - '122237683'
+                - '122237955'
+                - '122240968'
+                - '122242607'
+                - '122242704'
+                - '122287170'
+                - '122287196'
+                - '122401668'
+                - '221172542'
+                - '221270473'
+                - '221271142'
+                - '221271249'
+                - '221272426'
+                - '221272468'
+                - '221272581'
+                - '221970087'
+                - '221970456'
+                - '221970812'
+                - '221970951'
+                - '221971141'
+                - '221972069'
+                - '231270227'
+                - '231270324'
+                - '236075692'
+                - '251072984'
+                - '251472717'
+                - '251473143'
+                - '251473389'
+                - '252073021'
+                - '253170127'
+                - '253170305'
+                - '253170952'
+                - '253171142'
+                - '253171333'
+                - '253272203'
+                - '253272407'
+                - '253273859'
+                - '253972040'
+                - '254070019'
+                - '254070022'
+                - '254070064'
+                - '255071949'
+                - '255072375'
+                - '255072469'
+                - '255072935'
+                - '256072659'
+                - '256072701'
+                - '256072785'
+                - '256072837'
+                - '122402049'
+                - '122487307'
+                - '123000123'
+                - '123006680'
+                - '123006800'
+                - '124000012'
+                - '124000025'
+                - '124002971'
+                - '124084672'
+                - '125200057'
+                - '125200963'
+                - '211170075'
+                - '211170350'
+                - '211172714'
+                - '211174107'
+                - '261070015'
+                - '261070138'
+                - '261170038'
+                - '261170164'
+                - '261170203'
+                - '261191680'
+                - '261270158'
+                - '263071067'
+                - '263183573'
+                - '263185351'
+                - '263185885'
+                - '263186635'
+                - '263190197'
+                - '263190388'
+                - '266083735'
+                - '266089946'
+                - '267083640'
+                - '267085415'
+                - '267085486'
+                - '267085619'
+                - '267085923'
+                - '267086087'
+                - '267087183'
+                - '267087303'
+                - '267090549'
+                - '267090617'
+                - '267090879'
+                - '267091108'
+                - '267091661'
+                - '307089096'
+                - '311970803'
+                - '322285752'
+                - '323270436'
+                - '325170806'
+                - '124100064'
+                - '124100080'
+                - '124103799'
+                - '124103854'
+                - '124103883'
+                - '125000286'
+                - '125008039'
+                - '125008547'
+                - '321170020'
+                - '321170389'
+                - '321270742'
+                - '322186961'
+                - '322271180'
+        partnerID: 50050000
+        version: 1.4.6
+
+    RTVTokenRequest:
+      value:
+        RqUID: RqUID1
+        partnerID: 50050000
+        RTVTokenRq:
+          AddAccountRetryAttempts: 2
+          FIName: CashEdge Bank
+          MonitoringCode: '1000'
+          FirstName: Tom
+          LastName: Bruce
+          RTVHomeID: '88850031'
+          AcctNumber: xxxx4444
+          FIId: '2655'
+        version: version1
+        SignonRq:
+          UserInfo:
+            Role: Admin
+            UserPassword:
+              CryptVal: cashedge1
+              CryptType: None
+            UserID: AlldataVerifyNowadmn
+            HomeID: '50050001'
+
+    RTVTokenResponse:
+      value:
+        RqUID: RqUID1
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 2031506
+          SessInfo: 6752344e566576786f4a3050686d4f763172742f62673d3d
+        RTVTokenRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIId: '2655'
+          FIHarvestStatus: Enabled
+        partnerID: 50050000
+        version: version1
+
+    searchFIRequest:
+      value:
+        partnerID: 50050000
+        version: version1
+        RqUID: RqUID0
+        SignonRq:
+          UserInfo:
+            UserID: AlldataVerifyNowadmn
+            HomeID: '50050001'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: Admin
+        FISearchRq:
+          ABARoutingNumber: '263178070'
+          FIInfoRequired: VerifyNow
+
+
+    searchFIResponse:
+      value:
+        RqUID: RqUID0
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 2031506
+          SessInfo: 5874503776495949506166733353685735524c7065673d3d
+        FISearchRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          FIVerifyInfoList:
+            FIVerifyInfo:
+            - FIId: '2398'
+              FIName: Eglin Federal Credit Union
+              FIURL: https://www.eglinfcu.org/hbhtml/hb.asp?hb=1
+              LoginParams:
+                Param:
+                - ParamNumber: 1
+                  ParamType: login
+                  ParamMaxLength: 20
+                  ParamDisplaySize: 10
+                  ParamCaption: 'Account #'
+                  ParamName: account
+                  ParamCaseSensitive: N
+                  ParamValue: ''
+                - ParamNumber: 1
+                  ParamType: password
+                  ParamMaxLength: 20
+                  ParamDisplaySize: 10
+                  ParamCaption: PIN
+                  ParamName: pin
+                  ParamCaseSensitive: N
+                  ParamValue: ''
+        partnerID: 50050000
+        version: version1
+
+    verifyAccountRequest:
+      value:
+        partnerID: 50050000
+        version: version1
+        RqUID: '8484739231'
+        SignonRq:
+          UserInfo:
+            UserID: AlldataVerifyNowadmn
+            HomeID: '50050001'
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: Admin
+        AcctVerificationRq:
+          FIVerifyInfo:
+            FIId: '20294'
+            LoginParams:
+              Param:
+              - ParamName: txtOnlineID:txtOnlineID
+                ParamValue: test
+              - ParamName: txtPassword:txtPassword
+                ParamValue: test
+
+    verifyAccountResponse:
+      value:
+        RqUID: '8484739231'
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 2031506
+          SessInfo: 67716a4d346b35706750796e384c66564b6c6d7948673d3d
+        AcctVerificationRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Pending
+          RunId: 16007897
+        partnerID: 50050000
+        version: version1
+
+    
+
+    
+    
+    
