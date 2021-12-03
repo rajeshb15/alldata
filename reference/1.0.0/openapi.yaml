@@ -442,17 +442,11 @@ paths:
             \ for the Partner requesting extended transaction history.</td></tr></table></td></tr>\
             \ </tbody></table> "
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
               examples:
                 WorkingSample: {summary: Response Banking Transactions, $ref: '#/components/examples/getBankingTransResponse'}
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -4040,7 +4034,7 @@ paths:
           \ to authenticate user to access service.<tr><td></td><td><a href='elementDescription.jsp#VerifyNow_RTVInfo'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          text/xml:
+          application/json:
             schema:
               $ref: '#/components/schemas/RTVInfoRqHeader'
             examples:
