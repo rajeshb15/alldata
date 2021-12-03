@@ -2852,7 +2852,7 @@ paths:
             schema:
               $ref: '#/components/schemas/OfflineAcctModRqHeader'
             examples:
-              WorkingSample: {summary: Request Update Offline Account, $ref: '#/components/examples/updateOfflineAccountRequest'}
+              updateOfflineAccount: {summary: Request Update Offline Account, $ref: '#/components/examples/updateOfflineAccountRequest'}
           # text/xml:
           #   schema:
           #     $ref: '#/components/schemas/OfflineAcctModRqHeader'
@@ -2882,7 +2882,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OfflineAcctModRsHeader'
               examples:
-                WorkingSample: {summary: Response Update Offline Account, $ref: '#/components/examples/updateOfflineAccountResponse'}            
+                updateOfflineAccount: {summary: Response Update Offline Account, $ref: '#/components/examples/updateOfflineAccountResponse'}            
             # text/xml:
             #   schema:
             #     $ref: '#/components/schemas/OfflineAcctModRsHeader'
