@@ -23,7 +23,7 @@
         </tr>
         <tr>
             <td><b>Status</b></td>
-            <td>tThe status of the Transscation Categories Info Request.<br />
+            <td>The status of the Transcation Categories Info Request.<br />
         </tr>
         <tr>
             <td><b>CategoryRec</b></td>
