@@ -2433,12 +2433,11 @@ paths:
           Identifier</td></tr><tr><td><b>Description</b></td><td>Detailed description
           of the Budget</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BudgetAddRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BudgetAddRqHeader'
+            examples:
+              createBudget: {summary: Request Create Budget, $ref: '#/components/examples/createBudgetRequest'}        
         required: true
       responses:
         "200":
@@ -2477,12 +2476,11 @@ paths:
             \ failure</td><td>Duplicate budget name is found</td><td></td></tr><tr><td>5070</td><td>Error</td><td>Validation\
             \ failure</td><td>Budget already exists for this Category and SubCategory</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BudgetAddRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BudgetAddRsHeader'
+              examples:
+                createBudget: {summary: Response Create Budget, $ref: '#/components/examples/createBudgetResponse'}        
         "400":
           description: Bad Request
         "401":
@@ -2508,12 +2506,11 @@ paths:
           identification assigned to the Budget request. This element will be present
           only of the request that was carried out successfully.</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BudgetDeleteRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BudgetDeleteRqHeader'
+            examples:
+              deleteBudget: {summary: Request Delete Budget, $ref: '#/components/examples/deleteBudgetRequest'}                 
         required: true
       responses:
         "200":
@@ -2546,12 +2543,11 @@ paths:
             \ the authorized role.</td><td></td></tr><tr><td>5050</td><td>Error</td><td>Info</td><td>No\
             \ budget is found for this user</td><td></td></tr></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BudgetDeleteRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BudgetDeleteRsHeader'
+              examples:
+                deleteBudget: {summary: Response Delete Budget, $ref: '#/components/examples/deleteBudgetResponse'}                     
         "400":
           description: Bad Request
         "401":
@@ -2580,12 +2576,11 @@ paths:
           only of the request that was carried out successfully.</td></tr> <tr><td><b>Description</b></td><td>
           Detailed description of the Budget</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BudgetEditRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BudgetEditRqHeader'
+            examples:
+              editBudget: {summary: Request Edit Budget, $ref: '#/components/examples/editBudgetRequest'}              
         required: true
       responses:
         "200":
@@ -2624,12 +2619,11 @@ paths:
             \ failure</td><td>Atleast any one of the followings is required 1) Budget\
             \ Amount 2) Budget Description 3) Budget Name</td><td></td></tr></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BudgetEditRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BudgetEditRsHeader'
+              examples:
+                editBudget: {summary: Response Edit Budget, $ref: '#/components/examples/editBudgetResponse'}                 
         "400":
           description: Bad Request
         "401":
@@ -2654,12 +2648,11 @@ paths:
           signon request will be used for user authentication.</td></tr><tr><td><b>BudgetId</b></td><td>The
           identification assigned to the Budget request.</td></tr> '
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BudgetFindRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BudgetFindRqHeader'
+            examples:
+              findBudget: {summary: Request Find Budget, $ref: '#/components/examples/findBudgetRequest'}              
         required: true
       responses:
         "200":
@@ -2695,12 +2688,11 @@ paths:
             \ budget is found for this user</td><td></td></tr><tr><td>5060</td><td>Error</td><td>Info</td><td>No\
             \ budget is found for this user</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BudgetFindRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BudgetFindRsHeader'
+              examples:
+                findBudget: {summary: Response Find Budget, $ref: '#/components/examples/findBudgetResponse'}
         "400":
           description: Bad Request
         "401":
@@ -13663,6 +13655,218 @@ components:
           HarvestAddID: 65626d5a6265785a6f303239375052623755626d6e673d3d
         partnerID: 8885504
         version: 1.4.6
+
+    findBudgetRequest:
+      value:
+        RqUID: FindBudget_Sample1_0718
+        SignonRq:
+          UserInfo:
+            UserID: special123
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: special123
+            Role: User
+        partnerID: 8885504
+        version: version1
+
+    findBudgetResponse:
+      value:
+        RqUID: FindBudget_Sample1_0718
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3228584
+        BudgetFindRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          BudgetList:
+            Budget:
+            - BudgetId: 5760018
+              BudgetName: Home Expenses
+              BudgetAmt: 2051
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 7
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+            - BudgetId: 5760017
+              BudgetName: Travel & Transportation
+              BudgetAmt: 1420
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 11
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+            - BudgetId: 5760016
+              BudgetName: Utilities
+              BudgetAmt: 631
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 12
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+            - BudgetId: 5760019
+              BudgetName: Health & Lifestyle
+              BudgetAmt: 1420
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 6
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+            - BudgetId: 5760020
+              BudgetName: Food & Dining
+              BudgetAmt: 1105
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 5
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+        partnerID: 8885504
+        version: version1      
+
+    createBudgetRequest:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        BudgetAddRq:
+          BudgetName: HOME CENTER EXPRESS
+          BudgetAmt: 850
+          CategoryId: 6
+          SubCategoryId: 0
+          Description: Hanu budget for home expenses.
+        partnerID: 50040000
+        version: version1
+
+    createBudgetResponse:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        BudgetAddRs:
+          BudgetId: 7080016
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+
+    editBudgetRequest:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        BudgetEditRq:
+          BudgetId: 7080016
+          BudgetName: House Rent
+          BudgetAmt: 33
+          Description: Hanu for home expenses.
+        partnerID: 50040000
+        version: version1
+
+    editBudgetResponse:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        BudgetEditRs:
+          BudgetId: 7080016
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+
+    deleteBudgetRequest:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        BudgetDeleteRq:
+          BudgetId: 7080016
+        partnerID: 50040000
+        version: version1
+
+    deleteBudgetResponse:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        BudgetDeleteRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1    
 
     getTaxDocDetailsRequest:
       value:
