@@ -3461,17 +3461,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody> \
-            \ <tr><td><b>Status</b></td><td>The status of the request.</td></tr> \ 
-            \ <tr><td><b>RqUID</b></td><td> Unique Request Identifier. The Client Site sends this element with the request.</td> \
-            \ </tr><tr><td><b>FIInfoDataList</b></td><td> List of FI along with their requisite information.<br>This aggregate \
-            \ will be present, only if the request was carried out successfully and this option was desired in the request. </td> \
-            \ </tr><tr><td><b>FIIdList</b></td><td> List of FI id’s.<br>This aggregate will be present, only if the request was \
-            \ carried out successfully and this option was desired in the request.</td></tr><tr><td>Status</td><td>The status of \
-            \ the FIInfoRs </tr></tbody></table><table><tr><td>StatusCode</td><td>StatusDesc</td></tr><tr><td>0</td><td>Success</td> \
-            \ </tr><tr><td>100</td><td>General Error</td></tr><tr><td>4060</td><td>No data available</td></tr><tr><td>4070</td> \
-            \ <td>Invalid data in request</td></tr><tr><td>4260</td><td>Invalid Date</td></tr><tr><td>9001</td><td>Support for this \
-            \ ABA routing number coming soon.</td></tr><tr><td>9002</td><td>ABA number is not supported.</td></tr></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/financial-institution-info.md">More Info</a>
           content:
             application/json:
               schema:
@@ -3521,18 +3511,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td> \
-            \ <td>Unique Request Identifier. The ClientSite sends this element with the request.</td></tr> \
-            \ <tr><td><b>Status</b></td><td>The status of the request.</td></tr><tr><td><b>FIInfoDataList</b></td> \
-            \ <td>Listof FI along with their requisite information.<br>This aggregate willbe present, only if the  \
-            \ request was carried out successfully and thisoption was desired in the request.</td></tr> \
-            \ <tr><td><b>FIIdList</b></td><td>Listof FI id’s.<br>This aggregate will be present, only if the request \
-            \ was carried out successfully and this option was desired in the request.</td></tr><tr><td>Status</td> \
-            \ <td>The status of the FISearchRs</td></tr></tbody></table><table><tr><td>0</td><td>Success</td> \
-            \ <tr>	<tr><td>100</td><td>General Error</td><tr><tr><td>4060</td><td>No Data Available</td><tr> \
-            \ <tr><td>4070</td><td>Invalid data in request</td><tr><tr><td>4591</td><td>No FIs found matching  \
-            \ the search criteria provided</td><tr></table>"
-
+          description: <a href="../docs?path=docs/resources/api-guide/response/search-financial-institution.md">More Info</a>
           content:
             application/json:
               schema:
@@ -3571,16 +3550,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A \
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td><td>This Aggregate returns the status of the \ 
-            \ API request.</td></tr><tr><td><b>SignonRs</b></td><td>TheAdmin credentials are received as part of this request.</td> \
-            \ </tr><tr><td><b>Status</b></td><td>tThe status of the Transscation Categories Info Request.<br/></tr> \
-            \ <tr><td><b>CategoryRec</b></td><td>This Aggregate will return the Category Name and ID for transactions.</td> \
-            \ </tr><tr><td>Name</td><td>This Aggregate will return the Category Name for transaction</tr><tr><td>Id </td> \
-            \ <td> This Aggregate will return the Category Id for transaction <br> This element will be present only if the \
-            \ user registration is successful. <br/></tr><tr><td>Status</td><td>The status of the TransCategoriesInfoRq</td></tr> \
-            \ </tbody></table><table><tr><td>0</td><td>Success</td></tr><tr><td>100</td><td>General Error</td></tr> \
-            \ <tr><td>1740</td><td>Authentication Failed</td></tr><tr><td>4060</td><td>No data available</td></tr></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/transactions-categories-info.md">More Info</a>
           content:
             application/json:
               schema:
