@@ -2172,8 +2172,8 @@ paths:
             schema:
               $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
             examples:
-              WorkingSample: {summary: Request Categorize Transaction, $ref: '#/components/examples/categorizeTransactionRequest'}
-          required: true
+              WorkingSample: {summary: Request Categorize Transaction, $ref: '#/components/examples/pfmcategorizeTransactionRequest'}
+        required: true
       responses:
         "200":
           description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
@@ -2231,7 +2231,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
               examples:
-                WorkingSample: {summary: Response Categorize Transaction, $ref: '#/components/examples/categorizeTransactionResponse'}
+                WorkingSample: {summary: Response Categorize Transaction, $ref: '#/components/examples/pfmcategorizeTransactionResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2260,7 +2260,7 @@ paths:
               $ref: '#/components/schemas/DeleteSubCategoryRqHeader'
             examples:
               WorkingSample: {summary: Request Delete Subcategory, $ref: '#/components/examples/deleteSubCategoryRequest'}
-          required: true
+        required: true
       responses:
         "200":
           description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
@@ -22055,7 +22055,7 @@ components:
         partnerID:
         version:
 
-    categorizeTransactionRequest:
+    pfmcategorizeTransactionRequest:
       value:
         RqUID: UpdateTxnCategoryRq_update_check
         SignonRq:
@@ -22083,7 +22083,7 @@ components:
         partnerID: 50040000
         version: version1
 
-    categorizeTransactionResponse:
+    pfmcategorizeTransactionResponse:
       value:
         RqUID: UpdateTxnCategoryRq_update_check
         Status:
