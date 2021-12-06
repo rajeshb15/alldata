@@ -1,7 +1,7 @@
 ## Search Financial Institution
 
 
-<b>Response 200</b>
+<b>Response Code 200</b>
 
 <table>
     <thead>
