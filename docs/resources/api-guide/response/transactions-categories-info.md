@@ -30,16 +30,16 @@
             <td>This Aggregate will return the Category Name and ID for transactions.</td>
         </tr>
         <tr>
-            <td>Name</td>
+            <td><b>Name</b></td>
             <td>This Aggregate will return the Category Name for transaction
         </tr>
         <tr>
-            <td>Id </td>
+            <td><b>Id<b></td>
             <td> This Aggregate will return the Category Id for transaction <br> This element will be present only if
                 the user registration is successful. <br />
         </tr>
         <tr>
-            <td>Status</td>
+            <td><b>Status</b></td>
             <td>
                 The status of the TransCategoriesInfoRq
                 <br>
