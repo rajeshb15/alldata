@@ -856,39 +856,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>Status</b></td><td>\
-            \ The status of the request.</td></tr><tr><td><b>RqUID</b></td><td> The\
-            \ Unique Request Identifier sent by the Server Site. </td></tr><tr><td><b>OtherAcctTrns</b></td><td>\
-            \ Other account transactions. </td></tr><tr><td><b>FIAcctId</b></td><td>\
-            \ The account identification of the Other account for which transactions\
-            \ are being returned.</td></tr><tr><td><b>SelectionCriterion</b></td><td>\
-            \ The selection range as per which transactions were requested.</td></tr><tr><td><b>BankAcctTrnRec</b></td><td>\
-            \ Other account type transaction record.</td></tr><tr><td><b>TrnID</b></td><td>\
-            \ Unique transaction ID assigned by CashEdge.</td></tr><tr><td><b>FITrnID</b></td><td>\
-            \ Unique transaction ID assigned by the Financial Institution from where\
-            \ this transaction was fetched, if available from the Financial Institution.</td></tr><tr><td>Status</td><td>The\
-            \ status of the OtherAcctTrnInqRq</td></tr><tr><td></td><td><span style=\"\
-            font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>4550</td><td>Error</td><td>Invalid\
-            \ Date Range</td><td>This error occurs when Start Date specified in the\
-            \ date range greater than current Date.</td><td></td></tr><tr><td>4551</td><td>Error</td><td>Invalid\
-            \ date range. Modified date range returned no results.</td><td>This error\
-            \ occurs when Start Date specified in the date range greater than current\
-            \ Date.</td><td>Default maximum range is 90 days; this is configurable\
-            \ for the Partner requesting extended transaction history.</td></tr></table></td></tr></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/other-account-transactions.md">More Info</a>
           content:
             # application/xml:
             #   schema:
@@ -2357,12 +2325,11 @@ paths:
           Identifier</td></tr><tr><td><b>Description</b></td><td>Detailed description
           of the Budget</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BudgetAddRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BudgetAddRqHeader'
+            examples:
+              createBudget: {summary: Request Create Budget, $ref: '#/components/examples/createBudgetRequest'}        
         required: true
       responses:
         "200":
@@ -2401,12 +2368,11 @@ paths:
             \ failure</td><td>Duplicate budget name is found</td><td></td></tr><tr><td>5070</td><td>Error</td><td>Validation\
             \ failure</td><td>Budget already exists for this Category and SubCategory</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BudgetAddRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BudgetAddRsHeader'
+              examples:
+                createBudget: {summary: Response Create Budget, $ref: '#/components/examples/createBudgetResponse'}        
         "400":
           description: Bad Request
         "401":
@@ -2432,12 +2398,11 @@ paths:
           identification assigned to the Budget request. This element will be present
           only of the request that was carried out successfully.</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BudgetDeleteRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BudgetDeleteRqHeader'
+            examples:
+              deleteBudget: {summary: Request Delete Budget, $ref: '#/components/examples/deleteBudgetRequest'}                 
         required: true
       responses:
         "200":
@@ -2470,12 +2435,11 @@ paths:
             \ the authorized role.</td><td></td></tr><tr><td>5050</td><td>Error</td><td>Info</td><td>No\
             \ budget is found for this user</td><td></td></tr></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BudgetDeleteRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BudgetDeleteRsHeader'
+              examples:
+                deleteBudget: {summary: Response Delete Budget, $ref: '#/components/examples/deleteBudgetResponse'}                     
         "400":
           description: Bad Request
         "401":
@@ -2504,12 +2468,11 @@ paths:
           only of the request that was carried out successfully.</td></tr> <tr><td><b>Description</b></td><td>
           Detailed description of the Budget</td></tr></tbody></table>
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BudgetEditRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BudgetEditRqHeader'
+            examples:
+              editBudget: {summary: Request Edit Budget, $ref: '#/components/examples/editBudgetRequest'}              
         required: true
       responses:
         "200":
@@ -2548,12 +2511,11 @@ paths:
             \ failure</td><td>Atleast any one of the followings is required 1) Budget\
             \ Amount 2) Budget Description 3) Budget Name</td><td></td></tr></table></td></tr></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BudgetEditRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BudgetEditRsHeader'
+              examples:
+                editBudget: {summary: Response Edit Budget, $ref: '#/components/examples/editBudgetResponse'}                 
         "400":
           description: Bad Request
         "401":
@@ -2578,12 +2540,11 @@ paths:
           signon request will be used for user authentication.</td></tr><tr><td><b>BudgetId</b></td><td>The
           identification assigned to the Budget request.</td></tr> '
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/BudgetFindRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/BudgetFindRqHeader'
+            examples:
+              findBudget: {summary: Request Find Budget, $ref: '#/components/examples/findBudgetRequest'}              
         required: true
       responses:
         "200":
@@ -2619,12 +2580,11 @@ paths:
             \ budget is found for this user</td><td></td></tr><tr><td>5060</td><td>Error</td><td>Info</td><td>No\
             \ budget is found for this user</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/BudgetFindRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/BudgetFindRsHeader'
+              examples:
+                findBudget: {summary: Response Find Budget, $ref: '#/components/examples/findBudgetResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2876,15 +2836,11 @@ paths:
           \ this goal. Please note: Only accounts classified as banking can be linked\
           \ to a goal.</td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/GoalAddRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/GoalAddRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/GoalAddRqHeader'
+            examples:
+              createGoal: {summary: Request Create Goal, $ref: '#/components/examples/createGoalRequest'}
         required: true
       responses:
         "200":
@@ -2925,15 +2881,11 @@ paths:
             \ failure</td><td>Invalid AccountId</td><td></td></tr><tr><td>5120</td><td>Error</td><td>Validation\
             \ failure</td><td>Target End Date must be a future date</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/GoalAddRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/GoalAddRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/GoalAddRsHeader'
+              examples:
+                createGoal: {summary: Response Create Goal, $ref: '#/components/examples/createGoalResponse'}                
         "400":
           description: Bad Request
         "401":
@@ -2958,15 +2910,11 @@ paths:
           signon request will be used for user authentication.</td></tr><tr><td><b>GoalId</b></td><td>The
           identification assigned to the Goal request.</td></tr> '
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/GoalDeleteRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/GoalDeleteRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/GoalDeleteRqHeader'
+            examples:
+              deleteGoal: {summary: Request Delete Goal, $ref: '#/components/examples/deleteGoalRequest'}              
         required: true
       responses:
         "200":
@@ -3000,15 +2948,11 @@ paths:
             \ the authorized role.</td><td></td></tr><tr><td>5150</td><td>Error</td><td>Validation\
             \ failure</td><td>No such goalId is found</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/GoalDeleteRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/GoalDeleteRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/GoalDeleteRsHeader'
+              examples:
+                deleteGoal: {summary: Response Delete Goal, $ref: '#/components/examples/deleteGoalResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3041,15 +2985,11 @@ paths:
           \ this goal. Please note: Only accounts classified as banking can be linked\
           \ to a goal.</td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/GoalEditRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/GoalEditRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/GoalEditRqHeader'
+            examples:
+              editGoal: {summary: Request Edit Goal, $ref: '#/components/examples/editGoalRequest'}              
         required: true
       responses:
         "200":
@@ -3091,15 +3031,11 @@ paths:
             \ failure</td><td>Target End Date must be a future date</td><td></td></tr><tr><td>5150</td><td>Error</td><td>Validation\
             \ failure</td><td>No such goalId is found</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/GoalEditRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/GoalEditRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/GoalEditRsHeader'
+              examples:
+                editGoal: {summary: Response Edit Goal, $ref: '#/components/examples/editGoalResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3123,15 +3059,11 @@ paths:
           signon request will be used for user authentication.</td></tr><tr><td><b>GoalId</b></td><td>The
           identification assigned to the Goal request.</td></tr> '
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/GoalFindRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/GoalFindRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/GoalFindRqHeader'
+            examples:
+              findGoal: {summary: Request Find Goal, $ref: '#/components/examples/findGoalRequest'}              
         required: true
       responses:
         "200":
@@ -3176,15 +3108,11 @@ paths:
             \ failure</td><td>No such goalId is found</td><td></td></tr><tr><td>5170</td><td>Error</td><td>Validation\
             \ failure</td><td>No goal is found for this user</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/GoalFindRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/GoalFindRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/GoalFindRsHeader'
+              examples:
+                findGoal: {summary: Response Find Goal, $ref: '#/components/examples/findGoalResponse'}                  
         "400":
           description: Bad Request
         "401":
@@ -13558,6 +13486,401 @@ components:
         partnerID: 8885504
         version: 1.4.6
 
+    findBudgetRequest:
+      value:
+        RqUID: FindBudget_Sample1_0718
+        SignonRq:
+          UserInfo:
+            UserID: special123
+            HomeID: 88886648
+            UserPassword:
+              CryptType: None
+              CryptVal: special123
+            Role: User
+        partnerID: 8885504
+        version: version1
+
+    findBudgetResponse:
+      value:
+        RqUID: FindBudget_Sample1_0718
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3228584
+        BudgetFindRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          BudgetList:
+            Budget:
+            - BudgetId: 5760018
+              BudgetName: Home Expenses
+              BudgetAmt: 2051
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 7
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+            - BudgetId: 5760017
+              BudgetName: Travel & Transportation
+              BudgetAmt: 1420
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 11
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+            - BudgetId: 5760016
+              BudgetName: Utilities
+              BudgetAmt: 631
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 12
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+            - BudgetId: 5760019
+              BudgetName: Health & Lifestyle
+              BudgetAmt: 1420
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 6
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+            - BudgetId: 5760020
+              BudgetName: Food & Dining
+              BudgetAmt: 1105
+              CurrentSpending: 0
+              BudgetStatus: On Budget
+              CategoryId: 5
+              SubCategoryId: 0
+              Frequency: Month
+              Description:
+              AddedOn: '2019-07-11T05:37:37-07:00'
+              ModifiedOn: '2021-12-01T00:00:59-08:00'
+        partnerID: 8885504
+        version: version1      
+
+    createBudgetRequest:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        BudgetAddRq:
+          BudgetName: HOME CENTER EXPRESS
+          BudgetAmt: 850
+          CategoryId: 6
+          SubCategoryId: 0
+          Description: Hanu budget for home expenses.
+        partnerID: 50040000
+        version: version1
+
+    createBudgetResponse:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        BudgetAddRs:
+          BudgetId: 7080016
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+
+    editBudgetRequest:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        BudgetEditRq:
+          BudgetId: 7080016
+          BudgetName: House Rent
+          BudgetAmt: 33
+          Description: Hanu for home expenses.
+        partnerID: 50040000
+        version: version1
+
+    editBudgetResponse:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        BudgetEditRs:
+          BudgetId: 7080016
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+
+    deleteBudgetRequest:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        BudgetDeleteRq:
+          BudgetId: 7080016
+        partnerID: 50040000
+        version: version1
+
+    deleteBudgetResponse:
+      value:
+        RqUID: Budget_Add_Rq_0627
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        BudgetDeleteRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1    
+
+    findGoalRequest:
+      value:
+        RqUID: FindGoal_Sample_0725
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        partnerID: 50040000
+        version: version1      
+
+    findGoalResponse:
+      value:
+        RqUID: FindGoal_Sample_0725
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        GoalFindRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          GoalList:
+            Goal:
+            - GoalId: '6154014'
+              GoalName: Buy a car
+              GoalStatus: Off Schedule
+              TargetAmt: 3000
+              TargetDate: 2021-12-17-00:00
+              AddedOn: '2021-11-16T06:42:01-08:00'
+              AccountList:
+                Account:
+                - AcctId: 5587903
+                  AllocationPercentage: 20
+            - GoalId: '6154017'
+              GoalName: Buy a cars
+              GoalStatus: Off Schedule
+              TargetAmt: 3001
+              TargetDate: 2021-12-19-00:00
+              AddedOn: '2021-11-16T07:13:20-08:00'
+              AccountList:
+                Account:
+                - AcctId: 5587903
+                  AllocationPercentage: 20
+        partnerID: 50040000
+        version: version1      
+
+    createGoalRequest:
+      value:
+        RqUID: Goal_Rq_0718_12
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        GoalAddRq:
+          GoalName: Buy a car
+          TargetAmt: 3000
+          TargetDate: '2021-12-20'
+          AccountList:
+            Account:
+            - AcctId: 5587903
+              AllocationPercentage: 20
+        partnerID: 50040000
+        version: version1      
+
+    createGoalResponse:
+      value:
+        RqUID: Goal_Rq_0718_12
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        GoalAddRs:
+          GoalId: 6174014
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1      
+
+    editGoalRequest:
+      value:
+        RqUID: Goal_Rq_0718_12
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        GoalEditRq:
+          GoalId: 6174014
+          GoalName: CHANGING GOAL NAME TO TESLA MODEL 3
+          TargetAmt: 400000
+          TargetDate: '2022-12-01'
+          AccountList:
+            Account:
+            - AcctId: 5587903
+              AllocationPercentage: 10
+        partnerID: 50040000
+        version: version1
+
+    editGoalResponse:
+      value:
+        RqUID: Goal_Rq_0718_12
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        GoalEditRs:
+          GoalId: 6174014
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1      
+
+    deleteGoalRequest:
+      value:
+        RqUID: delete_goal_Rq_0628
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        GoalDeleteRq:
+          GoalId: 6174014
+        partnerID: 50040000
+        version: version1      
+
+    deleteGoalResponse:
+      value:
+        RqUID: delete_goal_Rq_0628
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        GoalDeleteRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+      
     getTaxDocDetailsRequest:
       value:
         RqUID: RqUID0
