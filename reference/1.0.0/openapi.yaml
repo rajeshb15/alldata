@@ -856,39 +856,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>Status</b></td><td>\
-            \ The status of the request.</td></tr><tr><td><b>RqUID</b></td><td> The\
-            \ Unique Request Identifier sent by the Server Site. </td></tr><tr><td><b>OtherAcctTrns</b></td><td>\
-            \ Other account transactions. </td></tr><tr><td><b>FIAcctId</b></td><td>\
-            \ The account identification of the Other account for which transactions\
-            \ are being returned.</td></tr><tr><td><b>SelectionCriterion</b></td><td>\
-            \ The selection range as per which transactions were requested.</td></tr><tr><td><b>BankAcctTrnRec</b></td><td>\
-            \ Other account type transaction record.</td></tr><tr><td><b>TrnID</b></td><td>\
-            \ Unique transaction ID assigned by CashEdge.</td></tr><tr><td><b>FITrnID</b></td><td>\
-            \ Unique transaction ID assigned by the Financial Institution from where\
-            \ this transaction was fetched, if available from the Financial Institution.</td></tr><tr><td>Status</td><td>The\
-            \ status of the OtherAcctTrnInqRq</td></tr><tr><td></td><td><span style=\"\
-            font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>4550</td><td>Error</td><td>Invalid\
-            \ Date Range</td><td>This error occurs when Start Date specified in the\
-            \ date range greater than current Date.</td><td></td></tr><tr><td>4551</td><td>Error</td><td>Invalid\
-            \ date range. Modified date range returned no results.</td><td>This error\
-            \ occurs when Start Date specified in the date range greater than current\
-            \ Date.</td><td>Default maximum range is 90 days; this is configurable\
-            \ for the Partner requesting extended transaction history.</td></tr></table></td></tr></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/other-account-transactions.md">More Info</a>
           content:
             # application/xml:
             #   schema:
