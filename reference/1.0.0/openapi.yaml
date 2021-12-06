@@ -2944,15 +2944,11 @@ paths:
           \ this goal. Please note: Only accounts classified as banking can be linked\
           \ to a goal.</td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/GoalAddRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/GoalAddRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/GoalAddRqHeader'
+            examples:
+              createGoal: {summary: Request Create Goal, $ref: '#/components/examples/createGoalRequest'}
         required: true
       responses:
         "200":
@@ -2993,15 +2989,11 @@ paths:
             \ failure</td><td>Invalid AccountId</td><td></td></tr><tr><td>5120</td><td>Error</td><td>Validation\
             \ failure</td><td>Target End Date must be a future date</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/GoalAddRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/GoalAddRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/GoalAddRsHeader'
+              examples:
+                createGoal: {summary: Response Create Goal, $ref: '#/components/examples/createGoalResponse'}                
         "400":
           description: Bad Request
         "401":
@@ -3026,15 +3018,11 @@ paths:
           signon request will be used for user authentication.</td></tr><tr><td><b>GoalId</b></td><td>The
           identification assigned to the Goal request.</td></tr> '
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/GoalDeleteRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/GoalDeleteRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/GoalDeleteRqHeader'
+            examples:
+              deleteGoal: {summary: Request Delete Goal, $ref: '#/components/examples/deleteGoalRequest'}              
         required: true
       responses:
         "200":
@@ -3068,15 +3056,11 @@ paths:
             \ the authorized role.</td><td></td></tr><tr><td>5150</td><td>Error</td><td>Validation\
             \ failure</td><td>No such goalId is found</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/GoalDeleteRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/GoalDeleteRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/GoalDeleteRsHeader'
+              examples:
+                deleteGoal: {summary: Response Delete Goal, $ref: '#/components/examples/deleteGoalResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3109,15 +3093,11 @@ paths:
           \ this goal. Please note: Only accounts classified as banking can be linked\
           \ to a goal.</td></tr></tbody></table>"
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/GoalEditRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/GoalEditRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/GoalEditRqHeader'
+            examples:
+              editGoal: {summary: Request Edit Goal, $ref: '#/components/examples/editGoalRequest'}              
         required: true
       responses:
         "200":
@@ -3159,15 +3139,11 @@ paths:
             \ failure</td><td>Target End Date must be a future date</td><td></td></tr><tr><td>5150</td><td>Error</td><td>Validation\
             \ failure</td><td>No such goalId is found</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/GoalEditRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/GoalEditRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/GoalEditRsHeader'
+              examples:
+                editGoal: {summary: Response Edit Goal, $ref: '#/components/examples/editGoalResponse'}
         "400":
           description: Bad Request
         "401":
@@ -3191,15 +3167,11 @@ paths:
           signon request will be used for user authentication.</td></tr><tr><td><b>GoalId</b></td><td>The
           identification assigned to the Goal request.</td></tr> '
         content:
-          application/xml:
-            schema:
-              $ref: '#/components/schemas/GoalFindRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/GoalFindRqHeader'
-          text/xml:
-            schema:
-              $ref: '#/components/schemas/GoalFindRqHeader'
+            examples:
+              findGoal: {summary: Request Find Goal, $ref: '#/components/examples/findGoalRequest'}              
         required: true
       responses:
         "200":
@@ -3244,15 +3216,11 @@ paths:
             \ failure</td><td>No such goalId is found</td><td></td></tr><tr><td>5170</td><td>Error</td><td>Validation\
             \ failure</td><td>No goal is found for this user</td><td></td></tr></td></tr></table></tbody></table>"
           content:
-            application/xml:
-              schema:
-                $ref: '#/components/schemas/GoalFindRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/GoalFindRsHeader'
-            text/xml:
-              schema:
-                $ref: '#/components/schemas/GoalFindRsHeader'
+              examples:
+                findGoal: {summary: Response Find Goal, $ref: '#/components/examples/findGoalResponse'}                  
         "400":
           description: Bad Request
         "401":
@@ -13868,6 +13836,189 @@ components:
         partnerID: 50040000
         version: version1    
 
+    findGoalRequest:
+      value:
+        RqUID: FindGoal_Sample_0725
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        partnerID: 50040000
+        version: version1      
+
+    findGoalResponse:
+      value:
+        RqUID: FindGoal_Sample_0725
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        GoalFindRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          GoalList:
+            Goal:
+            - GoalId: '6154014'
+              GoalName: Buy a car
+              GoalStatus: Off Schedule
+              TargetAmt: 3000
+              TargetDate: 2021-12-17-00:00
+              AddedOn: '2021-11-16T06:42:01-08:00'
+              AccountList:
+                Account:
+                - AcctId: 5587903
+                  AllocationPercentage: 20
+            - GoalId: '6154017'
+              GoalName: Buy a cars
+              GoalStatus: Off Schedule
+              TargetAmt: 3001
+              TargetDate: 2021-12-19-00:00
+              AddedOn: '2021-11-16T07:13:20-08:00'
+              AccountList:
+                Account:
+                - AcctId: 5587903
+                  AllocationPercentage: 20
+        partnerID: 50040000
+        version: version1      
+
+    createGoalRequest:
+      value:
+        RqUID: Goal_Rq_0718_12
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        GoalAddRq:
+          GoalName: Buy a car
+          TargetAmt: 3000
+          TargetDate: '2021-12-20'
+          AccountList:
+            Account:
+            - AcctId: 5587903
+              AllocationPercentage: 20
+        partnerID: 50040000
+        version: version1      
+
+    createGoalResponse:
+      value:
+        RqUID: Goal_Rq_0718_12
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        GoalAddRs:
+          GoalId: 6174014
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1      
+
+    editGoalRequest:
+      value:
+        RqUID: Goal_Rq_0718_12
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        GoalEditRq:
+          GoalId: 6174014
+          GoalName: CHANGING GOAL NAME TO TESLA MODEL 3
+          TargetAmt: 400000
+          TargetDate: '2022-12-01'
+          AccountList:
+            Account:
+            - AcctId: 5587903
+              AllocationPercentage: 10
+        partnerID: 50040000
+        version: version1
+
+    editGoalResponse:
+      value:
+        RqUID: Goal_Rq_0718_12
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        GoalEditRs:
+          GoalId: 6174014
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1      
+
+    deleteGoalRequest:
+      value:
+        RqUID: delete_goal_Rq_0628
+        SignonRq:
+          UserInfo:
+            UserID: wstest924783
+            HomeID: 50040009
+            UserPassword:
+              CryptType: None
+              CryptVal: cashedge1
+            Role: User
+        GoalDeleteRq:
+          GoalId: 6174014
+        partnerID: 50040000
+        version: version1      
+
+    deleteGoalResponse:
+      value:
+        RqUID: delete_goal_Rq_0628
+        Status:
+          StatusCode: 0
+          Severity: Info
+          StatusDesc: Success
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 3752652
+        GoalDeleteRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+        partnerID: 50040000
+        version: version1
+      
     getTaxDocDetailsRequest:
       value:
         RqUID: RqUID0
