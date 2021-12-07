@@ -7,7 +7,8 @@
 | DepAcctTrns | Deposit account transactions. This element will be present only if the request could be carried out successfully. |
 | FIAcctId | The account identification of the Checking, Savings, or an Overdraft account for which transactions are being returned. |
 | SelectionCriterion | The selection range as per which transactions were requested. |
-| BankAcctTrnRec Status | The status of the DepAcctTrnInqRq |
+| BankAcctTrnRec | | 
+| Status | The status of the DepAcctTrnInqRq |
 
 
 #### Possible Status Code
