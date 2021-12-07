@@ -1,11 +1,17 @@
-## Account Details
+## Account Update Summary
 
 | Element / property | Description |
 | --- | --- |
 | Status | The status of the request. |
 | RqUID | The Unique Request Identifier sent by the Server Site. |
-| FILoginAcctInfoList | List of FILoginAcctInfo aggregates, one for each FI Login Account specified in the request.This aggregate list will be present only if the request was carried out successfully. |
-| HTMLInfo | This element is present if HTMLSniplet or XML_AND_HTMLSniplet have been provided in the request. This aggregate will be present only if the request was carried out successfully. |
+| AccountUpdateSummaryRs | The aggregate containing recent account update details for the requested account.This aggregate will be present only of the request was carried out successfully. |
+| FILoginAcctId | FI Login identifier. |
+| FIId | FI Identifier. |
+| LastUpdateAttempt | Time of last account details update. |
+| AcctId | Account Identifier. |
+| AcctNickName | Account nickname for AcctID. |
+| LastUpdateSuccess | Last successful update time. |
+| LastUpdateStatusCode | Last update status code. |
 
 #### Possible Status Code
 

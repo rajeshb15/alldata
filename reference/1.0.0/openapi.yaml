@@ -74,81 +74,7 @@ paths:
         required: true
       responses:
         "200":
-          description: 
-           "<table>
-              <thead>
-                <th>Element/property</th>
-                <th>Description</th>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><b>Status</b></td>
-                  <td>The status of the request.</td>
-                </tr>
-                <tr>
-                  <td><b>RqUID</b></td>
-                  <td>The Unique Request Identifier sent by the Server Site. </td>
-                </tr>
-                <tr>
-                  <td><b>AccountUpdateSummaryRs</b></td>
-                  <td>The aggregate containing recent account update details for the requested account. This aggregate will be present only of the request was carried out successfully. 
-                  </td>
-                </tr>
-                <tr>
-                  <td><b>FILoginAcctId</b></td>
-                  <td>FI Login identifier.</td>
-                </tr>
-                <tr>
-                  <td><b>FIId</b></td>
-                  <td>FI Identifier.</td>
-                </tr>
-                <tr>
-                  <td><b>LastUpdateAttempt</b></td>
-                  <td>Time of last account details update.</td>
-                </tr>
-                <tr>
-                  <td><b>AcctId</b></td>
-                  <td>Account Identifier.</td>
-                </tr>
-                <tr>
-                  <td><b>AcctNickName</b></td>
-                  <td>Account nickname for AcctID.</td>
-                </tr>
-                <tr>
-                  <td><b>LastUpdateSuccess</b></td>
-                  <td>Last successful update time.</td>
-                </tr>
-                <tr>
-                  <td><b>LastUpdateStatusCode</b></td>
-                  <td>Last update status code</td>
-                </tr>
-              </tbody>
-            </table>
-            <table>
-                <tr>
-                  <td>Possible Status Code</td>
-                <tr>
-                <tr>
-                  <td>StatusCode</td>
-                  <td>4070</td>
-                </tr>
-                <tr>
-                  <td>Severity</td>
-                  <td>Error</td>
-                </tr>
-                <tr>
-                  <td>StatusDesc</td>
-                  <td>Validation failure</td>
-                </tr>
-                <tr>
-                  <td>Condition</td>
-                  <td>One or more input fields were not valid.</td>
-                </tr>
-                <tr>
-                  <td>Action API Partner should take to resolve the error</td>
-                  <td>Partner should make sure the mandatory parameters are sent in the request and in the defined format as in the corresponding XSD.</td>
-                </tr>
-            </table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/account-update-summary.md">More Info</a>
           content:
             application/json:
               schema:
@@ -188,82 +114,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "
-          <table> 
-              <thead> <th>Element/property</th> <th>Description</th></thead> 
-              <tbody> 
-                <tr> 
-                  <td><b>Status</b></td> 
-                  <td> The status of the request.</td> 
-                </tr> 
-                <tr> 
-                  <td><b>RqUID</b></td> 
-                  <td> The Unique Request Identifier sent by the Server Site</td
-                </tr> 
-                <tr> 
-                  <td><b>FIAcctSummary</b></td> 
-                </tr>
-                <tr> 
-                  <td>Status</td><td>The status of the FIAcctSummaryInqRq</td>
-                </tr>
-                <tr> 
-                  <td></td><td> 
-                </tr>
-              </tbody>
-           </table>
-           <table>
-              <thead>
-                <tr> <th>Possible Status Code </th> </tr>
-              </thead>
-           </table>
-           <table>
-              <thead>
-                <tr>
-                    <th>StatusCode</th>
-                    <th>Severity</th>
-                    <th>StatusDesc</th>
-                    <th>Condition</th>
-                    <th>Action API Partner should take to resolve the error</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>0</td>
-                  <td>Info</td>
-                  <td>Success</td>
-                  <td>The service provider successfully processed the request.</td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td>100</td>
-                  <td>Error</td>
-                  <td>General Error</td>
-                  <td>There was an error that prevented the service provider from processing the   transaction. No additional information is provided.</td>
-                  <td>If this error continues to occur, please reach out to us the timestamp and CEUserId.</td>
-                </tr>
-                <tr>
-                  <td>1740</td>
-                  <td>Error</td>
-                  <td>Authentication Failed</td>
-                  <td>The customer could not be authenticated due to an incorrect HomeID, login ID or password.</td>
-                  <td>Verify the user Login ID and Password</td>
-                </tr>
-                <tr>
-                  <td>4070</td>
-                  <td>Error</td>
-                  <td>Validation failure</td>
-                  <td>One or more input fields were not valid.</td>
-                  <td>Partner should make sure the mandatory parameters are sent in the request and in the defined format as in the corresponding XSD.</td>
-                </tr>
-                <tr>
-                  <td>4130</td>
-                  <td>Error</td>
-                  <td>Invalid role</td>
-                  <td>A signon has been attempted by a user in a role other than the authorized role.</td>
-                  <td></td>
-                </tr>
-              </tbody>    
-            </table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/account-summary.md">More Info</a>
           content:
             application/json:
               schema:
@@ -301,58 +152,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "
-          <table>
-            <thead>
-              <th>Element / property</th>
-              <th>Description</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td><b>RqUID</b></td>
-                <td>Unique Request Identifier. The Client Site sends this element with the request.</td>
-              </tr>
-              <tr>
-                <td><b>Status</b></td> 
-                <td>The status of the request.</td>
-              </tr>
-              <tr>
-                <td><b>UserBankStmtConsent</b></td>
-                <td>Contains the user opt-in opt-out status for Bank statement.</td>
-              </tr>
-              <tr>
-                <td><b>FIAcctsStmtList</b></td>
-                <td>List of FILoginAcctIds and their corresponding consent status is provided.</td>
-              </tr>
-              <tr>
-                <td><b>AcctBankStmtDetail</b></td>
-                <td>Provides AcctID and corresponding bank statement document lists.</td>
-              </tr>
-            </tbody>
-          </table>
-          <table>
-              <tr>
-                <td>Possible Status Code</td>
-              </tr>
-              <tr>
-                <td>StatusCode: 0; Severity: Info; StatusDesc: Success; Codition: The service provider successfully processed the request; Action API Partner should take to resolve the error: NA</td>
-              </tr>
-              <tr>
-                <td>StatusCode: 100; Severity: Error; StatusDesc: General Error; Codition: There was an error that prevented the service provider from processing the transaction. No additional information is provided; Action API Partner should take to resolve the error: If this error continues to occur, please reach out to us the timestamp and CEUserId.</td>
-              </tr>
-              <tr>
-                <td>StatusCode: 1087; Severity: Error; StatusDesc: Bank Statement download not enabled at home; Codition: This service is disabled for the requested home. Contact FISERV for enabling the property; Action API Partner should take to resolve the error: NA</td>
-              </tr>
-              <tr>
-                <td>StatusCode: 4130; Severity: Error; StatusDesc: Invalid role; Codition: A signon has been attempted by a user in a role other than the authorized role; Action API Partner should take to resolve the error: NA</td>
-              </tr>
-              <tr>
-                <td>StatusCode: 1740; Severity: Error; StatusDesc: Authentication Failed; Codition: The customer could not be authenticated due to an incorrect HomeID, login ID or password; Action API Partner should take to resolve the error: Verify the user Login ID and Password</td>
-              </tr>
-              <tr>
-                <td>StatusCode: 4070; Severity: Error; StatusDesc: Validation failure; Codition: One or more input fields were not valid; Action API Partner should take to resolve the error: Partner should make sure the mandatory parameters are sent in the request and in the defined format as in the corresponding XSD</td>
-              </tr> 
-          </table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/bank-statement-details.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -399,39 +199,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table> <thead><th>Element/property</th> <th>Description</th>\
-            \ </thead> <tbody> <tr> <td><b>Status</b></td> <td> The status of the\
-            \ request.</td> </tr> <tr> <td><b>RqUID</b></td> <td> The Unique Request\
-            \ Identifier sent by the Server Site. </td> </tr> <tr> <td><b>DepAcctTrns</b></td>\
-            \ <td> Deposit account transactions. This element will be present only\
-            \ if the request could be carried out successfully. </td> </tr><tr> <td><b>FIAcctId</b></td>\
-            \ <td> The account identification of the Checking, Savings, or an Overdraft\
-            \ account for which transactions are being returned.</td> </tr><tr> <td><b>SelectionCriterion</b></td>\
-            \ <td> The selection range as per which transactions were requested.</td>\
-            \ </tr><tr> <td><b>BankAcctTrnRec</b></td> </tr><tr><td>Status</td><td>The\
-            \ status of the DepAcctTrnInqRq</td></tr><tr><td></td><td><span style=\"\
-            font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>4550</td><td>Error</td><td>Invalid\
-            \ Date Range</td><td>This error occurs when Start Date specified in the\
-            \ date range greater than current Date.</td><td></td></tr><tr><td>4551</td><td>Error</td><td>Invalid\
-            \ date range. Modified date range returned no results.</td><td>This error\
-            \ occurs when Start Date specified in the date range greater than current\
-            \ Date.</td><td>Default maximum range is 90 days; this is configurable\
-            \ for the Partner requesting extended transaction history.</td></tr></table></td></tr>\
-            \ </tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/banking-transactions.md">More Info</a>
           content:
             application/json:
               schema:
@@ -475,23 +243,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
-            \ </thead> <tbody> <tr> <td><b>Status</b></td> <td> The status of the\
-            \ request.</td> </tr> <tr> <td><b>RqUID</b></td> <td> The Unique Request\
-            \ Identifier sent by the Server Site. </td> </tr> <tr> <td><b>CCAcctTrns</b></td>\
-            \ <td> Credit card transactions. <br><br><span style=\"font-family: sans-serif;font-size:\
-            \ 14px;\">Possible Status Code</span><br><br><table class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4550</td><td>Error</td><td>Invalid\
-            \ Date Range</td><td>This error occurs when Start Date specified in the\
-            \ date range greater than current Date.</td><td></td></tr><tr><td>4551</td><td>Error</td><td>Invalid\
-            \ date range. Modified date range returned no results.</td><td>This error\
-            \ occurs when Start Date specified in the date range greater than current\
-            \ Date.</td><td>Default maximum range is 90 days; this is configurable\
-            \ for the Partner requesting extended transaction history.</td></tr> </tr>\
-            \ </tbody></table> </td> </tr> </tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/credit-card-transactions.md">More Info</a>
           content:
             application/json:
               schema:
@@ -540,42 +292,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>This aggregate provides the status of the API request</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>Status</b></td><td>The\
-            \ status of the API request. </td></tr><tr><td><b>SelRangeDt</b></td><td>Date\
-            \ range requested to fetch deleted transactions. </td></tr><tr><td><b>StartRowNum</b></td><td>The\
-            \ start row number of the batch. </td></tr><tr><td><b>BankAcctTrnInfo</b></td><td>Deleted\
-            \ Banking Accounts Transactions on specified date range and row index\
-            \ mentioned in the request. </td></tr><tr><td><b>CCAcctTrnInfo</b></td><td>Deleted\
-            \ Credit Card Accounts Transactions on specified date range and row index\
-            \ mentioned in the request. </td></tr><tr><td><b>InvAcctTrnInfo</b></td><td>Deleted\
-            \ Investment Accounts Transactions on specified date range and row index\
-            \ mentioned in the request. </td></tr><tr><td><b>OtherAcctTrnInfo</b></td><td>Deleted\
-            \ Other Accounts group Transactions on specified date range and row index\
-            \ mentioned in the request. </td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getDeletedTrans'\
-            \ target='_blank'>More Info</a></td></tr></tbody></table><table class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4260</td><td>Error</td><td>Invalid\
-            \ date</td><td>Date specified in the request is invalid.</td><td></td></tr><tr><td>4550</td><td>Error</td><td>Invalid\
-            \ Date Range</td><td>This error occurs when Start Date specified in the\
-            \ date range greater than current Date.</td><td></td></tr><tr><td>4540</td><td>Error</td><td>Validation\
-            \ failure</td><td>Account Group specified in the request is invalid</td><td></td></tr><tr><td>4551</td><td>Error</td><td>Invalid\
-            \ date range. Modified date range returned no results.</td><td>This error\
-            \ occurs when Start Date specified in the date range greater than current\
-            \ Date.</td><td>Default maximum range is 90 days; this is configurable\
-            \ for the Partner requesting extended transaction history.</td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/deleted-transactions.md">More Info</a>  
           content:
             application/json:
               schema:
@@ -616,39 +333,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>Status</b></td><td>\
-            \ The status of the request.</td></tr><tr><td><b>RqUID</b></td><td> The\
-            \ Unique Request Identifier sent by the Server Site. </td></tr><tr><td><b>EmployerStockOption</b></td><td>\
-            \ The aggregate containing Stock options details for the requested account.This\
-            \ aggregate will be present only of the request was carried out successfully.\
-            \ </td></tr><tr><td><b>FIAcctId</b></td><td> The account identification\
-            \ of the investment FI Account for which the positions are being returned.</td></tr><tr><td><b>StockOption</b></td><td>\
-            \ This aggregate containing Stock Options details for the requested account.</td></tr><tr><td><b>Symbol</b></td><td>\
-            \ Ticker Symbol of the Company</td></tr><tr><td><b>Desc</b></td><td> Name\
-            \ of the Company.</td></tr><tr><td><b>Cusip</b></td><td> CUSIP / Asset\
-            \ ID of the Security</td></tr><tr><td><b>Price</b></td><td> Price of single\
-            \ stock of the Company</td></tr><tr><td><b>MarketValue</b></td><td>Total\
-            \ market value of the Vested Options</td></tr><tr><td><b>GrantTypeList</b></td><td>\
-            \ Types of Grant Possible Values: NQO,NQO,NQO,PSU,RSA,RSU</td></tr><tr><td><b>Grants</b></td><td>This\
-            \ aggregate containing Grants for the requested account</td></tr><tr><td><b>Grant</b></td><td>\
-            \ This aggregate containing the details of a Grant.</td></tr><tr><td><b>GrantID</b></td><td>\
-            \ Unique sequence ID for a Grant provided by CashEdge.</td></tr><tr><td><b>GrantNo</b></td><td>\
-            \ Unique identifier of the Grant</td></tr><tr><td><b>GrantDt</b></td><td>\
-            \ Issue date of Grant.</td></tr><tr><td><b>GrantType</b></td><td> Type\
-            \ of Grant.</td></tr><tr><td><b>ExcerisePrice</b></td><td> Excerise Price\
-            \ or Strike Price of Grant.</td></tr><tr><td><b>FirstVestDt</b></td><td>\
-            \ First Vesting Date of Grant.</td></tr><tr><td><b>ExpirationDt</b></td><td>\
-            \ Expiration Date of Grant.</td></tr><tr><td><b>SharesGranted</b></td><td>\
-            \ Number of shares in the Grant.</td></tr><tr><td><b>VestPeriods</b></td><td>\
-            \ Total number of vesting periods.</td></tr><tr><td><b>VestPeriodsPerYr</b></td><td>\
-            \ Number of vesting periods per year.</td></tr><tr><td><b>SharesVested</b></td><td>\
-            \ Number of shares vested or excercisable.<BR><BR><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr> </tr> </tbody></table></td></tr></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/employer-stock-options.md">More Info</a>  
           content:
             application/json:
               schema:
@@ -689,47 +374,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>Status</b></td><td>\
-            \ The status of the request.</td></tr><tr><td><b>RqUID</b></td><td> The\
-            \ Unique Request Identifier sent by the Server Site. </td></tr><tr><td><b>InvAcctPos</b></td><td>The\
-            \ aggregate containing investment positions for the requested account.This\
-            \ aggregate will be present only of the request was carried out successfully.</td></tr><tr><td><b>FIAcctId</b></td><td>\
-            \ The account identification of the investment FI Account for which the\
-            \ positions are being returned.</td></tr><tr><td><b>DtAsOf</b></td><td>\
-            \ Date at which the securities position was retrieved. </td></tr><tr><td><b>InvPos</b></td><td>\
-            \ The aggregate containing investment positions for the requested account.</td></tr><tr><td><b>MFPos</b></td><td>\
-            \ The aggregate containing positions in mutual funds for the requested\
-            \ account. </td></tr><tr><td><b>PosID</b></td><td>Identifier for the security.\
-            \ CashEdge will attempt to provide a unique identifier for each security,\
-            \ provided the underlying FI provides a mechanism for uniquely identifying\
-            \ a security.</td></tr><tr><td><b>SecInfo</b></td><td> Information about\
-            \ the security.</td></tr><tr><td><b>SecPos</b></td><td> Position and value\
-            \ of the security. </td></tr><tr><td><b>ACHIndicator</b></td><td>Indicates\
-            \ whether this holding is ACH enabled. Possible values: Enabled Disabled</td></tr><tr><td><b>Ticker</b></td><td>\
-            \ Ticker symbol of the Security.</td></tr><tr><td><b>SecDesc</b></td><td>\
-            \ Full name of the Security. </td></tr><tr><td><b>Marginable</b></td><td>\
-            \ Indicates whether this holding is Marginable Possible values: Y ,N</td></tr><tr><td><b>SecurityType</b></td><td>\
-            \ Type of Security</td></tr><tr><td><b>Property</b></td><td> Miscellaneous\
-            \ properties associated with this position. Possible values: AssetID AssetIDType\
-            \ </td></tr><tr><td><b>UnitPrice></b></td><td>Price of single security.</td></tr><tr><td><b>Units</b></td><td>\
-            \ Number of securities.</td></tr><tr><td><b>MarketValue</b></td><td> Total\
-            \ market value of this security. </td></tr><tr><td><b>CostBasis</b></td></tr><tr><td>Status</td><td>The\
-            \ status of the InvAcctPosInqRq</td></tr><tr><td></td><td><span style=\"\
-            font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/investment-positions.md">More Info</a>
           content:
             application/json:
               schema:
@@ -771,34 +416,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
-            \ </thead> <tbody> <tr> <td><b>Status</b></td> <td> The status of the\
-            \ request.</td> </tr> <tr> <td><b>RqUID</b></td> <td> The Unique Request\
-            \ Identifier sent by the Server Site. </td> </tr> <tr> <td><b>InvAcctTrns</b></td><td>\
-            \ Investment account transactions. This aggregate will be present only\
-            \ of the request was carried out successfully.</td> </tr> <tr><td>Status</td><td>The\
-            \ status of the InvAcctTrnInqRq</td></tr><tr><td></td><td><span style=\"\
-            font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>4550</td><td>Error</td><td>Invalid\
-            \ Date Range</td><td>This error occurs when Start Date specified in the\
-            \ date range greater than current Date.</td><td></td></tr><tr><td>4551</td><td>Error</td><td>Invalid\
-            \ date range. Modified date range returned no results.</td><td>This error\
-            \ occurs when Start Date specified in the date range greater than current\
-            \ Date.</td><td>Default maximum range is 90 days; this is configurable\
-            \ for the Partner requesting extended transaction history.</td></tr></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/investment-transactions.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -833,33 +451,21 @@ paths:
           </tr><tr><td></td><td><a href='elementDescription.jsp#AccountDataInq_getOtherAccountTrans'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
             examples:
               WorkingSample: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
         required: true
       responses:
         "200":
           description: <a href="../docs?path=docs/resources/api-guide/response/other-account-transactions.md">More Info</a>
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
               examples: 
                 WorkingSample: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -883,33 +489,21 @@ paths:
           href='elementDescription.jsp#AccountMgmt_getBankStmtDetails' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/TaxDocumentInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/TaxDocumentInqRqHeader'
             examples: 
               WorkingSample: {summary: Request TaxDocDetails, $ref: '#/components/examples/getTaxDocDetailsRequest'}          
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/TaxDocumentInqRqHeader'
         required: true
       responses:
         "200":
-          description: This API is used to get Bank statement details of the user.
+          description: <a href="../docs?path=docs/resources/api-guide/response/tax-document-details.md">More Info</a>
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/TaxDocumentInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/TaxDocumentInqRsHeader'
               examples:
                 WorkingSample: {summary: Response TaxDocDetails, $ref: '#/components/examples/getTaxDocDetailsResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/TaxDocumentInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -947,58 +541,21 @@ paths:
           \ href='elementDescription.jsp#AccountDataInq_getTransactions' target='_blank'>More\
           \ Info</a></td></tr></tbody></table>"
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/FindTrnsInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FindTrnsInqRqHeader'
             examples: 
               WorkingSample: {summary: Request getTransactions, $ref: '#/components/examples/getTransactionsRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/FindTrnsInqRqHeader'
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>Status</b></td><td>\
-            \ The status of the request.</td></tr><tr><td><b>RqUID</b></td><td> The\
-            \ Unique Request Identifier sent by the Server Site. </td></tr><tr><td><b>FIAcctTrnsList</b></td><td>Transactions\
-            \ corresponding to the search criterion specified in the request.</td></tr><tr><td><b>SearchCriterion</b></td><td>\
-            \ The search criterion specified in the request.</td></tr><tr><td><b>FILoginAcctTrns</b></td><td>\
-            \ Transactions corresponding to the search criterion in all accounts across\
-            \ all specified FI Login Accounts. </td></tr><tr><td><b>FILoginAcctId</b></td><td>\
-            \ Identifies the FI Login Account.</td></tr><tr><td><b>FIInfo</b></td><td>\
-            \ FI Information for the FI Login Account. </td></tr><tr><td><b>FIAcctTrns</b></td><td>Transactions\
-            \ corresponding to the search criterion specified in the request for all\
-            \ FI Account in this FI Login Account.<br><br><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4012</td><td>Error</td><td>Invalid\
-            \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4280</td><td>Error</td><td>Invalid\
-            \ search criterion</td><td>Search criterion specified in the request is\
-            \ invalid.</td><td></td></tr><tr><td>4250</td><td>Error</td><td>Invalid\
-            \ transaction type</td><td>Transaction type specified in the request is\
-            \ invalid.</td><td>Expected transaction type is Debit or Credit. Anything\
-            \ mentioned other than Debit or Credit will return this error.</td></tr><tr><td>4260</td><td>Error</td><td>Invalid\
-            \ date</td><td>Date specified in the request is invalid.</td><td></td></tr><tr><td>4270</td><td>Error</td><td>Invalid\
-            \ amount</td><td>Amount specified in the request is invalid.</td><td></td></tr>\
-            \ </tr> </tbody></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/transactions.md">More Info</a>  
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/FindTrnsInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FindTrnsInqRsHeader'
               examples: 
                 WorkingSample: {summary: Response getTransactions, $ref: '#/components/examples/getTransactionsResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/FindTrnsInqRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -1018,33 +575,21 @@ paths:
       operationId: ping
       requestBody:
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/PingRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/PingRqHeader'
             examples: 
               WorkingSample: {summary: Request Ping, $ref: '#/components/examples/pingRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/PingRqHeader'
         required: true
       responses:
         "200":
-          description: Success
+          description: <a href="../docs?path=docs/resources/api-guide/response/ping.md">More Info</a> 
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/PingRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/PingRsHeader'
               examples:
                 WorkingSample: {summary: Response Ping, $ref: '#/components/examples/pingResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/PingRsHeader'
         "400":
           description: Bad Request
         "401":
