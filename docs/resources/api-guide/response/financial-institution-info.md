@@ -1,8 +1,6 @@
 ## Financial Institution Info
 
 
-<b>Response Code 200</b>
-
 <table>
     <thead>
         <th>Element / property</th>
