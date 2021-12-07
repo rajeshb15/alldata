@@ -33,16 +33,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
-            \ </thead> <tbody> <tr> <td><b>Status</b></td> <td> The status of the\
-            \ request.</td> </tr> <tr> <td><b>RqUID</b></td> <td> The Unique Request\
-            \ Identifier sent by the Server Site. </td> </tr> <tr> <td><b>FILoginAcctInfoList</b></td>\
-            \ <td> List of FILoginAcctInfo aggregates, one for each FI Login Account\
-            \ specified in the request.This aggregate list will be present only if\
-            \ the request was carried out successfully. </td> </tr> <tr> <td><b>HTMLInfo</b></td>\
-            \ <td> This element is present if HTMLSniplet or XML_AND_HTMLSniplet have\
-            \ been provided in the request. This aggregate will be present only if\
-            \ the request was carried out successfully.</td> </tr> </tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/account-details.md">More Info</a>
           content:
             application/json:
               schema:
