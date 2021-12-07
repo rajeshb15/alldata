@@ -27,41 +27,10 @@
         </tr>
         <tr>
             <td><b>Status</b></td>
-            <td>
-                The status of the FISearchRs
-                <br>
-                <br>
-                <table>
-                    <tr>
-                        <td><b>StatusCode</b></td>
-                        <td><b>StatusDesc</b></td>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>Success</td>
-                    <tr>
-                    <tr>
-                        <td>100</td>
-                        <td>General Error</td>
-                    <tr>
-                    <tr>
-                        <td>4060</td>
-                        <td>No Data Available</td>
-                    <tr>
-                    <tr>
-                        <td>4070</td>
-                        <td>Invalid data in request</td>
-                    <tr>
-                    <tr>
-                        <td>4360</td>
-                        <td>Data insufficient to carry out request</td>
-                    <tr>
-                    <tr>
-                        <td>4591</td>
-                        <td>No FIs found matching the search criteria provided</td>
-                    <tr>
-                </table>
-            </td>
+            <td>The status of the FISearchRs <br><br>For Sevirity: Info<br> StatusCode - StatusDesc: <br><br> 0 -
+                Success<br><br>For Sevirity: Error<br> StatusCode - StatusDesc: <br><br>100 - General Error<br>4060 - No
+                data available<br>4070 - Invalid data in request<br>4360 - Data insufficient to carry out
+                request<br>4591 - No FIs found matching the search criteria provided<br></td>
         </tr>
     </tbody>
 </table>

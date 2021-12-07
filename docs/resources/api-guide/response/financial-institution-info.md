@@ -30,43 +30,10 @@
         </tr>
         <tr>
             <td><b>Status</b></td>
-            <td>
-                The status of the FIInfoRs <br><br>
-                <table>
-                    <tr>
-                        <td><b>StatusCode</b></td>
-                        <td><b>StatusDesc</b></td>
-                    </tr>
-                    <tr>
-                        <td>0</td>
-                        <td>Success</td>
-                    </tr>
-                    <tr>
-                        <td>100</td>
-                        <td>General Error</td>
-                    </tr>
-                    <tr>
-                        <td>4060</td>
-                        <td>No data available</td>
-                    </tr>
-                    <tr>
-                        <td>4070</td>
-                        <td>Invalid data in request</td>
-                    </tr>
-                    <tr>
-                        <td>4260</td>
-                        <td>Invalid Date</td>
-                    </tr>
-                    <tr>
-                        <td>9001</td>
-                        <td>Support for this ABA routing number coming soon.</td>
-                    </tr>
-                    <tr>
-                        <td>9002</td>
-                        <td>ABA number is not supported.</td>
-                    </tr>
-                </table>
-            </td>
+            <td>The status of the FIInfoRs <br><br>For Sevirity: Info<br> StatusCode - StatusDesc: <br><br> 0 -
+                Success<br><br>For Sevirity: Error<br> StatusCode - StatusDesc: <br><br>100 - General Error<br>4060 - No
+                data available<br>4070 - Invalid data in request<br>4260 - Invalid Date<br>9001 - Support for this ABA
+                routing number coming soon.<br>9002 - ABA number is not supported.<br></td>
         </tr>
     </tbody>
 </table>
