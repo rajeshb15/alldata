@@ -1563,21 +1563,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status</b></td><td>The\
-            \ status of the request.</td></tr><tr><td><b>Status Code: 4490</b></td><td>Invalid\
-            \ Advisor Access Tag.</td></tr><tr><td><b>Status Code: 5013</b></td><td>Invalid\
-            \ AcctName.</td></tr><tr><td><b>Status Code: 5011</b></td><td>AdvAccess\
-            \ value specified in the request is invalid.</td></tr><tr><td><b>Status\
-            \ Code: 4510</b></td><td>Invalid Account Type Id.</td></tr><tr><td><b>Status\
-            \ Code: 4270</b></td><td>Invalid Amount.</td></tr><tr><td><b>Status Code:\
-            \ 4530</b></td><td>Invalid Balance Type.</td></tr><tr><td><b>Status Code:\
-            \ 4260</b></td><td>Invalid Date.</td></tr><tr><td><b>Status Code: 4370</b></td><td>Invalid\
-            \ combinations for Account attributes, which are Instrument, Ownership\
-            \ and RetirementStatus.</td></tr><tr><td><b>Status Code: 100</b></td><td>General\
-            \ error.</td></tr><tr><td><b>Status Code: 0</b></td><td>Success.</td></tr><tr><td><b>AcctName</b></td><td>Name\
-            \ of the added offline account.<br><tr><td><b>AcctId</b></td><td>ID of\
-            \ the added offline account.</td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/add-offline-account.md">More Info</a>
           content:
             # application/xml:
             #   schema:
@@ -1634,21 +1620,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element/property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status</b></td><td>The\
-            \ status of the request.</td></tr><tr><td><b>Status Code: 4480</b></td><td>Invalid\
-            \ AcctId.</td></tr><tr><td><b>Status Code: 4490</b></td><td>Invalid Advisor\
-            \ Access Tag.</td></tr><tr><td><b>Status Code: 5013</b></td><td>Invalid\
-            \ AcctName.</td></tr><tr><td><b>Status Code: 5011</b></td><td>AdvAccess\
-            \ value specified in the request is invalid.</td></tr><tr><td><b>Status\
-            \ Code: 4510</b></td><td>Invalid Account Type Id.</td></tr><tr><td><b>Status\
-            \ Code: 4270</b></td><td>Invalid Amount.</td></tr><tr><td><b>Status Code:\
-            \ 2740</b></td><td>Invalid currency code.</td></tr><tr><td><b>Status Code:\
-            \ 4530</b></td><td>Invalid Balance Type.</td></tr><tr><td><b>Status Code:\
-            \ 4260</b></td><td>Invalid Date.</td></tr><tr><td><b>Status Code: 4370</b></td><td>Invalid\
-            \ combinations for Account attributes, which are Instrument, Ownership\
-            \ and RetirementStatus.</td></tr><tr><td><b>Status Code: 100</b></td><td>General\
-            \ error.</td></tr><tr><td><b>Status Code: 0</b></td><td>Success.</td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/update-offline-account.md">More Info</a>
           content:
             # application/xml:
             #   schema:
