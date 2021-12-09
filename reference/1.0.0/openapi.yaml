@@ -625,29 +625,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>This aggregate provides the status of the API request</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>AddHostAcctsRs</b></td><td>The\
-            \ aggregate will provide the status of each client account received as\
-            \ part of the request. </td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_addHostAccountsRs'\
-            \ target='_blank'>More Info</a></td></tr></tbody></table><tr><td>Status</td><td>The\
-            \ status of the AddHostAcctsRq</td></tr><tr><td></td><td>+ERRORCODE_HEADER+<table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/add-host-accounts.md">more info</a> 
           content:
             application/json:
               schema:
@@ -693,40 +671,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>This aggregate provides the status of the API request</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>AddUpdateHostAccountsRs</b></td><td>The\
-            \ aggregate will provide the status of each client account received as\
-            \ part of the request. </td></tr><tr><td><b>HostAcctStatusID</b></td><td>The\
-            \ identification, which is used to access the status of the accounts process..\
-            \ </td></tr><tr><td></td><td><a href='elementDescription.jsp#AccountMgmt_addUpdateHostAccounts'\
-            \ target='_blank'>More Info</a></td></tr></tbody></table><tr><td>Status</td><td>The\
-            \ status of the AddHostAcctsRq</td></tr><tr><td></td><td>+ERRORCODE_HEADER+<table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>9021</td><td>Error</td><td>Info</td><td>Invalid\
-            \ combination of Transaction Type and Amount.</td><td></td></tr><tr><td>4480</td><td>Error</td><td>Invalid\
-            \ AcctId</td><td>The AcctId in the request does not match with any accounts\
-            \ for this user or is null.</td><td></td></tr><tr><td>9015</td><td>Error</td><td>Bank\
-            \ Statement download not enabled at home.</td><td>This service is disabled\
-            \ for the requested home. Contact FISERV for enabling the property.</td><td></td></tr><tr><td>9012</td><td>Error</td><td>Avoid\
-            \ gathering and sending User Credentials in OAuth FI</td><td></td></tr><tr><td>9003</td><td>Error</td><td>Avoid\
-            \ gathering and sending User Credentials in OAuth FI</td><td></td></tr><tr><td>9005</td><td>Error</td><td>Categorization\
-            \ failure. Re-initiate the request with same set of transactions.</td><td></td></tr><tr><td>9006</td><td>Error</td><td>Info</td><td>Invalid\
-            \ combination of Transaction Type and Amount.</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/add-update-host-accounts.md">more info</a> 
           content:
             application/json:
               schema:
@@ -765,26 +710,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>This aggregate provides the status of the API request</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br></td></tr><tr><td></td><td><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/bank-statement-consent.md">more info</a> 
           content:
             application/json:
               schema:
@@ -828,36 +754,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HarvestID</b></td>\
-            \ <td>The identification assigned to the Harvest request.<br/>This element\
-            \ will be present only of the request that was carried out successfully</td></tr><tr><td><b>FILoginAcctId</b></td><td>FI\
-            \ Login identifier.<br>This element will be present only of the request\
-            \ that was carried out successfully.</td></tr><tr><td><b>FIUserLoginAcctInfo</b></td>\
-            \ <td>In response to an add account, record is inserted. This aggregate\
-            \ contains that information.<br/>When the HarvestAddRq is sent with the\
-            \ “AddNewAccts” aggregate, the “ClassifiedStatus” of this aggregate will\
-            \ be “Pending”.<br>When the HarvestAddRq is sent with the “AddMoreAccts”\
-            \ aggregate, the “ClassifiedStatus” of this aggregate will reflect the\
-            \ value stored in the data store.<br>This element will be present only\
-            \ of the request that was carried out successfully.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4370</td><td>Error</td><td>Invalid\
-            \ account classification attributes.</td><td>The account attributes combinations\
-            \ required for account classification is invalid. • Instrument • AccountOwnership\
-            \ • RetirementStatus</td><td>Partner has to reach out to us with CEUserID\
-            \ and timestamp.</td></tr></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/create-accounts.md">more info</a> 
           content:
             application/json:
               schema:
@@ -900,36 +797,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HarvestID</b></td>\
-            \ <td>The identification assigned to the Harvest request.<br/>This element\
-            \ will be present only of the request that was carried out successfully</td></tr><tr><td><b>FILoginAcctId</b></td><td>FI\
-            \ Login identifier.<br>This element will be present only of the request\
-            \ that was carried out successfully.</td></tr><tr><td><b>FIUserLoginAcctInfo</b></td>\
-            \ <td>In response to an add account, record is inserted. This aggregate\
-            \ contains that information.<br/>When the HarvestAddRq is sent with the\
-            \ “AddNewAccts” aggregate, the “ClassifiedStatus” of this aggregate will\
-            \ be “Pending”.<br>When the HarvestAddRq is sent with the “AddMoreAccts”\
-            \ aggregate, the “ClassifiedStatus” of this aggregate will reflect the\
-            \ value stored in the data store.<br>This element will be present only\
-            \ of the request that was carried out successfully.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4350</td><td>Error</td><td>Update\
-            \ in progress.</td><td>An update is already in progress. A new update\
-            \ (update or add) request cannot be submitted unless the existing update\
-            \ is completed.</td><td>Partner should not invoke update or add until\
-            \ the existing update completes.</td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/delete-accounts.md">more info</a> 
           content:
             application/json:
               schema:
@@ -973,36 +841,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HarvestID</b></td>\
-            \ <td>The identification assigned to the Harvest request.<br/>This element\
-            \ will be present only of the request that was carried out successfully</td></tr><tr><td><b>FILoginAcctId</b></td><td>FI\
-            \ Login identifier.<br>This element will be present only of the request\
-            \ that was carried out successfully.</td></tr><tr><td><b>FIUserLoginAcctInfo</b></td>\
-            \ <td>In response to an add account, record is inserted. This aggregate\
-            \ contains that information.<br/>When the HarvestAddRq is sent with the\
-            \ “AddNewAccts” aggregate, the “ClassifiedStatus” of this aggregate will\
-            \ be “Pending”.<br>When the HarvestAddRq is sent with the “AddMoreAccts”\
-            \ aggregate, the “ClassifiedStatus” of this aggregate will reflect the\
-            \ value stored in the data store.<br>This element will be present only\
-            \ of the request that was carried out successfully.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4350</td><td>Error</td><td>Update\
-            \ in progress.</td><td>An update is already in progress. A new update\
-            \ (update or add) request cannot be submitted unless the existing update\
-            \ is completed.</td><td>Partner should not invoke update or add until\
-            \ the existing update completes.</td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/delete-document.md">more info</a> 
           content:
             application/xml:
               schema:
@@ -1055,41 +894,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HarvestID</b></td>\
-            \ <td>The identification assigned to the Harvest request.<br/>This element\
-            \ will be present only of the request that was carried out successfully</td></tr><tr><td><b>FILoginAcctId</b></td><td>FI\
-            \ Login identifier.<br>This element will be present only of the request\
-            \ that was carried out successfully.</td></tr><tr><td><b>FIUserLoginAcctInfo</b></td>\
-            \ <td>In response to an add account, record is inserted. This aggregate\
-            \ contains that information.<br/>When the HarvestAddRq is sent with the\
-            \ “AddNewAccts” aggregate, the “ClassifiedStatus” of this aggregate will\
-            \ be “Pending”.<br>When the HarvestAddRq is sent with the “AddMoreAccts”\
-            \ aggregate, the “ClassifiedStatus” of this aggregate will reflect the\
-            \ value stored in the data store.<br>This element will be present only\
-            \ of the request that was carried out successfully.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>7701</td><td>Error</td><td>This\
-            \ financial institution requires a multi-factor authentication process\
-            \ that is currently not enabled for this home</td><td>The financial institution\
-            \ requires an image based multi-factor authentication that is currently\
-            \ not enabled for this home. Please reach out to CashEdge team for enabling\
-            \ the same.</td><td></td></tr><tr><td>4310</td><td>Error</td><td>Harvesting\
-            \ Error</td><td>Error code generated if there is a harvesting error during\
-            \ 'account add' or 'add more accounts' operations.</td><td>Partner should\
-            \ refer the returned 'UpdateErrorCode' in the Harvester Error Codes section\
-            \ of this document for corresponding action.</td></tr></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/add-account-status.md">more info</a> 
           content:
             application/json:
               schema:
@@ -1137,39 +942,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HarvestID</b></td>\
-            \ <td>The identification assigned to the Harvest request.<br/>This element\
-            \ will be present only of the request that was carried out successfully</td></tr><tr><td><b>FILoginAcctId</b></td><td>FI\
-            \ Login identifier.<br>This element will be present only of the request\
-            \ that was carried out successfully.</td></tr><tr><td><b>FIUserLoginAcctInfo</b></td>\
-            \ <td>In response to an add account, record is inserted. This aggregate\
-            \ contains that information.<br/>When the HarvestAddRq is sent with the\
-            \ “AddNewAccts” aggregate, the “ClassifiedStatus” of this aggregate will\
-            \ be “Pending”.<br>When the HarvestAddRq is sent with the “AddMoreAccts”\
-            \ aggregate, the “ClassifiedStatus” of this aggregate will reflect the\
-            \ value stored in the data store.<br>This element will be present only\
-            \ of the request that was carried out successfully.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4450</td><td>Error</td><td>No\
-            \ New Accounts</td><td>Warning message generated, when the harvest action\
-            \ was successful during an “account add” or “add more accounts” operation\
-            \ but no new accounts were fetched from FI site.</td><td>Warning message\
-            \ generated, when the harvest action was successful during a “account\
-            \ add” or “add more accounts” operation, but no accounts were fetched\
-            \ from the FI site. This could be a scripting error or there are no new\
-            \ accounts to add.</td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/new-accounts.md">more info</a> 
           content:
             application/json:
               schema:
@@ -1207,31 +980,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HostAcctStatusID</b></td>\
-            \ <td>Host account status id</td></tr><tr><td> Status </td><td> The status\
-            \ of the request</td></tr><tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>9020</td><td>Error</td><td>Categorization\
-            \ failure. Re-initiate the request with same set of transactions.</td><td></td></tr><tr><td>9022</td><td>Error</td><td>Info</td><td>Invalid\
-            \ combination of Status ID and Session Info.</td><td></td></tr><tr><td>4060</td><td>Info</td><td>No\
-            \ data available</td><td>No data is available to satisfy the request.\
-            \ This could mean that the user has not registered any financial institutions;\
-            \ there are no transactions in the specified date range and so on.</td><td>If\
-            \ this error occurs on invoking getAccountDetails API, it means user has\
-            \ not added any financial institutions. Please make sure user has added\
-            \ accounts successfully under any financial institutions. If this error\
-            \ occurs on invoking transactions APIs, make sure the 'LastSuccessfulUpdate'\
-            \ date is returned in getAccountDetails API for that specific account\
-            \ and the specified date range lies within the 'LastSuccessfulUpdate'\
-            \ date.</td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/host-accounts-status.md">more info</a> 
           content:
             application/json:
               schema:
@@ -1284,64 +1033,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HarvestID</b></td>\
-            \ <td>The identification assigned to the Harvest request.<br/>This element\
-            \ will be present only of the request that was carried out successfully</td></tr><tr><td><b>FILoginAcctId</b></td><td>FI\
-            \ Login identifier.<br>This element will be present only of the request\
-            \ that was carried out successfully.</td></tr><tr><td><b>FIUserLoginAcctInfo</b></td>\
-            \ <td>In response to an add account, record is inserted. This aggregate\
-            \ contains that information.<br/>When the HarvestAddRq is sent with the\
-            \ “AddNewAccts” aggregate, the “ClassifiedStatus” of this aggregate will\
-            \ be “Pending”.<br>When the HarvestAddRq is sent with the “AddMoreAccts”\
-            \ aggregate, the “ClassifiedStatus” of this aggregate will reflect the\
-            \ value stored in the data store.<br>This element will be present only\
-            \ of the request that was carried out successfully.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4471</td><td>Error</td><td>This\
-            \ account is at a financial institution that is not supported within this\
-            \ service. The account data will not be able to be refreshed/updated because\
-            \ support is now unavailable for this financial institution.</td><td>The\
-            \ partner should expect to receive status code 4471 in the status aggregate\
-            \ when attempting to update an account or add more accounts to an FI that\
-            \ is suspended in CashEdge. Partners should handle this error code and\
-            \ inform the customers that the FI is temporarily unavailable.</td><td></td></tr><tr><td>4320</td><td>Error</td><td>FI\
-            \ Login Credentials Required.</td><td>Error code generated when an “add\
-            \ more account” operation is attempted for a low trust account without\
-            \ providing the login credentials.</td><td></td></tr><tr><td>4321</td><td>Error</td><td>Invalid\
-            \ FI Login parameter id provided</td><td>Error code generated when an\
-            \ “add more account” operation is attempted for a low trust account without\
-            \ providing the login credentials.</td><td></td></tr><tr><td>4350</td><td>Error</td><td>Update\
-            \ in progress.</td><td>An update is already in progress. A new update\
-            \ (update or add) request cannot be submitted unless the existing update\
-            \ is completed.</td><td>Partner should not invoke update or add until\
-            \ the existing update completes.</td></tr><tr><td>4460</td><td>Error</td><td>FI\
-            \ Login Credential exceed max length</td><td>Login credentials entered\
-            \ by user exceed the maximum length allowed at financial institution web\
-            \ site</td><td></td></tr><tr><td>7619</td><td>Error</td><td>FI Not Available.</td><td></td><td></td></tr><tr><td>5011</td><td>Error</td><td>AdvAccess\
-            \ value specified in the request is invalid</td><td></td><td></td></tr><tr><td>4360</td><td>Error</td><td>Incomplete\
-            \ Data For Request Completion.</td><td>The data provided for Request completion\
-            \ is not sufficient. Typically insufficient data provided for “add new\
-            \ accounts”, “add more accounts” or “account maintenance” operations and\
-            \ so on.</td><td></td></tr><tr><td>4470</td><td>Error</td><td>The FI Login\
-            \ Account is suspended and cannot be updated. Please update the login\
-            \ information to resume aggregation activity.</td><td>When harvesting\
-            \ account login credentials are rejected, the Account Harvest Status (AcctHarvestStatus)\
-            \ is disabled. The FI Login Account Info List Inquiry Request (FILoginAcctInfoListInqRq)\
-            \ will return this error message in the response (FILoginAcctInfoListInqRs)\
-            \ to convey that the account is locked in the CashEdge system and the\
-            \ institution login credentials should be corrected.</td><td></td></tr></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/initiate-add-accounts.md">more info</a> 
           content:
             application/json:
               schema:
@@ -1383,49 +1075,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HarvestID</b></td>\
-            \ <td>The identification assigned to the Harvest request.<br/>This element\
-            \ will be present only of the request that was carried out successfully</td></tr><tr><td><b>FILoginAcctId</b></td><td>FI\
-            \ Login identifier.<br>This element will be present only of the request\
-            \ that was carried out successfully.</td></tr><tr><td><b>FIUserLoginAcctInfo</b></td>\
-            \ <td>In response to an add account, record is inserted. This aggregate\
-            \ contains that information.<br/>When the HarvestAddRq is sent with the\
-            \ “AddNewAccts” aggregate, the “ClassifiedStatus” of this aggregate will\
-            \ be “Pending”.<br>When the HarvestAddRq is sent with the “AddMoreAccts”\
-            \ aggregate, the “ClassifiedStatus” of this aggregate will reflect the\
-            \ value stored in the data store.<br>This element will be present only\
-            \ of the request that was carried out successfully.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>111</td><td>Error</td><td>Client\
-            \ Doesn't exist</td><td></td><td></td></tr><tr><td>112</td><td>Error</td><td>Advisor\
-            \ Doesn't exist</td><td></td><td></td></tr><tr><td>4705</td><td>Error</td><td>Invalid\
-            \ simulated user details</td><td></td><td></td></tr><tr><td>4704</td><td>Error</td><td>CSR\
-            \ Doesn't have access to the requested home</td><td></td><td></td></tr><tr><td>4703</td><td>Error</td><td>CSR\
-            \ Doesn't have access to the requested functionality</td><td></td><td></td></tr><tr><td>4120</td><td>Error</td><td>Not\
-            \ owner</td><td>The FILogin Account or FI Account for which a user is\
-            \ requesting details does not belong to the user.</td><td>This error occurs\
-            \ when FILoginAcctId or AcctId sent by Partner doesnot exist in our system\
-            \ or the Id's belong to a different CEUserID in the system.</td></tr><tr><td>4360</td><td>Error</td><td>Incomplete\
-            \ Data For Request Completion.</td><td>The data provided for Request completion\
-            \ is not sufficient. Typically insufficient data provided for “add new\
-            \ accounts”, “add more accounts” or “account maintenance” operations and\
-            \ so on.</td><td></td></tr><tr><td>4370</td><td>Error</td><td>Invalid\
-            \ account classification attributes.</td><td>The account attributes combinations\
-            \ required for account classification is invalid. • Instrument • AccountOwnership\
-            \ • RetirementStatus</td><td>Partner has to reach out to us with CEUserID\
-            \ and timestamp.</td></tr></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/maintain-account.md">more info</a> 
           content:
             application/json:
               schema:
@@ -1463,21 +1113,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>This aggregate provides the status of the API request</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br></td></tr><tr><td></td><td><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1089</td><td>Error</td><td>Tax Statement\
-            \ download not enabled at home.</td><td></td><td></td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/tax-statement-consent.md">more info</a> 
           content:
             application/json:
               schema:
@@ -1520,53 +1156,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>The  status  of  the request.</td></tr><tr><td><b>HarvestID</b></td>\
-            \ <td>The identification assigned to the Harvest request.<br/>This element\
-            \ will be present only of the request that was carried out successfully</td></tr><tr><td><b>FILoginAcctId</b></td><td>FI\
-            \ Login identifier.<br>This element will be present only of the request\
-            \ that was carried out successfully.</td></tr><tr><td><b>FIUserLoginAcctInfo</b></td>\
-            \ <td>In response to an add account, record is inserted. This aggregate\
-            \ contains that information.<br/>When the HarvestAddRq is sent with the\
-            \ “AddNewAccts” aggregate, the “ClassifiedStatus” of this aggregate will\
-            \ be “Pending”.<br>When the HarvestAddRq is sent with the “AddMoreAccts”\
-            \ aggregate, the “ClassifiedStatus” of this aggregate will reflect the\
-            \ value stored in the data store.<br>This element will be present only\
-            \ of the request that was carried out successfully.</td></tr><tr><td>\
-            \ Status </td><td> The status of the request</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4360</td><td>Error</td><td>Incomplete\
-            \ Data For Request Completion.</td><td>The data provided for Request completion\
-            \ is not sufficient. Typically insufficient data provided for “add new\
-            \ accounts”, “add more accounts” or “account maintenance” operations and\
-            \ so on.</td><td></td></tr><tr><td>4100</td><td>Error</td><td>Invalid\
-            \ FIAcctId</td><td>The FIAcctId specified in the request is invalid.</td><td></td></tr><tr><td>4321</td><td>Error</td><td>Invalid\
-            \ FI Login parameter id provided</td><td>Error code generated when an\
-            \ “add more account” operation is attempted for a low trust account without\
-            \ providing the login credentials.</td><td></td></tr><tr><td>4460</td><td>Error</td><td>FI\
-            \ Login Credential exceed max length</td><td>Login credentials entered\
-            \ by user exceed the maximum length allowed at financial institution web\
-            \ site</td><td></td></tr><tr><td>4320</td><td>Error</td><td>FI Login Credentials\
-            \ Required.</td><td>Error code generated when an “add more account” operation\
-            \ is attempted for a low trust account without providing the login credentials.</td><td></td></tr><tr><td>7619</td><td>Error</td><td>FI\
-            \ Not Available.</td><td></td><td></td></tr><tr><td>4300</td><td>Error</td><td>Account\
-            \ Already Exists</td><td>Attempt to add an account that already exists.</td><td>When\
-            \ user attempts to add the same set of FI credentials which already exists\
-            \ in the system.</td></tr><tr><td>5012</td><td>Error</td><td>Trust mode\
-            \ cannot be changed, as only high trust mode is allowed.</td><td>Trust\
-            \ mode cannot be changes if the partner home is configured for high trust\
-            \ mode only.</td><td>This error occurs when Partner sends other trust\
-            \ modes (Low or Medium trust) when editing the FI credentials.</td></tr></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/update-account-credentials.md">more info</a> 
           content:
             application/json:
               schema:
@@ -1614,26 +1204,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>Unique\
-            \ Request Identifier. The Client Site sends this element with the request.</td></tr><tr><td><b>Status\
-            \ </b></td> <td>This aggregate provides the status of the API request</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr></tbody></table><tr><td>Status</td><td>The\
-            \ status of the GoalDeleteRq</td></tr><tr><td></td><td>+ERRORCODE_HEADER+<table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/update-host-accounts.md">more info</a> 
           content:
             application/json:
               schema:
