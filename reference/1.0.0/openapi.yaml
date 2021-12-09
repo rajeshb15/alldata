@@ -1328,33 +1328,21 @@ paths:
           \ Category details of a Transaction.</td></tr><tr><td><b>SubCategory</b></td><td>\
           \ SubCategory details of a Transaction.</td></tr></tbody></table>"
         content:
-          # application/xml:
-          #   schema:
-              # $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
             examples:
-              WorkingSample: {summary: Request CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
+              categorizeTransaction_1: {summary: Request CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionRequest'}
         required: true
       responses:
         "200":
           description: <a href="../docs?path=docs/resources/api-guide/response/advisor-categorize-transaction.md">More Info</a>
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
               examples:
-                WorkingSample: {summary: Response CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
+                categorizeTransaction_1: {summary: Response CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1548,35 +1536,23 @@ paths:
           type.</td></tr><tr><td></td><td><a href='elementDescription.jsp#ClientMgmt_addOfflineAccount'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/AddOfflineAcctRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AddOfflineAcctRqHeader'
             examples:
               AdvisorHome: {summary: Request Add Offline Account Advisor Home, $ref: '#/components/examples/addOfflineAccountAdvisorRequest'}
               RetailHome: {summary: Request Add Offline Account Retail Home, $ref: '#/components/examples/addOfflineAccountRetailRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/AddOfflineAcctRqHeader'
         required: true
       responses:
         "200":
           description: <a href="../docs?path=docs/resources/api-guide/response/add-offline-account.md">More Info</a>
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/AddOfflineAcctRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AddOfflineAcctRsHeader'
               examples:
                 AdvisorHome: {summary: Response Add Offline Account Advisor Home, $ref: '#/components/examples/addOfflineAccountAdvisorResponse'}
                 RetailHome: {summary: Response Add Offline Account Retail Home, $ref: '#/components/examples/addOfflineAccountRetailResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/AddOfflineAcctRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -1606,33 +1582,21 @@ paths:
           type.</td></tr><tr><td></td><td><a href='elementDescription.jsp#ClientMgmt_updateOfflineAccount'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/OfflineAcctModRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/OfflineAcctModRqHeader'
             examples:
               updateOfflineAccount: {summary: Request Update Offline Account, $ref: '#/components/examples/updateOfflineAccountRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/OfflineAcctModRqHeader'
         required: true
       responses:
         "200":
           description: <a href="../docs?path=docs/resources/api-guide/response/update-offline-account.md">More Info</a>
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/OfflineAcctModRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/OfflineAcctModRsHeader'
               examples:
                 updateOfflineAccount: {summary: Response Update Offline Account, $ref: '#/components/examples/updateOfflineAccountResponse'}            
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/OfflineAcctModRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -1656,17 +1620,11 @@ paths:
           Unique Request Identifier.</td></tr> <tr><td><b>SignonRq</b></td><td> The
           Admin credentials are received as part of this request.</td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/FIMessagesInfoRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FIMessagesInfoRqHeader'
             examples:
-              WorkingSample: {summary: Request FI Message Info, $ref: '#/components/examples/getFIMessageInfoRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/FIMessagesInfoRqHeader'
+              getFIMessageInfo: {summary: Request FI Message Info, $ref: '#/components/examples/getFIMessageInfoRequest'}
         required: true
       responses:
         "200":
@@ -1700,17 +1658,11 @@ paths:
             \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4010</td><td>Error</td><td>Invalid\
             \ partnerID</td><td>The partnerID specified in the request is invalid.</td><td></td></tr></tbody></table></td></tr></tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/FIMessagesInfoRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FIMessagesInfoRsHeader'
               examples:
-                WorkingSample: {summary: Response FI Message Info, $ref: '#/components/examples/getFIMessageInfoResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/FIMessagesInfoRsHeader'
+                getFIMessageInfo: {summary: Response FI Message Info, $ref: '#/components/examples/getFIMessageInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2057,17 +2009,11 @@ paths:
           \ will be returned.</td> </tr><tr><td></td><td><a href='elementDescription.jsp#HarvestAccountData_getHarvestStatus'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/HarvestStsInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestStsInqRqHeader'
             examples:
               getHarvestStatus: {summary: Request Harvest Status, $ref: '#/components/examples/getHarvestStatusRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/HarvestStsInqRqHeader'
         required: true
       responses:
         "200":
@@ -2097,16 +2043,11 @@ paths:
             \ not enabled for this home. Please reach out to CashEdge team for enabling\
             \ the same.</td><td></td></tr></table></td></tr> </tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/HarvestStsInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestStsInqRsHeader'
               examples:
-                getHarvestStatus: {summary: Response Harvest Status, $ref: '#/components/examples/getHarvestStatusResponse'}            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/HarvestStsInqRsHeader'
+                getHarvestStatus: {summary: Response Harvest Status, $ref: '#/components/examples/getHarvestStatusResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2140,17 +2081,11 @@ paths:
           href='elementDescription.jsp#HarvestAccountData_updateAccounts' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/HarvestRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestRqHeader'
             examples:
               updateAccounts: {summary: Request Update Accounts, $ref: '#/components/examples/updateAccountsRequest'}            
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/HarvestRqHeader'
         required: true
       responses:
         "200":
@@ -2207,17 +2142,11 @@ paths:
             \ institution login credentials should be corrected.</td><td></td></tr></table></td></tr>\
             \ </tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/HarvestRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestRsHeader'
               examples:
-                updateAccounts: {summary: Response Update Accounts, $ref: '#/components/examples/updateAccountsResponse'}                
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/HarvestRsHeader'
+                updateAccounts: {summary: Response Update Accounts, $ref: '#/components/examples/updateAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -11312,8 +11241,8 @@ components:
             ExtAcctType: ILA
           SelectionCriterion:
             SelRangeDt:
-              EndDt: '2017-12-30'
-              StartDt: '2017-12-01'
+              EndDt: '2017-12-30T07:11:17-07:00' 
+              StartDt: '2017-12-01T07:11:17-07:00'
         partnerID: 50120000
         version: version1
         SignonRq:
@@ -11351,12 +11280,12 @@ components:
               ExtAcctType: ILA
             SelectionCriterion:
               SelRangeDt:
-                StartDt: '2017-12-01'
-                EndDt: '2017-12-30'
+                StartDt: '2017-12-01T07:11:17-07:00'
+                EndDt: '2017-12-30T07:11:17-07:00'
             OtherAcctTrnRec:
             - TrnID: 2966186
               TrnType: Credit
-              PostedDt: '2017-12-14'
+              PostedDt: '2017-12-14T07:11:17-07:00'
               CurAmt:
                 Amt: 2910.45
                 CurCode: USD
@@ -12125,7 +12054,7 @@ components:
             Role: User
         OfflineAcctModRq:
           OfflineAcctMod:
-            AcctId: '5586366'
+            AcctId: 5586366
             AcctName: Test_Offline4
             AdvisorAccess: None
             AcctBal:
@@ -12173,7 +12102,7 @@ components:
             Role: User
         HarvestStsInqRq:
           HarvestAddID: 744b617561785375476f696864677a5943484d3779413d3d
-          RunId: '18951349'
+          RunId: 18951349
         partnerID: 8885504
         version: 1.4.6
 
@@ -12528,7 +12457,7 @@ components:
         GoalAddRq:
           GoalName: Buy a car
           TargetAmt: 3000
-          TargetDate: '2021-12-20'
+          TargetDate: '2021-12-20T12:00:00Z'
           AccountList:
             Account:
             - AcctId: 5587903
@@ -12573,7 +12502,7 @@ components:
           GoalId: 6174014
           GoalName: CHANGING GOAL NAME TO TESLA MODEL 3
           TargetAmt: 400000
-          TargetDate: '2022-12-01'
+          TargetDate: '2022-12-01T12:00:00Z'
           AccountList:
             Account:
             - AcctId: 5587903
@@ -12746,8 +12675,8 @@ components:
             ExtAcctType: SDA
           SelectionCriterion:
             SelRangeDt:
-              EndDt: '2015-08-30'
-              StartDt: '2015-07-01'
+              EndDt: '2015-08-30T12:00:00Z'
+              StartDt: '2015-07-01T12:00:00Z'
         partnerID: 50120000
         version: version1
         SignonRq:
@@ -12784,12 +12713,12 @@ components:
               ExtAcctType: SDA
             SelectionCriterion:
               SelRangeDt:
-                StartDt: '2015-07-01'
-                EndDt: '2015-08-30'
+                StartDt: '2015-07-01T12:00:00Z'
+                EndDt: '2015-08-30T12:00:00Z'
             BankAcctTrnRec:
             - TrnID: 14811734
               TrnType: Debit
-              PostedDt: '2015-08-28'
+              PostedDt: '2015-08-28T12:00:00Z'
               CurAmt:
                 Amt: -200
                 CurCode: USD
@@ -12800,7 +12729,7 @@ components:
               SubCategory: Books & Other Media
             - TrnID: 14811735
               TrnType: Debit
-              PostedDt: '2015-08-28'
+              PostedDt: '2015-08-28T12:00:00Z'
               CurAmt:
                 Amt: -600
                 CurCode: USD
@@ -12811,7 +12740,7 @@ components:
               SubCategory: Books & Other Media
             - TrnID: 14811737
               TrnType: Debit
-              PostedDt: '2015-07-30'
+              PostedDt: '2015-07-30T12:00:00Z'
               CurAmt:
                 Amt: -800
                 CurCode: USD
@@ -12822,7 +12751,7 @@ components:
               SubCategory: Electronics & Computers
             - TrnID: 14811736
               TrnType: Debit
-              PostedDt: '2015-07-29'
+              PostedDt: '2015-07-29T12:00:00Z'
               CurAmt:
                 Amt: -760
                 CurCode: USD
@@ -12845,8 +12774,8 @@ components:
             ExtAcctType: CCA
           SelectionCriterion:
             SelRangeDt:
-              EndDt: '2015-08-30'
-              StartDt: '2015-07-01'
+              EndDt: '2015-08-30T12:00:00Z'
+              StartDt: '2015-07-01T12:00:00Z'
         version: version1
         SignonRq:
           UserInfo:
@@ -12882,13 +12811,13 @@ components:
               ExtAcctType: CCA
             SelectionCriterion:
               SelRangeDt:
-                StartDt: '2015-07-01'
-                EndDt: '2015-08-30'
+                StartDt: '2015-07-01T12:00:00Z'
+                EndDt: '2015-08-30T12:00:00Z'
             BankAcctTrnRec:
             - TrnID: 6719589
               TrnType: Debit
-              PostedDt: '2015-08-26'
-              OrigDt: '2015-08-26'
+              PostedDt: '2015-08-26T12:00:00Z'
+              OrigDt: '2015-08-26T12:00:00Z'
               CurAmt:
                 Amt: -454
                 CurCode: USD
@@ -12899,8 +12828,8 @@ components:
               SubCategory: General Merchandise
             - TrnID: 6719588
               TrnType: Debit
-              PostedDt: '2015-08-25'
-              OrigDt: '2015-08-25'
+              PostedDt: '2015-08-25T12:00:00Z'
+              OrigDt: '2015-08-25T12:00:00Z'
               CurAmt:
                 Amt: -980
                 CurCode: USD
@@ -12911,8 +12840,8 @@ components:
               SubCategory: General Merchandise
             - TrnID: 6719591
               TrnType: Debit
-              PostedDt: '2015-07-28'
-              OrigDt: '2015-07-28'
+              PostedDt: '2015-07-28T12:00:00Z'
+              OrigDt: '2015-07-28T12:00:00Z'
               CurAmt:
                 Amt: -900
                 CurCode: USD
@@ -12923,8 +12852,8 @@ components:
               SubCategory: Fast Food
             - TrnID: 6719590
               TrnType: Debit
-              PostedDt: '2015-07-27'
-              OrigDt: '2015-07-27'
+              PostedDt: '2015-07-27T12:00:00Z'
+              OrigDt: '2015-07-27T12:00:00Z'
               CurAmt:
                 Amt: -676
                 CurCode: USD
@@ -12943,8 +12872,8 @@ components:
         FindTrnsInqRq:
           SearchCriterion:
             SelRangeDt:
-              EndDt: '2021-11-12'
-              StartDt: '2007-01-01'
+              EndDt: '2021-11-12T12:00:00Z'
+              StartDt: '2007-01-01T12:00:00Z'
         version: version1
         SignonRq:
           UserInfo:
@@ -12976,8 +12905,8 @@ components:
           FIAcctTrnsList:
             SearchCriterion:
               SelRangeDt:
-                StartDt: '2007-01-01'
-                EndDt: '2021-11-12'
+                StartDt: '2007-01-01T12:00:00Z'
+                EndDt: '2021-11-12T12:00:00Z'
             FILoginAcctTrns:
             - FILoginAcctId: 5586742
               FIInfo:
@@ -13010,7 +12939,7 @@ components:
                 BankAcctTrnRec:
                 - TrnID: 14839163
                   TrnType: Debit
-                  PostedDt: '2021-10-09'
+                  PostedDt: '2021-10-09T12:00:00Z'
                   CurAmt:
                     Amt: -308.62
                     CurCode: USD
@@ -13020,7 +12949,7 @@ components:
                   SubCategory: Miscellaneous Equipment, Materials & Supplies
                 - TrnID: 14839164
                   TrnType: Debit
-                  PostedDt: '2021-10-06'
+                  PostedDt: '2021-10-06T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13030,7 +12959,7 @@ components:
                   SubCategory: Other Charitable Contributions
                 - TrnID: 14839165
                   TrnType: Debit
-                  PostedDt: '2021-09-29'
+                  PostedDt: '2021-09-29T12:00:00Z'
                   CurAmt:
                     Amt: -18
                     CurCode: USD
@@ -13040,7 +12969,7 @@ components:
                   SubCategory: Air Travel
                 - TrnID: 14839166
                   TrnType: Credit
-                  PostedDt: '2021-09-17'
+                  PostedDt: '2021-09-17T12:00:00Z'
                   CurAmt:
                     Amt: 308.99
                     CurCode: USD
@@ -13050,7 +12979,7 @@ components:
                   SubCategory: Credit Card Payment
                 - TrnID: 14839167
                   TrnType: Debit
-                  PostedDt: '2021-09-15'
+                  PostedDt: '2021-09-15T12:00:00Z'
                   CurAmt:
                     Amt: -86
                     CurCode: USD
@@ -13061,7 +12990,7 @@ components:
                   SubCategory: Children & Toys
                 - TrnID: 14839168
                   TrnType: Debit
-                  PostedDt: '2021-09-12'
+                  PostedDt: '2021-09-12T12:00:00Z'
                   CurAmt:
                     Amt: -80
                     CurCode: USD
@@ -13071,7 +13000,7 @@ components:
                   SubCategory: TV, Internet, Phone
                 - TrnID: 14839169
                   TrnType: Credit
-                  PostedDt: '2021-09-09'
+                  PostedDt: '2021-09-09T12:00:00Z'
                   CurAmt:
                     Amt: 452.3
                     CurCode: USD
@@ -13081,7 +13010,7 @@ components:
                   SubCategory: Auto/Vehicle Insurance
                 - TrnID: 14839170
                   TrnType: Debit
-                  PostedDt: '2021-09-01'
+                  PostedDt: '2021-09-01T12:00:00Z'
                   CurAmt:
                     Amt: -39.41
                     CurCode: USD
@@ -13091,7 +13020,7 @@ components:
                   SubCategory: Wireless/Cellular
                 - TrnID: 14839171
                   TrnType: Debit
-                  PostedDt: '2021-08-30'
+                  PostedDt: '2021-08-30T12:00:00Z'
                   CurAmt:
                     Amt: -89.82
                     CurCode: USD
@@ -13101,7 +13030,7 @@ components:
                   SubCategory: NA
                 - TrnID: 14839172
                   TrnType: Credit
-                  PostedDt: '2021-08-27'
+                  PostedDt: '2021-08-27T12:00:00Z'
                   CurAmt:
                     Amt: 25
                     CurCode: USD
@@ -13111,7 +13040,7 @@ components:
                   SubCategory: Printing & Shipping
                 - TrnID: 14839173
                   TrnType: Debit
-                  PostedDt: '2021-08-25'
+                  PostedDt: '2021-08-25T12:00:00Z'
                   CurAmt:
                     Amt: -22.65
                     CurCode: USD
@@ -13121,7 +13050,7 @@ components:
                   SubCategory: Coffee Shops
                 - TrnID: 14839174
                   TrnType: Debit
-                  PostedDt: '2021-08-23'
+                  PostedDt: '2021-08-23T12:00:00Z'
                   CurAmt:
                     Amt: -308.62
                     CurCode: USD
@@ -13131,7 +13060,7 @@ components:
                   SubCategory: Miscellaneous Equipment, Materials & Supplies
                 - TrnID: 14839175
                   TrnType: Debit
-                  PostedDt: '2021-08-21'
+                  PostedDt: '2021-08-21T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13141,7 +13070,7 @@ components:
                   SubCategory: Other Charitable Contributions
                 - TrnID: 14839176
                   TrnType: Debit
-                  PostedDt: '2021-08-12'
+                  PostedDt: '2021-08-12T12:00:00Z'
                   CurAmt:
                     Amt: -18
                     CurCode: USD
@@ -13151,7 +13080,7 @@ components:
                   SubCategory: Air Travel
                 - TrnID: 14839177
                   TrnType: Credit
-                  PostedDt: '2021-07-29'
+                  PostedDt: '2021-07-29T12:00:00Z'
                   CurAmt:
                     Amt: 308.99
                     CurCode: USD
@@ -13161,7 +13090,7 @@ components:
                   SubCategory: Credit Card Payment
                 - TrnID: 14839178
                   TrnType: Debit
-                  PostedDt: '2021-07-26'
+                  PostedDt: '2021-07-26T12:00:00Z'
                   CurAmt:
                     Amt: -86
                     CurCode: USD
@@ -13172,7 +13101,7 @@ components:
                   SubCategory: Children & Toys
                 - TrnID: 14839179
                   TrnType: Debit
-                  PostedDt: '2021-07-22'
+                  PostedDt: '2021-07-22T12:00:00Z'
                   CurAmt:
                     Amt: -78
                     CurCode: USD
@@ -13182,7 +13111,7 @@ components:
                   SubCategory: Other Fees & Charges
                 - TrnID: 14839180
                   TrnType: Debit
-                  PostedDt: '2021-07-17'
+                  PostedDt: '2021-07-17T12:00:00Z'
                   CurAmt:
                     Amt: -22.65
                     CurCode: USD
@@ -13192,7 +13121,7 @@ components:
                   SubCategory: Coffee Shops
                 - TrnID: 14839181
                   TrnType: Debit
-                  PostedDt: '2021-07-09'
+                  PostedDt: '2021-07-09T12:00:00Z'
                   CurAmt:
                     Amt: -308.62
                     CurCode: USD
@@ -13202,7 +13131,7 @@ components:
                   SubCategory: Miscellaneous Equipment, Materials & Supplies
                 - TrnID: 14839182
                   TrnType: Debit
-                  PostedDt: '2021-07-01'
+                  PostedDt: '2021-07-01T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13212,7 +13141,7 @@ components:
                   SubCategory: Other Charitable Contributions
                 - TrnID: 14839183
                   TrnType: Debit
-                  PostedDt: '2021-06-28'
+                  PostedDt: '2021-06-28T12:00:00Z'
                   CurAmt:
                     Amt: -18
                     CurCode: USD
@@ -13222,7 +13151,7 @@ components:
                   SubCategory: Air Travel
                 - TrnID: 14839184
                   TrnType: Credit
-                  PostedDt: '2021-06-15'
+                  PostedDt: '2021-06-15T12:00:00Z'
                   CurAmt:
                     Amt: 308.99
                     CurCode: USD
@@ -13232,7 +13161,7 @@ components:
                   SubCategory: Credit Card Payment
                 - TrnID: 14839185
                   TrnType: Debit
-                  PostedDt: '2021-06-11'
+                  PostedDt: '2021-06-11T12:00:00Z'
                   CurAmt:
                     Amt: -86
                     CurCode: USD
@@ -13243,7 +13172,7 @@ components:
                   SubCategory: Children & Toys
                 - TrnID: 14839186
                   TrnType: Debit
-                  PostedDt: '2021-06-02'
+                  PostedDt: '2021-06-02T12:00:00Z'
                   CurAmt:
                     Amt: -80
                     CurCode: USD
@@ -13253,7 +13182,7 @@ components:
                   SubCategory: TV, Internet, Phone
                 - TrnID: 14839187
                   TrnType: Credit
-                  PostedDt: '2021-06-01'
+                  PostedDt: '2021-06-01T12:00:00Z'
                   CurAmt:
                     Amt: 452.3
                     CurCode: USD
@@ -13263,7 +13192,7 @@ components:
                   SubCategory: Auto/Vehicle Insurance
                 - TrnID: 14839188
                   TrnType: Debit
-                  PostedDt: '2021-06-01'
+                  PostedDt: '2021-06-01T12:00:00Z'
                   CurAmt:
                     Amt: -39.41
                     CurCode: USD
@@ -13273,7 +13202,7 @@ components:
                   SubCategory: Wireless/Cellular
                 - TrnID: 14839189
                   TrnType: Debit
-                  PostedDt: '2021-05-24'
+                  PostedDt: '2021-05-24T12:00:00Z'
                   CurAmt:
                     Amt: -89.82
                     CurCode: USD
@@ -13283,7 +13212,7 @@ components:
                   SubCategory: NA
                 - TrnID: 14839190
                   TrnType: Credit
-                  PostedDt: '2021-05-24'
+                  PostedDt: '2021-05-24T12:00:00Z'
                   CurAmt:
                     Amt: 25
                     CurCode: USD
@@ -13293,7 +13222,7 @@ components:
                   SubCategory: Printing & Shipping
                 - TrnID: 14839191
                   TrnType: Debit
-                  PostedDt: '2021-05-22'
+                  PostedDt: '2021-05-22T12:00:00Z'
                   CurAmt:
                     Amt: -22.65
                     CurCode: USD
@@ -13303,7 +13232,7 @@ components:
                   SubCategory: Coffee Shops
                 - TrnID: 14839192
                   TrnType: Debit
-                  PostedDt: '2021-05-21'
+                  PostedDt: '2021-05-21T12:00:00Z'
                   CurAmt:
                     Amt: -308.62
                     CurCode: USD
@@ -13313,7 +13242,7 @@ components:
                   SubCategory: Miscellaneous Equipment, Materials & Supplies
                 - TrnID: 14839193
                   TrnType: Debit
-                  PostedDt: '2021-05-20'
+                  PostedDt: '2021-05-20T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13323,7 +13252,7 @@ components:
                   SubCategory: Other Charitable Contributions
                 - TrnID: 14839194
                   TrnType: Debit
-                  PostedDt: '2021-05-13'
+                  PostedDt: '2021-05-13T12:00:00Z'
                   CurAmt:
                     Amt: -18
                     CurCode: USD
@@ -13333,7 +13262,7 @@ components:
                   SubCategory: Air Travel
                 - TrnID: 14839195
                   TrnType: Credit
-                  PostedDt: '2021-04-29'
+                  PostedDt: '2021-04-29T12:00:00Z'
                   CurAmt:
                     Amt: 308.99
                     CurCode: USD
@@ -13343,7 +13272,7 @@ components:
                   SubCategory: Credit Card Payment
                 - TrnID: 14839196
                   TrnType: Debit
-                  PostedDt: '2021-04-26'
+                  PostedDt: '2021-04-26T12:00:00Z'
                   CurAmt:
                     Amt: -86
                     CurCode: USD
@@ -13354,7 +13283,7 @@ components:
                   SubCategory: Children & Toys
                 - TrnID: 14839197
                   TrnType: Credit
-                  PostedDt: '2021-03-31'
+                  PostedDt: '2021-03-31T12:00:00Z'
                   CurAmt:
                     Amt: 0.05
                     CurCode: USD
@@ -13364,7 +13293,7 @@ components:
                   SubCategory: NA
                 - TrnID: 14839198
                   TrnType: Debit
-                  PostedDt: '2021-03-24'
+                  PostedDt: '2021-03-24T12:00:00Z'
                   CurAmt:
                     Amt: -1.99
                     CurCode: USD
@@ -13375,7 +13304,7 @@ components:
                   SubCategory: Books & Other Media
                 - TrnID: 14839199
                   TrnType: Credit
-                  PostedDt: '2021-03-23'
+                  PostedDt: '2021-03-23T12:00:00Z'
                   CurAmt:
                     Amt: 6.5
                     CurCode: USD
@@ -13385,7 +13314,7 @@ components:
                   SubCategory: Awards & Rebate Credits
                 - TrnID: 14839200
                   TrnType: Credit
-                  PostedDt: '2021-03-12'
+                  PostedDt: '2021-03-12T12:00:00Z'
                   CurAmt:
                     Amt: 2800
                     CurCode: USD
@@ -13395,7 +13324,7 @@ components:
                   SubCategory: Deposit
                 - TrnID: 14839201
                   TrnType: Debit
-                  PostedDt: '2021-03-03'
+                  PostedDt: '2021-03-03T12:00:00Z'
                   CurAmt:
                     Amt: -29.6
                     CurCode: USD
@@ -13406,7 +13335,7 @@ components:
                   SubCategory: HOA Fees
                 - TrnID: 14839202
                   TrnType: Debit
-                  PostedDt: '2021-02-24'
+                  PostedDt: '2021-02-24T12:00:00Z'
                   CurAmt:
                     Amt: -160
                     CurCode: USD
@@ -13416,7 +13345,7 @@ components:
                   SubCategory: NA
                 - TrnID: 14839203
                   TrnType: Debit
-                  PostedDt: '2021-01-29'
+                  PostedDt: '2021-01-29T12:00:00Z'
                   CurAmt:
                     Amt: -600
                     CurCode: USD
@@ -13427,7 +13356,7 @@ components:
                   SubCategory: Child Support
                 - TrnID: 14839204
                   TrnType: Debit
-                  PostedDt: '2021-01-05'
+                  PostedDt: '2021-01-05T12:00:00Z'
                   CurAmt:
                     Amt: -34
                     CurCode: USD
@@ -13437,7 +13366,7 @@ components:
                   SubCategory: Other Fees & Charges
                 - TrnID: 14839205
                   TrnType: Debit
-                  PostedDt: '2020-10-09'
+                  PostedDt: '2020-10-09T12:00:00Z'
                   CurAmt:
                     Amt: -5
                     CurCode: USD
@@ -13447,7 +13376,7 @@ components:
                   SubCategory: Student Loans
                 - TrnID: 14839206
                   TrnType: Debit
-                  PostedDt: '2020-08-31'
+                  PostedDt: '2020-08-31T12:00:00Z'
                   CurAmt:
                     Amt: -11
                     CurCode: USD
@@ -13457,7 +13386,7 @@ components:
                   SubCategory: Charities
                 - TrnID: 14839207
                   TrnType: Credit
-                  PostedDt: '2020-08-11'
+                  PostedDt: '2020-08-11T12:00:00Z'
                   CurAmt:
                     Amt: 0.02
                     CurCode: USD
@@ -13467,7 +13396,7 @@ components:
                   SubCategory: Bonus
                 - TrnID: 14839208
                   TrnType: Debit
-                  PostedDt: '2020-07-27'
+                  PostedDt: '2020-07-27T12:00:00Z'
                   CurAmt:
                     Amt: -115
                     CurCode: USD
@@ -13477,7 +13406,7 @@ components:
                   SubCategory: NA
                 - TrnID: 14839209
                   TrnType: Debit
-                  PostedDt: '2020-05-20'
+                  PostedDt: '2020-05-20T12:00:00Z'
                   CurAmt:
                     Amt: -140
                     CurCode: USD
@@ -13488,7 +13417,7 @@ components:
                   SubCategory: Tuition & School Fees
                 - TrnID: 14839210
                   TrnType: Credit
-                  PostedDt: '2020-01-24'
+                  PostedDt: '2020-01-24T12:00:00Z'
                   CurAmt:
                     Amt: 20
                     CurCode: USD
@@ -13516,8 +13445,8 @@ components:
                 BankAcctTrnRec:
                 - TrnID: 6727777
                   TrnType: Debit
-                  PostedDt: '2021-10-06'
-                  OrigDt: '2021-10-06'
+                  PostedDt: '2021-10-06T12:00:00Z'
+                  OrigDt: '2021-10-06T12:00:00Z'
                   CurAmt:
                     Amt: -20
                     CurCode: USD
@@ -13527,8 +13456,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727778
                   TrnType: Credit
-                  PostedDt: '2021-09-29'
-                  OrigDt: '2021-09-29'
+                  PostedDt: '2021-09-29T12:00:00Z'
+                  OrigDt: '2021-09-29T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13538,8 +13467,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727779
                   TrnType: Debit
-                  PostedDt: '2021-09-24'
-                  OrigDt: '2021-09-24'
+                  PostedDt: '2021-09-24T12:00:00Z'
+                  OrigDt: '2021-09-24T12:00:00Z'
                   CurAmt:
                     Amt: -25
                     CurCode: USD
@@ -13549,8 +13478,8 @@ components:
                   SubCategory: Fast Food
                 - TrnID: 6727780
                   TrnType: Credit
-                  PostedDt: '2021-09-13'
-                  OrigDt: '2021-09-13'
+                  PostedDt: '2021-09-13T12:00:00Z'
+                  OrigDt: '2021-09-13T12:00:00Z'
                   CurAmt:
                     Amt: 1000
                     CurCode: USD
@@ -13560,8 +13489,8 @@ components:
                   SubCategory: Credit Card Payment
                 - TrnID: 6727781
                   TrnType: Debit
-                  PostedDt: '2021-08-30'
-                  OrigDt: '2021-08-30'
+                  PostedDt: '2021-08-30T12:00:00Z'
+                  OrigDt: '2021-08-30T12:00:00Z'
                   CurAmt:
                     Amt: -50
                     CurCode: USD
@@ -13571,8 +13500,8 @@ components:
                   SubCategory: Gas & Fuel
                 - TrnID: 6727782
                   TrnType: Debit
-                  PostedDt: '2021-08-16'
-                  OrigDt: '2021-08-16'
+                  PostedDt: '2021-08-16T12:00:00Z'
+                  OrigDt: '2021-08-16T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13582,8 +13511,8 @@ components:
                   SubCategory: Activities
                 - TrnID: 6727783
                   TrnType: Debit
-                  PostedDt: '2021-08-10'
-                  OrigDt: '2021-08-10'
+                  PostedDt: '2021-08-10T12:00:00Z'
+                  OrigDt: '2021-08-10T12:00:00Z'
                   CurAmt:
                     Amt: -20
                     CurCode: USD
@@ -13593,8 +13522,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727784
                   TrnType: Credit
-                  PostedDt: '2021-07-29'
-                  OrigDt: '2021-07-29'
+                  PostedDt: '2021-07-29T12:00:00Z'
+                  OrigDt: '2021-07-29T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13604,8 +13533,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727785
                   TrnType: Debit
-                  PostedDt: '2021-07-20'
-                  OrigDt: '2021-07-20'
+                  PostedDt: '2021-07-20T12:00:00Z'
+                  OrigDt: '2021-07-20T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13615,8 +13544,8 @@ components:
                   SubCategory: Activities
                 - TrnID: 6727786
                   TrnType: Credit
-                  PostedDt: '2021-07-02'
-                  OrigDt: '2021-07-02'
+                  PostedDt: '2021-07-02T12:00:00Z'
+                  OrigDt: '2021-07-02T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13626,8 +13555,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727787
                   TrnType: Debit
-                  PostedDt: '2021-06-23'
-                  OrigDt: '2021-06-23'
+                  PostedDt: '2021-06-23T12:00:00Z'
+                  OrigDt: '2021-06-23T12:00:00Z'
                   CurAmt:
                     Amt: -25
                     CurCode: USD
@@ -13637,8 +13566,8 @@ components:
                   SubCategory: Fast Food
                 - TrnID: 6727788
                   TrnType: Debit
-                  PostedDt: '2021-06-11'
-                  OrigDt: '2021-06-11'
+                  PostedDt: '2021-06-11T12:00:00Z'
+                  OrigDt: '2021-06-11T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13648,8 +13577,8 @@ components:
                   SubCategory: Activities
                 - TrnID: 6727789
                   TrnType: Debit
-                  PostedDt: '2021-05-23'
-                  OrigDt: '2021-05-23'
+                  PostedDt: '2021-05-23T12:00:00Z'
+                  OrigDt: '2021-05-23T12:00:00Z'
                   CurAmt:
                     Amt: -20
                     CurCode: USD
@@ -13659,8 +13588,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727790
                   TrnType: Debit
-                  PostedDt: '2021-05-11'
-                  OrigDt: '2021-05-11'
+                  PostedDt: '2021-05-11T12:00:00Z'
+                  OrigDt: '2021-05-11T12:00:00Z'
                   CurAmt:
                     Amt: -20
                     CurCode: USD
@@ -13670,8 +13599,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727791
                   TrnType: Credit
-                  PostedDt: '2021-04-25'
-                  OrigDt: '2021-04-25'
+                  PostedDt: '2021-04-25T12:00:00Z'
+                  OrigDt: '2021-04-25T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13681,8 +13610,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727792
                   TrnType: Debit
-                  PostedDt: '2021-04-04'
-                  OrigDt: '2021-04-04'
+                  PostedDt: '2021-04-04T12:00:00Z'
+                  OrigDt: '2021-04-04T12:00:00Z'
                   CurAmt:
                     Amt: -25
                     CurCode: USD
@@ -13692,8 +13621,8 @@ components:
                   SubCategory: Fast Food
                 - TrnID: 6727793
                   TrnType: Credit
-                  PostedDt: '2021-03-23'
-                  OrigDt: '2021-03-23'
+                  PostedDt: '2021-03-23T12:00:00Z'
+                  OrigDt: '2021-03-23T12:00:00Z'
                   CurAmt:
                     Amt: 1000
                     CurCode: USD
@@ -13703,8 +13632,8 @@ components:
                   SubCategory: Credit Card Payment
                 - TrnID: 6727794
                   TrnType: Debit
-                  PostedDt: '2021-03-13'
-                  OrigDt: '2021-03-13'
+                  PostedDt: '2021-03-13T12:00:00Z'
+                  OrigDt: '2021-03-13T12:00:00Z'
                   CurAmt:
                     Amt: -50
                     CurCode: USD
@@ -13714,8 +13643,8 @@ components:
                   SubCategory: Gas & Fuel
                 - TrnID: 6727795
                   TrnType: Debit
-                  PostedDt: '2021-03-11'
-                  OrigDt: '2021-03-11'
+                  PostedDt: '2021-03-11T12:00:00Z'
+                  OrigDt: '2021-03-11T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13725,8 +13654,8 @@ components:
                   SubCategory: Activities
                 - TrnID: 6727796
                   TrnType: Debit
-                  PostedDt: '2021-02-17'
-                  OrigDt: '2021-02-17'
+                  PostedDt: '2021-02-17T12:00:00Z'
+                  OrigDt: '2021-02-17T12:00:00Z'
                   CurAmt:
                     Amt: -20
                     CurCode: USD
@@ -13736,8 +13665,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727797
                   TrnType: Credit
-                  PostedDt: '2021-02-07'
-                  OrigDt: '2021-02-07'
+                  PostedDt: '2021-02-07T12:00:00Z'
+                  OrigDt: '2021-02-07T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13747,8 +13676,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727798
                   TrnType: Debit
-                  PostedDt: '2021-01-28'
-                  OrigDt: '2021-01-28'
+                  PostedDt: '2021-01-28T12:00:00Z'
+                  OrigDt: '2021-01-28T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13758,8 +13687,8 @@ components:
                   SubCategory: Activities
                 - TrnID: 6727799
                   TrnType: Credit
-                  PostedDt: '2021-01-25'
-                  OrigDt: '2021-01-25'
+                  PostedDt: '2021-01-25T12:00:00Z'
+                  OrigDt: '2021-01-25T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13769,8 +13698,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727800
                   TrnType: Debit
-                  PostedDt: '2021-01-21'
-                  OrigDt: '2021-01-21'
+                  PostedDt: '2021-01-21T12:00:00Z'
+                  OrigDt: '2021-01-21T12:00:00Z'
                   CurAmt:
                     Amt: -25
                     CurCode: USD
@@ -13780,8 +13709,8 @@ components:
                   SubCategory: Fast Food
                 - TrnID: 6727801
                   TrnType: Credit
-                  PostedDt: '2021-01-16'
-                  OrigDt: '2021-01-16'
+                  PostedDt: '2021-01-16T12:00:00Z'
+                  OrigDt: '2021-01-16T12:00:00Z'
                   CurAmt:
                     Amt: 1000
                     CurCode: USD
@@ -13791,8 +13720,8 @@ components:
                   SubCategory: Credit Card Payment
                 - TrnID: 6727802
                   TrnType: Debit
-                  PostedDt: '2021-01-13'
-                  OrigDt: '2021-01-13'
+                  PostedDt: '2021-01-13T12:00:00Z'
+                  OrigDt: '2021-01-13T12:00:00Z'
                   CurAmt:
                     Amt: -50
                     CurCode: USD
@@ -13802,8 +13731,8 @@ components:
                   SubCategory: Gas & Fuel
                 - TrnID: 6727803
                   TrnType: Debit
-                  PostedDt: '2021-01-11'
-                  OrigDt: '2021-01-11'
+                  PostedDt: '2021-01-11T12:00:00Z'
+                  OrigDt: '2021-01-11T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13813,8 +13742,8 @@ components:
                   SubCategory: Activities
                 - TrnID: 6727804
                   TrnType: Debit
-                  PostedDt: '2021-01-06'
-                  OrigDt: '2021-01-06'
+                  PostedDt: '2021-01-06T12:00:00Z'
+                  OrigDt: '2021-01-06T12:00:00Z'
                   CurAmt:
                     Amt: -20
                     CurCode: USD
@@ -13824,8 +13753,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727805
                   TrnType: Credit
-                  PostedDt: '2021-01-04'
-                  OrigDt: '2021-01-04'
+                  PostedDt: '2021-01-04T12:00:00Z'
+                  OrigDt: '2021-01-04T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13835,8 +13764,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727806
                   TrnType: Debit
-                  PostedDt: '2020-12-26'
-                  OrigDt: '2020-12-26'
+                  PostedDt: '2020-12-26T12:00:00Z'
+                  OrigDt: '2020-12-26T12:00:00Z'
                   CurAmt:
                     Amt: -526.6
                     CurCode: USD
@@ -13846,8 +13775,8 @@ components:
                   SubCategory: Auto/Vehicle Repair & Maintenance
                 - TrnID: 6727807
                   TrnType: Debit
-                  PostedDt: '2020-12-23'
-                  OrigDt: '2020-12-23'
+                  PostedDt: '2020-12-23T12:00:00Z'
+                  OrigDt: '2020-12-23T12:00:00Z'
                   CurAmt:
                     Amt: -1311.61
                     CurCode: USD
@@ -13857,8 +13786,8 @@ components:
                   SubCategory: Auto/Vehicle Repair & Maintenance
                 - TrnID: 6727808
                   TrnType: Credit
-                  PostedDt: '2020-12-21'
-                  OrigDt: '2020-12-21'
+                  PostedDt: '2020-12-21T12:00:00Z'
+                  OrigDt: '2020-12-21T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13868,8 +13797,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727809
                   TrnType: Debit
-                  PostedDt: '2020-12-17'
-                  OrigDt: '2020-12-17'
+                  PostedDt: '2020-12-17T12:00:00Z'
+                  OrigDt: '2020-12-17T12:00:00Z'
                   CurAmt:
                     Amt: -50
                     CurCode: USD
@@ -13879,8 +13808,8 @@ components:
                   SubCategory: Gas & Fuel
                 - TrnID: 6727810
                   TrnType: Debit
-                  PostedDt: '2020-12-14'
-                  OrigDt: '2020-12-14'
+                  PostedDt: '2020-12-14T12:00:00Z'
+                  OrigDt: '2020-12-14T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13890,8 +13819,8 @@ components:
                   SubCategory: Activities
                 - TrnID: 6727811
                   TrnType: Debit
-                  PostedDt: '2020-12-10'
-                  OrigDt: '2020-12-10'
+                  PostedDt: '2020-12-10T12:00:00Z'
+                  OrigDt: '2020-12-10T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13901,8 +13830,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727812
                   TrnType: Debit
-                  PostedDt: '2020-12-07'
-                  OrigDt: '2020-12-07'
+                  PostedDt: '2020-12-07T12:00:00Z'
+                  OrigDt: '2020-12-07T12:00:00Z'
                   CurAmt:
                     Amt: -200
                     CurCode: USD
@@ -13912,8 +13841,8 @@ components:
                   SubCategory: Health & Beauty
                 - TrnID: 6727813
                   TrnType: Debit
-                  PostedDt: '2020-12-04'
-                  OrigDt: '2020-12-04'
+                  PostedDt: '2020-12-04T12:00:00Z'
+                  OrigDt: '2020-12-04T12:00:00Z'
                   CurAmt:
                     Amt: -300
                     CurCode: USD
@@ -13923,8 +13852,8 @@ components:
                   SubCategory: Hotel & Lodging
                 - TrnID: 6727814
                   TrnType: Debit
-                  PostedDt: '2020-11-27'
-                  OrigDt: '2020-11-27'
+                  PostedDt: '2020-11-27T12:00:00Z'
+                  OrigDt: '2020-11-27T12:00:00Z'
                   CurAmt:
                     Amt: -400
                     CurCode: USD
@@ -13934,8 +13863,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727815
                   TrnType: Credit
-                  PostedDt: '2020-11-26'
-                  OrigDt: '2020-11-26'
+                  PostedDt: '2020-11-26T12:00:00Z'
+                  OrigDt: '2020-11-26T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -13945,8 +13874,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727816
                   TrnType: Debit
-                  PostedDt: '2020-11-21'
-                  OrigDt: '2020-11-21'
+                  PostedDt: '2020-11-21T12:00:00Z'
+                  OrigDt: '2020-11-21T12:00:00Z'
                   CurAmt:
                     Amt: -50
                     CurCode: USD
@@ -13956,8 +13885,8 @@ components:
                   SubCategory: Gas & Fuel
                 - TrnID: 6727817
                   TrnType: Debit
-                  PostedDt: '2020-11-18'
-                  OrigDt: '2020-11-18'
+                  PostedDt: '2020-11-18T12:00:00Z'
+                  OrigDt: '2020-11-18T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -13967,8 +13896,8 @@ components:
                   SubCategory: Activities
                 - TrnID: 6727818
                   TrnType: Credit
-                  PostedDt: '2020-11-17'
-                  OrigDt: '2020-11-17'
+                  PostedDt: '2020-11-17T12:00:00Z'
+                  OrigDt: '2020-11-17T12:00:00Z'
                   CurAmt:
                     Amt: 1000
                     CurCode: USD
@@ -13978,8 +13907,8 @@ components:
                   SubCategory: Credit Card Payment
                 - TrnID: 6727819
                   TrnType: Debit
-                  PostedDt: '2020-11-11'
-                  OrigDt: '2020-11-11'
+                  PostedDt: '2020-11-11T12:00:00Z'
+                  OrigDt: '2020-11-11T12:00:00Z'
                   CurAmt:
                     Amt: -526.6
                     CurCode: USD
@@ -13989,8 +13918,8 @@ components:
                   SubCategory: Auto/Vehicle Repair & Maintenance
                 - TrnID: 6727820
                   TrnType: Debit
-                  PostedDt: '2020-11-09'
-                  OrigDt: '2020-11-09'
+                  PostedDt: '2020-11-09T12:00:00Z'
+                  OrigDt: '2020-11-09T12:00:00Z'
                   CurAmt:
                     Amt: -1311.61
                     CurCode: USD
@@ -14000,8 +13929,8 @@ components:
                   SubCategory: Auto/Vehicle Repair & Maintenance
                 - TrnID: 6727821
                   TrnType: Debit
-                  PostedDt: '2020-11-08'
-                  OrigDt: '2020-11-08'
+                  PostedDt: '2020-11-08T12:00:00Z'
+                  OrigDt: '2020-11-08T12:00:00Z'
                   CurAmt:
                     Amt: -20
                     CurCode: USD
@@ -14011,8 +13940,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727822
                   TrnType: Debit
-                  PostedDt: '2020-11-07'
-                  OrigDt: '2020-11-07'
+                  PostedDt: '2020-11-07T12:00:00Z'
+                  OrigDt: '2020-11-07T12:00:00Z'
                   CurAmt:
                     Amt: -25
                     CurCode: USD
@@ -14022,8 +13951,8 @@ components:
                   SubCategory: Fast Food
                 - TrnID: 6727823
                   TrnType: Debit
-                  PostedDt: '2020-11-04'
-                  OrigDt: '2020-11-04'
+                  PostedDt: '2020-11-04T12:00:00Z'
+                  OrigDt: '2020-11-04T12:00:00Z'
                   CurAmt:
                     Amt: -50
                     CurCode: USD
@@ -14033,8 +13962,8 @@ components:
                   SubCategory: TV, Internet, Phone
                 - TrnID: 6727826
                   TrnType: Debit
-                  PostedDt: '2016-11-16'
-                  OrigDt: '2016-11-16'
+                  PostedDt: '2016-11-16T12:00:00Z'
+                  OrigDt: '2016-11-16T12:00:00Z'
                   CurAmt:
                     Amt: -25
                     CurCode: USD
@@ -14044,8 +13973,8 @@ components:
                   SubCategory: Fast Food
                 - TrnID: 6727825
                   TrnType: Credit
-                  PostedDt: '2016-10-15'
-                  OrigDt: '2016-10-15'
+                  PostedDt: '2016-10-15T12:00:00Z'
+                  OrigDt: '2016-10-15T12:00:00Z'
                   CurAmt:
                     Amt: 300
                     CurCode: USD
@@ -14055,8 +13984,8 @@ components:
                   SubCategory: Restaurants
                 - TrnID: 6727824
                   TrnType: Debit
-                  PostedDt: '2016-09-14'
-                  OrigDt: '2016-09-14'
+                  PostedDt: '2016-09-14T12:00:00Z'
+                  OrigDt: '2016-09-14T12:00:00Z'
                   CurAmt:
                     Amt: -100
                     CurCode: USD
@@ -14080,8 +14009,8 @@ components:
             Role: Admin
         DeletedTrnInqRq:
           SelRangeDt:
-            StartDt: '2019-09-23'
-            EndDt: '2019-09-24'
+            StartDt: '2019-09-23T12:00:00Z'
+            EndDt: '2019-09-24T12:00:00Z'
           StartRowNum: 1
         partnerID: 8885504
         version: version1
@@ -14105,8 +14034,8 @@ components:
             Severity: Info
             StatusDesc: Success
           SelRangeDt:
-            StartDt: '2019-09-23'
-            EndDt: '2019-09-24'
+            StartDt: '2019-09-23T12:00:00Z'
+            EndDt: '2019-09-24T12:00:00Z'
           BankAcctTrnInfo:
           - CEUserID: 3211375
             FILoginAcctId: 5320419
@@ -14114,7 +14043,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495243
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -29
                 CurCode: USD
@@ -14128,7 +14057,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495242
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -37
                 CurCode: USD
@@ -14142,7 +14071,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495241
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -82
                 CurCode: USD
@@ -14156,7 +14085,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495240
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -231
                 CurCode: USD
@@ -14170,7 +14099,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495239
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -12
                 CurCode: USD
@@ -14184,7 +14113,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495238
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 29
                 CurCode: USD
@@ -14198,7 +14127,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495237
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -52
                 CurCode: USD
@@ -14212,7 +14141,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495236
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -543
                 CurCode: USD
@@ -14226,7 +14155,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495235
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 532
                 CurCode: USD
@@ -14240,7 +14169,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495234
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -34
                 CurCode: USD
@@ -14254,7 +14183,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495233
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -231
                 CurCode: USD
@@ -14268,7 +14197,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495232
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -4
                 CurCode: USD
@@ -14282,7 +14211,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495231
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -52.23
                 CurCode: USD
@@ -14296,7 +14225,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495230
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -15
                 CurCode: USD
@@ -14310,7 +14239,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495229
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -32
                 CurCode: USD
@@ -14324,7 +14253,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495228
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2
                 CurCode: USD
@@ -14339,7 +14268,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495227
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -42
                 CurCode: USD
@@ -14353,7 +14282,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495226
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 872
                 CurCode: USD
@@ -14367,7 +14296,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495218
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -543
                 CurCode: USD
@@ -14381,7 +14310,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495207
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -29
                 CurCode: USD
@@ -14395,7 +14324,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495206
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -37
                 CurCode: USD
@@ -14409,7 +14338,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495205
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -82
                 CurCode: USD
@@ -14423,7 +14352,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495204
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -231
                 CurCode: USD
@@ -14437,7 +14366,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495203
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -12
                 CurCode: USD
@@ -14451,7 +14380,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495202
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 29
                 CurCode: USD
@@ -14465,7 +14394,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495201
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -52
                 CurCode: USD
@@ -14479,7 +14408,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495199
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 532
                 CurCode: USD
@@ -14493,7 +14422,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495198
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -34
                 CurCode: USD
@@ -14507,7 +14436,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495197
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -231
                 CurCode: USD
@@ -14521,7 +14450,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495196
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -4
                 CurCode: USD
@@ -14535,7 +14464,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495195
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -52.23
                 CurCode: USD
@@ -14549,7 +14478,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495194
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -15
                 CurCode: USD
@@ -14563,7 +14492,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495193
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -32
                 CurCode: USD
@@ -14577,7 +14506,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495192
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2
                 CurCode: USD
@@ -14592,7 +14521,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495191
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -42
                 CurCode: USD
@@ -14606,7 +14535,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495190
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 872
                 CurCode: USD
@@ -14620,7 +14549,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495189
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -14634,7 +14563,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495187
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1212
                 CurCode: USD
@@ -14648,7 +14577,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495186
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -543
                 CurCode: USD
@@ -14662,7 +14591,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495185
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -14676,7 +14605,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495183
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -14690,7 +14619,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495182
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1192
                 CurCode: USD
@@ -14704,7 +14633,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495181
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -14718,7 +14647,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495180
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -14732,7 +14661,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495178
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -61
                 CurCode: USD
@@ -14746,7 +14675,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495177
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -817
                 CurCode: USD
@@ -14760,7 +14689,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495176
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -112
                 CurCode: USD
@@ -14774,7 +14703,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495175
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -98.651
                 CurCode: USD
@@ -14788,7 +14717,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495174
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1987
                 CurCode: USD
@@ -14802,7 +14731,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495173
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2112
                 CurCode: USD
@@ -14816,7 +14745,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495172
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -14830,7 +14759,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495170
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -576
                 CurCode: USD
@@ -14844,7 +14773,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495166
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -14858,7 +14787,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495161
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -14872,7 +14801,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495151
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1212
                 CurCode: USD
@@ -14886,7 +14815,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495150
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -543
                 CurCode: USD
@@ -14900,7 +14829,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495149
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -14914,7 +14843,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495147
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -14928,7 +14857,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495146
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1192
                 CurCode: USD
@@ -14942,7 +14871,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495145
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -14956,7 +14885,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495144
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -14970,7 +14899,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495142
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -61
                 CurCode: USD
@@ -14984,7 +14913,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495141
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -817
                 CurCode: USD
@@ -14998,7 +14927,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495140
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -112
                 CurCode: USD
@@ -15012,7 +14941,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495138
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1987
                 CurCode: USD
@@ -15026,7 +14955,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495137
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2112
                 CurCode: USD
@@ -15040,7 +14969,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495136
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -15054,7 +14983,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495135
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -15068,7 +14997,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495134
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -576
                 CurCode: USD
@@ -15082,7 +15011,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495130
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -15096,7 +15025,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495125
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -15110,7 +15039,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495121
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -98.651
                 CurCode: USD
@@ -15124,7 +15053,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495112
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -15138,7 +15067,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495108
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -214
                 CurCode: USD
@@ -15152,7 +15081,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495107
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -15166,7 +15095,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495102
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -987
                 CurCode: USD
@@ -15180,7 +15109,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495101
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -15194,7 +15123,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495099
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -15208,7 +15137,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495098
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1576
                 CurCode: USD
@@ -15222,7 +15151,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495097
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -15236,7 +15165,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495096
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -524
                 CurCode: USD
@@ -15250,7 +15179,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495095
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -15264,7 +15193,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495093
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -15278,7 +15207,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495092
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1912
                 CurCode: USD
@@ -15292,7 +15221,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495091
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1981
                 CurCode: USD
@@ -15306,7 +15235,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495088
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -15321,7 +15250,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495087
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -870
                 CurCode: USD
@@ -15335,7 +15264,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495086
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1112
                 CurCode: USD
@@ -15349,7 +15278,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495085
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1198.651
                 CurCode: USD
@@ -15363,7 +15292,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495082
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -15377,7 +15306,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495081
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -15391,7 +15320,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495071
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -15405,7 +15334,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495062
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1576
                 CurCode: USD
@@ -15419,7 +15348,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495061
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -15433,7 +15362,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495060
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -524
                 CurCode: USD
@@ -15447,7 +15376,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495059
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -15461,7 +15390,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495058
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -15475,7 +15404,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495057
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -15489,7 +15418,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495056
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1912
                 CurCode: USD
@@ -15503,7 +15432,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495055
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1981
                 CurCode: USD
@@ -15517,7 +15446,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495054
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -214
                 CurCode: USD
@@ -15531,7 +15460,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495052
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -15546,7 +15475,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495051
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -870
                 CurCode: USD
@@ -15560,7 +15489,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495050
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1112
                 CurCode: USD
@@ -15574,7 +15503,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495049
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1198.651
                 CurCode: USD
@@ -15588,7 +15517,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495048
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -987
                 CurCode: USD
@@ -15602,7 +15531,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495047
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -15616,7 +15545,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495046
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -15630,7 +15559,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495027
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -15644,7 +15573,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495026
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1272
                 CurCode: USD
@@ -15658,7 +15587,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495025
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -185.93
                 CurCode: USD
@@ -15672,7 +15601,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495024
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -243.87
                 CurCode: USD
@@ -15686,7 +15615,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495023
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1671
                 CurCode: USD
@@ -15700,7 +15629,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495022
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 2200
                 CurCode: USD
@@ -15714,7 +15643,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495021
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1560
                 CurCode: USD
@@ -15728,7 +15657,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495020
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -15742,7 +15671,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495019
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1276.98
                 CurCode: USD
@@ -15756,7 +15685,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495018
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -962.22
                 CurCode: USD
@@ -15770,7 +15699,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495017
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1761
                 CurCode: USD
@@ -15784,7 +15713,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495016
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1298
                 CurCode: USD
@@ -15798,7 +15727,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495015
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1100
                 CurCode: USD
@@ -15812,7 +15741,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495014
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1287
                 CurCode: USD
@@ -15826,7 +15755,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495013
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1981
                 CurCode: USD
@@ -15840,7 +15769,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495012
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -15854,7 +15783,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495011
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1200
                 CurCode: USD
@@ -15868,7 +15797,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10495010
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -15882,7 +15811,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494993
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1200
                 CurCode: USD
@@ -15896,7 +15825,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494991
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -15910,7 +15839,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494990
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1272
                 CurCode: USD
@@ -15924,7 +15853,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494989
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -185.93
                 CurCode: USD
@@ -15938,7 +15867,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494988
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -243.87
                 CurCode: USD
@@ -15952,7 +15881,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494987
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1671
                 CurCode: USD
@@ -15966,7 +15895,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494986
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 2200
                 CurCode: USD
@@ -15980,7 +15909,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494985
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1560
                 CurCode: USD
@@ -15994,7 +15923,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494984
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -16008,7 +15937,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494983
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1276.98
                 CurCode: USD
@@ -16022,7 +15951,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494982
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -962.22
                 CurCode: USD
@@ -16036,7 +15965,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494981
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1761
                 CurCode: USD
@@ -16050,7 +15979,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494980
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1298
                 CurCode: USD
@@ -16064,7 +15993,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494979
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1100
                 CurCode: USD
@@ -16078,7 +16007,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494978
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1287
                 CurCode: USD
@@ -16092,7 +16021,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494977
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1981
                 CurCode: USD
@@ -16106,7 +16035,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494976
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -16120,7 +16049,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494974
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -16134,7 +16063,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494964
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -214
                 CurCode: USD
@@ -16148,7 +16077,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494955
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -16162,7 +16091,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494954
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1576
                 CurCode: USD
@@ -16176,7 +16105,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494953
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -16190,7 +16119,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494952
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -524
                 CurCode: USD
@@ -16204,7 +16133,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494951
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -16218,7 +16147,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494950
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -16232,7 +16161,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494949
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -16246,7 +16175,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494948
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1912
                 CurCode: USD
@@ -16260,7 +16189,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494947
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1981
                 CurCode: USD
@@ -16274,7 +16203,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494945
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -16288,7 +16217,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494944
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -16303,7 +16232,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494943
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -870
                 CurCode: USD
@@ -16317,7 +16246,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494942
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1112
                 CurCode: USD
@@ -16331,7 +16260,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494941
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1198.651
                 CurCode: USD
@@ -16345,7 +16274,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494940
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -987
                 CurCode: USD
@@ -16359,7 +16288,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494939
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -16373,7 +16302,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494938
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -16387,7 +16316,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494927
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -16401,7 +16330,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494919
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -16415,7 +16344,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494918
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1576
                 CurCode: USD
@@ -16429,7 +16358,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494917
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -16443,7 +16372,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494916
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -524
                 CurCode: USD
@@ -16457,7 +16386,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494915
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -16471,7 +16400,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494914
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -16485,7 +16414,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494913
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -16499,7 +16428,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494912
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1912
                 CurCode: USD
@@ -16513,7 +16442,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494911
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1981
                 CurCode: USD
@@ -16527,7 +16456,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494910
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -214
                 CurCode: USD
@@ -16541,7 +16470,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494908
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -16556,7 +16485,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494907
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -870
                 CurCode: USD
@@ -16570,7 +16499,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494906
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1112
                 CurCode: USD
@@ -16584,7 +16513,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494905
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1198.651
                 CurCode: USD
@@ -16598,7 +16527,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494904
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -987
                 CurCode: USD
@@ -16612,7 +16541,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494903
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -16626,7 +16555,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494902
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -16640,7 +16569,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494901
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -16654,7 +16583,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494899
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1212
                 CurCode: USD
@@ -16668,7 +16597,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494898
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -543
                 CurCode: USD
@@ -16682,7 +16611,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494897
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -16696,7 +16625,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494895
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -16710,7 +16639,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494894
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1192
                 CurCode: USD
@@ -16724,7 +16653,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494893
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -16738,7 +16667,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494892
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -16752,7 +16681,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494891
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -16766,7 +16695,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494890
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -61
                 CurCode: USD
@@ -16780,7 +16709,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494889
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -817
                 CurCode: USD
@@ -16794,7 +16723,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494888
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -112
                 CurCode: USD
@@ -16808,7 +16737,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494887
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -98.651
                 CurCode: USD
@@ -16822,7 +16751,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494886
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1987
                 CurCode: USD
@@ -16836,7 +16765,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494885
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2112
                 CurCode: USD
@@ -16850,7 +16779,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494884
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -16864,7 +16793,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494882
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -576
                 CurCode: USD
@@ -16878,7 +16807,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494878
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -16892,7 +16821,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494877
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -16906,7 +16835,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494875
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1212
                 CurCode: USD
@@ -16920,7 +16849,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494873
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -543
                 CurCode: USD
@@ -16934,7 +16863,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494871
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -16948,7 +16877,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494867
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -16962,7 +16891,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494865
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1192
                 CurCode: USD
@@ -16976,7 +16905,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494863
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -16990,7 +16919,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494861
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -17004,7 +16933,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494858
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -61
                 CurCode: USD
@@ -17018,7 +16947,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494855
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -817
                 CurCode: USD
@@ -17032,7 +16961,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494853
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -112
                 CurCode: USD
@@ -17046,7 +16975,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494851
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -98.651
                 CurCode: USD
@@ -17060,7 +16989,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494850
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1987
                 CurCode: USD
@@ -17074,7 +17003,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494849
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2112
                 CurCode: USD
@@ -17088,7 +17017,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494848
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -17102,7 +17031,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494846
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -576
                 CurCode: USD
@@ -17116,7 +17045,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494842
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -17130,7 +17059,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494837
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -17144,7 +17073,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494811
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -29
                 CurCode: USD
@@ -17158,7 +17087,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494810
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -37
                 CurCode: USD
@@ -17172,7 +17101,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494809
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -82
                 CurCode: USD
@@ -17186,7 +17115,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494808
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -231
                 CurCode: USD
@@ -17200,7 +17129,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494807
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -12
                 CurCode: USD
@@ -17214,7 +17143,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494806
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 29
                 CurCode: USD
@@ -17228,7 +17157,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494805
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -52
                 CurCode: USD
@@ -17242,7 +17171,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494804
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -543
                 CurCode: USD
@@ -17256,7 +17185,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494803
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 532
                 CurCode: USD
@@ -17270,7 +17199,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494802
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -34
                 CurCode: USD
@@ -17284,7 +17213,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494800
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -231
                 CurCode: USD
@@ -17298,7 +17227,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494798
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -4
                 CurCode: USD
@@ -17312,7 +17241,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494796
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -52.23
                 CurCode: USD
@@ -17326,7 +17255,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494795
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -15
                 CurCode: USD
@@ -17340,7 +17269,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494793
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -32
                 CurCode: USD
@@ -17354,7 +17283,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494792
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2
                 CurCode: USD
@@ -17369,7 +17298,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494790
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -42
                 CurCode: USD
@@ -17383,7 +17312,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494788
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 872
                 CurCode: USD
@@ -17397,7 +17326,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494786
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -543
                 CurCode: USD
@@ -17411,7 +17340,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494775
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -29
                 CurCode: USD
@@ -17425,7 +17354,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494774
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -37
                 CurCode: USD
@@ -17439,7 +17368,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494773
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -82
                 CurCode: USD
@@ -17453,7 +17382,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494772
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -231
                 CurCode: USD
@@ -17467,7 +17396,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494771
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -12
                 CurCode: USD
@@ -17481,7 +17410,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494770
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 29
                 CurCode: USD
@@ -17495,7 +17424,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494769
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -52
                 CurCode: USD
@@ -17509,7 +17438,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494767
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 532
                 CurCode: USD
@@ -17523,7 +17452,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494766
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -34
                 CurCode: USD
@@ -17537,7 +17466,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494765
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -231
                 CurCode: USD
@@ -17551,7 +17480,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494764
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -4
                 CurCode: USD
@@ -17565,7 +17494,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494763
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -52.23
                 CurCode: USD
@@ -17579,7 +17508,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494762
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -15
                 CurCode: USD
@@ -17593,7 +17522,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494761
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -32
                 CurCode: USD
@@ -17607,7 +17536,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494760
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2
                 CurCode: USD
@@ -17622,7 +17551,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494759
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -42
                 CurCode: USD
@@ -17636,7 +17565,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494758
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 872
                 CurCode: USD
@@ -17650,7 +17579,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494700
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -17664,7 +17593,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494698
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1272
                 CurCode: USD
@@ -17678,7 +17607,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494696
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -185.93
                 CurCode: USD
@@ -17692,7 +17621,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494694
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -243.87
                 CurCode: USD
@@ -17706,7 +17635,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494692
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1671
                 CurCode: USD
@@ -17720,7 +17649,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494690
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 2200
                 CurCode: USD
@@ -17734,7 +17663,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494688
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1560
                 CurCode: USD
@@ -17748,7 +17677,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494686
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -17762,7 +17691,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494684
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1276.98
                 CurCode: USD
@@ -17776,7 +17705,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494681
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -962.22
                 CurCode: USD
@@ -17790,7 +17719,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494679
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1761
                 CurCode: USD
@@ -17804,7 +17733,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494676
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1298
                 CurCode: USD
@@ -17818,7 +17747,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494674
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1100
                 CurCode: USD
@@ -17832,7 +17761,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494671
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1287
                 CurCode: USD
@@ -17846,7 +17775,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494668
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1200
                 CurCode: USD
@@ -17860,7 +17789,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494666
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1981
                 CurCode: USD
@@ -17874,7 +17803,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494662
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -17888,7 +17817,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494659
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -17902,7 +17831,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494658
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1200
                 CurCode: USD
@@ -17916,7 +17845,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494656
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1272
                 CurCode: USD
@@ -17930,7 +17859,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494655
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -17944,7 +17873,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494653
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -185.93
                 CurCode: USD
@@ -17958,7 +17887,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494650
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -243.87
                 CurCode: USD
@@ -17972,7 +17901,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494648
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1671
                 CurCode: USD
@@ -17986,7 +17915,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494646
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 2200
                 CurCode: USD
@@ -18000,7 +17929,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494644
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1560
                 CurCode: USD
@@ -18014,7 +17943,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494643
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -18028,7 +17957,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494640
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1276.98
                 CurCode: USD
@@ -18042,7 +17971,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494638
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -962.22
                 CurCode: USD
@@ -18056,7 +17985,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494636
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1761
                 CurCode: USD
@@ -18070,7 +17999,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494634
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1298
                 CurCode: USD
@@ -18084,7 +18013,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494632
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1100
                 CurCode: USD
@@ -18098,7 +18027,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494630
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1287
                 CurCode: USD
@@ -18112,7 +18041,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494628
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1981
                 CurCode: USD
@@ -18126,7 +18055,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494626
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -18140,7 +18069,7 @@ components:
             BankAcctTrnRec:
               TrnID: 10494623
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -18155,7 +18084,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127016
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -18169,7 +18098,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127014
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -18183,7 +18112,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127013
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1576
                 CurCode: USD
@@ -18197,7 +18126,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127012
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -18211,7 +18140,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127011
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -524
                 CurCode: USD
@@ -18225,7 +18154,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127010
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -18239,7 +18168,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127009
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -18253,7 +18182,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127008
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -18267,7 +18196,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127007
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1912
                 CurCode: USD
@@ -18281,7 +18210,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127006
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1981
                 CurCode: USD
@@ -18295,7 +18224,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127005
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -214
                 CurCode: USD
@@ -18309,7 +18238,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127004
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -18323,7 +18252,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127003
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -18338,7 +18267,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127002
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -870
                 CurCode: USD
@@ -18352,7 +18281,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127001
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1112
                 CurCode: USD
@@ -18366,7 +18295,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5127000
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1198.651
                 CurCode: USD
@@ -18380,7 +18309,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126999
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -987
                 CurCode: USD
@@ -18394,7 +18323,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126997
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -18408,7 +18337,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126986
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -121
                 CurCode: USD
@@ -18422,7 +18351,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126978
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -312
                 CurCode: USD
@@ -18436,7 +18365,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126977
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1576
                 CurCode: USD
@@ -18450,7 +18379,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126976
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -18464,7 +18393,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126975
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -524
                 CurCode: USD
@@ -18478,7 +18407,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126974
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1712
                 CurCode: USD
@@ -18492,7 +18421,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126973
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1911
                 CurCode: USD
@@ -18506,7 +18435,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126972
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1871
                 CurCode: USD
@@ -18520,7 +18449,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126971
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1912
                 CurCode: USD
@@ -18534,7 +18463,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126970
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1981
                 CurCode: USD
@@ -18548,7 +18477,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126969
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -214
                 CurCode: USD
@@ -18562,7 +18491,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126967
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 0
                 CurCode: USD
@@ -18577,7 +18506,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126966
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -870
                 CurCode: USD
@@ -18591,7 +18520,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126965
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1112
                 CurCode: USD
@@ -18605,7 +18534,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126964
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -1198.651
                 CurCode: USD
@@ -18619,7 +18548,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126963
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -987
                 CurCode: USD
@@ -18633,7 +18562,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126962
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -212
                 CurCode: USD
@@ -18647,7 +18576,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126961
               TrnType: Credit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: 1500
                 CurCode: USD
@@ -18661,7 +18590,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126941
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -82
                 CurCode: USD
@@ -18675,7 +18604,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126940
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -12
                 CurCode: USD
@@ -18689,7 +18618,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126939
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2.7
                 CurCode: USD
@@ -18703,7 +18632,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126938
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -221
                 CurCode: USD
@@ -18717,7 +18646,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126937
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -762
                 CurCode: USD
@@ -18731,7 +18660,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126917
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -82
                 CurCode: USD
@@ -18745,7 +18674,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126916
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -12
                 CurCode: USD
@@ -18759,7 +18688,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126915
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -2.7
                 CurCode: USD
@@ -18773,7 +18702,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126914
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -221
                 CurCode: USD
@@ -18787,7 +18716,7 @@ components:
             BankAcctTrnRec:
               TrnID: 5126913
               TrnType: Debit
-              PostedDt: '2019-09-22'
+              PostedDt: '2019-09-22T12:00:00Z'
               CurAmt:
                 Amt: -762
                 CurCode: USD
@@ -18801,7 +18730,7 @@ components:
             AcctId: 5340281
             InvAcctTrnRec:
               TrnID: 13897448
-              TrnDate: '2014-02-11'
+              TrnDate: '2014-02-11T12:00:00Z'
               TrnAction: SYSTEMATIC CONTRIBUTION
               NetTrnAmt:
                 Amt: 150
@@ -18816,7 +18745,7 @@ components:
             AcctId: 5340273
             InvAcctTrnRec:
               TrnID: 13897447
-              TrnDate: '2018-03-22'
+              TrnDate: '2018-03-22T12:00:00Z'
               TrnAction: SYSTEMATIC CONTRIBUTION
               NetTrnAmt:
                 Amt: 150
@@ -18889,15 +18818,15 @@ components:
                 Grant:
                 - GrantId: '301231'
                   GrantNo: '0000.23809'
-                  GrantDt: '2011-02-11'
+                  GrantDt: '2011-02-11T12:00:00Z'
                   GrantType: NQO
                   ExercisePrice:
                     Amt: 10.55
                     CurCode: USD
-                  FirstVestDt: '2012-02-11'
-                  ExpirationDt: '2021-02-11'
+                  FirstVestDt: '2012-02-11T12:00:00Z'
+                  ExpirationDt: '2021-02-11T12:00:00Z'
                   SharesGranted: 94700
-                  NxtVestDt: '2012-02-11'
+                  NxtVestDt: '2012-02-11T12:00:00Z'
                   VestPeriods: 3
                   VestPeriodsPerYr: 1
                   SharesVested: 0
@@ -18906,15 +18835,15 @@ components:
                   OptionPlan: Awards
                 - GrantId: '301232'
                   GrantNo: '0000.21429'
-                  GrantDt: '2009-12-08'
+                  GrantDt: '2009-12-08T12:00:00Z'
                   GrantType: NQO
                   ExercisePrice:
                     Amt: 9.45
                     CurCode: USD
-                  FirstVestDt: '2010-12-08'
-                  ExpirationDt: '2019-12-08'
+                  FirstVestDt: '2010-12-08T12:00:00Z'
+                  ExpirationDt: '2019-12-08T12:00:00Z'
                   SharesGranted: 89700
-                  NxtVestDt: '2011-12-08'
+                  NxtVestDt: '2011-12-08T12:00:00Z'
                   VestPeriods: 3
                   VestPeriodsPerYr: 1
                   SharesVested: 29900
@@ -18923,15 +18852,15 @@ components:
                   OptionPlan: Awards
                 - GrantId: '301233'
                   GrantNo: '0000.16717'
-                  GrantDt: '2008-12-08'
+                  GrantDt: '2008-12-08T12:00:00Z'
                   GrantType: NQO
                   ExercisePrice:
                     Amt: 8.65
                     CurCode: USD
-                  FirstVestDt: '2009-12-08'
-                  ExpirationDt: '2018-12-08'
+                  FirstVestDt: '2009-12-08T12:00:00Z'
+                  ExpirationDt: '2018-12-08T12:00:00Z'
                   SharesGranted: 111800
-                  NxtVestDt: '2011-12-08'
+                  NxtVestDt: '2011-12-08T12:00:00Z'
                   VestPeriods: 3
                   VestPeriodsPerYr: 1
                   SharesVested: 74534
@@ -18940,13 +18869,13 @@ components:
                   OptionPlan: Awards
                 - GrantId: '301234'
                   GrantNo: '0000.6317'
-                  GrantDt: '2007-12-10'
+                  GrantDt: '2007-12-10T12:00:00Z'
                   GrantType: NQO
                   ExercisePrice:
                     Amt: 8.15
                     CurCode: USD
-                  FirstVestDt: '2008-12-10'
-                  ExpirationDt: '2017-12-10'
+                  FirstVestDt: '2008-12-10T12:00:00Z'
+                  ExpirationDt: '2017-12-10T12:00:00Z'
                   SharesGranted: 59300
                   NxtVestDt:
                   VestPeriods: 3
@@ -18957,13 +18886,13 @@ components:
                   OptionPlan: Awards
                 - GrantId: '301235'
                   GrantNo: '0000.1217'
-                  GrantDt: '2006-12-12'
+                  GrantDt: '2006-12-12T12:00:00Z'
                   GrantType: NQO
                   ExercisePrice:
                     Amt: 6.55
                     CurCode: USD
-                  FirstVestDt: '2007-12-12'
-                  ExpirationDt: '2016-12-12'
+                  FirstVestDt: '2007-12-12T12:00:00Z'
+                  ExpirationDt: '2016-12-12T12:00:00Z'
                   SharesGranted: 71100
                   NxtVestDt:
                   VestPeriods: 3
@@ -18974,13 +18903,13 @@ components:
                   OptionPlan: Awards
                 - GrantId: '301236'
                   GrantNo: '0000.148'
-                  GrantDt: '2005-12-12'
+                  GrantDt: '2005-12-12T12:00:00Z'
                   GrantType: NQO
                   ExercisePrice:
                     Amt: 5.75
                     CurCode: USD
-                  FirstVestDt: '2006-12-12'
-                  ExpirationDt: '2015-12-12'
+                  FirstVestDt: '2006-12-12T12:00:00Z'
+                  ExpirationDt: '2015-12-12T12:00:00Z'
                   SharesGranted: 55042
                   NxtVestDt:
                   VestPeriods: 3
@@ -18991,15 +18920,15 @@ components:
                   OptionPlan: Awards
                 - GrantId: '301237'
                   GrantNo: '0000.24010'
-                  GrantDt: '2011-02-11'
+                  GrantDt: '2011-02-11T12:00:00Z'
                   GrantType: RSU
                   ExercisePrice:
                     Amt: 0
                     CurCode: USD
-                  FirstVestDt: '2014-02-11'
+                  FirstVestDt: '2014-02-11T12:00:00Z'
                   ExpirationDt:
                   SharesGranted: 13958
-                  NxtVestDt: '2014-02-11'
+                  NxtVestDt: '2014-02-11T12:00:00Z'
                   VestPeriods: 1
                   VestPeriodsPerYr: 1
                   SharesVested: 0
@@ -19008,15 +18937,15 @@ components:
                   OptionPlan: Restricted Stock
                 - GrantId: '301238'
                   GrantNo: '0000.22176'
-                  GrantDt: '2010-02-04'
+                  GrantDt: '2010-02-04T12:00:00Z'
                   GrantType: RSU
                   ExercisePrice:
                     Amt: 0
                     CurCode: USD
-                  FirstVestDt: '2013-02-04'
+                  FirstVestDt: '2013-02-04T12:00:00Z'
                   ExpirationDt:
                   SharesGranted: 22340
-                  NxtVestDt: '2013-02-04'
+                  NxtVestDt: '2013-02-04T12:00:00Z'
                   VestPeriods: 1
                   VestPeriodsPerYr: 1
                   SharesVested: 0
@@ -19025,12 +18954,12 @@ components:
                   OptionPlan: Restricted Stock
                 - GrantId: '301239'
                   GrantNo: DER0000.21630
-                  GrantDt: '2010-01-09'
+                  GrantDt: '2010-01-09T12:00:00Z'
                   GrantType: RSU
                   ExercisePrice:
                     Amt: 0
                     CurCode: USD
-                  FirstVestDt: '2011-01-09'
+                  FirstVestDt: '2011-01-09T12:00:00Z'
                   ExpirationDt:
                   SharesGranted: 15
                   NxtVestDt:
@@ -19042,12 +18971,12 @@ components:
                   OptionPlan: Restricted Stock
                 - GrantId: '301240'
                   GrantNo: DER0000.20858
-                  GrantDt: '2009-10-06'
+                  GrantDt: '2009-10-06T12:00:00Z'
                   GrantType: RSU
                   ExercisePrice:
                     Amt: 0
                     CurCode: USD
-                  FirstVestDt: '2010-10-06'
+                  FirstVestDt: '2010-10-06T12:00:00Z'
                   ExpirationDt:
                   SharesGranted: 16
                   NxtVestDt:
@@ -19059,12 +18988,12 @@ components:
                   OptionPlan: Restricted Stock
                 - GrantId: '301241'
                   GrantNo: '0000.8817'
-                  GrantDt: '2008-02-04'
+                  GrantDt: '2008-02-04T12:00:00Z'
                   GrantType: RSU
                   ExercisePrice:
                     Amt: 0
                     CurCode: USD
-                  FirstVestDt: '2011-02-04'
+                  FirstVestDt: '2011-02-04T12:00:00Z'
                   ExpirationDt:
                   SharesGranted: 10011
                   NxtVestDt:
@@ -19076,15 +19005,15 @@ components:
                   OptionPlan: Restricted Stock
                 - GrantId: '301242'
                   GrantNo: '0000.24211'
-                  GrantDt: '2011-02-11'
+                  GrantDt: '2011-02-11T12:00:00Z'
                   GrantType: PSU
                   ExercisePrice:
                     Amt: 0
                     CurCode: USD
-                  FirstVestDt: '2014-02-11'
+                  FirstVestDt: '2014-02-11T12:00:00Z'
                   ExpirationDt:
                   SharesGranted: 9305
-                  NxtVestDt: '2014-02-11'
+                  NxtVestDt: '2014-02-11T12:00:00Z'
                   VestPeriods: 1
                   VestPeriodsPerYr: 1
                   SharesVested: 0
@@ -19210,8 +19139,8 @@ components:
             ExtAcctType: INV
           SelectionCriterion:
             SelRangeDt:
-              EndDt: '2020-10-30'
-              StartDt: '2020-10-01'
+              EndDt: '2020-10-30T12:00:00Z'
+              StartDt: '2020-10-01T12:00:00Z'
         RqUID: RqUID0
         partnerID: 50120000
         version: version1
@@ -19249,11 +19178,11 @@ components:
               ExtAcctType: INV
             SelectionCriterion:
               SelRangeDt:
-                StartDt: '2020-10-01'
-                EndDt: '2020-10-30'
+                StartDt: '2020-10-01T12:00:00Z'
+                EndDt: '2020-10-30T12:00:00Z'
             InvAcctTrnRec:
             - TrnID: 16826176
-              TrnDate: '2020-10-27'
+              TrnDate: '2020-10-27T12:00:00Z'
               NetTrnAmt:
                 Amt: 12206.6224
                 CurCode: USD
@@ -19266,7 +19195,7 @@ components:
                 Amt: 1
                 CurCode: USD
             - TrnID: 16826177
-              TrnDate: '2020-10-18'
+              TrnDate: '2020-10-18T12:00:00Z'
               NetTrnAmt:
                 Amt: 9997.44
                 CurCode: USD
@@ -19279,7 +19208,7 @@ components:
                 Amt: 121.92
                 CurCode: USD
             - TrnID: 16826178
-              TrnDate: '2020-10-10'
+              TrnDate: '2020-10-10T12:00:00Z'
               TrnAction: REINVEST
               NetTrnAmt:
                 Amt: 76.82
@@ -19293,7 +19222,7 @@ components:
                 Amt: 1
                 CurCode: USD
             - TrnID: 16826179
-              TrnDate: '2020-10-01'
+              TrnDate: '2020-10-01T12:00:00Z'
               TrnAction: Investment Earnings-Employer
               NetTrnAmt:
                 Amt: 76.8252
@@ -19596,21 +19525,21 @@ components:
                     Amt: 1.31
                     CurCode: USD
                   CheckNumber: '5467'
-                  PostedDt: '2009-10-10'
+                  PostedDt: '2009-10-10T12:00:00Z'
                   Memo: Checking transaction 1
                 - TrnType: Debit
                   CurAmt:
                     Amt: -20
                     CurCode: USD
                   CheckNumber: '49500'
-                  PostedDt: '2009-10-05'
+                  PostedDt: '2009-10-05T12:00:00Z'
                   Memo: Checking transaction 2
                 - TrnType: Debit
                   CurAmt:
                     Amt: -61
                     CurCode: USD
                   CheckNumber: '5467'
-                  PostedDt: '2009-09-30'
+                  PostedDt: '2009-09-30T12:00:00Z'
                   Memo: Checking transaction 3
               Property:
               - ParamVal: N/A
@@ -19621,13 +19550,13 @@ components:
                 ParamName: AccountOwnership
               AcctBal:
               - Desc: adf
-                EffDt: '2010-07-30'
+                EffDt: '2010-07-30T12:00:00Z'
                 CurAmt:
                   Amt: 300
                   CurCode: USD
                 BalType: Current
               - Desc: afd
-                EffDt: '2010-07-30'
+                EffDt: '2010-07-30T12:00:00Z'
                 CurAmt:
                   Amt: 300
                   CurCode: USD
@@ -19647,21 +19576,21 @@ components:
                     Amt: 1.31
                     CurCode: USD
                   CheckNumber: '5467'
-                  PostedDt: '2009-10-10'
+                  PostedDt: '2009-10-10T12:00:00Z'
                   Memo: Savings transaction 1
                 - TrnType: Debit
                   CurAmt:
                     Amt: -20
                     CurCode: USD
                   CheckNumber: '5678'
-                  PostedDt: '2009-10-05'
+                  PostedDt: '2009-10-05T12:00:00Z'
                   Memo: Savings transaction 2
                 - TrnType: Debit
                   CurAmt:
                     Amt: -61
                     CurCode: USD
                   CheckNumber: '8976'
-                  PostedDt: '2009-09-30'
+                  PostedDt: '2009-09-30T12:00:00Z'
                   Memo: Savings transaction 3
               Property:
               - ParamVal: N/A
@@ -19672,13 +19601,13 @@ components:
                 ParamName: AccountOwnership
               AcctBal:
               - Desc: adf
-                EffDt: '2010-07-30'
+                EffDt: '2010-07-30T12:00:00Z'
                 CurAmt:
                   Amt: 300
                   CurCode: USD
                 BalType: Current
               - Desc: afd
-                EffDt: '2010-07-30'
+                EffDt: '2010-07-30T12:00:00Z'
                 CurAmt:
                   Amt: 300
                   CurCode: USD
@@ -19698,13 +19627,13 @@ components:
                     Amt: -20
                     CurCode: USD
                   CheckNumber: '49500'
-                  PostedDt: '2009-10-05'
+                  PostedDt: '2009-10-05T12:00:00Z'
                   Memo: CC transaction 1
                 - TrnType: Debit
                   CurAmt:
                     Amt: -61
                     CurCode: USD
-                  PostedDt: '2009-09-30'
+                  PostedDt: '2009-09-30T12:00:00Z'
                   Memo: CC transaction 2
               Property:
               - ParamVal: N/A
@@ -19801,25 +19730,25 @@ components:
                     Amt: -20
                     CurCode: USD
                   CheckNumber: '49500'
-                  PostedDt: '2009-10-05'
+                  PostedDt: '2009-10-05T12:00:00Z'
                   Memo: CC transaction 3
                 - TrnType: Debit
                   CurAmt:
                     Amt: -21
                     CurCode: USD
-                  PostedDt: '2009-09-30'
+                  PostedDt: '2009-09-30T12:00:00Z'
                   Memo: CC transaction 4
                 - TrnType: Debit
                   CurAmt:
                     Amt: -98
                     CurCode: USD
-                  PostedDt: '2009-09-30'
+                  PostedDt: '2009-09-30T12:00:00Z'
                   Memo: CC loan trn
                 - TrnType: Debit
                   CurAmt:
                     Amt: -61
                     CurCode: USD
-                  PostedDt: '2009-09-30'
+                  PostedDt: '2009-09-30T12:00:00Z'
                   Memo: CC Bill trn
               Property:
               - ParamVal: N/A
