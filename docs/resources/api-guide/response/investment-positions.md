@@ -19,10 +19,11 @@
 | Marginable | Indicates whether this holding is Marginable Possible values: Y ,N |
 | SecurityType | Type of Security |
 | Property | Miscellaneous properties associated with this position. Possible values: AssetID AssetIDType |
-| UnitPrice | Price of single security. |
+| UnitPrice> | Price of single security. |
 | Units | Number of securities. |
 | MarketValue | Total market value of this security. |
-| CostBasis Status | The status of the InvAcctPosInqRq |
+| CostBasis | |
+| Status | The status of the InvAcctPosInqRq |
 
 #### Possible Status Code
 

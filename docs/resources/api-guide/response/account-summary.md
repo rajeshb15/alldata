@@ -4,7 +4,8 @@
 | --- | --- |
 | Status | The status of the request. |
 | RqUID | The Unique Request Identifier sent by the Server Site. |
-| FIAcctSummary Status | The status of the FIAcctSummaryInqRq. |
+| FIAcctSummary | |
+| Status | The status of the FIAcctSummaryInqRq. |
 
 #### Possible Status Code
 
