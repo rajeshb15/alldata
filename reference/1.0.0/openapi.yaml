@@ -1328,17 +1328,11 @@ paths:
           \ Category details of a Transaction.</td></tr><tr><td><b>SubCategory</b></td><td>\
           \ SubCategory details of a Transaction.</td></tr></tbody></table>"
         content:
-          # application/xml:
-          #   schema:
-              # $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
             examples:
-              WorkingSample: {summary: Request CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
+              categorizeTransaction_1: {summary: Request CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionRequest'}
         required: true
       responses:
         "200":
@@ -1393,17 +1387,11 @@ paths:
             \ to us to whitelist any new IP's or make the request from whitelisted\
             \ Ips.</td></tr></table></td></tr> </tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
               examples:
-                WorkingSample: {summary: Response CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
+                categorizeTransaction_1: {summary: Response CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1720,18 +1708,12 @@ paths:
           type.</td></tr><tr><td></td><td><a href='elementDescription.jsp#ClientMgmt_addOfflineAccount'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/AddOfflineAcctRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/AddOfflineAcctRqHeader'
             examples:
               AdvisorHome: {summary: Request Add Offline Account Advisor Home, $ref: '#/components/examples/addOfflineAccountAdvisorRequest'}
               RetailHome: {summary: Request Add Offline Account Retail Home, $ref: '#/components/examples/addOfflineAccountRetailRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/AddOfflineAcctRqHeader'
         required: true
       responses:
         "200":
@@ -1751,18 +1733,12 @@ paths:
             \ of the added offline account.<br><tr><td><b>AcctId</b></td><td>ID of\
             \ the added offline account.</td></tr></tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/AddOfflineAcctRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/AddOfflineAcctRsHeader'
               examples:
                 AdvisorHome: {summary: Response Add Offline Account Advisor Home, $ref: '#/components/examples/addOfflineAccountAdvisorResponse'}
                 RetailHome: {summary: Response Add Offline Account Retail Home, $ref: '#/components/examples/addOfflineAccountRetailResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/AddOfflineAcctRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -1844,17 +1820,11 @@ paths:
           Unique Request Identifier.</td></tr> <tr><td><b>SignonRq</b></td><td> The
           Admin credentials are received as part of this request.</td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/FIMessagesInfoRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/FIMessagesInfoRqHeader'
             examples:
-              WorkingSample: {summary: Request FI Message Info, $ref: '#/components/examples/getFIMessageInfoRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/FIMessagesInfoRqHeader'
+              getFIMessageInfo: {summary: Request FI Message Info, $ref: '#/components/examples/getFIMessageInfoRequest'}
         required: true
       responses:
         "200":
@@ -1888,17 +1858,11 @@ paths:
             \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4010</td><td>Error</td><td>Invalid\
             \ partnerID</td><td>The partnerID specified in the request is invalid.</td><td></td></tr></tbody></table></td></tr></tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/FIMessagesInfoRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/FIMessagesInfoRsHeader'
               examples:
-                WorkingSample: {summary: Response FI Message Info, $ref: '#/components/examples/getFIMessageInfoResponse'}
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/FIMessagesInfoRsHeader'
+                getFIMessageInfo: {summary: Response FI Message Info, $ref: '#/components/examples/getFIMessageInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2245,17 +2209,11 @@ paths:
           \ will be returned.</td> </tr><tr><td></td><td><a href='elementDescription.jsp#HarvestAccountData_getHarvestStatus'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/HarvestStsInqRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestStsInqRqHeader'
             examples:
               getHarvestStatus: {summary: Request Harvest Status, $ref: '#/components/examples/getHarvestStatusRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/HarvestStsInqRqHeader'
         required: true
       responses:
         "200":
@@ -2285,16 +2243,11 @@ paths:
             \ not enabled for this home. Please reach out to CashEdge team for enabling\
             \ the same.</td><td></td></tr></table></td></tr> </tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/HarvestStsInqRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestStsInqRsHeader'
               examples:
-                getHarvestStatus: {summary: Response Harvest Status, $ref: '#/components/examples/getHarvestStatusResponse'}            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/HarvestStsInqRsHeader'
+                getHarvestStatus: {summary: Response Harvest Status, $ref: '#/components/examples/getHarvestStatusResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2328,17 +2281,11 @@ paths:
           href='elementDescription.jsp#HarvestAccountData_updateAccounts' target='_blank'>More
           Info</a></td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/HarvestRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/HarvestRqHeader'
             examples:
               updateAccounts: {summary: Request Update Accounts, $ref: '#/components/examples/updateAccountsRequest'}            
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/HarvestRqHeader'
         required: true
       responses:
         "200":
@@ -2395,17 +2342,11 @@ paths:
             \ institution login credentials should be corrected.</td><td></td></tr></table></td></tr>\
             \ </tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/HarvestRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/HarvestRsHeader'
               examples:
-                updateAccounts: {summary: Response Update Accounts, $ref: '#/components/examples/updateAccountsResponse'}                
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/HarvestRsHeader'
+                updateAccounts: {summary: Response Update Accounts, $ref: '#/components/examples/updateAccountsResponse'}
         "400":
           description: Bad Request
         "401":
