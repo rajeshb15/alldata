@@ -11512,7 +11512,7 @@ components:
             ExtAcctType: ILA
           SelectionCriterion:
             SelRangeDt:
-              EndDt: '2017-12-30T07:11:17-07:00'
+              EndDt: '2017-12-30T07:11:17-07:00' 
               StartDt: '2017-12-01T07:11:17-07:00'
         partnerID: 50120000
         version: version1
