@@ -8,23 +8,23 @@
     </thead>
     <tbody>
         <tr>
-            <td><b>RqUID</b></td>
+            <td>RqUID</td>
             <td>Unique Request Identifier. The ClientSite sends this element with the request.</td>
         </tr>
         <tr>
-            <td><b>Status</b></td>
+            <td>Status</td>
             <td>The status of the request.</td>
         </tr>
         <tr>
-            <td><b>FIInfoDataList</b></td>
+            <td>FIInfoDataList</td>
             <td>Listof FI along with their requisite information.<br>This aggregate willbe present, only if the request was carried out successfully and thisoption was desired in the request.</td>
         </tr>
         <tr>
-            <td><b>FIIdList</b></td>
+            <td>FIIdList</td>
             <td>Listof FI id’s.<br>This aggregate will be present, only if the request was carried out successfully and this option was desired in the request.</td>
         </tr>
         <tr>
-            <td><b>Status</b></td>
+            <td>Status</td>
             <td>The status of the FISearchRs <br><br>For Sevirity: Info<br> StatusCode - StatusDesc: <br><br> 0 -
                 Success<br><br>For Sevirity: Error<br> StatusCode - StatusDesc: <br><br>100 - General Error<br>4060 - No
                 data available<br>4070 - Invalid data in request<br>4360 - Data insufficient to carry out
