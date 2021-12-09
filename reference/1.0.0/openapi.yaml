@@ -3269,7 +3269,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Success
+          description: <a href="../docs?path=docs/resources/api-guide/response/rtv-info.md">More Info</a>
           content:
             application/json:
               schema:
@@ -3310,7 +3310,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Success
+          description: <a href="../docs?path=docs/resources/api-guide/response/ack-rtv-result.md">More Info</a>
           content:
             application/json:
               schema:
@@ -3350,7 +3350,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Success
+          description: <a href="../docs?path=docs/resources/api-guide/response/advance-rtv-enable-fi.md">More Info</a>
           content:
             application/json:
               schema:
@@ -3391,7 +3391,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Success
+          description: <a href="../docs?path=docs/resources/api-guide/response/rtv-token.md">More Info</a>
           content:
             application/json:
               schema:
@@ -3435,7 +3435,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Success
+          description: <a href="../docs?path=docs/resources/api-guide/response/search-fi.md">More Info</a>
           content:
             application/json:
               schema:
@@ -3476,7 +3476,7 @@ paths:
         required: true
       responses:
         "200":
-          description: Success
+          description: <a href="../docs?path=docs/resources/api-guide/response/verify-account.md">More Info</a>
           content:
             application/json:
               schema:
