@@ -1391,40 +1391,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API.</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>BudgetId</b></td><td>The\
-            \ identification assigned to the Budget request. This element will be\
-            \ present only of the request that was carried out successfully.</td></tr><tr><td><b>StatusCode</b></td><td>The\
-            \ status code for the response.A code of “0” implies complete success.Other\
-            \ status codes could mean either success or failure depending upon the\
-            \ value of the severity of the code.</td></tr><tr><td><b>Severity</b></td><td>Conveys\
-            \ the status of the request, whether the request was processed successfully,\
-            \ or whether some error was encountered while processing the request.</td></tr><tr><td><b>StatusDesc</b></td><td>A\
-            \ meaningful message that conveys the nature of the error, if any.</td></tr><tr><td>Status</td><td>The\
-            \ status of the BudgetAddRq</td></tr><tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4012</td><td>Error</td><td>Invalid\
-            \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>5010</td><td>Error</td><td>Validation\
-            \ failure</td><td>No such categoryId is found</td><td></td></tr><tr><td>5020</td><td>Error</td><td>Validation\
-            \ failure</td><td>No such subcategoryId is found for this category</td><td></td></tr><tr><td>5030</td><td>Error</td><td>Validation\
-            \ failure</td><td>Budget Name must be more than 5 characters</td><td></td></tr><tr><td>5040</td><td>Error</td><td>Validation\
-            \ failure</td><td>Duplicate budget name is found</td><td></td></tr><tr><td>5070</td><td>Error</td><td>Validation\
-            \ failure</td><td>Budget already exists for this Category and SubCategory</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/create-budget.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1464,34 +1431,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API.</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>StatusCode</b></td><td>The\
-            \ status code for the response.A code of “0” implies complete success.Other\
-            \ status codes could mean either success or failure depending upon the\
-            \ value of the severity of the code.</td></tr><tr><td><b>Severity</b></td><td>Conveys\
-            \ the status of the request, whether the request was processed successfully,\
-            \ or whether some error was encountered while processing the request.</td></tr><tr><td><b>StatusDesc</b></td><td>A\
-            \ meaningful message that conveys the nature of the error, if any.</td></tr><tr><td>Status</td><td>The\
-            \ status of the BudgetDeleteRq</td></tr><tr><td></td><td><span style=\"\
-            font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4012</td><td>Error</td><td>Invalid\
-            \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>5050</td><td>Error</td><td>Info</td><td>No\
-            \ budget is found for this user</td><td></td></tr></table></td></tr></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/delete-budget.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1534,40 +1474,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API.</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>BudgetId</b></td><td>The\
-            \ identification assigned to the Budget request. This element will be\
-            \ present only of the request that was carried out successfully.</td></tr><tr><td><b>StatusCode</b></td><td>The\
-            \ status code for the response.A code of “0” implies complete success.Other\
-            \ status codes could mean either success or failure depending upon the\
-            \ value of the severity of the code.</td></tr><tr><td><b>Severity</b></td><td>Conveys\
-            \ the status of the request, whether the request was processed successfully,\
-            \ or whether some error was encountered while processing the request.</td></tr><tr><td><b>StatusDesc</b></td><td>A\
-            \ meaningful message that conveys the nature of the error, if any.</td></tr><tr><td>Status</td><td>The\
-            \ status of the BudgetEditRq</td></tr><tr><td></td><td><span style=\"\
-            font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4012</td><td>Error</td><td>Invalid\
-            \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>5030</td><td>Error</td><td>Validation\
-            \ failure</td><td>Budget Name must be more than 5 characters</td><td></td></tr><tr><td>5040</td><td>Error</td><td>Validation\
-            \ failure</td><td>Duplicate budget name is found</td><td></td></tr><tr><td>5050</td><td>Error</td><td>Info</td><td>No\
-            \ budget is found for this user</td><td></td></tr><tr><td>5080</td><td>Error</td><td>Validation\
-            \ failure</td><td>Atleast any one of the followings is required 1) Budget\
-            \ Amount 2) Budget Description 3) Budget Name</td><td></td></tr></table></td></tr></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/edit-budget.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1606,37 +1513,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API.</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>BudgetId</b></td><td>The\
-            \ identification assigned to the Budget request. This element will be\
-            \ present only of the request that was carried out successfully.</td></tr><tr><td><b>StatusCode</b></td><td>The\
-            \ status code for the response.A code of “0” implies complete success.Other\
-            \ status codes could mean either success or failure depending upon the\
-            \ value of the severity of the code.</td></tr><tr><td><b>Severity</b></td><td>Conveys\
-            \ the status of the request, whether the request was processed successfully,\
-            \ or whether some error was encountered while processing the request.</td></tr><tr><td><b>StatusDesc</b></td><td>A\
-            \ meaningful message that conveys the nature of the error, if any.</td></tr><tr><td>Status</td><td>The\
-            \ status of the BudgetFindRq</td></tr><tr><td></td><td><span style=\"\
-            font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4012</td><td>Error</td><td>Invalid\
-            \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>5050</td><td>Error</td><td>Info</td><td>No\
-            \ budget is found for this user</td><td></td></tr><tr><td>5060</td><td>Error</td><td>Info</td><td>No\
-            \ budget is found for this user</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/find-budget.md">More Info</a>
           content:
             application/json:
               schema:
