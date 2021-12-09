@@ -1792,17 +1792,11 @@ paths:
           type.</td></tr><tr><td></td><td><a href='elementDescription.jsp#ClientMgmt_updateOfflineAccount'
           target='_blank'>More Info</a></td></tr></tbody></table>
         content:
-          # application/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/OfflineAcctModRqHeader'
           application/json:
             schema:
               $ref: '#/components/schemas/OfflineAcctModRqHeader'
             examples:
               updateOfflineAccount: {summary: Request Update Offline Account, $ref: '#/components/examples/updateOfflineAccountRequest'}
-          # text/xml:
-          #   schema:
-          #     $ref: '#/components/schemas/OfflineAcctModRqHeader'
         required: true
       responses:
         "200":
@@ -1822,17 +1816,11 @@ paths:
             \ and RetirementStatus.</td></tr><tr><td><b>Status Code: 100</b></td><td>General\
             \ error.</td></tr><tr><td><b>Status Code: 0</b></td><td>Success.</td></tr></tbody></table> "
           content:
-            # application/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/OfflineAcctModRsHeader'
             application/json:
               schema:
                 $ref: '#/components/schemas/OfflineAcctModRsHeader'
               examples:
                 updateOfflineAccount: {summary: Response Update Offline Account, $ref: '#/components/examples/updateOfflineAccountResponse'}            
-            # text/xml:
-            #   schema:
-            #     $ref: '#/components/schemas/OfflineAcctModRsHeader'
         "400":
           description: Bad Request
         "401":
@@ -12325,7 +12313,7 @@ components:
             Role: User
         OfflineAcctModRq:
           OfflineAcctMod:
-            AcctId: '5586366'
+            AcctId: 5586366
             AcctName: Test_Offline4
             AdvisorAccess: None
             AcctBal:
@@ -12373,7 +12361,7 @@ components:
             Role: User
         HarvestStsInqRq:
           HarvestAddID: 744b617561785375476f696864677a5943484d3779413d3d
-          RunId: '18951349'
+          RunId: 18951349
         partnerID: 8885504
         version: 1.4.6
 
