@@ -21856,30 +21856,19 @@ components:
 
     AckRTVResultRequest:
       value:
-        RqUID: RqUID1
-        partnerID: 50050000
-        RTVTokenRq:
-          AddAccountRetryAttempts: 2
-          FIName: CashEdge Bank
-          MonitoringCode: '1000'
-          FirstName: Tom
-          LastName: Bruce
-          RTVHomeID: '88850031'
-          AcctNumber: xxxx4444
-          FIId: '2655'
-        version: version1
+        RqUID: RqUID3
+        partnerID: '50050000'
+        version: 1.4.6
+        AckRTVResultRq:
+          RTVStatus: Success
+          RTVStatusCode: '1000,1001,1002'
         SignonRq:
-          UserInfo:
-            Role: Admin
-            UserPassword:
-              CryptVal: cashedge1
-              CryptType: None
-            UserID: AlldataVerifyNowadmn
-            HomeID: '50050001'
+          SessionInfo:
+            SessionToken: 6752344e566576786f4a3050686d4f763172742f62673d3d
 
     AckRTVResultResponse:
       value:
-        RqUID: RqUID1
+        RqUID: RqUID3
         Status:
           StatusCode: 0
           Severity: Info
@@ -21891,15 +21880,13 @@ components:
             StatusDesc: Success
           CEUserID: 2031506
           SessInfo: 6752344e566576786f4a3050686d4f763172742f62673d3d
-        RTVTokenRs:
+        AckRTVResultRs:
           Status:
             StatusCode: 0
             Severity: Info
             StatusDesc: Success
-          FIId: '2655'
-          FIHarvestStatus: Enabled
         partnerID: 50050000
-        version: version1
+        version: 1.4.6
 
     AdvanceRTVEnableFIRequest:
       value:
