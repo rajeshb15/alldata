@@ -43,13 +43,19 @@ featuredFeatures:
     #links: ["docs/Online-Mobile-Digital/Wallets-AltPayments/Apple-Pay/Apple-Pay.md"]
     relatedDocs:
       - relatedDoc: 
-        title: Common Data Aggregation Use Cases and AllData API Solutions 
+        title: Common Use Cases
+        description: >
+          This document covers common use cases within the AllData Aggregation product, including a number of API Solution 
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
-        title: How to Use AllData APIs and Add Account Widget for Various Use Cases
+        title: APIs and Add Account Widget 
+        description: >
+          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
-        title: Next-Gen Widgets Integration Guide
+        title: Widget Integration Guide
+        description: >
+          This document covers ways to speed implementation by leveraging AllData widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
@@ -81,13 +87,19 @@ featuredFeatures:
     #links: ["docs/Resources/API-Documents/Use-Our-APIs.md"]
     relatedDocs:
       - relatedDoc: 
-        title: Common Data Aggregation Use Cases and AllData API Solutions 
+        title: Common Use Cases
+        description: >
+          This document covers common use cases within the AllData Aggregation product, including a number of API Solution 
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
-        title: How to Use AllData APIs and Add Account Widget for Various Use Cases
+        title: APIs and Add Account Widget 
+        description: >
+          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
-        title: Next-Gen Widgets Integration Guide
+        title: Widget Integration Guide
+        description: >
+          This document covers ways to speed implementation by leveraging AllData widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
@@ -118,13 +130,19 @@ featuredFeatures:
     bullets: []
     relatedDocs:
       - relatedDoc: 
-        title: Common Data Aggregation Use Cases and AllData API Solutions 
+        title: Common Use Cases
+        description: >
+          This document covers common use cases within the AllData Aggregation product, including a number of API Solution 
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
-        title: How to Use AllData APIs and Add Account Widget for Various Use Cases
+        title: APIs and Add Account Widget 
+        description: >
+          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
-        title: Next-Gen Widgets Integration Guide
+        title: Widget Integration Guide
+        description: >
+          This document covers ways to speed implementation by leveraging AllData widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
