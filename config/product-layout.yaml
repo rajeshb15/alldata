@@ -36,22 +36,26 @@ header:
 featuredFeatures:
   - title: Account Verification
     description: >
-      AllData® Aggregation from Fiserv makes setting up ACH payments easier for senders. A user provides
-      their credentials, and AllData® Aggregation retrieves their account and routing numbers. This
-      not only simplifies the entire process, it also verifies the account provided is owned by the
-      same person trying to initiate the ACH transfer.
+      AllData® Aggregation makes setting up ACH Payments easier for senders. 
+      A user provides their credentials, and AllData® Aggregation retrieves their accounts and routing numbers.
     tags: []
     bullets: []
     #links: ["docs/Online-Mobile-Digital/Wallets-AltPayments/Apple-Pay/Apple-Pay.md"]
     relatedDocs:
       - relatedDoc: 
-        title: Common Data Aggregation Use Cases and AllData API Solutions 
+        title: Common Use Cases
+        description: >
+          This document covers common use cases within the AllData Aggregation product, including a number of API Solution 
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
-        title: How to Use AllData APIs and Add Account Widget for Various Use Cases
+        title: APIs and Add Account Widget 
+        description: >
+          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
-        title: Next-Gen Widgets Integration Guide
+        title: Widget Integration Guide
+        description: >
+          This document covers ways to speed implementation by leveraging AllData widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
@@ -65,11 +69,8 @@ featuredFeatures:
       - relatedAPI: 
         title: Get Account Details
         description: >
-          This API can be used to fetch detail information about one or more FI login accounts of a user.
-
-          • It can be used to retrieve information about one or more login accounts.
-          
-          • If no ID is specified, it returns information about all of user’s FI login accounts.
+          This API can be used to fetch detail information about one or more FI login accounts of a user. It can be used to retrieve information about one or more login accounts.
+          If no ID is specified, it returns information about all of user’s FI login accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
@@ -79,21 +80,26 @@ featuredFeatures:
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Money Movement
     description: >
-      Through AllData® Aggregation, that all changes. Accessing financial data needed for credit decisions
-      happens quickly, eliminating the traditional paper chase. AllData® Aggregation also streamlines
-      the process for the borrower. Rather than gathering documents and downloaded pdf’s from multiple sources.
+      Through AllData® Aggregation, accessing financial data needed for credit decisions happens quickly, eliminating the traditional paper chase. 
+      AllData® Aggregation also streamlines the process for the borrower.
     tags: []
     bullets: []
     #links: ["docs/Resources/API-Documents/Use-Our-APIs.md"]
     relatedDocs:
       - relatedDoc: 
-        title: Common Data Aggregation Use Cases and AllData API Solutions 
+        title: Common Use Cases
+        description: >
+          This document covers common use cases within the AllData Aggregation product, including a number of API Solution 
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
-        title: How to Use AllData APIs and Add Account Widget for Various Use Cases
+        title: APIs and Add Account Widget 
+        description: >
+          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
-        title: Next-Gen Widgets Integration Guide
+        title: Widget Integration Guide
+        description: >
+          This document covers ways to speed implementation by leveraging AllData widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
@@ -118,20 +124,25 @@ featuredFeatures:
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Lending & Account Opening
     description: > 
-      AllData® Aggregation from Fiserv is used by businesses to provide consumers with a comprehensive view
-      of their finances, for advisors to provide deeper insight and better analysis, and for fintechs to
-      develop innovative products and services with speed and agility.
+      AllData® Aggregation is used by businesses to provide consumers with a comprehensive view of their finances, for advisors to provide deeper 
+      insight and better analysis, and for fintechs to develop innovative products and services.
     tags: []
     bullets: []
     relatedDocs:
       - relatedDoc: 
-        title: Common Data Aggregation Use Cases and AllData API Solutions 
+        title: Common Use Cases
+        description: >
+          This document covers common use cases within the AllData Aggregation product, including a number of API Solution 
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
-        title: How to Use AllData APIs and Add Account Widget for Various Use Cases
+        title: APIs and Add Account Widget 
+        description: >
+          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
-        title: Next-Gen Widgets Integration Guide
+        title: Widget Integration Guide
+        description: >
+          This document covers ways to speed implementation by leveraging AllData widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
@@ -145,11 +156,8 @@ featuredFeatures:
       - relatedAPI: 
         title: Get Account Details
         description: >
-          This API can be used to fetch detail information about one or more FI login accounts of a user.
-
-          • It can be used to retrieve information about one or more login accounts.
-          
-          • If no ID is specified, it returns information about all of user’s FI login accounts.
+          This API can be used to fetch detail information about one or more FI login accounts of a user. It can be used to retrieve information about one or more login accounts.
+          If no ID is specified, it returns information about all of user’s FI login accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
