@@ -21338,7 +21338,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: XMLAdminxle300
-            HomeID: '50040009'
+            HomeID: 50040009
             UserPassword:
               CryptType: None
               CryptVal: Cashedge1$
@@ -21786,7 +21786,7 @@ components:
     AckRTVResultRequest:
       value:
         RqUID: RqUID3
-        partnerID: '50050000'
+        partnerID: 50050000
         version: 1.4.6
         AckRTVResultRq:
           RTVStatus: Success
@@ -22551,7 +22551,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: AlldataVerifyNowadmn
-            HomeID: '50050001'
+            HomeID: 50050001
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
