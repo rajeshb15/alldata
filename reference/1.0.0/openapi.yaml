@@ -665,7 +665,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AddHostAcctsRqHeader'
+              $ref: '#/components/schemas/addUpdateHostAccountsRqHeader'
             examples:
               WorkingSample: {summary: Request Add Update Host Account, $ref: '#/components/examples/addUpdateHostAccountsRequest'}
         required: true
@@ -675,7 +675,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AddHostAcctsRsHeader'
+                $ref: '#/components/schemas/addUpdateHostAccountsRsHeader'
               examples:
                 WorkingSample: {summary: Response Add Update Host Account, $ref: '#/components/examples/addUpdateHostAccountsResponse'}
         "400":
@@ -5875,6 +5875,100 @@ components:
             namespace: http://www.cashedge.com/wm
           items:
             $ref: '#/components/schemas/AddFILoginHostAcctRqType'
+    addUpdateHostAccountsRqHeader:
+      required:
+      - addUpdateHostAccountsRq
+      - RqUID
+      - SignonRq
+      type: object
+      properties:
+        RqUID:
+          type: string
+          xml:
+            namespace: http://www.cashedge.com/wm
+        SignonRq:
+          $ref: '#/components/schemas/SignonRqType'
+        AddUpdateHostAccountsRq:
+          $ref: '#/components/schemas/addUpdateHostAccountsRqType'
+        partnerID:
+          type: integer
+          xml:
+            attribute: true
+        version:
+          type: string
+          xml:
+            attribute: true
+      xml:
+        name: addUpdateHostAccountsRqHeader
+    addUpdateHostAccountsRqType:
+	  required:
+      - FIId
+      - FIHostAcctSummary
+	  type: object
+      properties:
+        FIId:
+          type: string
+          xml:
+            namespace: http://www.cashedge.com/wm
+        FIHostAcctSummary:
+          type: array
+          xml:
+            namespace: http://www.cashedge.com/wm
+          items:
+            $ref: '#/components/schemas/FIHostAcctSummaryType'
+    addUpdateHostAccountsRsHeader:
+      required:
+      - addUpdateHostAccountsRs
+      - SignonRs
+      - Status
+      type: object
+      properties:
+        RqUID:
+          type: string
+          xml:
+            namespace: http://www.cashedge.com/wm
+        Status:
+          $ref: '#/components/schemas/StatusType'
+        SignonRs:
+          $ref: '#/components/schemas/SignonRsType'
+        AddUpdateHostAccountsRs:
+          $ref: '#/components/schemas/addUpdateHostAccountsRsType'
+        partnerID:
+          type: integer
+          xml:
+            attribute: true
+        version:
+          type: string
+          xml:
+            attribute: true
+      xml:
+        name: addUpdateHostAccountsRsHeader
+    addUpdateHostAccountsRsType:
+	  required:
+      - AddFILoginHostAcctRs
+      type: object
+      properties:
+        Status:
+          $ref: '#/components/schemas/StatusType'
+        AddFILoginHostAcctRs:
+          type: array
+          xml:
+            namespace: http://www.cashedge.com/wm
+          items:
+            $ref: '#/components/schemas/addUpdateFILoginHostAcctRsType'
+    addUpdateFILoginHostAcctRsType:
+      type: object
+      properties:
+	    HostAcctStatusID:
+          type: integer
+          format: int32
+        filoginAcctId:
+          type: integer
+          format: int32
+        fihostAcctIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/FIHostAcctIdsType'
     FIHostAcctIdType:
       required:
       - AcctNumber
