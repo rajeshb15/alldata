@@ -21065,43 +21065,8 @@ components:
               CryptType: None
               CryptVal: Cashedge1$
             Role: Admin
-            CreateUserIfNotExists:
-              AdminInfo:
-                UserID: None-added
-                UserPassword:
-                  CryptType: None
-                  CryptVal: Cashedge1$
-              PersonInfo:
-                NameAddrType: Addr-added
-                PersonName:
-                  LastName: not-req
-                ContactInfo:
-                  PhoneNum:
-                  - PhoneType: type-added
-                    Phone: phone-added
-                  PostAddr:
-                    Addr1: addr-added
-                    Country: Ph-added
-                Roles:
-                  RoleCode:
-                  - Admin-added
-          SessionInfo:
-            SessionToken: token-added
-          Preferences:
-          - ParamName: name-a
-            ParamVal: val-a
-          MFAQuestions:
-            Questions:
-            - question: q-a
-              answer: a-a
         FIInfoRq:
-          FIIdList:
-            FIId:
-            - fiid-a
-          SelRangeDt:
-            StartDt: date-a
-            EndDt: date-a
-          ABARoutingNumber: 263178070
+          ABARoutingNumber: '263178070'
           FIInfoRequired: FIIDInfo
         partnerID: 50040000
         version: version1
