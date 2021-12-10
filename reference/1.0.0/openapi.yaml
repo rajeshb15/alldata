@@ -1628,35 +1628,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API request.</td></tr> <tr><td><b>SignonRs</b></td><td>The\
-            \ Admin credentials are received as part of this request.</td></tr><tr><td><b>Status</b></td><td>The\
-            \ Status of SignonRs. <br>For StatusCode please refer the signon service</td></tr><tr><td><b>FIMessagesRs</b></td><td>This\
-            \ aggregate provides the status of the FIMessageRq status. <br> </td></tr><tr><td>Status\
-            \ </td> <td>Status of the FIMessage response. <br></td></tr><tr><td><b>Message</b></td><td>\
-            \ FI Messages are special instructions provided for users to follow to\
-            \ aggregate information from that FI.</td></tr><tr><td><b>UpdateErrorCode</b></td><td>Harvesting\
-            \ error code in which instance, this message to be shared with User.Possible\
-            \ values: ERRORRESOLUTION(ErrorBasedAlerts) ADDACCOUNTS(AddAccountMessages)\
-            \ INFORMATIVE(InformativeAlerts)</td></tr><tr><td><b>MessageType</b></td><td>Contains\
-            \ message type information.</td></tr><tr><td><b>StartDate</b></td><td>Starting\
-            \ date to share this message with User.</td></tr><tr><td><b>EndDate</b></td><td>End\
-            \ date to stop sharing this message with User.</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tbody><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>4012</td><td>Error</td><td>Invalid\
-            \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4010</td><td>Error</td><td>Invalid\
-            \ partnerID</td><td>The partnerID specified in the request is invalid.</td><td></td></tr></tbody></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/fi-message-info.md">More Info</a>
           content:
             application/json:
               schema:
