@@ -5901,10 +5901,10 @@ components:
       xml:
         name: addUpdateHostAccountsRqHeader
     addUpdateHostAccountsRqType:
-	  required:
+      required:
       - FIId
       - FIHostAcctSummary
-	  type: object
+      type: object
       properties:
         FIId:
           type: string
@@ -5944,7 +5944,7 @@ components:
       xml:
         name: addUpdateHostAccountsRsHeader
     addUpdateHostAccountsRsType:
-	  required:
+      required:
       - AddFILoginHostAcctRs
       type: object
       properties:
@@ -5959,7 +5959,7 @@ components:
     addUpdateFILoginHostAcctRsType:
       type: object
       properties:
-	    HostAcctStatusID:
+        HostAcctStatusID:
           type: integer
           format: int32
         filoginAcctId:
