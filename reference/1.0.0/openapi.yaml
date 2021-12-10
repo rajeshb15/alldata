@@ -21430,7 +21430,6 @@ components:
               CryptType: None
               CryptVal: cashedge1
             Role: User
-        UserProfileInqRq:
         partnerID: 50040000
         version: version1
 
