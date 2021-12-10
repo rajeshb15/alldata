@@ -13,7 +13,6 @@
 |CEUserID|The CashEdge internal identifier for the added user.|
 |Status|The status of the GoalAddRq|
 
-
 #### Possible Status Code
 
 |StatusCode|Severity|StatusDesc|Condition|Action API Partner should take to resolve the error|
