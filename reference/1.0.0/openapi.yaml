@@ -1628,35 +1628,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API request.</td></tr> <tr><td><b>SignonRs</b></td><td>The\
-            \ Admin credentials are received as part of this request.</td></tr><tr><td><b>Status</b></td><td>The\
-            \ Status of SignonRs. <br>For StatusCode please refer the signon service</td></tr><tr><td><b>FIMessagesRs</b></td><td>This\
-            \ aggregate provides the status of the FIMessageRq status. <br> </td></tr><tr><td>Status\
-            \ </td> <td>Status of the FIMessage response. <br></td></tr><tr><td><b>Message</b></td><td>\
-            \ FI Messages are special instructions provided for users to follow to\
-            \ aggregate information from that FI.</td></tr><tr><td><b>UpdateErrorCode</b></td><td>Harvesting\
-            \ error code in which instance, this message to be shared with User.Possible\
-            \ values: ERRORRESOLUTION(ErrorBasedAlerts) ADDACCOUNTS(AddAccountMessages)\
-            \ INFORMATIVE(InformativeAlerts)</td></tr><tr><td><b>MessageType</b></td><td>Contains\
-            \ message type information.</td></tr><tr><td><b>StartDate</b></td><td>Starting\
-            \ date to share this message with User.</td></tr><tr><td><b>EndDate</b></td><td>End\
-            \ date to stop sharing this message with User.</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tbody><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>4012</td><td>Error</td><td>Invalid\
-            \ HomeID</td><td>The HomeID specified in the request is invalid.</td><td></td></tr><tr><td>4010</td><td>Error</td><td>Invalid\
-            \ partnerID</td><td>The partnerID specified in the request is invalid.</td><td></td></tr></tbody></table></td></tr></tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/fi-message-info.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1703,42 +1675,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API.</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>GoalId</b></td><td>The\
-            \ identification assigned to the Goal request. This element will be present\
-            \ only of the request that was carried out successfully.</td></tr><tr><td><b>StatusCode</b></td><td>The\
-            \ status code for the response.A code of “0” implies complete success.Other\
-            \ status codes could mean either success or failure depending upon the\
-            \ value of the severity of the code.</td></tr><tr><td><b>Severity</b></td><td>Conveys\
-            \ the status of the request, whether the request was processed successfully,\
-            \ or whether some error was encountered while processing the request.</td></tr><tr><td><b>StatusDesc</b></td><td>A\
-            \ meaningful message that conveys the nature of the error, if any.</td></tr><tr><td><b>CEUserID</b></td><td>The\
-            \ CashEdge internal identifier for the added user.</td></tr><tr><td>Status</td><td>The\
-            \ status of the GoalAddRq</td></tr><tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>5160</td><td>Error</td><td>Validation\
-            \ failure</td><td>Goal Name must be greater than 5 characters.</td><td></td></tr><tr><td>5140</td><td>Error</td><td>Validation\
-            \ failure</td><td>Duplicate goal name is found.</td><td></td></tr><tr><td>5130</td><td>Error</td><td>Validation\
-            \ failure</td><td>You may not allocate more than 100% of a linked account\
-            \ across all goals.</td><td></td></tr><tr><td>5110</td><td>Error</td><td>Validation\
-            \ failure</td><td>Invalid AccountId</td><td></td></tr><tr><td>5120</td><td>Error</td><td>Validation\
-            \ failure</td><td>Target End Date must be a future date</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/create-goal.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1777,35 +1714,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API.</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>GoalId</b></td><td>The\
-            \ identification assigned to the Goal request. This element will be present\
-            \ only of the request that was carried out successfully.</td></tr><tr><td><b>StatusCode</b></td><td>The\
-            \ status code for the response.A code of “0” implies complete success.Other\
-            \ status codes could mean either success or failure depending upon the\
-            \ value of the severity of the code.</td></tr><tr><td><b>Severity</b></td><td>Conveys\
-            \ the status of the request, whether the request was processed successfully,\
-            \ or whether some error was encountered while processing the request.</td></tr><tr><td><b>StatusDesc</b></td><td>A\
-            \ meaningful message that conveys the nature of the error, if any.</td></tr></tbody></table><tr><td>Status</td><td>The\
-            \ status of the GoalDeleteRq</td></tr><tr><td></td><td>+ERRORCODE_HEADER+<table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>5150</td><td>Error</td><td>Validation\
-            \ failure</td><td>No such goalId is found</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/delete-goal.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1852,43 +1761,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API.</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>GoalId</b></td><td>The\
-            \ identification assigned to the Goal request. This element will be present\
-            \ only of the request that was carried out successfully.</td></tr><tr><td><b>StatusCode</b></td><td>The\
-            \ status code for the response.A code of “0” implies complete success.Other\
-            \ status codes could mean either success or failure depending upon the\
-            \ value of the severity of the code.</td></tr><tr><td><b>Severity</b></td><td>Conveys\
-            \ the status of the request, whether the request was processed successfully,\
-            \ or whether some error was encountered while processing the request.</td></tr><tr><td><b>StatusDesc</b></td><td>A\
-            \ meaningful message that conveys the nature of the error, if any.</td></tr><tr><td><b>CEUserID</b></td><td>The\
-            \ CashEdge internal identifier for the added user.</td></tr><tr><td>Status</td><td>The\
-            \ status of the GoalEditRq</td></tr><tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>5160</td><td>Error</td><td>Validation\
-            \ failure</td><td>Goal Name must be greater than 5 characters.</td><td></td></tr><tr><td>5140</td><td>Error</td><td>Validation\
-            \ failure</td><td>Duplicate goal name is found.</td><td></td></tr><tr><td>5130</td><td>Error</td><td>Validation\
-            \ failure</td><td>You may not allocate more than 100% of a linked account\
-            \ across all goals.</td><td></td></tr><tr><td>5110</td><td>Error</td><td>Validation\
-            \ failure</td><td>Invalid AccountId</td><td></td></tr><tr><td>5120</td><td>Error</td><td>Validation\
-            \ failure</td><td>Target End Date must be a future date</td><td></td></tr><tr><td>5150</td><td>Error</td><td>Validation\
-            \ failure</td><td>No such goalId is found</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/edit-goal.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1926,46 +1799,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>A\
-            \ Unique Request Identifier.</td></tr><tr><td><b>Status </b></td> <td>This\
-            \ Aggregate returns the status of the API.</td></tr><tr><td><b>SignonRs</b></td><td>This\
-            \ aggregate provides the status of the user authentication status.</td></tr><tr><td><b>GoalId</b></td><td>The\
-            \ identification assigned to the Goal request. This element will be present\
-            \ only of the request that was carried out successfully.</td></tr><tr><td><b>StatusCode</b></td><td>The\
-            \ status code for the response.A code of “0” implies complete success.Other\
-            \ status codes could mean either success or failure depending upon the\
-            \ value of the severity of the code.</td></tr><tr><td><b>Severity</b></td><td>Conveys\
-            \ the status of the request, whether the request was processed successfully,\
-            \ or whether some error was encountered while processing the request.</td></tr><tr><td><b>StatusDesc</b></td><td>A\
-            \ meaningful message that conveys the nature of the error, if any.</td></tr><tr><td><b>GoalName</b></td><td>\
-            \ Enter information for what you'd like to save up for, like a new house,\
-            \ education savings, etc</td></tr> <tr><td><b>GoalStatus</b></td><td>Status\
-            \ of goal requested</td></tr> <tr><td><b>TargetAmt</b></td><td>  It is\
-            \ the amount that need to save</td></tr> <tr><td><b>TargetDate</b></td><td>\
-            \ It is the date targeting to achieve your goal.</td></tr> <tr><td><b>AcctId</b></td><td>\
-            \ It is the account that would like to use to save up for the goal.</td></tr><tr><td><b>AddedOn</b></td><td>\
-            \ Goal created date</td></tr><tr><td><b>AllocationPercentage</b></td><td>It\
-            \ is the percentage of the account should be set aside specifically for\
-            \ this goal. Please note: Only accounts classified as banking can be linked\
-            \ to a goal.</td></tr></tbody></table><tr><td>Status</td><td>The status\
-            \ of the GoalAddRq</td></tr><tr><td></td><td>+ERRORCODE_HEADER+<table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>0</td><td>Info</td><td>Success</td><td>The\
-            \ service provider successfully processed the request.</td><td></td></tr><tr><td>100</td><td>Error</td><td>General\
-            \ Error</td><td>There was an error that prevented the service provider\
-            \ from processing the transaction. No additional information is provided.</td><td>If\
-            \ this error continues to occur, please reach out to us the timestamp\
-            \ and CEUserId.</td></tr><tr><td>1008</td><td>Error</td><td>Validation\
-            \ failed</td><td>Goal Amount should be positive.</td><td></td></tr><tr><td>1740</td><td>Error</td><td>Authentication\
-            \ Failed</td><td>The customer could not be authenticated due to an incorrect\
-            \ HomeID, login ID or password.</td><td>Verify the user Login ID and Password</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4130</td><td>Error</td><td>Invalid\
-            \ role</td><td>A signon has been attempted by a user in a role other than\
-            \ the authorized role.</td><td></td></tr><tr><td>5150</td><td>Error</td><td>Validation\
-            \ failure</td><td>No such goalId is found</td><td></td></tr><tr><td>5170</td><td>Error</td><td>Validation\
-            \ failure</td><td>No goal is found for this user</td><td></td></tr></td></tr></table></tbody></table>"
+          description: <a href="../docs?path=docs/resources/api-guide/response/find-goal.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2017,31 +1851,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table><thead> <th>Element/property</th><th>Description</th></thead><tbody><tr>\
-            \ <td><b>RqUID</b></td> <td>A Unique Request Identifier.</td></tr><tr>\
-            \ <td><b>Status </b></td> <td>The status of the request.</td> </tr><tr>\
-            \ <td><b>HarvestSts</b></td>  <td>The status of the Harvest operation.This\
-            \ aggregate will be present only of the request was carried out successfully.</td></tr><tr>\
-            \ <td><b>UpdateErrorCode</b></td> <td>This element (representing 3 digit\
-            \ error code) will be present if there is a harvesting error that prevents\
-            \ the account from being added</td> </tr><tr> <td><b>FILoginParamList</b></td>\
-            \ <td>This aggregate will be present if FI throws challenge questions\
-            \ while trying to login to FI site.<tr><td></td><td><span style=\"font-family:\
-            \ sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4310</td><td>Error</td><td>Harvesting\
-            \ Error</td><td>Error code generated if there is a harvesting error during\
-            \ 'account add' or 'add more accounts' operations.</td><td>Partner should\
-            \ refer the returned 'UpdateErrorCode' in the Harvester Error Codes section\
-            \ of this document for corresponding action.</td></tr><tr><td>7701</td><td>Error</td><td>This\
-            \ financial institution requires a multi-factor authentication process\
-            \ that is currently not enabled for this home</td><td>The financial institution\
-            \ requires an image based multi-factor authentication that is currently\
-            \ not enabled for this home. Please reach out to CashEdge team for enabling\
-            \ the same.</td><td></td></tr></table></td></tr> </tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/harvest-status.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2089,58 +1899,7 @@ paths:
         required: true
       responses:
         "200":
-          description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
-            \ </thead> <tbody> <tr> <td><b>Status</b></td> <td> The status of the\
-            \ request.</td> </tr> <tr> <td><b>RqUID</b></td> <td> The Unique Request\
-            \ Identifier sent by the Server Site. </td> </tr> <tr> <td><b>HarvestID</b></td>\
-            \ <td> The identification assigned to the Harvest request.This element\
-            \ will be present only if the request was carried out successfully.</td></tr><tr><td></td><td><span\
-            \ style=\"font-family: sans-serif;font-size: 14px;\">Possible Status Code</span><br><br><table\
-            \ class='error_code_table'><thead><tr></tr><th>StatusCode</th><th>Severity</th><th>StatusDesc</th><th>Condition</th><th>Action\
-            \ API Partner should take to resolve the error</th></tr></thead><tr><td>4350</td><td>Error</td><td>Update\
-            \ in progress.</td><td>An update is already in progress. A new update\
-            \ (update or add) request cannot be submitted unless the existing update\
-            \ is completed.</td><td>Partner should not invoke update or add until\
-            \ the existing update completes.</td></tr><tr><td>4351</td><td>Error</td><td>Update\
-            \ in progress.</td><td>An add or update is already in progress. A new\
-            \ update (update or add) request cannot be submitted unless the existing\
-            \ update is completed.</td><td>Partner should not invoke update or add\
-            \ until the existing update completes.</td></tr><tr><td>4070</td><td>Error</td><td>Validation\
-            \ failure</td><td>One or more input fields were not valid.</td><td>Partner\
-            \ should make sure the mandatory parameters are sent in the request and\
-            \ in the defined format as in the corresponding XSD.</td></tr><tr><td>4140</td><td>Error</td><td>Invalid\
-            \ FILoginAcctId</td><td>The FILoginAcctId specified in the request is\
-            \ invalid.</td><td></td></tr><tr><td>4480</td><td>Error</td><td>Invalid\
-            \ AcctId</td><td>The AcctId in the request does not match with any accounts\
-            \ for this user or is null.</td><td></td></tr><tr><td>4430</td><td>Error</td><td>No\
-            \ accounts found or accounts not eligible for update</td><td>The query\
-            \ criteria did not match with any accounts in the database eligible for\
-            \ update.</td><td>This error occurs when updateAccounts API is invoked\
-            \ for a User with no eligible accounts to update. That is the user is\
-            \ having all the accounts with invalid credentials error or accounts exist\
-            \ under the suspended FI's. Partner has to confirm that the User has eligible\
-            \ accounts for update.</td></tr><tr><td>4060</td><td>Info</td><td>No data\
-            \ available</td><td>No data is available to satisfy the request. This\
-            \ could mean that the user has not registered any financial institutions;\
-            \ there are no transactions in the specified date range and so on.</td><td>If\
-            \ this error occurs on invoking getAccountDetails API, it means user has\
-            \ not added any financial institutions. Please make sure user has added\
-            \ accounts successfully under any financial institutions. If this error\
-            \ occurs on invoking transactions APIs, make sure the 'LastSuccessfulUpdate'\
-            \ date is returned in getAccountDetails API for that specific account\
-            \ and the specified date range lies within the 'LastSuccessfulUpdate'\
-            \ date.</td></tr><tr><td>100</td><td>Error</td><td>General Error</td><td>There\
-            \ was an error that prevented the service provider from processing the\
-            \ transaction. No additional information is provided.</td><td>If this\
-            \ error continues to occur, please reach out to us the timestamp and CEUserId.</td></tr><tr><td>4470</td><td>Error</td><td>The\
-            \ FI Login Account is suspended and cannot be updated. Please update the\
-            \ login information to resume aggregation activity.</td><td>When harvesting\
-            \ account login credentials are rejected, the Account Harvest Status (AcctHarvestStatus)\
-            \ is disabled. The FI Login Account Info List Inquiry Request (FILoginAcctInfoListInqRq)\
-            \ will return this error message in the response (FILoginAcctInfoListInqRs)\
-            \ to convey that the account is locked in the CashEdge system and the\
-            \ institution login credentials should be corrected.</td><td></td></tr></table></td></tr>\
-            \ </tbody></table> "
+          description: <a href="../docs?path=docs/resources/api-guide/response/update-accounts.md">More Info</a>
           content:
             application/json:
               schema:
