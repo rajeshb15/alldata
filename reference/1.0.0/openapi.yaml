@@ -20867,10 +20867,7 @@ components:
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
-            AlldataToken:
             Role: User
-            OBOUserID:
-            CreateUserIfNotExists:
         UserOFILoginCredentialsModRq:
           FILoginAcctId: 5586311
           TrustMode: High
