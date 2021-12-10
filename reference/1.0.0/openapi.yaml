@@ -665,7 +665,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/AddHostAcctsRqHeader'
+              $ref: '#/components/schemas/addUpdateHostAccountsRqHeader'
             examples:
               WorkingSample: {summary: Request Add Update Host Account, $ref: '#/components/examples/addUpdateHostAccountsRequest'}
         required: true
@@ -675,7 +675,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/AddHostAcctsRsHeader'
+                $ref: '#/components/schemas/addUpdateHostAccountsRsHeader'
               examples:
                 WorkingSample: {summary: Response Add Update Host Account, $ref: '#/components/examples/addUpdateHostAccountsResponse'}
         "400":
@@ -5875,6 +5875,100 @@ components:
             namespace: http://www.cashedge.com/wm
           items:
             $ref: '#/components/schemas/AddFILoginHostAcctRqType'
+    addUpdateHostAccountsRqHeader:
+      required:
+      - addUpdateHostAccountsRq
+      - RqUID
+      - SignonRq
+      type: object
+      properties:
+        RqUID:
+          type: string
+          xml:
+            namespace: http://www.cashedge.com/wm
+        SignonRq:
+          $ref: '#/components/schemas/SignonRqType'
+        AddUpdateHostAccountsRq:
+          $ref: '#/components/schemas/addUpdateHostAccountsRqType'
+        partnerID:
+          type: integer
+          xml:
+            attribute: true
+        version:
+          type: string
+          xml:
+            attribute: true
+      xml:
+        name: addUpdateHostAccountsRqHeader
+    addUpdateHostAccountsRqType:
+	  required:
+      - FIId
+      - FIHostAcctSummary
+	  type: object
+      properties:
+        FIId:
+          type: string
+          xml:
+            namespace: http://www.cashedge.com/wm
+        FIHostAcctSummary:
+          type: array
+          xml:
+            namespace: http://www.cashedge.com/wm
+          items:
+            $ref: '#/components/schemas/FIHostAcctSummaryType'
+    addUpdateHostAccountsRsHeader:
+      required:
+      - addUpdateHostAccountsRs
+      - SignonRs
+      - Status
+      type: object
+      properties:
+        RqUID:
+          type: string
+          xml:
+            namespace: http://www.cashedge.com/wm
+        Status:
+          $ref: '#/components/schemas/StatusType'
+        SignonRs:
+          $ref: '#/components/schemas/SignonRsType'
+        AddUpdateHostAccountsRs:
+          $ref: '#/components/schemas/addUpdateHostAccountsRsType'
+        partnerID:
+          type: integer
+          xml:
+            attribute: true
+        version:
+          type: string
+          xml:
+            attribute: true
+      xml:
+        name: addUpdateHostAccountsRsHeader
+    addUpdateHostAccountsRsType:
+	  required:
+      - AddFILoginHostAcctRs
+      type: object
+      properties:
+        Status:
+          $ref: '#/components/schemas/StatusType'
+        AddFILoginHostAcctRs:
+          type: array
+          xml:
+            namespace: http://www.cashedge.com/wm
+          items:
+            $ref: '#/components/schemas/addUpdateFILoginHostAcctRsType'
+    addUpdateFILoginHostAcctRsType:
+      type: object
+      properties:
+	    HostAcctStatusID:
+          type: integer
+          format: int32
+        filoginAcctId:
+          type: integer
+          format: int32
+        fihostAcctIds:
+          type: array
+          items:
+            $ref: '#/components/schemas/FIHostAcctIdsType'
     FIHostAcctIdType:
       required:
       - AcctNumber
@@ -10400,7 +10494,7 @@ components:
           UserInfo:
             Role: User
             UserID: JHWSUSER755976
-            HomeID: '50120001'
+            HomeID: 50120001
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
@@ -11067,7 +11161,7 @@ components:
         version: version1
         FIAcctSummaryInqRq:
           FIAcctId:
-            AcctId: '5585065'
+            AcctId: 5585065
             AcctType: SDA
             ExtAcctType: SDA
         SignonRq:
@@ -11077,7 +11171,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: wstest236973
-            HomeID: '50120001'
+            HomeID: 50120001
 
     getAccountsSummaryResponse:
       value:
@@ -11146,7 +11240,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: wstest236973
-            HomeID: '50120001'
+            HomeID: 50120001
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
@@ -11236,7 +11330,7 @@ components:
         RqUID: RqUID0
         OtherAcctTrnInqRq:
           FIAcctId:
-            AcctId: '5585107'
+            AcctId: 5585107
             AcctType: OLA
             ExtAcctType: ILA
           SelectionCriterion:
@@ -11252,7 +11346,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt83405
-            HomeID: '50120001'
+            HomeID: 50120001
 
     getOtherAccountTransResponse:
       value:
@@ -11303,7 +11397,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: XMLAdminu50lgw
-            HomeID: '50120001'
+            HomeID: 50120001
             UserPassword:
               CryptType: None
               CryptVal: Cashedge1$
@@ -12670,7 +12764,7 @@ components:
         RqUID: RqUID0
         DepAcctTrnInqRq:
           FIAcctId:
-            AcctId: '5585457'
+            AcctId: 5585457
             AcctType: SDA
             ExtAcctType: SDA
           SelectionCriterion:
@@ -12686,7 +12780,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt25580
-            HomeID: '50120001'
+            HomeID: 50120001
     
     getBankingTransResponse:
       value:
@@ -12769,7 +12863,7 @@ components:
         partnerID: 50120000
         CCAcctTrnInqRq:
           FIAcctId:
-            AcctId: '5585463'
+            AcctId: 5585463
             AcctType: CCA
             ExtAcctType: CCA
           SelectionCriterion:
@@ -12784,7 +12878,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt25580
-            HomeID: '50120001'
+            HomeID: 50120001
     
     getCreditCardTransResponse:
       value:
@@ -12882,7 +12976,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: JHWSUSER295289
-            HomeID: '50040009'
+            HomeID: 50040009
 
     getTransactionsResponse:
       value:
@@ -18763,7 +18857,7 @@ components:
       value:
         EmployerStockOptionRq:
           FIAcctId:
-            AcctId: '5585548'
+            AcctId: 5585548
             AcctType: INV
             ExtAcctType: ESO
         RqUID: RqUID0
@@ -18776,7 +18870,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt14478
-            HomeID: '50120001'
+            HomeID: 50120001
             
     getEmployerStockOptionsResponse:
       value:
@@ -19029,7 +19123,7 @@ components:
         partnerID: 50040000
         InvAcctPosInqRq:
           FIAcctId:
-            AcctId: '5586109'
+            AcctId: 5586109
             AcctType: INV
             ExtAcctType: INV
         version: version1
@@ -19040,7 +19134,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt81782
-            HomeID: '50040009'
+            HomeID: 50040009
             
     getInvestmentPosResponse:
       value:
@@ -19134,7 +19228,7 @@ components:
       value:
         InvAcctTrnInqRq:
           FIAcctId:
-            AcctId: '5585109'
+            AcctId: 5585109
             AcctType: INV
             ExtAcctType: INV
           SelectionCriterion:
@@ -19151,7 +19245,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt83405
-            HomeID: '50120001'
+            HomeID: 50120001
     
     getInvestmentTransResponse:
       value:
@@ -19244,7 +19338,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: Newport_client7235afc
-            HomeID: '66664001'
+            HomeID: 66664001
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
@@ -19252,7 +19346,7 @@ components:
         AddHostAcctsRq:
           UserInfo:
             UserID: Newport_client7235afc
-            HomeID: '66664001'
+            HomeID: 66664001
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
@@ -19892,7 +19986,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: AUTO_JSON_FLClt73123
-            HomeID: '50040009'
+            HomeID: 50040009
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
@@ -20092,7 +20186,7 @@ components:
               AcctOwnerName: James Hudson
               AcctNumber: Kevins Securities Account
               FIId: '505001'
-          RunId: '18816644'
+          RunId: 18816644
           HarvestAddID: 467270395475464e496f6a716f624e47334f4e7861513d3d
 
 
@@ -20321,7 +20415,7 @@ components:
         FIDeleteRq:
           FIAcctId:
             ExtAcctType: INV
-            AcctId: '5586120'
+            AcctId: 5586120
             AcctType: INV
         partnerID: 50040000
         version: version1
@@ -20332,7 +20426,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt13458
-            HomeID: '50040009'
+            HomeID: 50040009
 
 
     deleteAccountsResponse:
@@ -20365,9 +20459,9 @@ components:
         SignonRq:
           SessionInfo:
             SessionToken: 34626776314179795a306e6e65337468546233735a413d3d
-            HomeID: '50120001'
+            HomeID: 50120001
         HarvestAddStsInqRq:
-          RunId: '18792974'
+          RunId: 18792974
           HarvestAddID: 34626776314179795a306e6e65337468546233735a413d3d
 
 
@@ -20399,7 +20493,7 @@ components:
     getNewAccountsRequest:
       value:
         HarvestAddFetchRq:
-          RunId: '18816631'
+          RunId: 18816631
           HarvestAddID: 6d70454239722b534957774c55586872614d4a4367513d3d
         RqUID: RqUID0
         partnerID: 50040000
@@ -20407,7 +20501,7 @@ components:
         SignonRq:
           SessionInfo:
             SessionToken: 6d70454239722b534957774c55586872614d4a4367513d3d
-            HomeID: '50040009'
+            HomeID: 50040009
 
 
     getNewAccountsResponse:
@@ -20730,7 +20824,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt14455
-            HomeID: '50040009'
+            HomeID: 50040009
 
     initiateAddAccountResponse:
       value:
@@ -20773,12 +20867,12 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt46385
-            HomeID: '50040009'
+            HomeID: 50040009
         UserAcctModRq:
           FIAcctMod:
           - AcctTypeId: '50500307'
             FIAcctId:
-              AcctId: '5586126'
+              AcctId: 5586126
               AcctType: CCA
               ExtAcctType: CCA
             FIAcctName:
@@ -20821,7 +20915,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: AUTO_JSON_FLClt73123
-            HomeID: '50040009'
+            HomeID: 50040009
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
@@ -20867,10 +20961,7 @@ components:
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
-            AlldataToken:
             Role: User
-            OBOUserID:
-            CreateUserIfNotExists:
         UserOFILoginCredentialsModRq:
           FILoginAcctId: 5586311
           TrustMode: High
@@ -21250,14 +21341,14 @@ components:
                 - PhoneType: EveningPhone
                   Phone: '4085432400'
               NameAddrType: Customer
-            HomeID: '50040009'
+            HomeID: 50040009
             UserID: AUTO_JSON_FLClt14455
           UserInfo:
             UserPassword:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt14455
-            HomeID: '50040009'
+            HomeID: 50040009
         version: version1
         SignonRq:
           UserInfo:
@@ -21266,7 +21357,7 @@ components:
               CryptVal: Cashedge1$
               CryptType: None
             UserID: XMLAdminxle300
-            HomeID: '50040009'
+            HomeID: 50040009
 
     createUserResponse:
       value:
@@ -21295,7 +21386,7 @@ components:
         RqUID: RqUID0
         partnerID: 50040000
         UserDelRq:
-          HomeID: '50040009'
+          HomeID: 50040009
           UserID: AUTO_JSON_FLClt76741
         version: version1
         SignonRq:
@@ -21305,7 +21396,7 @@ components:
               CryptVal: Cashedge1$
               CryptType: None
             UserID: XMLAdminxle300
-            HomeID: '50040009'
+            HomeID: 50040009
 
     deleteUserResponse:
       value:
@@ -21339,7 +21430,6 @@ components:
               CryptType: None
               CryptVal: cashedge1
             Role: User
-        UserProfileInqRq:
         partnerID: 50040000
         version: version1
 
@@ -21392,7 +21482,7 @@ components:
               CryptVal: cashedge3
               CryptType: None
             UserID: AUTO_JSON_FLClt35132
-            HomeID: '50040009'
+            HomeID: 50040009
           GenSessInfo: 'true'
 
     signonResponse:
@@ -21471,7 +21561,7 @@ components:
                 - PhoneType: Eveningphone
                   Phone: '1234567890'
               NameAddrType: customer
-            HomeID: '50040009'
+            HomeID: 50040009
             UserID: AUTO_JSON_FLClt37144
         version: version1
         SignonRq:
@@ -21481,7 +21571,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AUTO_JSON_FLClt37144
-            HomeID: '50040009'
+            HomeID: 50040009
 
 
     updateUserProfileResponse:
@@ -22271,7 +22361,7 @@ components:
           MonitoringCode: '1000'
           FirstName: Tom
           LastName: Bruce
-          RTVHomeID: '88850031'
+          RTVHomeID: 88850031
           AcctNumber: xxxx4444
           FIId: '2655'
         version: version1
@@ -22282,7 +22372,7 @@ components:
               CryptVal: cashedge1
               CryptType: None
             UserID: AlldataVerifyNowadmn
-            HomeID: '50050001'
+            HomeID: 50050001
 
     RTVTokenResponse:
       value:
@@ -22379,7 +22469,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: AlldataVerifyNowadmn
-            HomeID: '50050001'
+            HomeID: 50050001
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
