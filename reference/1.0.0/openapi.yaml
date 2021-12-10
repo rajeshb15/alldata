@@ -7585,7 +7585,7 @@ components:
     UpdateTxnCategoryRqHeader:
       required:
       - RqUID
-      - SignonRq
+      # - SignonRq
       - UpdateTxnCategoryRq
       type: object
       properties:
@@ -8272,7 +8272,7 @@ components:
     FIMessagesInfoRqHeader:
       required:
       - RqUID
-      - SignonRq
+      # - SignonRq
       type: object
       properties:
         RqUID:
