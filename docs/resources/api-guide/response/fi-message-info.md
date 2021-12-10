@@ -15,7 +15,6 @@
 |StartDate|Starting date to share this message with User.|
 |EndDate|End date to stop sharing this message with User.|
 
-
 #### Possible Status Code
 
 |StatusCode|Severity|StatusDesc|Condition|Action API Partner should take to resolve the error|
