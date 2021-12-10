@@ -625,7 +625,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/add-host-accounts.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/add-host-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -671,7 +671,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/add-update-host-accounts.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/add-update-host-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -710,7 +710,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/bank-statement-consent.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/bank-statement-consent.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -754,7 +754,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/create-accounts.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/create-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -797,7 +797,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/delete-accounts.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/delete-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -841,7 +841,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/delete-document.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/delete-document.md">More Info</a> 
           content:
             application/xml:
               schema:
@@ -894,7 +894,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/add-account-status.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/add-account-status.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -942,7 +942,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/new-accounts.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/new-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -980,7 +980,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/host-accounts-status.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/host-accounts-status.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1033,7 +1033,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/initiate-add-accounts.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/initiate-add-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1075,7 +1075,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/maintain-account.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/maintain-account.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1113,7 +1113,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/tax-statement-consent.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/tax-statement-consent.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1156,7 +1156,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-account-credentials.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/update-account-credentials.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1204,7 +1204,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-host-accounts.md">more info</a> 
+          description: <a href="../docs?path=docs/resources/api-guide/response/update-host-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -21110,7 +21110,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: XMLAdminxle300
-            HomeID: '50040009'
+            HomeID: 50040009
             UserPassword:
               CryptType: None
               CryptVal: Cashedge1$
@@ -21558,7 +21558,7 @@ components:
     AckRTVResultRequest:
       value:
         RqUID: RqUID3
-        partnerID: '50050000'
+        partnerID: 50050000
         version: 1.4.6
         AckRTVResultRq:
           RTVStatus: Success
@@ -22323,7 +22323,7 @@ components:
         SignonRq:
           UserInfo:
             UserID: AlldataVerifyNowadmn
-            HomeID: '50050001'
+            HomeID: 50050001
             UserPassword:
               CryptType: None
               CryptVal: cashedge1
