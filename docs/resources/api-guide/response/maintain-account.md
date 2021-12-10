@@ -2,7 +2,6 @@
 
 | Element / property | Description |
 | --- | --- |
-
 | RqUID | Unique Request Identifier. The Client Site sends this element with the request. |
 | Status | The status of the request. |
 | HarvestID | The identification assigned to the Harvest request.<br>This element will be present only of the request that was carried out successfully |
