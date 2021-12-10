@@ -20218,7 +20218,7 @@ components:
         SignonRq:
           SessionInfo:
             SessionToken: 34626776314179795a306e6e65337468546233735a413d3d
-            HomeID: 50120001
+            HomeID: '50120001'
         HarvestAddStsInqRq:
           RunId: 18792974
           HarvestAddID: 34626776314179795a306e6e65337468546233735a413d3d
@@ -20260,7 +20260,7 @@ components:
         SignonRq:
           SessionInfo:
             SessionToken: 6d70454239722b534957774c55586872614d4a4367513d3d
-            HomeID: 50040009
+            HomeID: '50040009'
 
 
     getNewAccountsResponse:
