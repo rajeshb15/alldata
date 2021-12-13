@@ -19120,7 +19120,7 @@ components:
               CryptVal: cashedge1
             Role: User
           AddFILoginHostAcctRq:
-            FIId: '20349'
+          - FIId: '20349'
             FIUserLoginHostAcctInfo:
               TrustMode: High
               ClassifiedStatus: Classified
@@ -19131,81 +19131,81 @@ components:
                   AcctType: CCA
                   ExtAcctType: CCA
                 FIAcctName:
-                  ParamName: NickNameAtFI
+                - ParamName: NickNameAtFI
                   ParamVal: Master Card
               IncludeInDisplay: 'Yes'
               AcctBal:
               - BalType: CreditLimit
                 CurAmt:
-                  Amt: '75000.0'
+                  Amt: 75000
                   CurCode: USD
               - BalType: AvailCredit
                 CurAmt:
-                  Amt: '50000.0'
+                  Amt: 50000
                   CurCode: USD
               - BalType: Outstanding
                 CurAmt:
-                  Amt: '20000.0'
+                  Amt: 20000
                   CurCode: USD
               - BalType: PurchasesApr
                 CurAmt:
-                  Amt: '250.0'
+                  Amt: 250
                   CurCode: USD
               - BalType: PastDueAmount
                 CurAmt:
-                  Amt: '1000.0'
+                  Amt: 1000
                   CurCode: USD
               - BalType: PointsRedeemedInPoints
                 CurAmt:
-                  Amt: '45.0'
+                  Amt: 45
                   CurCode: USD
               - BalType: CurrentRewardsBalanceInPoints
                 CurAmt:
-                  Amt: '75.0'
+                  Amt: 75
                   CurCode: USD
               - BalType: CurrentRewardsBalance
                 CurAmt:
-                  Amt: '600.0'
+                  Amt: 600
                   CurCode: USD
               - BalType: AvailableCashLimit
                 CurAmt:
-                  Amt: '5000.0'
+                  Amt: 5000
                   CurCode: USD
               - BalType: PointsRedeemed
                 CurAmt:
-                  Amt: '25.0'
+                  Amt: 25
                   CurCode: USD
               - BalType: PreviousAmountDue
                 CurAmt:
-                  Amt: '15000.0'
+                  Amt: 15000
                   CurCode: USD
               - BalType: MinimumPaymentDue
                 CurAmt:
-                  Amt: '5000.0'
+                  Amt: 5000
                   CurCode: USD
               - BalType: PointsAccrued
                 CurAmt:
-                  Amt: '150.0'
+                  Amt: 150
                   CurCode: USD
               - BalType: CashAdvanceLimit
                 CurAmt:
-                  Amt: '3000.0'
+                  Amt: 3000
                   CurCode: USD
               - BalType: AdvancesApr
                 CurAmt:
-                  Amt: '350.0'
+                  Amt: 350
                   CurCode: USD
               - BalType: FinanceCharges
                 CurAmt:
-                  Amt: '10.0'
+                  Amt: 10
                   CurCode: USD
               - BalType: PointsAccruedInPoints
                 CurAmt:
-                  Amt: '35.0'
+                  Amt: 35
                   CurCode: USD
               - BalType: StatementBalance
                 CurAmt:
-                  Amt: '2000.0'
+                  Amt: 2000
                   CurCode: USD
               Property:
               - ParamName: Instrument
@@ -19214,35 +19214,55 @@ components:
                 ParamVal: Non Retirement
               - ParamName: AccountOwnership
                 ParamVal: Individual
+              InvAcctSecInfo:
+              - InvSecPos:
+                  FISecID: '20349'
+                  SecInfo:
+                    Ticker: ABC
+                    AssetClass:
+                      CategoryCode: CC
+                  SecPos:
+                    MarketValue:
+                      Amt: 100
+                      CurCode: USD
+              FIHostAcctTxnDetails:
+              - HostAcctTrnRec:
+                - PostedDt: '2009-10-10T10:00:00Z'
+                  Memo: Checking transaction 1
+                  TrnType: Cash
+                  CurAmt:
+                    Amt: 1.31
+                    CurCode: USD
+                  CheckNumber: '5467'
             - FIHostAcctInfo:
                 FIHostAcctId:
                   AcctNumber: 126071120_L1
                   AcctType: OLA
                   ExtAcctType: OLA
                 FIAcctName:
-                  ParamName: NickNameAtFI
+                - ParamName: NickNameAtFI
                   ParamVal: Mortgage
               IncludeInDisplay: 'Yes'
               AcctBal:
               - BalType: Current
                 CurAmt:
-                  Amt: '5971.0'
+                  Amt: 5971
                   CurCode: USD
               - BalType: Avail
                 CurAmt:
-                  Amt: '5971.0'
+                  Amt: 5971
                   CurCode: USD
               - BalType: Term
                 CurAmt:
-                  Amt: '6.0'
+                  Amt: 6
                   CurCode: USD
               - BalType: InterestYTD
                 CurAmt:
-                  Amt: '6.0'
+                  Amt: 6
                   CurCode: USD
               - BalType: APY
                 CurAmt:
-                  Amt: '54.0'
+                  Amt: 54
                   CurCode: USD
               Property:
               - ParamName: Instrument
@@ -19251,55 +19271,75 @@ components:
                 ParamVal: Non Retirement
               - ParamName: AccountOwnership
                 ParamVal: Individual
+              InvAcctSecInfo:
+              - InvSecPos:
+                  FISecID: '20349'
+                  SecInfo:
+                    Ticker: ABC
+                    AssetClass:
+                      CategoryCode: CC
+                  SecPos:
+                    MarketValue:
+                      Amt: 100
+                      CurCode: USD
+              FIHostAcctTxnDetails:
+              - HostAcctTrnRec:
+                - PostedDt: '2009-10-10T10:00:00Z'
+                  Memo: Checking transaction 1
+                  TrnType: Cash
+                  CurAmt:
+                    Amt: 1.31
+                    CurCode: USD
+                  CheckNumber: '5467'
             - FIHostAcctInfo:
                 FIHostAcctId:
                   AcctNumber: 13033412043_A
                   AcctType: INV
                   ExtAcctType: INV
                 FIAcctName:
-                  ParamName: NickNameAtFI
+                - ParamName: NickNameAtFI
                   ParamVal: Investment Birla
               IncludeInDisplay: 'Yes'
               AcctBal:
               - BalType: TotalBrokerageAccountValue
                 CurAmt:
-                  Amt: '21478.0'
+                  Amt: 21478
                   CurCode: USD
               - BalType: TotalAmountOfCompanyMatch
                 CurAmt:
-                  Amt: '245.0'
+                  Amt: 245
                   CurCode: USD
               - BalType: InsurancePremium
                 CurAmt:
-                  Amt: '5488.0'
+                  Amt: 5488
                   CurCode: USD
               - BalType: EmployerProfitSharing
                 CurAmt:
-                  Amt: '159753.0'
+                  Amt: 159753
                   CurCode: USD
               - BalType: CurrentVestedBalance
                 CurAmt:
-                  Amt: '1248.0'
+                  Amt: 1248
                   CurCode: USD
               - BalType: DeferralPercentage
                 CurAmt:
-                  Amt: '214785.0'
+                  Amt: 214785
                   CurCode: USD
               - BalType: LoanAmount
                 CurAmt:
-                  Amt: '5555.0'
+                  Amt: 5555
                   CurCode: USD
               - BalType: TotalAmountOfContributions
                 CurAmt:
-                  Amt: '24789.0'
+                  Amt: 24789
                   CurCode: USD
               - BalType: CashSurrenderValue
                 CurAmt:
-                  Amt: '1478.0'
+                  Amt: 1478
                   CurCode: USD
               - BalType: DeathBenefit
                 CurAmt:
-                  Amt: '2136.0'
+                  Amt: 2136
                   CurCode: USD
               Property:
               - ParamName: Instrument
@@ -19309,14 +19349,23 @@ components:
               - ParamName: AccountOwnership
                 ParamVal: Individual
               InvAcctSecInfo:
-                InvSecPos:
+              - InvSecPos:
                   FISecID: '20349'
                   SecInfo:
                     Ticker: ABC
                   SecPos:
                     MarketValue:
-                      Amt: '100'
+                      Amt: 100
                       CurCode: USD
+              FIHostAcctTxnDetails:
+              - HostAcctTrnRec:
+                - PostedDt: '2009-10-10T10:00:00Z'
+                  Memo: Checking transaction 1
+                  TrnType: Cash
+                  CurAmt:
+                    Amt: 1.31
+                    CurCode: USD
+                  CheckNumber: '5467'
         version: version1
         partnerID: 66664000
 
