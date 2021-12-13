@@ -5667,7 +5667,7 @@ components:
         AddUpdateFILoginHostAcctRq:
           type: array
           items:
-            $ref: '#/components/schemas/AddUpdateHostAccountsRqType'
+            $ref: '#/components/schemas/addUpdateHostAccountsRqType'
     addUpdateHostAccountsRqType:
       required:
       - FIId
