@@ -5648,7 +5648,7 @@ components:
         SignonRq:
           $ref: '#/components/schemas/SignonRqType'
         AddUpdateHostAccountsRq:
-          $ref: '#/components/schemas/addUpdateHostAccountsRqType'
+          $ref: '#/components/schemas/AddUpdateFILoginHostAcctRqType'
         partnerID:
           type: integer
           xml:
@@ -5659,6 +5659,15 @@ components:
             attribute: true
       xml:
         name: addUpdateHostAccountsRqHeader
+    AddUpdateFILoginHostAcctRqType:
+      required:
+      - AddUpdateFILoginHostAcctRq
+      type: object
+      properties:
+        AddUpdateFILoginHostAcctRq:
+          type: array
+          items:
+            $ref: '#/components/schemas/AddUpdateHostAccountsRqType'
     addUpdateHostAccountsRqType:
       required:
       - FIId
