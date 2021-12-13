@@ -5648,7 +5648,7 @@ components:
         SignonRq:
           $ref: '#/components/schemas/SignonRqType'
         AddUpdateHostAccountsRq:
-          $ref: '#/components/schemas/addUpdateHostAccountsRqType'
+          $ref: '#/components/schemas/AddUpdateFILoginHostAcctRqType'
         partnerID:
           type: integer
           xml:
@@ -5659,6 +5659,15 @@ components:
             attribute: true
       xml:
         name: addUpdateHostAccountsRqHeader
+    AddUpdateFILoginHostAcctRqType:
+      required:
+      - AddUpdateFILoginHostAcctRq
+      type: object
+      properties:
+        AddUpdateFILoginHostAcctRq:
+          type: array
+          items:
+            $ref: '#/components/schemas/AddUpdateHostAccountsRqType'
     addUpdateHostAccountsRqType:
       required:
       - FIId
@@ -7585,7 +7594,7 @@ components:
     UpdateTxnCategoryRqHeader:
       required:
       - RqUID
-      - SignonRq
+      # - SignonRq
       - UpdateTxnCategoryRq
       type: object
       properties:
@@ -8272,7 +8281,7 @@ components:
     FIMessagesInfoRqHeader:
       required:
       - RqUID
-      - SignonRq
+      # - SignonRq
       type: object
       properties:
         RqUID:
@@ -20218,7 +20227,7 @@ components:
         SignonRq:
           SessionInfo:
             SessionToken: 34626776314179795a306e6e65337468546233735a413d3d
-            HomeID: 50120001
+            HomeID: '50120001'
         HarvestAddStsInqRq:
           RunId: 18792974
           HarvestAddID: 34626776314179795a306e6e65337468546233735a413d3d
@@ -20260,7 +20269,7 @@ components:
         SignonRq:
           SessionInfo:
             SessionToken: 6d70454239722b534957774c55586872614d4a4367513d3d
-            HomeID: 50040009
+            HomeID: '50040009'
 
 
     getNewAccountsResponse:

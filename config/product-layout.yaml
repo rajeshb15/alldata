@@ -29,10 +29,10 @@
 ################################################################################
 header:
   productionDescription: > 
-                    Leading financial institutions and technology providers use AllData Aggregation to gather financial data for millions of consumers, from more than 18,000 distinct data sources, including bank accounts, liability accounts including credit cards, investment and retirement accounts, as well as insurance and billers. </br></br>
+                    Leading financial institutions and technology providers use AllData® Aggregation to gather financial data for millions of consumers, from more than 18,000 distinct data sources, including bank accounts, liability accounts including credit cards, investment and retirement accounts, as well as insurance and billers. </br></br>
 
                     Fiserv has been in the data aggregation business for more than 20 years. Thousands of businesses and millions of consumers trust Fiserv to help them maximize the power of data aggregation by easily integrating the data they need with any new or existing application, regardless of the underlying technology platform.
-  whoIsItFor: Our AllData Aggregation products and services cater to financial institutions and fintechs to facilitate consumer-permissioned account connectivity.
+  whoIsItFor: Our AllData® Aggregation products and services cater to financial institutions and fintechs to facilitate consumer-permissioned account connectivity.
 featuredFeatures:
   - title: Account Verification
     description: >
@@ -45,23 +45,23 @@ featuredFeatures:
       - relatedDoc: 
         title: Common Use Cases
         description: >
-          This document covers common use cases within the AllData Aggregation product, including a number of API Solutions.
+          This document covers common use cases within the AllData® Aggregation product, including a number of API Solutions.
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
         title: APIs and Add Account Widget 
         description: >
-          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
+          This document addresses how to Use AllData® APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
         title: Widget Integration Guide
         description: >
-          This document covers ways to speed implementation by leveraging AllData widgets.
+          This document covers ways to speed implementation by leveraging AllData® widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
         title: Sign On 
         description: >
-          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
+          This API is used to sign on to the AllData® service. It authenticates the user and generates a session token.
           The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
           This session token is also required to launch the Add Account widget flow.
         type: "post"        
@@ -89,23 +89,23 @@ featuredFeatures:
       - relatedDoc: 
         title: Common Use Cases
         description: >
-          This document covers common use cases within the AllData Aggregation product, including a number of API Solutions.
+          This document covers common use cases within the AllData® Aggregation product, including a number of API Solutions.
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
         title: APIs and Add Account Widget 
         description: >
-          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
+          This document addresses how to Use AllData® APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
         title: Widget Integration Guide
         description: >
-          This document covers ways to speed implementation by leveraging AllData widgets.
+          This document covers ways to speed implementation by leveraging AllData® widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
         title: Sign On 
         description: >
-          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
+          This API is used to sign on to the AllData® service. It authenticates the user and generates a session token.
           The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
           This session token is also required to launch the Add Account widget flow.
         type: "post"        
@@ -132,23 +132,23 @@ featuredFeatures:
       - relatedDoc: 
         title: Common Use Cases
         description: >
-          This document covers common use cases within the AllData Aggregation product, including a number of API Solutions.
+          This document covers common use cases within the AllData® Aggregation product, including a number of API Solutions.
         link: "/docs/alldata-common-use-cases.md"
       - relatedDoc: 
         title: APIs and Add Account Widget 
         description: >
-          This document addresses how to Use AllData APIs and the Add Account Widget for multiple use cases.
+          This document addresses how to Use AllData® APIs and the Add Account Widget for multiple use cases.
         link: "/docs/add-account.md"
       - relatedDoc: 
         title: Widget Integration Guide
         description: >
-          This document covers ways to speed implementation by leveraging AllData widgets.
+          This document covers ways to speed implementation by leveraging AllData® widgets.
         link: "/docs/alldata-next-gen.md"
     relatedAPIs:
       - relatedAPI: 
         title: Sign On 
         description: >
-          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
+          This API is used to sign on to the AllData® service. It authenticates the user and generates a session token.
           The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
           This session token is also required to launch the Add Account widget flow.
         type: "post"        
