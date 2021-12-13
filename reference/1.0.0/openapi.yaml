@@ -20800,6 +20800,27 @@ components:
                 CurAmt:
                   Amt: 75000
                   CurCode: INR
+              Property:
+              - ParamName: Instrument
+                ParamVal: N/A
+              InvAcctSecInfo:
+              - InvSecPos:
+                  FISecID: '20349'
+                  SecInfo:
+                    Ticker: ABCmodify
+                  SecPos:
+                    MarketValue:
+                      Amt: 187
+                      CurCode: USD
+              FIHostAcctTxnDetails:
+              - HostAcctTrnRec:
+                - PostedDt: '2009-10-10T10:00:00Z'
+                  Memo: Checking transaction 1
+                  TrnType: Cash
+                  CurAmt:
+                    Amt: 1.31
+                    CurCode: USD
+                  CheckNumber: '5467'
         partnerID: 66664000
         version: version1
 
