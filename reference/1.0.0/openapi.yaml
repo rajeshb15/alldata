@@ -20802,7 +20802,7 @@ components:
                   CurCode: INR
               Property:
               - ParamName: Instrument
-                ParamVal: NA
+                ParamVal: N/A
               InvAcctSecInfo:
               - InvSecPos:
                   FISecID: '20349'
