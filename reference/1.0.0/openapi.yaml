@@ -5636,7 +5636,7 @@ components:
             $ref: '#/components/schemas/AddFILoginHostAcctRqType'
     addUpdateHostAccountsRqHeader:
       required:
-      - addUpdateHostAccountsRq
+      - AddUpdateHostAccountsRq
       - RqUID
       - SignonRq
       type: object
@@ -5686,7 +5686,7 @@ components:
             $ref: '#/components/schemas/FIHostAcctSummaryType'
     addUpdateHostAccountsRsHeader:
       required:
-      - addUpdateHostAccountsRs
+      - AddUpdateHostAccountsRs
       - SignonRs
       - Status
       type: object
@@ -19472,6 +19472,7 @@ components:
                   Amt: 300
                   CurCode: USD
                 BalType: Avail
+              InvAcctSecInfo: []
             - FIHostAcctInfo:
                 FIAcctName:
                 - ParamVal: Savings 01
@@ -19523,6 +19524,7 @@ components:
                   Amt: 300
                   CurCode: USD
                 BalType: Avail
+              InvAcctSecInfo: []
             - FIHostAcctInfo:
                 FIAcctName:
                 - ParamVal: Credit card Act1
@@ -19626,6 +19628,7 @@ components:
                 CurAmt:
                   Amt: 2000
                   CurCode: USD
+              InvAcctSecInfo: []
             - FIHostAcctInfo:
                 FIAcctName:
                 - ParamVal: Rewards
@@ -19741,6 +19744,7 @@ components:
                 CurAmt:
                   Amt: 2000
                   CurCode: USD
+              InvAcctSecInfo: []
             FIId: '505001'
         partnerID: 50550000
         version: version1
@@ -19753,7 +19757,6 @@ components:
             UserID: verifyclincdemo
             HomeID: 50550001
 
-    
     addUpdateHostAccountsResponse:
       value:
         RqUID: RqUID0
