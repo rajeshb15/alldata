@@ -497,7 +497,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/tax-document-details.md">More Info</a>
+          description: Success #<a href="../docs?path=docs/resources/api-guide/response/tax-document-details.md">More Info</a>
           content:
             application/json:
               schema:
@@ -583,7 +583,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/ping.md">More Info</a> 
+          description: Success #<a href="../docs?path=docs/resources/api-guide/response/ping.md">More Info</a> 
           content:
             application/json:
               schema:
