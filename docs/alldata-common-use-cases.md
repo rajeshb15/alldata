@@ -1,5 +1,7 @@
-# AllData Common Use Cases API Solution
-
-This document covers common use cases within the AllData Aggregation product, including a number of API Solution
-
-[Common Agg Use Cases](https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/pdfs/Common%20Agg%20Use%20Cases.pdf)
+![page 1](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/common-agg-use-cases/page-0.png)
+![page 2](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/common-agg-use-cases/page-1.png)
+![page 3](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/common-agg-use-cases/page-2.png)
+![page 4](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/common-agg-use-cases/page-3.png)
+![page 5](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/common-agg-use-cases/page-4.png)
+![page 6](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/common-agg-use-cases/page-5.png)
+![page 7](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/common-agg-use-cases/page-6.png)
