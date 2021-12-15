@@ -2,7 +2,7 @@
 
 
 |Element / property|Description|
-|--- |--- | | 
+|--- |--- |
 | RqUID | Unique Request Identifier. The Client Site sends this element with the request.|
 | Status | The status of the request.|
 | TaxDocumentInqRs | Contains the Tax document response details.|
