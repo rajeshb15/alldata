@@ -1,5 +1,5 @@
 # AllData® Next-Gen Widgets Integration Guide
-November 2021
+<sup>November 2021</sup>
 
 <br>
 
