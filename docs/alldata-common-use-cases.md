@@ -57,12 +57,13 @@ This use case is necessary for a partner to verify the bank account ownership of
 - <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts">initiateAddAccounts</a>
 - <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus">getAddAccountStatus</a> (1..n)
 - <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts">getNewAccounts</a>
+    * **Note:** This series of APIs only validates that the user can log in and has ownership of the account. If the partner requires routing and account numbers, see &quot;Add payment account&quot; below.
 
 <!-- - [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts) -->
 <!-- - [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n) -->
 <!-- - [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts) -->
 
-  * **Note:** This series of APIs only validates that the user can log in and has ownership of the account. If the partner requires routing and account numbers, see &quot;Add payment account&quot; below.
+  
 
 ### Balance verification
 
