@@ -4,7 +4,7 @@
 
 May 2021
 
-
+<!--
 # Contents
 
 **[Introduction](#introduction)**
@@ -28,7 +28,7 @@ May 2021
 [Liability verification](#liability-verification)
 
 [Personal Financial Management (PFM)](#personal-financial-management-pfm)
-
+-->
 # Introduction
 
 The purpose of this document is to advise Fiserv partners that plan to use the Add Account widget along with APIs to handle specific use cases.
