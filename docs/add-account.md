@@ -208,9 +208,11 @@ You can use AllData to verify your customer liabilities. Liabilities are grouped
 3. Launch the Add Account widget per the AllData Next-Gen Widgets Integration Guide instructions.
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
+
 <p align="center">
   <img src="https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png" alt="Figure 8"/>
 </p>
+
 6. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
 7. Invoke the getCreditCardTrans API. – This is specifically for credit card transactions.
 
