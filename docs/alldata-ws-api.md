@@ -2,10 +2,10 @@
 
 This document describes the web services API usage of the Fiserv AllData application. A RESTful API web service handles communication between the partner application and Fiserv, using HTTP protocol over SSL/TLS as the communication medium.
 
-<a href="./ws-api/overview.md">Overview</a>
-<a href="./ws-api/integrations.md">Integrations</a>
-<a href="./ws-api/webservices-apis.md">Web Services & APIs</a>
-<a href="./ws-api/appendices.md">Appendices</a>
+<a href="./ws-api/overview.md">Overview</a><br>
+<a href="./ws-api/integrations.md">Integrations</a><br>
+<a href="./ws-api/webservices-apis.md">Web Services & APIs</a><br>
+<a href="./ws-api/appendices.md">Appendices</a><br>
 
 [PDF Version](https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/pdfs/AllData%20WS%20API%20Specs%204.1.pdf)
 
