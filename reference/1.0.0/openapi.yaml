@@ -3967,19 +3967,15 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID:
-          type: string
-          description: Unique Request Identifier. The Client Site sends this element with the request.
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq:
           $ref: '#/components/schemas/SignonRqType'
         FILoginAcctInfoListInqRq:
           $ref: '#/components/schemas/FILoginAcctInfoListInqRqType'
-        partnerID:
-          type: integer
+        partnerID: {type: integer, example: '5012000'}
           xml:
             attribute: true
-        version:
-          type: string
+        version: {type: string, example: 'version1'}
           xml:
             attribute: true
       xml:
