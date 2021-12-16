@@ -1,13 +1,3 @@
-<!-- TODO: FIX WEIRD CHARACTERS -->
-<!-- 
-    TODO: MAKE ANCHORS WORK 
-        [Account Management Web Services](#_bookmark42) this is referring to an API (I think)
-        [Appendix C: MFA Image-Retrieving URL](#_Appendix_C:_MFA) this is in another MD
-        [Miscellaneous chapter](#_GetWMAccessKey) also referring to API
-        [Account Data Pull APIs](#_getBankingTrans) API
-        [User Management Web Services](#_User_Management_Web) API
--->
-
 # AllData Account Aggregation
 
 Account aggregation lets users view all their online financial accounts such as checking, savings, investment, retirement, insurance, and credit cards from a range of FIs on a single web page.
