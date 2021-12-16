@@ -1,12 +1,8 @@
-![](RackMultipart20211216-4-qi02uc_html_53682ed0403f8dd3.png) ![](RackMultipart20211216-4-qi02uc_html_d0e7ab49cd1625bc.jpg)
+# AllData®
 
-AllData®
-
-Common Data Aggregation Use Cases and AllData API Solutions
+## Common Data Aggregation Use Cases and AllData API Solutions
 
 August, 2020
-
-#####
 
 
 © 2020 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
@@ -19,25 +15,25 @@ Other brands and their products are trademarks or registered trademarks of their
 
 # Contents
 
-**[Introduction 4](#_Toc47364352)**
+**[Introduction](#introduction)**
 
-[Overview 4](#_Toc47364353)
+[Overview](#overview)
 
-**[Use Cases 5](#_Toc47364354)**
+**[Use Cases](#use-cases)**
 
-[Bank account ownership verification 5](#_Toc47364355)
+[Bank account ownership verification](#bank-account-ownership-verification)
 
-[Balance verification 5](#_Toc47364356)
+[Balance verification](#balance-verification)
 
-[Add payment account 5](#_Toc47364357)
+[Add payment account](#add-payment-account)
 
-[Transaction history 6](#_Toc47364358)
+[Transaction history](#transaction-history)
 
-[Asset verification 6](#_Toc47364359)
+[Asset verification](#asset-verification)
 
-[Liability verification 7](#_Toc47364360)
+[Liability verification](#liability-verification)
 
-[Personal Financial Management (PFM) 7](#_Toc47364361)
+[Personal Financial Management (PFM)](#personal-financial-management-(pfm))
 
 # Introduction
 
@@ -49,9 +45,9 @@ In all instances noted below, the partner must first be created in the AllData s
 
 Each partner will have a partner ID and at least one home ID created in the AllData system. Some partners may choose to use multiple home IDs depending on different use cases. A partner can provision multiple customers (users) under its home ID. A user may have more than one financial institution account under his or her profile.
 
-For all use cases outlined below, the partner must create a user profile using the [CreateUser API](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/createUser). The user profile consists of the user ID, password, and several optional fields including name, address, etc.
+For all use cases outlined below, the partner must create a user profile using the <a href="..api?type=post&path=/WealthManagementWeb/ws/UserMgmt/createUser">CreateUser API</a>. The user profile consists of the user ID, password, and several optional fields including name, address, etc.
 
-Partners must follow the bootstrapping process to synchronize the Fiserv AllData connections directory on their end. This one-time process uses the [GetFinancialInstInfo API](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Seeded%20Data%20Inquiry%20Service/getFinancialInstInfo). Partners can also periodically refresh to get the latest changes made by financial institutions. See the _AllData Web Services API Specifications_ document for additional details.
+Partners must follow the bootstrapping process to synchronize the Fiserv AllData connections directory on their end. This one-time process uses the <a href="..api?type=post&path=/WealthManagementWeb/ws/SeedDataInq/getFinancialInstInfo">GetFinancialInstInfo API</a>. Partners can also periodically refresh to get the latest changes made by financial institutions. See the _AllData Web Services API Specifications_ document for additional details.
 
 # Use Cases
 
@@ -65,9 +61,13 @@ This use case is necessary for a partner to verify the bank account ownership of
 
 **APIs required:**
 
-- [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts)
-- [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n)
-- [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts">initiateAddAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus">getAddAccountStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts">getNewAccounts</a>
+
+<!-- - [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts) -->
+<!-- - [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n) -->
+<!-- - [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts) -->
 
 **Note:** This series of APIs only validates that the user can log in and has ownership of the account. If the partner requires routing and account numbers, see &quot;Add payment account&quot; below.
 
@@ -79,9 +79,13 @@ This use case is necessary for a partner to verify the balance(s) of the account
 
 **APIs required:**
 
-- [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts)
-- [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n)
-- [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts">initiateAddAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus">getAddAccountStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts">getNewAccounts</a>
+
+<!-- - [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts) -->
+<!-- - [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n) -->
+<!-- - [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts) -->
 
 ### Add payment account
 
@@ -91,6 +95,15 @@ AllData can be used to add an ACH payment account of an end user after that acco
 
 **APIs required:**
 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts">initiateAddAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus">getAddAccountStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts">getNewAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts">createAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts">updateAccounts</a> 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus">getHarvestStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails">getAccountDetails</a>
+
+<!--
 - [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts)
 - [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n)
 - [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts)
@@ -98,6 +111,7 @@ AllData can be used to add an ACH payment account of an end user after that acco
 - [updateAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Harvest%20Account%20Data%20Management%20Service/updateAccounts)
 - [getHarvestStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Harvest%20Account%20Data%20Management%20Service/getHarvestStatus) (1..n)
 - [getAccountDetails](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountDetails)
+-->
 
 ### Transaction history
 
@@ -107,6 +121,18 @@ AllData can be used to obtain the transaction history for a number of accounts i
 
 **APIs required:**
 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts">initiateAddAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus">getAddAccountStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts">getNewAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts">createAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts">updateAccounts</a> 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus">getHarvestStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails">getAccountDetails</a>
+- For banking account transactions, use <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getBankingTrans">getBankingTrans</a>
+- For biller account transactions, use <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans">getOtherAccountTrans</a>
+- For credit card account transactions, use <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getCreditCardTrans">getCreditCardTrans</a>
+- For investment account transactions, use <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentTrans">getInvestmentTrans</a>
+<!--
 - [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts)
 - [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n)
 - [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts)
@@ -118,6 +144,7 @@ AllData can be used to obtain the transaction history for a number of accounts i
 - For biller account transactions, use [getOtherAccountTrans](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getOtherAccountTrans)
 - For credit card account transactions, use [getCreditCardTrans](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getCreditCardTrans)
 - For investment account transactions, use [getInvestmentTrans](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentTrans)
+-->
 
 ### Asset verification
 
@@ -127,6 +154,18 @@ AllData can be used to verify the assets held by an end user. These assets are g
 
 **APIs required:**
 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts">initiateAddAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus">getAddAccountStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts">getNewAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts">createAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts">updateAccounts</a> 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus">getHarvestStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails">getAccountDetails</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans">getOtherAccountTrans</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getEmployerStockOptions">getEmployerStockOptions</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentPos">getInvestmentPos</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentTrans">getInvestmentTrans</a>
+<!--
 - [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts)
 - [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n)
 - [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts)
@@ -138,6 +177,7 @@ AllData can be used to verify the assets held by an end user. These assets are g
 - [getEmployerStockOptions](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getEmployerStockOptions)
 - [getInvestmentPos](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentPos)
 - [getInvestmentTrans](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentTrans)
+-->
 
 ### Liability verification
 
@@ -147,6 +187,17 @@ AllData can be used to verify the liabilities of an end user. Liabilities are gr
 
 **APIs required:**
 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts">initiateAddAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus">getAddAccountStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts">getNewAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts">createAccounts</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts">updateAccounts</a> 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus">getHarvestStatus</a> (1..n)
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails">getAccountDetails</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans">getOtherAccountTrans</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getCreditCardTrans">getCreditCardTrans</a>
+
+<!--
 - [initiateAddAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts)
 - [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n)
 - [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts)
@@ -156,6 +207,7 @@ AllData can be used to verify the liabilities of an end user. Liabilities are gr
 - [getAccountDetails](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountDetails)
 - [getOtherAccountTrans](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getOtherAccountTrans)
 - [getCreditCardTrans](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getCreditCardTrans)
+-->
 
 ### Personal Financial Management (PFM)
 
@@ -165,6 +217,18 @@ AllData can be configured to categorize transactions.
 
 All the APIs noted in the above use cases are applicable to PFM since PFM tools are typically used to provide a complete picture of an end user&#39;s financial position. In addition to the APIs noted above, the following can also be applied to the PFM use case:
 
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/TxnMgmt/categorizeTransaction">categorizeTransaction</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/TxnMgmt/deleteSubcategory">deleteSubcategory</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/createBudget">createBudget</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/editBudget">editBudget</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/deleteBudget">deleteBudget</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/findBudget">findBudget</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/GoalMgmt/editGoal">editGoal</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/GoalMgmt/deleteGoal">deleteGoal</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/GoalMgmt/findGoal">findGoal</a>
+- <a href="..api?type=post&path=/WealthManagementWeb/ws/GoalMgmt/createGoal">createGoal</a>
+
+<!--
 - [categorizeTransaction](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Update%20Transaction%20Category%20Service%20PFM/categorizeTransaction)
 - [deleteSubCategory](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Update%20Transaction%20Category%20Service%20PFM/deleteSubcategory)
 - [createBudget](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/createBudget)
@@ -175,3 +239,4 @@ All the APIs noted in the above use cases are applicable to PFM since PFM tools 
 - [deleteGoal](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/deleteGoal)
 - [findGoal](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/findGoal)
 - [createGoal](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/createGoal)
+-->
