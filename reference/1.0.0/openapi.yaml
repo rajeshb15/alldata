@@ -3973,11 +3973,7 @@ components:
         FILoginAcctInfoListInqRq:
           $ref: '#/components/schemas/FILoginAcctInfoListInqRqType'
         partnerID: {type: integer, example: '5012000'}
-          xml:
-            attribute: true
         version: {type: string, example: 'version1'}
-          xml:
-            attribute: true
       xml:
         name: FILoginAcctInfoListInqRqHeader
     FILoginAcctInfoListInqRqType:
