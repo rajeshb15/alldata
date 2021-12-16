@@ -23,21 +23,21 @@ This document has been created by Fiserv and is classified confidential. This do
 
 [Partner flow for Add Account widget](#partner-flow-for-add-account-widget)
 
-**[Use Cases 8](#_Toc71292892)**
+**[Use Cases](#use-cases)**
 
-[Bank account ownership verification 8](#_Toc71292893)
+[Bank account ownership verification](#bank-account-ownership-verification)
 
-[Balance verification 8](#_Toc71292894)
+[Balance verification](#balance-verification)
 
-[Add payment account 9](#_Toc71292895)
+[Add payment account](#add-payment-account)
 
-[Transaction history 9](#_Toc71292896)
+[Transaction history](#transaction-history)
 
-[Asset verification 10](#_Toc71292897)
+[Asset verification](#asset-verification)
 
-[Liability verification 10](#_Toc71292898)
+[Liability verification](#liability-verification)
 
-[Personal Financial Management (PFM) 11](#_Toc71292899)
+[Personal Financial Management (PFM)](#personal-financial-management-(pfm))
 
 # Introduction
 
@@ -49,7 +49,7 @@ Before utilizing any of the following use cases, you must have a profile in the 
 
 You will be assigned a unique partner ID and a home ID (or multiple home IDs, depending on your needs). You may provision multiple customers (users) under a home ID. A user may have more than one financial institution (&quot;FI&quot;) or any other accounts and connection types offered by AllData under their profile.
 
-![](RackMultipart20211216-4-123he1c_html_2c0df89b0aff3ceb.png)
+![figure 1](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-00.png)
 
 For all use cases outlined below, you must create a user profile using the CreateUser API. The user profile consists of the user ID, password, and several optional fields such as name and address. CreateUser returns a value called CEUserID which is the unique identifier for the end user.
 
@@ -57,29 +57,29 @@ For all use cases outlined below, you must create a user profile using the Creat
 
 Before launching the Add Account widget, you must call the signOn API to generate a single sign-on (SSO) token. After generating the token, launch the AllData Add Account widget per the instructions in the AllData Next-Gen Widgets Integration Guide. When launched, the widget appears as below.
 
-![](RackMultipart20211216-4-123he1c_html_53183b66a35c8bb9.png)
+![figure 2](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-01.png)
 
-![](RackMultipart20211216-4-123he1c_html_fea9e146cf89e055.png)
+![figure 3](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-02.png)
 
-![](RackMultipart20211216-4-123he1c_html_226c73016ed6458d.png)
+![figure 4](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-03.png)
 
-![](RackMultipart20211216-4-123he1c_html_d7ce7660d7b374c9.png)
+![figure 5](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-04.png)
 
-![](RackMultipart20211216-4-123he1c_html_573a42880036893.png)
+![figure 6](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-05.png)
 
-![](RackMultipart20211216-4-123he1c_html_1c718df951dee514.png)
+![figure 7](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-06.png)
 
 # Use Cases
 
 This chapter describes use cases for the following scenarios:
 
-- [Bank account ownership verification](#_Bank_account_ownership)
-- [Balance verification](#_Balance_verification)
-- [Add payment account](#_Add_payment_account)
-- [Transaction history](#_Transaction_history)
-- [Asset verification](#_Asset_verification)
-- [Liability verification](#_Liability_verification)
-- [Personal Financial Management (PFM)](#_Personal_Financial_Management)
+- [Bank account ownership verification](#bank-account-ownership-verification)
+- [Balance verification](#balance-verification)
+- [Add payment account](#add-payment-account)
+- [Transaction history](#transaction-history)
+- [Asset verification](#asset-verification)
+- [Liability verification](#liability-verification)
+- [Personal Financial Management (PFM)](#personal-financial-management-(pfm))
 
 ### Bank account ownership verification
 
@@ -104,15 +104,12 @@ Balance verification is useful for lenders, ACH payment processors, e-commerce p
 ##### Perform the following actions:
 
 1. Invoke the createUser API.
+2. Invoke the signOn API and get a session token.
+3. Launch the Add Account widget per the AllData Next-Gen Widgets Integration Guide instructions.
+4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
+5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-1. Invoke the signOn API and get a session token.
-2. Launch the Add Account widget per the AllData Next-Gen Widgets Integration Guide instructions.
-3. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
-4. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
-
-| Partly masked: | XXXXXX-1234 |
- | Fully unmasked: | 123456-1234 |
-| --- | --- | --- | --- | --- |
+![figure 8](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png)
 
 ### Add payment account
 
@@ -123,15 +120,12 @@ You can use AllData to retrieve an end user&#39;s full account number(s) and rou
 ##### Perform the following actions:
 
 1. Invoke the createUser API.
+2. Invoke the signOn API and get a session token.
+3. Launch the Add Account widget per the AllData Next-Gen Widgets Integration Guide instructions.
+4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
+5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-1. Invoke the signOn API and get a session token.
-2. Launch the Add Account widget per the AllData Next-Gen Widgets Integration Guide instructions.
-3. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
-4. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
-
-| Partly masked: | XXXXXX-1234 |
- | Fully unmasked: | 123456-1234 |
-| --- | --- | --- | --- | --- |
+![figure 8](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png)
 
 ### Transaction history
 
@@ -154,18 +148,16 @@ Where available, AllData can obtain transaction history for the following accoun
 ##### Perform the following actions:
 
 1. Invoke the createUser API.
-
-1. Invoke the signOn API.
-2. Launch the Add Account widget per the AllData Next-Gen Widgets Integration Guide instructions.
-3. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
-4. Invoke the getAccountDetails API.
-5. Invoke the getAccountsSummary API. (optional)
-6. Invoke the getBankingTrans API. – This is optional; invoke if you need to see transaction details.
-
-- For banking account transactions, use the getBankingTrans API.
-- For biller account transactions, use the getOtherAccountTrans API.
-- For credit card account transactions, use the getCreditCardTrans API.
-- For investment account transactions, use the getInvestmentTrans API.
+2. Invoke the signOn API.
+3. Launch the Add Account widget per the AllData Next-Gen Widgets Integration Guide instructions.
+4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
+5. Invoke the getAccountDetails API.
+6. Invoke the getAccountsSummary API. (optional)
+7. Invoke the getBankingTrans API. – This is optional; invoke if you need to see transaction details.
+    - For banking account transactions, use the getBankingTrans API.
+    - For biller account transactions, use the getOtherAccountTrans API.
+    - For credit card account transactions, use the getCreditCardTrans API.
+    - For investment account transactions, use the getInvestmentTrans API.
 
 ### Asset verification
 
@@ -190,14 +182,12 @@ You can use AllData to verify your customer assets. Assets are grouped into the 
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-| Partly masked: | XXXXXX-1234 |
- | Fully unmasked: | 123456-1234 |
-| --- | --- | --- | --- | --- |
+![figure 8](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png)
 
-1. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
-2. Invoke the getEmployerStockOptions API.
-3. Invoke the getInvestmentPos API.
-4. Invoke the getInvestmentTrans API.
+6. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
+7. Invoke the getEmployerStockOptions API.
+8. Invoke the getInvestmentPos API.
+9. Invoke the getInvestmentTrans API.
 
 ### Liability verification
 
@@ -212,13 +202,9 @@ You can use AllData to verify your customer liabilities. Liabilities are grouped
 3. Launch the Add Account widget per the AllData Next-Gen Widgets Integration Guide instructions.
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
-
-| Partly masked: | XXXXXX-1234 |
- | Fully unmasked: | 123456-1234 |
-| --- | --- | --- | --- | --- |
-
-1. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
-2. Invoke the getCreditCardTrans API. – This is specifically for credit card transactions.
+![figure 8](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png)
+6. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
+7. Invoke the getCreditCardTrans API. – This is specifically for credit card transactions.
 
 ### Personal Financial Management (PFM)
 
@@ -237,7 +223,5 @@ All the APIs in the above use cases also apply to PFM from a data-collection per
 - findGoal API
 - deleteGoal API
 - categorizeTransaction API
-
-**Note:** This API is used to update categorization information for specific transactions by assigning or updating a new subcategory for the transactions. The new subcategory will be auto-assigned to similar transactions in the future.
-
+    **Note:** This API is used to update categorization information for specific transactions by assigning or updating a new subcategory for the transactions. The new subcategory will be auto-assigned to similar transactions in the future.
 - deleteSubCategory API
