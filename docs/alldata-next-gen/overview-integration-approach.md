@@ -1,8 +1,6 @@
 # AllData® Next-Gen Widgets Integration Guide
 <sup>November 2021</sup>
 
-This document covers ways to speed implementation by leveraging AllData widgets.
-
 <br>
 
 ## Executive Summary
