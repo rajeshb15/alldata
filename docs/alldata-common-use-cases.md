@@ -33,7 +33,7 @@ Other brands and their products are trademarks or registered trademarks of their
 
 [Liability verification](#liability-verification)
 
-[Personal Financial Management (PFM)](#personal-financial-management-(PFM))
+[Personal Financial Management (PFM)](#personal-financial-management-(pfm))
 
 # Introduction
 
