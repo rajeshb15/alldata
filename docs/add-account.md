@@ -37,7 +37,7 @@ This document has been created by Fiserv and is classified confidential. This do
 
 [Liability verification](#liability-verification)
 
-[Personal Financial Management (PFM)](#personal-financial-management-(pfm))
+[Personal Financial Management (PFM)](#personal-financial-management-pfm)
 
 # Introduction
 
