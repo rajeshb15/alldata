@@ -4,15 +4,7 @@
 
 August, 2020
 
-
-© 2020 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
-
-[http://www.fiserv.com](http://www.fiserv.com/)
-
-Fiserv is a registered trademark of Fiserv, Inc.
-
-Other brands and their products are trademarks or registered trademarks of their respective holders and should be noted as such.
-
+<!--
 # Contents
 
 **[Introduction](#introduction)**
@@ -34,6 +26,7 @@ Other brands and their products are trademarks or registered trademarks of their
 [Liability verification](#liability-verification)
 
 [Personal Financial Management (PFM)](#personal-financial-management-pfm)
+-->
 
 # Introduction
 
@@ -69,7 +62,7 @@ This use case is necessary for a partner to verify the bank account ownership of
 <!-- - [getAddAccountStatus](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) (1..n) -->
 <!-- - [getNewAccounts](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts) -->
 
-**Note:** This series of APIs only validates that the user can log in and has ownership of the account. If the partner requires routing and account numbers, see &quot;Add payment account&quot; below.
+  * **Note:** This series of APIs only validates that the user can log in and has ownership of the account. If the partner requires routing and account numbers, see &quot;Add payment account&quot; below.
 
 ### Balance verification
 
@@ -240,3 +233,11 @@ All the APIs noted in the above use cases are applicable to PFM since PFM tools 
 - [findGoal](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/findGoal)
 - [createGoal](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/createGoal)
 -->
+
+© 2020 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
+
+[http://www.fiserv.com](http://www.fiserv.com/)
+
+Fiserv is a registered trademark of Fiserv, Inc.
+
+Other brands and their products are trademarks or registered trademarks of their respective holders and should be noted as such.
