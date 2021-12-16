@@ -5,16 +5,6 @@
 May 2021
 
 
-© 2021 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
-
-[http://www.fiserv.com](http://www.fiserv.com/)
-
-Fiserv is a registered trademark of Fiserv, Inc.
-
-Other brands and their products are trademarks or registered trademarks of their respective holders and should be noted as such.
-
-This document has been created by Fiserv and is classified confidential. This document is restricted to the received party and not to be forwarded or transferred without the approval of Fiserv.
-
 # Contents
 
 **[Introduction](#introduction)**
@@ -89,7 +79,7 @@ This chapter describes use cases for the following scenarios:
 - [Transaction history](#transaction-history)
 - [Asset verification](#asset-verification)
 - [Liability verification](#liability-verification)
-- [Personal Financial Management (PFM)](#personal-financial-management-(pfm))
+- [Personal Financial Management (PFM)](#personal-financial-management-pfm)
 
 ### Bank account ownership verification
 
@@ -243,3 +233,13 @@ All the APIs in the above use cases also apply to PFM from a data-collection per
 - categorizeTransaction API
    * **Note:** This API is used to update categorization information for specific transactions by assigning or updating a new subcategory for the transactions. The new subcategory will be auto-assigned to similar transactions in the future.
 - deleteSubCategory API
+
+© 2021 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
+
+[http://www.fiserv.com](http://www.fiserv.com/)
+
+Fiserv is a registered trademark of Fiserv, Inc.
+
+Other brands and their products are trademarks or registered trademarks of their respective holders and should be noted as such.
+
+This document has been created by Fiserv and is classified confidential. This document is restricted to the received party and not to be forwarded or transferred without the approval of Fiserv.
