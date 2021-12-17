@@ -5053,7 +5053,7 @@ components:
         Property:
           type: array
           items: {$ref: '#/components/schemas/PropertyType' }
-        ShowOnDashboard: {type: string, enum: [Yes,No] }
+        ShowOnDashboard: {type: string, enum: [Yes,No], example: 'Yes' }
         CurCode: {type: string, enum: [HKD,HNL,HTG,HUF,IDR,IEP,ILS,INR,IQD,IRR,ISK,ITL,JMD,JOD,JPY,DEM,DJF,DKK,DOP,ECD,ECS,EUR,EEK,EGP,SVC,ETB,FIM,FJD,FKP,FRF,GBP,GHC,GIP,GMD,GNF,GRD,GTQ,GWP,GYD,BGL,BHD,BIF,BMD,BOB,BRL,BSD,BTN,BWP,BYB,BZD,CAD,KHR,KMF,KYD,XAF,XPF,CLP,CNY,COP,CRC,HRK,CZK,CUP,CVE,CYP,LSL,LTL,LUF,LVL,LYD,MAD,MDL,MGF,MKD,MMK,MNT,MOP,MRO,MTL,MUR,MVR,MWK,KES,KRW,KWD,KZT,LAK,LBP,LRD,MXP,MYR,MZM,NGN,NIO,ANG,NLG,NOK,NPR,NZD,OMR,PEN,PGK,PHP,PKR,PLN,PTE,PYG,AED,RUR,RWF,SAR,SBD,SCR,ESP,SDD,SEK,SGD,SIT,SKK,SLL,SRG,STD,ZAR,LKR,SYP,SZL,CHF,TWD,THB,TJR,TMM,TND,TOP,TRL,TTD,TZS,UGX,USD,UYP,UZS,VEB,VND,VUV,WST,YDR,YER,ZMK,ZRN,ZWD,AFA,DZD,ALL,AMD,AOR,ARS,ATS,AUD,AWG,AZM,BAD,BBD,BDT,BEF], example: 'USD'}
         AdvAccess: {type: string, enum: [NONE,SUMMARY,FULL_ACCOUNT], example: 'SUMMARY' }
         UpdateReason: {type: string }
