@@ -1004,189 +1004,196 @@ Transaction categorization is an optional feature that can be turned on for part
 This chapter lists each transaction categorization API in a table with a resource URL, descriptive information, and a link to Swagger documentation. See the AllData Transaction Categorization – API Specification document for more details.
 
 ## getTxnCategoriesInfo
-
-|
-
-Web Service Name
-
- | getTxnCategoriesInfo |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/SeedDataInq/getTxnCategoriesInfo |
-| --- | --- |
-|
-
-Description
-
- | This API is used to get the transactions categories from the AllData system for a specific home.
-
-Use Admin User role to get all the standard transaction categories and subcategories AllData provides. Clients must pull this complete standard set initially and later make this request to get any new category added or will be intimated to make this request if any new category added.
-
-Use AllData User role to get custom subcategories created by the specific user. |
-|
-
-Swagger
-
- | [getTxnCategoriesInfo API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Seeded%20Data%20Inquiry%20Service/updateAccounts_1) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getTxnCategoriesInfo</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/SeedDataInq/getTxnCategoriesInfo</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to get the transactions categories from the AllData system for a specific home.
+                <br><br>
+                Use Admin User role to get all the standard transaction categories and subcategories AllData provides. Clients must pull this complete standard set initially and later make this request to get any new category added or will be intimated to make this request if any new category added.
+                <br><br>
+                Use AllData User role to get custom subcategories created by the specific user.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Seeded%20Data%20Inquiry%20Service/updateAccounts_1\">getTxnCategoriesInfo API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## categorizeTransaction
-
-|
-
-Web Service Name
-
- | categorizeTransaction |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/TxnMgmt/categorizeTransaction |
-| --- | --- |
-|
-
-Description
-
- | This API is used to assign/update the subcategory of transactions and apply this user choice to similar transactions in future.
-
-This API can also be used to create a user-specific custom subcategory and assign it to transactions, and to apply the subcategory to similar future transactions. |
-|
-
-Swagger
-
- | [CategorizeTransaction API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Update%20Transaction%20Category%20Service%20PFM/categorizeTransaction) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>categorizeTransaction</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/TxnMgmt/categorizeTransaction</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to assign/update the subcategory of transactions and apply this user choice to similar transactions in future.
+                <br><br>
+                This API can also be used to create a user specific custom subcategory and assign it to transactions, and to apply the subcategory to similar future transactions.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/i…Transaction%20Category%20Service%20PFM/categorizeTransaction">CategorizeTransaction API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## deleteSubCategory
-
-|
-
-Web Service Name
-
- | deleteSubCategory |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/TxnMgmt/deleteSubCategory |
-| --- | --- |
-|
-
-Description
-
- | This API is used to delete the custom subcategory created by specific user. |
-|
-
-Swagger
-
- | [DeleteSubCategory API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Update%20Transaction%20Category%20Service%20PFM/deleteSubcategory) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>deleteSubCategory</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/TxnMgmt/deleteSubCategory</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to delete the custom subcategory created by specific user.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/i…e%20Transaction%20Category%20Service%20PFM/deleteSubcategory">DeleteSubCategory API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 # Budgets
 
 This chapter lists each Budget-related API in a table with a resource URL, descriptive information, and a link to Swagger documentation. Budgets are used in PFM use cases.
 
 ## createBudget
-
-|
-
-Web Service Name
-
- | createBudget |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/BudgetMgmt/createBudget |
-| --- | --- |
-|
-
-Description
-
- | This API is used to create budgets. |
-|
-
-Swagger
-
- | [createBudget API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/createBudget) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>createBudget</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/BudgetMgmt/createBudget</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to create budgets.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/createBudget">createBudget API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## deleteBudget
-
-|
-
-Web Service Name
-
- | deleteBudget |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/BudgetMgmt/deleteBudget |
-| --- | --- |
-|
-
-Description
-
- | This API is used to delete the budgets created by users. |
-|
-
-Swagger
-
- | [deleteBudget API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/deleteBudget) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>deleteBudget</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/BudgetMgmt/deleteBudget</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to delete the budgets created by users.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/deleteBudget">deleteBudget API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## editBudget
-
-|
-
-Web Service Name
-
- | editBudget |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/BudgetMgmt/editBudget |
-| --- | --- |
-|
-
-Description
-
- | This API is used to edit the existing budgets. |
-|
-
-Swagger
-
- | [editBudget API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/editBudget) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>editBudget</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/BudgetMgmt/editBudget</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to edit the existing budgets.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/editBudget">editBudget API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## findBudget
-
-|
-
-Web Service Name
-
- | findBudget |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/BudgetMgmt/findBudget |
-| --- | --- |
-|
-
-Description
-
- | This API is used to find the status of user-created budgets and to track their progress. |
-|
-
-Swagger
-
- | [findBudget API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/findBudget) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>findBudget</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/BudgetMgmt/findBudget</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to find the status of user-created budgets and to track their progress.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/findBudget">findBudget API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 # Goals
 
