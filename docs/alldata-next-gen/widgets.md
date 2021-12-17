@@ -327,7 +327,6 @@ Partners can configure their own FI popularity ranking list by assigning popular
 Partners can assign index values to make certain financial institutions rank more prominently in search results in the Add Accounts widget
 
 ### Account Type Whitelist
-<!-- TODO_RUBEN -->
 
 The Add Accounts widget allows the partner to select the types of accounts to allow users to add within their home. The partner selects the account types, extended account types, and instrument values to be included in an account type whitelist that will define the accounts that are supported within their home.
 
@@ -335,205 +334,102 @@ During the add accounts process, if an account is auto-classified to an account 
 
 Account types available to be included in account type whitelist:
 
-|
-
-Account category
-
- |
-
-Account type
-
- |
-
-Account type whitelist
-
- |
-| --- | --- | --- |
-| Banking | Certificate of Deposit |
- |
-| --- | --- | --- |
-| Cash Management |
- |
-| Checking |
- |
-| Money Market |
- |
-| Savings |
- |
-| Bill | Billing |
- |
-| Landline Phone |
- |
-| Streaming Media |
- |
-| Mobile Phone |
- |
-| Internet |
- |
-| Cable/Satellite TV |
- |
-| Education savings | 529 / Education Savings |
- |
-| Insurance | Annuity |
- |
-| Term Life |
- |
-| Universal Life |
- |
-| Whole Life |
- |
-| GIC/Term Investment (GIC) |
- |
-| Investment | Brokerage |
- |
-| Other liabilities | Credit Card |
- |
-| Loan |
- |
-| Auto Loan |
- |
-| Investment Loan |
- |
-| Student Loan |
- |
-| Line of Credit |
- |
-| Other Liability |
- |
-| Mortgage and home equity loans | Mortgage |
- |
-| Home Equity Loan |
- |
-| Retirement | 401 (k) |
- |
-| 403 (b) |
- |
-| 457 |
- |
-| Deferred Comp Plan |
- |
-| KEOGH |
- |
-| Pension |
- |
-| Profit Sharing Plan |
- |
-| IRA |
- |
-| IRA – Roth |
- |
-| IRA – Rollover |
- |
-| IRA – Sep |
- |
-| IRA – Simple |
- |
+| Account category               | Account type              | Account type whitelist |
+|--------------------------------|---------------------------|------------------------|
+| Banking                        | Certificate of Deposit    |                        |
+|                                | Cash Management           |                        |
+|                                | Checking                  |                        |
+|                                | Money Market              |                        |
+|                                | Savings                   |                        |
+| Bill                           | Billing                   |                        |
+|                                | Landline Phone            |                        |
+|                                | Streaming Media           |                        |
+|                                | Mobile Phone              |                        |
+|                                | Internet                  |                        |
+|                                | Cable/Satellite TV        |                        |
+| Education savings              | 529 / Education Savings   |                        |
+| Insurance                      | Annuity                   |                        |
+|                                | Term Life                 |                        |
+|                                | Universal Life            |                        |
+|                                | Whole Life                |                        |
+|                                | GIC/Term Investment (GIC) |                        |
+| Investment                     | Brokerage                 |                        |
+| Other liabilities              | Credit Card               |                        |
+|                                | Loan                      |                        |
+|                                | Auto Loan                 |                        |
+|                                | Investment Loan           |                        |
+|                                | Student Loan              |                        |
+|                                | Line of Credit            |                        |
+|                                | Other Liability           |                        |
+| Mortgage and home equity loans | Mortgage                  |                        |
+|                                | Home Equity Loan          |                        |
+| Retirement                     | 401 (k)                   |                        |
+|                                | 403 (b)                   |                        |
+|                                | 457                       |                        |
+|                                | Deferred Comp Plan        |                        |
+|                                | KEOGH                     |                        |
+|                                | Pension                   |                        |
+|                                | Profit Sharing Plan       |                        |
+|                                | IRA                       |                        |
+|                                | IRA – Roth                |                        |
+|                                | IRA – Rollover            |                        |
+|                                | IRA – Sep                 |                        |
+|                                | IRA – Simple              |                        |
 
 Additionally, only account types that are included in the Account Type whitelist for the partner will display in the account type dropdown boxes that display in the following screens: account classification screen (Add Accounts widget), account classification error (Alerts screen), account management screen (Account Management widget).
 
-## Account Type Name Lookup Table
+### Account Type Name Lookup Table
 
 The Add Accounts widget includes Account Type Name lookup feature that allows the partner to rename the account types that are supported within the home. The partner can use the following list to rename account types according to their requirements.
 
 Sample Account Type Name lookup:
 
-|
-
-Account category
-
- |
-
-Fiserv account type name
-
- |
-
-Partner account type name
-
- |
-| --- | --- | --- |
-| Banking | Certificate of Deposit |
- |
-| --- | --- | --- |
-| Cash Management |
- |
-| Checking |
- |
-| Money Market |
- |
-| Savings |
- |
-| Bill | Billing |
- |
-| Landline Phone |
- |
-| Streaming Media |
- |
-| Mobile Phone |
- |
-| Internet |
- |
-| Cable/Satellite TV |
- |
-| Education savings | 529 / Education Savings |
- |
-| Insurance | Annuity |
- |
-| Term Life |
- |
-| Universal Life |
- |
-| Whole Life |
- |
-| GIC/Term Investment (GIC) |
- |
-| Investment | Brokerage |
- |
-| Other liabilities | Credit Card |
- |
-| Loan |
- |
-| Auto Loan |
- |
-| Investment Loan |
- |
-| Student Loan |
- |
-| Line of Credit |
- |
-| Other Liability |
- |
-| Mortgage and home equity loans | Mortgage |
- |
-| Home Equity Loan |
- |
-| Retirement | 401 (k) |
- |
-| 403 (b) |
- |
-| 457 |
- |
-| Deferred Comp Plan |
- |
-| KEOGH |
- |
-| Pension |
- |
-| Profit Sharing Plan |
- |
-| IRA |
- |
-| IRA – Roth |
- |
-| IRA – Rollover |
- |
-| IRA – Sep |
- |
+| Account category               | Fiserv account type name  | Partner account type name |
+|--------------------------------|---------------------------|---------------------------|
+| Banking                        | Certificate of Deposit    |                           |
+|                                | Cash Management           |                           |
+|                                | Checking                  |                           |
+|                                | Money Market              |                           |
+|                                | Savings                   |                           |
+| Bill                           | Billing                   |                           |
+|                                | Landline Phone            |                           |
+|                                | Streaming Media           |                           |
+|                                | Mobile Phone              |                           |
+|                                | Internet                  |                           |
+|                                | Cable/Satellite TV        |                           |
+| Education savings              | 529 / Education Savings   |                           |
+| Insurance                      | Annuity                   |                           |
+|                                | Term Life                 |                           |
+|                                | Universal Life            |                           |
+|                                | Whole Life                |                           |
+|                                | GIC/Term Investment (GIC) |                           |
+| Investment                     | Brokerage                 |                           |
+| Other liabilities              | Credit Card               |                           |
+|                                | Loan                      |                           |
+|                                | Auto Loan                 |                           |
+|                                | Investment Loan           |                           |
+|                                | Student Loan              |                           |
+|                                | Line of Credit            |                           |
+|                                | Other Liability           |                           |
+| Mortgage and home equity loans | Mortgage                  |                           |
+|                                | Home Equity Loan          |                           |
+| Retirement                     | 401 (k)                   |                           |
+|                                | 403 (b)                   |                           |
+|                                | 457                       |                           |
+|                                | Deferred Comp Plan        |                           |
+|                                | KEOGH                     |                           |
+|                                | Pension                   |                           |
+|                                | Profit Sharing Plan       |                           |
+|                                | IRA                       |                           |
+|                                | IRA – Roth                |                           |
+|                                | IRA – Rollover            |                           |
+|                                | IRA – Sep                 |                           |
 
 When account type names are displayed on the user interface, the Account Type Name lookup table is used to identify the correct names to display for each partner.
 
 If an account type is not on the account type whitelist for a partner, it will not display at all, regardless of the value in the Account Type Name lookup table.
 
-## FI Request
+### FI Request
 
 The Add Accounts widget includes a configurable option to allow a user to request adding a new FI to the service, meaning an institution that Fiserv does not currently support. During this process Fiserv will develop scripts to access the new FI. This feature is only available if the partner has discussed and agreed to the process as part of the contract with Fiserv.
 
@@ -547,208 +443,387 @@ The following areas of the FI Request screen are customizable:
 
 **No Search Results Found Message with New FI Request Enabled:**
 
-![](RackMultipart20211216-4-7jmjhv_html_3d6c20e6e6b996cb.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-34.png)
 
 If the FIRequest option isnot enabledforthepartner,the **Request a new institution support** button does not appear when there are no search results.
 
 **No Search Results Found Message without FI Request Enabled:**
 
-![](RackMultipart20211216-4-7jmjhv_html_b39fdbf65f96eaa2.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-35.png)
 
-## Add Account Screens CSS Definition
+### Add Account Screens CSS Definition
 
 ##### Primary CSS Classes
 
 The following table provides an inventory of the primary CSS classes that control the look and formatting of the Add Accounts widget screens:
 
-|
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>CSS class</th>
+            <th>Description</th>
+            <th>CSS parameter and default value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Background color</td>
+            <td>This parameter controls the background color that obscures the main screen when the Add Accounts screen
+                overlays are activated.</td>
+            <td>
+              .wrapper {
+              <br>&nbsp;&nbsp;background: #fff;
+              <br>&nbsp;&nbsp;margin: 15px 0;
+              <br> }
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Widget screen header</td>
+            <td>This parameter controls the font style of the main header of the Add Accounts screen overlays.</td>
+            <td>
+              h1.main {
+              <br>&nbsp;&nbsp;font-size: 20px;
+              <br>&nbsp;&nbsp;font-weight: 600;
+              <br>&nbsp;&nbsp;line-height: 28px;
+              <br>&nbsp;&nbsp;align-items: center;
+              <br>&nbsp;&nbsp;display: flex;
+              <br>&nbsp;&nbsp;color: #333;
+              <br>&nbsp;&nbsp;margin-bottom: 5px;
+              <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Gray color button</td>
+            <td>This parameter controls the color of the button on the Add Accounts screen.</td>
+            <td>
+              .btn-secondary {
+              <br>&nbsp;&nbsp;color: #fff;
+              <br>&nbsp;&nbsp;background-color: #6c757d;
+              <br>&nbsp;&nbsp;border-color: #6c757d;
+              <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Blue color button</td>
+            <td>This parameter controls the color of the button on the Add Accounts screen.</td>
+            <td>
+              .btn-primary {
+              <br>&nbsp;&nbsp;color: #fff;
+              <br>&nbsp;&nbsp;background-color: #007bff;
+              <br>&nbsp;&nbsp;border-color: #007bff;
+            <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Error header</td>
+            <td>This parameter controls the font style of the error header on the Add Accounts screen.</td>
+            <td>
+              .alert_redtext {
+              <br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px; font-size:1.15em;
+              <br>&nbsp;&nbsp;color:#b83320;
+              <br>&nbsp;&nbsp;padding:5px 0 10px 40px; margin:8px 0px;
+              <br>&nbsp;&nbsp;font-weight:bold 
+              <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Content background</td>
+            <td>This parameter controls the content background.</td>
+            <td>
+            .accSelect {
+             <br>&nbsp;&nbsp;background: #f1f1f1;
+             <br>&nbsp;&nbsp;font-size: 14px;
+             <br>&nbsp;&nbsp;padding: 15px 20px 5px 20px;
+             <br>&nbsp;&nbsp;border-radius: 5px;
+             <br>&nbsp;&nbsp;-webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+             <br>&nbsp;&nbsp;-moz-border-radius: px; /* Firefox 1-3.6 */
+             <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Links</td>
+            <td>This parameter controls the font style of the links (for example, offline account, FI URL, and popular
+                FI links).</td>
+            <td>
+              a {color: #007bff;
+              <br>&nbsp;&nbsp;text-decoration: none;
+              <br>&nbsp;&nbsp;background-color: transparent; 
+              <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Search results message</td>
+            <td>This parameter controls the panel that displays below the search field.</td>
+            <td>
+              .resultCount {
+              <br>&nbsp;&nbsp;margin: 5px 0 0 0;
+              <br>&nbsp;&nbsp;color: #666; 
+              <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Validation error message</td>
+            <td>This parameter controls the panel that displays when there are field level validation errors.</td>
+            <td>
+              .iceMsgsError, .warningtip {
+              <br>&nbsp;&nbsp;list-style: none;
+              <br>&nbsp;&nbsp;color: #000000;
+              <br>&nbsp;&nbsp;background-color: #fcc5c5;
+              <br>&nbsp;&nbsp;padding: 0.75rem 1.25rem;
+              <br>&nbsp;&nbsp;margin-bottom: 1rem;
+              <br>&nbsp;&nbsp;border: 1px solid #e02020;
+              <br>&nbsp;&nbsp;border-radius: 0.25rem;
+              <br>&nbsp;&nbsp;display: block; 
+                <br>}
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-#
-
- |
-
-CSS class
-
- |
-
-Description
-
- |
-
-CSS parameter and default value
-
- |
-| --- | --- | --- | --- |
-| 1 | Background color | This parameter controls the background color that obscures the main screen when the Add Accounts screen overlays are activated. | .wrapper {background: #fff;margin: 15px0;} |
-| --- | --- | --- | --- |
-| 2 | Widget screen header | This parameter controls the font style of the main header of the Add Accounts screen overlays. | h1.main {font-size: 20px;font-weight: 600;line-height: 28px;align-items: center;display: flex;color: #333;margin-bottom: 5px;} |
-| 3 | Gray color button | This parameter controls the color of the button on the Add Accounts screen. | .btn-secondary {color: #fff;background-color: #6c757d;border-color: #6c757d;} |
-| 4 | Blue color button | This parameter controls the color of the button on the Add Accounts screen. | .btn-primary {color: #fff;background-color: #007bff;border-color: #007bff;} |
-| 5 | Error header | This parameter controls the font style of the error header on the Add Accounts screen. | .alert\_redtext {background:url(../images/icons/alerts.png) no-repeat5px0px; font-size:1.15em;color:#b83320;padding:5px010px40px; margin:8px0px;font-weight:bold } |
-| 6 | Content background | This parameter controls the content background. | .accSelect {background: #f1f1f1;font-size: 14px;padding: 15px20px5px20px;border-radius: 5px;-webkit-border-radius: 5px; /\* Safari 3-4, iOS 1-3.2, Android 1.6- \*/-moz-border-radius: px; /\* Firefox 1-3.6 \*/} |
-| 7 | Links | This parameter controls the font style of the links (for example, offline account, FI URL, and popular FI links). | a {color: #007bff;text-decoration: none;background-color: transparent; } |
-| 8 | Search results message | This parameter controls the panel that displays below the search field. | .resultCount {margin: 5px000;color: #666; } |
-| 9 | Validation error message | This parameter controls the panel that displays when there are field level validation errors. | .iceMsgsError, .warningtip {list-style: none;color: #000000;background-color: #fcc5c5;padding: 0.75rem1.25rem;margin-bottom: 1rem;border: 1pxsolid#e02020;border-radius: 0.25rem;display: block; } |
-
-## Images
+### Images
 
 All images and material icons in the Add Accounts widget are configurable. The URLs where each of the images are retrieved from are configured in the Widget CSS file.
 
-|
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Default image</th>
+            <th>Description</th>
+            <th>CSS parameter and default values</th>
+            <th>Default size</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png"></img></center></td>
+            <td>Large alert icon</td>
+            <td>
+              .alert_redtext{
+              <br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px; 
+              <br>&nbsp;&nbsp;font-size:1.15em; 
+              <br>&nbsp;&nbsp;color:#b83320; 
+              <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;
+              <br>&nbsp;&nbsp;margin:8px 0px; 
+              <br>&nbsp;&nbsp;font-weight:normal; 
+              <br>}
+            </td>
+            <td>23x23</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png"></img></center></td>
+            <td>Eye icon</td>
+            <td>
+            .eyeIcon {
+            <br>&nbsp;&nbsp;background: #fff;
+            <br>&nbsp;&nbsp;border: 1px solid #bebebe;
+            <br>&nbsp;&nbsp;cursor: pointer;
+            <br>&nbsp;&nbsp;border-left: 0px;
+            <br>}
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png"></img></center></td>
+            <td>Lock icon</td>
+            <td>
+            .urlLink {
+             <br>&nbsp;&nbsp;display: flex;
+             <br>&nbsp;&nbsp;line-height: 24px;
+             <br>&nbsp;&nbsp;margin-bottom: 15px;
+             <br>}
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png"></img></center></td>
+            <td>Close window icon</td>
+            <td>
+              .cboxClose{
+              <br>&nbsp;&nbsp;float:right; 
+              <br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat; 
+              <br>&nbsp;&nbsp;width:8px; 
+              <br>&nbsp;&nbsp;height:8px;
+              <br>&nbsp;&nbsp;display:block;
+              <br>&nbsp;&nbsp;margin:-10px -10px;
+              <br>&nbsp;&nbsp;_margin:5px;
+              <br>&nbsp;&nbsp;cursor: pointer;
+              <br>}
+            </td>
+            <td>10x10</td>
+        </tr>
+    </tbody>
+</table>
 
-#
-
- |
-
-Default image
-
- |
-
-Description
-
- |
-
-CSS parameter and default values
-
- |
-
-Default size
-
- |
-| --- | --- | --- | --- | --- |
-| 1 | ![](RackMultipart20211216-4-7jmjhv_html_7f5da99fb74e644a.png) | Large alert icon | .alert\_redtext{background:url(../images/icons/alerts.png) no-repeat5px0px; font-size:1.15em; color:#b83320; padding:0px0px10px40px; margin:8px0px; font-weight:normal; } | 23x23 |
-| --- | --- | --- | --- | --- |
-| 2 | ![](RackMultipart20211216-4-7jmjhv_html_e0d18759091ce0f3.png) | Eye icon | .eyeIcon {background: #fff;border: 1pxsolid#bebebe;cursor: pointer;border-left: 0px;} |
- |
-| 3 | ![](RackMultipart20211216-4-7jmjhv_html_a658ca3349b9c0c1.png) | Lock icon | .urlLink {display: flex;line-height: 24px;margin-bottom: 15px;} |
- |
-| 4 | ![](RackMultipart20211216-4-7jmjhv_html_ed3fcb45d7b2ffaa.png) | Close window icon | .cboxClose{float:right; background:url(../images/celightbox/button\_close.png) toprightno-repeat; width:8px; height:8px;display:block;margin:-10px-10px;\_margin:5px;cursor: pointer;} | 10x10 |
-
-## Widget Configuration Parameters
+### Widget Configuration Parameters
 
 The following table provides the possible functionalities configuration which partners can enable or disable in their implementation.
 
-|
+<table>
+    <thead>
+        <tr>
+            <th>Parameter name</th>
+            <th>Description</th>
+            <th>Accepted values</th>
+            <th>Default</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>CSSURL</td>
+            <td>Partner preferred URL for widget specific CSS. This URL is appended at the end of all CE CSS files so
+                that partners can define only the styles they want to override.</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>AddOfflineAccountLink</td>
+            <td>Displays the “Add Offline Account” logo link under popular financial institution list</td>
+            <td>True, False</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>EnableZillow</td>
+            <td>Displays the “Zillow” logo link under popular financial institution list</td>
+            <td>True, False</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>EnableAccountClassification</td>
+            <td>Displays the account classification page</td>
+            <td>True, False</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>EnableAccountConfirmation</td>
+            <td>Displays page for the user to confirm adding all accounts</td>
+            <td>True, False</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>IncludeClassifiedAccounts</td>
+            <td>Includes the all the added accounts (True). Displays only the accounts with classification errors
+                (False) on the Account Classification page</td>
+            <td>True, False</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>addAccount.flow.display. process.step.graphic</td>
+            <td>Includes the Add flow process steps in top right corner of the widget</td>
+            <td>True, False</td>
+            <td>True</td>
+        </tr>
+        <tr>
+            <td>EnableFIRequest</td>
+            <td>Displays “Request a new institutions support” button in case the search results do not return any FI
+            </td>
+            <td>True, False</td>
+            <td>False</td>
+        </tr>
+        <tr>
+            <td>invocation_mode</td>
+            <td>Enables or disables the widget’s “close” (×) button. 
+              <br>•	Pop-up mode: Enables close button
+              <br>•	Embedded mode: Disables close button
+              <br>•	Native app integration: Button is disabled by default
+            </td>
+            <td>embedded, popup</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
 
-Parameter name
-
- |
-
-Description
-
- |
-
-Accepted values
-
- |
-
-Default
-
- |
-| --- | --- | --- | --- |
-| CSSURL | Partner preferred URL for widget specific CSS. This URL is appended at the end of all CE CSS files so that partners can define only the styles they want to override. |
- |
- |
-| --- | --- | --- | --- |
-| AddOfflineAccountLink | Displays the &quot;Add Offline Account&quot; logo link under popular financial institution list | True, False | True |
-| EnableZillow | Displays the &quot;Zillow&quot; logo link under popular financial institution list | True, False | False |
-| EnableAccountClassification | Displays the account classification page | True, False | True |
-| EnableAccountConfirmation | Displays page for the user to confirm adding all accounts | True, False | True |
-| IncludeClassifiedAccounts | Includes the all the added accounts (True). Displays only the accounts with classification errors (False) on the Account Classification page | True, False | True |
-| addAccount.flow.display. process.step.graphic | Includes the Add flow process steps in top right corner of the widget | True, False | True |
-| EnableFIRequest | Displays &quot;Request a new institutions support&quot; button in case the search results do not return any FI | True, False | False |
-| invocation\_mode | Enables or disables the widget&#39;s &quot;close&quot; ( **×** ) button.
-- Pop-up mode: Enables close button
-- Embedded mode: Disables close button
-- Native app integration: Button is disabled by default
- | embedded, popup |
- |
-
-## Widget Invocation
+### Widget Invocation
 
 The following process diagram explains the web services APIs the partner needs to call before and after the invocation of the Add Accounts widget.
 
 **Default Add Accounts widget invocation process:**
 
-![](RackMultipart20211216-4-7jmjhv_html_b3e8fe96631d4ac7.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-40.png)
 
 By default, the Add Accounts widget displays an Account Classification and Confirmation page. If your implementation disables this page and is configured in such a way that Add Accounts returns control back to you after accounts are pulled from the FI, use the following flow where you need to confirm whether the harvesting was successful and whether detailed harvesting for retrieving account details is complete.
 
 **Add Accounts Widget Invocation Process when Account Add Confirmation is not configured:**
 
-![](RackMultipart20211216-4-7jmjhv_html_7d392fc1be4cd019.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-41.png)
 
-## Widget URL
+### Widget URL
 
 Access the Add Account widget in the partner integration environment with the following URL.
 
-\&lt;Domain URL\&gt;PFM\_UI/widgets/base/addaccounts/addAccountsWidget.iface
+&lt;Domain URL&gt;PFM_UI/widgets/base/addaccounts/addAccountsWidget.iface
 
-…with the mandatory POST parameter &quot;sessionToken=\&lt;sessionToken\&gt;&quot; and any optional parameters required for the scenario
+…with the mandatory POST parameter &quot;sessionToken=&lt;sessionToken&gt;&quot; and any optional parameters required for the scenario
 
 The partner integration team provides the production URL.
 
 - **Parameters required for invocation:** The required parameters for Add Accounts widget are **sessionToken** and **return\_url**. It is recommended that you send the **keepalive\_url** and **error\_url**.
 - **Parameters on return:** Add Accounts widget will invoke **return\_url** , with **FILoginAcctId** and **AcctId** parameters.
-- **Error**  **c**** onditions ****:** Add Accounts widget handles any harvesting errors in interactive manner unless the user closes the widget prematurely.
+- **Error conditions**: Add Accounts widget handles any harvesting errors in interactive manner unless the user closes the widget prematurely.
 
-## Data Pull APIs
+### Data Pull APIs
 
 By default, when the Add Accounts widget has completed its flow successfully, the harvesting engine would have completed pulling relevant account information for all the added accounts. This includes account summary information, transactions, and any investment positions. This harvested data is made available through data pull APIs such as _AccountDataInq/getAccountDetails_. Refer to the AllData Web Services API Specifications Guide provided for more details.
 
 If the Account Classification and Confirmation screens are disabled, the widget returns control back when it finds some accounts at the FI. Then a back-end process starts harvesting the newly added accounts for more details. It is recommended that you keep polling the harvest status using _getAccountUpdateSummary_ / AccountUpdateSummaryRq API until the harvesting is complete, and then invoke the data pull APIs. The _getAccountUpdateSummary_ / AccountUpdateSummaryRq API uses this request ID to pull information about ongoing harvest run. You can use Fiserv provided user ID as input parameter for the _getAccountUpdateSummary_ / AccountUpdateSummaryRq API.
 
-|
 
-Web service name
+| Web service name  |  Update status check |
+|---|---|
+| Resource URL  | &lt;FiservWSUrl&gt;/AccountDataInq/getAccountUpdateSummary  |
+| Description  |  This API is used to get the account refresh status after the accounts are added using add accounts widget |
+  | Swagger link  | [getAccountUpdateSummary](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountUpdateSummary)  |
 
- |
-
-Update status check
-
- |
-| --- | --- |
-| Resource URL | \&lt;FiservWSUrl\&gt;/AccountDataInq/getAccountUpdateSummary |
-| --- | --- |
-| Description | This API is used to get the account refresh status after the accounts are added using add accounts widget |
-| Swagger Link | [getAccountUpdateSummary](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountUpdateSummary) |
-
-## Frequently Asked Questions
+### Frequently Asked Questions
 
 The following are some frequently asked questions on how the Add Accounts widget works.
 
-1. What informationissentbackon **retur**** n ****\_ur**** l**?
+1. What information is sent back on **return_url**?
 
 Add Accounts widget invokes **return\_url** after its processing is complete and sends the newly added login account ID at the FI ( **FILoginAcctId** ) as well as account IDs for all the accounts added in this widget session. These accounts are listed in comma-separated values with param **AcctId**.
 
-1. WhathappensiftheuserselectsanFIthat is already registered and gives the same credentials?
+2. What happens if the user selects an FI that is already registered and gives the same credentials?
 
 The Add Accounts widget recognizes that this set of credentials for the chosen FI is already stored and initiates the Add More Accounts process. A harvesting attempt is made to find more accounts at the FI that can be added for aggregation. Any newfound accounts will be added using a similarly configured process as the original request, such as taking into account specific screens enabled using home-level configuration parameters. If the **return\_url** parameter exists, it will be invoked with the corresponding **FILoginAcctId** and a comma-separated list of all accounts.
 
-1. Whathappens it theuserchoosesanFIthat isalreadyregistered, providessame user credentials, andthereare nonewaccountsfound?
+3. What happens if the user chooses an FI that is already registered, provides same user credentials, and there are no new accounts found?
 
-- If the **return\_url** parameter exists, it is invoked with existing **FILoginAcctId** and existing **AcctId** s.
+- If the **return\_url** parameter exists, it is invoked with existing **FILoginAcctId** and existing **AcctIds**.
 - If **return\_url** is not set, the Add Accounts widget shows a message that no new accounts were found.
 
 **Message when no new accounts found:**
 
-![](RackMultipart20211216-4-7jmjhv_html_1e8c0f5490d9bd0d.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-42.png)
 
-1. What errorconditions arepossible?
+4. What error conditions are possible?
 
 The Add Accounts widget handles any harvesting errors interactively unless the user closes the widget prematurely. In such a case, there may be harvesting errors that will be made available through the data pull APIs. If the user chooses same FI and provides same user ID, the Add Accounts widget resumes previous attempt and presents the existing error to the user.
 
-# Alert Resolution Widget
+## Alert Resolution Widget
 
-## Alert Resolution Widget Overview
+### Alert Resolution Widget Overview
 
-The Alert Resolution widget allows partners to take advantage of a library of screens that walk users through errors they may encounter during the account harvesting process. If an account is in error, the Alert Resolution widget will identify the correct alert resolution screens to display for the corresponding account. The widget screens will inform the user of the issue preventing aggregation from functioning correctly and guide the user through any steps required to resolve the error. Refer to [Appendix A – Harvesting Alert Error Resolution Screens](#_Appendix_A) for error content and workflows.
+The Alert Resolution widget allows partners to take advantage of a library of screens that walk users through errors they may encounter during the account harvesting process. If an account is in error, the Alert Resolution widget will identify the correct alert resolution screens to display for the corresponding account. The widget screens will inform the user of the issue preventing aggregation from functioning correctly and guide the user through any steps required to resolve the error. Refer to [Appendix A – Harvesting Alert Error Resolution Screens](#_Appendix_A) <!-- TODO_RUBEN --> for error content and workflows.
 
 **Alert Resolution widget:**
 
-![](RackMultipart20211216-4-7jmjhv_html_bd9502c4cc866a72.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-43.png)
 
-## Alert Resolution Widget Integration Options
+### Alert Resolution Widget Integration Options
 
 Partners have multiple options for exposing the Alert Resolution widget screens to their users:
 
@@ -756,105 +831,203 @@ Partners have multiple options for exposing the Alert Resolution widget screens 
 
 **Alert Resolution widget through Account Management widget:**
 
-![](RackMultipart20211216-4-7jmjhv_html_ff407fb364e5811.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-44.png)
 
 **Integrated to the Alerts Listing widget** – The Alert Listing widget provides an inventory of accounts that are associated with outstanding alerts. From the Alert Listing widget, users can access the corresponding Alert Resolution widget to address the errors.
 
 **Alert Resolution widget through Alert Listing widget:**
 
-![](RackMultipart20211216-4-7jmjhv_html_64ad39ea5bdbdc83.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-45.png)
 
 **Integrate Alert Resolution widget** – The Alert Resolution widget can be embedded and launched directly from the appropriate locations on partner application screens at the account level. Partners wishing to use their own account listing screens may choose to identify outstanding alerts in their own screens.
 
 **Alert Resolution widget through partner UI:**
 
-![](RackMultipart20211216-4-7jmjhv_html_80ee4dcd17ac4af7.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-46.png)
 
 When a user attempts to resolve the alert, the partner application will call the Alert Resolution widget URL and provide the necessary identifiers for the respective account ( **FILoginAcctId** and/or **AcctId** ). The Alert Resolution widget will identify the associated error and display the necessary screens to resolve it.
 
-## Alert Resolution Screens CSS Definition
+### Alert Resolution Screens CSS Definition
 
 ##### Primary CSS Classes
 
 The following table provides an inventory of the primary CSS classes that control the look and formatting of the Alert Resolution widget screens:
 
-|
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>CSS class</th>
+            <th>Description</th>
+            <th>CSS parameter and default value</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Background color</td>
+            <td>This parameter controls the background color that obscures the main screen when the Add Accounts screen
+                overlays are activated.</td>
+            <td>
+              .wrapper {
+              <br>&nbsp;&nbsp;background: #fff;
+              <br>&nbsp;&nbsp;margin: 15px 0;
+              <br> }
+            </td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Widget screen header</td>
+            <td>This parameter controls the font style of the main header of the Add Accounts screen overlays.</td>
+            <td>
+              h1.main {
+              <br>&nbsp;&nbsp;font-size: 20px;
+              <br>&nbsp;&nbsp;font-weight: 600;
+              <br>&nbsp;&nbsp;line-height: 28px;
+              <br>&nbsp;&nbsp;align-items: center;
+              <br>&nbsp;&nbsp;display: flex;
+              <br>&nbsp;&nbsp;color: #333;
+              <br>&nbsp;&nbsp;margin-bottom: 5px;
+              <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Gray color button</td>
+            <td>This parameter controls the color of the button on the Add Accounts screen.</td>
+            <td>
+              .btn-secondary {
+              <br>&nbsp;&nbsp;color: #fff;
+              <br>&nbsp;&nbsp;background-color: #6c757d;
+              <br>&nbsp;&nbsp;border-color: #6c757d;
+              <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Blue color button</td>
+            <td>This parameter controls the color of the button on the Add Accounts screen.</td>
+            <td>
+              .btn-primary {
+              <br>&nbsp;&nbsp;color: #fff;
+              <br>&nbsp;&nbsp;background-color: #007bff;
+              <br>&nbsp;&nbsp;border-color: #007bff;
+            <br>}
+            </td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Error header</td>
+            <td>This parameter controls the font style of the error header on the Add Accounts screen.</td>
+            <td>
+              .alert_redtext {
+              <br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px; font-size:1.15em;
+              <br>&nbsp;&nbsp;color:#b83320;
+              <br>&nbsp;&nbsp;padding:5px 0 10px 40px; margin:8px 0px;
+              <br>&nbsp;&nbsp;font-weight:bold 
+              <br>}
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-#
-
- |
-
-CSS class
-
- |
-
-Description
-
- |
-
-CSS parameter and default value
-
- |
-| --- | --- | --- | --- |
-| 1 | Background color | This parameter controls the background color that obscures the main screen when the Add Accounts screen overlays are activated. | .wrapper {background: #fff;margin: 15px0;} |
-| --- | --- | --- | --- |
-| 2 | Widget screen header | This parameter controls the font style of the main header of the Add Accounts screen overlays | h1.main {font-size: 20px;font-weight: 600;line-height: 28px;align-items: center;display: flex;color: #333;margin-bottom: 5px;} |
-| 3 | Grey color button | This parameter controls the color of the button Add Accounts screen | .btn-secondary {color: #fff;background-color: #6c757d;border-color: #6c757d;} |
-| 4 | Blue color button | This parameter controls the color of the button in Add Accounts screen | .btn-primary {color: #fff;background-color: #007bff;border-color: #007bff;} |
-| 5 | Error header | This parameter controls the font style of the Error Header in Add Accounts Screen | .alert\_redtext {background:url(../images/icons/alerts.png) no-repeat5px0px; font-size:1.15em; color:#b83320; padding:5px010px40px; margin:8px0px; font-weight:bold } |
-
-## Images
+### Images
 
 All images and icons in the Alert Resolution widget are configurable. The URLs where each of the images are retrieved from are configured in the Widget CSS file.
 
-|
+<table>
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Default image</th>
+            <th>Description</th>
+            <th>CSS parameter and default values</th>
+            <th>Default size</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png"></img></center></td>
+            <td>Large alert icon</td>
+            <td>
+              .alert_redtext{
+              <br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px; 
+              <br>&nbsp;&nbsp;font-size:1.15em; 
+              <br>&nbsp;&nbsp;color:#b83320; 
+              <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;
+              <br>&nbsp;&nbsp;margin:8px 0px; 
+              <br>&nbsp;&nbsp;font-weight:normal; 
+              <br>}
+            </td>
+            <td>23x23</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png"></img></center></td>
+            <td>Eye icon</td>
+            <td>
+            .eyeIcon {
+            <br>&nbsp;&nbsp;background: #fff;
+            <br>&nbsp;&nbsp;border: 1px solid #bebebe;
+            <br>&nbsp;&nbsp;cursor: pointer;
+            <br>&nbsp;&nbsp;border-left: 0px;
+            <br>}
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png"></img></center></td>
+            <td>Lock icon</td>
+            <td>
+            .urlLink {
+             <br>&nbsp;&nbsp;display: flex;
+             <br>&nbsp;&nbsp;line-height: 24px;
+             <br>&nbsp;&nbsp;margin-bottom: 15px;
+             <br>}
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png"></img></center></td>
+            <td>Close window icon</td>
+            <td>
+              .cboxClose{
+              <br>&nbsp;&nbsp;float:right; 
+              <br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat; 
+              <br>&nbsp;&nbsp;width:8px; 
+              <br>&nbsp;&nbsp;height:8px;
+              <br>&nbsp;&nbsp;display:block;
+              <br>&nbsp;&nbsp;margin:-10px -10px;
+              <br>&nbsp;&nbsp;_margin:5px;
+              <br>&nbsp;&nbsp;cursor: pointer;
+              <br>}
+            </td>
+            <td>10x10</td>
+        </tr>
+    </tbody>
+</table>
 
-#
-
- |
-
-Default image
-
- |
-
-Description
-
- |
-
-CSS parameter and default values
-
- |
-
-Default size
-
- |
-| --- | --- | --- | --- | --- |
-| 1 | ![](RackMultipart20211216-4-7jmjhv_html_7f5da99fb74e644a.png) | Large alert icon | .alert\_redtext{background:url(../images/icons/alerts.png) no-repeat5px0px; font-size:1.15em; color:#b83320; padding:0px0px10px40px; margin:8px0px; font-weight:normal; } | 23x23 |
-| --- | --- | --- | --- | --- |
-| 2 | ![](RackMultipart20211216-4-7jmjhv_html_e0d18759091ce0f3.png) | Eye icon | .eyeIcon {background: #fff;border: 1pxsolid#bebebe;cursor: pointer;border-left: 0px;} |
- |
-| 3 | ![](RackMultipart20211216-4-7jmjhv_html_a658ca3349b9c0c1.png) | Lock icon | .urlLink {display: flex;line-height: 24px;margin-bottom: 15px;} |
- |
-| 4 | ![](RackMultipart20211216-4-7jmjhv_html_ed3fcb45d7b2ffaa.png) | Close window icon | .cboxClose{float:right; background:url(../images/celightbox/button\_close.png) toprightno-repeat; width:8px; height:8px;display:block;margin:-10px-10px;\_margin:5px;cursor: pointer;} | 10x10 |
-
-## Text Configuration via Resource Bundles
+### Text Configuration via Resource Bundles
 
 AllData widgets use resource bundles to persist most of the text that is displayed to users in the widget screens. This allows partners to customize the language and content to meet their business requirements. The following section describes the configurable text in the screens used by the Error Resolution widget.
 
 Error Resolution widget screens have two basic formats: Either no user action is required, or the user can choose an action.
 
-1. **No**** u ****s**** er act ****i**** o ****n**** re ****qu**** ire ****d**
+1. **No user action required**
 
-Partnerscancustomizethefollowingelements:
+Partners can customize the following elements:
 
 - Error message text based on error code
 - Body content
 
 **Error Resolution widget customization screen:**
 
-![](RackMultipart20211216-4-7jmjhv_html_eacd6e96eee16259.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-51.png)
 
-1. **The user can choose an action**
+2. **The user can choose an action**
 
 Partners can customize the following elements:
 
@@ -867,25 +1040,25 @@ Partners can customize the following elements:
 
 **Error Resolution widget customization screen:**
 
-![](RackMultipart20211216-4-7jmjhv_html_ed00e5123b632079.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-52.png)
 
-## Widget Invocation
+### Widget Invocation
 
 The following process diagram explains the web services APIs the partner calls before and after the invocation of the Error Resolution widget.
 
 **Error Resolution widget invocation process diagram:**
 
-![](RackMultipart20211216-4-7jmjhv_html_78f02006b00c8bba.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-53.png)
 
-## Widget URL
+### Widget URL
 
 The Alert Resolution widget can be accessed using following URL for the partner integration environment. The production URL will be provided later by the partner integration team.
 
 Alert Resolution widget URL for partner integration environment is:
 
-\&lt;Domain URL\&gt;PFM\_UI/widgets/base/addaccounts/alerts/resolveAlertWidget.iface
+&lt;Domain URL&gt;PFM\_UI/widgets/base/addaccounts/alerts/resolveAlertWidget.iface
 
-…with the mandatory POST parameter &quot;sessionToken=\&lt;sessionToken\&gt;&quot; and any optional parameters for the scenario
+…with the mandatory POST parameter &quot;sessionToken=&lt;sessionToken&gt;&quot; and any optional parameters for the scenario
 
 - **Parameters required for invocation:** For Error Resolution widget apart from **sessionToken** , the other required parameters are **login\_acct\_id** and/or **acct\_id**. When both these parameters are sent, the widget first looks at account level errors and if there are none, it uses the **login\_acct\_id** to check for errors present at that level. Invoking this widget also requires the **return\_url** parameter. It is recommended that you send the **keepalive\_url** and **error\_url**.
 - **Parameters on return:** The Error Resolution widget will invoke **return\_url** with action parameter that will indicate whether the user merely cancelled out of the widget or did take some action to mitigate the error. The possible values are &quot;Cancel,&quot; &quot;Deleted,&quot; and &quot;Submit.&quot; If the error resolution results in adding accounts to the **login\_acct\_id** , the newly added **acct\_id** s are returned as list of comma-separated values along with the **login\_acct\_id**.
@@ -895,16 +1068,17 @@ Alert Resolution widget URL for partner integration environment is:
 - **Invalid Parameter Passed:** When passing invalid **login\_acct\_id** or **acct\_id** during widget invocation. (Error code 510)
 - **System Error:** There was a processing error or invalid parameters were sent. (Error code 520)
 
-## Data Pull APIs
+### Data Pull APIs
 
 There are multiple outcomes of an Error Resolution widget invocation:
 
 1. The user chose to cancel out of widget or there was no user action possible for the error condition. In this case, the **action** parameter will have value &quot;Cancel&quot; and no further action is required from the partner. If the error persists beyond stated resolution time, you may have to contact Fiserv customer service.
 
-1. The user chose to act on the error by deleting the account. In this case, the **action** parameter will have value &quot;Deleted.&quot; The partner is expected to use data pull APIs to sync up the accounts for that user.
-2. The user chose to provide additional information to resolve the error. In this case the **action** parameter will have value &quot;Submit.&quot; The partner is expected to poll for completion of harvesting by checking the harvest status using _getAccountHarvestStatus_ / AccountHarvestStsInqRq API and then using data pull APIs to find out if the error resolution was successful.
+2. The user chose to act on the error by deleting the account. In this case, the **action** parameter will have value &quot;Deleted.&quot; The partner is expected to use data pull APIs to sync up the accounts for that user.
 
-## Frequently Asked Questions
+3. The user chose to provide additional information to resolve the error. In this case the **action** parameter will have value &quot;Submit.&quot; The partner is expected to poll for completion of harvesting by checking the harvest status using _getAccountHarvestStatus_ / AccountHarvestStsInqRq API and then using data pull APIs to find out if the error resolution was successful.
+
+### Frequently Asked Questions
 
 The following are some of the frequently asked questions about how the Add Accounts widget works.
 
@@ -912,27 +1086,27 @@ The following are some of the frequently asked questions about how the Add Accou
 
 The Error Resolution widget invokes **return\_url** after its processing is complete with the **action** parameter. If the error resolution results in adding more accounts, the newly added account IDs are sent as a list of comma-separated values with **AcctId** parameter along with the **FILoginAcctId**.
 
-1. When is harvesting triggered in the Error Resolution flow?
+2. When is harvesting triggered in the Error Resolution flow?
 
 The following error codes trigger a harvesting update when resolved: 300, 301, 302, 303, 304, 307, and 201 (if the user chooses to match up the accounts retrieved from FI). This harvested data is made available through data pull APIs. Please refer to the AllData XML/Web Services Specifications Guide provided for more details.
 
 On the similar lines to that of Add Accounts flow, it is recommended that you keep polling the harvest status using _getAccountHarvestStatus_ / AccountHarvestStsInqRq API until the harvesting is complete before invoking the data pull APIs. The **FILoginAcctId** of the newly added login account is sent back as a parameter to the **return\_url**. The _getAccountHarvestStatus_ / AccountHarvestStsInqRq API uses this **FILoginAcctId** to pull information about the ongoing harvest run.
 
-1. When does the Error Resolution widget invoke the Add More Accounts flow?
+3. When does the Error Resolution widget invoke the Add More Accounts flow?
 
 If the user had stopped the Add Accounts flow with FI login-level harvesting errors, there will be no child accounts present for that parent FI login account. If the user tries to resolve such a harvesting error, the harvesting update gets triggered as if the user is trying to add more accounts from that FI. The newly added accounts information will be sent back on the **return\_url** as discussed in question 2.
 
-1. How do we know if the error was resolved successfully?
+4. How do we know if the error was resolved successfully?
 
 When the user submits the information such as new credentials, to resolve the error, the Error Resolution widget notes that and triggers backend harvesting. The success of that attempt cannot be known until harvesting completes. We recommend that you keep polling the status for harvest completion and check the information using data pull APIs.
 
-1. Could there be multiple errors with the same account?
+5. Could there be multiple errors with the same account?
 
 It is possible that there are multiple errors or even errors at multiple levels: FI level, FI login account level, and account level. Resolving errors at high levels in the hierarchy (such as by our scripting team) may uncover other errors. After an error resolution action is taken, you should use data pull APIs to check for further errors.
 
-# Account Management Widget
+## Account Management Widget
 
-## Ordering FIs/Accounts
+### Ordering FIs/Accounts
 
 The Account Management widget provides a list screen of the FIs (parent CFIs) and accounts (child CFIs) that are associated with the user. The Account Management widget allows the user to add more, edit, delete, and resolve alerts for FIs/accounts. Upon completion of a session, Fiserv recommends that the partner retrieve all the active accounts for the user since the user can modify multiple accounts belonging to multiple parent FIs in a given session.
 
@@ -944,9 +1118,9 @@ The Account Management widget groups accounts by associated FI (parent CFI). The
 
 **Account Management widget:**
 
-![](RackMultipart20211216-4-7jmjhv_html_468940e9ed8b8ded.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-54.png)
 
-## Resolve Alerts
+### Resolve Alerts
 
 Users can access the appropriate harvesting alert resolution screens from the Account Management widget. When an account has a harvesting alert, the FI is ordered ahead of other FIs, the FI row displays a different color to differentiate it. A **Resolve** button is displayed in the associated FI row of the Account Management widget if the harvesting error has occurred at parent CFI level and if the error has occurred at account level, the **Resolve** button is placed at the account level.
 
@@ -954,9 +1128,10 @@ When the **Resolve** button is clicked, a corresponding alert resolution screen 
 
 **Resolve Alerts Screen – Account Management widget:**
 
-![](RackMultipart20211216-4-7jmjhv_html_f7163666334f3642.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-55.png)
 
 For information on the content and flow of the alert resolution screens, see [Appendix A – Alert Resolution Screens](#_Appendix_A).
+<!-- TODO_RUBEN -->
 
 For alerts that the user can resolve, the action button is labeled &quot;Resolve.&quot; For other alerts, which require Fiserv or FI intervention to resolve, the button label is &quot;View Details.&quot;
 
@@ -964,197 +1139,195 @@ After the user follows the necessary instructions in the Resolve Alert panel and
 
 **Resolve Alerts progress bar:**
 
-![](RackMultipart20211216-4-7jmjhv_html_6abbdb6e213ae4ca.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-56.png)
 
 After the harvest completes, if the alert is resolved, a confirmation message displays temporarily to inform the user that the alert was successfully resolved. After a few seconds, the FI row reverts to its default color and the FI is re-ordered to its usual alphabetic place relative to the other FIs.
 
 **Resolve Alerts Confirmation message:**
 
-![](RackMultipart20211216-4-7jmjhv_html_c4b2028907d8e2bf.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-57.png)
 
-## Manual Account Update
+### Manual Account Update
 
 External accounts that do not have harvesting alerts associated with them allow the user to manual initiate a harvest to retrieve the latest account data. A refresh icon is displayed next to the FI name that allows the user to initiate the manual account update. When the update is underway, the refresh icon animates to indicate that it is processing. Once the update completes, the latest account balance is displayed for the associated accounts and the timestamp in the FI row is updated accordingly.
 
-![](RackMultipart20211216-4-7jmjhv_html_c9822ed45930bebe.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-58.png)
 
-## Add More Accounts
+### Add More Accounts
 
-The Add More Accounts button ![](RackMultipart20211216-4-7jmjhv_html_c0781fdb806a80a.png) initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
+The Add More Accounts button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59.png) initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
 
 **Add More Accounts progress screen:**
 
-![](RackMultipart20211216-4-7jmjhv_html_6c46be7c89fd1aa8.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-60.png)
 
 If additional accounts are identified, they are automatically added to the user&#39;s profile. If none are identified, a message indicates this in the user&#39;s list of current accounts.
 
 **Add More Accounts message screen:**
 
-![](RackMultipart20211216-4-7jmjhv_html_92cdae71281ef91c.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-61.png)
 
-## Delete FI/Accounts
+### Delete FI/Accounts
 
-For each parent CFI, a &quot;delete institution&quot; button ![](RackMultipart20211216-4-7jmjhv_html_3d37d273025a99e4.png) is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
+For each parent CFI, a &quot;delete institution&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62.png) is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete institution confirmation message:**
 
-![](RackMultipart20211216-4-7jmjhv_html_309236bd5819549.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-63.png)
 
 ##### Delete Account
 
-For each child CFI, a &quot;delete account&quot; button ![](RackMultipart20211216-4-7jmjhv_html_3d37d273025a99e4.png) is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
+For each child CFI, a &quot;delete account&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64.png) is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete account confirmation message:**
 
-![](RackMultipart20211216-4-7jmjhv_html_3a6eb2f655def989.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-65.png)
 
-## Log in to FI Site
+### Log in to FI Site
 
-For each parent CFI, there is a &quot;log in to financial institution&quot; button ![](RackMultipart20211216-4-7jmjhv_html_9cb11478b0cb4b72.png) that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
+For each parent CFI, there is a &quot;log in to financial institution&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66.png) that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
 
-## Editable Account Attributes
+### Editable Account Attributes
 
 Managed account entries are not editable. The account name, account type, and amount are imported to the AllData database via batch/API.
 
 **Managed account entry in Accounts module:**
 
-![](RackMultipart20211216-4-7jmjhv_html_406da75d4f53735d.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-67.png)
 
 Users can edit the nicknames and account types of their held away accounts. A &quot;refresh&quot; button is also available. Account types use the Account Type Name lookup to identify partner-defined account type names for the accounts.
 
 **Held Away account entry in Accounts module:**
 
-![](RackMultipart20211216-4-7jmjhv_html_e4d5ca87b2d9797b.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-68.png)
 
 Users can edit the account nickname, change asset type, modify the amount value, and delete offline accounts.
 
 **Offline Accounts:**
 
-![](RackMultipart20211216-4-7jmjhv_html_942af6a6fbe4313.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-69.png)
 
-## Configurable Dimensions
+### Configurable Dimensions
 
 The Account Management widget includes configurable dimensions for partners to select the desired width and height for the widget. If the content does not fit within the allotted dimensions, scroll bars appear automatically.
 
 **Account Management widget with vertical scroll:**
 
-![](RackMultipart20211216-4-7jmjhv_html_ff221c068121fa00.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-70.png)
 
-## Widget URL
+### Widget URL
 
 Access the Account Management widget in the partner integration environment with the following URL.
 
-\&lt;Domain URL\&gt;PFM\_UI/widgets/base/accounts/accountsManagementWidget.iface
+&lt;Domain URL&gt;PFM\_UI/widgets/base/accounts/accountsManagementWidget.iface
 
-…with the mandatory POST parameter &quot;sessionToken=\&lt;sessionToken\&gt;&quot; and any optional parameters required for the scenario
+…with the mandatory POST parameter &quot;sessionToken=&lt;sessionToken&gt;&quot; and any optional parameters required for the scenario
 
 The production URL will be provided later by the partner integration team.
 
-# Your Progress Widget
+## Your Progress Widget
 
-## Your Progress Widget Overview
+### Your Progress Widget Overview
 
 The Your Progress widget acts as a prompt to encourage the user to add accounts to their profile. The widget tracks the number of accounts and account categories that are associated to the profile.
 
 **Your Progress widget – Incomplete:**
 
-![](RackMultipart20211216-4-7jmjhv_html_2cfa036e2410d578.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-71.png)
 
 The progress bar represents the state of the user&#39;s accounts as compared to a standard definition of a complete account portfolio. The progress bar is split into ninths. As the user adds accounts (or indicates not owning that type of an account), the progress bar moves 1/9th closer to completion. When completed, the message displayed changes.
 
 **Your Progress widget – Complete:**
 
-![](RackMultipart20211216-4-7jmjhv_html_1435d4b39ce6136f.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-72.png)
 
 By default, the Your Progress widget shows the progress bar for the user with the account categories collapsed. When expanded, the widget reveals the different account categories along with status of the user&#39;s accounts as compared to those account categories.
 
 **Your Progress widget – Expanded:**
 
-![](RackMultipart20211216-4-7jmjhv_html_3655363e09b3919f.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-73.png)
 
 Account categories in the Your Progress widget have three possible states. The following table describes each state and shows the icon that indicates it.
 
-|
-
-Account category state
-
- |
-
-Icon
-
- |
-
-Description
-
- |
-| --- | --- | --- |
-| Undetermined | ![](RackMultipart20211216-4-7jmjhv_html_840b8125f44da3f9.png) | Default state of the account categories. This indicates that the user has not added an account of this category and has not indicated that one is unavailable. Account categories in this state are sorted to the top of the module. Clicking the icon or the main text launches the Add Account screens. Clicking the &quot;I Don&#39;t Have One&quot; sub text moves the category into None state. |
-| --- | --- | --- |
-| Added | ![](RackMultipart20211216-4-7jmjhv_html_d420ce5418415fd8.png) | One or more accounts have been added to the account category. Account categories in this state are sorted behind the Undetermined account categories. Clicking the &quot;Add Another&quot; sub text launches the Add Account screens. |
-| None | ![](RackMultipart20211216-4-7jmjhv_html_7f7db537e77217a2.png) | User has indicated that they do not own accounts in this category. Progress for the user is increased as if an account has been added in this category. Account categories in this state are sorted to the bottom of the Your Progress widget. Clicking the **Add One** link launches the Add Account screens. |
+<table>
+    <thead>
+        <tr>
+            <th>Account category state</th>
+            <th>Icon</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Undetermined</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-74.png"></img></center></td>
+            <td>Default state of the account categories. This indicates that the user has not added an account of this
+                category and has not indicated that one is unavailable. Account categories in this state are sorted to
+                the top of the module. Clicking the icon or the main text launches the Add Account screens. Clicking the
+                “I Don’t Have One” sub text moves the category into None state.</td>
+        </tr>
+        <tr>
+            <td>Added</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-75.png"></img></center></td>
+            <td>One or more accounts have been added to the account category. Account categories in this state are
+                sorted behind the Undetermined account categories. Clicking the “Add Another” sub text launches the Add
+                Account screens.</td>
+        </tr>
+        <tr>
+            <td>None</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-76.png"></img></center></td>
+            <td>User has indicated that they do not own accounts in this category. Progress for the user is increased as
+                if an account has been added in this category. Account categories in this state are sorted to the bottom
+                of the Your Progress widget. Clicking the Add One link launches the Add Account screens.</td>
+        </tr>
+    </tbody>
+</table>
 
 The standard profile of progress categories is configurable at the home level. A variable number of categories can be configured for a home. For each category, a variable number of extended account types or instruments can be assigned. When a user adds an account, the application identifies the extended account type or instrument of the new account to determine which category it belongs to. If an account has an extended account type and instrument type assigned, the instrument type takes precedence in determining the account category.
 
 The following table describes the eight default categories and associated extended account types/instruments:
 
-|
-
-Account category
-
- |
-
-Account type
-
- |
-
-Account type code
-
- |
-
-Extended account type code
-
- |
-| --- | --- | --- | --- |
-| Banking | Certificate of Deposit | OAA | CDA |
-| --- | --- | --- | --- |
-| Cash Management | DDA | CMA |
-| Checking | DDA | DDA |
-| Money Market | SDA | MMA |
-| Savings | SDA | SDA |
-| Education savings | 529 / Education Savings | INV | INV |
-| Bill | Billing | BPA | BPA |
-| Landline Phone | BPA | LLP |
-| Streaming Media | BPA | SMA |
-| Mobile Phone | BPA | MBL |
-| Internet | BPA | INT |
-| Cable/Satellite TV | BPA | CBL |
-| Insurance | Annuity | INS | ALI |
-| Term Life | INS | TLI |
-| Universal Life | INS | ULI |
-| Whole Life | INS | WLI |
-| Investment | GIC/Term Investment (GIC) | OAA | GIC |
-| Brokerage | INV | INV |
-| Other liabilities | Credit Card | CCA | CCA |
-| Loan | OLA | ILA |
-| Auto Loan | OLA | ILC |
-| Investment Loan | OLA | ILI |
-| Student Loan | OLA | ILS |
-| Line of Credit | OLA | LOC |
-| Other Liability | OLA | OLA |
-| Mortgage and home equity loans | Mortgage | OLA | MLA |
-| Home Equity Loan | OLA | MLA |
-| Retirement | 401 (k) | INV | INV |
-| 403 (b) | INV | INV |
-| 457 | INV | INV |
-| Deferred Comp Plan | INV | INV |
-| KEOGH | INV | INV |
-| Pension | INV | INV |
-| Profit Sharing Plan | INV | INV |
-| IRA | INV | INV |
-| IRA – Roth | INV | INV |
-| IRA – Rollover | INV | INV |
-| IRA – Sep | INV | INV |
-| IRA – Simple | INV | INV |
+| Account category               | Account type              | Account type code | Extended account type code |
+|--------------------------------|---------------------------|-------------------|----------------------------|
+| Banking                        | Certificate of Deposit    | OAA               | CDA                        |
+|                                | Cash Management           | DDA               | CMA                        |
+|                                | Checking                  | DDA               | DDA                        |
+|                                | Money Market              | SDA               | MMA                        |
+|                                | Savings                   | SDA               | SDA                        |
+| Education savings              | 529 / Education Savings   | INV               | INV                        |
+| Bill                           | Billing                   | BPA               | BPA                        |
+|                                | Landline Phone            | BPA               | LLP                        |
+|                                | Streaming Media           | BPA               | SMA                        |
+|                                | Mobile Phone              | BPA               | MBL                        |
+|                                | Internet                  | BPA               | INT                        |
+|                                | Cable/Satellite TV        | BPA               | CBL                        |
+| Insurance                      | Annuity                   | INS               | ALI                        |
+|                                | Term Life                 | INS               | TLI                        |
+|                                | Universal Life            | INS               | ULI                        |
+|                                | Whole Life                | INS               | WLI                        |
+| Investment                     | GIC/Term Investment (GIC) | OAA               | GIC                        |
+|                                | Brokerage                 | INV               | INV                        |
+| Other liabilities              | Credit Card               | CCA               | CCA                        |
+|                                | Loan                      | OLA               | ILA                        |
+|                                | Auto Loan                 | OLA               | ILC                        |
+|                                | Investment Loan           | OLA               | ILI                        |
+|                                | Student Loan              | OLA               | ILS                        |
+|                                | Line of Credit            | OLA               | LOC                        |
+|                                | Other Liability           | OLA               | OLA                        |
+| Mortgage and home equity loans | Mortgage                  | OLA               | MLA                        |
+|                                | Home Equity Loan          | OLA               | MLA                        |
+| Retirement                     | 401 (k)                   | INV               | INV                        |
+|                                | 403 (b)                   | INV               | INV                        |
+|                                | 457                       | INV               | INV                        |
+|                                | Deferred Comp Plan        | INV               | INV                        |
+|                                | KEOGH                     | INV               | INV                        |
+|                                | Pension                   | INV               | INV                        |
+|                                | Profit Sharing Plan       | INV               | INV                        |
+|                                | IRA                       | INV               | INV                        |
+|                                | IRA – Roth                | INV               | INV                        |
+|                                | IRA – Rollover            | INV               | INV                        |
+|                                | IRA – Sep                 | INV               | INV                        |
+|                                | IRA – Simple              | INV               | INV                        |
 
 After the appropriate category is identified, the category in the Your Progress widget is updated to reflect the new account has been associated to the user profile.
 
@@ -1162,21 +1335,22 @@ The progress bar calculates the percentage that each category represents by divi
 
 The user may select &quot;I Don&#39;t Have One&quot; for any account category that does not have an account associated with it. This acts as a surrogate for that account category and moves the progress bar forward. The user can still add accounts to these account categories if desired.
 
-## Text Configuration via Resource Bundles
+### Text Configuration via Resource Bundles
 
 AllData widgets use resource bundles to persist most of the text that is displayed to users in the widget screens. This allows partners to customize the language and content to meet their business requirements. All the text elements that are used in the Your Progress widget are configurable. Partners wishing to change the text for any of the elements can send the replacement text to the project manager to include them in the partner home&#39;s resource bundle.
 
-## CSS Definition
+### CSS Definition
 
-The CSS for Your Progress widget is the same as Add Accounts widget. The fonts and colors used in this widget can be modified using the same [CSS definitions](#_Add_Account_Screens) as in Add Accounts widget.
+The CSS for Your Progress widget is the same as Add Accounts widget. The fonts and colors used in this widget can be modified using the same [CSS definitions](#add-account-screens-css-definition) as in Add Accounts widget.
 
-## Widget URL
+
+### Widget URL
 
 Access the Your Progress widget in the partner integration environment with the following URL.
 
-\&lt;Domain URL\&gt;/PFM\_UI/widgets/base/accounts/progressSnapshot.iface
+&lt;Domain URL&gt;/PFM\_UI/widgets/base/accounts/progressSnapshot.iface
 
-…with the mandatory POST parameter &quot;sessionToken=\&lt;sessionToken\&gt;&quot; and any optional parameters required for the scenario
+…with the mandatory POST parameter &quot;sessionToken=&lt;sessionToken&gt;&quot; and any optional parameters required for the scenario
 
 The production URL will be provided later by the partner integration team.
 
@@ -1186,151 +1360,70 @@ The required parameters are same as for Add Accounts widget ( **sessionToken** a
 
 This widget is typically embedded within the application page, such as a dashboard, and does not come with ways to close it or log out of it.
 
-# Return Scenarios
+## Return Scenarios
 
 ### Return URL scenarios
 
 The following table provides details on different use case scenarios in which AllData returns control back to the partner application by calling the **return\_url** that the partner shares. It includes whether the scenario has an account confirmation page and details of the parameters and parameter values sent along with **return\_url**.
 
-|
 
-Widget/ implementation
-
- |
-
-Scenario
-
- |
-
-Acct conf pg?
-
- |
-
-Parameter name(s)
-
- |
-
-Parameter value(s)
-
- |
-
-Other param(s)
-
- |
-| --- | --- | --- | --- | --- | --- |
-| Add Account | When accounts are added | No | AcctId, FILoginAcctId | \&lt;account IDs\&gt; |
- |
-| --- | --- | --- | --- | --- | --- |
-| Add Account | After adding accounts, widget close action in confirmation page | Yes | Action | Close |
- |
-| Add Account | No accounts found in FI to add | No | Action | NoNewAccountsFound |
- |
-| Add Account | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add. | No | Action | NoNewAccountsAdded |
- |
-| Add Account | On Add More Accounts, one or more of the user&#39;s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts. | No | Action | NoAccountsAdded |
- |
-| Add Account | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs | N/A | Action | Close | errorCode= 3005 |
-| Add Account – deep linking | When accounts are added | No | AcctId, FILoginAcctId | \&lt;account IDs\&gt; |
- |
-| Add Account – deep linking | After adding accounts, closing the widget from the confirmation page | Yes | Action | Close |
- |
-| Add Account – deep linking | No accounts found in FI to add | No | Action | NoNewAccountsFound |
- |
-| Add Account – deep linking | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add. | No | Action | NoNewAccountsAdded |
- |
-| Add Account – deep linking | On Add More Accounts, one or more of the user&#39;s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts. | No | Action | NoAccountsAdded |
- |
-| Add Account – deep linking | On passing invalid FI ID in widget invocation | N/A | Action | Close | errorCode= 3001 |
-| Add Account – deep linking | On passing invalid FI account ID in widget invocation | N/A | Action | Close | errorCode= 3002 |
-| Add Account – deep linking | On passing an empty account ID and an invalid or empty FI ID in widget invocation | N/A | Action | Close | errorCode= 3001, 3002 |
-| Add Account – deep linking | When the Add process is successful and no accounts are returned – on clicking **Start Over** in the widget, **return\_url** is invoked with this Action and errorCode | Yes | Action | Cancel | errorCode= 3003 |
-| Add Account – deep linking | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs | N/A | Action | Close | errorCode= 3005 |
-| Alert Resolution | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials, editing MFA answers, and changing account types (Child Accounts available) | N/A | Action | Submit |
- |
-| Alert Resolution | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated)
-
-After adding accounts, widget close action in confirmation page | Yes | Action | Close |
- |
-| Alert Resolution | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated)
-
-When accounts are added | No | AcctId, FILoginAcctId | \&lt;account IDs\&gt; |
- |
-| Alert Resolution | User clicks **Select New Institution** in error 306 alert. | N/A | Action | SelectNewInstitution |
- |
-| Alert Resolution | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs | N/A | Action | Close | errorCode= 3005 |
-| All widgets | On clicking **Cancel** or **Close** in any widget | N/A | Action | Cancel |
- |
+| Widget/ implementation     | Scenario                                                                                                                                                                                                                                                                                           | Acct conf pg? | Parameter name(s)     | Parameter value(s)   | Other param(s)        |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------|----------------------|-----------------------|
+| Add Account                | When accounts are added                                                                                                                                                                                                                                                                            | No            | AcctId, FILoginAcctId | &lt;account IDs&gt;        |                       |
+| Add Account                | After adding accounts, widget close action in confirmation page                                                                                                                                                                                                                                    | Yes           | Action                | Close                |                       |
+| Add Account                | No accounts found in FI to add                                                                                                                                                                                                                                                                     | No            | Action                | NoNewAccountsFound   |                       |
+| Add Account                | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add.                                                                                                                                                                                               | No            | Action                | NoNewAccountsAdded   |                       |
+| Add Account                | On Add More Accounts, one or more of the user’s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts.                                                                                                                                         | No            | Action                | NoAccountsAdded      |                       |
+| Add Account                | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
+| Add Account – deep linking | When accounts are added                                                                                                                                                                                                                                                                            | No            | AcctId, FILoginAcctId | &lt;account IDs&gt;        |                       |
+| Add Account – deep linking | After adding accounts, closing the widget from the confirmation page                                                                                                                                                                                                                               | Yes           | Action                | Close                |                       |
+| Add Account – deep linking | No accounts found in FI to add                                                                                                                                                                                                                                                                     | No            | Action                | NoNewAccountsFound   |                       |
+| Add Account – deep linking | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add.                                                                                                                                                                                               | No            | Action                | NoNewAccountsAdded   |                       |
+| Add Account – deep linking | On Add More Accounts, one or more of the user’s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts.                                                                                                                                         | No            | Action                | NoAccountsAdded      |                       |
+| Add Account – deep linking | On passing invalid FI ID in widget invocation                                                                                                                                                                                                                                                      | N/A           | Action                | Close                | errorCode= 3001       |
+| Add Account – deep linking | On passing invalid FI account ID in widget invocation                                                                                                                                                                                                                                              | N/A           | Action                | Close                | errorCode= 3002       |
+| Add Account – deep linking | On passing an empty account ID and an invalid or empty FI ID in widget invocation                                                                                                                                                                                                                  | N/A           | Action                | Close                | errorCode= 3001, 3002 |
+| Add Account – deep linking | When the Add process is successful and no accounts are returned – on clicking Start Over in the widget, return_url is invoked with this Action and errorCode                                                                                                                                       | Yes           | Action                | Cancel               | errorCode= 3003       |
+| Add Account – deep linking | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
+| Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials, editing MFA answers, and changing account types (Child Accounts available)                                                                            | N/A           | Action                | Submit               |                       |
+| Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated). <br><br> After adding accounts, widget close action in confirmation page | Yes           | Action                | Close                |                       |
+| Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated. <br><br> When accounts are added                                          | No            | AcctId, FILoginAcctId | &lt;account IDs&gt;        |                       |
+| Alert Resolution           | User clicks Select New Institution in error 306 alert.                                                                                                                                                                                                                                             | N/A           | Action                | SelectNewInstitution |                       |
+| Alert Resolution           | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
+| All widgets                | On clicking Cancel or Close in any widget                                                                                                                                                                                                                                                          | N/A           | Action                | Cancel               |                       |
 
 ### Error URL scenarios
 
 This table provides details on error scenarios during widget invocation in which AllData redirects users to the **error\_url** the partner shares, and error code details specific to each scenario in parameter values sent with the **error\_url**. None of the following scenarios require additional parameters.
 
-|
+| Widget/ implementation   | Scenarios                                                                                   | Parameter name | Parameter value(s)               | Type      |
+|--------------------------|---------------------------------------------------------------------------------------------|----------------|----------------------------------|-----------|
+| All widgets              | Session timeout                                                                             | errorCode      | 3000                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in css_url       | errorCode      | 3010                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in return_url    | errorCode      | 3011                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in error_url     | errorCode      | 3012                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in keepalive_url | errorCode      | 3013                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in logout_url    | errorCode      | 3014                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in offline_url   | errorCode      | 3015                             | Error URL |
+| All widgets / invocation | When partner does not pass mandatory parameter in SSO request                               | errorMsg       | Missing Mandatory Params: Values | Error URL |
+| Alert Resolution widget  | When the expected login_acct_id or acct_id is not passed during widget invocation           | errorCode      | 500                              | Error URL |
+| Alert Resolution widget  | When passing invalid login_acct_id or acct_id during widget invocation                      | errorCode      | 510                              | Error URL |
+| Alert Resolution widget  | System error – When an error internal to Fiserv occurs during widget invocation             | errorCode      | 520                              | Error URL |
 
-Widget/ implementation
+### Scenarios applicable to SAML implementation
 
- |
+| Widget/ implementation   | Scenario                                 | Parameter name | Parameter value(s) | Type      |
+|--------------------------|------------------------------------------|----------------|--------------------|-----------|
+| All widgets / invocation | ssoSAML param user_id is missing         | errorCode      | SS2                | Error URL |
+| All widgets / invocation | ssoSAML param home_id is missing         | errorCode      | SS39               | Error URL |
+| All widgets / invocation | ssoSAML param partner_id is missing      | errorCode      | SS8                | Error URL |
+| All widgets / invocation | ssoSAML param widget_id is missing       | errorCode      | SS40               | Error URL |
+| All widgets / invocation | ssoSAML param invocation_mode is missing | errorCode      | SS41               | Error URL |
+| All widgets / invocation | ssoSAML param return_url is missing      | errorCode      | SS42               | Error URL |
 
-Scenarios
-
- |
-
-Parameter name
-
- |
-
-Parameter value(s)
-
- |
-
-Type
-
- |
-| --- | --- | --- | --- | --- |
-| All widgets | Session timeout | errorCode | 3000 | Error URL |
-| --- | --- | --- | --- | --- |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **css\_url** | errorCode | 3010 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **return\_url** | errorCode | 3011 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **error\_url** | errorCode | 3012 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **keepalive\_url** | errorCode | 3013 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **logout\_url** | errorCode | 3014 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **offline\_url** | errorCode | 3015 | Error URL |
-| All widgets / invocation | When partner does not pass mandatory parameter in SSO request | errorMsg | Missing Mandatory Params: Values | Error URL |
-| Alert Resolution widget | When the expected **login\_acct\_id** or **acct\_id** is not passed during widget invocation | errorCode | 500 | Error URL |
-| Alert Resolution widget | When passing invalid **login\_acct\_id** or **acct\_id** during widget invocation | errorCode | 510 | Error URL |
-| Alert Resolution widget | System error – When an error internal to Fiserv occurs during widget invocation | errorCode | 520 | Error URL |
-
-#### Scenarios applicable to SAML implementation
-
-|
-
-Widget/ implementation
-
- |
-
-Scenario
-
- |
-
-Parameter name
-
- |
-
-Parameter value(s)
-
- |
-
-Type
-
- |
-| --- | --- | --- | --- | --- |
-| All widgets / invocation | ssoSAML param **user\_id** is missing | errorCode | SS2 | Error URL |
-| --- | --- | --- | --- | --- |
-| All widgets / invocation | ssoSAML param **home\_id** is missing | errorCode | SS39 | Error URL |
-| All widgets / invocation | ssoSAML param **partner\_id** is missing | errorCode | SS8 | Error URL |
-| All widgets / invocation | ssoSAML param **widget\_id** is missing | errorCode | SS40 | Error URL |
-| All widgets / invocation | ssoSAML param **invocation\_mode** is missing | errorCode | SS41 | Error URL |
-| All widgets / invocation | ssoSAML param **return\_url** is missing | errorCode | SS42 | Error URL |
+<br>
+<br>
+<hr>
 
 © 2020-2021 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
 
@@ -1340,4 +1433,13 @@ Fiserv is a registered trademark of Fiserv, Inc.
 
 Other brands and their products are trademarks or registered trademarks of their respective holders and should be noted as such.
 
+<br>
+<br>
+
 This document has been created by Fiserv and is classified **Fiserv Confidential**. This document is restricted to the received party and not to be forwarded or transferred without the approval of Fiserv.
+
+
+<br>
+<br>
+
+Links: [Overview](?path=docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=docs/alldata-next-gen/widgets.md)
