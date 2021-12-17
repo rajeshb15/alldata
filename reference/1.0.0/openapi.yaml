@@ -2568,8 +2568,8 @@ components:
       - DateTimeVal
       type: object
       properties:
-        DateTimeType: {type: string }
-        DateTimeVal: {type: string }
+        DateTimeType: {type: string, example: '2020-08-31T12:00:00Z'}
+        DateTimeVal: {type: string, example: '2020-08-31T12:00:00Z'}
     AdvClientDetailType:
       required:
       - ClientIdentifier
@@ -3078,8 +3078,7 @@ components:
       - Status
       type: object
       properties:
-        Status:
-          $ref: '#/components/schemas/StatusType'
+        Status: {$ref: '#/components/schemas/StatusType' }
         CEUserID: {type: integer, format: int64, example: '3752308'}
         SessInfo: {type: string, example: '6e4d6b34476938575a4357654d6f6c79546f366870673d3d'}
         Roles: {$ref: '#/components/schemas/RolesType' }
