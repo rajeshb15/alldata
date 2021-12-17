@@ -4063,7 +4063,7 @@ components:
     SimulatedUserDetailsType:
       type: object
       properties:
-        IdType: {type: string, enum: - CEUserID - CEInviteClientID - CEUserLoginName - CEAdvisorLoginName - CEAdvisorID, example: 'CEUserID'}
+        IdType: {type: string, enum: [CEUserID, CEInviteClientID, CEUserLoginName, CEAdvisorLoginName, CEAdvisorID], example: 'CEUserID'}
         IdValue: {type: string, example : '1610763'}
         HomeID: {type: integer, format: int64, example : '50120001'}
     UserInfoType:
@@ -4079,7 +4079,7 @@ components:
           $ref: '#/components/schemas/UserPasswordSignOnType'
         AlldataToken:
           type: string
-        Role:{type: string, enum: - User - Admin - Advisor - CSR, example: 'User'}
+        Role:{type: string, enum: [User, Admin, Advisor, CSR], example: 'User'}
         OBOUserID:
           type: string
         CreateUserIfNotExists:
