@@ -1366,17 +1366,16 @@ This widget is typically embedded within the application page, such as a dashboa
 
 The following table provides details on different use case scenarios in which AllData returns control back to the partner application by calling the **return\_url** that the partner shares. It includes whether the scenario has an account confirmation page and details of the parameters and parameter values sent along with **return\_url**.
 
-<!-- TODO_RUBEN -->
 
 | Widget/ implementation     | Scenario                                                                                                                                                                                                                                                                                           | Acct conf pg? | Parameter name(s)     | Parameter value(s)   | Other param(s)        |
 |----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------|----------------------|-----------------------|
-| Add Account                | When accounts are added                                                                                                                                                                                                                                                                            | No            | AcctId, FILoginAcctId | <account IDs>        |                       |
+| Add Account                | When accounts are added                                                                                                                                                                                                                                                                            | No            | AcctId, FILoginAcctId | &lt;account IDs&gt;        |                       |
 | Add Account                | After adding accounts, widget close action in confirmation page                                                                                                                                                                                                                                    | Yes           | Action                | Close                |                       |
 | Add Account                | No accounts found in FI to add                                                                                                                                                                                                                                                                     | No            | Action                | NoNewAccountsFound   |                       |
 | Add Account                | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add.                                                                                                                                                                                               | No            | Action                | NoNewAccountsAdded   |                       |
 | Add Account                | On Add More Accounts, one or more of the user’s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts.                                                                                                                                         | No            | Action                | NoAccountsAdded      |                       |
 | Add Account                | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
-| Add Account – deep linking | When accounts are added                                                                                                                                                                                                                                                                            | No            | AcctId, FILoginAcctId | <account IDs>        |                       |
+| Add Account – deep linking | When accounts are added                                                                                                                                                                                                                                                                            | No            | AcctId, FILoginAcctId | &lt;account IDs&gt;        |                       |
 | Add Account – deep linking | After adding accounts, closing the widget from the confirmation page                                                                                                                                                                                                                               | Yes           | Action                | Close                |                       |
 | Add Account – deep linking | No accounts found in FI to add                                                                                                                                                                                                                                                                     | No            | Action                | NoNewAccountsFound   |                       |
 | Add Account – deep linking | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add.                                                                                                                                                                                               | No            | Action                | NoNewAccountsAdded   |                       |
@@ -1388,7 +1387,7 @@ The following table provides details on different use case scenarios in which Al
 | Add Account – deep linking | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
 | Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials, editing MFA answers, and changing account types (Child Accounts available)                                                                            | N/A           | Action                | Submit               |                       |
 | Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated). <br><br> After adding accounts, widget close action in confirmation page | Yes           | Action                | Close                |                       |
-| Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated. <br><br> When accounts are added                                          | No            | AcctId, FILoginAcctId | <account IDs>        |                       |
+| Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated. <br><br> When accounts are added                                          | No            | AcctId, FILoginAcctId | &lt;account IDs&gt;        |                       |
 | Alert Resolution           | User clicks Select New Institution in error 306 alert.                                                                                                                                                                                                                                             | N/A           | Action                | SelectNewInstitution |                       |
 | Alert Resolution           | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
 | All widgets                | On clicking Cancel or Close in any widget                                                                                                                                                                                                                                                          | N/A           | Action                | Cancel               |                       |
@@ -1397,72 +1396,34 @@ The following table provides details on different use case scenarios in which Al
 
 This table provides details on error scenarios during widget invocation in which AllData redirects users to the **error\_url** the partner shares, and error code details specific to each scenario in parameter values sent with the **error\_url**. None of the following scenarios require additional parameters.
 
-|
+| Widget/ implementation   | Scenarios                                                                                   | Parameter name | Parameter value(s)               | Type      |
+|--------------------------|---------------------------------------------------------------------------------------------|----------------|----------------------------------|-----------|
+| All widgets              | Session timeout                                                                             | errorCode      | 3000                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in css_url       | errorCode      | 3010                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in return_url    | errorCode      | 3011                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in error_url     | errorCode      | 3012                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in keepalive_url | errorCode      | 3013                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in logout_url    | errorCode      | 3014                             | Error URL |
+| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in offline_url   | errorCode      | 3015                             | Error URL |
+| All widgets / invocation | When partner does not pass mandatory parameter in SSO request                               | errorMsg       | Missing Mandatory Params: Values | Error URL |
+| Alert Resolution widget  | When the expected login_acct_id or acct_id is not passed during widget invocation           | errorCode      | 500                              | Error URL |
+| Alert Resolution widget  | When passing invalid login_acct_id or acct_id during widget invocation                      | errorCode      | 510                              | Error URL |
+| Alert Resolution widget  | System error – When an error internal to Fiserv occurs during widget invocation             | errorCode      | 520                              | Error URL |
 
-Widget/ implementation
+### Scenarios applicable to SAML implementation
 
- |
+| Widget/ implementation   | Scenario                                 | Parameter name | Parameter value(s) | Type      |
+|--------------------------|------------------------------------------|----------------|--------------------|-----------|
+| All widgets / invocation | ssoSAML param user_id is missing         | errorCode      | SS2                | Error URL |
+| All widgets / invocation | ssoSAML param home_id is missing         | errorCode      | SS39               | Error URL |
+| All widgets / invocation | ssoSAML param partner_id is missing      | errorCode      | SS8                | Error URL |
+| All widgets / invocation | ssoSAML param widget_id is missing       | errorCode      | SS40               | Error URL |
+| All widgets / invocation | ssoSAML param invocation_mode is missing | errorCode      | SS41               | Error URL |
+| All widgets / invocation | ssoSAML param return_url is missing      | errorCode      | SS42               | Error URL |
 
-Scenarios
-
- |
-
-Parameter name
-
- |
-
-Parameter value(s)
-
- |
-
-Type
-
- |
-| --- | --- | --- | --- | --- |
-| All widgets | Session timeout | errorCode | 3000 | Error URL |
-| --- | --- | --- | --- | --- |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **css\_url** | errorCode | 3010 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **return\_url** | errorCode | 3011 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **error\_url** | errorCode | 3012 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **keepalive\_url** | errorCode | 3013 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **logout\_url** | errorCode | 3014 | Error URL |
-| All widgets / invocation | When partner passes unregistered (not whitelisted with Fiserv) domain name in **offline\_url** | errorCode | 3015 | Error URL |
-| All widgets / invocation | When partner does not pass mandatory parameter in SSO request | errorMsg | Missing Mandatory Params: Values | Error URL |
-| Alert Resolution widget | When the expected **login\_acct\_id** or **acct\_id** is not passed during widget invocation | errorCode | 500 | Error URL |
-| Alert Resolution widget | When passing invalid **login\_acct\_id** or **acct\_id** during widget invocation | errorCode | 510 | Error URL |
-| Alert Resolution widget | System error – When an error internal to Fiserv occurs during widget invocation | errorCode | 520 | Error URL |
-
-#### Scenarios applicable to SAML implementation
-
-|
-
-Widget/ implementation
-
- |
-
-Scenario
-
- |
-
-Parameter name
-
- |
-
-Parameter value(s)
-
- |
-
-Type
-
- |
-| --- | --- | --- | --- | --- |
-| All widgets / invocation | ssoSAML param **user\_id** is missing | errorCode | SS2 | Error URL |
-| --- | --- | --- | --- | --- |
-| All widgets / invocation | ssoSAML param **home\_id** is missing | errorCode | SS39 | Error URL |
-| All widgets / invocation | ssoSAML param **partner\_id** is missing | errorCode | SS8 | Error URL |
-| All widgets / invocation | ssoSAML param **widget\_id** is missing | errorCode | SS40 | Error URL |
-| All widgets / invocation | ssoSAML param **invocation\_mode** is missing | errorCode | SS41 | Error URL |
-| All widgets / invocation | ssoSAML param **return\_url** is missing | errorCode | SS42 | Error URL |
+<br>
+<br>
+<hr>
 
 © 2020-2021 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
 
@@ -1472,4 +1433,13 @@ Fiserv is a registered trademark of Fiserv, Inc.
 
 Other brands and their products are trademarks or registered trademarks of their respective holders and should be noted as such.
 
+<br>
+<br>
+
 This document has been created by Fiserv and is classified **Fiserv Confidential**. This document is restricted to the received party and not to be forwarded or transferred without the approval of Fiserv.
+
+
+<br>
+<br>
+
+Links: [Overview](?path=docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=docs/alldata-next-gen/widgets.md)
