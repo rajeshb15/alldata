@@ -1200,199 +1200,208 @@ This chapter lists each Budget-related API in a table with a resource URL, descr
 This chapter lists each Goal-related API in a table with a resource URL, descriptive information, and a link to Swagger documentation. Goals are used in PFM use cases.
 
 ## createGoal
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>createGoal</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/GoalMgmt/createGoal</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to create a goal.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/createGoal">createGoal API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | createGoal |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/GoalMgmt/createGoal |
-| --- | --- |
-|
-
-Description
-
- | This API is used to create a goal. |
-|
-
-Swagger
-
- | [createGoal API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/createGoal) |
 
 ## editGoal
-
-|
-
-Web Service Name
-
- | editGoal |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/GoalMgmt/editGoal |
-| --- | --- |
-|
-
-Description
-
- | This API is used to edit the goal, changing its target amount, target date, or the contribution percentage of the account. |
-|
-
-Swagger
-
- | [editGoal API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/editGoal) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>editGoal</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/GoalMgmt/editGoal</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to edit the goal, changing its target amount, target date, or the contribution percentage of the account.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/editGoal">editGoal API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## deleteGoal
-
-|
-
-Web Service Name
-
- | deleteGoal |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/GoalMgmt/deleteGoal |
-| --- | --- |
-|
-
-Description
-
- | This API is used to delete a goal. |
-|
-
-Swagger
-
- | [deleteGoal API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/deleteGoal) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>deleteGoal</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/GoalMgmt/deleteGoal</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to delete a goal.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/deleteGoal">deleteGoal API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## findGoal
-
-|
-
-Web Service Name
-
- | findGoal |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/GoalMgmt/findGoal |
-| --- | --- |
-|
-
-Description
-
- | This API is used to find a goal and to check the status of the goal and the account(s) associated with it. |
-|
-
-Swagger
-
- | [findGoal API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/findGoal) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>findGoal</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/GoalMgmt/findGoal</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to find a goal and to check the status of the goal and the account(s) associated with it.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/findGoal">findGoal API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 # Bank Statement Download Services
 
 This chapter lists each Bank Statement Download Services-related API in a table with a resource URL, descriptive information, and a link to Swagger documentation. AllData can download bank statements for a select list of FIs. By default, AllData can download up to three historical statements once customer consent is received. See the PDF Statement Download Service document for more details.
 
 ## bankStatementConsent
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>bankStatementConsent</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/bankStatementConsent</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to provide user consent and FI consent to download bank account statements from the financial institution website.
+                <li>User consent and FI consent should be provided separately using this API.</li>
+                <ul>
+                    <li>User consent is the primary consent, which is to be provided first.</li>
+                    <li>On providing user consent, AllData will set FI consent to true for all eligible FIs under the user profile.</li>
+                </ul>
+                <li>FI consent can be revoked in one or more FIs when the user does not wish to obtain statements from any specific FIs.</li>
+                <li>FI consent can be provided again for consent-revoked FIs.</li>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/i…dex.jsp#/Account%20Management%20Service/bankStatementConsent">bankStatementConsent API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | bankStatementConsent |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/bankStatementConsent |
-| --- | --- |
-|
-
-Description
-
- | This API is used to provide user consent and FI consent to download bank account statements from the financial institution website.
-- User consent and FI consent should be provided separately using this API.
-
-- User consent is the primary consent, which is to be provided first.
-- On providing user consent, AllData will set FI consent to true for all eligible FIs under the user profile.
-
-- FI consent can be revoked in one or more FIs when the user does not wish to obtain statements from any specific FIs.
-- FI consent can be provided again for consent-revoked FIs.
- |
-|
-
-Swagger
-
- | [bankStatementConsent API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/bankStatementConsent) |
 
 ## getBankStmtDetails
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getBankStmtDetails</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getBankStmtDetails</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to get user and FI consent details and the details of the FIs and bank accounts under the user profile that are eligible for downloading the bank account statements.
+                <br><br>
+                It also includes the details of account statements available for download under each of those accounts.
+                <br><br>
+                <b>Note:</b> The availability of statements is dependent on connectivity with the source site. Refer to institution(s) or account(s) errors and resolve any associated issues to get the statements.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/i…x.jsp#/Account%20Data%20Inquiry%20Service/getBankStmtDetails">getBankStmtDetails API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getBankStmtDetails |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getBankStmtDetails |
-| --- | --- |
-|
-
-Description
-
- | This API is used to get user and FI consent details and the details of the FIs and bank accounts under the user profile that are eligible for downloading the bank account statements.
-
-It also includes the details of account statements available for download under each of those accounts.
-
-**Note:** The availability of statements is dependent on connectivity with the source site. Refer to institution(s) or account(s) errors and resolve any associated issues to get the statements. |
-|
-
-Swagger
-
- | [getBankStmtDetails API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getBankStmtDetails) |
 
 # Miscellaneous
 
 This chapter lists each API in a table with a resource URL, descriptive information, and a link to Swagger documentation.
 
 ## GetWMAccessKey
-
-|
-
-Web Service Name
-
- | GetWMAccessKey |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/GetWMAccessKey |
-| --- | --- |
-|
-
-Description
-
- | This API is used to generate WMAccessKey key for PCI compliance requirements for the FI. |
-|
-
-Swagger
-
- | [GetWMAccessKey API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/WMAccessManagement%20Service/GetWMAccessKey) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>GetWMAccessKey</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/GetWMAccessKey</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to generate WMAccessKey key for PCI compliance requirements for the FI.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/WMAccessManagement%20Service/GetWMAccessKey">GetWMAccessKey API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 © 2019-2021 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
 
