@@ -1121,7 +1121,6 @@ The Account Management widget groups accounts by associated FI (parent CFI). The
 ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-54.png)
 
 ### Resolve Alerts
-<!-- TODO_RUBEN -->
 
 Users can access the appropriate harvesting alert resolution screens from the Account Management widget. When an account has a harvesting alert, the FI is ordered ahead of other FIs, the FI row displays a different color to differentiate it. A **Resolve** button is displayed in the associated FI row of the Account Management widget if the harvesting error has occurred at parent CFI level and if the error has occurred at account level, the **Resolve** button is placed at the account level.
 
@@ -1129,9 +1128,10 @@ When the **Resolve** button is clicked, a corresponding alert resolution screen 
 
 **Resolve Alerts Screen – Account Management widget:**
 
-![](RackMultipart20211216-4-7jmjhv_html_f7163666334f3642.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-55.png)
 
 For information on the content and flow of the alert resolution screens, see [Appendix A – Alert Resolution Screens](#_Appendix_A).
+<!-- TODO_RUBEN -->
 
 For alerts that the user can resolve, the action button is labeled &quot;Resolve.&quot; For other alerts, which require Fiserv or FI intervention to resolve, the button label is &quot;View Details.&quot;
 
@@ -1139,197 +1139,195 @@ After the user follows the necessary instructions in the Resolve Alert panel and
 
 **Resolve Alerts progress bar:**
 
-![](RackMultipart20211216-4-7jmjhv_html_6abbdb6e213ae4ca.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-56.png)
 
 After the harvest completes, if the alert is resolved, a confirmation message displays temporarily to inform the user that the alert was successfully resolved. After a few seconds, the FI row reverts to its default color and the FI is re-ordered to its usual alphabetic place relative to the other FIs.
 
 **Resolve Alerts Confirmation message:**
 
-![](RackMultipart20211216-4-7jmjhv_html_c4b2028907d8e2bf.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-57.png)
 
-## Manual Account Update
+### Manual Account Update
 
 External accounts that do not have harvesting alerts associated with them allow the user to manual initiate a harvest to retrieve the latest account data. A refresh icon is displayed next to the FI name that allows the user to initiate the manual account update. When the update is underway, the refresh icon animates to indicate that it is processing. Once the update completes, the latest account balance is displayed for the associated accounts and the timestamp in the FI row is updated accordingly.
 
-![](RackMultipart20211216-4-7jmjhv_html_c9822ed45930bebe.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-58.png)
 
-## Add More Accounts
+### Add More Accounts
 
-The Add More Accounts button ![](RackMultipart20211216-4-7jmjhv_html_c0781fdb806a80a.png) initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
+The Add More Accounts button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59.png) initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
 
 **Add More Accounts progress screen:**
 
-![](RackMultipart20211216-4-7jmjhv_html_6c46be7c89fd1aa8.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-60.png)
 
 If additional accounts are identified, they are automatically added to the user&#39;s profile. If none are identified, a message indicates this in the user&#39;s list of current accounts.
 
 **Add More Accounts message screen:**
 
-![](RackMultipart20211216-4-7jmjhv_html_92cdae71281ef91c.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-61.png)
 
-## Delete FI/Accounts
+### Delete FI/Accounts
 
-For each parent CFI, a &quot;delete institution&quot; button ![](RackMultipart20211216-4-7jmjhv_html_3d37d273025a99e4.png) is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
+For each parent CFI, a &quot;delete institution&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62.png) is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete institution confirmation message:**
 
-![](RackMultipart20211216-4-7jmjhv_html_309236bd5819549.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-63.png)
 
 ##### Delete Account
 
-For each child CFI, a &quot;delete account&quot; button ![](RackMultipart20211216-4-7jmjhv_html_3d37d273025a99e4.png) is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
+For each child CFI, a &quot;delete account&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64.png) is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete account confirmation message:**
 
-![](RackMultipart20211216-4-7jmjhv_html_3a6eb2f655def989.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-65.png)
 
-## Log in to FI Site
+### Log in to FI Site
 
-For each parent CFI, there is a &quot;log in to financial institution&quot; button ![](RackMultipart20211216-4-7jmjhv_html_9cb11478b0cb4b72.png) that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
+For each parent CFI, there is a &quot;log in to financial institution&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66.png) that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
 
-## Editable Account Attributes
+### Editable Account Attributes
 
 Managed account entries are not editable. The account name, account type, and amount are imported to the AllData database via batch/API.
 
 **Managed account entry in Accounts module:**
 
-![](RackMultipart20211216-4-7jmjhv_html_406da75d4f53735d.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-67.png)
 
 Users can edit the nicknames and account types of their held away accounts. A &quot;refresh&quot; button is also available. Account types use the Account Type Name lookup to identify partner-defined account type names for the accounts.
 
 **Held Away account entry in Accounts module:**
 
-![](RackMultipart20211216-4-7jmjhv_html_e4d5ca87b2d9797b.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-68.png)
 
 Users can edit the account nickname, change asset type, modify the amount value, and delete offline accounts.
 
 **Offline Accounts:**
 
-![](RackMultipart20211216-4-7jmjhv_html_942af6a6fbe4313.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-69.png)
 
-## Configurable Dimensions
+### Configurable Dimensions
 
 The Account Management widget includes configurable dimensions for partners to select the desired width and height for the widget. If the content does not fit within the allotted dimensions, scroll bars appear automatically.
 
 **Account Management widget with vertical scroll:**
 
-![](RackMultipart20211216-4-7jmjhv_html_ff221c068121fa00.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-70.png)
 
-## Widget URL
+### Widget URL
 
 Access the Account Management widget in the partner integration environment with the following URL.
 
-\&lt;Domain URL\&gt;PFM\_UI/widgets/base/accounts/accountsManagementWidget.iface
+&lt;Domain URL&gt;PFM\_UI/widgets/base/accounts/accountsManagementWidget.iface
 
-…with the mandatory POST parameter &quot;sessionToken=\&lt;sessionToken\&gt;&quot; and any optional parameters required for the scenario
+…with the mandatory POST parameter &quot;sessionToken=&lt;sessionToken&gt;&quot; and any optional parameters required for the scenario
 
 The production URL will be provided later by the partner integration team.
 
-# Your Progress Widget
+## Your Progress Widget
 
-## Your Progress Widget Overview
+### Your Progress Widget Overview
 
 The Your Progress widget acts as a prompt to encourage the user to add accounts to their profile. The widget tracks the number of accounts and account categories that are associated to the profile.
 
 **Your Progress widget – Incomplete:**
 
-![](RackMultipart20211216-4-7jmjhv_html_2cfa036e2410d578.png)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-71.png)
 
 The progress bar represents the state of the user&#39;s accounts as compared to a standard definition of a complete account portfolio. The progress bar is split into ninths. As the user adds accounts (or indicates not owning that type of an account), the progress bar moves 1/9th closer to completion. When completed, the message displayed changes.
 
 **Your Progress widget – Complete:**
 
-![](RackMultipart20211216-4-7jmjhv_html_1435d4b39ce6136f.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-72.png)
 
 By default, the Your Progress widget shows the progress bar for the user with the account categories collapsed. When expanded, the widget reveals the different account categories along with status of the user&#39;s accounts as compared to those account categories.
 
 **Your Progress widget – Expanded:**
 
-![](RackMultipart20211216-4-7jmjhv_html_3655363e09b3919f.jpg)
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-73.png)
 
 Account categories in the Your Progress widget have three possible states. The following table describes each state and shows the icon that indicates it.
 
-|
-
-Account category state
-
- |
-
-Icon
-
- |
-
-Description
-
- |
-| --- | --- | --- |
-| Undetermined | ![](RackMultipart20211216-4-7jmjhv_html_840b8125f44da3f9.png) | Default state of the account categories. This indicates that the user has not added an account of this category and has not indicated that one is unavailable. Account categories in this state are sorted to the top of the module. Clicking the icon or the main text launches the Add Account screens. Clicking the &quot;I Don&#39;t Have One&quot; sub text moves the category into None state. |
-| --- | --- | --- |
-| Added | ![](RackMultipart20211216-4-7jmjhv_html_d420ce5418415fd8.png) | One or more accounts have been added to the account category. Account categories in this state are sorted behind the Undetermined account categories. Clicking the &quot;Add Another&quot; sub text launches the Add Account screens. |
-| None | ![](RackMultipart20211216-4-7jmjhv_html_7f7db537e77217a2.png) | User has indicated that they do not own accounts in this category. Progress for the user is increased as if an account has been added in this category. Account categories in this state are sorted to the bottom of the Your Progress widget. Clicking the **Add One** link launches the Add Account screens. |
+<table>
+    <thead>
+        <tr>
+            <th>Account category state</th>
+            <th>Icon</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Undetermined</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-74.png"></img></center></td>
+            <td>Default state of the account categories. This indicates that the user has not added an account of this
+                category and has not indicated that one is unavailable. Account categories in this state are sorted to
+                the top of the module. Clicking the icon or the main text launches the Add Account screens. Clicking the
+                “I Don’t Have One” sub text moves the category into None state.</td>
+        </tr>
+        <tr>
+            <td>Added</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-75.png"></img></center></td>
+            <td>One or more accounts have been added to the account category. Account categories in this state are
+                sorted behind the Undetermined account categories. Clicking the “Add Another” sub text launches the Add
+                Account screens.</td>
+        </tr>
+        <tr>
+            <td>None</td>
+            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-76.png"></img></center></td>
+            <td>User has indicated that they do not own accounts in this category. Progress for the user is increased as
+                if an account has been added in this category. Account categories in this state are sorted to the bottom
+                of the Your Progress widget. Clicking the Add One link launches the Add Account screens.</td>
+        </tr>
+    </tbody>
+</table>
 
 The standard profile of progress categories is configurable at the home level. A variable number of categories can be configured for a home. For each category, a variable number of extended account types or instruments can be assigned. When a user adds an account, the application identifies the extended account type or instrument of the new account to determine which category it belongs to. If an account has an extended account type and instrument type assigned, the instrument type takes precedence in determining the account category.
 
 The following table describes the eight default categories and associated extended account types/instruments:
 
-|
-
-Account category
-
- |
-
-Account type
-
- |
-
-Account type code
-
- |
-
-Extended account type code
-
- |
-| --- | --- | --- | --- |
-| Banking | Certificate of Deposit | OAA | CDA |
-| --- | --- | --- | --- |
-| Cash Management | DDA | CMA |
-| Checking | DDA | DDA |
-| Money Market | SDA | MMA |
-| Savings | SDA | SDA |
-| Education savings | 529 / Education Savings | INV | INV |
-| Bill | Billing | BPA | BPA |
-| Landline Phone | BPA | LLP |
-| Streaming Media | BPA | SMA |
-| Mobile Phone | BPA | MBL |
-| Internet | BPA | INT |
-| Cable/Satellite TV | BPA | CBL |
-| Insurance | Annuity | INS | ALI |
-| Term Life | INS | TLI |
-| Universal Life | INS | ULI |
-| Whole Life | INS | WLI |
-| Investment | GIC/Term Investment (GIC) | OAA | GIC |
-| Brokerage | INV | INV |
-| Other liabilities | Credit Card | CCA | CCA |
-| Loan | OLA | ILA |
-| Auto Loan | OLA | ILC |
-| Investment Loan | OLA | ILI |
-| Student Loan | OLA | ILS |
-| Line of Credit | OLA | LOC |
-| Other Liability | OLA | OLA |
-| Mortgage and home equity loans | Mortgage | OLA | MLA |
-| Home Equity Loan | OLA | MLA |
-| Retirement | 401 (k) | INV | INV |
-| 403 (b) | INV | INV |
-| 457 | INV | INV |
-| Deferred Comp Plan | INV | INV |
-| KEOGH | INV | INV |
-| Pension | INV | INV |
-| Profit Sharing Plan | INV | INV |
-| IRA | INV | INV |
-| IRA – Roth | INV | INV |
-| IRA – Rollover | INV | INV |
-| IRA – Sep | INV | INV |
-| IRA – Simple | INV | INV |
+| Account category               | Account type              | Account type code | Extended account type code |
+|--------------------------------|---------------------------|-------------------|----------------------------|
+| Banking                        | Certificate of Deposit    | OAA               | CDA                        |
+|                                | Cash Management           | DDA               | CMA                        |
+|                                | Checking                  | DDA               | DDA                        |
+|                                | Money Market              | SDA               | MMA                        |
+|                                | Savings                   | SDA               | SDA                        |
+| Education savings              | 529 / Education Savings   | INV               | INV                        |
+| Bill                           | Billing                   | BPA               | BPA                        |
+|                                | Landline Phone            | BPA               | LLP                        |
+|                                | Streaming Media           | BPA               | SMA                        |
+|                                | Mobile Phone              | BPA               | MBL                        |
+|                                | Internet                  | BPA               | INT                        |
+|                                | Cable/Satellite TV        | BPA               | CBL                        |
+| Insurance                      | Annuity                   | INS               | ALI                        |
+|                                | Term Life                 | INS               | TLI                        |
+|                                | Universal Life            | INS               | ULI                        |
+|                                | Whole Life                | INS               | WLI                        |
+| Investment                     | GIC/Term Investment (GIC) | OAA               | GIC                        |
+|                                | Brokerage                 | INV               | INV                        |
+| Other liabilities              | Credit Card               | CCA               | CCA                        |
+|                                | Loan                      | OLA               | ILA                        |
+|                                | Auto Loan                 | OLA               | ILC                        |
+|                                | Investment Loan           | OLA               | ILI                        |
+|                                | Student Loan              | OLA               | ILS                        |
+|                                | Line of Credit            | OLA               | LOC                        |
+|                                | Other Liability           | OLA               | OLA                        |
+| Mortgage and home equity loans | Mortgage                  | OLA               | MLA                        |
+|                                | Home Equity Loan          | OLA               | MLA                        |
+| Retirement                     | 401 (k)                   | INV               | INV                        |
+|                                | 403 (b)                   | INV               | INV                        |
+|                                | 457                       | INV               | INV                        |
+|                                | Deferred Comp Plan        | INV               | INV                        |
+|                                | KEOGH                     | INV               | INV                        |
+|                                | Pension                   | INV               | INV                        |
+|                                | Profit Sharing Plan       | INV               | INV                        |
+|                                | IRA                       | INV               | INV                        |
+|                                | IRA – Roth                | INV               | INV                        |
+|                                | IRA – Rollover            | INV               | INV                        |
+|                                | IRA – Sep                 | INV               | INV                        |
+|                                | IRA – Simple              | INV               | INV                        |
 
 After the appropriate category is identified, the category in the Your Progress widget is updated to reflect the new account has been associated to the user profile.
 
@@ -1337,21 +1335,22 @@ The progress bar calculates the percentage that each category represents by divi
 
 The user may select &quot;I Don&#39;t Have One&quot; for any account category that does not have an account associated with it. This acts as a surrogate for that account category and moves the progress bar forward. The user can still add accounts to these account categories if desired.
 
-## Text Configuration via Resource Bundles
+### Text Configuration via Resource Bundles
 
 AllData widgets use resource bundles to persist most of the text that is displayed to users in the widget screens. This allows partners to customize the language and content to meet their business requirements. All the text elements that are used in the Your Progress widget are configurable. Partners wishing to change the text for any of the elements can send the replacement text to the project manager to include them in the partner home&#39;s resource bundle.
 
-## CSS Definition
+### CSS Definition
 
-The CSS for Your Progress widget is the same as Add Accounts widget. The fonts and colors used in this widget can be modified using the same [CSS definitions](#_Add_Account_Screens) as in Add Accounts widget.
+The CSS for Your Progress widget is the same as Add Accounts widget. The fonts and colors used in this widget can be modified using the same [CSS definitions](#add-account-screens-css-definition) as in Add Accounts widget.
 
-## Widget URL
+
+### Widget URL
 
 Access the Your Progress widget in the partner integration environment with the following URL.
 
-\&lt;Domain URL\&gt;/PFM\_UI/widgets/base/accounts/progressSnapshot.iface
+&lt;Domain URL&gt;/PFM\_UI/widgets/base/accounts/progressSnapshot.iface
 
-…with the mandatory POST parameter &quot;sessionToken=\&lt;sessionToken\&gt;&quot; and any optional parameters required for the scenario
+…with the mandatory POST parameter &quot;sessionToken=&lt;sessionToken&gt;&quot; and any optional parameters required for the scenario
 
 The production URL will be provided later by the partner integration team.
 
@@ -1361,80 +1360,38 @@ The required parameters are same as for Add Accounts widget ( **sessionToken** a
 
 This widget is typically embedded within the application page, such as a dashboard, and does not come with ways to close it or log out of it.
 
-# Return Scenarios
+## Return Scenarios
 
 ### Return URL scenarios
 
 The following table provides details on different use case scenarios in which AllData returns control back to the partner application by calling the **return\_url** that the partner shares. It includes whether the scenario has an account confirmation page and details of the parameters and parameter values sent along with **return\_url**.
 
-|
+<!-- TODO_RUBEN -->
 
-Widget/ implementation
-
- |
-
-Scenario
-
- |
-
-Acct conf pg?
-
- |
-
-Parameter name(s)
-
- |
-
-Parameter value(s)
-
- |
-
-Other param(s)
-
- |
-| --- | --- | --- | --- | --- | --- |
-| Add Account | When accounts are added | No | AcctId, FILoginAcctId | \&lt;account IDs\&gt; |
- |
-| --- | --- | --- | --- | --- | --- |
-| Add Account | After adding accounts, widget close action in confirmation page | Yes | Action | Close |
- |
-| Add Account | No accounts found in FI to add | No | Action | NoNewAccountsFound |
- |
-| Add Account | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add. | No | Action | NoNewAccountsAdded |
- |
-| Add Account | On Add More Accounts, one or more of the user&#39;s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts. | No | Action | NoAccountsAdded |
- |
-| Add Account | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs | N/A | Action | Close | errorCode= 3005 |
-| Add Account – deep linking | When accounts are added | No | AcctId, FILoginAcctId | \&lt;account IDs\&gt; |
- |
-| Add Account – deep linking | After adding accounts, closing the widget from the confirmation page | Yes | Action | Close |
- |
-| Add Account – deep linking | No accounts found in FI to add | No | Action | NoNewAccountsFound |
- |
-| Add Account – deep linking | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add. | No | Action | NoNewAccountsAdded |
- |
-| Add Account – deep linking | On Add More Accounts, one or more of the user&#39;s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts. | No | Action | NoAccountsAdded |
- |
-| Add Account – deep linking | On passing invalid FI ID in widget invocation | N/A | Action | Close | errorCode= 3001 |
-| Add Account – deep linking | On passing invalid FI account ID in widget invocation | N/A | Action | Close | errorCode= 3002 |
-| Add Account – deep linking | On passing an empty account ID and an invalid or empty FI ID in widget invocation | N/A | Action | Close | errorCode= 3001, 3002 |
-| Add Account – deep linking | When the Add process is successful and no accounts are returned – on clicking **Start Over** in the widget, **return\_url** is invoked with this Action and errorCode | Yes | Action | Cancel | errorCode= 3003 |
-| Add Account – deep linking | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs | N/A | Action | Close | errorCode= 3005 |
-| Alert Resolution | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials, editing MFA answers, and changing account types (Child Accounts available) | N/A | Action | Submit |
- |
-| Alert Resolution | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated)
-
-After adding accounts, widget close action in confirmation page | Yes | Action | Close |
- |
-| Alert Resolution | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated)
-
-When accounts are added | No | AcctId, FILoginAcctId | \&lt;account IDs\&gt; |
- |
-| Alert Resolution | User clicks **Select New Institution** in error 306 alert. | N/A | Action | SelectNewInstitution |
- |
-| Alert Resolution | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs | N/A | Action | Close | errorCode= 3005 |
-| All widgets | On clicking **Cancel** or **Close** in any widget | N/A | Action | Cancel |
- |
+| Widget/ implementation     | Scenario                                                                                                                                                                                                                                                                                           | Acct conf pg? | Parameter name(s)     | Parameter value(s)   | Other param(s)        |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|-----------------------|----------------------|-----------------------|
+| Add Account                | When accounts are added                                                                                                                                                                                                                                                                            | No            | AcctId, FILoginAcctId | <account IDs>        |                       |
+| Add Account                | After adding accounts, widget close action in confirmation page                                                                                                                                                                                                                                    | Yes           | Action                | Close                |                       |
+| Add Account                | No accounts found in FI to add                                                                                                                                                                                                                                                                     | No            | Action                | NoNewAccountsFound   |                       |
+| Add Account                | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add.                                                                                                                                                                                               | No            | Action                | NoNewAccountsAdded   |                       |
+| Add Account                | On Add More Accounts, one or more of the user’s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts.                                                                                                                                         | No            | Action                | NoAccountsAdded      |                       |
+| Add Account                | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
+| Add Account – deep linking | When accounts are added                                                                                                                                                                                                                                                                            | No            | AcctId, FILoginAcctId | <account IDs>        |                       |
+| Add Account – deep linking | After adding accounts, closing the widget from the confirmation page                                                                                                                                                                                                                               | Yes           | Action                | Close                |                       |
+| Add Account – deep linking | No accounts found in FI to add                                                                                                                                                                                                                                                                     | No            | Action                | NoNewAccountsFound   |                       |
+| Add Account – deep linking | On Add More Accounts, all the accounts are already added and there are no new accounts in FI to add.                                                                                                                                                                                               | No            | Action                | NoNewAccountsAdded   |                       |
+| Add Account – deep linking | On Add More Accounts, one or more of the user’s existing accounts was not found at the FI. The user must resolve this error prior to adding more accounts.                                                                                                                                         | No            | Action                | NoAccountsAdded      |                       |
+| Add Account – deep linking | On passing invalid FI ID in widget invocation                                                                                                                                                                                                                                                      | N/A           | Action                | Close                | errorCode= 3001       |
+| Add Account – deep linking | On passing invalid FI account ID in widget invocation                                                                                                                                                                                                                                              | N/A           | Action                | Close                | errorCode= 3002       |
+| Add Account – deep linking | On passing an empty account ID and an invalid or empty FI ID in widget invocation                                                                                                                                                                                                                  | N/A           | Action                | Close                | errorCode= 3001, 3002 |
+| Add Account – deep linking | When the Add process is successful and no accounts are returned – on clicking Start Over in the widget, return_url is invoked with this Action and errorCode                                                                                                                                       | Yes           | Action                | Cancel               | errorCode= 3003       |
+| Add Account – deep linking | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
+| Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials, editing MFA answers, and changing account types (Child Accounts available)                                                                            | N/A           | Action                | Submit               |                       |
+| Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated). <br><br> After adding accounts, widget close action in confirmation page | Yes           | Action                | Close                |                       |
+| Alert Resolution           | All user intervention scenarios in Resolve Alerts after taking action to resolve error and submit, such as after updating login credentials and editing MFA answers (No Child Accounts available – Add process will be initiated. <br><br> When accounts are added                                          | No            | AcctId, FILoginAcctId | <account IDs>        |                       |
+| Alert Resolution           | User clicks Select New Institution in error 306 alert.                                                                                                                                                                                                                                             | N/A           | Action                | SelectNewInstitution |                       |
+| Alert Resolution           | On passing invalid PartnerAppID (unregistered partner app ID) – primarily required when adding OAuth FIs                                                                                                                                                                                           | N/A           | Action                | Close                | errorCode= 3005       |
+| All widgets                | On clicking Cancel or Close in any widget                                                                                                                                                                                                                                                          | N/A           | Action                | Cancel               |                       |
 
 ### Error URL scenarios
 
