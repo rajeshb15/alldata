@@ -2749,7 +2749,7 @@ components:
           items: {$ref: '#/components/schemas/PropertyType' }
         RealEstate: {$ref: '#/components/schemas/RealEstateType' }
         InsPolicy: {$ref: '#/components/schemas/InsPolicyType' }
-        AdvAccess: {type: string, enum: [NONE, SUMMARY, FULL_ACCOUNT] }
+        AdvAccess: {type: string, enum: [NONE, SUMMARY, FULL_ACCOUNT], example: 'SUMMARY' }
         RoutingNumber: {type: string }
         MaturityDate: {type: string, format: date-time }
         InterestRateType: {type: string }
@@ -2809,7 +2809,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FILoginAcctInfoListInqRs: {$ref: '#/components/schemas/FILoginAcctInfoListInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FILoginAcctInfoListInqRsHeader
@@ -3062,7 +3062,7 @@ components:
           type: array
           items: {$ref: '#/components/schemas/PropertyType' }
         AssetClass: {$ref: '#/components/schemas/AssetClassType' }
-        Marginable: {type: string, enum: [Y,N] }
+        Marginable: {type: string, enum: [Y,N], example: 'Y' }
         SecurityType: {type: string }
     SecPosType:
       required:
@@ -3127,7 +3127,7 @@ components:
       type: object
       properties:
         Phone: {type: string }
-        Email: {type: string }
+        Email: {type: string, example: 'mycontact@hello.com' }
         Address: {type: string }
     UserContactType:
       type: object
@@ -3305,7 +3305,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AccountUpdateSummaryRs: {$ref: '#/components/schemas/AccountUpdateSummaryRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AccountUpdateSummaryRsHeader
@@ -3362,7 +3362,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AccountUpdateSummaryRq: {$ref: '#/components/schemas/AccountUpdateSummaryRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AccountUpdateSummaryRqHeader
@@ -3382,7 +3382,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FIAcctSummaryInqRs: {$ref: '#/components/schemas/FIAcctSummaryInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FIAcctSummaryInqRsHeader
@@ -3403,7 +3403,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FIAcctSummaryInqRq: {$ref: '#/components/schemas/FIAcctSummaryInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FIAcctSummaryInqRqHeader
@@ -3437,7 +3437,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BankStatementInqRs: {$ref: '#/components/schemas/BankStatementInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BankStatementRsHeader
@@ -3474,7 +3474,7 @@ components:
       properties:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BankStatementRqHeader
@@ -3509,7 +3509,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         DepAcctTrnInqRs: {$ref: '#/components/schemas/DepAcctTrnInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: DepAcctTrnInqRsHeader
@@ -3568,7 +3568,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         DepAcctTrnInqRq: {$ref: '#/components/schemas/DepAcctTrnInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: DepAcctTrnInqRqHeader
@@ -3589,7 +3589,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         CCAcctTrnInqRs: {$ref: '#/components/schemas/CCAcctTrnInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: CCAcctTrnInqRsHeader
@@ -3622,7 +3622,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         CCAcctTrnInqRq: {$ref: '#/components/schemas/CCAcctTrnInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: CCAcctTrnInqRqHeader
@@ -3661,7 +3661,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         DeletedTrnInqRs: {$ref: '#/components/schemas/DeletedTrnInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: DeletedTrnInqRsHeader
@@ -3758,7 +3758,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         DeletedTrnInqRq: {$ref: '#/components/schemas/DeletedTrnInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: DeletedTrnInqRqHeader
@@ -3779,7 +3779,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         EmployerStockOptionRs: {$ref: '#/components/schemas/EmployerStockOptionRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: EmployerStockOptionRsHeader
@@ -3800,7 +3800,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         EmployerStockOptionRq: {$ref: '#/components/schemas/EmployerStockOptionRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: EmployerStockOptionRqHeader
@@ -3815,7 +3815,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
@@ -3840,7 +3840,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         InvAcctPosInqRq: {$ref: '#/components/schemas/InvAcctPosInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: InvAcctPosInqRqHeader
@@ -3859,7 +3859,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         InvAcctTrnInqRs: {$ref: '#/components/schemas/InvAcctTrnInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: InvAcctTrnInqRsHeader
@@ -3893,7 +3893,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         InvAcctTrnInqRq: {$ref: '#/components/schemas/InvAcctTrnInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: InvAcctTrnInqRqHeader
@@ -3914,7 +3914,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         OtherAcctTrnInqRs: {$ref: '#/components/schemas/OtherAcctTrnInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: OtherAcctTrnInqRsHeader
@@ -3947,7 +3947,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         OtherAcctTrnInqRq: {$ref: '#/components/schemas/OtherAcctTrnInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: OtherAcctTrnInqRqHeader
@@ -3992,7 +3992,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         TaxDocumentInqRs: {$ref: '#/components/schemas/TaxDocumentInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: TaxDocumentInqRsHeader
@@ -4020,7 +4020,7 @@ components:
       properties:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: TaxDocumentInqRqHeader
@@ -4065,7 +4065,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FindTrnsInqRs: {$ref: '#/components/schemas/FindTrnsInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FindTrnsInqRsHeader
@@ -4100,7 +4100,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FindTrnsInqRq: {$ref: '#/components/schemas/FindTrnsInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FindTrnsInqRqHeader
@@ -4132,7 +4132,7 @@ components:
       properties:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: PingRqHeader
@@ -4154,7 +4154,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AddHostAcctsRs: {$ref: '#/components/schemas/AddHostAcctsRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AddHostAcctsRsHeader
@@ -4215,7 +4215,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AddHostAcctsRq: {$ref: '#/components/schemas/AddHostAcctsRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AddHostAcctsRqHeader
@@ -4239,7 +4239,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AddUpdateHostAccountsRq: {$ref: '#/components/schemas/AddUpdateFILoginHostAcctRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: addUpdateHostAccountsRqHeader
@@ -4272,7 +4272,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AddUpdateHostAccountsRs: {$ref: '#/components/schemas/addUpdateHostAccountsRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: addUpdateHostAccountsRsHeader
@@ -4403,7 +4403,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BankStatementConsentRs: {$ref: '#/components/schemas/BankStatementConsentRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BankStatementConsentRsHeader
@@ -4452,7 +4452,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BankStatementConsentRq: {$ref: '#/components/schemas/BankStatementConsentRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BankStatementConsentRqHeader
@@ -4503,7 +4503,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
@@ -4540,7 +4540,7 @@ components:
         AccountOwnerShip: {type: string }
         Instrument: {type: string }
         RetirementStatus: {type: string }
-        AdvAccess: {type: string, enum: [NONE,SUMMARY,FULL_ACCOUNT] }
+        AdvAccess: {type: string, enum: [NONE,SUMMARY,FULL_ACCOUNT], example: 'SUMMARY' }
         AcctOwnerName: {type: string, example: 'Rebecca Simpson' }
         RoutingNumber: {type: string }
         FullAcctNumber: {type: string, example: '32553990146' }
@@ -4576,7 +4576,7 @@ components:
       - SignonRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -4610,7 +4610,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FIDeleteRs: {$ref: '#/components/schemas/FIDeleteRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FIDeleteRsHeader
@@ -4630,7 +4630,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FIDeleteRq: {$ref: '#/components/schemas/FIDeleteRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FIDeleteRqHeader
@@ -4648,7 +4648,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         DocumentDeleteRs: {$ref: '#/components/schemas/DocumentDeleteRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: DocumentDeleteRsHeader
@@ -4669,7 +4669,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         DocumentDeleteRq: {$ref: '#/components/schemas/DocumentDeleteRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: DocumentDeleteRqHeader
@@ -4744,7 +4744,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestAddStsInqRs: {$ref: '#/components/schemas/HarvestAddStsInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestAddStsInqRsHeader
@@ -4807,7 +4807,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         HarvestAddStsInqRq: {$ref: '#/components/schemas/HarvestAddStsInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestAddStsInqRqHeader
@@ -4829,7 +4829,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestAddFetchRs: {$ref: '#/components/schemas/HarvestAddFetchRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestAddFetchRsHeader
@@ -4850,7 +4850,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         HarvestAddFetchRq: {$ref: '#/components/schemas/HarvestAddFetchRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestAddFetchRqHeader
@@ -4870,7 +4870,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HostAcctStsInqRs: {$ref: '#/components/schemas/HostAcctStsInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HostAcctStsInqRsHeader
@@ -4892,7 +4892,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         HostAcctStsInqRq: {$ref: '#/components/schemas/HostAcctStsInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HostAcctStsInqRqHeader
@@ -4907,7 +4907,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
@@ -5009,7 +5009,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         HarvestAddRq: {$ref: '#/components/schemas/HarvestAddReqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestAddRqHeader
@@ -5027,7 +5027,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
@@ -5055,8 +5055,8 @@ components:
           type: array
           items: {$ref: '#/components/schemas/PropertyType' }
         ShowOnDashboard: {type: string, enum: [Yes,No] }
-        CurCode: {type: string, enum: [HKD,HNL,HTG,HUF,IDR,IEP,ILS,INR,IQD,IRR,ISK,ITL,JMD,JOD,JPY,DEM,DJF,DKK,DOP,ECD,ECS,EUR,EEK,EGP,SVC,ETB,FIM,FJD,FKP,FRF,GBP,GHC,GIP,GMD,GNF,GRD,GTQ,GWP,GYD,BGL,BHD,BIF,BMD,BOB,BRL,BSD,BTN,BWP,BYB,BZD,CAD,KHR,KMF,KYD,XAF,XPF,CLP,CNY,COP,CRC,HRK,CZK,CUP,CVE,CYP,LSL,LTL,LUF,LVL,LYD,MAD,MDL,MGF,MKD,MMK,MNT,MOP,MRO,MTL,MUR,MVR,MWK,KES,KRW,KWD,KZT,LAK,LBP,LRD,MXP,MYR,MZM,NGN,NIO,ANG,NLG,NOK,NPR,NZD,OMR,PEN,PGK,PHP,PKR,PLN,PTE,PYG,AED,RUR,RWF,SAR,SBD,SCR,ESP,SDD,SEK,SGD,SIT,SKK,SLL,SRG,STD,ZAR,LKR,SYP,SZL,CHF,TWD,THB,TJR,TMM,TND,TOP,TRL,TTD,TZS,UGX,USD,UYP,UZS,VEB,VND,VUV,WST,YDR,YER,ZMK,ZRN,ZWD,AFA,DZD,ALL,AMD,AOR,ARS,ATS,AUD,AWG,AZM,BAD,BBD,BDT,BEF]}
-        AdvAccess: {type: string, enum: [NONE,SUMMARY,FULL_ACCOUNT] }
+        CurCode: {type: string, enum: [HKD,HNL,HTG,HUF,IDR,IEP,ILS,INR,IQD,IRR,ISK,ITL,JMD,JOD,JPY,DEM,DJF,DKK,DOP,ECD,ECS,EUR,EEK,EGP,SVC,ETB,FIM,FJD,FKP,FRF,GBP,GHC,GIP,GMD,GNF,GRD,GTQ,GWP,GYD,BGL,BHD,BIF,BMD,BOB,BRL,BSD,BTN,BWP,BYB,BZD,CAD,KHR,KMF,KYD,XAF,XPF,CLP,CNY,COP,CRC,HRK,CZK,CUP,CVE,CYP,LSL,LTL,LUF,LVL,LYD,MAD,MDL,MGF,MKD,MMK,MNT,MOP,MRO,MTL,MUR,MVR,MWK,KES,KRW,KWD,KZT,LAK,LBP,LRD,MXP,MYR,MZM,NGN,NIO,ANG,NLG,NOK,NPR,NZD,OMR,PEN,PGK,PHP,PKR,PLN,PTE,PYG,AED,RUR,RWF,SAR,SBD,SCR,ESP,SDD,SEK,SGD,SIT,SKK,SLL,SRG,STD,ZAR,LKR,SYP,SZL,CHF,TWD,THB,TJR,TMM,TND,TOP,TRL,TTD,TZS,UGX,USD,UYP,UZS,VEB,VND,VUV,WST,YDR,YER,ZMK,ZRN,ZWD,AFA,DZD,ALL,AMD,AOR,ARS,ATS,AUD,AWG,AZM,BAD,BBD,BDT,BEF], example: 'USD'}
+        AdvAccess: {type: string, enum: [NONE,SUMMARY,FULL_ACCOUNT], example: 'SUMMARY' }
         UpdateReason: {type: string }
     UserAcctModRqHeader:
       required:
@@ -5065,7 +5065,7 @@ components:
       - UserAcctModRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -5094,7 +5094,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         TaxStatementConsentRs: {$ref: '#/components/schemas/TaxStatementConsentRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: TaxStatementConsentRsHeader
@@ -5117,7 +5117,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         TaxStatementConsentRq: {$ref: '#/components/schemas/TaxStatementConsentRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: TaxStatementConsentRqHeader
@@ -5132,13 +5132,13 @@ components:
       - DownloadTaxStatement
       type: object
       properties:
-        DownloadTaxStatement: {type: string, enum: [enable,disable] }
+        DownloadTaxStatement: {type: string, enum: [enable,disable], example: 'enable' }
     UserOFILoginCredentialsModRsHeader:
       required:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
@@ -5159,7 +5159,7 @@ components:
       - UserOFILoginCredentialsModRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -5180,7 +5180,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: ModHostAcctsRsHeader
@@ -5201,7 +5201,7 @@ components:
       properties:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         ModHostAcctsRq: {$ref: '#/components/schemas/ModHostAcctsRqType' }
       xml:
@@ -5242,7 +5242,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UpdateTxnCategoryRs: {$ref: '#/components/schemas/UpdateTxnCategoryRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: UpdateTxnCategoryRsHeader
@@ -5305,7 +5305,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UpdateTxnCategoryRq: {$ref: '#/components/schemas/UpdateTxnCategoryRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: UpdateTxnCategoryRqHeader
@@ -5329,7 +5329,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         DeleteSubCategoryRs: {$ref: '#/components/schemas/DeleteSubCategoryRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: DeleteSubCategoryRsHeader
@@ -5349,7 +5349,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         DeleteSubCategoryRq: {$ref: '#/components/schemas/DeleteSubCategoryRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: DeleteSubCategoryRqHeader
@@ -5384,7 +5384,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetAddRs: {$ref: '#/components/schemas/BudgetAddRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BudgetAddRsHeader
@@ -5407,7 +5407,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetAddRq: {$ref: '#/components/schemas/BudgetAddRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BudgetAddRqHeader
@@ -5428,7 +5428,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetDeleteRs: {$ref: '#/components/schemas/BudgetDeleteRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BudgetDeleteRsHeader
@@ -5448,7 +5448,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetDeleteRq: {$ref: '#/components/schemas/BudgetDeleteRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BudgetDeleteRqHeader
@@ -5468,7 +5468,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetEditRs: {$ref: '#/components/schemas/BudgetEditRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BudgetEditRsHeader
@@ -5491,7 +5491,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetEditRq: {$ref: '#/components/schemas/BudgetEditRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BudgetEditRqHeader
@@ -5513,7 +5513,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetFindRs: {$ref: '#/components/schemas/BudgetFindRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BudgetFindRsHeader
@@ -5560,7 +5560,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetFindRq: {$ref: '#/components/schemas/BudgetFindRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: BudgetFindRqHeader
@@ -5573,7 +5573,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
@@ -5594,7 +5594,7 @@ components:
       - SignonRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -5628,7 +5628,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
@@ -5649,7 +5649,7 @@ components:
       - SignonRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -5712,7 +5712,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FIMessagesRs: {$ref: '#/components/schemas/FIMessagesRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FIMessagesInfoRsHeader
@@ -5731,7 +5731,7 @@ components:
       properties:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FIMessagesInfoRqHeader
@@ -5746,7 +5746,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalAddRs: {$ref: '#/components/schemas/GoalAddRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: GoalAddRsHeader
@@ -5782,7 +5782,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalAddRq: {$ref: '#/components/schemas/GoalAddRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: GoalAddRqHeader
@@ -5815,7 +5815,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalDeleteRs: {$ref: '#/components/schemas/GoalDelRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: GoalDeleteRsHeader
@@ -5835,7 +5835,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalDeleteRq: {$ref: '#/components/schemas/GoalDelRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: GoalDeleteRqHeader
@@ -5850,7 +5850,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalEditRs: {$ref: '#/components/schemas/GoalEditRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: GoalEditRsHeader
@@ -5872,7 +5872,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalEditRq: {$ref: '#/components/schemas/GoalEditRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: GoalEditRqHeader
@@ -5902,7 +5902,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalFindRs: {$ref: '#/components/schemas/GoalFindRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: GoalFindRsHeader
@@ -5947,7 +5947,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalFindRq: {$ref: '#/components/schemas/GoalFindRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: GoalFindRqHeader
@@ -5966,7 +5966,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestStsInqRs: {$ref: '#/components/schemas/HarvestStsInqRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestStsInqRsHeader
@@ -5990,7 +5990,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         HarvestStsInqRq: {$ref: '#/components/schemas/HarvestStsInqRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestStsInqRqHeader
@@ -6011,7 +6011,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestRs: {$ref: '#/components/schemas/HarvestRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestRsHeader
@@ -6070,7 +6070,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         HarvestRq: {$ref: '#/components/schemas/HarvestRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: HarvestRqHeader
@@ -6114,7 +6114,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FIInfoRs: {$ref: '#/components/schemas/FIInfoRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FIInfoRsHeader
@@ -6183,7 +6183,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FIInfoRq: {$ref: '#/components/schemas/FIInfoRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FIInfoRqHeader
@@ -6234,7 +6234,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FISearchRs: {$ref: '#/components/schemas/FISearchInstRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FISearchRsHeader
@@ -6256,7 +6256,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FISearchRq: {$ref: '#/components/schemas/FISearchInstRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FISearchRqHeader
@@ -6313,7 +6313,7 @@ components:
       properties:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: TxnCategoriesInfoRqHeader
@@ -6322,7 +6322,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
@@ -6406,7 +6406,7 @@ components:
       - UserAddRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -6459,7 +6459,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
@@ -6480,7 +6480,7 @@ components:
       - UserDelRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -6499,7 +6499,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
@@ -6520,7 +6520,7 @@ components:
       - SignonRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -6541,7 +6541,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
@@ -6555,7 +6555,7 @@ components:
       - SignonRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -6567,7 +6567,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
@@ -6588,7 +6588,7 @@ components:
       - UserPasswordModRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -6606,7 +6606,7 @@ components:
       - Status
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
@@ -6627,7 +6627,7 @@ components:
       - UserProfileModRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -6694,7 +6694,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         RTVInfoRs: {$ref: '#/components/schemas/RTVInfoRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: RTVInfoRsHeader
@@ -6728,7 +6728,7 @@ components:
       properties:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: RTVInfoRqHeader
@@ -6742,7 +6742,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AckRTVResultRs: {$ref: '#/components/schemas/AckRTVResultRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AckRTVResultRsHeader
@@ -6759,7 +6759,7 @@ components:
       - SignonRq
       type: object
       properties:
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
@@ -6780,7 +6780,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AdvanceRTVEnableFIRs: {$ref: '#/components/schemas/AdvanceRTVEnableFIRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AdvanceRTVEnableFIRsHeader
@@ -6832,7 +6832,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AdvanceRTVEnableFIRq: {$ref: '#/components/schemas/AdvanceRTVEnableFIRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AdvanceRTVEnableFIRqHeader
@@ -6850,7 +6850,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         RTVTokenRs: {$ref: '#/components/schemas/RTVTokenRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: RTVTokenRsHeader
@@ -6876,7 +6876,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         RTVTokenRq: {$ref: '#/components/schemas/RTVTokenRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: RTVTokenRqHeader
@@ -6904,7 +6904,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FISearchRs: {$ref: '#/components/schemas/FISearchRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FISearchRsHeader
@@ -6953,7 +6953,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FISearchRq: {$ref: '#/components/schemas/FISearchRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: FISearchRqHeader
@@ -6975,7 +6975,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AcctVerificationRs: {$ref: '#/components/schemas/AcctVerificationRsType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AcctVerificationRsHeader
@@ -7003,7 +7003,7 @@ components:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AcctVerificationRq: {$ref: '#/components/schemas/AcctVerificationRqType' }
-        partnerID: {type: integer, example: '5004000' }
+        partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
       xml:
         name: AcctVerificationRqHeader
