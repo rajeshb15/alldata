@@ -2664,13 +2664,9 @@ components:
       - question
       type: object
       properties:
-        questionId:
-          type: integer
-          format: int32
-        question:
-          type: string
-        answer:
-          type: string
+        questionId: {type: integer, format: int32, example: '1'}
+        question: {type: string, example : 'What is yout city of birth'}
+        answer: {type: string, example : 'Sydney'}
     CoverageElementsType:
       required:
       - CoveredElement
@@ -3525,22 +3521,10 @@ components:
     PersonNameType:
       type: object
       properties:
-        LastName:
-          type: string
-          xml:
-            namespace: http://www.cashedge.com/wm
-        FirstName:
-          type: string
-          xml:
-            namespace: http://www.cashedge.com/wm
-        MiddleName:
-          type: string
-          xml:
-            namespace: http://www.cashedge.com/wm
-        DisplayName:
-          type: string
-          xml:
-            namespace: http://www.cashedge.com/wm
+        LastName: {type: string, example: 'Barr'}
+        FirstName: {type: string, example: 'John'}
+        MiddleName: {type: string, example: 'Alva'}
+        DisplayName: {type: string, example: 'John Barr'}
     PlannedAvailabilityChangeType:
       required:
       - nextStatus
@@ -3933,11 +3917,8 @@ components:
       - UserPassword
       type: object
       properties:
-        UserID:
-          type: string
-        HomeID:
-          type: integer
-          format: int64
+        UserID: {type: string, example: 'Newport_client7235afc'}
+        HomeID: {type: integer, format: int64, example: '50120001'}
         UserPassword:
           $ref: '#/components/schemas/UserPasswordSignOnType'
     ContactInfoType:
@@ -3947,8 +3928,7 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/PhoneNumType'
-        EmailAddr:
-          type: string
+        EmailAddr: {type: string, example: 'john.fakebarr@fiserv.com'}
         PostAddr:
           $ref: '#/components/schemas/PostAddrType'
     CreateUserIfNotExistsType:
@@ -4010,16 +3990,13 @@ components:
       - PersonName
       type: object
       properties:
-        NameAddrType:
-          type: string
+        NameAddrType: {type: string, example: 'Customer'}
         PersonName:
           $ref: '#/components/schemas/PersonNameType'
         ContactInfo:
           $ref: '#/components/schemas/ContactInfoType'
-        RegisterDt:
-          type: string
-        LastLoginDt:
-          type: string
+        RegisterDt: {type: string, example: '2020-07-30T12:00:00Z'}
+        LastLoginDt: {type: string, example : '2020-07-30T12:00:00Z'}
         Roles:
           $ref: '#/components/schemas/RolesType'
     PhoneNumType:
@@ -4028,28 +4005,20 @@ components:
       - PhoneType
       type: object
       properties:
-        PhoneType:
-          type: string
-        Phone:
-          type: string
+        PhoneType: {type: string, example: 'EveningPhone'}
+        Phone: {type: string, example: '4085432400'}
     PostAddrType:
       required:
       - Addr1
       - Country
       type: object
       properties:
-        Addr1:
-          type: string
-        Addr2:
-          type: string
-        City:
-          type: string
-        StateProv:
-          type: string
-        PostalCode:
-          type: string
-        Country:
-          type: string
+        Addr1: {type: string, example: '123 Junction Ave'}
+        Addr2: {type: string, example: 'suit #123'}
+        City: {type: string, example: 'Milpitas'}
+        StateProv: {type: string, example: 'California'}
+        PostalCode: {type: string, example: '98048'}
+        Country: {type: string, example: 'USA'}
     PreferenceType:
       required:
       - ParamName
@@ -4078,8 +4047,7 @@ components:
           $ref: '#/components/schemas/UserInfoType'
         SessionInfo:
           $ref: '#/components/schemas/SessionInfoType'
-        GenSessInfo:
-          type: string
+        GenSessInfo: {type: string, example : 'true'}
         Preferences:
           type: array
           items:
@@ -4095,19 +4063,9 @@ components:
     SimulatedUserDetailsType:
       type: object
       properties:
-        IdType:
-          type: string
-          enum:
-          - CEUserID
-          - CEInviteClientID
-          - CEUserLoginName
-          - CEAdvisorLoginName
-          - CEAdvisorID
-        IdValue:
-          type: string
-        HomeID:
-          type: integer
-          format: int64
+        IdType: {type: string, enum: - CEUserID - CEInviteClientID - CEUserLoginName - CEAdvisorLoginName - CEAdvisorID, example: 'CEUserID'}
+        IdValue: {type: string, example : '1610763'}
+        HomeID: {type: integer, format: int64, example : '50120001'}
     UserInfoType:
       required:
       - Role
@@ -4115,22 +4073,13 @@ components:
       - UserPassword
       type: object
       properties:
-        UserID:
-          type: string
-        HomeID:
-          type: integer
-          format: int64
+        UserID: {type: string, example: 'Newport_client7235afc'}
+        HomeID: {type: integer, format: int64, example: '50210001'}
         UserPassword:
           $ref: '#/components/schemas/UserPasswordSignOnType'
         AlldataToken:
           type: string
-        Role:
-          type: string
-          enum:
-          - User
-          - Admin
-          - Advisor
-          - CSR
+        Role:{type: string, enum: - User - Admin - Advisor - CSR, example: 'User'}
         OBOUserID:
           type: string
         CreateUserIfNotExists:
@@ -4141,10 +4090,8 @@ components:
       - CryptVal
       type: object
       properties:
-        CryptType:
-          type: string
-        CryptVal:
-          type: string
+        CryptType: {type: string, example: 'None'}
+        CryptVal: {type: string, example: 'password123'}
     AccountUpdateSummaryRsHeader:
       required:
       - RqUID
@@ -6668,13 +6615,10 @@ components:
       - HarvestAddID
       type: object
       properties:
-        RunId:
-          type: integer
-          format: int32
+        RunId: {type: integer, format: int32, example: '18792974'}
         OAuthRqID:
           type: string
-        HarvestAddID:
-          type: string
+        HarvestAddID: {type: string, example : '34626776314179795a306e6e65337468546233735a413d3d'}
     HarvestAddFetchRsHeader:
       required:
       - Status
