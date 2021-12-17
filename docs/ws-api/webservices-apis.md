@@ -1,3 +1,5 @@
+<!-- TODO : Fix links-->
+
 # User Management Web Services
 
 This chapter lists each User Management API in a table with a resource URL, descriptive information, and a link to Swagger documentation.
@@ -625,353 +627,375 @@ This chapter lists each Account Management API in a table with a resource URL, d
 This chapter lists each Account Harvesting API in a table with a resource URL, descriptive information, and a link to Swagger documentation.
 
 ## updateAccounts
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>updateAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/HarvestAccountData/updateAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API can be used to trigger on
+                demand account harvesting. Typically, all added accounts get harvested in nightly batch mode. If a user (or CSR) wants to see latest account data, partners can call this asynchronous API, poll the harvesting status and,
+                after it completes, refresh the account data for the user.
+                <li>Updates all accounts of a user from list of FIs, all accounts under list of parent CFI IDs, or list of individual accounts</li>
+                <li>Update accounts under a single parent CFI ID after the initial add.</li>
+                <li>RunID and HarvestID returned in the response are required when checking call status.</li>
+                <br>
+                This API also provides for requesting extended transactions history of the accounts on demand (any time) for the clients who opt in for
+                that service. The request should include the ExtendedTrnsDays element with the number of days expected.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Harvest%20Account%20Data%20Management%20Service/updateAccounts">updateAccounts API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | updateAccounts |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/HarvestAccountData/updateAccounts |
-| --- | --- |
-|
-
-Description
-
- | This API can be used to trigger on-demand account harvesting. Typically, all added accounts get harvested in nightly batch mode. If a user (or CSR) wants to see latest account data, partners can call this asynchronous API, poll the harvesting status and, after it completes, refresh the account data for the user.
-- Updates all accounts of a user from list of FIs, all accounts under list of parent CFI IDs, or list of individual accounts
-- Update accounts under a single parent CFI ID after the initial add.
-- RunID and HarvestID returned in the response are required when checking call status.
-
-
-This API also provides for requesting extended transactions history of the accounts on demand (any time) for the clients who opt in for that service. The request should include the ExtendedTrnsDays element with the number of days expected. |
-|
-
-Swagger
-
- | [updateAccounts API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Harvest%20Account%20Data%20Management%20Service/updateAccounts) |
 
 ## getHarvestStatus
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getHarvestStatus</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/HarvestAccountData/getHarvestStatus</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                The API returns the status of the update done in the updateAccounts API. Requires RunID and HarvestID from the updateAccounts response. This API has the IncludeDetail attribute that returns status based on the values
+                passed. The typical values of this tag are &quot;FIStatus&quot; and &quot;AcctStatus.&quot;
+                <li>FIStatus: Returns the status of FIs specified in the updateAccounts API</li>
+                <li>AcctStatus: Returns the status of accounts of FI. If the above values are not specified, API returns the status of all the accounts specified in the updateAccounts API.</li>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Harvest%20Account%20Data%20Management%20Service/getHarvestStatus">getHarvestStatus API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getHarvestStatus |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/HarvestAccountData/getHarvestStatus |
-| --- | --- |
-|
-
-Description
-
- | The API returns the status of the update done in the updateAccounts API. Requires RunID and HarvestID from the updateAccounts response. This API has the IncludeDetail attribute that returns status based on the values passed. The typical values of this tag are &quot;FIStatus&quot; and &quot;AcctStatus.&quot;
-- FIStatus: Returns the status of FIs specified in the updateAccounts API
-- AcctStatus: Returns the status of accounts of FI. If the above values are not specified, API returns the status of all the accounts specified in the updateAccounts API.
- |
-|
-
-Swagger
-
- | [getHarvestStatus API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Harvest%20Account%20Data%20Management%20Service/getHarvestStatus) |
 
 ## getAccountUpdateSummary
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getAccountUpdateSummary</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/Account Data Inquiry Service/getAccountUpdateSummary</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is primarily for clients using widget implementation. After users add accounts using the Add Account widget and the return URL is received from AllData, invoke this API to get the status of accounts update, before invoking the data pull APIs.
+                <br><br>
+                This API returns status of all accounts updated under that CEUserID within the last hour.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountUpdateSummary">getAccountUpdateSummary API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getAccountUpdateSummary |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/Account Data Inquiry Service/getAccountUpdateSummary |
-| --- | --- |
-|
-
-Description
-
- | This API is primarily for clients using widget implementation. After users add accounts using the Add Account widget and the return URL is received from AllData, invoke this API to get the status of accounts update, before invoking the data pull APIs.
-
-This API returns status of all accounts updated under that CEUserID within the last hour. |
-|
-
-Swagger
-
- | [getAccountUpdateSummary API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountUpdateSummary) |
 
 # Account Data Pull APIs
 
 This chapter lists each Account Data Pull API in a table with a resource URL, descriptive information, and a link to Swagger documentation.
 
 ## getAccountsSummary
-
-|
-
-Web Service Name
-
- | getAccountsSummary |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getAccountsSummary |
-| --- | --- |
-|
-
-Description
-
- | This API is used to fetch the account summary information for a specified FI account. |
-|
-
-Swagger
-
- | [getAccountsSummary API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountsSummary) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getAccountsSummary</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getAccountsSummary</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to fetch the account summary information for a specified FI account.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountsSummary">getAccountsSummary API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## getAccountDetails
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getAccountDetails</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getAccountDetails</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API can be used to fetch detail information about one or more FI login accounts of a user.
+                <li>It can be used to retrieve information about one or more login accounts.</li>
+                <li>If no ID is specified, it returns information about all of user&#39;s FI login accounts.</li>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountDetails">getAccountDetails API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getAccountDetails |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getAccountDetails |
-| --- | --- |
-|
-
-Description
-
- | This API can be used to fetch detail information about one or more FI login accounts of a user.
-- It can be used to retrieve information about one or more login accounts.
-- If no ID is specified, it returns information about all of user&#39;s FI login accounts.
- |
-|
-
-Swagger
-
- | [getAccountDetails API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountDetails) |
 
 ## getInvestmentTrans
-
-|
-
-Web Service Name
-
- | getInvestmentTrans |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getInvestmentTrans |
-| --- | --- |
-|
-
-Description
-
- | This API is used to fetch the transactions for an investment account. It returns the transactions for the specified date range. |
-|
-
-Swagger
-
- | [getInvestmentTrans API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentTrans) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getInvestmentTrans</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getInvestmentTrans</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to fetch the transactions for an investment account. It returns the transactions for the specified date range.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentTrans">getInvestmentTrans API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## getCreditCardTrans
-
-|
-
-Web Service Name
-
- | getCreditCardTrans |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getCreditCardTrans |
-| --- | --- |
-|
-
-Description
-
- | This API is used to fetch the transactions for a credit card account. It returns the transactions for the specified date range. |
-|
-
-Swagger
-
- | [getCreditCardTrans API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getCreditCardTrans) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getCreditCardTrans</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getCreditCardTrans</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to fetch the transactions for a credit card account. It returns the transactions for the specified date range.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getCreditCardTrans">getCreditCardTrans API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## getBankingTrans
-
-|
-
-Web Service Name
-
- | getBankingTrans |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getBankingTrans |
-| --- | --- |
-|
-
-Description
-
- | This API is used to fetch the transactions for a banking account. It returns the transactions for the specified date range. |
-|
-
-Swagger
-
- | [getBankingTrans API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getBankingTrans) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getBankingTrans</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getBankingTrans</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to fetch the transactions for a banking account. It returns the transactions for the specified date range.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getBankingTrans">getBankingTrans API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## getOtherAccountTrans
-
-|
-
-Web Service Name
-
- | getOtherAccountTrans |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getOtherAccountTrans |
-| --- | --- |
-|
-
-Description
-
- | This API is used to fetch the transactions for other asset/liability/biller account. It returns the transactions for the specified date range. |
-|
-
-Swagger
-
- | [getOtherAccountTrans API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getOtherAccountTrans) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getOtherAccountTrans</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getOtherAccountTrans</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to fetch the transactions for other asset/liability/biller account. It returns the transactions for the specified date range.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getOtherAccountTrans">getOtherAccountTrans API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## getTransactions
-
-|
-
-Web Service Name
-
- | getTransactions |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getTransactions |
-| --- | --- |
-|
-
-Description
-
- | This API is used for searching for transactions in specified FI login accounts according to specified search criterion.
-
-TrnType can be used to either retrieve debit transactions, credit transactions or both |
-|
-
-Swagger
-
- | [getTransactions API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getTransactions) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getTransactions</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getTransactions</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used for searching for transactions in specified FI login accounts according to specified search criterion.
+                <br><br>
+                TrnType can be used to either retrieve debit transactions, credit transactions or both.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getTransactions">getTransactions API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## getDeletedTrans
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getDeletedTrans</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getDeletedTrans</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to get the deleted transactions of all accounts in the home or by account group with a specified date range and row index of the batch.
+                <br><br>
+                The client/partner accumulating the transaction data in their system
+                uses this API to remove the deleted transactions to avoid duplication of transactions in their system.
+                <br><br>
+                This process is referred to as &quot;transaction deduping&quot; and is performed to keep transaction data in sync between AllData and the FI. It updates the AllData system with any changes found in old transactions posted in the FI source.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getDeletedTrans">getDeletedTrans API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getDeletedTrans |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getDeletedTrans |
-| --- | --- |
-|
-
-Description
-
- | This API is used to get the deleted transactions of all accounts in the home or by account group with a specified date range and row index of the batch.
-
-The client/partner accumulating the transaction data in their system uses this API to remove the deleted transactions to avoid duplication of transactions in their system.
-
-This process is referred to as &quot;transaction deduping&quot; and is performed to keep transaction data in sync between AllData and the FI. It updates the AllData system with any changes found in old transactions posted in the FI source. |
-|
-
-Swagger
-
- | [getDeletedTrans API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getDeletedTrans) |
 
 ## getInvestmentPos
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getInvestmentPos</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getInvestmentPos</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to retrieve investment positions for an investment account.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentPos">getInvestmentPos API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getInvestmentPos |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getInvestmentPos |
-| --- | --- |
-|
-
-Description
-
- | This API is used to retrieve investment positions for an investment account. |
-|
-
-Swagger
-
- | [getInvestmentPos API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentPos) |
 
 ## getEmployerStockOptions
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getEmployerStockOptions</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountDataInq/getEmployerStockOptions</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to retrieve the stock options details of an ESOP account.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getEmployerStockOptions">getEmployerStockOptions API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getEmployerStockOptions |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountDataInq/getEmployerStockOptions |
-| --- | --- |
-|
-
-Description
-
- | This API is used to retrieve the stock options details of an ESOP account. |
-|
-
-Swagger
-
- | [getEmployerStockOptions API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getEmployerStockOptions) |
 
 # Transaction Categorization APIs
 
