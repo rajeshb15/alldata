@@ -213,389 +213,412 @@ This chapter lists each External FI Seed Data API in a table with a resource URL
 
 
 ## searchFinancialInst
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>searchFinancialInstitution</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/SeedDataInq/searchFinancialInst</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                Provide at least three characters to search for FIs. Valid values for &#39;FIInfoRequired&#39; are:
+                <ul>
+                    <li>FIIDInfo - retrieves only IDs</li>
+                    <li>FIIDInfoList - retrieves list of FIs with detail information</li>
+                    <li>FINameInfoList – retrieves list of FIs with just ID and name</li>
+                </ul>
+                <li>By default, this API returns FI IDs.</li>
+                <li>Use the &#39;FISearchSize&#39; parameter to limit the number of result records.</li>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Seeded%20Data%20Inquiry%20Service/searchFinancialInst">searchFinancialInstitution API docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | searchFinancialInstitution |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/SeedDataInq/searchFinancialInst |
-| --- | --- |
-|
-
-Description
-
- | Provide at least three characters to search for FIs. Valid values for &#39;FIInfoRequired&#39; are:
-- FIIDInfo - retrieves only IDs
-- FIIDInfoList - retrieves list of FIs with detail information
-- FINameInfoList – retrieves list of FIs with just ID and name
-
-- By default, this API returns FI IDs.
-- Use the &#39;FISearchSize&#39; parameter to limit the number of result records.
- |
-|
-
-Swagger
-
- | [searchFinancialInstitution API docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Seeded%20Data%20Inquiry%20Service/searchFinancialInst) |
 
 # External FI Messages Web service
 
 This chapter presents the External FI Messages API in a table with a resource URL, descriptive information, and a link to its Swagger documentation.
 
 ## getFIMessageInfo
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getFIMessageInfo</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/FIMessagesInq/getFIMessageInfo</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used fetch the FI Messages (special instructions) connected to the institutions.It returns a collection of all FIs that have custom messages. Partners use this API on a periodic basis to collect FI specific messages and display them to their customers during the login flow.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/FI%20Messages%20Inquiry%20Service/getFIMessageInfo">getFIMessageInfo API docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getFIMessageInfo |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/FIMessagesInq/getFIMessageInfo |
-| --- | --- |
-|
-
-Description
-
- | This API is used fetch the FI Messages (special instructions) connected to the institutions.It returns a collection of all FIs that have custom messages. Partners use this API on a periodic basis to collect FI-specific messages and display them to their customers during the login flow. |
-|
-
-Swagger
-
- | [getFIMessageInfo API docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/FI%20Messages%20Inquiry%20Service/getFIMessageInfo) |
 
 # Account Management Web Services
 
 This chapter lists each Account Management API in a table with a resource URL, descriptive information, and a link to Swagger documentation.
 
 ## initiateAddAccounts
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>initiateAddAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/initiateAddAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is also referred to as InitiateAddAccounts or HarvestAddRequest and is used to add new accounts or add more account to existing parent connection.
+                <li>Requires FI ID, trust mode, and login parameters as an input.</li><br>
+                This request is also used to send in MFA answers using the previously started HarvestID and additional login parameters requested.
+                <li>If FI login parameters such as UserID or password are incorrect, error condition will occur with specific error code.</li>
+                <li>Returns HarvestID (or run ID): Represents the running session at FI and is required while checking status.</li>
+                <li>Returns FILoginAccountID: This identifier uniquely identifies the online login account of the user with an FI.</li>
+                <li>If user tries to add the same login name again, &quot;Account already exists&quot; error (4300) occurs.</li><br>
+                Refer to the [Add Account workflow (OAuth)](#_Add_Account_workflow_1) when invoking this API for OAuth-enabled FIs.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts">initiateAddAccounts API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | initiateAddAccounts |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/initiateAddAccounts |
-| --- | --- |
-|
-
-Description
-
- | This API is also referred to as InitiateAddAccounts or HarvestAddRequest and is used to add new accounts or add more account to existing parent connection.
-- Requires FI ID, trust mode, and login parameters as an input.
-
-
-This request is also used to send in MFA answers using the previously started HarvestID and additional login parameters requested.
-- If FI login parameters such as UserID or password are incorrect, error condition will occur with specific error code.
-- Returns HarvestID (or run ID): Represents the running session at FI and is required while checking status.
-- Returns FILoginAccountID: This identifier uniquely identifies the online login account of the user with an FI.
-- If user tries to add the same login name again, &quot;Account already exists&quot; error (4300) occurs.
-
-
-Refer to the [Add Account workflow (OAuth)](#_Add_Account_workflow_1) when invoking this API for OAuth-enabled FIs. |
-|
-
-Swagger
-
- | [initiateAddAccounts API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts) |
 
 ## getAddAccountStatus
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>initiateAddAccounts</td>
+        </tr>
+        <table>
+            <tbody>
+                <tr>
+                    <td><b>Web Service Name</b></td>
+                    <td>getAddAccountStatus</td>
+                </tr>
+                <tr>
+                    <td><b>Resource URL</b></td>
+                    <td>&lt;FiservWSUrl&gt;/AccountMgmt/getAddAccountStatus</td>
+                </tr>
+                <tr>
+                    <td><b>Description</b></td>
+                    <td>
+                        This API is used to poll the status of InitiateAddAccounts.
+                        <li>Requires HarvestID and RunID from &#39;initiateAddAccounts&#39; response</li>
+                        <li>Response includes status of &quot;completed,&quot; &quot;harvest error,&quot; or &quot;in progress&quot;</li><br>
+                        Check status periodically until service successfully harvests accounts, errors out, or times out.<br><br>
+                        Handle errors such as login failure (301), multi-factor authentication (303), and wrong MFA answer (304) using the HarvestAddRq-AddMoreAccts element.
+                        <br><br>
+                        <b>Note:</b> Additional information is needed in case of MFA.
+                        <br><br>
+                        Refer to the [Add Account workflow (OAuth)](#_Add_Account_workflow_1) when invoking this API for OAuth-enabled FIs.
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Swagger</b></td>
+                    <td>
+                        <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus">getAddAccountStatus API Docs</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | getAddAccountStatus |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/getAddAccountStatus |
-| --- | --- |
-|
-
-Description
-
- | This API is used to poll the status of InitiateAddAccounts.
-- Requires HarvestID and RunID from &#39;initiateAddAccounts&#39; response
-- Response includes status of &quot;completed,&quot; &quot;harvest error,&quot; or &quot;in progress&quot;
-
-
-Check status periodically until service successfully harvests accounts, errors out, or times out.
-
-Handle errors such as login failure (301), multi-factor authentication (303), and wrong MFA answer (304) using the HarvestAddRq-AddMoreAccts element.
-
-**Note:** Additional information is needed in case of MFA.
-
-Refer to the [Add Account workflow (OAuth)](#_Add_Account_workflow_1) when invoking this API for OAuth-enabled FIs. |
-|
-
-Swagger
-
- | [getAddAccountStatus API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus) |
 
 ## getNewAccounts
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>getNewAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/getNewAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is invoked after the initiateAddAccounts request has completed. It returns the list of financial accounts found on the FI website. At this point these accounts are not created in Fiserv database. The basic
+                account information available after login to FI site is harvested, but information such as balance, transactions, and positions may not be available.<br/><br/>
+                This API also includes account ownership information (full account
+                number, account owner name, routing number, and contact information – address, email, and phone number) when clients opt-in for that extended service.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts">getNewAccounts API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
 
-Web Service Name
-
- | getNewAccounts |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/getNewAccounts |
-| --- | --- |
-|
-
-Description
-
- | This API is invoked after the initiateAddAccounts request has completed. It returns the list of financial accounts found on the FI website. At this point these accounts are not created in Fiserv database. The basic account information available after login to FI site is harvested, but information such as balance, transactions, and positions may not be available.
-
-This API also includes account ownership information (full account number, account owner name, routing number, and contact information – address, email, and phone number) when clients opt-in for that extended service. |
-|
-
-Swagger
-
- | [getNewAccounts API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts) |
 
 ## createAccounts
-
-|
-
-Web Service Name
-
- | createAccounts |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/createAccounts |
-| --- | --- |
-|
-
-Description
-
- | User can choose accounts to add within AllData for harvesting.
-
-Fiserv classifies the harvested accounts based on certain account classification rules. The user can either override this classification or provide the classification if not already set.
-
-After successfully adding accounts, call update account APIs to run on-demand harvesting to retrieve account data. |
-|
-
-Swagger
-
- | [createAccounts API docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/createAccounts) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>createAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/createAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                User can choose accounts to add within AllData for harvesting.
+                <br><br>
+                Fiserv classifies the harvested accounts based on certain account classification rules. The user can either override this classification or provide the classification if not already set.
+                <br><br>
+                After successfully adding accounts, call update account APIs to run on demand harvesting to retrieve account data.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/createAccounts">createAccounts API docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## deleteAccounts
-
-|
-
-Web Service Name
-
- | deleteAccounts |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/deleteAccounts |
-| --- | --- |
-|
-
-Description
-
- | This API is used to delete either a parent CFI (FILoginAcctId) or a given financial account.
-- If a parent CFI ID is given, all associated financial accounts are also deleted.
-- All account data including transactions and positions are deleted.
- |
-|
-
-Swagger
-
- | [deleteAccounts API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/deleteAccounts) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>deleteAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/deleteAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to delete either a parent CFI (FILoginAcctId) or a given financial account.
+                <li>If a parent CFI ID is given, all associated financial accounts are also deleted.</li>
+                <li>All account data including transactions and positions are deleted.</li>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/deleteAccounts">deleteAccounts API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## updateAccountCredentials
-
-|
-
-Web Service Name
-
- | updateAccountCredentials |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/updateAccountCredentials |
-| --- | --- |
-|
-
-Description
-
- | This API can be used to update the user credentials information stored within AllData.After updating credentials in AllData, partner should validate the credentials by invoking on-demand account harvesting flow.
-
-**Note:** This API is not applicable for OAuth-enabled FIs. |
-|
-
-Swagger
-
- | [updateAccountCredentials API docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/updateAccountCredentials) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>updateAccountCredentials</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/updateAccountCredentials</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API can be used to update the user credentials information stored within AllData.After updating credentials in AllData, partner should validate the credentials by invoking on-demand account harvesting flow.
+                <br><br>
+                <b>Note:</b> This API is not applicable for OAuth-enabled FIs.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/updateAccountCredentials">updateAccountCredentials API docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## maintainAccount
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>maintainAccount</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/maintainAccount</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to modify nickname at Fiserv, account type, and properties such as retirement status.<br>
+                Provide extended account type while modifying account type.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/maintainAccount">maintainAccount API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | maintainAccount |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/maintainAccount |
-| --- | --- |
-|
-
-Description
-
- | This API is used to modify nickname at Fiserv, account type, and properties such as retirement status.Provide extended account type while modifying account type. |
-|
-
-Swagger
-
- | [maintainAccount API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/maintainAccount) |
 
 ## addOfflineAccount
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>addOfflineAccount</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/ClientMgmt/addOfflineAccount</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to add offline accounts to client. Offline accounts are tangible assets not held in typical financial institutions. Examples of offline accounts are jewelry, automobiles, boats, RVs, rentals, paintings,
+                and heirlooms.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Client%20Management%20Service/addOfflineAccount">addOfflineAccount API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
-|
-
-Web Service Name
-
- | addOfflineAccount |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/ClientMgmt/addOfflineAccount |
-| --- | --- |
-|
-
-Description
-
- | This API is used to add offline accounts to client. Offline accounts are tangible assets not held in typical financial institutions. Examples of offline accounts are jewelry, automobiles, boats, RVs, rentals, paintings, and heirlooms. |
-|
-
-Swagger
-
- | [addOfflineAccount API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Client%20Management%20Service/addOfflineAccount) |
 
 ## updateOfflineAccount
-
-|
-
-Web Service Name
-
- | updateOfflineAccount |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/ClientMgmt/updateOfflineAccount |
-| --- | --- |
-|
-
-Description
-
- | This API is used to modify client offline accounts. |
-|
-
-Swagger
-
- | [updateOfflineAccount API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Client%20Management%20Service/updateOfflineAccount) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>updateOfflineAccount</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/ClientMgmt/updateOfflineAccount</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API is used to modify client offline accounts.
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Client%20Management%20Service/updateOfflineAccount">updateOfflineAccount API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## addUpdateHostAccounts
-
-|
-
-Web Service Name
-
- | addUpdateHostAccounts |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/addUpdateHostAccounts |
-| --- | --- |
-|
-
-Description
-
- | This API used to add and update client banking/credit card accounts from host FIs.
-
-**Add:** Account number, account name, and account type are mandatory elements to add client host accounts. Balance and transaction information are optional elements.
-
-**Update:** The host accounts are identified using either combination of (FIId + AcctNumber) or AcctId in the API request.
-- If the combination of (FIId + AcctNumber) or AcctId matches between the AllData and the API request, the API updates the account attributes (balance, account name, transactions) in AllData.
-- If the combination of (FIId + AcctNumber) or AcctId does not match, the API adds a new host account in the AllData system.
-- The response API will notify the partner about the status of each host account processed as part of the request API.
- |
-|
-
-Swagger
-
- | [addUpdateHostAccounts API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/addUpdateHostAccounts) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>addUpdateHostAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/addUpdateHostAccounts</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API used to add and update client banking/credit card accounts from host FIs.
+                <br><br>
+                <b>Add:</b> Account number, account name, and account type are mandatory elements to add client host accounts. Balance and transaction
+                information are optional elements.
+                <br><br>
+                <b>Update:</b> The host accounts are identified using either combination of (FIId + AcctNumber) or AcctId in the API request.
+                <li>If the combination of (FIId + AcctNumber) or AcctId matches between the AllData and the API request, the API updates the account attributes (balance, account name, transactions) in AllData.</li>
+                <li>If the combination of (FIId + AcctNumber) or AcctId does not match, the API adds a new host account in the AllData system.</li>
+                <li>The response API will notify the partner about the status of each host account processed as part of the request API.</li>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/addUpdateHostAccounts">addUpdateHostAccounts API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 ## HostAccountsStatus
-
-|
-
-Web Service Name
-
- | HostAccountsStatus |
-| --- | --- |
-|
-
-Resource URL
-
- | \&lt;FiservWSUrl\&gt;/AccountMgmt/hostAccountsStatus |
-| --- | --- |
-|
-
-Description
-
- | This API returns the status of host accounts transaction categorization. Possible return values are:
-- InProgress
-- Completed
-- Failure
- |
-|
-
-Swagger
-
- | [hostAccountsStatus API Docs](https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/hostAccountsStatus) |
+<table>
+    <tbody>
+        <tr>
+            <td><b>Web Service Name</b></td>
+            <td>HostAccountsStatus</td>
+        </tr>
+        <tr>
+            <td><b>Resource URL</b></td>
+            <td>&lt;FiservWSUrl&gt;/AccountMgmt/hostAccountsStatus</td>
+        </tr>
+        <tr>
+            <td><b>Description</b></td>
+            <td>
+                This API returns the status of host accounts transaction categorization. Possible return values are:
+                <li>InProgress</li>
+                <li>Completed</li>
+                <li>Failure</li>
+            </td>
+        </tr>
+        <tr>
+            <td><b>Swagger</b></td>
+            <td>
+                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/hostAccountsStatus">hostAccountsStatus API Docs</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 # Account Harvesting APIs
 
