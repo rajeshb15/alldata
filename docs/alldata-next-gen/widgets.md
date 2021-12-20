@@ -537,7 +537,7 @@ If the Account Classification and Confirmation screens are disabled, the widget 
 |---|---|
 | Resource URL  | &lt;FiservWSUrl&gt;/AccountDataInq/getAccountUpdateSummary  |
 | Description  |  This API is used to get the account refresh status after the accounts are added using add accounts widget |
-  | Swagger link  | [getAccountUpdateSummary](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountUpdateSummary)  |
+  | API Explorer Link  | [getAccountUpdateSummary](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountUpdateSummary)  |
 
 ### Frequently Asked Questions
 
