@@ -2,7 +2,7 @@
 
 # User Management Web Services
 
-This chapter lists each User Management API in a table with a resource URL, descriptive information, and a link to Swagger documentation.
+This chapter lists each User Management API in a table with a resource URL, descriptive information, and a link to API Explorer documentation.
 
 ## createUser
 <table>
