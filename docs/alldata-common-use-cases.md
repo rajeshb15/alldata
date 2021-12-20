@@ -242,3 +242,5 @@ All the APIs noted in the above use cases are applicable to PFM since PFM tools 
 Fiserv is a registered trademark of Fiserv, Inc.
 
 Other brands and their products are trademarks or registered trademarks of their respective holders and should be noted as such.
+
+[PDF Version](https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/pdfs/Common%20Agg%20Use%20Cases.pdf)
