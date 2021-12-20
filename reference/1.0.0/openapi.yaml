@@ -2701,7 +2701,7 @@ components:
         AcctType: {type: string, enum: [DDA,CCA,INV,OAA,OLA,LOC,EQU,ILA,INS,BPA,SDA], example: 'SDA' }
         ExtAcctType: {type: string, enum: [ALI,AUT,BPA,CCA,CDA,CDR,CMA,DDA,EQU,ERA,ESP,GIC,ILA,ILC,ILI,ILS,INS,INV,IRA,JWA,LOC,MLA,MMA,MMR,MTF,OAA,OLA,OVD,PAY,PIV,PNK,REA,REC,RTH,RTP,SDA,TLI,ULI,WLI,ESO,VEH,HLT,PAC,LTC,DIS,OLI,LLP,MBL,INT,CBL,SMA], example: 'MMA' }
         TaxDocumentID: {type: string }
-        AvailableBankStatements: {type: string }
+        AvailableBankStatements: {type: string, example: '9-2020' }
         AcctNumber: {type: string, example: '32553990146' }
         AcctTypeId: {type: string, example: '50500105' }
         AcctTypeName: {type: string }
@@ -2843,7 +2843,7 @@ components:
         LastUpdateStatusMsg: {type: string }
         LastUpdateStatusFIMsg: {type: string }
         TaxDocumentID: {type: string }
-        ParentError: {type: boolean }
+        ParentError: {type: boolean, example: 'true' }
         FIInfo: {$ref: '#/components/schemas/FIInfoType' }
         FIUserLoginAcctInfo: {$ref: '#/components/schemas/FIUserLoginAcctInfoType' }
         FIAcctSummary:
@@ -2871,8 +2871,7 @@ components:
         URL:
           type: array
           items: {$ref: '#/components/schemas/URLType' }
-        ReclassificationStatus:
-          type: string
+        ReclassificationStatus: {type: string }
     FetchKeyType:
       required:
       - CryptParamVal
@@ -3028,7 +3027,7 @@ components:
       - ParamVal
       type: object
       properties:
-        ParamName: {type: string, example: '2061053' }
+        ParamName: {type: string, example: 'RetirementStatus' }
         ParamVal: {type: string, example: 'Non Retirement' }
     RealEstateType:
       required:
@@ -3190,19 +3189,21 @@ components:
           description: The specified detail information should be returned in the response. Possible values [FIAcctSummary, InvAcctPosAcctIdentifier]
           items:
             type: string
+            example: 'FIAcctSummary'
             xml:
               name: IncludeDetail
     FILoginAcctListType:
       type: object
       description: List of FI Login Accounts for which the FILoginAcctInfo is to be returned.
       properties:
-        HomeID: {type: integer, format: int64 }
-        UserID: {type: string }
+        HomeID: {type: integer, format: int64, example: '50040001' }
+        UserID: {type: string, example: 'Newport_client7235afc'}
         FILoginAcctId:
           type: array
           items:
             type: integer
             format: int32
+            example: '5585101'
             xml:
               name: FILoginAcctId
     PersonInfoType:
@@ -3284,7 +3285,7 @@ components:
         UserPassword: {$ref: '#/components/schemas/UserPasswordSignOnType' }
         AlldataToken: {type: string }
         Role: {type: string, enum: [User, Admin, Advisor, CSR], example: 'User'}
-        OBOUserID: {type: string }
+        OBOUserID: {type: string, example: 'Newport_client7235afc'}
         CreateUserIfNotExists: {$ref: '#/components/schemas/CreateUserIfNotExistsType' }
     UserPasswordSignOnType:
       required:
@@ -3329,11 +3330,11 @@ components:
       type: object
       properties:
         AcctId: {type: integer, format: int64, example: '5586481' }
-        AcctNickName: {type: string }
+        AcctNickName: {type: string, example: 'Banking' }
         ErrorCode: {type: string }
-        LastUpdateAttempt: {type: string, format: date-time }
-        LastUpdateSuccess: {type: string, format: date-time }
-        LastUpdateStatusCode: {type: string, enum: [SUCCESS, FAILURE, PENDING, TIME_OUT] }
+        LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
+        LastUpdateSuccess: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
+        LastUpdateStatusCode: {type: string, enum: [SUCCESS, FAILURE, PENDING, TIME_OUT], example: 'SUCCESS' }
     FILoginAccountListType:
       type: object
       properties:
@@ -3349,7 +3350,7 @@ components:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         FIId: {type: string, example: '20349' }
         ErrorCode: {type: string }
-        LastUpdateAttempt: {type: string, format: date-time }
+        LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
         FIAccountList: {$ref: '#/components/schemas/FIAccountListType' }
     AccountUpdateSummaryRqHeader:
       required:
@@ -3416,7 +3417,7 @@ components:
       type: object
       properties:
         AcctId: {type: integer, format: int64, example: '5586481' }
-        AvailableBankStatements: {type: string }
+        AvailableBankStatements: {type: string, example: '9-2020' }
     BankStatementInqRsType:
       required:
       - FIAcctsStmtList
@@ -3447,7 +3448,7 @@ components:
       type: object
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
-        FIConsent: {type: string }
+        FIConsent: {type: string, example: 'enabled' }
         AcctBankStmtDetail:
           type: array
           items: {$ref: '#/components/schemas/AcctBankStmtDetailType' }
@@ -3484,17 +3485,17 @@ components:
       - TrnType
       type: object
       properties:
-        TrnID: {type: integer, format: int64 }
+        TrnID: {type: integer, format: int64, example: '10495243' }
         FITrnID: {type: integer, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
-        PostedDt: {type: string, format: date-time }
-        OrigDt: {type: string, format: date-time }
+        PostedDt: {type: string, format: date-time, example: '2020-08-26' }
+        OrigDt: {type: string, format: date-time, example: '2020-09-22' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         Memo: {type: string, example: 'Checking Transaction 1' }
-        CheckNumber: {type: integer, format: int32 }
-        CreatedOnDt: {type: string, format: date-time }
-        Category: {type: string }
-        SubCategory: {type: string }
+        CheckNumber: {type: integer, format: int32, example: '5467' }
+        CreatedOnDt: {type: string, format: date-time, example: '2020-08-26T12:00:00Z' }
+        Category: {type: string, example: 'NA' }
+        SubCategory: {type: string, example: 'NA' }
         MerchantName: {type: string }
         MerchantCategory: {type: string }
         MerchantCode: {type: string }
@@ -3536,16 +3537,16 @@ components:
       - StartDt
       type: object
       properties:
-        StartDt: {type: string, format: date-time }
-        EndDt: {type: string, format: date-time }
+        StartDt: {type: string, format: date-time, example: '2020-01-30' }
+        EndDt: {type: string, format: date-time, example: '2020-08-30' }
     SelRangeDtType:
       required:
       - EndDt
       - StartDt
       type: object
       properties:
-        StartDt: {type: string, format: date-time }
-        EndDt: {type: string, format: date-time }
+        StartDt: {type: string, format: date-time, example: '2020-01-30' }
+        EndDt: {type: string, format: date-time, example: '2020-08-30' }
     SelRangeTrnsType:
       type: object
       properties:
@@ -3638,7 +3639,7 @@ components:
       - BankAcctTrnRec
       type: object
       properties:
-        CEUserID: {type: integer, format: int64 }
+        CEUserID: {type: integer, format: int64, example: '3211375' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         AcctId: {type: integer, format: int64, example: '5586481' }
         BankAcctTrnRec: {$ref: '#/components/schemas/BankAcctTrnRecType' }
@@ -3647,7 +3648,7 @@ components:
       - BankAcctTrnRec
       type: object
       properties:
-        CEUserID: {type: integer, format: int64 }
+        CEUserID: {type: integer, format: int64, example: '2017217' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         AcctId: {type: integer, format: int64, example: '5586481' }
         BankAcctTrnRec: {$ref: '#/components/schemas/BankAcctTrnRecType' }
@@ -3690,24 +3691,24 @@ components:
       - TrnDate
       type: object
       properties:
-        TrnID: {type: integer, format: int64 }
+        TrnID: {type: integer, format: int64, example: '13897448' }
         FITrnID: {type: integer, format: int32 }
         TxnCode: {type: string }
-        TrnDate: {type: string, format: date-time }
-        TrnAction: {type: string }
+        TrnDate: {type: string, format: date-time, example: '2020-09-22' }
+        TrnAction: {type: string, example: 'SYSTEMATIC CONTRIBUTION' }
         NetTrnAmt: {$ref: '#/components/schemas/TransactionAmtType' }
         Commission: {$ref: '#/components/schemas/TransactionAmtType' }
-        Desc: {type: string }
+        Desc: {type: string, example: 'Fidelity Advisor 529 Mid Cap Portfolio - Class c(1166)-SYSTEMATIC CONTRIBUTION' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
         Units: {type: number, format: double, example: '5' }
         UnitPrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        CheckNumber: {type: integer, format: int32 }
+        CheckNumber: {type: integer, format: int32, example: '5467' }
     InvstAcctTrnInfoType:
       required:
       - InvAcctTrnRec
       type: object
       properties:
-        CEUserID: {type: integer, format: int64 }
+        CEUserID: {type: integer, format: int64, example: '2017217' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         AcctId: {type: integer, format: int64, example: '5586481' }
         InvAcctTrnRec: {$ref: '#/components/schemas/InvAcctTrnRecType' }
@@ -3716,7 +3717,7 @@ components:
       - OtherAcctTrnRec
       type: object
       properties:
-        CEUserID: {type: integer, format: int64 }
+        CEUserID: {type: integer, format: int64, example: '2017217' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         AcctId: {type: integer, format: int64, example: '5586481' }
         OtherAcctTrnRec: {$ref: '#/components/schemas/OtherAcctTrnRecType' }
@@ -3727,11 +3728,11 @@ components:
       - TrnType
       type: object
       properties:
-        TrnID: {type: integer,  format: int64 }
+        TrnID: {type: integer, format: int64, example: '10495243' }
         FITrnID: {type: integer, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
-        PostedDt: {type: string, format: date-time }
-        OrigDt: {type: string, format: date-time }
+        PostedDt: {type: string, format: date-time, example: '2020-09-22' }
+        OrigDt: {type: string, format: date-time, example: '2020-09-22' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         Memo: {type: string, example: 'Checking Transaction 1' }
         TrnPrincipal: {type: number, format: double }
@@ -3743,8 +3744,8 @@ components:
       - StartDt
       type: object
       properties:
-        StartDt: {type: string }
-        EndDt: {type: string }
+        StartDt: {type: string, example: '2020-08-25' }
+        EndDt: {type: string, example: '2020-08-30' }
     DeletedTrnInqRqHeader:
       required:
       - DeletedTrnInqRq
@@ -3768,7 +3769,7 @@ components:
       properties:
         SelRangeDt: {$ref: '#/components/schemas/SelectRangeDtType' }
         AcctGroup: {type: string, enum: [Cash,Credit,Investment,OtherBill] }
-        StartRowNum: {type: integer, format: int32 }
+        StartRowNum: {type: integer, format: int32, example: '1' }
     EmployerStockOptionRsHeader:
       required:
       - Status
@@ -3970,7 +3971,7 @@ components:
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         TaxDocumentID: {type: string }
-        FIConsent: {type: string }
+        FIConsent: {type: string, example: 'enabled' }
         AcctTaxDocDetail:
           type: array
           items: {$ref: '#/components/schemas/AcctTaxDocDetailType' }
@@ -6336,7 +6337,7 @@ components:
       type: object
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
-        CEUserID: {type: integer, format: int64 }
+        CEUserID: {type: integer, format: int64, example: '2017217' }
     AdvCEUserIDListType:
       type: object
       properties:
@@ -6373,7 +6374,7 @@ components:
       properties:
         isAlreadyAssigned: {type: boolean }
         InstallID: {type: string }
-        HomeID: {type: integer, format: int64 }
+        HomeID: {type: integer, format: int64, example: '50040001' }
         PartnerID: {type: integer, format: int64 }
         HomeName: {type: string }
         HomeType: {type: string }
@@ -6393,8 +6394,8 @@ components:
       - UserID
       type: object
       properties:
-        UserID: {type: string }
-        HomeID: {type: integer, format: int64 }
+        UserID: {type: string, example: 'Newport_client7235afc'}
+        HomeID: {type: integer, format: int64, example: '50040001' }
         UserPassword: {$ref: '#/components/schemas/UserPasswordType' }
         RoleDetail: {type: string }
         PartnerID: {type: integer, format: int64 }
@@ -6428,10 +6429,10 @@ components:
       - UserID
       type: object
       properties:
-        HomeID: {type: integer, format: int64 }
-        UserID: {type: string }
+        HomeID: {type: integer, format: int64, example: '50040001' }
+        UserID: {type: string, example: 'Newport_client7235afc'}
         AppID: {type: string }
-        CEUserID: {type: integer, format: int64 }
+        CEUserID: {type: integer, format: int64, example: '2017217' }
         PersonInfo: {$ref: '#/components/schemas/PersonInfoType' }
         EntitlementInfo: {$ref: '#/components/schemas/EntitlementInfoType' }
         AdvCEUserIDList: {$ref: '#/components/schemas/AdvCEUserIDListType' }
@@ -6491,8 +6492,8 @@ components:
       - UserID
       type: object
       properties:
-        HomeID: {type: integer, format: int64 }
-        UserID: {type: string }
+        HomeID: {type: integer, format: int64, example: '50040001' }
+        UserID: {type: string, example: 'Newport_client7235afc'}
     UserProfileInqRsHeader:
       required:
       - Status
@@ -6889,7 +6890,7 @@ components:
         FirstName: {type: string }
         LastName: {type: string }
         AcctNumber: {type: string, example: '32553990146' }
-        RTVHomeID: {type: integer, format: int64 }
+        RTVHomeID: {type: integer, format: int64, example: '50040001' }
         MonitoringCode: {type: string }
         AddAccountRetryAttempts: {type: integer, format: int32 }
     FISearchRsHeaderType:
