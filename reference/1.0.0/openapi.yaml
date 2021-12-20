@@ -3538,7 +3538,7 @@ components:
       type: object
       properties:
         StartDt: {type: string, format: date-time, example: '2020-01-30' }
-        EndDt: {type: string, format: date-time, example: '2020-089-30' }
+        EndDt: {type: string, format: date-time, example: '2020-08-30' }
     SelRangeDtType:
       required:
       - EndDt
@@ -3546,7 +3546,7 @@ components:
       type: object
       properties:
         StartDt: {type: string, format: date-time, example: '2020-01-30' }
-        EndDt: {type: string, format: date-time, example: '2020-089-30' }
+        EndDt: {type: string, format: date-time, example: '2020-08-30' }
     SelRangeTrnsType:
       type: object
       properties:
