@@ -35,7 +35,8 @@ This chapter lists each User Management API in a table with a resource URL, desc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/createUser">createUser API docs</a>
+                <!-- <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/createUser">createUser API docs</a> -->
+                <a href="..api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/createUser">createUser API docs</a>
             </td>
         </tr>
     </tbody>
