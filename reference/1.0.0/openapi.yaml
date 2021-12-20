@@ -2700,7 +2700,7 @@ components:
         AcctId: {type: integer, format: int64, example: '5586481' }
         AcctType: {type: string, enum: [DDA,CCA,INV,OAA,OLA,LOC,EQU,ILA,INS,BPA,SDA], example: 'SDA' }
         ExtAcctType: {type: string, enum: [ALI,AUT,BPA,CCA,CDA,CDR,CMA,DDA,EQU,ERA,ESP,GIC,ILA,ILC,ILI,ILS,INS,INV,IRA,JWA,LOC,MLA,MMA,MMR,MTF,OAA,OLA,OVD,PAY,PIV,PNK,REA,REC,RTH,RTP,SDA,TLI,ULI,WLI,ESO,VEH,HLT,PAC,LTC,DIS,OLI,LLP,MBL,INT,CBL,SMA], example: 'MMA' }
-        TaxDocumentID: {type: string }
+        TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
         AvailableBankStatements: {type: string, example: '9-2020' }
         AcctNumber: {type: string, example: '32553990146' }
         AcctTypeId: {type: string, example: '50500105' }
@@ -2722,8 +2722,8 @@ components:
       - ParamVal
       type: object
       properties:
-        ParamName: {type: string, example: '2061053' }
-        ParamVal: {type: string, example: 'Non Retirement' }
+        ParamName: {type: string, example: 'NameAtFI' }
+        ParamVal: {type: string, example: 'FI Account' }
     FIAcctSummaryType:
       required:
       - FIAcctInfo
@@ -2842,7 +2842,7 @@ components:
         UpdateErrorCode: {type: string }
         LastUpdateStatusMsg: {type: string }
         LastUpdateStatusFIMsg: {type: string }
-        TaxDocumentID: {type: string }
+        TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
         ParentError: {type: boolean, example: 'true' }
         FIInfo: {$ref: '#/components/schemas/FIInfoType' }
         FIUserLoginAcctInfo: {$ref: '#/components/schemas/FIUserLoginAcctInfoType' }
@@ -2896,21 +2896,21 @@ components:
       - GrantNo
       type: object
       properties:
-        GrantId: {type: string }
-        GrantNo: {type: string }
-        GrantDt: {type: string, format: date-time }
-        GrantType: {type: string }
+        GrantId: {type: string, example: '301231' }
+        GrantNo: {type: string, example: '0000.23809' }
+        GrantDt: {type: string, format: date-time, example: '2011-02-11' }
+        GrantType: {type: string, example: 'NQO' }
         ExercisePrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        FirstVestDt: {type: string, format: date-time }
-        ExpirationDt: {type: string, format: date-time }
-        SharesGranted: {type: number, format: double }
-        NxtVestDt: {type: string, format: date-time }
-        VestPeriods: {type: integer, format: int32 }
-        VestPeriodsPerYr: {type: integer, format: int32 }
+        FirstVestDt: {type: string, format: date-time, example: '2012-02-11' }
+        ExpirationDt: {type: string, format: date-time, example: '2021-02-11' }
+        SharesGranted: {type: number, format: double, example: '94700.0' }
+        NxtVestDt: {type: string, format: date-time, example: '2012-02-11' }
+        VestPeriods: {type: integer, format: int32, example: '3' }
+        VestPeriodsPerYr: {type: integer, format: int32, example: '1' }
         SharesVested: {type: number, format: double }
         SharesSold: {type: number, format: double }
         SharesAvail: {type: number, format: double }
-        OptionPlan: {type: string }
+        OptionPlan: {type: string, example: 'Awards' }
     GrantsType:
       required:
       - Grant
@@ -2959,7 +2959,7 @@ components:
       type: object
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
-        DtAsOf: {type: string, format: date-time }
+        DtAsOf: {type: string, format: date-time, example: '2020-08-31T12:00:00Z' }
         InvPos:
           type: array
           items: {$ref: '#/components/schemas/InvPosType' }
@@ -2973,7 +2973,7 @@ components:
       - SecPos
       type: object
       properties:
-        PosID: {type: string }
+        PosID: {type: string, example: 'UBvkWKUPO61x0zZvfxWd4g==' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
         SecPos: {$ref: '#/components/schemas/SecPosType' }
     LimitAmountType:
@@ -2999,7 +2999,7 @@ components:
       - SecPos
       type: object
       properties:
-        PosID: {type: string }
+        PosID: {type: string, example: 'UBvkWKUPO61x0zZvfxWd4g==' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
         SecPos: {$ref: '#/components/schemas/SecPosType' }
         ACHIndicator: {type: string }
@@ -3055,8 +3055,8 @@ components:
       - Ticker
       type: object
       properties:
-        Ticker: {type: string, example: 'ABC' }
-        SecDesc: {type: string }
+        Ticker: {type: string, example: 'VWIUX' }
+        SecDesc: {type: string, example: 'VANGUARD INTERMEDIATE TERM TAX' }
         Property: 
           type: array
           items: {$ref: '#/components/schemas/PropertyType' }
@@ -3098,13 +3098,13 @@ components:
     StockOptionType:
       type: object
       properties:
-        Symbol: {type: string }
-        Desc: {type: string }
-        Cusip: {type: string }
+        Symbol: {type: string, example: 'BAC' }
+        Desc: {type: string, example: 'Bank of America' }
+        Cusip: {type: string, example: '060505104' }
         Price: {$ref: '#/components/schemas/TransactionAmtType' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
-        GrantTypeList: {type: string }
-        DtAsOf: {type: string, format: date-time }
+        GrantTypeList: {type: string, example: 'NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU' }
+        DtAsOf: {type: string, format: date-time, example: '2020-08-31T12:00:00Z' }
         Grants: {$ref: '#/components/schemas/GrantsType' }
     TransactionAmtType:
       required:
@@ -3734,10 +3734,10 @@ components:
         PostedDt: {type: string, format: date-time, example: '2020-09-22' }
         OrigDt: {type: string, format: date-time, example: '2020-09-22' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
-        Memo: {type: string, example: 'Checking Transaction 1' }
+        Memo: {type: string, example: 'STARBUCKS STORE 114VICTORVILLE CAUS' }
         TrnPrincipal: {type: number, format: double }
         TrnInterest: {type: number, format: double }
-        CreatedOnDt: {type: string, format: date-time }
+        CreatedOnDt: {type: string, format: date-time, example: '2020-09-22T12:00:00Z' }
     SelectRangeDtType:
       required:
       - EndDt
@@ -3963,14 +3963,14 @@ components:
       type: object
       properties:
         AcctId: {type: integer, format: int64, example: '5586481' }
-        TaxDocumentID: {type: string }
+        TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
     FILoginAcctTaxDocDetailType:
       required:
       - FIConsent
       type: object
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
-        TaxDocumentID: {type: string }
+        TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
         FIConsent: {type: string, example: 'enabled' }
         AcctTaxDocDetail:
           type: array
