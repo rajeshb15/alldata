@@ -98,38 +98,15 @@ The following table lists all valid response status codes for the status aggrega
 | 7611 | Error | Request originated from an invalid IP address | Request originated from unknown (not whitelisted) IP address. | Contact Fiserv to whitelist any new IPs or make the request from whitelisted IPs. |
 | 7613 | Error | Unsupported End Date, is lesser than 5 days from today | EndDt provided in AutoHarvestStsRq is less than 5 days from today. |
 | 7701 | Error | This financial institution requires a multi-factor authentication process that is currently not enabled for this home | The FI requires an image-based multi-factor authentication that is currently not enabled for this home. Please contact Fiserv to enable it. |
- |
+
 
 # Appendix B: Harvester Error Codes
 
 The following table lists and describes error codes returned as partof harvesting.
 
-|
-
-Error code
-
- |
-
-Error
-
- |
-
-Message
-
- |
-
-Description
-
- |
-
-Partner resolution action
-
- |
+|Error code|Error|Message|Description|Partner resolution action|
 | --- | --- | --- | --- | --- |
-| 100 | Internal software error | Internal software error. Please try updating again in a few minutes. | Fiserv tried harvesting information from an institution but could not harvest the information successfully despite getting response from the institution. | Temporary issue: Partner should send HarvestAddRq/HarvestRq again. If it still fails, then it may be a harvesting error. Partner should report the issue to Fiserv after several unsuccessful retries.
-
-These errors could be due to many reasons, such as FI server is busy or FI site is down. Retries usually resolve the problem. |
-| --- | --- | --- | --- | --- |
+| 100 | Internal software error | Internal software error. Please try updating again in a few minutes. | Fiserv tried harvesting information from an institution but could not harvest the information successfully despite getting response from the institution. | Temporary issue: Partner should send HarvestAddRq/HarvestRq again. If it still fails, then it may be a harvesting error. Partner should report the issue to Fiserv after several unsuccessful retries. <br/><br/>These errors could be due to many reasons, such as FI server is busy or FI site is down. Retries usually resolve the problem. |
 | 103 | Nonexistent URL or network failure. | Network failure. Please try updating again in a few minutes. | This is typically caused when there is a change in the hostname of the URL that is being accessed, but sometimes occurs due to temporary issues. | Temporary issue: Partner should send HarvestAddRq/HarvestRq again. If it still fails, then it may be a harvesting error. Partner should report the issue to Fiserv after several unsuccessful retries. |
 | 104 | Time out error | We cannot establish a connection to your financial institution website at this time. Please try updating again in a few minutes. | Fiserv tried to connect to the institution where your account exists and was unable to reach the host institution due to network traffic. This is NOT a session timeout. When we fail to make a connection with the FI site after a few tries, it is classified as 104 error. | Temporary issue: Partner should send HarvestAddRq/HarvestRq again. If it still fails, then it may be a harvesting error. Partner should report the issue to Fiserv after several unsuccessful retries. |
 | 105 | Target server error or server down | We are receiving a message that the institution&#39;s website is temporarily unavailable. We will update the account when the website becomes available | Fiserv tried to connect to the institution where your account exists, and host institution is returning server error. | Temporary Issue - The partner needs to send HarvestAddRq/HarvesRq again. If it still fails, then it may be a harvesting error. Partner should report the issue to Fiserv after several unsuccessful retries. |
@@ -168,11 +145,11 @@ Details of Fiserv image-retrieving URL:
 
 **Prod URL:**
 
-\&lt;img src=&quot;https://\&lt;domain-name\&gt;/downloadMFAimage?imageId=\&lt;ImageID\&gt;&quot;/\&gt;
+&lt;img src=&quot;https://&lt;domain-name&gt;/downloadMFAimage?imageId=&lt;ImageID&gt;&quot;/&gt;
 
 **UAT URL:**
 
-\&lt;img src=&quot;https://aggqa.alldata.Fiserv.com/downloadMFAimage?imageId=\&lt;ImageID\&gt;&quot;/\&gt;
+&lt;img src=&quot;https://aggqa.alldata.Fiserv.com/downloadMFAimage?imageId=&lt;ImageID&gt;&quot;/&gt;
 
 Method Type: Get
 
@@ -197,8 +174,9 @@ The below information should appear in the UI when displaying the Zillow (Zestim
 - &quot;What&#39;s a Zestimate&quot; link: [http://www.zillow.com/zestimate/](http://www.zillow.com/zestimate/)
 
 Sample:
-
-![](RackMultipart20211220-4-s75l01_html_a26dce47b6ce53fe.jpg)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-appendix-c1.png" alt="Figure 1"/>
+</p>
 
 © 2019-2021 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
 
