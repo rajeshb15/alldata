@@ -139,7 +139,7 @@ The following table lists and describes error codes returned as partof harvestin
 
 # Appendix C: MFA Image-Retrieving URL
 
-The partner must call an image-retrieving URL in the \&lt;img src\&gt; HTML tag to get the image from the AllData system. The base64-encoded image is transmitted to the client browser via HTTPS connection to be rendered in the partner UI application. The partner can also request that Fiserv enable transmitting a base64-encoded version of the image directly in the web service response.
+The partner must call an image-retrieving URL in the &lt;img src&gt; HTML tag to get the image from the AllData system. The base64-encoded image is transmitted to the client browser via HTTPS connection to be rendered in the partner UI application. The partner can also request that Fiserv enable transmitting a base64-encoded version of the image directly in the web service response.
 
 Details of Fiserv image-retrieving URL:
 
@@ -149,7 +149,7 @@ Details of Fiserv image-retrieving URL:
 
 **UAT URL:**
 
-&lt;img src=&quot;https://aggqa.alldata.Fiserv.com/downloadMFAimage?imageId=&lt;ImageID&gt;&quot;/&gt;
+&lt;img src=&quot;https://aggqa.alldata.Fiserv.com/downloadMFAimage?imageId=/&lt;ImageID/&gt;/&quot;/&gt;
 
 Method Type: Get
 
