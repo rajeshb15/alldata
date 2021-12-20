@@ -27,7 +27,7 @@ This technique involves collecting customer account data from FI web pages with 
 This diagram shows the high-level architecture and data flow between a partner, AllData, and institutions.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-01.png" alt="Figure 1"/>
+  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-01.png" alt="Figure 1"/>
 </p>
 
 # AllData Service Integration
