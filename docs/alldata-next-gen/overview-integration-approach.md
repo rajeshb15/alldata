@@ -113,7 +113,7 @@ Optional parameters to pass to the widget&#39;s URL through POST parameters are:
 |---|---|
 | Resource URL  | &lt;FiservWSUrl&gt;/UserMgmt/signon  |
 | Description  |  This API will authenticate the user and generate a session token. |
-  | Swagger link  | [signon](../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/signon)  |
+  | API Explorer Link  | [signon](../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/signon)  |
 
 ##### Example URL to invoke Add Accounts widget:
 
