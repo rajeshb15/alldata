@@ -5,8 +5,7 @@
 
 ## Add Accounts Widget
 
-This section describes the workflow and functionality of the Add Accounts widget. The Add Accounts workflow starts with the user selecting the financial institution holding the account(s) and sharing login credentials to allow the system to add the account(s) and aggregate data from the institution. AllData provides two approaches to launching the Add Accounts widget in a partner application: The default method is the user searching for an institution or selecting one from a list of popular FIs. The alternate approach is called &quot;[deep linking](#_Deep_Linking).&quot; 
-<!-- TODO_RUBEN -->
+This section describes the workflow and functionality of the Add Accounts widget. The Add Accounts workflow starts with the user selecting the financial institution holding the account(s) and sharing login credentials to allow the system to add the account(s) and aggregate data from the institution. AllData provides two approaches to launching the Add Accounts widget in a partner application: The default method is the user searching for an institution or selecting one from a list of popular FIs. The alternate approach is called &quot;[deep linking](?path=docs/alldata-next-gen/implementation-approaches.md#deep-linking).&quot;
 
 ### Add Accounts Workflow
 
@@ -62,8 +61,7 @@ If the harvest attempt fails due to a harvest alert, the corresponding alert res
 
 ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-06.png)
 
-If the harvesting process encounters any errors, they will display within the Add Accounts widget. The alert content and workflows are included in [Appendix A – Harvesting Alert Error Resolution Screens](#_Harvesting_Alert_Error). 
-<!-- TODO_RUBEN -->
+If the harvesting process encounters any errors, they will display within the Add Accounts widget. The alert content and workflows are included in [Appendix A – Harvesting Alert Error Resolution Screens](?path=docs/alldata-next-gen/appendices.md#harvesting-alert-error-resolution-screens).
 
 **Add Accounts Screen – Harvesting alert:**
 
@@ -268,7 +266,7 @@ The following table provides the descriptions and default labels for the buttons
 
 ### Offline Account Link
 
-On the initial screen of the Add Accounts widget, there is an option in the popular institutions called **+Add Offline Accounts**. The URL to which this button points is configurable. The property may be passed to the Fiserv application via a pre-configured property or via a parameter in SSO (refer to the [Integration Approaches section](#_Implementation_Approaches) <!-- TODO_RUBEN --> for more information).
+On the initial screen of the Add Accounts widget, there is an option in the popular institutions called **+Add Offline Accounts**. The URL to which this button points is configurable. The property may be passed to the Fiserv application via a pre-configured property or via a parameter in SSO (refer to the [Integration Approaches section](?path=docs/alldata-next-gen/implementation-approaches.md#implementation-approaches) for more information).
 
 
 
@@ -457,295 +455,48 @@ If the FIRequest option isnot enabledforthepartner,the **Request a new instituti
 
 The following table provides an inventory of the primary CSS classes that control the look and formatting of the Add Accounts widget screens:
 
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>CSS class</th>
-            <th>Description</th>
-            <th>CSS parameter and default value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Background color</td>
-            <td>This parameter controls the background color that obscures the main screen when the Add Accounts screen
-                overlays are activated.</td>
-            <td>
-              .wrapper {
-              <br>&nbsp;&nbsp;background: #fff;
-              <br>&nbsp;&nbsp;margin: 15px 0;
-              <br> }
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Widget screen header</td>
-            <td>This parameter controls the font style of the main header of the Add Accounts screen overlays.</td>
-            <td>
-              h1.main {
-              <br>&nbsp;&nbsp;font-size: 20px;
-              <br>&nbsp;&nbsp;font-weight: 600;
-              <br>&nbsp;&nbsp;line-height: 28px;
-              <br>&nbsp;&nbsp;align-items: center;
-              <br>&nbsp;&nbsp;display: flex;
-              <br>&nbsp;&nbsp;color: #333;
-              <br>&nbsp;&nbsp;margin-bottom: 5px;
-              <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Gray color button</td>
-            <td>This parameter controls the color of the button on the Add Accounts screen.</td>
-            <td>
-              .btn-secondary {
-              <br>&nbsp;&nbsp;color: #fff;
-              <br>&nbsp;&nbsp;background-color: #6c757d;
-              <br>&nbsp;&nbsp;border-color: #6c757d;
-              <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Blue color button</td>
-            <td>This parameter controls the color of the button on the Add Accounts screen.</td>
-            <td>
-              .btn-primary {
-              <br>&nbsp;&nbsp;color: #fff;
-              <br>&nbsp;&nbsp;background-color: #007bff;
-              <br>&nbsp;&nbsp;border-color: #007bff;
-            <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Error header</td>
-            <td>This parameter controls the font style of the error header on the Add Accounts screen.</td>
-            <td>
-              .alert_redtext {
-              <br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px; font-size:1.15em;
-              <br>&nbsp;&nbsp;color:#b83320;
-              <br>&nbsp;&nbsp;padding:5px 0 10px 40px; margin:8px 0px;
-              <br>&nbsp;&nbsp;font-weight:bold 
-              <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>6</td>
-            <td>Content background</td>
-            <td>This parameter controls the content background.</td>
-            <td>
-            .accSelect {
-             <br>&nbsp;&nbsp;background: #f1f1f1;
-             <br>&nbsp;&nbsp;font-size: 14px;
-             <br>&nbsp;&nbsp;padding: 15px 20px 5px 20px;
-             <br>&nbsp;&nbsp;border-radius: 5px;
-             <br>&nbsp;&nbsp;-webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android 1.6- */
-             <br>&nbsp;&nbsp;-moz-border-radius: px; /* Firefox 1-3.6 */
-             <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>7</td>
-            <td>Links</td>
-            <td>This parameter controls the font style of the links (for example, offline account, FI URL, and popular
-                FI links).</td>
-            <td>
-              a {color: #007bff;
-              <br>&nbsp;&nbsp;text-decoration: none;
-              <br>&nbsp;&nbsp;background-color: transparent; 
-              <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>8</td>
-            <td>Search results message</td>
-            <td>This parameter controls the panel that displays below the search field.</td>
-            <td>
-              .resultCount {
-              <br>&nbsp;&nbsp;margin: 5px 0 0 0;
-              <br>&nbsp;&nbsp;color: #666; 
-              <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>9</td>
-            <td>Validation error message</td>
-            <td>This parameter controls the panel that displays when there are field level validation errors.</td>
-            <td>
-              .iceMsgsError, .warningtip {
-              <br>&nbsp;&nbsp;list-style: none;
-              <br>&nbsp;&nbsp;color: #000000;
-              <br>&nbsp;&nbsp;background-color: #fcc5c5;
-              <br>&nbsp;&nbsp;padding: 0.75rem 1.25rem;
-              <br>&nbsp;&nbsp;margin-bottom: 1rem;
-              <br>&nbsp;&nbsp;border: 1px solid #e02020;
-              <br>&nbsp;&nbsp;border-radius: 0.25rem;
-              <br>&nbsp;&nbsp;display: block; 
-                <br>}
-            </td>
-        </tr>
-    </tbody>
-</table>
+|#|CSS class|Description|CSS parameter and default value|
+|--- |--- |--- |--- |
+|1|Background color|This parameter controls the background color that obscures the main screen when the Add Accounts screen overlays are activated.|.wrapper {<br>&nbsp;&nbsp;background: #fff;<br>&nbsp;&nbsp;margin: 15px 0;<br>}|
+|2|Widget screen header|This parameter controls the font style of the main header of the Add Accounts screen overlays.|h1.main {<br>&nbsp;&nbsp;font-size: 20px;<br>&nbsp;&nbsp;font-weight: 600;<br>&nbsp;&nbsp;line-height: 28px;<br>&nbsp;&nbsp;align-items: center;<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;color: #333;<br>&nbsp;&nbsp;margin-bottom: 5px;<br>}|
+|3|Gray color button|This parameter controls the color of the button on the Add Accounts screen.|.btn-secondary {<br>&nbsp;&nbsp;color: #fff;<br>&nbsp;&nbsp;background-color: #6c757d;<br>&nbsp;&nbsp;border-color: #6c757d;<br>}|
+|4|Blue color button|This parameter controls the color of the button on the Add Accounts screen.|.btn-primary {<br>&nbsp;&nbsp;color: #fff;<br>&nbsp;&nbsp;background-color: #007bff;<br>&nbsp;&nbsp;border-color: #007bff;<br>}|
+|5|Error header|This parameter controls the font style of the error header on the Add Accounts screen.|.alert_redtext {<br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px;<br>&nbsp;&nbsp;font-size:1.15em;<br>&nbsp;&nbsp;color:#b83320;<br>&nbsp;&nbsp;padding:5px 0 10px 40px;<br>&nbsp;&nbsp;margin:8px 0px;<br>&nbsp;&nbsp;font-weight:bold;<br>}|
+|6|Content background|This parameter controls the content background.|.accSelect {<br>&nbsp;&nbsp;background: #f1f1f1;<br>&nbsp;&nbsp;font-size: 14px;<br>&nbsp;&nbsp;padding: 15px 20px 5px 20px;<br>&nbsp;&nbsp;border-radius: 5px;<br>&nbsp;&nbsp;-webkit-border-radius: 5px; /* Safari 3-4, iOS 1-3.2, Android 1.6- \*/<br>&nbsp;&nbsp;-moz-border-radius: px; /* Firefox 1-3.6 \*/<br>}|
+|7|Links|This parameter controls the font style of the links (for example, offline account, FI URL, and popular FI links).|a {<br>&nbsp;&nbsp;color: #007bff;<br>&nbsp;&nbsp;text-decoration: none;<br>&nbsp;&nbsp;background-color: transparent; <br>}|
+|8|Search results message|This parameter controls the panel that displays below the search field.|.resultCount {<br>&nbsp;&nbsp;margin: 5px 0 0 0;<br>&nbsp;&nbsp;color: #666; <br>}|
+|9|Validation error message|This parameter controls the panel that displays when there are field level validation errors.|.iceMsgsError, .warningtip {<br>&nbsp;&nbsp;list-style: none;<br>&nbsp;&nbsp;color: #000000;<br>&nbsp;&nbsp;background-color: #fcc5c5;<br>&nbsp;&nbsp;padding: 0.75rem 1.25rem;<br>&nbsp;&nbsp;margin-bottom: 1rem;<br>&nbsp;&nbsp;border: 1px solid #e02020;<br>&nbsp;&nbsp;border-radius: 0.25rem;<br>&nbsp;&nbsp;display: block; <br>}|
+
 
 ### Images
 
 All images and material icons in the Add Accounts widget are configurable. The URLs where each of the images are retrieved from are configured in the Widget CSS file.
 
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Default image</th>
-            <th>Description</th>
-            <th>CSS parameter and default values</th>
-            <th>Default size</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png"></img></center></td>
-            <td>Large alert icon</td>
-            <td>
-              .alert_redtext{
-              <br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px; 
-              <br>&nbsp;&nbsp;font-size:1.15em; 
-              <br>&nbsp;&nbsp;color:#b83320; 
-              <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;
-              <br>&nbsp;&nbsp;margin:8px 0px; 
-              <br>&nbsp;&nbsp;font-weight:normal; 
-              <br>}
-            </td>
-            <td>23x23</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png"></img></center></td>
-            <td>Eye icon</td>
-            <td>
-            .eyeIcon {
-            <br>&nbsp;&nbsp;background: #fff;
-            <br>&nbsp;&nbsp;border: 1px solid #bebebe;
-            <br>&nbsp;&nbsp;cursor: pointer;
-            <br>&nbsp;&nbsp;border-left: 0px;
-            <br>}
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png"></img></center></td>
-            <td>Lock icon</td>
-            <td>
-            .urlLink {
-             <br>&nbsp;&nbsp;display: flex;
-             <br>&nbsp;&nbsp;line-height: 24px;
-             <br>&nbsp;&nbsp;margin-bottom: 15px;
-             <br>}
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png"></img></center></td>
-            <td>Close window icon</td>
-            <td>
-              .cboxClose{
-              <br>&nbsp;&nbsp;float:right; 
-              <br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat; 
-              <br>&nbsp;&nbsp;width:8px; 
-              <br>&nbsp;&nbsp;height:8px;
-              <br>&nbsp;&nbsp;display:block;
-              <br>&nbsp;&nbsp;margin:-10px -10px;
-              <br>&nbsp;&nbsp;_margin:5px;
-              <br>&nbsp;&nbsp;cursor: pointer;
-              <br>}
-            </td>
-            <td>10x10</td>
-        </tr>
-    </tbody>
-</table>
+
+|#|Default image|Description|CSS parameter and default values|Default size|
+|--- |--- |--- |--- |--- |
+|1|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png)</center>|Large alert icon|.alert_redtext {<br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px;<br>&nbsp;&nbsp;font-size:1.15em;<br>&nbsp;&nbsp;color:#b83320; <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;<br>&nbsp;&nbsp;margin:8px 0px;<br>&nbsp;&nbsp;font-weight:normal;<br>}|23x23|
+|2|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png)|Eye icon|.eyeIcon {<br>&nbsp;&nbsp;background: #fff;<br>&nbsp;&nbsp;border: 1px solid #bebebe;<br>&nbsp;&nbsp;cursor: pointer;<br>&nbsp;&nbsp;border-left: 0px;<br>}||
+|3|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png)|Lock icon|.urlLink {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;line-height: 24px;<br>&nbsp;&nbsp;margin-bottom: 15px;<br>}||
+|4|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png)|Close window icon|.cboxClose{<br>&nbsp;&nbsp;float:right;<br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat;<br>&nbsp;&nbsp;width:8px;<br>&nbsp;&nbsp;height:8px;<br>&nbsp;&nbsp;display:block;<br>&nbsp;&nbsp;margin:-10px -10px;<br>&nbsp;&nbsp;margin:5px;<br>&nbsp;&nbsp;cursor: pointer;<br>}|10x10|
+
 
 ### Widget Configuration Parameters
 
 The following table provides the possible functionalities configuration which partners can enable or disable in their implementation.
 
-<table>
-    <thead>
-        <tr>
-            <th>Parameter name</th>
-            <th>Description</th>
-            <th>Accepted values</th>
-            <th>Default</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>CSSURL</td>
-            <td>Partner preferred URL for widget specific CSS. This URL is appended at the end of all CE CSS files so
-                that partners can define only the styles they want to override.</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>AddOfflineAccountLink</td>
-            <td>Displays the “Add Offline Account” logo link under popular financial institution list</td>
-            <td>True, False</td>
-            <td>True</td>
-        </tr>
-        <tr>
-            <td>EnableZillow</td>
-            <td>Displays the “Zillow” logo link under popular financial institution list</td>
-            <td>True, False</td>
-            <td>False</td>
-        </tr>
-        <tr>
-            <td>EnableAccountClassification</td>
-            <td>Displays the account classification page</td>
-            <td>True, False</td>
-            <td>True</td>
-        </tr>
-        <tr>
-            <td>EnableAccountConfirmation</td>
-            <td>Displays page for the user to confirm adding all accounts</td>
-            <td>True, False</td>
-            <td>True</td>
-        </tr>
-        <tr>
-            <td>IncludeClassifiedAccounts</td>
-            <td>Includes the all the added accounts (True). Displays only the accounts with classification errors
-                (False) on the Account Classification page</td>
-            <td>True, False</td>
-            <td>True</td>
-        </tr>
-        <tr>
-            <td>addAccount.flow.display. process.step.graphic</td>
-            <td>Includes the Add flow process steps in top right corner of the widget</td>
-            <td>True, False</td>
-            <td>True</td>
-        </tr>
-        <tr>
-            <td>EnableFIRequest</td>
-            <td>Displays “Request a new institutions support” button in case the search results do not return any FI
-            </td>
-            <td>True, False</td>
-            <td>False</td>
-        </tr>
-        <tr>
-            <td>invocation_mode</td>
-            <td>Enables or disables the widget’s “close” (×) button. 
-              <br>•	Pop-up mode: Enables close button
-              <br>•	Embedded mode: Disables close button
-              <br>•	Native app integration: Button is disabled by default
-            </td>
-            <td>embedded, popup</td>
-            <td></td>
-        </tr>
-    </tbody>
-</table>
+|Parameter name|Description|Accepted values|Default|
+|--- |--- |--- |--- |
+|CSSURL|Partner preferred URL for widget specific CSS. This URL is appended at the end of all CE CSS files so that partners can define only the styles they want to override.|||
+|AddOfflineAccountLink|Displays the “Add Offline Account” logo link under popular financial institution list|True, False|True|
+|EnableZillow|Displays the “Zillow” logo link under popular financial institution list|True, False|False|
+|EnableAccountClassification|Displays the account classification page|True, False|True|
+|EnableAccountConfirmation|Displays page for the user to confirm adding all accounts|True, False|True|
+|IncludeClassifiedAccounts|Includes the all the added accounts (True). Displays only the accounts with classification errors (False) on the Account Classification page|True, False|True|
+|addAccount.flow.display. process.step.graphic|Includes the Add flow process steps in top right corner of the widget|True, False|True|
+|EnableFIRequest|Displays “Request a new institutions support” button in case the search results do not return any FI|True, False|False|
+|invocation_mode|Enables or disables the widget’s “close” (×) button. <br><br> • Pop-up mode: Enables close button <br> •	Embedded mode: Disables close button <br> •	Native app integration: Button is disabled by default|embedded, popup||
+
 
 ### Widget Invocation
 
@@ -817,7 +568,7 @@ The Add Accounts widget handles any harvesting errors interactively unless the u
 
 ### Alert Resolution Widget Overview
 
-The Alert Resolution widget allows partners to take advantage of a library of screens that walk users through errors they may encounter during the account harvesting process. If an account is in error, the Alert Resolution widget will identify the correct alert resolution screens to display for the corresponding account. The widget screens will inform the user of the issue preventing aggregation from functioning correctly and guide the user through any steps required to resolve the error. Refer to [Appendix A – Harvesting Alert Error Resolution Screens](#_Appendix_A) <!-- TODO_RUBEN --> for error content and workflows.
+The Alert Resolution widget allows partners to take advantage of a library of screens that walk users through errors they may encounter during the account harvesting process. If an account is in error, the Alert Resolution widget will identify the correct alert resolution screens to display for the corresponding account. The widget screens will inform the user of the issue preventing aggregation from functioning correctly and guide the user through any steps required to resolve the error. Refer to [Appendix A – Harvesting Alert Error Resolution Screens](?path=docs/alldata-next-gen/appendices.md#appendix-a) for error content and workflows.
 
 **Alert Resolution widget:**
 
@@ -853,162 +604,24 @@ When a user attempts to resolve the alert, the partner application will call the
 
 The following table provides an inventory of the primary CSS classes that control the look and formatting of the Alert Resolution widget screens:
 
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>CSS class</th>
-            <th>Description</th>
-            <th>CSS parameter and default value</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Background color</td>
-            <td>This parameter controls the background color that obscures the main screen when the Add Accounts screen
-                overlays are activated.</td>
-            <td>
-              .wrapper {
-              <br>&nbsp;&nbsp;background: #fff;
-              <br>&nbsp;&nbsp;margin: 15px 0;
-              <br> }
-            </td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Widget screen header</td>
-            <td>This parameter controls the font style of the main header of the Add Accounts screen overlays.</td>
-            <td>
-              h1.main {
-              <br>&nbsp;&nbsp;font-size: 20px;
-              <br>&nbsp;&nbsp;font-weight: 600;
-              <br>&nbsp;&nbsp;line-height: 28px;
-              <br>&nbsp;&nbsp;align-items: center;
-              <br>&nbsp;&nbsp;display: flex;
-              <br>&nbsp;&nbsp;color: #333;
-              <br>&nbsp;&nbsp;margin-bottom: 5px;
-              <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Gray color button</td>
-            <td>This parameter controls the color of the button on the Add Accounts screen.</td>
-            <td>
-              .btn-secondary {
-              <br>&nbsp;&nbsp;color: #fff;
-              <br>&nbsp;&nbsp;background-color: #6c757d;
-              <br>&nbsp;&nbsp;border-color: #6c757d;
-              <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Blue color button</td>
-            <td>This parameter controls the color of the button on the Add Accounts screen.</td>
-            <td>
-              .btn-primary {
-              <br>&nbsp;&nbsp;color: #fff;
-              <br>&nbsp;&nbsp;background-color: #007bff;
-              <br>&nbsp;&nbsp;border-color: #007bff;
-            <br>}
-            </td>
-        </tr>
-        <tr>
-            <td>5</td>
-            <td>Error header</td>
-            <td>This parameter controls the font style of the error header on the Add Accounts screen.</td>
-            <td>
-              .alert_redtext {
-              <br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px; font-size:1.15em;
-              <br>&nbsp;&nbsp;color:#b83320;
-              <br>&nbsp;&nbsp;padding:5px 0 10px 40px; margin:8px 0px;
-              <br>&nbsp;&nbsp;font-weight:bold 
-              <br>}
-            </td>
-        </tr>
-    </tbody>
-</table>
+|#|CSS class|Description|CSS parameter and default value|
+|--- |--- |--- |--- |
+|1|Background color|This parameter controls the background color that obscures the main screen when the Add Accounts screen overlays are activated.|.wrapper {<br>&nbsp;&nbsp;background: #fff;<br>&nbsp;&nbsp;margin: 15px 0;<br>}|
+|2|Widget screen header|This parameter controls the font style of the main header of the Add Accounts screen overlays.|h1.main {<br>&nbsp;&nbsp;font-size: 20px;<br>&nbsp;&nbsp;font-weight: 600;<br>&nbsp;&nbsp;line-height: 28px;<br>&nbsp;&nbsp;align-items: center;<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;color: #333;<br>&nbsp;&nbsp;margin-bottom: 5px;<br>}|
+|3|Gray color button|This parameter controls the color of the button on the Add Accounts screen.|.btn-secondary {<br>&nbsp;&nbsp;color: #fff;<br>&nbsp;&nbsp;background-color: #6c757d;<br>&nbsp;&nbsp;border-color: #6c757d;<br>}|
+|4|Blue color button|This parameter controls the color of the button on the Add Accounts screen.|.btn-primary {<br>&nbsp;&nbsp;color: #fff;<br>&nbsp;&nbsp;background-color: #007bff;<br>&nbsp;&nbsp;border-color: #007bff;<br>}|
+|5|Error header|This parameter controls the font style of the error header on the Add Accounts screen.|.alert_redtext {<br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px;<br>&nbsp;&nbsp;font-size:1.15em;<br>&nbsp;&nbsp;color:#b83320;<br>&nbsp;&nbsp;padding:5px 0 10px 40px; <br>&nbsp;&nbsp;margin:8px 0px;<br>&nbsp;&nbsp;font-weight:bold;<br>}|
 
 ### Images
 
 All images and icons in the Alert Resolution widget are configurable. The URLs where each of the images are retrieved from are configured in the Widget CSS file.
 
-<table>
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Default image</th>
-            <th>Description</th>
-            <th>CSS parameter and default values</th>
-            <th>Default size</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png"></img></center></td>
-            <td>Large alert icon</td>
-            <td>
-              .alert_redtext{
-              <br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px; 
-              <br>&nbsp;&nbsp;font-size:1.15em; 
-              <br>&nbsp;&nbsp;color:#b83320; 
-              <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;
-              <br>&nbsp;&nbsp;margin:8px 0px; 
-              <br>&nbsp;&nbsp;font-weight:normal; 
-              <br>}
-            </td>
-            <td>23x23</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png"></img></center></td>
-            <td>Eye icon</td>
-            <td>
-            .eyeIcon {
-            <br>&nbsp;&nbsp;background: #fff;
-            <br>&nbsp;&nbsp;border: 1px solid #bebebe;
-            <br>&nbsp;&nbsp;cursor: pointer;
-            <br>&nbsp;&nbsp;border-left: 0px;
-            <br>}
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png"></img></center></td>
-            <td>Lock icon</td>
-            <td>
-            .urlLink {
-             <br>&nbsp;&nbsp;display: flex;
-             <br>&nbsp;&nbsp;line-height: 24px;
-             <br>&nbsp;&nbsp;margin-bottom: 15px;
-             <br>}
-            </td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png"></img></center></td>
-            <td>Close window icon</td>
-            <td>
-              .cboxClose{
-              <br>&nbsp;&nbsp;float:right; 
-              <br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat; 
-              <br>&nbsp;&nbsp;width:8px; 
-              <br>&nbsp;&nbsp;height:8px;
-              <br>&nbsp;&nbsp;display:block;
-              <br>&nbsp;&nbsp;margin:-10px -10px;
-              <br>&nbsp;&nbsp;_margin:5px;
-              <br>&nbsp;&nbsp;cursor: pointer;
-              <br>}
-            </td>
-            <td>10x10</td>
-        </tr>
-    </tbody>
-</table>
+|#|Default image|Description|CSS parameter and default values|Default size|
+|--- |--- |--- |--- |--- |
+|1|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png)</center>|Large alert icon|.alert_redtext {<br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px;<br>&nbsp;&nbsp;font-size:1.15em;<br>&nbsp;&nbsp;color:#b83320; <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;<br>&nbsp;&nbsp;margin:8px 0px;<br>&nbsp;&nbsp;font-weight:normal;<br>}|23x23|
+|2|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png)|Eye icon|.eyeIcon {<br>&nbsp;&nbsp;background: #fff;<br>&nbsp;&nbsp;border: 1px solid #bebebe;<br>&nbsp;&nbsp;cursor: pointer;<br>&nbsp;&nbsp;border-left: 0px;<br>}||
+|3|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png)|Lock icon|.urlLink {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;line-height: 24px;<br>&nbsp;&nbsp;margin-bottom: 15px;<br>}||
+|4|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png)|Close window icon|.cboxClose{<br>&nbsp;&nbsp;float:right;<br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat;<br>&nbsp;&nbsp;width:8px;<br>&nbsp;&nbsp;height:8px;<br>&nbsp;&nbsp;display:block;<br>&nbsp;&nbsp;margin:-10px -10px;<br>&nbsp;&nbsp;margin:5px;<br>&nbsp;&nbsp;cursor: pointer;<br>}|10x10|
 
 ### Text Configuration via Resource Bundles
 
@@ -1130,8 +743,7 @@ When the **Resolve** button is clicked, a corresponding alert resolution screen 
 
 ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-55.png)
 
-For information on the content and flow of the alert resolution screens, see [Appendix A – Alert Resolution Screens](#_Appendix_A).
-<!-- TODO_RUBEN -->
+For information on the content and flow of the alert resolution screens, see [Appendix A – Alert Resolution Screens](?path=docs/alldata-next-gen/appendices.md#appendix-a).
 
 For alerts that the user can resolve, the action button is labeled &quot;Resolve.&quot; For other alerts, which require Fiserv or FI intervention to resolve, the button label is &quot;View Details.&quot;
 
@@ -1249,39 +861,12 @@ By default, the Your Progress widget shows the progress bar for the user with th
 
 Account categories in the Your Progress widget have three possible states. The following table describes each state and shows the icon that indicates it.
 
-<table>
-    <thead>
-        <tr>
-            <th>Account category state</th>
-            <th>Icon</th>
-            <th>Description</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Undetermined</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-74.png"></img></center></td>
-            <td>Default state of the account categories. This indicates that the user has not added an account of this
-                category and has not indicated that one is unavailable. Account categories in this state are sorted to
-                the top of the module. Clicking the icon or the main text launches the Add Account screens. Clicking the
-                “I Don’t Have One” sub text moves the category into None state.</td>
-        </tr>
-        <tr>
-            <td>Added</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-75.png"></img></center></td>
-            <td>One or more accounts have been added to the account category. Account categories in this state are
-                sorted behind the Undetermined account categories. Clicking the “Add Another” sub text launches the Add
-                Account screens.</td>
-        </tr>
-        <tr>
-            <td>None</td>
-            <td><center><img src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-76.png"></img></center></td>
-            <td>User has indicated that they do not own accounts in this category. Progress for the user is increased as
-                if an account has been added in this category. Account categories in this state are sorted to the bottom
-                of the Your Progress widget. Clicking the Add One link launches the Add Account screens.</td>
-        </tr>
-    </tbody>
-</table>
+|Account category state|Icon|Description|
+|--- |--- |--- |
+|Undetermined|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-74.png)</center>|Default state of the account categories. This indicates that the user has not added an account of this category and has not indicated that one is unavailable. Account categories in this state are sorted to the top of the module. Clicking the icon or the main text launches the Add Account screens. Clicking the “I Don’t Have One” sub text moves the category into None state.|
+|Added|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-75.png)</center>|One or more accounts have been added to the account category. Account categories in this state are sorted behind the Undetermined account categories. Clicking the “Add Another” sub text launches the Add Account screens.|
+|None|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-76.png)</center>|User has indicated that they do not own accounts in this category. Progress for the user is increased as if an account has been added in this category. Account categories in this state are sorted to the bottom of the Your Progress widget. Clicking the Add One link launches the Add Account screens.|
+
 
 The standard profile of progress categories is configurable at the home level. A variable number of categories can be configured for a home. For each category, a variable number of extended account types or instruments can be assigned. When a user adds an account, the application identifies the extended account type or instrument of the new account to determine which category it belongs to. If an account has an extended account type and instrument type assigned, the instrument type takes precedence in determining the account category.
 
@@ -1442,4 +1027,4 @@ This document has been created by Fiserv and is classified **Fiserv Confidential
 <br>
 <br>
 
-Links: [Overview](?path=docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=docs/alldata-next-gen/widgets.md)
+Links: [Overview](?path=docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=docs/alldata-next-gen/widgets.md), [Implementation Approaches](?path=docs/alldata-next-gen/implementation-approaches.md), [Appendices](?path=docs/alldata-next-gen/appendices.md)
