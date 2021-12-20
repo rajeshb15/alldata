@@ -3,12 +3,6 @@
 
 <br>
 
-
-**Table of Contents:**
-1. <u>[Overview](?path=docs/alldata-next-gen/overview-integration-approach.md)</u>
-2. <u>[Widgets](?path=docs/alldata-next-gen/widgets.md)</u>
-
-
 ## Appendix A
 
 ### Harvesting Alert Error Resolution Screens
