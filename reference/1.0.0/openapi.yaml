@@ -2626,7 +2626,7 @@ components:
       type: object
       properties:
         questionId: {type: integer, format: int32, example: '1'}
-        question: {type: string, example : 'What is yout city of birth'}
+        question: {type: string, example : 'What is your city of birth'}
         answer: {type: string, example : 'Sydney'}
     CoverageElementsType:
       required:
@@ -2866,7 +2866,7 @@ components:
       properties:
         TrustMode: {type: string, enum: [High,Medium,Low,Offline], example: 'High' }
         ClassifiedStatus: {type: string, enum: [Classified,Pending], example: 'Classified' }
-        AcctHarvestStatus: {type: string, enum: [Enabled,Disabled] }
+        AcctHarvestStatus: {type: string, enum: [Enabled,Disabled], example: 'Enabled' }
         AcctDiscoveryStatus: {type: string, enum: [Discovered,AsIs] }
         URL:
           type: array
@@ -3125,7 +3125,7 @@ components:
     UserContactInfoType:
       type: object
       properties:
-        Phone: {type: string }
+        Phone: {type: string, example: '4085432111' }
         Email: {type: string, example: 'mycontact@hello.com' }
         Address: {type: string }
     UserContactType:
@@ -3149,7 +3149,7 @@ components:
       - UserPassword
       type: object
       properties:
-        UserID: {type: string, example: 'Newport_client7235afc'}
+        UserID: {type: string, example: 'Newport_client7777'}
         HomeID: {type: integer, format: int64, example: '50040001'}
         UserPassword: {$ref: '#/components/schemas/UserPasswordSignOnType' }
     ContactInfoType:
@@ -4287,7 +4287,7 @@ components:
     addUpdateFILoginHostAcctRsType:
       type: object
       properties:
-        HostAcctStatusID: {type: integer, format: int32 }
+        HostAcctStatusID: {type: integer, format: int32, example: '7000' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         fihostAcctIds:
           type: array
@@ -4536,9 +4536,9 @@ components:
         AcctTypeId: {type: string, example: '50500105' }
         Misc: {type: string }
         CurCode: {type: string, example: 'USD' }
-        AccountOwnerShip: {type: string }
-        Instrument: {type: string }
-        RetirementStatus: {type: string }
+        AccountOwnerShip: {type: string, example: 'Individual' }
+        Instrument: {type: string, example: 'N/A' }
+        RetirementStatus: {type: string, example: 'Non Retirement' }
         AdvAccess: {type: string, enum: [NONE,SUMMARY,FULL_ACCOUNT], example: 'SUMMARY' }
         AcctOwnerName: {type: string, example: 'Rebecca Simpson' }
         RoutingNumber: {type: string }
@@ -4879,8 +4879,8 @@ components:
       type: object
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
-        HostAcctStatusID: {type: string, example: '84594505' }
-        HostAcctStatus: {type: string }
+        HostAcctStatusID: {type: string, example: '7000' }
+        HostAcctStatus: {type: string, example: 'Completed' }
     HostAcctStsInqRqHeader:
       required:
       - HostAcctStsInqRq
@@ -4945,8 +4945,8 @@ components:
       - ParamVal
       type: object
       properties:
-        ParamName: {type: string, example: '2061053' }
-        ParamVal: {type: string, example: 'Non Retirement' }
+        ParamName: {type: string }
+        ParamVal: {type: string }
         ParamType: {type: string }
     OAuthRqParamsType:
       required:
@@ -4973,7 +4973,7 @@ components:
       properties:
         FIId: {type: string, example: '20349' }
         TrustMode: {type: string, enum: [High,Medium,Low,Offline], example: 'High' }
-        UserID: {type: string }
+        UserID: {type: string, example: 'Newport_client7235afc' }
         UserPassword: {$ref: '#/components/schemas/UserPasswordType' }
         FILoginParamList: {$ref: '#/components/schemas/FILoginParamListType' }
         PartnerAppID: {type: string }
@@ -5619,9 +5619,9 @@ components:
           type: array
           items: {$ref: '#/components/schemas/AcctBalType' }
         AcctTypeId: {type: string, example: '50500105' }
-        AccountOwnerShip: {type: string }
-        Instrument: {type: string }
-        RetirementStatus: {type: string }
+        AccountOwnerShip: {type: string, example: 'Individual' }
+        Instrument: {type: string, example: 'N/A' }
+        RetirementStatus: {type: string, example: 'Non Retirement' }
     OfflineAcctModRsHeader:
       required:
       - Status
@@ -5673,9 +5673,9 @@ components:
           type: array
           items: {$ref: '#/components/schemas/AcctBalType' }
         AcctTypeId: {type: string, example: '50500105' }
-        AccountOwnerShip: {type: string }
-        Instrument: {type: string }
-        RetirementStatus: {type: string }
+        AccountOwnerShip: {type: string, example: 'Individual' }
+        Instrument: {type: string, example: 'N/A' }
+        RetirementStatus: {type: string, example: 'Non Retirement' }
     FIMessageInfoType:
       type: object
       properties:
