@@ -53,7 +53,6 @@ The following table lists all valid response status codes for the status aggrega
 | 4370 | Error | Invalid account classification attributes. | The account attributes combination required for account classification is invalid. <li>Instrument</li> <li>AccountOwnership</li> <li>RetirementStatus</li>| Please contact us with CEUserID and timestamp. |
 | 4390 | Error | Invalid combination of FILoginAcctId and HarvestAddFetch(s) | Data contained in HarvestAddFetchAcctList does not match the FILoginAcctId. Especially created for the HarvestCreateAcctsRq. | Confirm the FILoginAcctId sent in the request is correct and consistent through the harvest add flow. |
 | 4410 | Error | Invalid FIId | The FIId provided is not supported or does not exist in the database or the number provided is null or non-numerical. |
- |
 | 4420 | Error | Count of Accounts is high for this LoginAcctId | The number of accounts eligible for data pull submitted in AdvFILoginAcctInqRq is greater than the configured value. |
 | 4430 | Error | No accounts found or accounts not eligible for update | The query criteria did not match with any accounts in the database eligible for update. | The updateAccounts API is invoked for a user with no eligible accounts to update. That is, all of the user&#39;s accounts have invalid credentials or they exist under suspended FIs.Confirm that the user has eligible accounts for update. |
 | 4440 | Error | Duration is more than 3 days | The maximum duration allowed for deleted transactions API is three days. |
