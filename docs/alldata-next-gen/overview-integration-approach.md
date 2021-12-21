@@ -54,7 +54,7 @@ The SAML 2.0 artifact must contain the following attributes to sign on the user 
 
 The other optional attributes partner can send are:
 
-- **fi\_id:** Required for add more accounts – This ID represents the FI the user has account with and is available when pulling the FI data using the _getFinancialInstInfo_ API. This parameter is required to add a new institution in a deep linking implementation. (See [Deep Linking](?path=docs/alldata-next-gen/implementation-approaches.md#deep-linking))
+- **fi\_id:** Required for add more accounts – This ID represents the FI the user has account with and is available when pulling the FI data using the _getFinancialInstInfo_ API. This parameter is required to add a new institution in a deep linking implementation. (See [Deep Linking](?path=/docs/alldata-next-gen/implementation-approaches.md#deep-linking))
 - **login\_acct\_id:** Required for error resolution and add more accounts – This ID represents the user&#39;s login account the institution. This information is available using the _getAccountDetails_ API.
 - **acct\_id:** Required for error resolution – This ID represents the user&#39;s account with the institution.
 - **return\_url:** Partner preferred URL to return control back after completion of action in the widget – Refer to individual widget documentation to find out what parameters are sent back on this URL invocation.
@@ -96,7 +96,7 @@ Please note:
 
 Optional parameters to pass to the widget&#39;s URL through POST parameters are:
 
-- **fi\_id:** Required to add more accounts – This ID represents the FI where the user has an account and is available when pulling the institution data with the _getFinancialInstInfo_ API. This parameter is required to add a new institution in a deep linking implementation. (See [Deep Linking](?path=docs/alldata-next-gen/implementation-approaches.md#deep-linking) section.)
+- **fi\_id:** Required to add more accounts – This ID represents the FI where the user has an account and is available when pulling the institution data with the _getFinancialInstInfo_ API. This parameter is required to add a new institution in a deep linking implementation. (See [Deep Linking](?path=/docs/alldata-next-gen/implementation-approaches.md#deep-linking) section.)
 - **login\_acct\_id:** Required for error resolution and to add more accounts – This ID represents the login account the user has with the FI. This information is available using the _getAccountDetails_ API.
 - **acct\_id:** Required for error resolution – This ID represents the account the user has with the FI.
 - **return\_url:** Partner preferred URL to return control back – Refer to individual widget documentation for the parameters sent back on this URL invocation.
@@ -169,4 +169,4 @@ This document has been created by Fiserv and is classified **Fiserv Confidential
 <br>
 <br>
 
-Links: [Overview](?path=docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=docs/alldata-next-gen/widgets.md), [Implementation Approaches](?path=docs/alldata-next-gen/implementation-approaches.md), [Appendices](?path=docs/alldata-next-gen/appendices.md)
+Links: [Overview](?path=/docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=/docs/alldata-next-gen/widgets.md), [Implementation Approaches](?path=/docs/alldata-next-gen/implementation-approaches.md), [Appendices](?path=/docs/alldata-next-gen/appendices.md)

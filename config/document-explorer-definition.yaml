@@ -29,13 +29,13 @@
 ################################################################################
 - sections:
   - title: Add Account
-    link: docs/add-account.md
+    link: /docs/add-account.md
 - sections:
   - title: AllData WS API
-    link: docs/alldata-ws-api.md
+    link: /docs/alldata-ws-api.md
 - sections:
   - title: AllData Next-Gen
-    link: docs/alldata-next-gen.md
+    link: /docs/alldata-next-gen.md
 - sections:
   - title: AllData Common Use Cases API Solution
-    link: docs/alldata-common-use-cases.md
+    link: /docs/alldata-common-use-cases.md
