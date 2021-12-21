@@ -2776,11 +2776,11 @@ components:
       - FIName
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
-        FIName: {type: string }
-        Country: {type: string }
-        FIHarvestStatus: {type: string, enum: [Enabled, Disabled] }
-        FICrawlable: {type: string, enum: [Enabled, Disabled, WatchList] }
+        FIId: {type: string, example: '5586467' }
+        FIName: {type: string, example: 'CashEdgeBank - Retail MFA' }
+        Country: {type: string, example: 'US' }
+        FIHarvestStatus: {type: string, enum: [Enabled, Disabled], example: 'Enabled' }
+        FICrawlable: {type: string, enum: [Enabled, Disabled, WatchList], example: 'Enabled' }
         IsOAuthFI: {type: string }
         IsADCFI: {type: string }
         FIAvailabilityStatusId: {type: string }
@@ -3081,9 +3081,9 @@ components:
         CEUserID: {type: integer, format: int64, example: '3752308'}
         SessInfo: {type: string, example: '6e4d6b34476938575a4357654d6f6c79546f366870673d3d'}
         Roles: {$ref: '#/components/schemas/RolesType' }
-        ResetPasswordRequired: {type: string, example: 'false' }
-        SecurityQuesSetUpRequired: {type: string, example: 'false' }
-        PasswordExpired: {type: string, example: 'false' }
+        ResetPasswordRequired: {type: string, example: 'No' }
+        SecurityQuesSetUpRequired: {type: string, example: 'No' }
+        PasswordExpired: {type: string, example: 'No' }
         LastSuccessfullLogin: {type: string, format: date-time, example: '2020-08-31T12:00:00Z'}
         MFAQuestions: {$ref: '#/components/schemas/MFAQuestionType' }
     StatusType:
@@ -3348,7 +3348,7 @@ components:
       type: object
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, example: '505003' }
         ErrorCode: {type: string }
         LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
         FIAccountList: {$ref: '#/components/schemas/FIAccountListType' }
@@ -3465,7 +3465,7 @@ components:
       - UserConsent
       type: object
       properties:
-        UserConsent: {type: string }
+        UserConsent: {type: string, example: 'enabled' }
     BankStatementRqHeader:
       required:
       - RqUID
@@ -3491,7 +3491,7 @@ components:
         PostedDt: {type: string, format: date-time, example: '2020-08-26' }
         OrigDt: {type: string, format: date-time, example: '2020-09-22' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
-        Memo: {type: string, example: 'Checking Transaction 1' }
+        Memo: {type: string, example: 'ABC SUPPLY 638 10210 HIGHWAY 78 LADSON SCUS' }
         CheckNumber: {type: integer, format: int32, example: '5467' }
         CreatedOnDt: {type: string, format: date-time, example: '2020-08-26T12:00:00Z' }
         Category: {type: string, example: 'NA' }
@@ -3537,16 +3537,16 @@ components:
       - StartDt
       type: object
       properties:
-        StartDt: {type: string, format: date-time, example: '2020-01-30' }
-        EndDt: {type: string, format: date-time, example: '2020-08-30' }
+        StartDt: {type: string, format: date-time, example: '2020-01-30T00:00:00Z' }
+        EndDt: {type: string, format: date-time, example: '2020-08-30T00:00:00Z' }
     SelRangeDtType:
       required:
       - EndDt
       - StartDt
       type: object
       properties:
-        StartDt: {type: string, format: date-time, example: '2020-01-30' }
-        EndDt: {type: string, format: date-time, example: '2020-08-30' }
+        StartDt: {type: string, format: date-time, example: '2020-01-30T00:00:00Z' }
+        EndDt: {type: string, format: date-time, example: '2020-08-30T00:00:00Z' }
     SelRangeTrnsType:
       type: object
       properties:
@@ -3744,8 +3744,8 @@ components:
       - StartDt
       type: object
       properties:
-        StartDt: {type: string, example: '2020-08-25' }
-        EndDt: {type: string, example: '2020-08-30' }
+        StartDt: {type: string, example: '2020-08-25T00:00:00Z' }
+        EndDt: {type: string, example: '2020-08-30T00:00:00Z' }
     DeletedTrnInqRqHeader:
       required:
       - DeletedTrnInqRq
@@ -4011,7 +4011,7 @@ components:
       - UserConsent
       type: object
       properties:
-        UserConsent: {type: string }
+        UserConsent: {type: string, example: 'enabled' }
     TaxDocumentInqRqHeader:
       required:
       - RqUID
@@ -4173,7 +4173,7 @@ components:
       - FIId
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, example: '505003' }
         AcctNumber: {type: string, example: '32553990146' }
     FIHostAcctIdsType:
       required:
@@ -4200,7 +4200,7 @@ components:
       - FIUserLoginHostAcctInfo
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, example: '505003' }
         FIUserLoginHostAcctInfo: {$ref: '#/components/schemas/FIUserLoginHostAcctInfoType' }
         FIHostAcctSummary:
           type: array
@@ -4257,7 +4257,7 @@ components:
       - FIHostAcctSummary
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, example: '505003' }
         FIHostAcctSummary:
           type: array
           items: {$ref: '#/components/schemas/FIHostAcctSummaryType' }
@@ -4526,7 +4526,7 @@ components:
       - FIId
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, example: '505003' }
         AcctNumber: {type: string, example: '32553990146' }
         FIAcctName:
           type: array
@@ -4767,7 +4767,7 @@ components:
       type: object
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
-        HarvestRqStatusType: {type: string, enum: [Initiated,InProgress,Completed,TimeOut,Failure,In Progress ...], example: 'Completed' }
+        HarvestRqStatusType: {type: string, enum: [Initiated,InProgress,Completed,TimeOut,Failure,In Progress ...]}
         HarvestAcctSts:
           type: array
           items: {$ref: '#/components/schemas/HarvestAcctStsType' }
@@ -5047,7 +5047,7 @@ components:
       - FIId
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, example: '505003' }
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
         FIAcctName: {$ref: '#/components/schemas/FIAcctNameType' }
         AcctTypeId: {type: string, example: '50500105' }
