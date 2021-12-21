@@ -1,6 +1,6 @@
 # AllData® Next-Gen Widgets Integration Guide
 
-This document covers ways to speed implementation by leveraging AllData widgets.
+This document covers ways to speed up implementation by leveraging AllData widgets.
 
 <br>
 
