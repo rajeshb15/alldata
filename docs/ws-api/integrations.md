@@ -139,17 +139,17 @@ Partners use the following steps to add new accounts without multi-factor authen
 
 This step initiates the process of adding external accounts. This request triggers a harvesting request using HarvestAddRq with FI login parameters (username/password) or FILoginAcctId. AllData connects to the FI website and harvests account information. Refer to [Account Management Web Services](./webservices-apis.md#initiateaddaccounts) for the details of the API.
 
-1. **getAddAccountStatus**
+2. **getAddAccountStatus**
 
 Invoke this API after the initiateAddAccounts request has started. It returns the status of InitiateAddAccounts. Invoke this API at a periodic interval to check the status. Refer to [Account Management Web Services](./webservices-apis.md#getaddaccountstatus) for the details of the API.
 
-1. **getNewAccounts**
+3. **getNewAccounts**
 
 Invoke this API after the initiateAddAccounts request has completed. It returns the list of financial accounts found on the FI website. Currently these accounts are not created in the AllData system. Refer to [Account Management Web Services](./webservices-apis.md#getnewaccounts) for the details of the API.
 
-1. **createAccounts**
+4. **createAccounts**
 
-Invoke this API to create the accounts in AllData system. Fiserv classifies the harvested accounts based on certain account classification rules. The user can either override this classification or provide the classification if not already set. After successfully adding accounts the partner must call update account APIs to run on-demand harvesting to retrieve account data. Refer to [Account Management Web Services](./webservices-apis.md#getnewaccounts) for API details. The following figure depicts the typical non-MFA Add Account workflow.
+Invoke this API to create the accounts in AllData system. Fiserv classifies the harvested accounts based on certain account classification rules. The user can either override this classification or provide the classification if not already set. After successfully adding accounts the partner must call update account APIs to run on-demand harvesting to retrieve account data. Refer to [Account Management Web Services](./webservices-apis.md#createaccounts) for API details. The following figure depicts the typical non-MFA Add Account workflow.
 
 <p align="center">
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-05.png" alt="Figure 5"/>
@@ -176,7 +176,7 @@ The following are the changes the partner will implement for image-based MFA.
 </p>
 
 
-2. The partner calls a URL with the image ID generated in the previous step. The base64-encoded image is transmitted to the client browser using the HTTPS connection. See [Appendix C: MFA Image-Retrieving URL](#_Appendix_C:_MFA) for the URL details. After decoding the payload, handle downloaded images in the Portable Network Graphics (.png) format.
+1. The partner calls a URL with the image ID generated in the previous step. The base64-encoded image is transmitted to the client browser using the HTTPS connection. See [Appendix C: MFA Image-Retrieving URL](./appendices.md#appendix-c-mfa-image-retrieving-url) for the URL details. After decoding the payload, handle downloaded images in the Portable Network Graphics (.png) format.
 
 **Note:** AllData provides an additional option to the partner to get the base64-encoded image in the HarvestAddStsInqRs or HarvestStsInqRs in lieu of image ID. Partners must contact the AllData team to turn on the property to send the actual image as part of the API request.
 
@@ -248,20 +248,20 @@ The FIInfo is enhanced with a new element (HasCardData) to help the partner dete
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-13.png" alt="Figure 13"/>
 </p>
 
-1. **GetWMAccessKey**
+2. **GetWMAccessKey**
 
-Partners must call a **GetWMAccessKey** web service to generate the WMAccessKey. Refer to the [Miscellaneous chapter](#_GetWMAccessKey) for the details of this web service.
+Partners must call a **GetWMAccessKey** web service to generate the WMAccessKey. Refer to the [Miscellaneous chapter](./webservices-apis.md#getwmaccesskey) for the details of this web service.
 
   1. Partners should not send card information to AllData web services system.
   2. Partners must send card info to Fiserv PCI system and get token to use in place of card number.
   3. The Fiserv PCI system requires the WMAccessKey for access.
   4. The WMAccessKey is valid for 15 minutes.
 
-1. **CardToken**
+3. **CardToken**
 
 Partners call a URL with the WMAccessKey generated in the previous step along with the &quot;CardInfo&quot; to generate the CardToken. See the AllData PCI Integration document for details.
 
-1. **HarvestAddRq:**
+4. **HarvestAddRq:**
 
 Call HarvestAddRq with FI login parameters providing username/password of the FI along with the CardToken generated in step 3 in the \&lt;CryptVal\&gt; node.
 
@@ -269,11 +269,11 @@ Call HarvestAddRq with FI login parameters providing username/password of the FI
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-14.png" alt="Figure 14"/>
 </p>
 
-1. **HarvestAddFetchRq:**
+5. **HarvestAddFetchRq:**
 
 Call HarvestAddFetchRq if the HarvestAddStsInqRq returned a &quot;completed&quot; status passing in a harvest ID.
 
-1. **HarvestAddCreateRq:**
+6. **HarvestAddCreateRq:**
 
 Call HarvestAddCreateRq and provide the accounts to create on the AllData side.
 
@@ -331,7 +331,7 @@ The transaction data pull APIs can be used to retrieve transactions for each acc
 
 ### Banking transactions
 
-The Banking transactions can be extracted from the AllData system for a certain time period using the getBankingTrans WS API. See [Account Data Pull APIs](#_getBankingTrans) for the details of the web service.
+The Banking transactions can be extracted from the AllData system for a certain time period using the getBankingTrans WS API. See [Account Data Pull APIs](./webservices-apis.md#getbankingtrans) for the details of the web service.
 
 <p align="center">
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-17.png" alt="Figure 17"/>
@@ -339,7 +339,7 @@ The Banking transactions can be extracted from the AllData system for a certain 
 
 ### Credit Card transactions
 
-The Credit Card transactions can be extracted from the AllData system for a certain time period using the getCreditCardTrans WS API. See [Account Data Pull APIs](#_bookmark58) for the details of the web service.
+The Credit Card transactions can be extracted from the AllData system for a certain time period using the getCreditCardTrans WS API. See [Account Data Pull APIs](./webservices-apis.md#getcreditcardtrans) for the details of the web service.
 
 <p align="center">
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-18.png" alt="Figure 18"/>
@@ -347,7 +347,7 @@ The Credit Card transactions can be extracted from the AllData system for a cert
 
 ### Investment transactions
 
-The Investment transactions can be extracted from the AllData system for a certain time period using the getInvestmentTrans WS API. See [Account Data Pull APIs](#_getInvestmentTrans) for the details of the web service.
+The Investment transactions can be extracted from the AllData system for a certain time period using the getInvestmentTrans WS API. See [Account Data Pull APIs](./webservices-apis.md#getinvestmenttrans) for the details of the web service.
 
 <p align="center">
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-19.png" alt="Figure 19"/>
@@ -355,7 +355,7 @@ The Investment transactions can be extracted from the AllData system for a certa
 
 ### Other Account transactions
 
-The asset/liability/biller account transactions can be extracted from the AllData system for a certain time period using the getOtherAccountTrans WS API. See [Account Data Pull APIs](#_bookmark59) for the details of the web service.
+The asset/liability/biller account transactions can be extracted from the AllData system for a certain time period using the getOtherAccountTrans WS API. See [Account Data Pull APIs](./webservices-apis.md#getotheraccounttrans) for the details of the web service.
 
 <p align="center">
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-20.png" alt="Figure 20"/>
@@ -398,7 +398,7 @@ User registration and sign-on involves the following APIs.
 - **createUser:** Partners use this to create customer profiles within an AllData home.
 - **signon:** This API allows partners to use AllData customer credentials to get an SSO token. This token is required to launch the Add Accounts Widget flow.
 
-See [User Management Web Services](#_User_Management_Web) for more details on user registration and sign-on APIs.
+See [User Management Web Services](./webservices-apis.md#user-management-web-services) for more details on user registration and sign-on APIs.
 
 # UI Portal (AllData PFM) Integration
 
