@@ -15,9 +15,9 @@ In all instances noted below, the partner must first be created in the AllData s
 
 Each partner will have a partner ID and at least one home ID created in the AllData system. Some partners may choose to use multiple home IDs depending on different use cases. A partner can provision multiple customers (users) under its home ID. A user may have more than one financial institution account under his or her profile.
 
-For all use cases outlined below, the partner must create a user profile using the [CreateUser API](api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/createUser). The user profile consists of the user ID, password, and several optional fields including name, address, etc.
+For all use cases outlined below, the partner must create a user profile using the [CreateUser API](../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/createUser). The user profile consists of the user ID, password, and several optional fields including name, address, etc.
 
-Partners must follow the bootstrapping process to synchronize the Fiserv AllData connections directory on their end. This one-time process uses the [GetFinancialInstInfo API](api/?type=post&path=/WealthManagementWeb/ws/SeedDataInq/getFinancialInstInfo). Partners can also periodically refresh to get the latest changes made by financial institutions. See the _AllData Web Services API Specifications_ document for additional details.
+Partners must follow the bootstrapping process to synchronize the Fiserv AllData connections directory on their end. This one-time process uses the [GetFinancialInstInfo API](../api/?type=post&path=/WealthManagementWeb/ws/SeedDataInq/getFinancialInstInfo). Partners can also periodically refresh to get the latest changes made by financial institutions. See the _AllData Web Services API Specifications_ document for additional details.
 
 # Use Cases
 
@@ -31,9 +31,9 @@ This use case is necessary for a partner to verify the bank account ownership of
 
 **APIs required:**
 
-- [initiateAddAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
-- [getAddAccountStatus](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
-- [getNewAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
+- [initiateAddAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
+- [getAddAccountStatus](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
+- [getNewAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
     * **Note:** This series of APIs only validates that the user can log in and has ownership of the account. If the partner requires routing and account numbers, see &quot;Add payment account&quot; below.
 
 
@@ -45,9 +45,9 @@ This use case is necessary for a partner to verify the balance(s) of the account
 
 **APIs required:**
 
-- [initiateAddAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
-- [getAddAccountStatus](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
-- [getNewAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
+- [initiateAddAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
+- [getAddAccountStatus](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
+- [getNewAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
 
 ### Add payment account
 
@@ -57,13 +57,13 @@ AllData can be used to add an ACH payment account of an end user after that acco
 
 **APIs required:**
 
-- [initiateAddAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
-- [getAddAccountStatus](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
-- [getNewAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
-- [createAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts)
-- [updateAccounts](api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts)
-- [getHarvestStatus](api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus) (1..n)
-- [getAccountDetails](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails)
+- [initiateAddAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
+- [getAddAccountStatus](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
+- [getNewAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
+- [createAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts)
+- [updateAccounts](../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts)
+- [getHarvestStatus](../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus) (1..n)
+- [getAccountDetails](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails)
 
 
 ### Transaction history
@@ -74,17 +74,17 @@ AllData can be used to obtain the transaction history for a number of accounts i
 
 **APIs required:**
 
-- [initiateAddAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
-- [getAddAccountStatus](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
-- [getNewAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
-- [createAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts)
-- [updateAccounts](api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts)
-- [getHarvestStatus](api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus) (1..n)
-- [getAccountDetails](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails)
-- For banking account transactions, use [getBankingTrans](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getBankingTrans)
-- For biller account transactions, use [getOtherAccountTrans](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans)
-- For credit card account transactions, use [getCreditCardTrans](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getCreditCardTrans)
-- For investment account transactions, use [getInvestmentTrans](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentTrans)
+- [initiateAddAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
+- [getAddAccountStatus](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
+- [getNewAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
+- [createAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts)
+- [updateAccounts](../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts)
+- [getHarvestStatus](../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus) (1..n)
+- [getAccountDetails](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails)
+- For banking account transactions, use [getBankingTrans](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getBankingTrans)
+- For biller account transactions, use [getOtherAccountTrans](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans)
+- For credit card account transactions, use [getCreditCardTrans](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getCreditCardTrans)
+- For investment account transactions, use [getInvestmentTrans](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentTrans)
 
 ### Asset verification
 
@@ -94,17 +94,17 @@ AllData can be used to verify the assets held by an end user. These assets are g
 
 **APIs required:**
 
-- [initiateAddAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
-- [getAddAccountStatus](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
-- [getNewAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
-- [createAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts)
-- [updateAccounts](api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts)
-- [getHarvestStatus](api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus) (1..n)
-- [getAccountDetails](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails)
-- [getOtherAccountTrans](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans)
-- [getEmployerStockOptions](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getEmployerStockOptions)
-- [getInvestmentPos](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentPos)
-- [getInvestmentTrans](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentTrans)
+- [initiateAddAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
+- [getAddAccountStatus](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
+- [getNewAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
+- [createAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts)
+- [updateAccounts](../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts)
+- [getHarvestStatus](../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus) (1..n)
+- [getAccountDetails](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails)
+- [getOtherAccountTrans](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans)
+- [getEmployerStockOptions](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getEmployerStockOptions)
+- [getInvestmentPos](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentPos)
+- [getInvestmentTrans](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentTrans)
 
 
 ### Liability verification
@@ -115,15 +115,15 @@ AllData can be used to verify the liabilities of an end user. Liabilities are gr
 
 **APIs required:**
 
-- [initiateAddAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
-- [getAddAccountStatus](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
-- [getNewAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
-- [createAccounts](api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts)
-- [updateAccounts](api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts)
-- [getHarvestStatus](api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus) (1..n)
-- [getAccountDetails](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails)
-- [getOtherAccountTrans](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans)
-- [getCreditCardTrans](api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getCreditCardTrans)
+- [initiateAddAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts)
+- [getAddAccountStatus](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus) (1..n)
+- [getNewAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts)
+- [createAccounts](../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts)
+- [updateAccounts](../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts)
+- [getHarvestStatus](../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus) (1..n)
+- [getAccountDetails](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails)
+- [getOtherAccountTrans](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans)
+- [getCreditCardTrans](../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getCreditCardTrans)
 
 ### Personal Financial Management (PFM)
 
@@ -133,16 +133,16 @@ AllData can be configured to categorize transactions.
 
 All the APIs noted in the above use cases are applicable to PFM since PFM tools are typically used to provide a complete picture of an end user&#39;s financial position. In addition to the APIs noted above, the following can also be applied to the PFM use case:
 
-- [categorizeTransaction](api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/categorizeTransaction)
-- [deleteSubCategory](api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/deleteSubcategory)
-- [createBudget](api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/createBudget)
-- [editBudget](api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/editBudget)
-- [deleteBudget](api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/deleteBudget)
-- [findBudget](api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/findBudget)
-- [editGoal](api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/editGoal)
-- [deleteGoal](api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/deleteGoal)
-- [findGoal](api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/findGoal)
-- [createGoal](api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/createGoal)
+- [categorizeTransaction](../api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/categorizeTransaction)
+- [deleteSubCategory](../api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/deleteSubcategory)
+- [createBudget](../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/createBudget)
+- [editBudget](../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/editBudget)
+- [deleteBudget](../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/deleteBudget)
+- [findBudget](../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/findBudget)
+- [editGoal](../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/editGoal)
+- [deleteGoal](../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/deleteGoal)
+- [findGoal](../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/findGoal)
+- [createGoal](../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/createGoal)
 
 © 2020 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
 
