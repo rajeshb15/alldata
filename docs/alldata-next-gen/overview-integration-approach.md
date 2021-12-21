@@ -169,4 +169,4 @@ This document has been created by Fiserv and is classified **Fiserv Confidential
 <br>
 <br>
 
-Links: [Overview](?path=docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=docs/alldata-next-gen/widgets.md), [Implementation Approaches](?path=docs/alldata-next-gen/implementation-approaches.md), [Appendices](?path=docs/alldata-next-gen/appendices.md)
+Links: [Overview](?path=/docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=/docs/alldata-next-gen/widgets.md), [Implementation Approaches](?path=/docs/alldata-next-gen/implementation-approaches.md), [Appendices](?path=/docs/alldata-next-gen/appendices.md)
