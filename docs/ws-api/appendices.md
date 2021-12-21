@@ -148,7 +148,7 @@ Details of Fiserv image-retrieving URL:
 &lt;img src=&quot;https://&lt;domain-name&gt;/downloadMFAimage?imageId=&lt;ImageID&gt;&quot;/&gt;
 
 **UAT URL:**
-<span>&lt;img src=&quot;https://aggqa.alldata.Fiserv.com/downloadMFAimage?imageId=&lt;ImageID&gt;&quot;/&gt;</span>
+&lt;img src=&quot;<span>http</span>s://aggqa.alldata.Fiserv.com/downloadMFAimage?imageId=&lt;ImageID&gt;&quot;/&gt;
 
 Method Type: Get
 
