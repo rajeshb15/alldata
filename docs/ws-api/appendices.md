@@ -39,7 +39,7 @@ The following table lists all valid response status codes for the status aggrega
 | 4300 | Error | Account Already Exists | There was an attempt to add an account that already exists. | Do not send an AddNewAccounts request for a user with the same set of credentials in an FI. In case of an error with initial attempt with that set of credentials, refer to the [Harvester Error Codes](#appendix-b-harvester-error-codes) section of this document for information and resolution suggestions. |
 | 4310 | Error | Harvesting Error | There was a harvesting error during the &quot;account add&quot; or &quot;add more accounts&quot; operation. | Research the returned UpdateErrorCode in the [Harvester Error Codes](#appendix-b-harvester-error-codes) section of this document for information and resolution suggestions. |
 | 4320 | Error | FI Login Credentials Required | An &quot;add more account&quot; operation was attempted for a low-trust account without providing the login credentials. |
-| 4322 | Error | Avoid gathering and sending User Credentials in OAuth FI | User credentials sent in the request for adding accounts in an OAuth-enabled FI. | Partner should refer to [Add Account workflow (OAuth)](./integrations.md#add-account-workflow-oauth) and follow the instructions when initiating add under an OAuth-enabled FI. |
+| 4322 | Error | Avoid gathering and sending User Credentials in OAuth FI | User credentials sent in the request for adding accounts in an OAuth-enabled FI. | Partner should refer to [Add Account workflow (OAuth)](?path=/docs/ws-api/integrations.md#add-account-workflow-oauth) and follow the instructions when initiating add under an OAuth-enabled FI. |
 | 4330 | Error | Invalid HarvestID | The harvest ID / run ID provided in the request is invalid. |
 | 4332 | Error | Invalid OAuth Request ID | The OAuth request ID sent in the request is invalid. |
 | 4333 | Error | Invalid Partner Application ID | The partner application ID is invalid. |
@@ -174,6 +174,10 @@ Sample:
 <p align="center">
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-appendix-c1.png" alt="Figure 1"/>
 </p>
+
+<br>
+<br>
+<hr>
 
 © 2019-2021 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
 
