@@ -176,7 +176,7 @@ The following are the changes the partner will implement for image-based MFA.
 </p>
 
 
-1. The partner calls a URL with the image ID generated in the previous step. The base64-encoded image is transmitted to the client browser using the HTTPS connection. See [Appendix C: MFA Image-Retrieving URL](./appendices.md#appendix-c-mfa-image-retrieving-url) for the URL details. After decoding the payload, handle downloaded images in the Portable Network Graphics (.png) format.
+2. The partner calls a URL with the image ID generated in the previous step. The base64-encoded image is transmitted to the client browser using the HTTPS connection. See [Appendix C: MFA Image-Retrieving URL](./appendices.md#appendix-c-mfa-image-retrieving-url) for the URL details. After decoding the payload, handle downloaded images in the Portable Network Graphics (.png) format.
 
 **Note:** AllData provides an additional option to the partner to get the base64-encoded image in the HarvestAddStsInqRs or HarvestStsInqRs in lieu of image ID. Partners must contact the AllData team to turn on the property to send the actual image as part of the API request.
 
@@ -206,7 +206,7 @@ The FIInfo is enhanced with a new element isOAuthFI to help partners determine w
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-09.png" alt="Figure 9"/>
 </p>
 
-1. **initiateAddAccounts**
+2. **initiateAddAccounts**
 
 As in the standard approach to add new accounts, partners must invoke the initiateAddAccounts API to add accounts under OAuth-enabled institutions. The new parameter PartnerAppID is included in this API request and is a mandatory element when invoking the API to add accounts under OAuth-enabled institutions. Partners must send the PartnerAppID of the application from which the attempt is initiated and that PartnerAppID must be a registered one with the FI. Fiserv performs primary validation to confirm that the PartnerAppID is registered and returns an &quot;Invalid Partner Application ID&quot; response code if not registered (error code 4333). Partners must contact Fiserv to register any new application with the FI.
 
@@ -216,7 +216,7 @@ On invoking the initiateAddAccounts API request with the PartnerAppID, Fiserv se
   <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-10.png" alt="Figure 10"/>
 </p>
 
-1. **getAddAccountStatus**
+3. **getAddAccountStatus**
 
 The partner shares the OAuthUrl to the user, who visits the institution-hosted site to provide login credentials and consent for the accounts to aggregate. Then the partner invokes the getAddAccountStatus API with the OAuthRqID that Fiserv sent in the initiateAddAccounts API response (instead of the RunID used in other Add Account workflows.
 
@@ -252,10 +252,10 @@ The FIInfo is enhanced with a new element (HasCardData) to help the partner dete
 
 Partners must call a **GetWMAccessKey** web service to generate the WMAccessKey. Refer to the [Miscellaneous chapter](./webservices-apis.md#getwmaccesskey) for the details of this web service.
 
-  1. Partners should not send card information to AllData web services system.
-  2. Partners must send card info to Fiserv PCI system and get token to use in place of card number.
-  3. The Fiserv PCI system requires the WMAccessKey for access.
-  4. The WMAccessKey is valid for 15 minutes.
+  - Partners should not send card information to AllData web services system.
+  - Partners must send card info to Fiserv PCI system and get token to use in place of card number.
+  - The Fiserv PCI system requires the WMAccessKey for access.
+  - The WMAccessKey is valid for 15 minutes.
 
 3. **CardToken**
 
