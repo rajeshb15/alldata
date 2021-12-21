@@ -65,7 +65,7 @@ This section provides an architectural overview of the mobile integration and in
 
 #### Current SSO Process Description and Elements
 
-See the [Integration Approaches](?path=docs/alldata-next-gen/overview-integration-approach.md#integration-approaches) section for a description of the SSO process and a list of all the applicable elements.
+See the [Integration Approaches](?path=/docs/alldata-next-gen/overview-integration-approach.md#integration-approaches) section for a description of the SSO process and a list of all the applicable elements.
 
 ### System Environment
 

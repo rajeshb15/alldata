@@ -5,7 +5,7 @@
 
 ## Add Accounts Widget
 
-This section describes the workflow and functionality of the Add Accounts widget. The Add Accounts workflow starts with the user selecting the financial institution holding the account(s) and sharing login credentials to allow the system to add the account(s) and aggregate data from the institution. AllData provides two approaches to launching the Add Accounts widget in a partner application: The default method is the user searching for an institution or selecting one from a list of popular FIs. The alternate approach is called &quot;[deep linking](?path=docs/alldata-next-gen/implementation-approaches.md#deep-linking).&quot;
+This section describes the workflow and functionality of the Add Accounts widget. The Add Accounts workflow starts with the user selecting the financial institution holding the account(s) and sharing login credentials to allow the system to add the account(s) and aggregate data from the institution. AllData provides two approaches to launching the Add Accounts widget in a partner application: The default method is the user searching for an institution or selecting one from a list of popular FIs. The alternate approach is called &quot;[deep linking](?path=/docs/alldata-next-gen/implementation-approaches.md#deep-linking).&quot;
 
 ### Add Accounts Workflow
 
@@ -61,7 +61,7 @@ If the harvest attempt fails due to a harvest alert, the corresponding alert res
 
 ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-06.png)
 
-If the harvesting process encounters any errors, they will display within the Add Accounts widget. The alert content and workflows are included in [Appendix A – Harvesting Alert Error Resolution Screens](?path=docs/alldata-next-gen/appendices.md#harvesting-alert-error-resolution-screens).
+If the harvesting process encounters any errors, they will display within the Add Accounts widget. The alert content and workflows are included in [Appendix A – Harvesting Alert Error Resolution Screens](?path=/docs/alldata-next-gen/appendices.md#harvesting-alert-error-resolution-screens).
 
 **Add Accounts Screen – Harvesting alert:**
 
@@ -266,7 +266,7 @@ The following table provides the descriptions and default labels for the buttons
 
 ### Offline Account Link
 
-On the initial screen of the Add Accounts widget, there is an option in the popular institutions called **+Add Offline Accounts**. The URL to which this button points is configurable. The property may be passed to the Fiserv application via a pre-configured property or via a parameter in SSO (refer to the [Integration Approaches section](?path=docs/alldata-next-gen/implementation-approaches.md#implementation-approaches) for more information).
+On the initial screen of the Add Accounts widget, there is an option in the popular institutions called **+Add Offline Accounts**. The URL to which this button points is configurable. The property may be passed to the Fiserv application via a pre-configured property or via a parameter in SSO (refer to the [Integration Approaches section](?path=/docs/alldata-next-gen/implementation-approaches.md#implementation-approaches) for more information).
 
 
 
@@ -568,7 +568,7 @@ The Add Accounts widget handles any harvesting errors interactively unless the u
 
 ### Alert Resolution Widget Overview
 
-The Alert Resolution widget allows partners to take advantage of a library of screens that walk users through errors they may encounter during the account harvesting process. If an account is in error, the Alert Resolution widget will identify the correct alert resolution screens to display for the corresponding account. The widget screens will inform the user of the issue preventing aggregation from functioning correctly and guide the user through any steps required to resolve the error. Refer to [Appendix A – Harvesting Alert Error Resolution Screens](?path=docs/alldata-next-gen/appendices.md#appendix-a) for error content and workflows.
+The Alert Resolution widget allows partners to take advantage of a library of screens that walk users through errors they may encounter during the account harvesting process. If an account is in error, the Alert Resolution widget will identify the correct alert resolution screens to display for the corresponding account. The widget screens will inform the user of the issue preventing aggregation from functioning correctly and guide the user through any steps required to resolve the error. Refer to [Appendix A – Harvesting Alert Error Resolution Screens](?path=/docs/alldata-next-gen/appendices.md#appendix-a) for error content and workflows.
 
 **Alert Resolution widget:**
 
@@ -743,7 +743,7 @@ When the **Resolve** button is clicked, a corresponding alert resolution screen 
 
 ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-55.png)
 
-For information on the content and flow of the alert resolution screens, see [Appendix A – Alert Resolution Screens](?path=docs/alldata-next-gen/appendices.md#appendix-a).
+For information on the content and flow of the alert resolution screens, see [Appendix A – Alert Resolution Screens](?path=/docs/alldata-next-gen/appendices.md#appendix-a).
 
 For alerts that the user can resolve, the action button is labeled &quot;Resolve.&quot; For other alerts, which require Fiserv or FI intervention to resolve, the button label is &quot;View Details.&quot;
 
