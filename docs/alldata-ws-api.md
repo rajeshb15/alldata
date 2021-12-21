@@ -5,9 +5,11 @@ This document describes the web services API usage of the Fiserv AllData applica
 <br>
 
 ### Table of Contents:
-1. <u>[Overview](?path=docs/ws-api/overview.md)</u>
-2. <u>[Integrations](?path=docs/ws-api/integrations.md)</u>
-3. <u>[Web Services & APIs](?path=docs/ws-api/webservices-apis.md)</u>
-4. <u>[Appendices](?path=docs/ws-api/appendices.md)</u>
+1. <u>[Overview](?path=/docs/ws-api/overview.md)</u>
+2. <u>[Integrations](?path=/docs/ws-api/integrations.md)</u>
+3. <u>[Web Services & APIs](?path=/docs/ws-api/webservices-apis.md)</u>
+4. <u>[Appendices](?path=/docs/ws-api/appendices.md)</u>
+
+<br>
 
 [PDF Version](https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/pdfs/AllData%20WS%20API%20Specs%204.1.pdf)
