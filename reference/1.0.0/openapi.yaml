@@ -3768,7 +3768,7 @@ components:
       type: object
       properties:
         SelRangeDt: {$ref: '#/components/schemas/SelectRangeDtType' }
-        AcctGroup: {type: string, enum: [Cash,Credit,Investment,OtherBill] }
+        AcctGroup: {type: string, enum: [Cash,Credit,Investment,OtherBill], example: 'Credit' }
         StartRowNum: {type: integer, format: int32, example: '1' }
     EmployerStockOptionRsHeader:
       required:
