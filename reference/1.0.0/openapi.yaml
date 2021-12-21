@@ -26,7 +26,8 @@ paths:
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
           application/json:
-            schema: {$ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'}
+            schema: 
+              $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
             examples:
               getAccountDetails: {summary: Request Account Details, $ref: '#/components/examples/getAccountDetailsRequest'}
         required: true
