@@ -4,31 +4,7 @@
 
 May 2021
 
-<!--
-# Contents
 
-**[Introduction](#introduction)**
-
-[Overview](#overview)
-
-[Partner flow for Add Account widget](#partner-flow-for-add-account-widget)
-
-**[Use Cases](#use-cases)**
-
-[Bank account ownership verification](#bank-account-ownership-verification)
-
-[Balance verification](#balance-verification)
-
-[Add payment account](#add-payment-account)
-
-[Transaction history](#transaction-history)
-
-[Asset verification](#asset-verification)
-
-[Liability verification](#liability-verification)
-
-[Personal Financial Management (PFM)](#personal-financial-management-pfm)
--->
 # Introduction
 
 The purpose of this document is to advise Fiserv partners that plan to use the Add Account widget along with APIs to handle specific use cases.
@@ -39,7 +15,7 @@ Before utilizing any of the following use cases, you must have a profile in the 
 
 You will be assigned a unique partner ID and a home ID (or multiple home IDs, depending on your needs). You may provision multiple customers (users) under a home ID. A user may have more than one financial institution (&quot;FI&quot;) or any other accounts and connection types offered by AllData under their profile.
 
-![Figure 1](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-00.png)
+![Figure 1](../../assets/images/add-account-widget/add-account-widget-00.png)
 
 For all use cases outlined below, you must create a user profile using the CreateUser API. The user profile consists of the user ID, password, and several optional fields such as name and address. CreateUser returns a value called CEUserID which is the unique identifier for the end user.
 
@@ -47,12 +23,12 @@ For all use cases outlined below, you must create a user profile using the Creat
 
 Before launching the Add Account widget, you must call the signOn API to generate a single sign-on (SSO) token. After generating the token, launch the AllData Add Account widget per the instructions in the AllData Next-Gen Widgets Integration Guide. When launched, the widget appears as below.
 
-![Figure 2](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-01.png)
-![Figure 3](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-02.png)
-![Figure 4](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-03.png)
-![Figure 5](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-04.png)
-![Figure 6](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-05.png)
-![Figure 7](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-06.png)
+![Figure 2](../../assets/images/add-account-widget/add-account-widget-01.png)
+![Figure 3](../../assets/images/add-account-widget/add-account-widget-02.png)
+![Figure 4](../../assets/images/add-account-widget/add-account-widget-03.png)
+![Figure 5](../../assets/images/add-account-widget/add-account-widget-04.png)
+![Figure 6](../../assets/images/add-account-widget/add-account-widget-05.png)
+![Figure 7](../../assets/images/add-account-widget/add-account-widget-06.png)
 
 # Use Cases
 
@@ -94,7 +70,7 @@ Balance verification is useful for lenders, ACH payment processors, e-commerce p
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-![Figure 8](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png)
+![Figure 8](../../assets/images/add-account-widget/add-account-widget-07.png)
 
 ### Add payment account
 
@@ -110,7 +86,7 @@ You can use AllData to retrieve an end user&#39;s full account number(s) and rou
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-![Figure 8](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png)
+![Figure 8](../../assets/images/add-account-widget/add-account-widget-07.png)
 
 ### Transaction history
 
@@ -167,7 +143,7 @@ You can use AllData to verify your customer assets. Assets are grouped into the 
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-![Figure 8](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png)
+![Figure 8](../../assets/images/add-account-widget/add-account-widget-07.png)
 
 6. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
 7. Invoke the getEmployerStockOptions API.
@@ -188,7 +164,7 @@ You can use AllData to verify your customer liabilities. Liabilities are grouped
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-![Figure 8](https://raw.githubusercontent.com/Fiserv/alldata/md-testing/assets/images/add-account-widget/add-account-widget-07.png)
+![Figure 8](../../assets/images/add-account-widget/add-account-widget-07.png)
 
 6. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
 7. Invoke the getCreditCardTrans API. – This is specifically for credit card transactions.
@@ -220,7 +196,5 @@ All the APIs in the above use cases also apply to PFM from a data-collection per
 Fiserv is a registered trademark of Fiserv, Inc.
 
 Other brands and their products are trademarks or registered trademarks of their respective holders and should be noted as such.
-
-This document has been created by Fiserv and is classified confidential. This document is restricted to the received party and not to be forwarded or transferred without the approval of Fiserv.
 
 [PDF Version](https://raw.githubusercontent.com/Fiserv/alldata/develop/docs/documentation/pdfs/Add%20Account%20Widget.pdf)
