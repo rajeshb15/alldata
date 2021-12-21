@@ -1,6 +1,3 @@
-#
-
-
 # Appendix A: API Error Codes
 
 The following table lists all valid response status codes for the status aggregate defined earlier, their severities, their default text provided in the StatusDesc element, conditions that may trigger them, and, in some cases, information to help API partners resolve issues.
@@ -148,6 +145,7 @@ Details of Fiserv image-retrieving URL:
 &lt;img src=&quot;https://&lt;domain-name&gt;/downloadMFAimage?imageId=&lt;ImageID&gt;&quot;/&gt;
 
 **UAT URL:**
+
 &lt;img src=&quot;<span>http</span>s://aggqa.alldata.Fiserv.com/downloadMFAimage?imageId=&lt;ImageID&gt;&quot;/&gt;
 
 Method Type: Get
