@@ -1,4 +1,4 @@
-<!-- TODO : Fix links-->
+<!-- TODO : Fix links for each APIs-->
 
 # User Management Web Services
 
@@ -35,7 +35,6 @@ This chapter lists each User Management API in a table with a resource URL, desc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <!-- <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/createUser">createUser API docs</a> -->
                 <a href="../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/createUser">createUser API docs</a>
             </td>
         </tr>
@@ -64,7 +63,7 @@ This chapter lists each User Management API in a table with a resource URL, desc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/deleteUser">deleteUser API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/deleteUser">deleteUser API docs</a>
             </td>
         </tr>
     </tbody>
@@ -90,7 +89,7 @@ This chapter lists each User Management API in a table with a resource URL, desc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/getUserProfile">getUserProfile API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/getUserProfile">getUserProfile API docs</a>
             </td>
         </tr>
     </tbody>
@@ -117,7 +116,7 @@ This chapter lists each User Management API in a table with a resource URL, desc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/updateUserProfile">updateUserProfile API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/updateUserProfile">updateUserProfile API docs</a>
             </td>
         </tr>
     </tbody>
@@ -146,7 +145,7 @@ This chapter lists each User Management API in a table with a resource URL, desc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/updateUserPassword">updateUserPassword API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/updateUserPassword">updateUserPassword API docs</a>
             </td>
         </tr>
     </tbody>
@@ -173,7 +172,7 @@ This chapter lists each User Management API in a table with a resource URL, desc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/User%20Management%20Service/signon">Signon API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/UserMgmt/signon">Signon API docs</a>
             </td>
         </tr>
     </tbody>
@@ -208,7 +207,7 @@ This chapter lists each External FI Seed Data API in a table with a resource URL
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Seeded%20Data%20Inquiry%20Service/getFinancialInstInfo">getFinancialInstInfo API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/SeedDataInq/getFinancialInstInfo">getFinancialInstInfo API docs</a>
             </td>
         </tr>
     </tbody>
@@ -242,7 +241,7 @@ This chapter lists each External FI Seed Data API in a table with a resource URL
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Seeded%20Data%20Inquiry%20Service/searchFinancialInst">searchFinancialInstitution API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/SeedDataInq/searchFinancialInst">searchFinancialInstitution API docs</a>
             </td>
         </tr>
     </tbody>
@@ -273,7 +272,7 @@ This chapter presents the External FI Messages API in a table with a resource UR
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/FI%20Messages%20Inquiry%20Service/getFIMessageInfo">getFIMessageInfo API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/FIMessaegesInq/getFIMessageInfo">getFIMessageInfo API docs</a>
             </td>
         </tr>
     </tbody>
@@ -311,7 +310,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/initiateAddAccounts">initiateAddAccounts API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/initiateAddAccounts">initiateAddAccounts API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -352,7 +351,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
                 <tr>
                     <td><b>API Explorer</b></td>
                     <td>
-                        <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getAddAccountStatus">getAddAccountStatus API Docs</a>
+                        <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getAddAccountStatus">getAddAccountStatus API Docs</a>
                     </td>
                 </tr>
             </tbody>
@@ -384,7 +383,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/getNewAccounts">getNewAccounts API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/getNewAccounts">getNewAccounts API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -416,7 +415,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/createAccounts">createAccounts API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/createAccounts">createAccounts API docs</a>
             </td>
         </tr>
     </tbody>
@@ -444,7 +443,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/deleteAccounts">deleteAccounts API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/deleteAccounts">deleteAccounts API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -472,7 +471,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/updateAccountCredentials">updateAccountCredentials API docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/updateAccountCredentials">updateAccountCredentials API docs</a>
             </td>
         </tr>
     </tbody>
@@ -499,7 +498,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/maintainAccount">maintainAccount API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/maintainAccount">maintainAccount API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -527,7 +526,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Client%20Management%20Service/addOfflineAccount">addOfflineAccount API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/ClientMgmt/addOfflineAccount">addOfflineAccount API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -554,7 +553,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Client%20Management%20Service/updateOfflineAccount">updateOfflineAccount API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/ClientMgmt/updateOfflineAccount">updateOfflineAccount API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -588,7 +587,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/addUpdateHostAccounts">addUpdateHostAccounts API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/addUpdateHostAccounts">addUpdateHostAccounts API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -617,7 +616,7 @@ This chapter lists each Account Management API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Management%20Service/hostAccountsStatus">hostAccountsStatus API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/hostAccountsStatus">hostAccountsStatus API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -655,7 +654,7 @@ This chapter lists each Account Harvesting API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Harvest%20Account%20Data%20Management%20Service/updateAccounts">updateAccounts API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/updateAccounts">updateAccounts API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -685,7 +684,7 @@ This chapter lists each Account Harvesting API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Harvest%20Account%20Data%20Management%20Service/getHarvestStatus">getHarvestStatus API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/HarvestAccountData/getHarvestStatus">getHarvestStatus API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -714,7 +713,7 @@ This chapter lists each Account Harvesting API in a table with a resource URL, d
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountUpdateSummary">getAccountUpdateSummary API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountUpdateSummary">getAccountUpdateSummary API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -745,7 +744,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountsSummary">getAccountsSummary API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountsSummary">getAccountsSummary API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -773,7 +772,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getAccountDetails">getAccountDetails API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getAccountDetails">getAccountDetails API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -800,7 +799,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentTrans">getInvestmentTrans API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentTrans">getInvestmentTrans API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -826,7 +825,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getCreditCardTrans">getCreditCardTrans API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getCreditCardTrans">getCreditCardTrans API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -852,7 +851,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getBankingTrans">getBankingTrans API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getBankingTrans">getBankingTrans API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -878,7 +877,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getOtherAccountTrans">getOtherAccountTrans API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getOtherAccountTrans">getOtherAccountTrans API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -906,7 +905,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getTransactions">getTransactions API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getTransactions">getTransactions API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -937,7 +936,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getDeletedTrans">getDeletedTrans API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getDeletedTrans">getDeletedTrans API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -964,7 +963,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getInvestmentPos">getInvestmentPos API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getInvestmentPos">getInvestmentPos API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -991,7 +990,7 @@ This chapter lists each Account Data Pull API in a table with a resource URL, de
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Account%20Data%20Inquiry%20Service/getEmployerStockOptions">getEmployerStockOptions API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getEmployerStockOptions">getEmployerStockOptions API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1028,7 +1027,7 @@ This chapter lists each transaction categorization API in a table with a resourc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Seeded%20Data%20Inquiry%20Service/updateAccounts_1\">getTxnCategoriesInfo API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/SeedDataInq/getTxnCategoriesInfo">getTxnCategoriesInfo API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1056,7 +1055,7 @@ This chapter lists each transaction categorization API in a table with a resourc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/i…Transaction%20Category%20Service%20PFM/categorizeTransaction">CategorizeTransaction API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/categorizeTransaction">CategorizeTransaction API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1082,7 +1081,7 @@ This chapter lists each transaction categorization API in a table with a resourc
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/i…e%20Transaction%20Category%20Service%20PFM/deleteSubcategory">DeleteSubCategory API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/categorizeTransaction/deleteSubcategory">DeleteSubCategory API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1112,7 +1111,7 @@ This chapter lists each Budget-related API in a table with a resource URL, descr
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/createBudget">createBudget API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/createBudget">createBudget API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1138,7 +1137,7 @@ This chapter lists each Budget-related API in a table with a resource URL, descr
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/deleteBudget">deleteBudget API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/deleteBudget">deleteBudget API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1164,7 +1163,7 @@ This chapter lists each Budget-related API in a table with a resource URL, descr
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/editBudget">editBudget API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/editBudget">editBudget API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1190,7 +1189,7 @@ This chapter lists each Budget-related API in a table with a resource URL, descr
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Budget%20Management%20Service%20PFM/findBudget">findBudget API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/findBudget">findBudget API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1220,7 +1219,7 @@ This chapter lists each Goal-related API in a table with a resource URL, descrip
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/createGoal">createGoal API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/createGoal">createGoal API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1247,7 +1246,7 @@ This chapter lists each Goal-related API in a table with a resource URL, descrip
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/editGoal">editGoal API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/editGoal">editGoal API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1273,7 +1272,7 @@ This chapter lists each Goal-related API in a table with a resource URL, descrip
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/deleteGoal">deleteGoal API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/deleteGoal">deleteGoal API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1299,7 +1298,7 @@ This chapter lists each Goal-related API in a table with a resource URL, descrip
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/Goal%20Management%20Service%20PFM/findGoal">findGoal API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/findGoal">findGoal API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1336,7 +1335,7 @@ This chapter lists each Bank Statement Download Services-related API in a table 
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/i…dex.jsp#/Account%20Management%20Service/bankStatementConsent">bankStatementConsent API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountMgmt/bankStatementConsent">bankStatementConsent API Docs</a>
             </td>
         </tr>
     </tbody>
@@ -1367,38 +1366,7 @@ This chapter lists each Bank Statement Download Services-related API in a table 
         <tr>
             <td><b>API Explorer</b></td>
             <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/i…x.jsp#/Account%20Data%20Inquiry%20Service/getBankStmtDetails">getBankStmtDetails API Docs</a>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-
-# Miscellaneous
-
-This chapter lists each API in a table with a resource URL, descriptive information, and a link to API Explorer documentation.
-
-## GetWMAccessKey
-<table>
-    <tbody>
-        <tr>
-            <td><b>Web Service Name</b></td>
-            <td>GetWMAccessKey</td>
-        </tr>
-        <tr>
-            <td><b>Resource URL</b></td>
-            <td>&lt;FiservWSUrl&gt;/AccountMgmt/GetWMAccessKey</td>
-        </tr>
-        <tr>
-            <td><b>Description</b></td>
-            <td>
-                This API is used to generate WMAccessKey key for PCI compliance requirements for the FI.
-            </td>
-        </tr>
-        <tr>
-            <td><b>API Explorer</b></td>
-            <td>
-                <a href="https://agg-uat.api.fiservapps.com/WealthManagementWeb/api/index.jsp#/WMAccessManagement%20Service/GetWMAccessKey">GetWMAccessKey API Docs</a>
+                <a href="../api/?type=post&path=/WealthManagementWeb/ws/AccountDataInq/getBankStmtDetails">getBankStmtDetails API Docs</a>
             </td>
         </tr>
     </tbody>
