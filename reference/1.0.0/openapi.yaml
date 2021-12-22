@@ -33,7 +33,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/account-details.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/account-details.md">More Info</a>
           content:
             application/json:
               schema:
@@ -74,7 +74,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/account-update-summary.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/account-update-summary.md">More Info</a>
           content:
             application/json:
               schema:
@@ -114,7 +114,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/account-summary.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/account-summary.md">More Info</a>
           content:
             application/json:
               schema:
@@ -152,7 +152,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/bank-statement-details.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/bank-statement-details.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -199,7 +199,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/banking-transactions.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/banking-transactions.md">More Info</a>
           content:
             application/json:
               schema:
@@ -243,7 +243,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/credit-card-transactions.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/credit-card-transactions.md">More Info</a>
           content:
             application/json:
               schema:
@@ -292,7 +292,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/deleted-transactions.md">More Info</a>  
+          description: <a href="../docs?path=/docs/resources/api-guide/response/deleted-transactions.md">More Info</a>  
           content:
             application/json:
               schema:
@@ -333,7 +333,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/employer-stock-options.md">More Info</a>  
+          description: <a href="../docs?path=/docs/resources/api-guide/response/employer-stock-options.md">More Info</a>  
           content:
             application/json:
               schema:
@@ -374,7 +374,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/investment-positions.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/investment-positions.md">More Info</a>
           content:
             application/json:
               schema:
@@ -416,7 +416,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/investment-transactions.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/investment-transactions.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -459,7 +459,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/other-account-transactions.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/other-account-transactions.md">More Info</a>
           content:
             application/json:
               schema:
@@ -497,7 +497,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/tax-document-details.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/tax-document-details.md">More Info</a>
           content:
             application/json:
               schema:
@@ -549,7 +549,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/transactions.md">More Info</a>  
+          description: <a href="../docs?path=/docs/resources/api-guide/response/transactions.md">More Info</a>  
           content:
             application/json:
               schema:
@@ -583,7 +583,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/ping.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/ping.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -625,7 +625,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/add-host-accounts.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/add-host-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -671,7 +671,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/add-update-host-accounts.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/add-update-host-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -710,7 +710,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/bank-statement-consent.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/bank-statement-consent.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -754,7 +754,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/create-accounts.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/create-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -797,7 +797,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/delete-accounts.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/delete-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -841,7 +841,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/delete-document.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/delete-document.md">More Info</a> 
           content:
             application/xml:
               schema:
@@ -894,7 +894,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/add-account-status.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/add-account-status.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -942,7 +942,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/new-accounts.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/new-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -980,7 +980,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/host-accounts-status.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/host-accounts-status.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1033,7 +1033,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/initiate-add-accounts.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/initiate-add-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1075,7 +1075,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/maintain-account.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/maintain-account.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1113,7 +1113,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/tax-statement-consent.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/tax-statement-consent.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1156,7 +1156,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-account-credentials.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/update-account-credentials.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1204,7 +1204,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-host-accounts.md">More Info</a> 
+          description: <a href="../docs?path=/docs/resources/api-guide/response/update-host-accounts.md">More Info</a> 
           content:
             application/json:
               schema:
@@ -1251,7 +1251,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-categorize-transaction.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/update-categorize-transaction.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1289,7 +1289,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/delete-subcategory.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/delete-subcategory.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1336,7 +1336,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/advisor-categorize-transaction.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/advisor-categorize-transaction.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1379,7 +1379,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/create-budget.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/create-budget.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1419,7 +1419,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/delete-budget.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/delete-budget.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1462,7 +1462,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/edit-budget.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/edit-budget.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1501,7 +1501,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/find-budget.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/find-budget.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1545,7 +1545,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/add-offline-account.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/add-offline-account.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1590,7 +1590,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-offline-account.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/update-offline-account.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1628,7 +1628,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/fi-message-info.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/fi-message-info.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1675,7 +1675,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/create-goal.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/create-goal.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1714,7 +1714,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/delete-goal.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/delete-goal.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1761,7 +1761,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/edit-goal.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/edit-goal.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1799,7 +1799,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/find-goal.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/find-goal.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1851,7 +1851,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/harvest-status.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/harvest-status.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1899,7 +1899,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-accounts.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/update-accounts.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1948,7 +1948,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/financial-institution-info.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/financial-institution-info.md">More Info</a>
           content:
             application/json:
               schema:
@@ -1998,7 +1998,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/search-financial-institution.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/search-financial-institution.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2037,7 +2037,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/transactions-categories-info.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/transactions-categories-info.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2088,7 +2088,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/create-user.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/create-user.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2129,7 +2129,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/delete-user.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/delete-user.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2167,7 +2167,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/user-profile.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/user-profile.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2209,7 +2209,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/sign-on.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/sign-on.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2249,7 +2249,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-password.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/update-password.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2288,7 +2288,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/update-user-profile.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/update-user-profile.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2328,7 +2328,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/rtv-info.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/rtv-info.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2369,7 +2369,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/ack-rtv-result.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/ack-rtv-result.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2409,7 +2409,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/advance-rtv-enable-fi.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/advance-rtv-enable-fi.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2450,7 +2450,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/rtv-token.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/rtv-token.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2494,7 +2494,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/search-fi.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/search-fi.md">More Info</a>
           content:
             application/json:
               schema:
@@ -2535,7 +2535,7 @@ paths:
         required: true
       responses:
         "200":
-          description: <a href="../docs?path=docs/resources/api-guide/response/verify-account.md">More Info</a>
+          description: <a href="../docs?path=/docs/resources/api-guide/response/verify-account.md">More Info</a>
           content:
             application/json:
               schema:
@@ -3204,7 +3204,7 @@ components:
           items:
             type: integer
             format: int32
-            example: '5585101'
+            example: [5585101]
             xml:
               name: FILoginAcctId
     PersonInfoType:
