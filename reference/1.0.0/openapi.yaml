@@ -3202,10 +3202,10 @@ components:
           type: array
           items:
             type: integer
-            format: int32
-            example: 1,2,3
+            format: int32            
             xml:
               name: FILoginAcctId
+          example: 1,2,3
     PersonInfoType:
       required:
       - NameAddrType
