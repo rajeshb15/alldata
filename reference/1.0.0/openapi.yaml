@@ -3205,7 +3205,7 @@ components:
             format: int32            
             xml:
               name: FILoginAcctId
-          example: 1,2,3
+          example: [1,2]
     PersonInfoType:
       required:
       - NameAddrType
