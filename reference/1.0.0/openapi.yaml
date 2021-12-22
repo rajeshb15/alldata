@@ -3189,8 +3189,7 @@ components:
           type: array
           description: The specified detail information should be returned in the response. Possible values [FIAcctSummary, InvAcctPosAcctIdentifier]
           items:
-            type: string
-            example: 'FIAcctSummary'
+            type: string            
             xml:
               name: IncludeDetail
     FILoginAcctListType:
@@ -3203,7 +3202,7 @@ components:
           type: array
           items:
             type: integer
-            format: int32            
+            format: int32
             xml:
               name: FILoginAcctId
     PersonInfoType:
