@@ -3192,8 +3192,6 @@ components:
             type: string            
             xml:
               name: IncludeDetail
-      example:
-        IncludeDetail: ['string']
     FILoginAcctListType:
       type: object
       description: List of FI Login Accounts for which the FILoginAcctInfo is to be returned.
@@ -3205,12 +3203,9 @@ components:
           items:
             type: integer
             format: int32
+            example: 5585101
             xml:
               name: FILoginAcctId
-      example:
-        HomeID: 50040001
-        UserID: 'Newport_client7235afc'
-        FILoginAcctId: [0]
     PersonInfoType:
       required:
       - NameAddrType
