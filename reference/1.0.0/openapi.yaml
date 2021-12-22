@@ -3203,7 +3203,7 @@ components:
           items:
             type: integer
             format: int32
-            example: []
+            example: [1,2]
             xml:
               name: FILoginAcctId
     PersonInfoType:
