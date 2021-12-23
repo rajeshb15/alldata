@@ -1,6 +1,4 @@
-# AllData®
-
-## Common Data Aggregation Use Cases and AllData API Solutions
+# AllData® Common Data Aggregation Use Cases and AllData API Solutions
 
 August, 2020
 
@@ -143,6 +141,8 @@ All the APIs noted in the above use cases are applicable to PFM since PFM tools 
 - [deleteGoal](../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/deleteGoal)
 - [findGoal](../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/findGoal)
 - [createGoal](../api/?type=post&path=/WealthManagementWeb/ws/GoalMgmt/createGoal)
+
+---
 
 © 2020 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
 
