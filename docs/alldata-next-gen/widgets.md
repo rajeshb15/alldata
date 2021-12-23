@@ -677,9 +677,9 @@ Alert Resolution widget URL for partner integration environment is:
 - **Parameters on return:** The Error Resolution widget will invoke **return\_url** with action parameter that will indicate whether the user merely cancelled out of the widget or did take some action to mitigate the error. The possible values are &quot;Cancel,&quot; &quot;Deleted,&quot; and &quot;Submit.&quot; If the error resolution results in adding accounts to the **login\_acct\_id** , the newly added **acct\_id** s are returned as list of comma-separated values along with the **login\_acct\_id**.
 - **Error conditions:** In case there are processing errors, the Error Resolution widget invokes **error\_url** sent on the request. If **error\_url** is absent, the Error Resolution widget displays a message for the user. The following are the possible error conditions.
 
-- **Missing Required Parameters:** The invocation request does not have the required parameters present. (Error code 500)
-- **Invalid Parameter Passed:** When passing invalid **login\_acct\_id** or **acct\_id** during widget invocation. (Error code 510)
-- **System Error:** There was a processing error or invalid parameters were sent. (Error code 520)
+  - **Missing Required Parameters:** The invocation request does not have the required parameters present. (Error code 500)
+  - **Invalid Parameter Passed:** When passing invalid **login\_acct\_id** or **acct\_id** during widget invocation. (Error code 510)
+  - **System Error:** There was a processing error or invalid parameters were sent. (Error code 520)
 
 ### Data Pull APIs
 
@@ -767,7 +767,7 @@ External accounts that do not have harvesting alerts associated with them allow 
 
 ### Add More Accounts
 
-The Add More Accounts button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59.png) initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
+The Add More Accounts button <img class="" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59.png"> initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
 
 **Add More Accounts progress screen:**
 
@@ -781,7 +781,7 @@ If additional accounts are identified, they are automatically added to the user&
 
 ### Delete FI/Accounts
 
-For each parent CFI, a &quot;delete institution&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62.png) is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
+For each parent CFI, a &quot;delete institution&quot; button <img class="" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62.png"> is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete institution confirmation message:**
 
@@ -789,7 +789,7 @@ For each parent CFI, a &quot;delete institution&quot; button ![](../../assets/im
 
 ##### Delete Account
 
-For each child CFI, a &quot;delete account&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64.png) is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
+For each child CFI, a &quot;delete account&quot; button <img class="" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64.png"> is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete account confirmation message:**
 
@@ -797,7 +797,7 @@ For each child CFI, a &quot;delete account&quot; button ![](../../assets/images/
 
 ### Log in to FI Site
 
-For each parent CFI, there is a &quot;log in to financial institution&quot; button ![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66.png) that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
+For each parent CFI, there is a &quot;log in to financial institution&quot; button <img class="" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66.png"> that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
 
 ### Editable Account Attributes
 
