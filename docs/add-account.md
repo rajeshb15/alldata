@@ -1,6 +1,4 @@
-# AllData®
-
-## How to Use AllData APIs and Add Account Widget for Various Use Cases
+# AllData® How to Use AllData APIs and Add Account Widget for Various Use Cases
 
 May 2021
 
@@ -188,6 +186,8 @@ All the APIs in the above use cases also apply to PFM from a data-collection per
 - categorizeTransaction API
    * **Note:** This API is used to update categorization information for specific transactions by assigning or updating a new subcategory for the transactions. The new subcategory will be auto-assigned to similar transactions in the future.
 - deleteSubCategory API
+
+---
 
 © 2021 Fiserv, Inc. or its affiliates. All rights reserved. This work is confidential, and its use is strictly limited. Use is permitted only in accordance with the terms of the agreement under which it was furnished. Any other use, duplication, or dissemination without the prior written consent of Fiserv, Inc. or its affiliates is strictly prohibited. The information contained herein is subject to change without notice. Except as specified by the agreement under which the materials are furnished, Fiserv, Inc. and its affiliates do not accept any liabilities with respect to the information contained herein and are not responsible for any direct, indirect, special, consequential or exemplary damages resulting from the use of this information. No warranties, either express or implied, are granted or extended by this document.
 
