@@ -2864,7 +2864,11 @@ components:
       - ClassifiedStatus
       - TrustMode
       type: object
-      description: In response to an add account, record is inserted. This aggregate contains that information.
+      description: |
+        In response to an add account, record is inserted. This aggregate contains that information.
+        When the HarvestAddRq is sent with the \"AddNewAccts\" aggregate, the \"ClassifiedStatus\" of this aggregate will be \"Pending\".
+        When the HarvestAddRq is sent with the \"AddMoreAccts\" aggregate, the \"ClassifiedStatus\" of this aggregate will reflect the value stored in the data store.
+        This element will be present only of the request that was carried out successfully
       properties:
         TrustMode: {type: string, enum: [High,Medium,Low,Offline], example: 'High' }
         ClassifiedStatus: {type: string, enum: [Classified,Pending], example: 'Classified' }
