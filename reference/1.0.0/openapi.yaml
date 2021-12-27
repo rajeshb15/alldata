@@ -4784,7 +4784,7 @@ components:
       - HarvestRqStatus
       type: object
       properties:
-        HarvestID: {type: integer, description: The identification assigned to the harvest request. This eleent will be present only of the request that was carried out successfully., format: int32, example: '18792974' }
+        HarvestID: {type: integer, description: The identification assigned to the harvest request. This element will be present only of the request that was carried out successfully., format: int32, example: '18792974' }
         OAuthRqID: {type: string }
         HarvestRqStatus: {type: string, example: 'Completed' }
         HarvestFISts:
@@ -4874,7 +4874,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: Unique Request Identifier. The Client site sends this element with the request., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HostAcctStsInqRs: {$ref: '#/components/schemas/HostAcctStsInqRsType' }
