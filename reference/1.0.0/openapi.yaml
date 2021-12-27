@@ -3096,7 +3096,7 @@ components:
       required:
       - Severity
       type: object
-      description: This aggregate provides the status of the request.
+      description: The status of the request.
       properties:
         StatusCode: {type: integer, format: int32, example: '0' }
         Severity: {type: string, enum: [Error, Warning, Info], example: 'Info' }
