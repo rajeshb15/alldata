@@ -4406,7 +4406,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: Unique Request Identifier. The Client site send this element with the request., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BankStatementConsentRs: {$ref: '#/components/schemas/BankStatementConsentRsType' }
@@ -4513,7 +4513,7 @@ components:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
-        RqUID: {type: string, description: Unique Request Identifier. The Client Site send this element with the request., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestAddCreateAcctsRs: {$ref: '#/components/schemas/HarvestAddCreateAcctsRsType' }
       xml:
