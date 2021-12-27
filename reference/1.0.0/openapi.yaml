@@ -3256,6 +3256,7 @@ components:
         HomeID: {type: string, example: '50040001' }
     SignonRqType:
       type: object
+      description: User authentication.
       properties:
         UserInfo: {$ref: '#/components/schemas/UserInfoType' }
         SessionInfo: {$ref: '#/components/schemas/SessionInfoType' }
@@ -4212,7 +4213,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AddHostAcctsRq: {$ref: '#/components/schemas/AddHostAcctsRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -4224,6 +4225,7 @@ components:
       - AddFILoginHostAcctRq
       - UserInfo
       type: object
+      description: The aggregate containing summary information for adding the client's host accounts.
       properties:
         UserInfo: {$ref: '#/components/schemas/UserInfoType' }
         AddFILoginHostAcctRq:
@@ -4236,7 +4238,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AddUpdateHostAccountsRq: {$ref: '#/components/schemas/AddUpdateFILoginHostAcctRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -4247,6 +4249,7 @@ components:
       required:
       - AddUpdateFILoginHostAcctRq
       type: object
+      description: The aggregate containing summary information for adding the client's host accounts.
       properties:
         AddUpdateFILoginHostAcctRq:
           type: array
@@ -4466,7 +4469,7 @@ components:
       - DownloadBankStatement
       type: object
       properties:
-        FILoginAcctId: {type: integer, format: int32, example: '5586467' }
+        FILoginAcctId: {type: integer, description: FI Login Identifier. This element will be present only of the request that was carried out successfully., format: int32, example: '5586467' }
         DownloadBankStatement: {type: string, enum: [Disable,Enable], example: 'Enable' }
     FIConsentListType:
       required:
@@ -4596,6 +4599,7 @@ components:
       required:
       - HarvestAddFetchAcct
       type: object
+      description: List of fetch accounts and their associated information from the FI site which have been classified.
       properties:
         HarvestAddFetchAcct:
           type: array
@@ -4901,7 +4905,7 @@ components:
       - HostAcctStatusID
       type: object
       properties:
-        HostAcctStatusID: {type: string, example: '84594505' }
+        HostAcctStatusID: {type: string, description: Host Account Status id its Unique id, example: '84594505' }
     HarvestAddRsHeader:
       required:
       - Status
@@ -4959,6 +4963,7 @@ components:
           items: {$ref: '#/components/schemas/OAuthParamType' }
     AddMoreAcctsType:
       type: object
+      description: Aggregate structure used for adding more accounts to an already existing set of accounts or for Account Maintenance (Re classification).
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         FILoginParamList: {$ref: '#/components/schemas/FILoginParamListType' }
@@ -4971,6 +4976,7 @@ components:
       - FIId
       - TrustMode
       type: object
+      description: Aggregate structure used for adding fresh accounts. That is this is the first time accounts are going to be added for that user for the specified FI.
       properties:
         FIId: {type: string, example: '20349' }
         TrustMode: {type: string, enum: [High,Medium,Low,Offline], example: 'High' }
@@ -5132,7 +5138,7 @@ components:
       - DownloadTaxStatement
       type: object
       properties:
-        DownloadTaxStatement: {type: string, enum: [enable,disable], example: 'enable' }
+        DownloadTaxStatement: {type: string, description: User Enable or Disable the Tax Document, enum: [enable,disable], example: 'enable' }
     UserOFILoginCredentialsModRsHeader:
       required:
       - Status
@@ -5199,7 +5205,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
@@ -5210,6 +5216,7 @@ components:
       required:
       - ModFILoginHostAcctRq
       type: object
+      description: The aggregate containing summary information for updating the client's host accounts.
       properties:
         ModFILoginHostAcctRq:
           type: array
