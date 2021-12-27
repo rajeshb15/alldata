@@ -2864,6 +2864,7 @@ components:
       - ClassifiedStatus
       - TrustMode
       type: object
+      description: In response to an add account, record is inserted. This aggregate contains that information.
       properties:
         TrustMode: {type: string, enum: [High,Medium,Low,Offline], example: 'High' }
         ClassifiedStatus: {type: string, enum: [Classified,Pending], example: 'Classified' }
@@ -3077,6 +3078,7 @@ components:
       required:
       - Status
       type: object
+      description: This aggregate provides the status of the user authentication.
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         CEUserID: {type: integer, format: int64, example: '3752308'}
@@ -3091,7 +3093,7 @@ components:
       required:
       - Severity
       type: object
-      description: The status of the request.
+      description: This aggregate provides the status of the request.
       properties:
         StatusCode: {type: integer, format: int32, example: '0' }
         Severity: {type: string, enum: [Error, Warning, Info], example: 'Info' }
@@ -4151,7 +4153,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AddHostAcctsRs: {$ref: '#/components/schemas/AddHostAcctsRsType' }
@@ -4163,6 +4165,7 @@ components:
       required:
       - AddFILoginHostAcctRs
       type: object
+      description: The aggregate will provide the status of each client account received as part of the request.
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         AddFILoginHostAcctRs:
@@ -4271,7 +4274,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AddUpdateHostAccountsRs: {$ref: '#/components/schemas/addUpdateHostAccountsRsType' }
@@ -4283,6 +4286,7 @@ components:
       required:
       - AddFILoginHostAcctRs
       type: object
+      description: The aggregate will provide the status of each client account received as part of the request.
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         AddFILoginHostAcctRs:
@@ -4291,7 +4295,7 @@ components:
     addUpdateFILoginHostAcctRsType:
       type: object
       properties:
-        HostAcctStatusID: {type: integer, format: int32, example: '7000' }
+        HostAcctStatusID: {type: integer, description: The identification which is used to access the status of the accounts process., format: int32, example: '7000' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         fihostAcctIds:
           type: array
@@ -4402,7 +4406,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BankStatementConsentRs: {$ref: '#/components/schemas/BankStatementConsentRsType' }
@@ -4509,7 +4513,7 @@ components:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestAddCreateAcctsRs: {$ref: '#/components/schemas/HarvestAddCreateAcctsRsType' }
       xml:
@@ -4520,7 +4524,7 @@ components:
       type: object
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
-        FILoginAcctId: {type: integer, format: int32, example: '5586467' }
+        FILoginAcctId: {type: integer, description: FI Login Identifier. This element will be present only of the request that was carried out successfully., format: int32, example: '5586467' }
         FIUserLoginAcctInfo: {$ref: '#/components/schemas/FIUserLoginAcctInfoType' }
         FIAcctIdentifierList: {$ref: '#/components/schemas/FIAcctIdentifierListType' }
     HarvestAddFetchAcctType:
@@ -4610,7 +4614,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FIDeleteRs: {$ref: '#/components/schemas/FIDeleteRsType' }
@@ -4648,7 +4652,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         DocumentDeleteRs: {$ref: '#/components/schemas/DocumentDeleteRsType' }
@@ -4744,7 +4748,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestAddStsInqRs: {$ref: '#/components/schemas/HarvestAddStsInqRsType' }
@@ -4770,7 +4774,7 @@ components:
       - HarvestRqStatusType
       type: object
       properties:
-        FILoginAcctId: {type: integer, format: int32, example: '5586467' }
+        FILoginAcctId: {type: integer, description: FI Login identifier. This element will be present only of the request that was carried out successfully., format: int32, example: '5586467' }
         HarvestRqStatusType: {type: string, enum: [Initiated,InProgress,Completed,TimeOut,Failure,In Progress ...]}
         HarvestAcctSts:
           type: array
@@ -4780,7 +4784,7 @@ components:
       - HarvestRqStatus
       type: object
       properties:
-        HarvestID: {type: integer, format: int32, example: '18792974' }
+        HarvestID: {type: integer, description: The identification assigned to the harvest request. This element will be present only of the request that was carried out successfully., format: int32, example: '18792974' }
         OAuthRqID: {type: string }
         HarvestRqStatus: {type: string, example: 'Completed' }
         HarvestFISts:
@@ -4829,7 +4833,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestAddFetchRs: {$ref: '#/components/schemas/HarvestAddFetchRsType' }
@@ -4870,7 +4874,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HostAcctStsInqRs: {$ref: '#/components/schemas/HostAcctStsInqRsType' }
@@ -4884,7 +4888,7 @@ components:
       type: object
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
-        HostAcctStatusID: {type: string, example: '7000' }
+        HostAcctStatusID: {type: string, description: Host account status id, example: '7000' }
         HostAcctStatus: {type: string, example: 'Completed' }
     HostAcctStsInqRqHeader:
       required:
@@ -4913,7 +4917,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestAddRs: {$ref: '#/components/schemas/HarvestAddRsType' }
@@ -4929,7 +4933,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         RunId: {type: integer, format: int32, example: '18816631' }
         HarvestAddID: {type: string, example: '5874503776495949506166733353685735524c7065673d3d' }
-        FILoginAcctId: {type: integer, format: int32, example: '5586467' }
+        FILoginAcctId: {type: integer, description: FI Login Identifier. This element will be present only of the request that was carried out successfully., format: int32, example: '5586467' }
         FIUserLoginAcctInfo:
           type: array
           items: {$ref: '#/components/schemas/FIUserLoginAcctInfoType' }
@@ -5036,7 +5040,7 @@ components:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UserAcctModRs: {$ref: '#/components/schemas/UserAcctModRsType' }
       xml:
@@ -5096,7 +5100,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         TaxStatementConsentRs: {$ref: '#/components/schemas/TaxStatementConsentRsType' }
@@ -5147,7 +5151,7 @@ components:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UserOFILoginCredentialsModRs: {$ref: '#/components/schemas/UserOFILoginCredentialsModRsType' }
       xml:
@@ -5183,7 +5187,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         partnerID: {type: integer, example: '50040000' }
