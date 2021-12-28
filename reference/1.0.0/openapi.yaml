@@ -2675,6 +2675,7 @@ components:
       - FIAcctId
       - StockOption
       type: object
+      description: The aggregate containing Stock options details for the requested account. This will be present only if the request was carried out successfully.
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
         StockOption: {$ref: '#/components/schemas/StockOptionType' }
@@ -2902,18 +2903,18 @@ components:
       - GrantNo
       type: object
       properties:
-        GrantId: {type: string, example: '301231' }
-        GrantNo: {type: string, example: '0000.23809' }
-        GrantDt: {type: string, format: date-time, example: '2011-02-11' }
-        GrantType: {type: string, example: 'NQO' }
+        GrantId: {type: string, description: Unique sequence ID for a grant provided by CashEdge, example: '301231' }
+        GrantNo: {type: string, description: Unique identifier of the Grant, example: '0000.23809' }
+        GrantDt: {type: string, description: Issue date of Grant, format: date-time, example: '2011-02-11' }
+        GrantType: {type: string, description: Type of Grant, example: 'NQO' }
         ExercisePrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        FirstVestDt: {type: string, format: date-time, example: '2012-02-11' }
-        ExpirationDt: {type: string, format: date-time, example: '2021-02-11' }
-        SharesGranted: {type: number, format: double, example: '94700.0' }
+        FirstVestDt: {type: string, description: First Vesting Date of Grant, format: date-time, example: '2012-02-11' }
+        ExpirationDt: {type: string, description: Expiration Date of Grant, format: date-time, example: '2021-02-11' }
+        SharesGranted: {type: number, description: Number of shares in the Grant, format: double, example: '94700.0' }
         NxtVestDt: {type: string, format: date-time, example: '2012-02-11' }
-        VestPeriods: {type: integer, format: int32, example: '3' }
-        VestPeriodsPerYr: {type: integer, format: int32, example: '1' }
-        SharesVested: {type: number, format: double }
+        VestPeriods: {type: integer, description: Total number of vesting periods, format: int32, example: '3' }
+        VestPeriodsPerYr: {type: integer, description: Number of vesting periods per year, format: int32, example: '1' }
+        SharesVested: {type: number, description: Number of shares vested or excercisable, format: double }
         SharesSold: {type: number, format: double }
         SharesAvail: {type: number, format: double }
         OptionPlan: {type: string, example: 'Awards' }
@@ -2921,6 +2922,7 @@ components:
       required:
       - Grant
       type: object
+      description: This aggregate containing Grants for the requested account
       properties:
         Grant:
           type: array
@@ -3104,13 +3106,14 @@ components:
         StatusDesc: {type: string, example: 'Success' }
     StockOptionType:
       type: object
+      description: This aggregate containing Stock Options details for the requested account.
       properties:
-        Symbol: {type: string, example: 'BAC' }
-        Desc: {type: string, example: 'Bank of America' }
-        Cusip: {type: string, example: '060505104' }
+        Symbol: {type: string, description: Ticker symbol of the company, example: 'BAC' }
+        Desc: {type: string, description: Name of the Company, example: 'Bank of America' }
+        Cusip: {type: string, description: CUSIP/Asset ID of the Security, example: '060505104' }
         Price: {$ref: '#/components/schemas/TransactionAmtType' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
-        GrantTypeList: {type: string, example: 'NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU' }
+        GrantTypeList: {type: string, description: Types of grant, example: 'NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU' }
         DtAsOf: {type: string, format: date-time, example: '2020-08-31T12:00:00Z' }
         Grants: {$ref: '#/components/schemas/GrantsType' }
     TransactionAmtType:
@@ -3569,6 +3572,7 @@ components:
         EndTrnID: {type: integer, format: int64 }
     SelectionCriterionType:
       type: object
+      description: The selection criterion per which transactions are to be returned
       properties:
         SelRangeDt: {$ref: '#/components/schemas/SelRangeDtType' }
         SelRangeTrns: {$ref: '#/components/schemas/SelRangeTrnsType' }
@@ -3612,6 +3616,7 @@ components:
       required:
       - Status
       type: object
+      description: Credit card transactions
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         CCAcctTrns: {$ref: '#/components/schemas/CCAcctTrnsType' }
@@ -3634,7 +3639,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         CCAcctTrnInqRq: {$ref: '#/components/schemas/CCAcctTrnInqRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -3653,6 +3658,7 @@ components:
       required:
       - BankAcctTrnRec
       type: object
+      description: Deleted Banking Accounts Transactions on specified date range and row index mentioned in the request
       properties:
         CEUserID: {type: integer, format: int64, example: '3211375' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
@@ -3662,6 +3668,7 @@ components:
       required:
       - BankAcctTrnRec
       type: object
+      description: Deleted Creadit Card Accounts Transactions on specified date range and row index mentioned in the request
       properties:
         CEUserID: {type: integer, format: int64, example: '2017217' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
@@ -3672,7 +3679,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         DeletedTrnInqRs: {$ref: '#/components/schemas/DeletedTrnInqRsType' }
@@ -3688,7 +3695,7 @@ components:
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         SelRangeDt: {$ref: '#/components/schemas/SelectRangeDtType' }
-        StartRowNum: {type: integer, format: int32 }
+        StartRowNum: {type: integer, description: The start row number of the batch, format: int32 }
         BankAcctTrnInfo:
           type: array
           items: {$ref: '#/components/schemas/BankAcctTrnInfoType' }
@@ -3722,6 +3729,7 @@ components:
       required:
       - InvAcctTrnRec
       type: object
+      description: Deleted Investment Accounts Transactions on specified date range and row index mentioned in the request.
       properties:
         CEUserID: {type: integer, format: int64, example: '2017217' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
@@ -3731,6 +3739,7 @@ components:
       required:
       - OtherAcctTrnRec
       type: object
+      description: Deleted Other Accounts group Transactions on specified date range and row index mentioned in the request.
       properties:
         CEUserID: {type: integer, format: int64, example: '2017217' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
@@ -3758,6 +3767,7 @@ components:
       - EndDt
       - StartDt
       type: object
+      description: Date range to fetch transactions
       properties:
         StartDt: {type: string, example: '2020-08-25T00:00:00Z' }
         EndDt: {type: string, example: '2020-08-30T00:00:00Z' }
@@ -3770,7 +3780,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         DeletedTrnInqRq: {$ref: '#/components/schemas/DeletedTrnInqRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -3783,7 +3793,7 @@ components:
       type: object
       properties:
         SelRangeDt: {$ref: '#/components/schemas/SelectRangeDtType' }
-        AcctGroup: {type: string, enum: [Cash,Credit,Investment,OtherBill], example: 'Credit' }
+        AcctGroup: {type: string, description: To mention specific Account group. If not mentioned includes all account groups., enum: [Cash,Credit,Investment,OtherBill], example: 'Credit' }
         StartRowNum: {type: integer, format: int32, example: '1' }
     EmployerStockOptionRsHeader:
       required:
