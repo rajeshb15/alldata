@@ -2778,6 +2778,7 @@ components:
       - FIId
       - FIName
       type: object
+      description: FI Information for the FI Login Account
       properties:
         FIId: {type: string, example: '5586467' }
         FIName: {type: string, example: 'CashEdgeBank - Retail MFA' }
@@ -2965,14 +2966,17 @@ components:
       required:
       - FIAcctId
       type: object
+      description: The aggregate containing investment positions for the requested account. The aggregate will be present only if the request was carried out succesfully.
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
-        DtAsOf: {type: string, format: date-time, example: '2020-08-31T12:00:00Z' }
+        DtAsOf: {type: string, description: Date at which the securities position was retrieved, format: date-time, example: '2020-08-31T12:00:00Z' }
         InvPos:
           type: array
+          description: The aggregate containing investment positions for the requested account
           items: {$ref: '#/components/schemas/InvPosType' }
         MFPos:
           type: array
+          description: The aggregate containing positions in mutual funds for the requested account
           items: {$ref: '#/components/schemas/MFPosType' }
     InvPosType:
       required:
@@ -2981,7 +2985,7 @@ components:
       - SecPos
       type: object
       properties:
-        PosID: {type: string, example: 'UBvkWKUPO61x0zZvfxWd4g==' }
+        PosID: {type: string, description: Identifier for the security, example: 'UBvkWKUPO61x0zZvfxWd4g==' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
         SecPos: {$ref: '#/components/schemas/SecPosType' }
     LimitAmountType:
@@ -3010,7 +3014,7 @@ components:
         PosID: {type: string, example: 'UBvkWKUPO61x0zZvfxWd4g==' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
         SecPos: {$ref: '#/components/schemas/SecPosType' }
-        ACHIndicator: {type: string }
+        ACHIndicator: {type: string, description: Indicates whether this holding is ACH enabled. Possible values: Enabled/Disabled }
     PersonNameType:
       type: object
       properties:
@@ -3062,19 +3066,21 @@ components:
       required:
       - Ticker
       type: object
+      description: Information about the security
       properties:
-        Ticker: {type: string, example: 'VWIUX' }
-        SecDesc: {type: string, example: 'VANGUARD INTERMEDIATE TERM TAX' }
+        Ticker: {type: string, description: Ticker symbol of the security, example: 'VWIUX' }
+        SecDesc: {type: string, description: Full name of the security, example: 'VANGUARD INTERMEDIATE TERM TAX' }
         Property: 
           type: array
           items: {$ref: '#/components/schemas/PropertyType' }
         AssetClass: {$ref: '#/components/schemas/AssetClassType' }
-        Marginable: {type: string, enum: [Y,N], example: 'Y' }
-        SecurityType: {type: string }
+        Marginable: {type: string, description: Indicates whether this holding is marginable, enum: [Y,N], example: 'Y' }
+        SecurityType: {type: string, description: Type of security }
     SecPosType:
       required:
       - MarketValue
       type: object
+      description: Position and value of the security
       properties:
         UnitPrice: {$ref: '#/components/schemas/TransactionAmtType' }
         Units: {type: number, format: double, example: '5' }
@@ -3203,7 +3209,7 @@ components:
               name: IncludeDetail
     FILoginAcctListType:
       type: object
-      description: List of FI Login Accounts for which the FILoginAcctInfo is to be returned.
+      description: List of FI Login Accounts for which data is to be returned.
       properties:
         HomeID: {type: integer, format: int64, example: '50040001' }
         UserID: {type: string, example: 'Newport_client7235afc'}
@@ -3752,8 +3758,8 @@ components:
       - TrnType
       type: object
       properties:
-        TrnID: {type: integer, format: int64, example: '10495243' }
-        FITrnID: {type: integer, format: int32 }
+        TrnID: {type: integer, description: Unique transaction ID assigned by CashEdge, format: int64, example: '10495243' }
+        FITrnID: {type: integer, description: Unique transaction ID assigned by the financial institution from where this transaction was fetched if available from the FI, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
         PostedDt: {type: string, format: date-time, example: '2020-09-22' }
         OrigDt: {type: string, format: date-time, example: '2020-09-22' }
@@ -3862,7 +3868,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         InvAcctPosInqRq: {$ref: '#/components/schemas/InvAcctPosInqRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -3901,6 +3907,7 @@ components:
       - InvAcctTrnRec
       - SelectionCriterion
       type: object
+      description: Investment account transactions. This aggregate will be present only if the request was carried out successfully.
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
@@ -3956,6 +3963,7 @@ components:
       - OtherAcctTrnRec
       - SelectionCriterion
       type: object
+      description: Other account transactions
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
         SelectionCriterion: {$ref: '#/components/schemas/SelectionCriterionType' }
@@ -3969,7 +3977,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         OtherAcctTrnInqRq: {$ref: '#/components/schemas/OtherAcctTrnInqRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -3986,6 +3994,7 @@ components:
         SelectionCriterion: {$ref: '#/components/schemas/SelectionCriterionType' }
     AcctTaxDocDetailType:
       type: object
+      description: Provides TaxDocumentID for account level tax document details
       properties:
         AcctId: {type: integer, format: int64, example: '5586481' }
         TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
@@ -3993,6 +4002,7 @@ components:
       required:
       - FIConsent
       type: object
+      description: Provides TaxDocumentID for FI level tax document details
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
@@ -4035,6 +4045,7 @@ components:
       required:
       - UserConsent
       type: object
+      description: Describes the user consent status.
       properties:
         UserConsent: {type: string, example: 'enabled' }
     TaxDocumentInqRqHeader:
@@ -4043,7 +4054,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
@@ -4051,6 +4062,7 @@ components:
         name: TaxDocumentInqRqHeader
     FIAcctTrnsListType:
       type: object
+      description: Transactions corresponding to the search criterion specified in the request
       properties:
         SearchCriterion: {$ref: '#/components/schemas/SearchCriterionType' }
         FILoginAcctTrns:
@@ -4061,6 +4073,7 @@ components:
       - FIAcctId
       - FIAcctInfo
       type: object
+      description: Transactions corresponding to the search criterion specified in the request for all FI Account in this FI Login Account
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
         FIAcctInfo: {$ref: '#/components/schemas/FIAcctInfoType' }
@@ -4075,8 +4088,9 @@ components:
       - FIAcctTrns
       - FIInfo
       type: object
+      description: Transactions corresponding to the search criterion in all accounts accross all specified FI Login Accounts.
       properties:
-        FILoginAcctId: {type: integer, format: int32, example: '5586467' }
+        FILoginAcctId: {type: integer, description: Identifies the FI Login account, format: int32, example: '5586467' }
         FIInfo: {$ref: '#/components/schemas/FIInfoType' }
         FIAcctTrns:
           type: array
@@ -4103,8 +4117,9 @@ components:
         FIAcctTrnsList: {$ref: '#/components/schemas/FIAcctTrnsListType' }
     SearchCriterionType:
       type: object
+      description: The search criterion for which transactions are required
       properties:
-        TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
+        TrnType: {type: string, description: Transaction type,  enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
         SelRangeDt: {$ref: '#/components/schemas/SelRangeDtType' }
         SelRangeAmt: {$ref: '#/components/schemas/SelRangeAmtType' }
     SelRangeAmtType:
@@ -4112,6 +4127,7 @@ components:
       - EndAmt
       - StartAmt
       type: object
+      description: The amount range for which transactions are to be returned
       properties:
         StartAmt: {$ref: '#/components/schemas/AmountType' }
         EndAmt: {$ref: '#/components/schemas/AmountType' }
@@ -4122,7 +4138,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FindTrnsInqRq: {$ref: '#/components/schemas/FindTrnsInqRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -4155,7 +4171,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
