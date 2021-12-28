@@ -132,7 +132,7 @@ AllData can be configured to categorize transactions.
 All the APIs noted in the above use cases are applicable to PFM since PFM tools are typically used to provide a complete picture of an end user&#39;s financial position. In addition to the APIs noted above, the following can also be applied to the PFM use case:
 
 - [categorizeTransaction](../api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/categorizeTransaction)
-- [deleteSubCategory](../api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/deleteSubcategory)
+- [deleteSubCategory](../api/?type=post&path=/WealthManagementWeb/ws/TxnMgmt/deleteSubCategory)
 - [createBudget](../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/createBudget)
 - [editBudget](../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/editBudget)
 - [deleteBudget](../api/?type=post&path=/WealthManagementWeb/ws/BudgetMgmt/deleteBudget)
