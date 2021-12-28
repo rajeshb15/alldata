@@ -3757,6 +3757,7 @@ components:
       - PostedDt
       - TrnType
       type: object
+      description: Other account type transaction record.
       properties:
         TrnID: {type: integer, description: Unique transaction ID assigned by CashEdge, format: int64, example: '10495243' }
         FITrnID: {type: integer, description: Unique transaction ID assigned by the financial institution from where this transaction was fetched if available from the FI, format: int32 }
