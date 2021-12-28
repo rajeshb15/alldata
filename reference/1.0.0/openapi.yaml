@@ -2697,6 +2697,7 @@ components:
       - AcctType
       - ExtAcctType
       type: object
+      description: Account identifier
       properties:
         AcctId: {type: integer, format: int64, example: '5586481' }
         AcctType: {type: string, enum: [DDA,CCA,INV,OAA,OLA,LOC,EQU,ILA,INS,BPA,SDA], example: 'SDA' }
@@ -3320,6 +3321,7 @@ components:
       - RqUID
       - Status
       type: object
+      description: The aggregate containing recent account update details for the requested account. This aggregate will be present only of the request that was carried out successfully.
       properties:
         RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
@@ -3335,12 +3337,12 @@ components:
       - LastUpdateStatusCode
       type: object
       properties:
-        AcctId: {type: integer, format: int64, example: '5586481' }
-        AcctNickName: {type: string, example: 'Banking' }
+        AcctId: {type: integer, description: Account identifier, format: int64, example: '5586481' }
+        AcctNickName: {type: string, description: Account nickname for AcctID, example: 'Banking' }
         ErrorCode: {type: string }
         LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
-        LastUpdateSuccess: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
-        LastUpdateStatusCode: {type: string, enum: [SUCCESS, FAILURE, PENDING, TIME_OUT], example: 'SUCCESS' }
+        LastUpdateSuccess: {type: string, description: Last successful update time, format: date-time, example: '2021-10-31T12:00:00z' }
+        LastUpdateStatusCode: {type: string, description: Last update status code, enum: [SUCCESS, FAILURE, PENDING, TIME_OUT], example: 'SUCCESS' }
     FILoginAccountListType:
       type: object
       properties:
@@ -3353,10 +3355,10 @@ components:
       - FIId
       type: object
       properties:
-        FILoginAcctId: {type: integer, format: int32, example: '5586467' }
-        FIId: {type: string, example: '505003' }
+        FILoginAcctId: {type: integer, description: FI Login identifier, format: int32, example: '5586467' }
+        FIId: {type: string, description: FI identifier, example: '505003' }
         ErrorCode: {type: string }
-        LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
+        LastUpdateAttempt: {type: string, description: Time of last account details update, format: date-time, example: '2021-10-31T12:00:00z' }
         FIAccountList: {$ref: '#/components/schemas/FIAccountListType' }
     AccountUpdateSummaryRqHeader:
       required:
@@ -3365,7 +3367,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request of getAccountUpdateSummary request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AccountUpdateSummaryRq: {$ref: '#/components/schemas/AccountUpdateSummaryRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -3406,7 +3408,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FIAcctSummaryInqRq: {$ref: '#/components/schemas/FIAcctSummaryInqRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -3421,6 +3423,7 @@ components:
       required:
       - AvailableBankStatements
       type: object
+      description: Provides AcctID and corresponding bank statement document lists.
       properties:
         AcctId: {type: integer, format: int64, example: '5586481' }
         AvailableBankStatements: {type: string, example: '9-2020' }
@@ -3439,7 +3442,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BankStatementInqRs: {$ref: '#/components/schemas/BankStatementInqRsType' }
@@ -3462,6 +3465,7 @@ components:
       required:
       - FIAcctsStmtDetail
       type: object
+      description: List of FILoginAcctIds and their corresponding consent status is provided.
       properties:
         FIAcctsStmtDetail:
           type: array
@@ -3470,6 +3474,7 @@ components:
       required:
       - UserConsent
       type: object
+      description: Contains the user opt-in/opt-out status for Bank statement.
       properties:
         UserConsent: {type: string, example: 'enabled' }
     BankStatementRqHeader:
@@ -3531,6 +3536,7 @@ components:
       - FIAcctId
       - SelectionCriterion
       type: object
+      description: Deposit account transactions. This element will be present only if the request could be carried out succesfully.
       properties:
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
@@ -3542,6 +3548,7 @@ components:
       required:
       - StartDt
       type: object
+      description: The created on date range for which transactions are to be returned.
       properties:
         StartDt: {type: string, format: date-time, example: '2020-01-30T00:00:00Z' }
         EndDt: {type: string, format: date-time, example: '2020-08-30T00:00:00Z' }
@@ -3550,11 +3557,13 @@ components:
       - EndDt
       - StartDt
       type: object
+      description: The date range for which transactions are to be returned. 
       properties:
         StartDt: {type: string, format: date-time, example: '2020-01-30T00:00:00Z' }
         EndDt: {type: string, format: date-time, example: '2020-08-30T00:00:00Z' }
     SelRangeTrnsType:
       type: object
+      description: The transaction identifier range for which transactions are to be returned.
       properties:
         StartTrnID: {type: integer, format: int64 }
         EndTrnID: {type: integer, format: int64 }
@@ -3571,7 +3580,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         DepAcctTrnInqRq: {$ref: '#/components/schemas/DepAcctTrnInqRqType' }
         partnerID: {type: integer, example: '50040000' }
