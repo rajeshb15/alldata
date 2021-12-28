@@ -767,7 +767,9 @@ External accounts that do not have harvesting alerts associated with them allow 
 
 ### Add More Accounts
 
-The Add More Accounts button <img class="" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59.png"> initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59a.png)
+
+The Add More Accounts button initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
 
 **Add More Accounts progress screen:**
 
@@ -781,7 +783,9 @@ If additional accounts are identified, they are automatically added to the user&
 
 ### Delete FI/Accounts
 
-For each parent CFI, a &quot;delete institution&quot; button <img class="" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62.png"> is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62a.png)
+
+For each parent CFI, a &quot;delete institution&quot; button is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete institution confirmation message:**
 
@@ -789,7 +793,9 @@ For each parent CFI, a &quot;delete institution&quot; button <img class="" src="
 
 ##### Delete Account
 
-For each child CFI, a &quot;delete account&quot; button <img class="" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64.png"> is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64a.png)
+
+For each child CFI, a &quot;delete account&quot; button is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete account confirmation message:**
 
@@ -797,7 +803,9 @@ For each child CFI, a &quot;delete account&quot; button <img class="" src="../..
 
 ### Log in to FI Site
 
-For each parent CFI, there is a &quot;log in to financial institution&quot; button <img class="" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66.png"> that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
+![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66a.png)
+
+For each parent CFI, there is a &quot;log in to financial institution&quot; button that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
 
 ### Editable Account Attributes
 
