@@ -3014,7 +3014,7 @@ components:
         PosID: {type: string, example: 'UBvkWKUPO61x0zZvfxWd4g==' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
         SecPos: {$ref: '#/components/schemas/SecPosType' }
-        ACHIndicator: {type: string, description: Indicates whether this holding is ACH enabled. Possible values are Enabled/Disabled }
+        ACHIndicator: {type: string, description: Indicates whether this holding is ACH enabled. Possible value is Enabled or Disabled }
     PersonNameType:
       type: object
       properties:
