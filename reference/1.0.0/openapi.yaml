@@ -2972,9 +2972,11 @@ components:
         DtAsOf: {type: string, description: Date at which the securities position was retrieved, format: date-time, example: '2020-08-31T12:00:00Z' }
         InvPos:
           type: array
+          description: The aggregate containing investment positions for the requested account
           items: {$ref: '#/components/schemas/InvPosType' }
         MFPos:
           type: array
+          description: The aggregate containing positions in mutual funds for the requested account
           items: {$ref: '#/components/schemas/MFPosType' }
     InvPosType:
       required:
@@ -3387,7 +3389,7 @@ components:
       - RqUID
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request of getAccountUpdateSummary request., example: 'RqUID0'}
     FIAcctSummaryInqRsHeader:
       required:
       - Status
@@ -3430,7 +3432,6 @@ components:
       required:
       - AvailableBankStatements
       type: object
-      description: Provides AcctID and corresponding bank statement document lists.
       properties:
         AcctId: {type: integer, format: int64, example: '5586481' }
         AvailableBankStatements: {type: string, example: '9-2020' }
@@ -3467,6 +3468,7 @@ components:
         FIConsent: {type: string, example: 'enabled' }
         AcctBankStmtDetail:
           type: array
+          description: Provides AcctID and corresponding bank statement document lists.
           items: {$ref: '#/components/schemas/AcctBankStmtDetailType' }
     FIAcctsStmtListType:
       required:
@@ -3711,6 +3713,7 @@ components:
           items: {$ref: '#/components/schemas/InvstAcctTrnInfoType' }
         OtherAcctTrnInfo:
           type: array
+          description: Deleted Other Accounts group Transactions on specified date range and row index mentioned in the request.
           items: {$ref: '#/components/schemas/OtherAcctTrnInfoType' }
     InvAcctTrnRecType:
       required:
@@ -3743,7 +3746,6 @@ components:
       required:
       - OtherAcctTrnRec
       type: object
-      description: Deleted Other Accounts group Transactions on specified date range and row index mentioned in the request.
       properties:
         CEUserID: {type: integer, format: int64, example: '2017217' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
@@ -3968,6 +3970,7 @@ components:
         SelectionCriterion: {$ref: '#/components/schemas/SelectionCriterionType' }
         OtherAcctTrnRec:
           type: array
+          description: Other account type transaction record
           items: {$ref: '#/components/schemas/OtherAcctTrnRecType' }
     OtherAcctTrnInqRqHeader:
       required:
