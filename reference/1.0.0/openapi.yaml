@@ -3481,7 +3481,7 @@ components:
       required:
       - UserConsent
       type: object
-      description: Contains the user opt-in or opt-out status for Bank statement.
+      description: Contains the user optin or optout status for Bank statement.
       properties:
         UserConsent: {type: string, example: 'enabled' }
     BankStatementRqHeader:
