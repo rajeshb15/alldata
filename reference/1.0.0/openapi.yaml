@@ -2972,11 +2972,9 @@ components:
         DtAsOf: {type: string, description: Date at which the securities position was retrieved, format: date-time, example: '2020-08-31T12:00:00Z' }
         InvPos:
           type: array
-          description: The aggregate containing investment positions for the requested account
           items: {$ref: '#/components/schemas/InvPosType' }
         MFPos:
           type: array
-          description: The aggregate containing positions in mutual funds for the requested account
           items: {$ref: '#/components/schemas/MFPosType' }
     InvPosType:
       required:
@@ -3116,7 +3114,7 @@ components:
       properties:
         Symbol: {type: string, description: Ticker symbol of the company, example: 'BAC' }
         Desc: {type: string, description: Name of the Company, example: 'Bank of America' }
-        Cusip: {type: string, description: CUSIP/Asset ID of the Security, example: '060505104' }
+        Cusip: {type: string, description: CUSIP or Asset ID of the Security, example: '060505104' }
         Price: {$ref: '#/components/schemas/TransactionAmtType' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
         GrantTypeList: {type: string, description: Types of grant, example: 'NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU' }
