@@ -3084,7 +3084,7 @@ components:
       description: Position and value of the security
       properties:
         UnitPrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        Units: {type: number, format: double, example: '5' }
+        Units: {type: number, description: Number of securities., format: double, example: '5' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
         CostBasis: {$ref: '#/components/schemas/TransactionAmtType' }
     SignonRsType:
@@ -3924,7 +3924,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         InvAcctTrnInqRq: {$ref: '#/components/schemas/InvAcctTrnInqRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -4012,6 +4012,7 @@ components:
         FIConsent: {type: string, example: 'enabled' }
         AcctTaxDocDetail:
           type: array
+          description: Provides TaxDocumentID for Account level tax document details.
           items: {$ref: '#/components/schemas/AcctTaxDocDetailType' }
     FILoginAcctTaxDocListType:
       required:
@@ -4020,6 +4021,7 @@ components:
       properties:
         FILoginAcctTaxDocDetail:
           type: array
+          description: Provides TaxDocumentID for FI level tax document details.
           items: {$ref: '#/components/schemas/FILoginAcctTaxDocDetailType' }
     TaxDocumentInqRsHeader:
       required:
@@ -4040,6 +4042,7 @@ components:
       - Status
       - UserTaxDocConsent
       type: object
+      description: Contains the Tax document response details.
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         UserTaxDocConsent: {$ref: '#/components/schemas/UserTaxDocConsentType' }
@@ -4070,6 +4073,7 @@ components:
         SearchCriterion: {$ref: '#/components/schemas/SearchCriterionType' }
         FILoginAcctTrns:
           type: array
+          description: Transactions corresponding to the search criterion in all accounts across all specified FI Login Accounts.
           items: {$ref: '#/components/schemas/FILoginAcctTrnsType' }
     FIAcctTrnsType:
       required:
@@ -4097,6 +4101,7 @@ components:
         FIInfo: {$ref: '#/components/schemas/FIInfoType' }
         FIAcctTrns:
           type: array
+          description: Transactions corresponding to the search criterion specified in the request for all FI Account in this FI Login Account.
           items: {$ref: '#/components/schemas/FIAcctTrnsType' }
     FindTrnsInqRsHeader:
       required:
