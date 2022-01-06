@@ -6019,7 +6019,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestStsInqRs: {$ref: '#/components/schemas/HarvestStsInqRsType' }
@@ -6056,9 +6056,9 @@ components:
       - HarvestAddID
       type: object
       properties:
-        HarvestAddID: {type: string, example: '5874503776495949506166733353685735524c7065673d3d' }
+        HarvestAddID: {type: string, description: Harvest request identification, example: '5874503776495949506166733353685735524c7065673d3d' }
         RunId: {type: integer, format: int32, example: '18816631' }
-        IncludeDetail: {type: string }
+        IncludeDetail: {type: string, description: Request for details about the harvest status. Possible values [FIStatus, AcctStatus] }
     HarvestRsHeader:
       required:
       - Status
@@ -6093,6 +6093,7 @@ components:
       required:
       - FIId
       type: object
+      description: List of FI identifiers
       properties:
         FIId:
           type: array
@@ -6133,6 +6134,7 @@ components:
         name: HarvestRqHeader
     HarvestRqType:
       type: object
+      description: Request for initiating harvesting of accounts in one or more FI Login Accounts of a user
       properties:
         HarvestFILoginAcctList: {$ref: '#/components/schemas/HarvestFILoginAcctListType' }
         FIAcctList: {$ref: '#/components/schemas/FIAcctListType' }
@@ -6237,7 +6239,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FIInfoRq: {$ref: '#/components/schemas/FIInfoRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -6247,11 +6249,11 @@ components:
     FIInfoRqType:
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, description: FI Identifier, example: '20349' }
         FIIdList: {$ref: '#/components/schemas/FIIdListType' }
         SelRangeDt: {$ref: '#/components/schemas/SelRangeDtType' }
-        ABARoutingNumber: {type: string }
-        FIInfoRequired: {type: string }
+        ABARoutingNumber: {type: string, description: ABA Routing Number of the FI. }
+        FIInfoRequired: {type: string, description: The possible values are [FIIDInfo, FIIDInfoList]. In case of the value being FIIDInfo, the response will contain only the FIID list. In case of the value being FIIDInfoList, the response will contain a list of FI with all their requisite information. If this value is not proveded, FIIDInfo will be assumed. }
     FINameInfoListType:
       type: object
       properties:
