@@ -5903,7 +5903,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalEditRs: {$ref: '#/components/schemas/GoalEditRsType' }
@@ -5917,7 +5917,7 @@ components:
       - Status
       type: object
       properties:
-        GoalId: {type: integer }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully." }
         Status: {$ref: '#/components/schemas/StatusType' }
     GoalEditRqHeader:
       required:
@@ -5926,7 +5926,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalEditRq: {$ref: '#/components/schemas/GoalEditRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5938,10 +5938,10 @@ components:
       - GoalId
       type: object
       properties:
-        GoalId: {type: integer }
-        GoalName: {type: string }
-        TargetAmt: {type: number, format: double, example: '100' }
-        TargetDate: {type: string, format: date-time }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully."}
+        GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc"}
+        TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save"}
+        TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
         AccountList: {$ref: '#/components/schemas/GoalAccountListType' }
     GoalFindAccountListType:
       type: object
