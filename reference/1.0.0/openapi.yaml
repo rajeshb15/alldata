@@ -3108,7 +3108,7 @@ components:
       type: object
       description: The status of the request.
       properties:
-        StatusCode: {type: integer, format: int32, example: 0, description: "The status code for the response.A code of “0” implies complete success.Other status codes could mean either success or failure depending upon the value of the severity of the code."}
+        StatusCode: {type: integer, format: int32, example: 0, description: "The status code for the response. A code of “0” implies complete success.Other status codes could mean either success or failure depending upon the value of the severity of the code."}
         Severity: {type: string, enum: [Error, Warning, Info], example: 'Info', description: "Conveys the status of the request, whether the request was processed successfully, or whether some error was encountered while processing the request."}
         StatusDesc: {type: string, example: 'Success', description: "A meaningful message that conveys the nature of the error, if any."}
     StockOptionType:
@@ -5868,7 +5868,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalDeleteRs: {$ref: '#/components/schemas/GoalDelRsType' }
@@ -5881,7 +5881,7 @@ components:
       - GoalId
       type: object
       properties:
-        GoalId: {type: integer }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request."}
     GoalDeleteRqHeader:
       required:
       - GoalDeleteRq
@@ -5889,7 +5889,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalDeleteRq: {$ref: '#/components/schemas/GoalDelRqType' }
         partnerID: {type: integer, example: '50040000' }
