@@ -30,6 +30,9 @@
 - sections:
   - title: Add Account
     link: docs/add-account.md
+- sections:
+  - title: AllData WS API
+    link: docs/alldata-ws-api.md
     sections:
     - title: Overview
       link: docs/ws-api/overview.md
@@ -39,9 +42,6 @@
       link: docs/ws-api/webservices-apis.md
     - title: Appendices
       link: docs/ws-api/appendices.md
-- sections:
-  - title: AllData WS API
-    link: docs/alldata-ws-api.md
 - sections:
   - title: AllData Next-Gen
     link: docs/alldata-next-gen.md
