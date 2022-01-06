@@ -5939,8 +5939,8 @@ components:
       type: object
       properties:
         GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully."}
-        GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc"}
-        TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save"}
+        GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
+        TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
         TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
         AccountList: {$ref: '#/components/schemas/GoalAccountListType' }
     GoalFindAccountListType:
@@ -5955,7 +5955,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalFindRs: {$ref: '#/components/schemas/GoalFindRsType' }
@@ -5987,13 +5987,13 @@ components:
       - TargetDate
       type: object
       properties:
-        GoalId: {type: string }
-        GoalName: {type: string }
-        GoalStatus: {type: string }
-        TargetAmt: {type: number, format: double, example: '100' }
-        TargetDate: {type: string, format: date-time }
-        AddedOn: {type: string, format: date-time }
-        ModifiedOn: {type: string, format: date-time }
+        GoalId: {type: string, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully." }
+        GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
+        GoalStatus: {type: string, example: 'Off Schedule', description: "Status of goal requested."}
+        TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
+        TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
+        AddedOn: {type: string, format: date-time, example: '2021-11-16T06:42:01-08:00', description: "Goal created date."}
+        ModifiedOn: {type: string, format: date-time, example: '2021-12-01T00:00:59-08:00' }
         AccountList: {$ref: '#/components/schemas/GoalFindAccountListType' }
     GoalFindRqHeader:
       required:
@@ -6001,7 +6001,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalFindRq: {$ref: '#/components/schemas/GoalFindRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -6013,7 +6013,7 @@ components:
       - GoalId
       type: object
       properties:
-        GoalId: {type: integer }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request." }
     HarvestStsInqRsHeader:
       required:
       - Status
