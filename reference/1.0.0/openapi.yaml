@@ -2561,7 +2561,7 @@ components:
         BalType: {type: string, example: 'CreditLimit' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         EffDt: {type: string, example: '2020-08-31T12:00:00Z'}
-        Desc: {type: string }
+        Desc: {type: string, example: 'OfflineTest'}
         ValueType: {type: string }
     AcctDateTimeType:
       required:
@@ -3296,6 +3296,7 @@ components:
       - UserID
       - UserPassword
       type: object
+      description: "To identify the user to perform action."
       properties:
         UserID: {type: string, example: 'Newport_client7235afc'}
         HomeID: {type: integer, format: int64, example: '50040001'}
@@ -4127,7 +4128,7 @@ components:
       type: object
       description: The search criterion for which transactions are required
       properties:
-        TrnType: {type: string, description: Transaction type,  enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
+        TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
         SelRangeDt: {$ref: '#/components/schemas/SelRangeDtType' }
         SelRangeAmt: {$ref: '#/components/schemas/SelRangeAmtType' }
     SelRangeAmtType:
@@ -5632,7 +5633,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AddOfflineAcctRs: {$ref: '#/components/schemas/AddOfflineAcctRsType' }
@@ -5642,8 +5643,8 @@ components:
       type: object
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
-        AcctName: {type: string }
-        AcctId: {type: integer, format: int64, example: '5586481' }
+        AcctName: {type: string, example: "Test_Offline2", description: "Name of the added offline account." }
+        AcctId: {type: integer, format: int64, example: '5586481', description: "ID of the added offline account." }
     AddOfflineAcctRqHeader:
       required:
       - AddOfflineAcctRq
@@ -5653,7 +5654,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AddOfflineAcctRq: {$ref: '#/components/schemas/AddOfflineAcctRqType' }
       xml:
@@ -5670,13 +5671,15 @@ components:
       - AcctName
       - AcctTypeId
       type: object
+      description: "Account info to add the account."
       properties:
-        AdvisorAccess: {type: string, enum: [None,Summary,Full Account] }
-        AcctName: {type: string }
+        AdvisorAccess: {type: string, enum: [None,Summary,Full Account], example: "Full Account", description: "Advisor permission to view the account information." }
+        AcctName: {type: string, example: "Test_Offline2", description: "Name of the account to be added." }
         AcctBal:
           type: array
+          description: "Account balance."
           items: {$ref: '#/components/schemas/AcctBalType' }
-        AcctTypeId: {type: string, example: '50500105' }
+        AcctTypeId: {type: string, example: '50500105', description: "ID of the account type." }
         AccountOwnerShip: {type: string, example: 'Individual' }
         Instrument: {type: string, example: 'N/A' }
         RetirementStatus: {type: string, example: 'Non Retirement' }
