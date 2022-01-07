@@ -3084,7 +3084,7 @@ components:
       description: "Position and value of the security"
       properties:
         UnitPrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        Units: {type: number, description: "Number of securities"., format: double, example: '5' }
+        Units: {type: number, description: "Number of securities.", format: double, example: '5' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
         CostBasis: {$ref: '#/components/schemas/TransactionAmtType' }
     SignonRsType:
