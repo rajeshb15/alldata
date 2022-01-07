@@ -6058,7 +6058,7 @@ components:
       properties:
         HarvestAddID: {type: string, description: Harvest request identification, example: '5874503776495949506166733353685735524c7065673d3d' }
         RunId: {type: integer, format: int32, example: '18816631' }
-        IncludeDetail: {type: string, description: Request for details about the harvest status. Possible values [FIStatus, AcctStatus] }
+        IncludeDetail: {type: string, description: 'Request for details about the harvest status. Possible values [FIStatus, AcctStatus]' }
     HarvestRsHeader:
       required:
       - Status
@@ -6253,7 +6253,7 @@ components:
         FIIdList: {$ref: '#/components/schemas/FIIdListType' }
         SelRangeDt: {$ref: '#/components/schemas/SelRangeDtType' }
         ABARoutingNumber: {type: string, example: '263178070', description: ABA Routing Number of the FI. }
-        FIInfoRequired: {type: string, example: 'FIIDInfo', description: The possible values are [FIIDInfo, FIIDInfoList]. In case of the value being FIIDInfo, the response will contain only the FIID list. In case of the value being FIIDInfoList, the response will contain a list of FI with all their requisite information. If this value is not proveded, FIIDInfo will be assumed. }
+        FIInfoRequired: {type: string, example: 'FIIDInfo', description: 'The possible values are [FIIDInfo, FIIDInfoList]. In case of the value being FIIDInfo, the response will contain only the FIID list. In case of the value being FIIDInfoList, the response will contain a list of FI with all their requisite information. If this value is not proveded, FIIDInfo will be assumed.' }
     FINameInfoListType:
       type: object
       properties:
@@ -6302,8 +6302,8 @@ components:
       - FIName
       type: object
       properties:
-        FIName: {type: string, example: 'Cashedge', description: Name of the FI that is desired. The FIName need not be the full name. It could be part of the name.ExampleBank Of America Well (for Wells Fargo)The name can be case insensitive. }
-        FIInfoRequired: {type: string, example: 'FIIDInfo', description: The possible values are.FIIDInfoFIIDInfoListIn case of the value being FIIDInfo, the response will contain only the FIID list.In case of the value being FIIFInfoList, the response will contain a list of FI with all their requisite information.If this value is not provided, FIIDInfo will be assumed. }
+        FIName: {type: string, example: 'Cashedge', description: 'Name of the FI that is desired. The FIName need not be the full name. It could be part of the name.ExampleBank Of America Well (for Wells Fargo)The name can be case insensitive.' }
+        FIInfoRequired: {type: string, example: 'FIIDInfo', description: 'The possible values are.FIIDInfoFIIDInfoListIn case of the value being FIIDInfo, the response will contain only the FIID list.In case of the value being FIIFInfoList, the response will contain a list of FI with all their requisite information.If this value is not provided, FIIDInfo will be assumed.' }
         FISearchSize: {type: integer }
     FISearchRqHeader:
       required:
