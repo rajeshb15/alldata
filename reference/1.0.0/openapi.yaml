@@ -5324,7 +5324,7 @@ components:
       type: object
       properties:
         content: {type: string, writeOnly: true }
-        type: {type: string }
+        type: {type: string, example: 'SimilarTxns' }
     TransactionListType:
       required:
       - Transaction
@@ -5337,8 +5337,9 @@ components:
         name: TransactionListType
     TxnSubcategory:
       type: object
+      description: 'SubCategory details of a Transaction.'
       properties:
-        content: {type: string, writeOnly: true }
+        content: {type: string, writeOnly: true, example: 'CustomCatgNew_001' }
         createNew: {type: boolean }
     TxnType:
       required:
@@ -5346,8 +5347,8 @@ components:
       - SubCategory
       type: object
       properties:
-        TransID: {type: integer, format: int64 }
-        Category: {type: string }
+        TransID: {type: integer, format: int64, description: 'Unique Transaction Identifier.' }
+        Category: {type: string, example: 'Goods & Merchandise', description: 'Category details of a Transaction.' }
         SubCategory: {$ref: '#/components/schemas/TxnSubcategory' }
         ApplyToFutureTxns: {$ref: '#/components/schemas/ApplyToFutureTxns' }
       xml:
@@ -5416,8 +5417,8 @@ components:
       - SubCategory
       type: object
       properties:
-        Category: {type: string }
-        SubCategory: {type: string }
+        Category: {type: string, example: 'Services' }
+        SubCategory: {type: string, example: 'Test_services' }
     ParameterType:
       type: object
       properties:
