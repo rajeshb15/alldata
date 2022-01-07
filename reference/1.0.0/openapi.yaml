@@ -5748,9 +5748,9 @@ components:
       - StartDate
       type: object
       properties:
-        Message: {type: string, example: 'Sample Message', description: "FI Messages are special instructions provided for users to follow to aggregate information from that FI." }
+        Message: {type: string, example: "Sample Message", description: "FI Messages are special instructions provided for users to follow to aggregate information from that FI." }
         UpdateErrorCode: {type: integer, format: int32, example: 301, description: "Harvesting error code in which instance, this message to be shared with User.Possible values: ERRORRESOLUTION(ErrorBasedAlerts) ADDACCOUNTS(AddAccountMessages) INFORMATIVE(InformativeAlerts)." }
-        MessageType: {type: string, example: 'API-ERRORRESOLUTION', description: "Contains message type information." }
+        MessageType: {type: string, example: "API-ERRORRESOLUTION", description: "Contains message type information." }
         StartDate: {type: string, format: date-time, example: "2021-12-20T12:00:00Z", description: "Starting date to share this message with User." }
         EndDate: {type: string, format: date-time, example: "2021-12-20T12:00:00Z", description: "End date to stop sharing this message with User." }
     FIMessagesDetailsType:
