@@ -1032,7 +1032,3 @@ Other brands and their products are trademarks or registered trademarks of their
 This document has been created by Fiserv and is classified **Fiserv Confidential**. This document is restricted to the received party and not to be forwarded or transferred without the approval of Fiserv.
 
 
-<br>
-<br>
-
-Links: [Overview](?path=/docs/alldata-next-gen/overview-integration-approach.md), [Widgets](?path=/docs/alldata-next-gen/widgets.md), [Implementation Approaches](?path=/docs/alldata-next-gen/implementation-approaches.md), [Appendices](?path=/docs/alldata-next-gen/appendices.md)
