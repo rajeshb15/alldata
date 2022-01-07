@@ -3094,7 +3094,7 @@ components:
       description: This aggregate provides the status of the user authentication.
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
-        CEUserID: {type: integer, format: int64, example: '3752308'}
+        CEUserID: {type: integer, format: int64, example: '3752308', description: "The CashEdge internal identifier for the added user."}
         SessInfo: {type: string, example: '6e4d6b34476938575a4357654d6f6c79546f366870673d3d'}
         Roles: {$ref: '#/components/schemas/RolesType' }
         ResetPasswordRequired: {type: string, example: 'No' }
@@ -3108,9 +3108,9 @@ components:
       type: object
       description: The status of the request.
       properties:
-        StatusCode: {type: integer, format: int32, example: '0' }
-        Severity: {type: string, enum: [Error, Warning, Info], example: 'Info' }
-        StatusDesc: {type: string, example: 'Success' }
+        StatusCode: {type: integer, format: int32, example: 0, description: "The status code for the response. A code of “0” implies complete success.Other status codes could mean either success or failure depending upon the value of the severity of the code."}
+        Severity: {type: string, enum: [Error, Warning, Info], example: 'Info', description: "Conveys the status of the request, whether the request was processed successfully, or whether some error was encountered while processing the request."}
+        StatusDesc: {type: string, example: 'Success', description: "A meaningful message that conveys the nature of the error, if any."}
     StockOptionType:
       type: object
       description: This aggregate containing Stock Options details for the requested account.
@@ -5799,7 +5799,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalAddRs: {$ref: '#/components/schemas/GoalAddRsType' }
@@ -5812,7 +5812,7 @@ components:
       - Status
       type: object
       properties:
-        GoalId: {type: integer }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully."}
         Status: {$ref: '#/components/schemas/StatusType' }
     GoalAccountListType:
       required:
@@ -5827,8 +5827,8 @@ components:
       - AcctId
       type: object
       properties:
-        AcctId: {type: integer }
-        AllocationPercentage: {type: integer, format: int32 }
+        AcctId: {type: integer, example: 5587903, description: "It is the account that would like to use to save up for the goal."}
+        AllocationPercentage: {type: integer, example: 20, format: int32, description: "It is the percentage of the account should be set aside specifically for this goal. Please note: Only accounts classified as banking can be linked to a goal."}
     GoalAddRqHeader:
       required:
       - GoalAddRq
@@ -5836,7 +5836,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalAddRq: {$ref: '#/components/schemas/GoalAddRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5851,9 +5851,9 @@ components:
       - TargetDate
       type: object
       properties:
-        GoalName: {type: string }
-        TargetAmt: {type: number, format: double, example: '100' }
-        TargetDate: {type: string, format: date-time }
+        GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
+        TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
+        TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
         AccountList: {$ref: '#/components/schemas/GoalAccountListType' }
     GoalDelRsType:
       required:
@@ -5868,7 +5868,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalDeleteRs: {$ref: '#/components/schemas/GoalDelRsType' }
@@ -5881,7 +5881,7 @@ components:
       - GoalId
       type: object
       properties:
-        GoalId: {type: integer }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request."}
     GoalDeleteRqHeader:
       required:
       - GoalDeleteRq
@@ -5889,7 +5889,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalDeleteRq: {$ref: '#/components/schemas/GoalDelRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5903,7 +5903,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalEditRs: {$ref: '#/components/schemas/GoalEditRsType' }
@@ -5917,7 +5917,7 @@ components:
       - Status
       type: object
       properties:
-        GoalId: {type: integer }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully." }
         Status: {$ref: '#/components/schemas/StatusType' }
     GoalEditRqHeader:
       required:
@@ -5926,7 +5926,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalEditRq: {$ref: '#/components/schemas/GoalEditRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5938,10 +5938,10 @@ components:
       - GoalId
       type: object
       properties:
-        GoalId: {type: integer }
-        GoalName: {type: string }
-        TargetAmt: {type: number, format: double, example: '100' }
-        TargetDate: {type: string, format: date-time }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully."}
+        GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
+        TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
+        TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
         AccountList: {$ref: '#/components/schemas/GoalAccountListType' }
     GoalFindAccountListType:
       type: object
@@ -5955,7 +5955,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         GoalFindRs: {$ref: '#/components/schemas/GoalFindRsType' }
@@ -5987,13 +5987,13 @@ components:
       - TargetDate
       type: object
       properties:
-        GoalId: {type: string }
-        GoalName: {type: string }
-        GoalStatus: {type: string }
-        TargetAmt: {type: number, format: double, example: '100' }
-        TargetDate: {type: string, format: date-time }
-        AddedOn: {type: string, format: date-time }
-        ModifiedOn: {type: string, format: date-time }
+        GoalId: {type: string, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully." }
+        GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
+        GoalStatus: {type: string, example: 'Off Schedule', description: "Status of goal requested."}
+        TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
+        TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
+        AddedOn: {type: string, format: date-time, example: '2021-11-16T06:42:01-08:00', description: "Goal created date."}
+        ModifiedOn: {type: string, format: date-time, example: '2021-12-01T00:00:59-08:00' }
         AccountList: {$ref: '#/components/schemas/GoalFindAccountListType' }
     GoalFindRqHeader:
       required:
@@ -6001,7 +6001,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         GoalFindRq: {$ref: '#/components/schemas/GoalFindRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -6013,7 +6013,7 @@ components:
       - GoalId
       type: object
       properties:
-        GoalId: {type: integer }
+        GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request." }
     HarvestStsInqRsHeader:
       required:
       - Status
