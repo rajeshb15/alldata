@@ -5737,7 +5737,7 @@ components:
     FIMessageInfoType:
       type: object
       properties:
-        FIID: {type: integer, format: int32 }
+        FIID: {type: integer, format: int32, example: 505004}
         FIMessage:
           type: array
           items: {$ref: '#/components/schemas/FIMessageType' }
@@ -5748,11 +5748,11 @@ components:
       - StartDate
       type: object
       properties:
-        Message: {type: string }
-        UpdateErrorCode: {type: integer, format: int32 }
-        MessageType: {type: string }
-        StartDate: {type: string, format: date-time }
-        EndDate: {type: string, format: date-time }
+        Message: {type: string, example: 'Sample Message', description: "FI Messages are special instructions provided for users to follow to aggregate information from that FI." }
+        UpdateErrorCode: {type: integer, format: int32, example: 301, description: "Harvesting error code in which instance, this message to be shared with User.Possible values: ERRORRESOLUTION(ErrorBasedAlerts) ADDACCOUNTS(AddAccountMessages) INFORMATIVE(InformativeAlerts)." }
+        MessageType: {type: string, example: 'API-ERRORRESOLUTION', description: "Contains message type information." }
+        StartDate: {type: string, format: date-time, example: "2021-12-20T12:00:00Z", description: "Starting date to share this message with User." }
+        EndDate: {type: string, format: date-time, example: "2021-12-20T12:00:00Z", description: "End date to stop sharing this message with User." }
     FIMessagesDetailsType:
       type: object
       properties:
@@ -5765,7 +5765,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FIMessagesRs: {$ref: '#/components/schemas/FIMessagesRsType' }
@@ -5777,6 +5777,7 @@ components:
       required:
       - Status
       type: object
+      description: "This aggregate provides the status of the FIMessageRq status."
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         FIMessageDetails: {$ref: '#/components/schemas/FIMessagesDetailsType' }
@@ -5786,7 +5787,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
@@ -5853,7 +5854,7 @@ components:
       properties:
         GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
         TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
-        TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
+        TargetDate: {type: string, format: date-time, example: "2021-12-20T12:00:00Z", description: "It is the date targeting to achieve your goal."}
         AccountList: {$ref: '#/components/schemas/GoalAccountListType' }
     GoalDelRsType:
       required:
@@ -5941,7 +5942,7 @@ components:
         GoalId: {type: integer, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully."}
         GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
         TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
-        TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
+        TargetDate: {type: string, format: date-time, example: "2021-12-20T12:00:00Z", description: "It is the date targeting to achieve your goal."}
         AccountList: {$ref: '#/components/schemas/GoalAccountListType' }
     GoalFindAccountListType:
       type: object
@@ -5991,9 +5992,9 @@ components:
         GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
         GoalStatus: {type: string, example: 'Off Schedule', description: "Status of goal requested."}
         TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
-        TargetDate: {type: string, format: date-time, example: '2021-12-20T12:00:00Z', description: "It is the date targeting to achieve your goal."}
-        AddedOn: {type: string, format: date-time, example: '2021-11-16T06:42:01-08:00', description: "Goal created date."}
-        ModifiedOn: {type: string, format: date-time, example: '2021-12-01T00:00:59-08:00' }
+        TargetDate: {type: string, format: date-time, example: "2021-12-20T12:00:00Z", description: "It is the date targeting to achieve your goal."}
+        AddedOn: {type: string, format: date-time, example: "2021-11-16T06:42:01-08:00", description: "Goal created date."}
+        ModifiedOn: {type: string, format: date-time, example: "2021-12-01T00:00:59-08:00" }
         AccountList: {$ref: '#/components/schemas/GoalFindAccountListType' }
     GoalFindRqHeader:
       required:
