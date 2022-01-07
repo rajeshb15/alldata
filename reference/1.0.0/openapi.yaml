@@ -4826,6 +4826,7 @@ components:
           type: array
           items: {$ref: '#/components/schemas/HarvestAcctStsType' }
     HarvestStsType:
+      description: 'The status of the Harvest operation.This aggregate will be present only of the request was carried out successfully.'
       required:
       - HarvestRqStatus
       type: object
@@ -6020,7 +6021,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
+        RqUID: {type: string, description: A Unique Request Identifier., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestStsInqRs: {$ref: '#/components/schemas/HarvestStsInqRsType' }
@@ -6035,7 +6036,7 @@ components:
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         HarvestSts: {$ref: '#/components/schemas/HarvestStsType' }
-        UpdateErrorCode: {type: string }
+        UpdateErrorCode: {type: string, description: 'This element (representing 3 digit error code) will be present if there is a harvesting error that prevents the account from being added' }
         FILoginParamList: {$ref: '#/components/schemas/FILoginParamListType' }
         FIMFAQuestions: {$ref: '#/components/schemas/FIMFAQuestionsType' }
     HarvestStsInqRqHeader:
