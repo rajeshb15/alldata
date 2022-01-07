@@ -4826,6 +4826,7 @@ components:
           type: array
           items: {$ref: '#/components/schemas/HarvestAcctStsType' }
     HarvestStsType:
+      description: 'The status of the Harvest operation.This aggregate will be present only of the request was carried out successfully.'
       required:
       - HarvestRqStatus
       type: object
@@ -5286,7 +5287,7 @@ components:
       - status
       type: object
       properties:
-        transID: {type: integer, format: int64 }
+        transID: {type: integer, description: 'Unique Transaction Identifier.', format: int64 }
         status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: TransType
@@ -5295,7 +5296,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: A Unique Request Identifier., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UpdateTxnCategoryRs: {$ref: '#/components/schemas/UpdateTxnCategoryRsType' }
@@ -5324,7 +5325,7 @@ components:
       type: object
       properties:
         content: {type: string, writeOnly: true }
-        type: {type: string }
+        type: {type: string, example: 'SimilarTxns' }
     TransactionListType:
       required:
       - Transaction
@@ -5337,8 +5338,9 @@ components:
         name: TransactionListType
     TxnSubcategory:
       type: object
+      description: 'SubCategory details of a Transaction.'
       properties:
-        content: {type: string, writeOnly: true }
+        content: {type: string, writeOnly: true, example: 'CustomCatgNew_001' }
         createNew: {type: boolean }
     TxnType:
       required:
@@ -5346,8 +5348,8 @@ components:
       - SubCategory
       type: object
       properties:
-        TransID: {type: integer, format: int64 }
-        Category: {type: string }
+        TransID: {type: integer, format: int64, description: 'Unique Transaction Identifier.' }
+        Category: {type: string, example: 'Goods & Merchandise', description: 'Category details of a Transaction.' }
         SubCategory: {$ref: '#/components/schemas/TxnSubcategory' }
         ApplyToFutureTxns: {$ref: '#/components/schemas/ApplyToFutureTxns' }
       xml:
@@ -5382,7 +5384,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         DeleteSubCategoryRs: {$ref: '#/components/schemas/DeleteSubCategoryRsType' }
@@ -5416,8 +5418,8 @@ components:
       - SubCategory
       type: object
       properties:
-        Category: {type: string }
-        SubCategory: {type: string }
+        Category: {type: string, example: 'Services' }
+        SubCategory: {type: string, example: 'Test_services' }
     ParameterType:
       type: object
       properties:
@@ -6020,7 +6022,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: A Unique Request Identifier., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         HarvestStsInqRs: {$ref: '#/components/schemas/HarvestStsInqRsType' }
@@ -6035,7 +6037,7 @@ components:
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         HarvestSts: {$ref: '#/components/schemas/HarvestStsType' }
-        UpdateErrorCode: {type: string }
+        UpdateErrorCode: {type: string, description: 'This element (representing 3 digit error code) will be present if there is a harvesting error that prevents the account from being added' }
         FILoginParamList: {$ref: '#/components/schemas/FILoginParamListType' }
         FIMFAQuestions: {$ref: '#/components/schemas/FIMFAQuestionsType' }
     HarvestStsInqRqHeader:
@@ -6057,9 +6059,9 @@ components:
       - HarvestAddID
       type: object
       properties:
-        HarvestAddID: {type: string, example: '5874503776495949506166733353685735524c7065673d3d' }
+        HarvestAddID: {type: string, description: Harvest request identification, example: '5874503776495949506166733353685735524c7065673d3d' }
         RunId: {type: integer, format: int32, example: '18816631' }
-        IncludeDetail: {type: string }
+        IncludeDetail: {type: string, description: 'Request for details about the harvest status. Possible values [FIStatus, AcctStatus]' }
     HarvestRsHeader:
       required:
       - Status
@@ -6094,6 +6096,7 @@ components:
       required:
       - FIId
       type: object
+      description: List of FI identifiers
       properties:
         FIId:
           type: array
@@ -6134,6 +6137,7 @@ components:
         name: HarvestRqHeader
     HarvestRqType:
       type: object
+      description: Request for initiating harvesting of accounts in one or more FI Login Accounts of a user
       properties:
         HarvestFILoginAcctList: {$ref: '#/components/schemas/HarvestFILoginAcctListType' }
         FIAcctList: {$ref: '#/components/schemas/FIAcctListType' }
@@ -6238,7 +6242,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FIInfoRq: {$ref: '#/components/schemas/FIInfoRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -6248,11 +6252,11 @@ components:
     FIInfoRqType:
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, description: FI Identifier, example: '20349' }
         FIIdList: {$ref: '#/components/schemas/FIIdListType' }
         SelRangeDt: {$ref: '#/components/schemas/SelRangeDtType' }
-        ABARoutingNumber: {type: string }
-        FIInfoRequired: {type: string }
+        ABARoutingNumber: {type: string, example: '263178070', description: ABA Routing Number of the FI. }
+        FIInfoRequired: {type: string, example: 'FIIDInfo', description: 'The possible values are [FIIDInfo, FIIDInfoList]. In case of the value being FIIDInfo, the response will contain only the FIID list. In case of the value being FIIDInfoList, the response will contain a list of FI with all their requisite information. If this value is not proveded, FIIDInfo will be assumed.' }
     FINameInfoListType:
       type: object
       properties:
@@ -6301,8 +6305,8 @@ components:
       - FIName
       type: object
       properties:
-        FIName: {type: string }
-        FIInfoRequired: {type: string }
+        FIName: {type: string, example: 'Cashedge', description: 'Name of the FI that is desired. The FIName need not be the full name. It could be part of the name.ExampleBank Of America Well (for Wells Fargo)The name can be case insensitive.' }
+        FIInfoRequired: {type: string, example: 'FIIDInfo', description: 'The possible values are.FIIDInfoFIIDInfoListIn case of the value being FIIDInfo, the response will contain only the FIID list.In case of the value being FIIFInfoList, the response will contain a list of FI with all their requisite information.If this value is not provided, FIIDInfo will be assumed.' }
         FISearchSize: {type: integer }
     FISearchRqHeader:
       required:
@@ -6311,7 +6315,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FISearchRq: {$ref: '#/components/schemas/FISearchInstRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -6369,7 +6373,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: A Unique Request Identifier., example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
