@@ -5287,7 +5287,7 @@ components:
       - status
       type: object
       properties:
-        transID: {type: integer, format: int64 }
+        transID: {type: integer, description: 'Unique Transaction Identifier.', format: int64 }
         status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: TransType
@@ -5296,7 +5296,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: A Unique Request Identifier., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UpdateTxnCategoryRs: {$ref: '#/components/schemas/UpdateTxnCategoryRsType' }
@@ -5384,7 +5384,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         DeleteSubCategoryRs: {$ref: '#/components/schemas/DeleteSubCategoryRsType' }
