@@ -2675,7 +2675,7 @@ components:
       - FIAcctId
       - StockOption
       type: object
-      description: The aggregate containing Stock options details for the requested account. This will be present only if the request was carried out successfully.
+      description: "The aggregate containing Stock options details for the requested account. This will be present only if the request was carried out successfully."
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
         StockOption: {$ref: '#/components/schemas/StockOptionType' }
@@ -2809,7 +2809,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "The Unique Request Identifier sent by the Server Site.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FILoginAcctInfoListInqRs: {$ref: '#/components/schemas/FILoginAcctInfoListInqRsType' }
@@ -2824,12 +2824,12 @@ components:
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         FILoginAcctInfoList: {$ref: '#/components/schemas/FILoginAcctInfoListType' }
-        HTMLInfo: {type: string, description: This element is present if HTMLSniplet or XML_AND_HTMLSniplet have been provided in the request. This aggregate will be present only if the request was carried out successfully. }
+        HTMLInfo: {type: string, description: "This element is present if HTMLSniplet or XML_AND_HTMLSniplet have been provided in the request. This aggregate will be present only if the request was carried out successfully." }
     FILoginAcctInfoListType:
       required:
       - FILoginAcctInfo
       type: object
-      description: List of FILoginAcctInfo aggregates, one for each FI Login Account specified in the request.This aggregate list will be present only if the request was carried out successfully.
+      description: "List of FILoginAcctInfo aggregates, one for each FI Login Account specified in the request.This aggregate list will be present only if the request was carried out successfully."
       properties:
         FILoginAcctInfo:
           type: array
@@ -2904,18 +2904,18 @@ components:
       - GrantNo
       type: object
       properties:
-        GrantId: {type: string, description: Unique sequence ID for a grant provided by CashEdge, example: '301231' }
-        GrantNo: {type: string, description: Unique identifier of the Grant, example: '0000.23809' }
-        GrantDt: {type: string, description: Issue date of Grant, format: date-time, example: '2011-02-11' }
-        GrantType: {type: string, description: Type of Grant, example: 'NQO' }
+        GrantId: {type: string, description: "Unique sequence ID for a grant provided by CashEdge", example: '301231' }
+        GrantNo: {type: string, description: "Unique identifier of the Grant", example: '0000.23809' }
+        GrantDt: {type: string, description: "Issue date of Grant", format: date-time, example: '2011-02-11' }
+        GrantType: {type: string, description: "Type of Grant", example: 'NQO' }
         ExercisePrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        FirstVestDt: {type: string, description: First Vesting Date of Grant, format: date-time, example: '2012-02-11' }
-        ExpirationDt: {type: string, description: Expiration Date of Grant, format: date-time, example: '2021-02-11' }
-        SharesGranted: {type: number, description: Number of shares in the Grant, format: double, example: '94700.0' }
+        FirstVestDt: {type: string, description: "First Vesting Date of Grant", format: date-time, example: '2012-02-11' }
+        ExpirationDt: {type: string, description: "Expiration Date of Grant", format: date-time, example: '2021-02-11' }
+        SharesGranted: {type: number, description: "Number of shares in the Grant", format: double, example: '94700.0' }
         NxtVestDt: {type: string, format: date-time, example: '2012-02-11' }
-        VestPeriods: {type: integer, description: Total number of vesting periods, format: int32, example: '3' }
-        VestPeriodsPerYr: {type: integer, description: Number of vesting periods per year, format: int32, example: '1' }
-        SharesVested: {type: number, description: Number of shares vested or excercisable, format: double }
+        VestPeriods: {type: integer, description: "Total number of vesting periods", format: int32, example: '3' }
+        VestPeriodsPerYr: {type: integer, description: "Number of vesting periods per year", format: int32, example: '1' }
+        SharesVested: {type: number, description: "Number of shares vested or excercisable", format: double }
         SharesSold: {type: number, format: double }
         SharesAvail: {type: number, format: double }
         OptionPlan: {type: string, example: 'Awards' }
@@ -2923,11 +2923,11 @@ components:
       required:
       - Grant
       type: object
-      description: This aggregate containing Grants for the requested account
+      description: "This aggregate containing Grants for the requested account"
       properties:
         Grant:
           type: array
-          description: This aggregate containing the details of a Grant
+          description: "This aggregate containing the details of a Grant"
           items: {$ref: '#/components/schemas/GrantInfoType' }
     InsPolicyType:
       required:
@@ -2967,17 +2967,17 @@ components:
       required:
       - FIAcctId
       type: object
-      description: The aggregate containing investment positions for the requested account. The aggregate will be present only if the request was carried out succesfully.
+      description: "The aggregate containing investment positions for the requested account. The aggregate will be present only if the request was carried out succesfully."
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
-        DtAsOf: {type: string, description: Date at which the securities position was retrieved, format: date-time, example: '2020-08-31T12:00:00Z' }
+        DtAsOf: {type: string, description: "Date at which the securities position was retrieved", format: date-time, example: '2020-08-31T12:00:00Z' }
         InvPos:
           type: array
-          description: The aggregate containing investment positions for the requested account
+          description: "The aggregate containing investment positions for the requested account"
           items: {$ref: '#/components/schemas/InvPosType' }
         MFPos:
           type: array
-          description: The aggregate containing positions in mutual funds for the requested account
+          description: "The aggregate containing positions in mutual funds for the requested account"
           items: {$ref: '#/components/schemas/MFPosType' }
     InvPosType:
       required:
@@ -3091,7 +3091,7 @@ components:
       required:
       - Status
       type: object
-      description: This aggregate provides the status of the user authentication.
+      description: "This aggregate provides the status of the user authentication."
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
         CEUserID: {type: integer, format: int64, example: '3752308', description: "The CashEdge internal identifier for the added user."}
@@ -3106,21 +3106,21 @@ components:
       required:
       - Severity
       type: object
-      description: The status of the request.
+      description: "The status of the request."
       properties:
         StatusCode: {type: integer, format: int32, example: 0, description: "The status code for the response. A code of “0” implies complete success.Other status codes could mean either success or failure depending upon the value of the severity of the code."}
         Severity: {type: string, enum: [Error, Warning, Info], example: 'Info', description: "Conveys the status of the request, whether the request was processed successfully, or whether some error was encountered while processing the request."}
         StatusDesc: {type: string, example: 'Success', description: "A meaningful message that conveys the nature of the error, if any."}
     StockOptionType:
       type: object
-      description: This aggregate containing Stock Options details for the requested account.
+      description: "This aggregate containing Stock Options details for the requested account."
       properties:
-        Symbol: {type: string, description: Ticker symbol of the company, example: 'BAC' }
-        Desc: {type: string, description: Name of the Company, example: 'Bank of America' }
-        Cusip: {type: string, description: CUSIP or Asset ID of the Security, example: '060505104' }
+        Symbol: {type: string, description: "Ticker symbol of the company", example: 'BAC' }
+        Desc: {type: string, description: "Name of the Company", example: 'Bank of America' }
+        Cusip: {type: string, description: "CUSIP or Asset ID of the Security", example: '060505104' }
         Price: {$ref: '#/components/schemas/TransactionAmtType' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
-        GrantTypeList: {type: string, description: Types of grant, example: 'NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU' }
+        GrantTypeList: {type: string, description: "Types of grant", example: 'NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU' }
         DtAsOf: {type: string, format: date-time, example: '2020-08-31T12:00:00Z' }
         Grants: {$ref: '#/components/schemas/GrantsType' }
     TransactionAmtType:
@@ -3190,7 +3190,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: Unique Request Identifier. The Client Site sends this element with the request., example: 'RqUID0'}
+        RqUID: {type: string, description: "Unique Request Identifier. The Client Site sends this element with the request.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FILoginAcctInfoListInqRq: {$ref: '#/components/schemas/FILoginAcctInfoListInqRqType' }
         partnerID: {type: integer, example: '5012000'}
@@ -3203,14 +3203,14 @@ components:
         FILoginAcctList: {$ref: '#/components/schemas/FILoginAcctListType' }
         IncludeDetail:
           type: array
-          description: The specified detail information should be returned in the response. Possible values [FIAcctSummary, InvAcctPosAcctIdentifier]
+          description: "The specified detail information should be returned in the response. Possible values [FIAcctSummary, InvAcctPosAcctIdentifier]"
           items:
             type: string            
             xml:
               name: IncludeDetail
     FILoginAcctListType:
       type: object
-      description: List of FI Login Accounts for which data is to be returned.
+      description: "List of FI Login Accounts for which data is to be returned."
       properties:
         HomeID: {type: integer, format: int64, example: '50040001' }
         UserID: {type: string, example: 'Newport_client7235afc'}
@@ -3272,7 +3272,7 @@ components:
         HomeID: {type: string, example: '50040001' }
     SignonRqType:
       type: object
-      description: User authentication.
+      description: "User authentication."
       properties:
         UserInfo: {$ref: '#/components/schemas/UserInfoType' }
         SessionInfo: {$ref: '#/components/schemas/SessionInfoType' }
