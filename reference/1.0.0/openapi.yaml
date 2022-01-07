@@ -2698,7 +2698,7 @@ components:
       - AcctType
       - ExtAcctType
       type: object
-      description: Account identifier
+      description: "Account identifier"
       properties:
         AcctId: {type: integer, format: int64, example: '5586481' }
         AcctType: {type: string, enum: [DDA,CCA,INV,OAA,OLA,LOC,EQU,ILA,INS,BPA,SDA], example: 'SDA' }
@@ -2778,7 +2778,7 @@ components:
       - FIId
       - FIName
       type: object
-      description: FI Information for the FI Login Account
+      description: "FI Information for the FI Login Account"
       properties:
         FIId: {type: string, example: '5586467' }
         FIName: {type: string, example: 'CashEdgeBank - Retail MFA' }
@@ -2986,7 +2986,7 @@ components:
       - SecPos
       type: object
       properties:
-        PosID: {type: string, description: Identifier for the security, example: 'UBvkWKUPO61x0zZvfxWd4g==' }
+        PosID: {type: string, description: "Identifier for the security", example: 'UBvkWKUPO61x0zZvfxWd4g==' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
         SecPos: {$ref: '#/components/schemas/SecPosType' }
     LimitAmountType:
@@ -3015,7 +3015,7 @@ components:
         PosID: {type: string, example: 'UBvkWKUPO61x0zZvfxWd4g==' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
         SecPos: {$ref: '#/components/schemas/SecPosType' }
-        ACHIndicator: {type: string, description: Indicates whether this holding is ACH enabled. Possible value is Enabled or Disabled }
+        ACHIndicator: {type: string, description: "Indicates whether this holding is ACH enabled. Possible value is Enabled or Disabled" }
     PersonNameType:
       type: object
       properties:
@@ -3067,24 +3067,24 @@ components:
       required:
       - Ticker
       type: object
-      description: Information about the security
+      description: "Information about the security"
       properties:
-        Ticker: {type: string, description: Ticker symbol of the security, example: 'VWIUX' }
-        SecDesc: {type: string, description: Full name of the security, example: 'VANGUARD INTERMEDIATE TERM TAX' }
+        Ticker: {type: string, description: "Ticker symbol of the security", example: 'VWIUX' }
+        SecDesc: {type: string, description: "Full name of the security", example: 'VANGUARD INTERMEDIATE TERM TAX' }
         Property: 
           type: array
           items: {$ref: '#/components/schemas/PropertyType' }
         AssetClass: {$ref: '#/components/schemas/AssetClassType' }
-        Marginable: {type: string, description: Indicates whether this holding is marginable, enum: [Y,N], example: 'Y' }
-        SecurityType: {type: string, description: Type of security }
+        Marginable: {type: string, description: "Indicates whether this holding is marginable", enum: [Y,N], example: 'Y' }
+        SecurityType: {type: string, description: "Type of security" }
     SecPosType:
       required:
       - MarketValue
       type: object
-      description: Position and value of the security
+      description: "Position and value of the security"
       properties:
         UnitPrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        Units: {type: number, description: Number of securities., format: double, example: '5' }
+        Units: {type: number, description: "Number of securities"., format: double, example: '5' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
         CostBasis: {$ref: '#/components/schemas/TransactionAmtType' }
     SignonRsType:
