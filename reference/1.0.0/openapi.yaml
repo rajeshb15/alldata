@@ -6476,7 +6476,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: "	A Unique Request Identifier.", example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UserAddRq: {$ref: '#/components/schemas/UserAddRqType' }
       xml:
