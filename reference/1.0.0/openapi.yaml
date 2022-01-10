@@ -5522,7 +5522,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetEditRs: {$ref: '#/components/schemas/BudgetEditRsType' }
@@ -5535,7 +5535,7 @@ components:
       - Status
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
         Status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: BudgetEditRsType
@@ -5546,7 +5546,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetEditRq: {$ref: '#/components/schemas/BudgetEditRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5556,10 +5556,10 @@ components:
     BudgetEditRqType:
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
-        BudgetName: {type: string }
-        BudgetAmt: {type: number, format: double, example: '100' }
-        Description: {type: string }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
+        BudgetName: {type: string, example: "Home Expenses", description: "A Unique Name for Budget" }
+        BudgetAmt: {type: number, format: double, example: 100, description: "It is the amount of money that available to spend" }
+        Description: {type: string, example: "Budget for home expenses.", description: "Detailed description of the Budget" }
       xml:
         name: BudgetEditRqType
     BudgetFindRsHeader:
