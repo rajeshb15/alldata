@@ -2562,7 +2562,7 @@ components:
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         EffDt: {type: string, example: '2020-08-31T12:00:00Z'}
         Desc: {type: string, example: 'OfflineTest'}
-        ValueType: {type: string }
+        ValueType: {type: string, example: 'Sample' }
     AcctDateTimeType:
       required:
       - DateTimeType
@@ -5690,7 +5690,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         OfflineAcctModRs: {$ref: '#/components/schemas/OfflineAcctModRsType' }
@@ -5711,7 +5711,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         OfflineAcctModRq: {$ref: '#/components/schemas/OfflineAcctModRqType' }
       xml:
@@ -5726,14 +5726,16 @@ components:
       required:
       - AcctBal
       type: object
+      description: "Account info to modify the account."
       properties:
-        AcctId: {type: integer, format: int64, example: '5586481' }
-        AdvisorAccess: {type: string, enum: [None,Summary,Full Account] }
-        AcctName: {type: string }
+        AcctId: {type: integer, format: int64, example: '5586481', description: "Account id to the modify offline account." }
+        AdvisorAccess: {type: string, enum: [None,Summary,Full Account], example: "Full Account", description: "Advisor permission to view the account information." }
+        AcctName: {type: string, example: "Test_Offline2", description: "Name of the account to be added." }
         AcctBal:
           type: array
           items: {$ref: '#/components/schemas/AcctBalType' }
-        AcctTypeId: {type: string, example: '50500105' }
+          description: "Account balance."
+        AcctTypeId: {type: string, example: '50500105', description: "ID of the account type." }
         AccountOwnerShip: {type: string, example: 'Individual' }
         Instrument: {type: string, example: 'N/A' }
         RetirementStatus: {type: string, example: 'Non Retirement' }
