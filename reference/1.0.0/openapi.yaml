@@ -5482,7 +5482,7 @@ components:
     BudgetDeleteRsHeader:
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetDeleteRs: {$ref: '#/components/schemas/BudgetDeleteRsType' }
@@ -5503,7 +5503,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetDeleteRq: {$ref: '#/components/schemas/BudgetDeleteRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5513,7 +5513,7 @@ components:
     BudgetDeleteRqType:
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
     BudgetEditRsHeader:
       required:
       - BudgetEditRs
