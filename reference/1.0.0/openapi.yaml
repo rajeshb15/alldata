@@ -2700,14 +2700,14 @@ components:
       type: object
       description: "Account identifier"
       properties:
-        AcctId: {type: integer, format: int64, example: '5586481' }
-        AcctType: {type: string, enum: [DDA,CCA,INV,OAA,OLA,LOC,EQU,ILA,INS,BPA,SDA], example: 'SDA' }
-        ExtAcctType: {type: string, enum: [ALI,AUT,BPA,CCA,CDA,CDR,CMA,DDA,EQU,ERA,ESP,GIC,ILA,ILC,ILI,ILS,INS,INV,IRA,JWA,LOC,MLA,MMA,MMR,MTF,OAA,OLA,OVD,PAY,PIV,PNK,REA,REC,RTH,RTP,SDA,TLI,ULI,WLI,ESO,VEH,HLT,PAC,LTC,DIS,OLI,LLP,MBL,INT,CBL,SMA], example: 'MMA' }
+        AcctId: {type: integer, format: int64, example: 5586481, description: "Unique Account Identifier." }
+        AcctType: {type: string, enum: [DDA,CCA,INV,OAA,OLA,LOC,EQU,ILA,INS,BPA,SDA], example: 'SDA', description: "This is a closed set of values that identify the type of the account. For example, whether the account is a Checking account, or a Savings account etc. Please refer to Data dictionary for the details." }
+        ExtAcctType: {type: string, enum: [ALI,AUT,BPA,CCA,CDA,CDR,CMA,DDA,EQU,ERA,ESP,GIC,ILA,ILC,ILI,ILS,INS,INV,IRA,JWA,LOC,MLA,MMA,MMR,MTF,OAA,OLA,OVD,PAY,PIV,PNK,REA,REC,RTH,RTP,SDA,TLI,ULI,WLI,ESO,VEH,HLT,PAC,LTC,DIS,OLI,LLP,MBL,INT,CBL,SMA], example: 'MMA', description: "Contains extended account type information about an account. Please refer to Data dictionary for the details." }
         TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
         AvailableBankStatements: {type: string, example: '9-2020' }
         AcctNumber: {type: string, example: '32553990146' }
         AcctTypeId: {type: string, example: '50500105' }
-        AcctTypeName: {type: string }
+        AcctTypeName: {type: string, example: 'Sample' }
     FIAcctInfoType:
       required:
       - FIAcctId
@@ -5287,7 +5287,7 @@ components:
       - status
       type: object
       properties:
-        transID: {type: integer, format: int64 }
+        transID: {type: integer, format: int64, example: 6754432, description: "Unique Transaction Identifier." }
         status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: TransType
@@ -5296,7 +5296,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UpdateTxnCategoryRs: {$ref: '#/components/schemas/UpdateTxnCategoryRsType' }
@@ -5324,8 +5324,8 @@ components:
     MatchCriteriaType:
       type: object
       properties:
-        content: {type: string, writeOnly: true }
-        type: {type: string }
+        content: {type: string, example: "Sample", writeOnly: true }
+        type: {type: string, example: "SimilarTxns" }
     TransactionListType:
       required:
       - Transaction
@@ -5338,8 +5338,9 @@ components:
         name: TransactionListType
     TxnSubcategory:
       type: object
+      description: "SubCategory details of a Transaction."
       properties:
-        content: {type: string, writeOnly: true }
+        content: {type: string, example: "Other Charitable Contributions", writeOnly: true }
         createNew: {type: boolean }
     TxnType:
       required:
@@ -5347,8 +5348,8 @@ components:
       - SubCategory
       type: object
       properties:
-        TransID: {type: integer, format: int64 }
-        Category: {type: string }
+        TransID: {type: integer, format: int64, example: 6754432, description: "Unique Transaction Identifier." }
+        Category: {type: string, example: "Contributions", description: "Category details of a Transaction." }
         SubCategory: {$ref: '#/components/schemas/TxnSubcategory' }
         ApplyToFutureTxns: {$ref: '#/components/schemas/ApplyToFutureTxns' }
       xml:
@@ -5360,7 +5361,7 @@ components:
       - UpdateTxnCategoryRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UpdateTxnCategoryRq: {$ref: '#/components/schemas/UpdateTxnCategoryRqType' }
         partnerID: {type: integer, example: '50040000' }
