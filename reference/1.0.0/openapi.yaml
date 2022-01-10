@@ -5073,6 +5073,7 @@ components:
         name: HarvestAddRqHeader
         namespace: http://www.cashedge.com/wm
     UserPasswordType:
+      description: 'The new password for the user.'
       required:
       - CryptType
       - CryptVal
@@ -6391,7 +6392,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UserAddRs: {$ref: '#/components/schemas/UserAddRsType' }
@@ -6399,6 +6400,7 @@ components:
         name: UserAddRsHeader
         namespace: http://www.cashedge.com/wm
     UserAddRsType:
+      description: "The user info/profile"
       required:
       - Status
       type: object
@@ -6457,6 +6459,7 @@ components:
             xml:
               name: OfficeID
     UserAddInfoType:
+      description: 'The identification information of the user for whom the request is being issued.'
       required:
       - UserID
       type: object
@@ -6475,13 +6478,14 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UserAddRq: {$ref: '#/components/schemas/UserAddRqType' }
       xml:
         name: UserAddRqHeader
         namespace: http://www.cashedge.com/wm
     UserAddRqType:
+      description: 'The user info/profile.'
       required:
       - UserInfo
       type: object
@@ -6492,13 +6496,14 @@ components:
           type: array
           items: {$ref: '#/components/schemas/CSRAccessibleHomeType' }
     UserProfileType:
+      description: 'The user profile'
       required:
       - UserID
       type: object
       properties:
         HomeID: {type: integer, format: int64, example: '50040001' }
         UserID: {type: string, example: 'Newport_client7235afc'}
-        AppID: {type: string }
+        AppID: {type: string, example: 'ADD1' }
         CEUserID: {type: integer, format: int64, example: '2017217' }
         PersonInfo: {$ref: '#/components/schemas/PersonInfoType' }
         EntitlementInfo: {$ref: '#/components/schemas/EntitlementInfoType' }
@@ -6529,7 +6534,7 @@ components:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UserDelRs: {$ref: '#/components/schemas/UserDelRsType' }
       xml:
@@ -6549,7 +6554,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UserDelRq: {$ref: '#/components/schemas/UserDelRqType' }
       xml:
@@ -6559,8 +6564,8 @@ components:
       - UserID
       type: object
       properties:
-        HomeID: {type: integer, format: int64, example: '50040001' }
-        UserID: {type: string, example: 'Newport_client7235afc'}
+        HomeID: {type: integer, description: 'The user-base to which the user identified by UserID element belongs to.', format: int64, example: '50040001' }
+        UserID: {type: string, description: 'This is the login ID of the customer into the Server site.', example: 'Newport_client7235afc'}
     UserProfileInqRsHeader:
       required:
       - Status
@@ -6569,7 +6574,7 @@ components:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UserProfileInqRs: {$ref: '#/components/schemas/UserProfileInqRsType' }
       xml:
@@ -6589,7 +6594,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UserProfileInqRq: {$ref: '#/components/schemas/UserProfileInqRqType' }
       xml:
@@ -6610,7 +6615,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
       xml:
@@ -6624,7 +6629,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'The Unique Request Identifier sent by the Server Site.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
       xml:
         name: SignonRqHeader
@@ -6636,7 +6641,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UserPasswordModRs: {$ref: '#/components/schemas/UserPasswordModRsType' }
@@ -6657,7 +6662,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UserPasswordModRq: {$ref: '#/components/schemas/UserPasswordModRqType' }
       xml:
@@ -6676,7 +6681,7 @@ components:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
         Status: {$ref: '#/components/schemas/StatusType' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UserProfileModRs: {$ref: '#/components/schemas/UserProfileModRsType' }
       xml:
@@ -6696,7 +6701,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'A Unique Request Identifier.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UserProfileModRq: {$ref: '#/components/schemas/UserProfileModRqType' }
       xml:
