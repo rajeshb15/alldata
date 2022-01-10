@@ -5288,7 +5288,7 @@ components:
       - status
       type: object
       properties:
-        transID: {type: integer, format: int64, example: 6754432, description: "Unique Transaction Identifier." }
+        transID: {type: integer, example: 6754432, description: 'Unique Transaction Identifier.', format: int64 }
         status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: TransType
@@ -5297,7 +5297,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
+        RqUID: {type: string, description: A Unique Request Identifier., example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         UpdateTxnCategoryRs: {$ref: '#/components/schemas/UpdateTxnCategoryRsType' }
@@ -5325,8 +5325,8 @@ components:
     MatchCriteriaType:
       type: object
       properties:
-        content: {type: string, example: "Sample", writeOnly: true }
-        type: {type: string, example: "SimilarTxns" }
+        content: {type: string, example: 'Sample', writeOnly: true }
+        type: {type: string, example: 'SimilarTxns' }
     TransactionListType:
       required:
       - Transaction
@@ -5349,8 +5349,8 @@ components:
       - SubCategory
       type: object
       properties:
-        TransID: {type: integer, format: int64, example: 6754432, description: "Unique Transaction Identifier." }
-        Category: {type: string, example: 'Goods & Merchandise', description: "Category details of a Transaction." }
+        TransID: {type: integer, format: int64, example: 6754432, description: 'Unique Transaction Identifier.' }
+        Category: {type: string, example: 'Goods & Merchandise', description: 'Category details of a Transaction.' }
         SubCategory: {$ref: '#/components/schemas/TxnSubcategory' }
         ApplyToFutureTxns: {$ref: '#/components/schemas/ApplyToFutureTxns' }
       xml:
