@@ -5438,7 +5438,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetAddRs: {$ref: '#/components/schemas/BudgetAddRsType' }
@@ -5451,7 +5451,7 @@ components:
       - Status
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
         Status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: BudgetAddRsType
@@ -5462,7 +5462,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetAddRq: {$ref: '#/components/schemas/BudgetAddRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5472,11 +5472,11 @@ components:
     BudgetAddRqType:
       type: object
       properties:
-        BudgetName: {type: string }
-        BudgetAmt: {type: number, format: double, example: '100' }
-        CategoryId: {type: integer, format: int32 }
-        SubCategoryId: {type: integer, format: int32 }
-        Description: {type: string }
+        BudgetName: {type: string, example: "Home Expenses", description: "A Unique Name for Budget" }
+        BudgetAmt: {type: number, format: double, example: 100, description: "It is the amount of money that available to spend" }
+        CategoryId: {type: integer, format: int32, example: 1, description: "Category Identifier" }
+        SubCategoryId: {type: integer, format: int32, example: 1,description: "Sub Category Identifier" }
+        Description: {type: string, example: "Budget for home expenses.", description: "Detailed description of the Budget" }
       xml:
         name: BudgetAddRqType
     BudgetDeleteRsHeader:
