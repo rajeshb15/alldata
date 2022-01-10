@@ -5567,7 +5567,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetFindRs: {$ref: '#/components/schemas/BudgetFindRsType' }
@@ -5598,24 +5598,24 @@ components:
       - Frequency
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
-        BudgetName: {type: string }
-        BudgetAmt: {type: number, format: double, example: '100' }
-        CurrentSpending: {type: number, format: double }
-        BudgetStatus: {type: string }
-        CategoryId: {type: integer, format: int32 }
-        SubCategoryId: {type: integer, format: int32 }
-        Frequency: {type: string }
-        Description: {type: string }
-        AddedOn: {type: string, format: date-time }
-        ModifiedOn: {type: string, format: date-time }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
+        BudgetName: {type: string, example: "Home Expenses" }
+        BudgetAmt: {type: number, format: double, example: 100 }
+        CurrentSpending: {type: number, format: double, example: 0 }
+        BudgetStatus: {type: string, example: "On Budget" }
+        CategoryId: {type: integer, format: int32, example: 1 }
+        SubCategoryId: {type: integer, format: int32, example: 1 }
+        Frequency: {type: string, example: "Month" }
+        Description: {type: string, example: "Budget for home expenses." }
+        AddedOn: {type: string, format: date-time, example: "2019-07-11T05:37:37-07:00" }
+        ModifiedOn: {type: string, format: date-time, example: "2021-12-01T00:00:59-08:00" }
     BudgetFindRqHeader:
       required:
       - RqUID
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetFindRq: {$ref: '#/components/schemas/BudgetFindRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5625,7 +5625,7 @@ components:
     BudgetFindRqType:
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request." }
     AddOfflineAcctRsHeader:
       required:
       - Status
