@@ -2391,8 +2391,8 @@ paths:
       x-group-name: VerifyNow Management Service
       x-proxy-name: Advance RTV Enable FI
       summary: ' AdvanceRTVEnableFI service'
-      description: This document provides a design overview of the API interfaces
-        for the VerifyNow AdvanceRTVEnableFI.
+      description: 'This document provides a design overview of the API interfaces
+        for the VerifyNow AdvanceRTVEnableFI.'
       operationId: advanceRTVEnableFI
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -2431,8 +2431,8 @@ paths:
       x-group-name: VerifyNow Management Service
       x-proxy-name: RTV Token
       summary: ' rtvToken service'
-      description: This document provides a design overview of the API interfaces
-        for the VerifyNow RTVToken.
+      description: 'This document provides a design overview of the API interfaces
+        for the VerifyNow RTVToken.'
       operationId: rtvToken
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>RqUID</b></td><td>\
@@ -4987,15 +4987,16 @@ components:
           items: {$ref: '#/components/schemas/FIUserLoginAcctInfoType' }
         OAuthInfo: {$ref: '#/components/schemas/OAuthInfoType' }
     OAuthInfoType:
+      description: 'This will give the OAuth related info.'
       required:
       - OAuthMethod
       - OAuthRqID
       - OAuthUrl
       type: object
       properties:
-        OAuthRqID: {type: string }
-        OAuthUrl: {type: string }
-        OAuthMethod: {type: string }
+        OAuthRqID: {type: string, example: "35109" }
+        OAuthUrl: {type: string, example: "https://testbank.wm.cashedge.com/OauthFI/oauth/authorize?response_type=code&client_id=Fiserv&redirect_uri=https://aggqa.alldata.cashedge.com/oauth2/FIAuth&scope=read&state=RE00S1gxNjM5MDcwMDkyMDMx&external-party-agent=APP1" }
+        OAuthMethod: {type: string, example: "GET" }
         OAuthRqParams: {$ref: '#/components/schemas/OAuthRqParamsType' }
     OAuthParamType:
       required:
@@ -6762,7 +6763,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'Unique Request Identifier. The Client Site sends this element with the request.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         RTVInfoRs: {$ref: '#/components/schemas/RTVInfoRsType' }
@@ -6771,6 +6772,7 @@ components:
       xml:
         name: RTVInfoRsHeader
     RTVInfoRsType:
+      description: 'Response container for the list of RTV Info.'
       required:
       - Status
       type: object
@@ -6778,6 +6780,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         RTVInfoList: {$ref: '#/components/schemas/RTVInfoListType' }
     RTVInfoType:
+      description: 'It gives the RTV Status.'
       required:
       - Date
       - RTVStatus
@@ -6798,7 +6801,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'The Unique Request Identifier sent by the Server Site.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
@@ -6810,7 +6813,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'Unique Request Identifier. The Client Site sends this element with the request.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AckRTVResultRs: {$ref: '#/components/schemas/AckRTVResultRsType' }
@@ -6819,6 +6822,7 @@ components:
       xml:
         name: AckRTVResultRsHeader
     AckRTVResultRsType:
+      description: 'Response container for the RTV Result.'
       required:
       - Status
       type: object
@@ -6833,22 +6837,23 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'The Unique Request Identifier sent by the Server Site.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AckRTVResultRq: {$ref: '#/components/schemas/AckRTVResultRqType' }
       xml:
         name: AckRTVResultRqHeader
     AckRTVResultRqType:
+      description: 'Data containing the RTV result rqquest'
       type: object
       properties:
-        RTVStatus: {type: string }
-        RTVStatusCode: {type: string }
+        RTVStatus: {type: string, example: 'Success' }
+        RTVStatusCode: {type: string, example: '1000,1001,1002' }
     AdvanceRTVEnableFIRsHeader:
       required:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'Unique Request Identifier. The Client Site sends this element with the request.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AdvanceRTVEnableFIRs: {$ref: '#/components/schemas/AdvanceRTVEnableFIRsType' }
@@ -6857,6 +6862,7 @@ components:
       xml:
         name: AdvanceRTVEnableFIRsHeader
     AdvanceRTVEnableFIRsType:
+      description: 'Response container for the RTV FI.'
       required:
       - Status
       type: object
@@ -6880,8 +6886,8 @@ components:
       type: object
       properties:
         FIId: {type: string, example: '20349' }
-        FIName: {type: string }
-        Status: {type: string }
+        FIName: {type: string, example: 'Wells Fargo Bank Online' }
+        Status: {type: string, example: 'Enabled' }
         RoutingNumbers: {$ref: '#/components/schemas/RoutingNumbersListType' }
     RoutingNumbersListType:
       required:
@@ -6894,6 +6900,7 @@ components:
             type: string
             xml:
               name: RoutingNumber
+          example: ['026004077']
     AdvanceRTVEnableFIRqHeader:
       required:
       - AdvanceRTVEnableFIRq
@@ -6911,14 +6918,14 @@ components:
     AdvanceRTVEnableFIRqType:
       type: object
       properties:
-        StartDate: {type: string, format: date-time }
+        StartDate: {type: string, format: date-time, example: '2021-07-10'}
     RTVTokenRsHeader:
       required:
       - RqUID
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'Unique Request Identifier. The Client Site sends this element with the request.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         RTVTokenRs: {$ref: '#/components/schemas/RTVTokenRsType' }
@@ -6935,7 +6942,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         ABARoutingNumber: {type: string }
         FIId: {type: string, example: '20349' }
-        FIHarvestStatus: {type: string, enum: [Enabled,Disabled] }
+        FIHarvestStatus: {type: string, example: 'Enabled', enum: [Enabled,Disabled], description: 'Just give the Fi harvesting status is enabled or disabled.' }
     RTVTokenRqHeader:
       required:
       - RTVTokenRq
@@ -6945,7 +6952,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'The Unique Request Identifier sent by the Server Site.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         RTVTokenRq: {$ref: '#/components/schemas/RTVTokenRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -6958,13 +6965,13 @@ components:
         SensitiveInfoEncrypted: {type: boolean }
         ABARoutingNumber: {type: string }
         FIId: {type: string, example: '20349' }
-        FIName: {type: string }
-        FirstName: {type: string }
-        LastName: {type: string }
+        FIName: {type: string, example: 'CashEdge Bank' }
+        FirstName: {type: string, example: 'Tom' }
+        LastName: {type: string, example: 'Bruce' }
         AcctNumber: {type: string, example: '32553990146' }
         RTVHomeID: {type: integer, format: int64, example: '50040001' }
-        MonitoringCode: {type: string }
-        AddAccountRetryAttempts: {type: integer, format: int32 }
+        MonitoringCode: {type: string, example: '1000' }
+        AddAccountRetryAttempts: {type: integer, format: int32, example: 1 }
     FISearchRsHeaderType:
       required:
       - Status
@@ -6972,7 +6979,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "Unique Request Identifier. The Client Site sends this element with the request.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         FISearchRs: {$ref: '#/components/schemas/FISearchRsType' }
@@ -6981,6 +6988,7 @@ components:
       xml:
         name: FISearchRsHeader
     FISearchRsType:
+      description: 'Response container for the FI information.'
       required:
       - Status
       type: object
@@ -6988,6 +6996,7 @@ components:
         Status: {$ref: '#/components/schemas/StatusType' }
         FIVerifyInfoList: {$ref: '#/components/schemas/FIVerifyInfoListType' }
     FIVerifyInfoListType:
+      description: 'An array list of fiverifyInfo, such as FIID, FIURL, loginParams, oauthFI.'
       type: object
       properties:
         FIVerifyInfo:
@@ -6998,12 +7007,13 @@ components:
       - FIId
       type: object
       properties:
-        FIId: {type: string, example: '20349' }
+        FIId: {type: string, example: '505054' }
         FIName: {type: string }
         FIURL: {type: string }
         OAuthFI: {type: boolean }
         LoginParams: {$ref: '#/components/schemas/LoginParamsType' }
     LoginParamsType:
+      description: 'contains the FI login parameters details.'
       required:
       - Param
       type: object
@@ -7022,7 +7032,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'The Unique Request Identifier sent by the Server Site.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         FISearchRq: {$ref: '#/components/schemas/FISearchRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -7030,12 +7040,13 @@ components:
       xml:
         name: FISearchRqHeader
     FISearchRqType:
+      description: "Request made to search for a FI or a list of FI's."
       type: object
       properties:
-        ABARoutingNumber: {type: string }
-        FIName: {type: string }
-        FIId: {type: string, example: '20349' }
-        FIInfoRequired: {type: string }
+        ABARoutingNumber: {type: string, description: "ABA Routing Number of the FI", example: "263178070" }
+        FIName: {type: string, description: "Name of the FI.", example: "Fiserv" }
+        FIId: {type: string, example: '20349', description: "FI Identifier." }
+        FIInfoRequired: {type: string, example: "VerifyNow" }
     AcctVerificationRsHeader:
       required:
       - Status
@@ -7043,7 +7054,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'Unique Request Identifier. The Client Site sends this element with the request.', example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         AcctVerificationRs: {$ref: '#/components/schemas/AcctVerificationRsType' }
@@ -7057,11 +7068,11 @@ components:
       type: object
       properties:
         Status: {$ref: '#/components/schemas/StatusType' }
-        RunId: {type: integer, format: int32, example: '18816631' }
+        RunId: {type: integer, description: 'Harvest request identification.', format: int32, example: '18816631' }
         OAuthInfo: {$ref: '#/components/schemas/OAuthInfoType' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
         FIVerifyInfo: {$ref: '#/components/schemas/FIVerifyInfoType' }
-        AcctOwner: {type: string }
+        AcctOwner: {type: string, example: "James H Hardy-Martin Iii" }
         FIAcctList: {$ref: '#/components/schemas/FIActListType' }
     AcctVerificationRqHeader:
       required:
@@ -7072,7 +7083,7 @@ components:
       - version
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "The Unique Request Identifier sent by the Server Site.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         AcctVerificationRq: {$ref: '#/components/schemas/AcctVerificationRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -7083,9 +7094,9 @@ components:
       type: object
       properties:
         FIVerifyInfo: {$ref: '#/components/schemas/FIVerifyInfoType' }
-        SensitiveInfoEncrypted: {type: boolean }
+        SensitiveInfoEncrypted: {type: boolean, example: 'false' }
         RunId: {type: integer, format: int32, example: '18816631' }
-        OAuthRqID: {type: string }
+        OAuthRqID: {type: string, example: '35109' }
         FILoginAcctId: {type: integer, format: int32, example: '5586467' }
 
   examples:
