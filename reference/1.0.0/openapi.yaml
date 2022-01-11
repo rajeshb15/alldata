@@ -2560,7 +2560,7 @@ components:
       properties:
         BalType: {type: string, example: 'CreditLimit' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
-        EffDt: {type: string, example: '2020-08-31T00:00:00Z'}
+        EffDt: {type: string, example: '2020-08-31T12:00:00Z'}
         Desc: {type: string, example: 'OfflineTest'}
         ValueType: {type: string, example: 'Sample' }
     AcctDateTimeType:
@@ -2569,8 +2569,8 @@ components:
       - DateTimeVal
       type: object
       properties:
-        DateTimeType: {type: string, example: '2020-08-31T00:00:00Z'}
-        DateTimeVal: {type: string, example: '2020-08-31T00:00:00Z'}
+        DateTimeType: {type: string, example: '2020-08-31T12:00:00Z'}
+        DateTimeVal: {type: string, example: '2020-08-31T12:00:00Z'}
     AdvClientDetailType:
       required:
       - ClientIdentifier
@@ -3510,8 +3510,8 @@ components:
         TrnID: {type: integer, format: int64, example: '10495243' }
         FITrnID: {type: integer, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
-        PostedDt: {type: string, format: date-time, example: '2020-08-26' }
-        OrigDt: {type: string, format: date-time, example: '2020-09-22' }
+        PostedDt: {type: string, format: date-time, example: '2020-08-26T00:00:00Z' }
+        OrigDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         Memo: {type: string, example: 'ABC SUPPLY 638 10210 HIGHWAY 78 LADSON SCUS' }
         CheckNumber: {type: integer, format: int32, example: '5467' }
@@ -3764,8 +3764,8 @@ components:
         TrnID: {type: integer, description: Unique transaction ID assigned by CashEdge, format: int64, example: '10495243' }
         FITrnID: {type: integer, description: Unique transaction ID assigned by the financial institution from where this transaction was fetched if available from the FI, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
-        PostedDt: {type: string, format: date-time, example: '2020-09-22' }
-        OrigDt: {type: string, format: date-time, example: '2020-09-22' }
+        PostedDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
+        OrigDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         Memo: {type: string, example: 'STARBUCKS STORE 114VICTORVILLE CAUS' }
         TrnPrincipal: {type: number, format: double }
@@ -4413,7 +4413,7 @@ components:
       - TrnType
       type: object
       properties:
-        PostedDt: {type: string, example: '2020-08-31T00:00:00Z' }
+        PostedDt: {type: string, example: '2020-08-31T12:00:00Z' }
         Memo: {type: string, example: 'Checking Transaction 1' }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
