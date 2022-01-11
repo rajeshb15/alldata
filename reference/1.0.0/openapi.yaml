@@ -3351,8 +3351,8 @@ components:
         AcctId: {type: integer, description: Account identifier, format: int64, example: '5586481' }
         AcctNickName: {type: string, description: Account nickname for AcctID, example: 'Banking' }
         ErrorCode: {type: string }
-        LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
-        LastUpdateSuccess: {type: string, description: Last successful update time, format: date-time, example: '2021-10-31T12:00:00z' }
+        LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00Z' }
+        LastUpdateSuccess: {type: string, description: Last successful update time, format: date-time, example: '2021-10-31T12:00:00Z' }
         LastUpdateStatusCode: {type: string, description: Last update status code, enum: [SUCCESS, FAILURE, PENDING, TIME_OUT], example: 'SUCCESS' }
     FILoginAccountListType:
       type: object
@@ -3369,7 +3369,7 @@ components:
         FILoginAcctId: {type: integer, description: FI Login identifier, format: int32, example: '5586467' }
         FIId: {type: string, description: FI identifier, example: '505003' }
         ErrorCode: {type: string }
-        LastUpdateAttempt: {type: string, description: Time of last account details update, format: date-time, example: '2021-10-31T12:00:00z' }
+        LastUpdateAttempt: {type: string, description: Time of last account details update, format: date-time, example: '2021-10-31T12:00:00Z' }
         FIAccountList: {$ref: '#/components/schemas/FIAccountListType' }
     AccountUpdateSummaryRqHeader:
       required:
