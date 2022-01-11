@@ -3726,7 +3726,7 @@ components:
         TrnID: {type: integer, format: int64, example: '13897448' }
         FITrnID: {type: integer, format: int32 }
         TxnCode: {type: string }
-        TrnDate: {type: string, format: date-time, example: '2020-09-22' }
+        TrnDate: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
         TrnAction: {type: string, example: 'SYSTEMATIC CONTRIBUTION' }
         NetTrnAmt: {$ref: '#/components/schemas/TransactionAmtType' }
         Commission: {$ref: '#/components/schemas/TransactionAmtType' }
