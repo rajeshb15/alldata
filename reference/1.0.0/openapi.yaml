@@ -6918,7 +6918,7 @@ components:
     AdvanceRTVEnableFIRqType:
       type: object
       properties:
-        StartDate: {type: string, format: date-time, example: '2021-07-10'}
+        StartDate: {type: string, format: date-time, example: '2021-07-10T12:00:00Z'}
     RTVTokenRsHeader:
       required:
       - RqUID
