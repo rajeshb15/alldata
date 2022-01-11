@@ -6787,7 +6787,7 @@ components:
       type: object
       properties:
         RunId: {type: integer, format: int32, example: '18816631' }
-        Date: {type: string, format: date-time }
+        Date: {type: string, format: date-time, example: '2021-11-09T00:00:00Z' }
         RTVStatus: {type: string }
         ErrorCode: {type: string }
         ErrorMsg: {type: string }
