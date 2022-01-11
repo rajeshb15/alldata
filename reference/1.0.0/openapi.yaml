@@ -6107,6 +6107,7 @@ components:
           type: array
           items:
             type: string
+            example: '20349'
             xml:
               name: FIId
     HarvestFILoginAcctListType:
@@ -6149,7 +6150,7 @@ components:
         FIIdList: {$ref: '#/components/schemas/FIIdListType' }
         RunId: {type: integer, format: int32, example: '18816631' }
         HarvestAddID: {type: string, example: '5874503776495949506166733353685735524c7065673d3d' }
-        BalanceVerification: {type: string, enum: [Yes,No] }
+        BalanceVerification: {type: string, enum: [Yes,No], example: 'Yes' }
     FIInfoDataListType:
       type: object
       properties:
