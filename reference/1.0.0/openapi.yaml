@@ -2754,7 +2754,7 @@ components:
         InsPolicy: {$ref: '#/components/schemas/InsPolicyType' }
         AdvAccess: {type: string, enum: [NONE, SUMMARY, FULL_ACCOUNT], example: 'SUMMARY' }
         RoutingNumber: {type: string }
-        MaturityDate: {type: string, format: date-time }
+        MaturityDate: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
         InterestRateType: {type: string }
         AccountStatus: {type: string }
         AdvClientDetail: {$ref: '#/components/schemas/AdvClientDetailType' }
@@ -2770,7 +2770,7 @@ components:
         CurrentStatus: {type: string, enum: [Active, Disabled for Auto Updates, Disabled for New Enrollments, Temporary Suspension, Permanent Suspension, Watch List FI, Invalid] }
         CurrentStatusShortDesc: {type: string }
         CurrentStatusDetailDesc: {type: string }
-        CurrentStatusStartDate: {type: string, format: date-time }
+        CurrentStatusStartDate: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
         PlannedAvailabilityChange: {$ref: '#/components/schemas/PlannedAvailabilityChangeType' }
     FIInfoType:
       required:
@@ -2906,13 +2906,13 @@ components:
       properties:
         GrantId: {type: string, description: "Unique sequence ID for a grant provided by CashEdge", example: '301231' }
         GrantNo: {type: string, description: "Unique identifier of the Grant", example: '0000.23809' }
-        GrantDt: {type: string, description: "Issue date of Grant", format: date-time, example: '2011-02-11' }
+        GrantDt: {type: string, description: "Issue date of Grant", format: date-time, example: '2020-08-31T00:00:00Z' }
         GrantType: {type: string, description: "Type of Grant", example: 'NQO' }
         ExercisePrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        FirstVestDt: {type: string, description: "First Vesting Date of Grant", format: date-time, example: '2012-02-11' }
-        ExpirationDt: {type: string, description: "Expiration Date of Grant", format: date-time, example: '2021-02-11' }
+        FirstVestDt: {type: string, description: "First Vesting Date of Grant", format: date-time, example: '2020-08-31T00:00:00Z' }
+        ExpirationDt: {type: string, description: "Expiration Date of Grant", format: date-time, example: '2020-08-31T00:00:00Z' }
         SharesGranted: {type: number, description: "Number of shares in the Grant", format: double, example: '94700.0' }
-        NxtVestDt: {type: string, format: date-time, example: '2012-02-11' }
+        NxtVestDt: {type: string, format: date-time, example: '2020-08-31T00:00:00Z' }
         VestPeriods: {type: integer, description: "Total number of vesting periods", format: int32, example: '3' }
         VestPeriodsPerYr: {type: integer, description: "Number of vesting periods per year", format: int32, example: '1' }
         SharesVested: {type: number, description: "Number of shares vested or excercisable", format: double }
@@ -2970,7 +2970,7 @@ components:
       description: "The aggregate containing investment positions for the requested account. The aggregate will be present only if the request was carried out succesfully."
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
-        DtAsOf: {type: string, description: "Date at which the securities position was retrieved", format: date-time, example: '2020-08-31T12:00:00Z' }
+        DtAsOf: {type: string, description: "Date at which the securities position was retrieved", format: date-time, example: '2020-08-31T00:00:00Z' }
         InvPos:
           type: array
           description: "The aggregate containing investment positions for the requested account"
@@ -3032,8 +3032,8 @@ components:
         nextStatus: {type: string, enum: [Active,Disabled for Auto Updates,Disabled for New Enrollments,Temporary Suspension,Permanent Suspension,Watch List FI,Invalid] }
         nextStatusShortDesc: {type: string           }
         nextStatusDetailDesc: {type: string }
-        nextStatusStartDate: {type: string, format: date-time }
-        nextStatusEndDate: {type: string, format: date-time }
+        nextStatusStartDate: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
+        nextStatusEndDate: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
     PropertyType:
       required:
       - ParamName
@@ -3051,7 +3051,7 @@ components:
         Description: {type: string }
         DetailsLink: {type: string }
         ValueChange: {$ref: '#/components/schemas/ValueChangeType' }
-        UpdatedOn: {type: string, format: date-time }
+        UpdatedOn: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
     RolesType:
       required:
       - RoleCode
@@ -3100,7 +3100,7 @@ components:
         ResetPasswordRequired: {type: string, example: 'No' }
         SecurityQuesSetUpRequired: {type: string, example: 'No' }
         PasswordExpired: {type: string, example: 'No' }
-        LastSuccessfullLogin: {type: string, format: date-time, example: '2020-08-31T12:00:00Z'}
+        LastSuccessfullLogin: {type: string, format: date-time, example: '2020-08-31T00:00:00Z'}
         MFAQuestions: {$ref: '#/components/schemas/MFAQuestionType' }
     StatusType:
       required:
@@ -3121,7 +3121,7 @@ components:
         Price: {$ref: '#/components/schemas/TransactionAmtType' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
         GrantTypeList: {type: string, description: "Types of grant", example: 'NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU' }
-        DtAsOf: {type: string, format: date-time, example: '2020-08-31T12:00:00Z' }
+        DtAsOf: {type: string, format: date-time, example: '2020-08-31T00:00:00Z' }
         Grants: {$ref: '#/components/schemas/GrantsType' }
     TransactionAmtType:
       required:
@@ -3351,8 +3351,8 @@ components:
         AcctId: {type: integer, description: Account identifier, format: int64, example: '5586481' }
         AcctNickName: {type: string, description: Account nickname for AcctID, example: 'Banking' }
         ErrorCode: {type: string }
-        LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00z' }
-        LastUpdateSuccess: {type: string, description: Last successful update time, format: date-time, example: '2021-10-31T12:00:00z' }
+        LastUpdateAttempt: {type: string, format: date-time, example: '2021-10-31T12:00:00Z' }
+        LastUpdateSuccess: {type: string, description: Last successful update time, format: date-time, example: '2021-10-31T12:00:00Z' }
         LastUpdateStatusCode: {type: string, description: Last update status code, enum: [SUCCESS, FAILURE, PENDING, TIME_OUT], example: 'SUCCESS' }
     FILoginAccountListType:
       type: object
@@ -3369,7 +3369,7 @@ components:
         FILoginAcctId: {type: integer, description: FI Login identifier, format: int32, example: '5586467' }
         FIId: {type: string, description: FI identifier, example: '505003' }
         ErrorCode: {type: string }
-        LastUpdateAttempt: {type: string, description: Time of last account details update, format: date-time, example: '2021-10-31T12:00:00z' }
+        LastUpdateAttempt: {type: string, description: Time of last account details update, format: date-time, example: '2021-10-31T12:00:00Z' }
         FIAccountList: {$ref: '#/components/schemas/FIAccountListType' }
     AccountUpdateSummaryRqHeader:
       required:
@@ -3510,8 +3510,8 @@ components:
         TrnID: {type: integer, format: int64, example: '10495243' }
         FITrnID: {type: integer, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
-        PostedDt: {type: string, format: date-time, example: '2020-08-26' }
-        OrigDt: {type: string, format: date-time, example: '2020-09-22' }
+        PostedDt: {type: string, format: date-time, example: '2020-08-26T00:00:00Z' }
+        OrigDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         Memo: {type: string, example: 'ABC SUPPLY 638 10210 HIGHWAY 78 LADSON SCUS' }
         CheckNumber: {type: integer, format: int32, example: '5467' }
@@ -3726,7 +3726,7 @@ components:
         TrnID: {type: integer, format: int64, example: '13897448' }
         FITrnID: {type: integer, format: int32 }
         TxnCode: {type: string }
-        TrnDate: {type: string, format: date-time, example: '2020-09-22' }
+        TrnDate: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
         TrnAction: {type: string, example: 'SYSTEMATIC CONTRIBUTION' }
         NetTrnAmt: {$ref: '#/components/schemas/TransactionAmtType' }
         Commission: {$ref: '#/components/schemas/TransactionAmtType' }
@@ -3764,8 +3764,8 @@ components:
         TrnID: {type: integer, description: Unique transaction ID assigned by CashEdge, format: int64, example: '10495243' }
         FITrnID: {type: integer, description: Unique transaction ID assigned by the financial institution from where this transaction was fetched if available from the FI, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
-        PostedDt: {type: string, format: date-time, example: '2020-09-22' }
-        OrigDt: {type: string, format: date-time, example: '2020-09-22' }
+        PostedDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
+        OrigDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         Memo: {type: string, example: 'STARBUCKS STORE 114VICTORVILLE CAUS' }
         TrnPrincipal: {type: number, format: double }
