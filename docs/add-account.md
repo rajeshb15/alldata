@@ -13,7 +13,7 @@ Before utilizing any of the following use cases, you must have a profile in the 
 
 You will be assigned a unique partner ID and a home ID (or multiple home IDs, depending on your needs). You may provision multiple customers (users) under a home ID. A user may have more than one financial institution (&quot;FI&quot;) or any other accounts and connection types offered by AllData under their profile.
 
-![Figure 1](../assets/images/add-account-widget/add-account-widget-00.png)
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-00.png">
 
 For all use cases outlined below, you must create a user profile using the CreateUser API. The user profile consists of the user ID, password, and several optional fields such as name and address. CreateUser returns a value called CEUserID which is the unique identifier for the end user.
 
@@ -21,12 +21,12 @@ For all use cases outlined below, you must create a user profile using the Creat
 
 Before launching the Add Account widget, you must call the signOn API to generate a single sign-on (SSO) token. After generating the token, launch the AllData Add Account widget per the instructions in the AllData Next-Gen Widgets Integration Guide. When launched, the widget appears as below.
 
-![Figure 2](../assets/images/add-account-widget/add-account-widget-01.png)
-![Figure 3](../assets/images/add-account-widget/add-account-widget-02.png)
-![Figure 4](../assets/images/add-account-widget/add-account-widget-03.png)
-![Figure 5](../assets/images/add-account-widget/add-account-widget-04.png)
-![Figure 6](../assets/images/add-account-widget/add-account-widget-05.png)
-![Figure 7](../assets/images/add-account-widget/add-account-widget-06.png)
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-01.png">
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-02.png">
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-03.png">
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-04.png">
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-05.png">
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-06.png">
 
 # Use Cases
 
@@ -68,7 +68,7 @@ Balance verification is useful for lenders, ACH payment processors, e-commerce p
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-![Figure 8](../assets/images/add-account-widget/add-account-widget-07.png)
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-07.png">
 
 ### Add payment account
 
@@ -84,7 +84,7 @@ You can use AllData to retrieve an end user&#39;s full account number(s) and rou
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-![Figure 8](../assets/images/add-account-widget/add-account-widget-07.png)
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-07.png">
 
 ### Transaction history
 
@@ -141,7 +141,7 @@ You can use AllData to verify your customer assets. Assets are grouped into the 
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-![Figure 8](../assets/images/add-account-widget/add-account-widget-07.png)
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-07.png">
 
 6. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
 7. Invoke the getEmployerStockOptions API.
@@ -162,7 +162,7 @@ You can use AllData to verify your customer liabilities. Liabilities are grouped
 4. Invoke the getAccountUpdateSummary API. – This is only required if you configure the widget to hide both the account classification page and account confirmation page.
 5. Invoke the getAccountDetails API. – This call returns full account owner name, various account balance types, routing number, and account numbers (both partly masked and fully unmasked, if available).
 
-![Figure 8](../assets/images/add-account-widget/add-account-widget-07.png)
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/add-account-widget/add-account-widget-07.png">
 
 6. Invoke the getOtherAccountTrans API. – This can include insurance, biller accounts, loans, and other liability accounts.
 7. Invoke the getCreditCardTrans API. – This is specifically for credit card transactions.

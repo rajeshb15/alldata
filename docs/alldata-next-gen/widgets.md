@@ -13,13 +13,13 @@ By default, the Add Accounts widget includes the necessary screens to walk the u
 
 **Add Accounts workflow:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-00.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-00.png"/>
 
 When the Add Accounts widget is launched, the FI search screen appears first. The FI search screen presents the user with four different options to continue: (1) enter a search string for the desired FI, (2) select from the list of popular FIs, (3) navigate to the offline account addition screens, and (4) add real estate values powered by Zillow.
 
 **New Add Accounts widget – FI search screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-01.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-01.png"/>
 
 Partners have the option to configure the popular financial institutions of their choice to display when launching the Add Account widget. The popular financial institution logos are displayed in the FI search screen, and the user can choose a logo to add one or more accounts under the selected institution. Partners have a choice of ten or twelve institutions to show under the popular list, based on whether they choose to display the Add Offline Accounts and Zillow logos.
 
@@ -31,13 +31,13 @@ Clicking **Show More** includes another ten institution from the result set in t
 
 **Add Accounts screen – FI search auto-complete screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-02.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-02.png"/>
 
 From the search results screen the user can enter another search string, return to the initial Add Accounts screen, or select an FI from the results list to add accounts. Selecting a result opens the credentials submission screen for that institution.
 
 **Add Accounts screen – Credential submission screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-03.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-03.png"/>
 
 When FI request their users to do additional setup to allow aggregating from their website, the information to do additional setup will be provided as special instructions on choosing FI to add accounts. Users need to follow the special instructions before adding accounts from that FI.
 
@@ -45,11 +45,11 @@ Same instructions will be provided on the top of credentials submission screen o
 
 **Add Accounts screen – Special instructions for users:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-04.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-04.png"/>
 
 **Add Accounts screen – Special instructions in credentials submission form:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-05.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-05.png"/>
 
 After the user provides credentials, an &quot;in-progress&quot; screen displays while the harvesting process attempts to access the FI and retrieve the accounts. The user must wait for the harvesting process to return a result before continuing the process.
 
@@ -59,13 +59,13 @@ If the harvest attempt fails due to a harvest alert, the corresponding alert res
 
 **Add Accounts screen – In-progress screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-06.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-06.png"/>
 
 If the harvesting process encounters any errors, they will display within the Add Accounts widget. The alert content and workflows are included in [Appendix A – Harvesting Alert Error Resolution Screens](?path=/docs/alldata-next-gen/appendices.md#harvesting-alert-error-resolution-screens).
 
 **Add Accounts Screen – Harvesting alert:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-07.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-07.png"/>
 
 After the user resolves the harvesting error through the alert resolution screen, another harvesting attempt initiates. The Add Accounts widget displays the in-progress screen until the harvest completes.
 
@@ -81,7 +81,7 @@ On the Account Classification screen, the user can do the following.
 
 **Add Accounts screen – Account Classification:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-08.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-08.png"/>
 
 After successfully adding accounts to the user&#39;s profile, a confirmation screen appears. It lists each added account by name along with the last four digits of its account number, account type, and current balance.
 
@@ -89,7 +89,7 @@ From the confirmation screen, the user can close the Add Accounts screens or sta
 
 **Add Accounts screen – Confirmation screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-09.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-09.png"/>
 
 After the Add Accounts widget process is complete, the widget calls the return URL to return control back to the partner application.
 
@@ -109,59 +109,59 @@ After authorization and consent, the institution sends AllData an access token t
 
 **Add Accounts Screen – OAuth Implemented FI:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-10.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-10.png"/>
 
 **Add Accounts – Institution hosted website:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-11.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-11.png"/>
 
 **Consent Page – Institution hosted website:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-12.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-12.png"/>
 
 **Select Account – Institution hosted website:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-13.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-13.png"/>
 
 Users can follow on-screen instructions to authenticate and add new accounts under OAuth-implemented institutions. Users with profiles added to an OAuth-implemented FI through the standard (non-OAuth) approach receive a notice upon launching the Add Account widget prompting them to migrate their profile to the OAuth model. After successfully migrating, the login credentials previously stored for the standard approach are deleted from AllData and the token shared by the institution is used to aggregate account information.
 
 **Add Accounts Screen – OAuth migration User Notification:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-14.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-14.png"/>
 
 If a user has a profile under multiple institutions that are converted to OAuth by Fiserv, a notification lists the FIs and encourages the user to migrate them.
 
 **Add Accounts Screen – OAuth migration User Notification (Multiple OAuth FIs):**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-15.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-15.png"/>
 
 **Add Accounts Screen – User with single profile under an institution:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-16.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-16.png"/>
 
 A user with multiple profiles under an institution selects the profile to migrate from a list.
 
 **Add Accounts Screen – User with multiple profile under an institution:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-17.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-17.png"/>
 
 After selecting a profile on the previous screen, the accounts added under that profile appears. This is to help the user confirm the correct profile selection and to list all the existing accounts in AllData so that the user can be sure to choose all the same accounts in the account selection screen on the FI-hosted website. If the user fails to choose an existing account, the institution will not return that account information to Fiserv in their API and account updates will fail.
 
 **Add Accounts Screen – Verify underlying accounts and reconfirm the profile for migration**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-18.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-18.png"/>
 
 If an issue occurs during the OAuth workflow process, the following message appears to prompt the user to re-initiate the authentication process.
 
 **Add Accounts Screen – Failure scenario in OAuth workflow**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-19.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-19.png"/>
 
 Fiserv enters into individual agreements with financial institutions to move them to the OAuth model. An institution may provide a threshold period to support both standard and OAuth workflows, allowing existing users to migrate to the OAuth model. After the deadline, user profiles that have not migrated to OAuth will be marked with the 312 error code and suspended for update. Suspended users must migrate their profiles immediately to update their accounts again.
 
 **Error 312 – OAuth Implementation:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-20.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-20.png"/>
 
 ### Text Configurations via Resource Bundles
 
@@ -170,7 +170,7 @@ AllData widgets use resource bundles to persist most of the text that users see 
 
 **Initial screen – Pre-search labels:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-21.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-21.png"/>
 
 The following table provides the labels and default values for configurable elements of the initial screen.
 
@@ -184,11 +184,11 @@ The following table provides the labels and default values for configurable elem
 
 **Login Credentials screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-22.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-22.png"/>
 
 **Login Credentials screen – Access failure:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-23.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-23.png"/>
 
 The following table provides the labels and default values for the configurable elements of the Login Credentials screen.
 
@@ -203,7 +203,7 @@ The following table provides the labels and default values for the configurable 
 
 **Retrieval screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-24.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-24.png"/>
 
 The following table provides the labels and default values for the configurable elements of the Retrieval screen.
 
@@ -215,7 +215,7 @@ The following table provides the labels and default values for the configurable 
 
 **Account Confirmation screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-25.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-25.png"/>
 
 The following table provides the labels and default values for the configurable elements of the Account Confirmation screen.
 
@@ -231,7 +231,7 @@ The labels on each button that is available in the Add Account widget are config
 
 **Initial screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-26.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-26.png"/>
 
 The following table provides the description and default label of the button on the Search Results screen.
 
@@ -242,7 +242,7 @@ The following table provides the description and default label of the button on 
 
 **Login Credentials screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-27.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-27.png"/>
 
 The following table provides the descriptions and default labels for the buttons on the Login Credentials screen.
 
@@ -255,7 +255,7 @@ The following table provides the descriptions and default labels for the buttons
 
 **Account Confirmation screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-28.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-28.png"/>
 
 The following table provides the descriptions and default labels for the buttons on the Account Confirmation screen.
 
@@ -274,13 +274,13 @@ The content displayed in the Add Accounts screen to access the +Add Offline Acco
 
 **+Add Offline Accounts logo:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-29.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-29.png"/>
 
 If the property is not set, the **+Add Offline Accounts** link will direct to the native offline account functionality. If the property is set to a partner-specified URL, the link will open the URL within the widget frame.
 
 **Add Offline Accounts native functionality:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-30.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-30.png"/>
 
 The native Add Offline Account screen lets users select an account type from a predefined selection list, provide a name for the account, and enter a value amount.
 
@@ -298,11 +298,11 @@ Include the following in the partner UI when displaying the Zillow (Zestimate) i
 
 **Zillow branding in UI (sample):**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-31.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-31.png"/>
 
 **Zillow property information submission screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-32.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-32.png"/>
 
 ### FI List
 
@@ -314,7 +314,7 @@ Partners can configure the FIs that appear as popular institutions represented b
 
 **Popular financial institutions list:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-33.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-33.png"/>
 
 The popular institutions list is configurable but will display a default list if not configured by the partner.
 
@@ -441,13 +441,13 @@ The following areas of the FI Request screen are customizable:
 
 **No Search Results Found Message with New FI Request Enabled:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-34.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-34.png"/>
 
 If the FIRequest option isnot enabledforthepartner,the **Request a new institution support** button does not appear when there are no search results.
 
 **No Search Results Found Message without FI Request Enabled:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-35.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-35.png"/>
 
 ### Add Account Screens CSS Definition
 
@@ -475,10 +475,10 @@ All images and material icons in the Add Accounts widget are configurable. The U
 
 |#|Default image|Description|CSS parameter and default values|Default size|
 |--- |--- |--- |--- |--- |
-|1|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png)</center>|Large alert icon|.alert_redtext {<br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px;<br>&nbsp;&nbsp;font-size:1.15em;<br>&nbsp;&nbsp;color:#b83320; <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;<br>&nbsp;&nbsp;margin:8px 0px;<br>&nbsp;&nbsp;font-weight:normal;<br>}|23x23|
-|2|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png)|Eye icon|.eyeIcon {<br>&nbsp;&nbsp;background: #fff;<br>&nbsp;&nbsp;border: 1px solid #bebebe;<br>&nbsp;&nbsp;cursor: pointer;<br>&nbsp;&nbsp;border-left: 0px;<br>}||
-|3|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png)|Lock icon|.urlLink {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;line-height: 24px;<br>&nbsp;&nbsp;margin-bottom: 15px;<br>}||
-|4|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png)|Close window icon|.cboxClose{<br>&nbsp;&nbsp;float:right;<br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat;<br>&nbsp;&nbsp;width:8px;<br>&nbsp;&nbsp;height:8px;<br>&nbsp;&nbsp;display:block;<br>&nbsp;&nbsp;margin:-10px -10px;<br>&nbsp;&nbsp;margin:5px;<br>&nbsp;&nbsp;cursor: pointer;<br>}|10x10|
+|1|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png"/></center>|Large alert icon|.alert_redtext {<br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px;<br>&nbsp;&nbsp;font-size:1.15em;<br>&nbsp;&nbsp;color:#b83320; <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;<br>&nbsp;&nbsp;margin:8px 0px;<br>&nbsp;&nbsp;font-weight:normal;<br>}|23x23|
+|2|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png"/>|Eye icon|.eyeIcon {<br>&nbsp;&nbsp;background: #fff;<br>&nbsp;&nbsp;border: 1px solid #bebebe;<br>&nbsp;&nbsp;cursor: pointer;<br>&nbsp;&nbsp;border-left: 0px;<br>}||
+|3|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png"/>|Lock icon|.urlLink {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;line-height: 24px;<br>&nbsp;&nbsp;margin-bottom: 15px;<br>}||
+|4|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png"/>|Close window icon|.cboxClose{<br>&nbsp;&nbsp;float:right;<br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat;<br>&nbsp;&nbsp;width:8px;<br>&nbsp;&nbsp;height:8px;<br>&nbsp;&nbsp;display:block;<br>&nbsp;&nbsp;margin:-10px -10px;<br>&nbsp;&nbsp;margin:5px;<br>&nbsp;&nbsp;cursor: pointer;<br>}|10x10|
 
 
 ### Widget Configuration Parameters
@@ -504,13 +504,13 @@ The following process diagram explains the web services APIs the partner needs t
 
 **Default Add Accounts widget invocation process:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-40.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-40.png"/>
 
 By default, the Add Accounts widget displays an Account Classification and Confirmation page. If your implementation disables this page and is configured in such a way that Add Accounts returns control back to you after accounts are pulled from the FI, use the following flow where you need to confirm whether the harvesting was successful and whether detailed harvesting for retrieving account details is complete.
 
 **Add Accounts Widget Invocation Process when Account Add Confirmation is not configured:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-41.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-41.png"/>
 
 ### Widget URL
 
@@ -558,7 +558,7 @@ The Add Accounts widget recognizes that this set of credentials for the chosen F
 
 **Message when no new accounts found:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-42.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-42.png"/>
 
 4. What error conditions are possible?
 
@@ -572,7 +572,7 @@ The Alert Resolution widget allows partners to take advantage of a library of sc
 
 **Alert Resolution widget:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-43.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-43.png"/>
 
 ### Alert Resolution Widget Integration Options
 
@@ -582,19 +582,19 @@ Partners have multiple options for exposing the Alert Resolution widget screens 
 
 **Alert Resolution widget through Account Management widget:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-44.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-44.png"/>
 
 **Integrated to the Alerts Listing widget** – The Alert Listing widget provides an inventory of accounts that are associated with outstanding alerts. From the Alert Listing widget, users can access the corresponding Alert Resolution widget to address the errors.
 
 **Alert Resolution widget through Alert Listing widget:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-45.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-45.png"/>
 
 **Integrate Alert Resolution widget** – The Alert Resolution widget can be embedded and launched directly from the appropriate locations on partner application screens at the account level. Partners wishing to use their own account listing screens may choose to identify outstanding alerts in their own screens.
 
 **Alert Resolution widget through partner UI:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-46.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-46.png"/>
 
 When a user attempts to resolve the alert, the partner application will call the Alert Resolution widget URL and provide the necessary identifiers for the respective account ( **FILoginAcctId** and/or **AcctId** ). The Alert Resolution widget will identify the associated error and display the necessary screens to resolve it.
 
@@ -618,10 +618,10 @@ All images and icons in the Alert Resolution widget are configurable. The URLs w
 
 |#|Default image|Description|CSS parameter and default values|Default size|
 |--- |--- |--- |--- |--- |
-|1|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png)</center>|Large alert icon|.alert_redtext {<br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px;<br>&nbsp;&nbsp;font-size:1.15em;<br>&nbsp;&nbsp;color:#b83320; <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;<br>&nbsp;&nbsp;margin:8px 0px;<br>&nbsp;&nbsp;font-weight:normal;<br>}|23x23|
-|2|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png)|Eye icon|.eyeIcon {<br>&nbsp;&nbsp;background: #fff;<br>&nbsp;&nbsp;border: 1px solid #bebebe;<br>&nbsp;&nbsp;cursor: pointer;<br>&nbsp;&nbsp;border-left: 0px;<br>}||
-|3|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png)|Lock icon|.urlLink {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;line-height: 24px;<br>&nbsp;&nbsp;margin-bottom: 15px;<br>}||
-|4|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png)|Close window icon|.cboxClose{<br>&nbsp;&nbsp;float:right;<br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat;<br>&nbsp;&nbsp;width:8px;<br>&nbsp;&nbsp;height:8px;<br>&nbsp;&nbsp;display:block;<br>&nbsp;&nbsp;margin:-10px -10px;<br>&nbsp;&nbsp;margin:5px;<br>&nbsp;&nbsp;cursor: pointer;<br>}|10x10|
+|1|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-36.png"/></center>|Large alert icon|.alert_redtext {<br>&nbsp;&nbsp;background:url(../images/icons/alerts.png) no-repeat 5px 0px;<br>&nbsp;&nbsp;font-size:1.15em;<br>&nbsp;&nbsp;color:#b83320; <br>&nbsp;&nbsp;padding:0px 0px 10px 40px;<br>&nbsp;&nbsp;margin:8px 0px;<br>&nbsp;&nbsp;font-weight:normal;<br>}|23x23|
+|2|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-37.png"/>|Eye icon|.eyeIcon {<br>&nbsp;&nbsp;background: #fff;<br>&nbsp;&nbsp;border: 1px solid #bebebe;<br>&nbsp;&nbsp;cursor: pointer;<br>&nbsp;&nbsp;border-left: 0px;<br>}||
+|3|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-38.png"/>|Lock icon|.urlLink {<br>&nbsp;&nbsp;display: flex;<br>&nbsp;&nbsp;line-height: 24px;<br>&nbsp;&nbsp;margin-bottom: 15px;<br>}||
+|4|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-39.png"/>|Close window icon|.cboxClose{<br>&nbsp;&nbsp;float:right;<br>&nbsp;&nbsp;background:url(../images/celightbox/button_close.png) top right no-repeat;<br>&nbsp;&nbsp;width:8px;<br>&nbsp;&nbsp;height:8px;<br>&nbsp;&nbsp;display:block;<br>&nbsp;&nbsp;margin:-10px -10px;<br>&nbsp;&nbsp;margin:5px;<br>&nbsp;&nbsp;cursor: pointer;<br>}|10x10|
 
 ### Text Configuration via Resource Bundles
 
@@ -638,7 +638,7 @@ Partners can customize the following elements:
 
 **Error Resolution widget customization screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-51.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-51.png"/>
 
 2. **The user can choose an action**
 
@@ -653,7 +653,7 @@ Partners can customize the following elements:
 
 **Error Resolution widget customization screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-52.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-52.png"/>
 
 ### Widget Invocation
 
@@ -661,7 +661,7 @@ The following process diagram explains the web services APIs the partner calls b
 
 **Error Resolution widget invocation process diagram:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-53.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-53.png"/>
 
 ### Widget URL
 
@@ -731,7 +731,7 @@ The Account Management widget groups accounts by associated FI (parent CFI). The
 
 **Account Management widget:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-54.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-54.png"/>
 
 ### Resolve Alerts
 
@@ -741,7 +741,7 @@ When the **Resolve** button is clicked, a corresponding alert resolution screen 
 
 **Resolve Alerts Screen – Account Management widget:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-55.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-55.png"/>
 
 For information on the content and flow of the alert resolution screens, see [Appendix A – Alert Resolution Screens](?path=/docs/alldata-next-gen/appendices.md#appendix-a).
 
@@ -751,59 +751,59 @@ After the user follows the necessary instructions in the Resolve Alert panel and
 
 **Resolve Alerts progress bar:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-56.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-56.png"/>
 
 After the harvest completes, if the alert is resolved, a confirmation message displays temporarily to inform the user that the alert was successfully resolved. After a few seconds, the FI row reverts to its default color and the FI is re-ordered to its usual alphabetic place relative to the other FIs.
 
 **Resolve Alerts Confirmation message:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-57.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-57.png"/>
 
 ### Manual Account Update
 
 External accounts that do not have harvesting alerts associated with them allow the user to manual initiate a harvest to retrieve the latest account data. A refresh icon is displayed next to the FI name that allows the user to initiate the manual account update. When the update is underway, the refresh icon animates to indicate that it is processing. Once the update completes, the latest account balance is displayed for the associated accounts and the timestamp in the FI row is updated accordingly.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-58.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-58.png"/>
 
 ### Add More Accounts
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59a.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59a.png"/>
 
 The Add More Accounts button initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
 
 **Add More Accounts progress screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-60.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-60.png"/>
 
 If additional accounts are identified, they are automatically added to the user&#39;s profile. If none are identified, a message indicates this in the user&#39;s list of current accounts.
 
 **Add More Accounts message screen:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-61.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-61.png"/>
 
 ### Delete FI/Accounts
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62a.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62a.png"/>
 
 For each parent CFI, a &quot;delete institution&quot; button is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete institution confirmation message:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-63.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-63.png"/>
 
 ##### Delete Account
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64a.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64a.png"/>
 
 For each child CFI, a &quot;delete account&quot; button is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
 **Delete account confirmation message:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-65.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-65.png"/>
 
 ### Log in to FI Site
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66a.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66a.png"/>
 
 For each parent CFI, there is a &quot;log in to financial institution&quot; button that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
 
@@ -813,19 +813,19 @@ Managed account entries are not editable. The account name, account type, and am
 
 **Managed account entry in Accounts module:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-67.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-67.png"/>
 
 Users can edit the nicknames and account types of their held away accounts. A &quot;refresh&quot; button is also available. Account types use the Account Type Name lookup to identify partner-defined account type names for the accounts.
 
 **Held Away account entry in Accounts module:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-68.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-68.png"/>
 
 Users can edit the account nickname, change asset type, modify the amount value, and delete offline accounts.
 
 **Offline Accounts:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-69.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-69.png"/>
 
 ### Configurable Dimensions
 
@@ -833,7 +833,7 @@ The Account Management widget includes configurable dimensions for partners to s
 
 **Account Management widget with vertical scroll:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-70.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-70.png"/>
 
 ### Widget URL
 
@@ -853,27 +853,27 @@ The Your Progress widget acts as a prompt to encourage the user to add accounts 
 
 **Your Progress widget – Incomplete:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-71.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-71.png"/>
 
 The progress bar represents the state of the user&#39;s accounts as compared to a standard definition of a complete account portfolio. The progress bar is split into ninths. As the user adds accounts (or indicates not owning that type of an account), the progress bar moves 1/9th closer to completion. When completed, the message displayed changes.
 
 **Your Progress widget – Complete:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-72.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-72.png"/>
 
 By default, the Your Progress widget shows the progress bar for the user with the account categories collapsed. When expanded, the widget reveals the different account categories along with status of the user&#39;s accounts as compared to those account categories.
 
 **Your Progress widget – Expanded:**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-73.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-73.png"/>
 
 Account categories in the Your Progress widget have three possible states. The following table describes each state and shows the icon that indicates it.
 
 |Account category state|Icon|Description|
 |--- |--- |--- |
-|Undetermined|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-74.png)</center>|Default state of the account categories. This indicates that the user has not added an account of this category and has not indicated that one is unavailable. Account categories in this state are sorted to the top of the module. Clicking the icon or the main text launches the Add Account screens. Clicking the “I Don’t Have One” sub text moves the category into None state.|
-|Added|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-75.png)</center>|One or more accounts have been added to the account category. Account categories in this state are sorted behind the Undetermined account categories. Clicking the “Add Another” sub text launches the Add Account screens.|
-|None|<center>![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-76.png)</center>|User has indicated that they do not own accounts in this category. Progress for the user is increased as if an account has been added in this category. Account categories in this state are sorted to the bottom of the Your Progress widget. Clicking the Add One link launches the Add Account screens.|
+|Undetermined|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-74.png"/></center>|Default state of the account categories. This indicates that the user has not added an account of this category and has not indicated that one is unavailable. Account categories in this state are sorted to the top of the module. Clicking the icon or the main text launches the Add Account screens. Clicking the “I Don’t Have One” sub text moves the category into None state.|
+|Added|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-75.png"/></center>|One or more accounts have been added to the account category. Account categories in this state are sorted behind the Undetermined account categories. Clicking the “Add Another” sub text launches the Add Account screens.|
+|None|<center><img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-76.png"/></center>|User has indicated that they do not own accounts in this category. Progress for the user is increased as if an account has been added in this category. Account categories in this state are sorted to the bottom of the Your Progress widget. Clicking the Add One link launches the Add Account screens.|
 
 
 The standard profile of progress categories is configurable at the home level. A variable number of categories can be configured for a home. For each category, a variable number of extended account types or instruments can be assigned. When a user adds an account, the application identifies the extended account type or instrument of the new account to determine which category it belongs to. If an account has an extended account type and instrument type assigned, the instrument type takes precedence in determining the account category.

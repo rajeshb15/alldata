@@ -26,9 +26,7 @@ This technique involves collecting customer account data from FI web pages with 
 
 This diagram shows the high-level architecture and data flow between a partner, AllData, and institutions.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-01.png" alt="Figure 1"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-01.png" alt="Figure 1"/>
 
 # AllData Service Integration
 
@@ -82,9 +80,7 @@ AllData user management APIs support various activities to manage users. Partner
 
 The following diagram details the typical add user process.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-02.png" alt="Figure 2"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-02.png" alt="Figure 2"/>
 
 The User Management module uses the following web services:
 
@@ -100,17 +96,13 @@ As part of the initial integration with AllData, partners must fetch a list of i
 
 **Note:** The AllData FI list has over 12,500 entries. Given the size of the list, we recommend that partners batch getFIDetails calls, with a limit of 500 FIs returned per call. This process should be executed server to server, taking into consideration that the fetch times may be longer and should not abort with a short timeout.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-03.png" alt="Figure 3"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-03.png" alt="Figure 3"/>
 
 ## Periodic Maintenance Refresh
 
 Partners should check for new and updated institution data daily by passing the current time and previous refresh time to obtain the delta. The following diagram represents this periodic data maintenance process.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-04.png" alt="Figure 4"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-04.png" alt="Figure 4"/>
 
 ## External FI Seed Data
 
@@ -151,9 +143,7 @@ Invoke this API after the initiateAddAccounts request has completed. It returns 
 
 Invoke this API to create the accounts in AllData system. Fiserv classifies the harvested accounts based on certain account classification rules. The user can either override this classification or provide the classification if not already set. After successfully adding accounts the partner must call update account APIs to run on-demand harvesting to retrieve account data. Refer to [Account Management Web Services](?path=/docs/ws-api/webservices-apis.md#createaccounts) for API details. The following figure depicts the typical non-MFA Add Account workflow.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-05.png" alt="Figure 5"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-05.png" alt="Figure 5"/>
 
 ### Add Account workflow (with multi-factor authentication)
 
@@ -171,10 +161,7 @@ The following are the changes the partner will implement for image-based MFA.
 
 1. AllData will send the image ID in the FIMFAQuestions aggregate as part of the HarvestAddStsInqRs or HarvestStsInqRs.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-06.png" alt="Figure 6"/>
-</p>
-
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-06.png" alt="Figure 6"/>
 
 2. The partner calls a URL with the image ID generated in the previous step. The base64-encoded image is transmitted to the client browser using the HTTPS connection. See [Appendix C: MFA Image-Retrieving URL](?path=/docs/ws-api/appendices.md#appendix-c-mfa-image-retrieving-url) for the URL details. After decoding the payload, handle downloaded images in the Portable Network Graphics (.png) format.
 
@@ -182,15 +169,11 @@ The following are the changes the partner will implement for image-based MFA.
 
 AllData sends the base64-encoded image in the FIMFAQuestions aggregate as part of the HarvestAddStsInqRs or HarvestStsInqRs.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-07.png" alt="Figure 7"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-07.png" alt="Figure 7"/>
 
 When an attempt to add or update account is already initiated, and while checking the status of the request, the multi-factor authentication flow described in the following diagram occurs.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-08.png" alt="Figure 8"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-08.png" alt="Figure 8"/>
 
 ### Add Account workflow (OAuth)
 
@@ -202,9 +185,7 @@ Unlike the other Add Account workflows, partners perform the following steps for
 
 The FIInfo is enhanced with a new element isOAuthFI to help partners determine whether the FI is OAuth-enabled. A value of &quot;True&quot; in this isOAuthFI element indicates the FI is OAuth-enabled.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-09.png" alt="Figure 9"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-09.png" alt="Figure 9"/>
 
 2. **initiateAddAccounts**
 
@@ -212,17 +193,13 @@ As in the standard approach to add new accounts, partners must invoke the initia
 
 On invoking the initiateAddAccounts API request with the PartnerAppID, Fiserv sends back the response with the new aggregate OAuthInfo for the OAuth-enabled institutions.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-10.png" alt="Figure 10"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-10.png" alt="Figure 10"/>
 
 3. **getAddAccountStatus**
 
 The partner shares the OAuthUrl to the user, who visits the institution-hosted site to provide login credentials and consent for the accounts to aggregate. Then the partner invokes the getAddAccountStatus API with the OAuthRqID that Fiserv sent in the initiateAddAccounts API response (instead of the RunID used in other Add Account workflows.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-11.png" alt="Figure 11"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-11.png" alt="Figure 11"/>
 
 After the user action at the institution site is complete and the institution sends the token to Fiserv to access user account information, Fiserv sends back the response to getAddAccountStatus with the HarvestID. Then the partner uses the HarvestID as the RunID to invoke getAddAccountStatus and continues polling the status.
 
@@ -232,9 +209,7 @@ If the token shared by the FI expires or becomes invalid, Fiserv marks the insti
 
 The following diagram depicts the OAuth Add Account workflow.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-12.png" alt="Figure 12"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-12.png" alt="Figure 12"/>
 
 ### Add Account workflow (PCI compliant FI)
 
@@ -244,9 +219,7 @@ If the FI is PCI compliant, partners must implement the following in addition to
 
 The FIInfo is enhanced with a new element (HasCardData) to help the partner determine whether the FI is PCI compliant. A value of &quot;Y&quot; in this HasCardData element indicates PCI compliance.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-13.png" alt="Figure 13"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-13.png" alt="Figure 13"/>
 
 2. **GetWMAccessKey**
 
@@ -265,9 +238,7 @@ Partners call a URL with the WMAccessKey generated in the previous step along wi
 
 Call HarvestAddRq with FI login parameters providing username/password of the FI along with the CardToken generated in step 3 in the \&lt;CryptVal\&gt; node.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-14.png" alt="Figure 14"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-14.png" alt="Figure 14"/>
 
 5. **HarvestAddFetchRq:**
 
@@ -306,17 +277,13 @@ Account Harvesting is a process that gathers the latest account information from
 
 Auto Update is a process by which AllData updates all the accounts classified in automatic fashion on a nightly basis. AllData does not perform nightly updates for inactive users. Partners can elect to receive batch files on a customized schedule.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-15.png" alt="Figure 15"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-15.png" alt="Figure 15"/>
 
 ### On-Demand Update
 
 Users trigger On-Demand updates manually to get the latest account information.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-16.png" alt="Figure 16"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-16.png" alt="Figure 16"/>
 
 The data refresh uses the following web services APIs:
 
@@ -333,33 +300,25 @@ The transaction data pull APIs can be used to retrieve transactions for each acc
 
 The Banking transactions can be extracted from the AllData system for a certain time period using the getBankingTrans WS API. See [Account Data Pull APIs](?path=/docs/ws-api/webservices-apis.md#getbankingtrans) for the details of the web service.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-17.png" alt="Figure 17"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-17.png" alt="Figure 17"/>
 
 ### Credit Card transactions
 
 The Credit Card transactions can be extracted from the AllData system for a certain time period using the getCreditCardTrans WS API. See [Account Data Pull APIs](?path=/docs/ws-api/webservices-apis.md#getcreditcardtrans) for the details of the web service.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-18.png" alt="Figure 18"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-18.png" alt="Figure 18"/>
 
 ### Investment transactions
 
 The Investment transactions can be extracted from the AllData system for a certain time period using the getInvestmentTrans WS API. See [Account Data Pull APIs](?path=/docs/ws-api/webservices-apis.md#getinvestmenttrans) for the details of the web service.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-19.png" alt="Figure 19"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-19.png" alt="Figure 19"/>
 
 ### Other Account transactions
 
 The asset/liability/biller account transactions can be extracted from the AllData system for a certain time period using the getOtherAccountTrans WS API. See [Account Data Pull APIs](?path=/docs/ws-api/webservices-apis.md#getotheraccounttrans) for the details of the web service.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-20.png" alt="Figure 20"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-20.png" alt="Figure 20"/>
 
 The account details and positions data pull APIs can be used to retrieve account summary and investment positions for each account type and time period.
 
@@ -383,13 +342,9 @@ Using the session token this way allows users to seamlessly access AllData widge
 
 Most API partners choose to integrate the **AllData Add Accounts widget** into their applications. It enables adding financial institutions using their FI-issued credentials.
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-21.png" alt="Figure 21"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-21.png" alt="Figure 21"/>
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-22.png" alt="Figure 22"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-22.png" alt="Figure 22"/>
 
 ## User Registration and Sign-On
 
@@ -410,15 +365,11 @@ The user passes seamlessly from the partner&#39;s secure web application to the 
 
 _AllData PFM:_
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-23.png" alt="Figure 23"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-23.png" alt="Figure 23"/>
 
 _AllData PFM – Account Administration:_
 
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-24.png" alt="Figure 24"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-24.png" alt="Figure 24"/>
 
 <br>
 <br>

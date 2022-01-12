@@ -171,9 +171,7 @@ The below information should appear in the UI when displaying the Zillow (Zestim
 - &quot;What&#39;s a Zestimate&quot; link: [http://www.zillow.com/zestimate/](http://www.zillow.com/zestimate/)
 
 Sample:
-<p align="center">
-  <img src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-appendix-c1.png" alt="Figure 1"/>
-</p>
+<img style="display:block;margin:0 auto;" src="../../assets/images/alldata-ws-api-specs-4.1/alldata-ws-api-specs-4.1-appendix-c1.png" alt="Figure 1"/>
 
 <br>
 <br>
