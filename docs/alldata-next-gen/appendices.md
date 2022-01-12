@@ -13,7 +13,7 @@
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-86.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-86.png"/>
 
 **Information alert:** Fiserv will resolve the issue. After it is resolved, refreshing the account will clear the error.
 
@@ -23,7 +23,7 @@ We are actively working on this issue. When this issue has been resolved, your a
 
 There were problems with this institution&#39;s website when we last attempted to update your account. When this issue is resolved at _institution name_, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-87.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-87.png"/>
 
 **Information alert:** Issue with FI website
 
@@ -33,7 +33,7 @@ There were problems with this institution&#39;s website when we last attempted t
 
 There were problems with this institution&#39;s website when we last attempted to update your account. When this issue is resolved by **institution name** , your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-88.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-88.png"/>
 
 **Information alert:** Issue with FI website
 
@@ -43,7 +43,7 @@ There were problems with this institution&#39;s website when we last attempted t
 
 There were problems with this institution&#39;s website when we last attempted to update your account. When this issue is resolved by _institution name_, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-89.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-89.png"/>
 
 **Information alert:** Issue with FI website
 
@@ -53,7 +53,7 @@ There were problems with this institution&#39;s website when we last attempted t
 
 There were problems with this institution&#39;s website when we last attempted to update your account. When this issue is resolved by _institution name_, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-90.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-90.png"/>
 
 **Information alert:** Issue with FI website
 
@@ -63,7 +63,7 @@ There were problems with this institution&#39;s website when we last attempted t
 
 There were problems with this institution&#39;s website when we last attempted to update your account. When this issue is resolved by _institution name_, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-91.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-91.png"/>
 
 **Information alert:** Issue with FI website
 
@@ -73,7 +73,7 @@ There were problems with this institution&#39;s website when we last attempted t
 
 There were problems with this institution&#39;s website when we last attempted to update your account. When this issue is resolved by _institution name_, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-92.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-92.png"/>
 
 **Information alert:** Issue with FI website
 
@@ -83,7 +83,7 @@ There were problems with this institution&#39;s website when we last attempted t
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-93.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-93.png"/>
 
 **Information alert:** This type of alert remains on the user interface until it is resolved by Fiserv and the account is refreshed.
 
@@ -95,7 +95,7 @@ This may be a closed or inactive account that has not been deleted from the inst
 2. If this account has been closed or inactivated, remove it from your profile.
 3. If you do not know whether or not this account has been closed or inactivated, login to the _institution name_ website and check the account status.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-94.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-94.png"/>
 
 **User intervention required:** Clicking **Remove Account** resolves the alert by initiating the process to delete the account from the user&#39;s profile. If this is the only account associated with the credentials at the FI for the user, then the entire FI is deleted from the user&#39;s profile.
 
@@ -105,7 +105,7 @@ This may be a closed or inactive account that has not been deleted from the inst
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-95.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-95.png"/>
 
 **Information alert:** This type of alert will remain on the user interface until Fiserv resolves the issue and the account is refreshed.
 
@@ -115,7 +115,7 @@ We are actively working on this issue. When this issue has been resolved, your a
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-96.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-96.png"/>
 
 **Information alert:** Fiserv will resolve the issue. After it is resolved, refreshing the account will clear the error.
 
@@ -129,7 +129,7 @@ Login to the _institution name_ website and check for the following:
 2. If this is a closed or inactive account, remove it from your profile.
 3. If the name or number for this account has not changed and this is not a closed or inactive account, contact customer support.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-97.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-97.png"/>
 
 **User intervention required** – There are two options to resolve the 201 alert:
 
@@ -138,13 +138,13 @@ Login to the _institution name_ website and check for the following:
 
 **Error 201 – Match Accounts progress screen**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-98.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-98.png"/>
 
 The retrieved accounts appear for the user to choose from:
 
 **Error 201 – Accounts Match Up List**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-99.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-99.png"/>
 
 Clicking **Match Accounts** updates the existing account with the selected account&#39;s identifier (NickNameAtFI, NickNameAtCE, account number, and Misc fields).
 
@@ -152,7 +152,7 @@ If the match process does not find any new accounts, the following message appea
 
 **Error 201 – No new accounts identified during Match Up process**
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-100.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-100.png"/>
 
 #### Error 202
 
@@ -160,7 +160,7 @@ If the match process does not find any new accounts, the following message appea
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-101.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-101.png"/>
 
 **User intervention required:** This type of alert will remain on the user interface until Fiserv resolves the issue and the account is refreshed.
 
@@ -173,7 +173,7 @@ Login to the _institution name_ website and check for the following:
 1. If this account is no longer available, remove it from your profile.
 2. If this account is available, contact customer support.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-102.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-102.png"/>
 
 **User intervention required:** Clicking **Remove Account** resolves the alert by initiating the process to delete the institution from the user&#39;s profile. If this account is the only account associated with the credentials at the FI for the user, then the entire FI is deleted from the user profile.
 
@@ -186,7 +186,7 @@ Login to the _institution name_ website and check for the following:
 1. If this account is no longer available, remove it from your profile.
 2. If this account is available, contact customer support.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-103.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-103.png"/>
 
 **User intervention required:** Clicking **Remove Account** resolves the alert by initiating the process to delete the account from the user&#39;s profile. If this account is the only account associated with the credentials at the FI for the user, then the entire FI is deleted from the user profile.
 
@@ -196,7 +196,7 @@ Login to the _institution name_ website and check for the following:
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-104.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-104.png"/>
 
 **Information alert:** Fiserv will resolve the issue. After it is resolved, refreshing the account will clear the error.
 
@@ -207,7 +207,7 @@ We are actively working on this issue. When this issue has been resolved, your a
 1. Select the account type that best describes this account.
 2. If you do not know which account type to select, contact customer support.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-105.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-105.png"/>
 
 **User intervention required:** Clicking **Submit** saves the selected account type for the account, closes the overlay screen, and initiates an account update.
 
@@ -218,7 +218,7 @@ We are actively working on this issue. When this issue has been resolved, your a
 1. Select the account type that best describes this account.
 2. If you do not know which account type to select, contact customer support.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-106.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-106.png"/>
 
 **User intervention required:** Clicking **Submit** saves the selected account type, closes the overlay screen, and initiates an account update.
 
@@ -231,7 +231,7 @@ Login to the _institution name_ website and check for the following:
 1. If you are able to login, re-enter the same credentials below.
 2. If you are unable to login, contact customer support directly at _institution name_.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-107.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-107.png"/>
 
 **User intervention required:** Clicking **Submit** validates and saves the credentials for the FI, then closes the overlay screen and initiates an account update.
 
@@ -244,7 +244,7 @@ Login to the _institution name_ website and check for the following:
 1. If you are able to login, re-enter the same credentials below.
 2. If you are unable to login, contact customer support directly at _institution name_.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-108.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-108.png"/>
 
 **User intervention required:** Clicking **Submit** saves the credentials for the FI, closes the overlay screen, and initiates an account update.
 
@@ -256,7 +256,7 @@ Login to the _institution name_ website and check for the following:
 2. Click on the &quot;Update Accounts&quot; button to update all accounts at this institution.
 3. If your accounts still do not update, contact customer support.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-109.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-109.png"/>
 
 **User intervention required:** Clicking **Update Accounts** closes the overlay screen and initiates an account update.
 
@@ -266,7 +266,7 @@ Login to the _institution name_ website and check for the following:
 
 &lt;additional security question with input field&gt;
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-110.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-110.png"/>
 
 **User intervention required:** Clicking **Submit** saves the responses to the MFA challenge question(s) and initiates an account update.
 
@@ -276,7 +276,7 @@ Login to the _institution name_ website and check for the following:
 
 Click the button below to try answering the security questions again.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-111.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-111.png"/>
 
 **User intervention required:** Clicking **Try Again** allows the user to give new answers to the MFA challenge questions. If valid, the new responses are saved, the overlay screen closes, and the account is updated.
 
@@ -289,7 +289,7 @@ Login to the _institution name_ website and check for the following:
 1. If you are unable to login, this may be an incorrect website. Select the correct website by clicking the button below. This will also delete any partial accounts that may have been created for this incorrect website.
 2. If you think this is the correct website, contact customer support.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-112.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-112.png"/>
 
 **User intervention required:** Clicking **Select New Institution** deletes the existing account and sends the user to the Add Accounts screen, where they can start the Add Accounts process from the beginning.
 
@@ -302,7 +302,7 @@ Login to the _institution name_ website and check for the following:
 3. If you are unable to unlock the account, contact customer support directly at _institution name_.
 4. For all other issues, contact customer support.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-113.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-113.png"/>
 
 **User intervention required:** Clicking **Next** validates and saves the credentials for the FI, then closes the overlay screen and initiates an account update.
 
@@ -312,7 +312,7 @@ Login to the _institution name_ website and check for the following:
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-114.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-114.png"/>
 
 **Information alert:** Fiserv will resolve the issue. After it is resolved, refreshing the account will clear the error.
 
@@ -320,7 +320,7 @@ We are actively working on this issue. When this issue has been resolved, your a
 
 Due to an updated connection process with &lt;FI name&gt;, this institution requires all existing users to re-confirm their consent to share data with this application…
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-115.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-115.png"/>
 
 **User intervention required:** The institution has implemented OAuth and the user&#39;s profile is suspended until it is migrated to the OA model. Clicking **Authenticate** opens the institution website where the user must authenticate their login credentials, provide updated consent for account sharing, and select the profile(s) to migrate.
 
@@ -330,7 +330,7 @@ Due to an updated connection process with &lt;FI name&gt;, this institution requ
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-116.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-116.png"/>
 
 **Information alert:** Fiserv will resolve the issue. After it is resolved, refreshing the account will clear the error.
 
@@ -340,7 +340,7 @@ We are actively working on this issue. When this issue has been resolved, your a
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-117.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-117.png"/>
 
 **Information alert:** Fiserv will resolve the issue. After it is resolved, refreshing the account will clear the error.
 
@@ -350,7 +350,7 @@ We are actively working on this issue. When this issue has been resolved, your a
 
 We are actively working on this issue. When this issue has been resolved, your accounts will be automatically updated. We apologize for the inconvenience.
 
-![](../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-118.png)
+<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-118.png"/>
 
 **Information alert:** Fiserv will resolve the issue. After it is resolved, refreshing the account will clear the error.
 
