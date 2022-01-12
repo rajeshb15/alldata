@@ -6419,6 +6419,7 @@ components:
             format: int64
             xml:
               name: AdvCEUserID
+          example: [21071]
     AdvCEUserNameListType:
       required:
       - AdvCEUserName
@@ -6521,7 +6522,7 @@ components:
           type: array
           items: {$ref: '#/components/schemas/AttributeType' }
         AdvisorID: {type: string }
-        AdvisorRegStatus: {type: string, enum: [F,P] }
+        AdvisorRegStatus: {type: string, enum: [F,P], example: 'F' }
         AdvisorType: {type: string }
         CEInviteClientID: {type: integer, format: int64 }
         ClientStatus: {type: string }
