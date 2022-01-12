@@ -6054,7 +6054,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: 'Unique Request Identifier. The Client Site sends this element with the request.', example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         HarvestStsInqRq: {$ref: '#/components/schemas/HarvestStsInqRqType' }
         partnerID: {type: integer, example: '50040000' }
