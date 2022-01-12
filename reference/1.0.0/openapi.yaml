@@ -2358,7 +2358,7 @@ paths:
           \ The Unique Request Identifier sent by the Server Site.</td></tr> <tr><td><b>SignonRq</b></td><td>\
           \ Data containing signon information to login to Fiserv System, it is used\
           \ to authenticate user to access service.</td></tr><tr><td><b>AckRTVResultRq</b></td><td>Data\
-          \ containing the RTV result rqquest</td></tr><tr><td></td><td><a href='elementDescription.jsp#VerifyNow_AckRTVResult'\
+          \ containing the RTV result request</td></tr><tr><td></td><td><a href='elementDescription.jsp#VerifyNow_AckRTVResult'\
           \ target='_blank'>More Info</a></td></tr></tbody></table>"
         content:
           application/json:
@@ -6844,7 +6844,7 @@ components:
       xml:
         name: AckRTVResultRqHeader
     AckRTVResultRqType:
-      description: 'Data containing the RTV result rqquest'
+      description: 'Data containing the RTV result request'
       type: object
       properties:
         RTVStatus: {type: string, example: 'Success' }
