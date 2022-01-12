@@ -6111,7 +6111,6 @@ components:
             type: string
             xml:
               name: FIId
-          example: ['20349']
     HarvestFILoginAcctListType:
       required:
       - HarvestFILoginAcct
