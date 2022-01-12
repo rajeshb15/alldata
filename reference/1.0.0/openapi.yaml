@@ -6107,9 +6107,9 @@ components:
       properties:
         FIId:
           type: array
+          example: ['20349']
           items:
             type: string
-            example: '20349'
             xml:
               name: FIId
     HarvestFILoginAcctListType:
