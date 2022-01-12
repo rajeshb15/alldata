@@ -2562,7 +2562,7 @@ components:
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         EffDt: {type: string, example: '2020-08-31T12:00:00Z'}
         Desc: {type: string, example: 'OfflineTest'}
-        ValueType: {type: string }
+        ValueType: {type: string, example: 'Sample' }
     AcctDateTimeType:
       required:
       - DateTimeType
@@ -2700,14 +2700,14 @@ components:
       type: object
       description: "Account identifier"
       properties:
-        AcctId: {type: integer, format: int64, example: '5586481' }
-        AcctType: {type: string, enum: [DDA,CCA,INV,OAA,OLA,LOC,EQU,ILA,INS,BPA,SDA], example: 'SDA' }
-        ExtAcctType: {type: string, enum: [ALI,AUT,BPA,CCA,CDA,CDR,CMA,DDA,EQU,ERA,ESP,GIC,ILA,ILC,ILI,ILS,INS,INV,IRA,JWA,LOC,MLA,MMA,MMR,MTF,OAA,OLA,OVD,PAY,PIV,PNK,REA,REC,RTH,RTP,SDA,TLI,ULI,WLI,ESO,VEH,HLT,PAC,LTC,DIS,OLI,LLP,MBL,INT,CBL,SMA], example: 'MMA' }
+        AcctId: {type: integer, format: int64, example: 5586481, description: "Unique Account Identifier." }
+        AcctType: {type: string, enum: [DDA,CCA,INV,OAA,OLA,LOC,EQU,ILA,INS,BPA,SDA], example: 'SDA', description: "This is a closed set of values that identify the type of the account. For example, whether the account is a Checking account, or a Savings account etc. Please refer to Data dictionary for the details." }
+        ExtAcctType: {type: string, enum: [ALI,AUT,BPA,CCA,CDA,CDR,CMA,DDA,EQU,ERA,ESP,GIC,ILA,ILC,ILI,ILS,INS,INV,IRA,JWA,LOC,MLA,MMA,MMR,MTF,OAA,OLA,OVD,PAY,PIV,PNK,REA,REC,RTH,RTP,SDA,TLI,ULI,WLI,ESO,VEH,HLT,PAC,LTC,DIS,OLI,LLP,MBL,INT,CBL,SMA], example: 'MMA', description: "Contains extended account type information about an account. Please refer to Data dictionary for the details." }
         TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
         AvailableBankStatements: {type: string, example: '9-2020' }
         AcctNumber: {type: string, example: '32553990146' }
         AcctTypeId: {type: string, example: '50500105' }
-        AcctTypeName: {type: string }
+        AcctTypeName: {type: string, example: 'Sample' }
     FIAcctInfoType:
       required:
       - FIAcctId
@@ -2754,7 +2754,7 @@ components:
         InsPolicy: {$ref: '#/components/schemas/InsPolicyType' }
         AdvAccess: {type: string, enum: [NONE, SUMMARY, FULL_ACCOUNT], example: 'SUMMARY' }
         RoutingNumber: {type: string }
-        MaturityDate: {type: string, format: date-time }
+        MaturityDate: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
         InterestRateType: {type: string }
         AccountStatus: {type: string }
         AdvClientDetail: {$ref: '#/components/schemas/AdvClientDetailType' }
@@ -2770,7 +2770,7 @@ components:
         CurrentStatus: {type: string, enum: [Active, Disabled for Auto Updates, Disabled for New Enrollments, Temporary Suspension, Permanent Suspension, Watch List FI, Invalid] }
         CurrentStatusShortDesc: {type: string }
         CurrentStatusDetailDesc: {type: string }
-        CurrentStatusStartDate: {type: string, format: date-time }
+        CurrentStatusStartDate: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
         PlannedAvailabilityChange: {$ref: '#/components/schemas/PlannedAvailabilityChangeType' }
     FIInfoType:
       required:
@@ -2906,13 +2906,13 @@ components:
       properties:
         GrantId: {type: string, description: "Unique sequence ID for a grant provided by CashEdge", example: '301231' }
         GrantNo: {type: string, description: "Unique identifier of the Grant", example: '0000.23809' }
-        GrantDt: {type: string, description: "Issue date of Grant", format: date-time, example: '2011-02-11' }
+        GrantDt: {type: string, description: "Issue date of Grant", format: date-time, example: '2020-08-31T00:00:00Z' }
         GrantType: {type: string, description: "Type of Grant", example: 'NQO' }
         ExercisePrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        FirstVestDt: {type: string, description: "First Vesting Date of Grant", format: date-time, example: '2012-02-11' }
-        ExpirationDt: {type: string, description: "Expiration Date of Grant", format: date-time, example: '2021-02-11' }
+        FirstVestDt: {type: string, description: "First Vesting Date of Grant", format: date-time, example: '2020-08-31T00:00:00Z' }
+        ExpirationDt: {type: string, description: "Expiration Date of Grant", format: date-time, example: '2020-08-31T00:00:00Z' }
         SharesGranted: {type: number, description: "Number of shares in the Grant", format: double, example: '94700.0' }
-        NxtVestDt: {type: string, format: date-time, example: '2012-02-11' }
+        NxtVestDt: {type: string, format: date-time, example: '2020-08-31T00:00:00Z' }
         VestPeriods: {type: integer, description: "Total number of vesting periods", format: int32, example: '3' }
         VestPeriodsPerYr: {type: integer, description: "Number of vesting periods per year", format: int32, example: '1' }
         SharesVested: {type: number, description: "Number of shares vested or excercisable", format: double }
@@ -2970,7 +2970,7 @@ components:
       description: "The aggregate containing investment positions for the requested account. The aggregate will be present only if the request was carried out succesfully."
       properties:
         FIAcctId: {$ref: '#/components/schemas/FIAcctIdType' }
-        DtAsOf: {type: string, description: "Date at which the securities position was retrieved", format: date-time, example: '2020-08-31T12:00:00Z' }
+        DtAsOf: {type: string, description: "Date at which the securities position was retrieved", format: date-time, example: '2020-08-31T00:00:00Z' }
         InvPos:
           type: array
           description: "The aggregate containing investment positions for the requested account"
@@ -3032,8 +3032,8 @@ components:
         nextStatus: {type: string, enum: [Active,Disabled for Auto Updates,Disabled for New Enrollments,Temporary Suspension,Permanent Suspension,Watch List FI,Invalid] }
         nextStatusShortDesc: {type: string           }
         nextStatusDetailDesc: {type: string }
-        nextStatusStartDate: {type: string, format: date-time }
-        nextStatusEndDate: {type: string, format: date-time }
+        nextStatusStartDate: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
+        nextStatusEndDate: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
     PropertyType:
       required:
       - ParamName
@@ -3051,7 +3051,7 @@ components:
         Description: {type: string }
         DetailsLink: {type: string }
         ValueChange: {$ref: '#/components/schemas/ValueChangeType' }
-        UpdatedOn: {type: string, format: date-time }
+        UpdatedOn: {type: string, format: date-time, example: "2020-08-31T00:00:00Z" }
     RolesType:
       required:
       - RoleCode
@@ -3100,7 +3100,7 @@ components:
         ResetPasswordRequired: {type: string, example: 'No' }
         SecurityQuesSetUpRequired: {type: string, example: 'No' }
         PasswordExpired: {type: string, example: 'No' }
-        LastSuccessfullLogin: {type: string, format: date-time, example: '2020-08-31T12:00:00Z'}
+        LastSuccessfullLogin: {type: string, format: date-time, example: '2020-08-31T00:00:00Z'}
         MFAQuestions: {$ref: '#/components/schemas/MFAQuestionType' }
     StatusType:
       required:
@@ -3121,7 +3121,7 @@ components:
         Price: {$ref: '#/components/schemas/TransactionAmtType' }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
         GrantTypeList: {type: string, description: "Types of grant", example: 'NQO,NQO,NQO,NQO,NQO,NQO,RSU,RSU,RSU,RSU,RSU,PSU' }
-        DtAsOf: {type: string, format: date-time, example: '2020-08-31T12:00:00Z' }
+        DtAsOf: {type: string, format: date-time, example: '2020-08-31T00:00:00Z' }
         Grants: {$ref: '#/components/schemas/GrantsType' }
     TransactionAmtType:
       required:
@@ -3510,8 +3510,8 @@ components:
         TrnID: {type: integer, format: int64, example: '10495243' }
         FITrnID: {type: integer, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
-        PostedDt: {type: string, format: date-time, example: '2020-08-26' }
-        OrigDt: {type: string, format: date-time, example: '2020-09-22' }
+        PostedDt: {type: string, format: date-time, example: '2020-08-26T00:00:00Z' }
+        OrigDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         Memo: {type: string, example: 'ABC SUPPLY 638 10210 HIGHWAY 78 LADSON SCUS' }
         CheckNumber: {type: integer, format: int32, example: '5467' }
@@ -3764,8 +3764,8 @@ components:
         TrnID: {type: integer, description: Unique transaction ID assigned by CashEdge, format: int64, example: '10495243' }
         FITrnID: {type: integer, description: Unique transaction ID assigned by the financial institution from where this transaction was fetched if available from the FI, format: int32 }
         TrnType: {type: string, enum: [Cash,Credit,Debit,Deposit,Fee], example: 'Credit' }
-        PostedDt: {type: string, format: date-time, example: '2020-09-22' }
-        OrigDt: {type: string, format: date-time, example: '2020-09-22' }
+        PostedDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
+        OrigDt: {type: string, format: date-time, example: '2020-09-22T00:00:00Z' }
         CurAmt: {$ref: '#/components/schemas/AmountType' }
         Memo: {type: string, example: 'STARBUCKS STORE 114VICTORVILLE CAUS' }
         TrnPrincipal: {type: number, format: double }
@@ -5290,7 +5290,7 @@ components:
       - status
       type: object
       properties:
-        transID: {type: integer, description: 'Unique Transaction Identifier.', format: int64 }
+        transID: {type: integer, example: 6754432, description: 'Unique Transaction Identifier.', format: int64 }
         status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: TransType
@@ -5327,7 +5327,7 @@ components:
     MatchCriteriaType:
       type: object
       properties:
-        content: {type: string, writeOnly: true }
+        content: {type: string, example: 'Sample', writeOnly: true }
         type: {type: string, example: 'SimilarTxns' }
     TransactionListType:
       required:
@@ -5351,7 +5351,7 @@ components:
       - SubCategory
       type: object
       properties:
-        TransID: {type: integer, format: int64, description: 'Unique Transaction Identifier.' }
+        TransID: {type: integer, format: int64, example: 6754432, description: 'Unique Transaction Identifier.' }
         Category: {type: string, example: 'Goods & Merchandise', description: 'Category details of a Transaction.' }
         SubCategory: {$ref: '#/components/schemas/TxnSubcategory' }
         ApplyToFutureTxns: {$ref: '#/components/schemas/ApplyToFutureTxns' }
@@ -5364,7 +5364,7 @@ components:
       - UpdateTxnCategoryRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         UpdateTxnCategoryRq: {$ref: '#/components/schemas/UpdateTxnCategoryRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5442,7 +5442,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetAddRs: {$ref: '#/components/schemas/BudgetAddRsType' }
@@ -5455,7 +5455,7 @@ components:
       - Status
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
         Status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: BudgetAddRsType
@@ -5466,7 +5466,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetAddRq: {$ref: '#/components/schemas/BudgetAddRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5476,17 +5476,17 @@ components:
     BudgetAddRqType:
       type: object
       properties:
-        BudgetName: {type: string }
-        BudgetAmt: {type: number, format: double, example: '100' }
-        CategoryId: {type: integer, format: int32 }
-        SubCategoryId: {type: integer, format: int32 }
-        Description: {type: string }
+        BudgetName: {type: string, example: "Home Expenses", description: "A Unique Name for Budget" }
+        BudgetAmt: {type: number, format: double, example: 100, description: "It is the amount of money that available to spend" }
+        CategoryId: {type: integer, format: int32, example: 1, description: "Category Identifier" }
+        SubCategoryId: {type: integer, format: int32, example: 1,description: "Sub Category Identifier" }
+        Description: {type: string, example: "Budget for home expenses.", description: "Detailed description of the Budget" }
       xml:
         name: BudgetAddRqType
     BudgetDeleteRsHeader:
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetDeleteRs: {$ref: '#/components/schemas/BudgetDeleteRsType' }
@@ -5507,7 +5507,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetDeleteRq: {$ref: '#/components/schemas/BudgetDeleteRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5517,7 +5517,7 @@ components:
     BudgetDeleteRqType:
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
     BudgetEditRsHeader:
       required:
       - BudgetEditRs
@@ -5526,7 +5526,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetEditRs: {$ref: '#/components/schemas/BudgetEditRsType' }
@@ -5539,7 +5539,7 @@ components:
       - Status
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
         Status: {$ref: '#/components/schemas/StatusType' }
       xml:
         name: BudgetEditRsType
@@ -5550,7 +5550,7 @@ components:
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetEditRq: {$ref: '#/components/schemas/BudgetEditRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5560,10 +5560,10 @@ components:
     BudgetEditRqType:
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
-        BudgetName: {type: string }
-        BudgetAmt: {type: number, format: double, example: '100' }
-        Description: {type: string }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
+        BudgetName: {type: string, example: "Home Expenses", description: "A Unique Name for Budget" }
+        BudgetAmt: {type: number, format: double, example: 100, description: "It is the amount of money that available to spend" }
+        Description: {type: string, example: "Budget for home expenses.", description: "Detailed description of the Budget" }
       xml:
         name: BudgetEditRqType
     BudgetFindRsHeader:
@@ -5571,7 +5571,7 @@ components:
       - Status
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         BudgetFindRs: {$ref: '#/components/schemas/BudgetFindRsType' }
@@ -5602,24 +5602,24 @@ components:
       - Frequency
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
-        BudgetName: {type: string }
-        BudgetAmt: {type: number, format: double, example: '100' }
-        CurrentSpending: {type: number, format: double }
-        BudgetStatus: {type: string }
-        CategoryId: {type: integer, format: int32 }
-        SubCategoryId: {type: integer, format: int32 }
-        Frequency: {type: string }
-        Description: {type: string }
-        AddedOn: {type: string, format: date-time }
-        ModifiedOn: {type: string, format: date-time }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request. This element will be present only of the request that was carried out successfully." }
+        BudgetName: {type: string, example: "Home Expenses" }
+        BudgetAmt: {type: number, format: double, example: 100 }
+        CurrentSpending: {type: number, format: double, example: 0 }
+        BudgetStatus: {type: string, example: "On Budget" }
+        CategoryId: {type: integer, format: int32, example: 1 }
+        SubCategoryId: {type: integer, format: int32, example: 1 }
+        Frequency: {type: string, example: "Month" }
+        Description: {type: string, example: "Budget for home expenses." }
+        AddedOn: {type: string, format: date-time, example: "2019-07-11T05:37:37-07:00" }
+        ModifiedOn: {type: string, format: date-time, example: "2021-12-01T00:00:59-08:00" }
     BudgetFindRqHeader:
       required:
       - RqUID
       - SignonRq
       type: object
       properties:
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         BudgetFindRq: {$ref: '#/components/schemas/BudgetFindRqType' }
         partnerID: {type: integer, example: '50040000' }
@@ -5629,7 +5629,7 @@ components:
     BudgetFindRqType:
       type: object
       properties:
-        BudgetId: {type: integer, format: int32 }
+        BudgetId: {type: integer, format: int32, example: 1, description: "The identification assigned to the Budget request." }
     AddOfflineAcctRsHeader:
       required:
       - Status
@@ -5694,7 +5694,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         Status: {$ref: '#/components/schemas/StatusType' }
         SignonRs: {$ref: '#/components/schemas/SignonRsType' }
         OfflineAcctModRs: {$ref: '#/components/schemas/OfflineAcctModRsType' }
@@ -5715,7 +5715,7 @@ components:
       properties:
         partnerID: {type: integer, example: '50040000' }
         version: {type: string, example: 'version1' }
-        RqUID: {type: string, description: The Unique Request Identifier sent by the Server Site., example: 'RqUID0'}
+        RqUID: {type: string, description: "A Unique Request Identifier.", example: 'RqUID0'}
         SignonRq: {$ref: '#/components/schemas/SignonRqType' }
         OfflineAcctModRq: {$ref: '#/components/schemas/OfflineAcctModRqType' }
       xml:
@@ -5730,14 +5730,16 @@ components:
       required:
       - AcctBal
       type: object
+      description: "Account info to modify the account."
       properties:
-        AcctId: {type: integer, format: int64, example: '5586481' }
-        AdvisorAccess: {type: string, enum: [None,Summary,Full Account] }
-        AcctName: {type: string }
+        AcctId: {type: integer, format: int64, example: '5586481', description: "Account id to the modify offline account." }
+        AdvisorAccess: {type: string, enum: [None,Summary,Full Account], example: "Full Account", description: "Advisor permission to view the account information." }
+        AcctName: {type: string, example: "Test_Offline2", description: "Name of the account to be added." }
         AcctBal:
           type: array
           items: {$ref: '#/components/schemas/AcctBalType' }
-        AcctTypeId: {type: string, example: '50500105' }
+          description: "Account balance."
+        AcctTypeId: {type: string, example: '50500105', description: "ID of the account type." }
         AccountOwnerShip: {type: string, example: 'Individual' }
         Instrument: {type: string, example: 'N/A' }
         RetirementStatus: {type: string, example: 'Non Retirement' }
