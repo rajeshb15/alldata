@@ -35,19 +35,19 @@ Example screen shots of the deep linking workflow follow.
 
 **Deep linking image 1 – Enter account credentials:**
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-77.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-77.png"/>
 
 **Deep linking image 2 – Progress indicator:**
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-78.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-78.png"/>
 
 **Deep linking image 3 – Confirmation screen:**
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-79.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-79.png"/>
 
 **Deep linking image 4 – Sample error scenario:**
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-80.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-80.png"/>
 
 ### Native App Integration
 
@@ -57,7 +57,7 @@ When integrating widgets in a native app, the parameter **host\_app\_type** is r
 
 When identified as a native app integration, the **Cancel** and **Close** buttons in the widget will be removed and partners must manage the navigation back to their source application from the AllData widget when the user wants to close or cancel the widget.
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-81.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-81.png"/>
 
 ### Widget Integration Using WebView and Native App
 
@@ -73,7 +73,7 @@ See the [Integration Approaches](?path=/docs/alldata-next-gen/overview-integrati
 
 **AllData Widget – WebView integration:**
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-82.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-82.png"/>
 
 #### SSO for Mobile
 
@@ -187,11 +187,11 @@ To change the settings within the Safari browser on a desktop or laptop computer
 
 1. Go to the **Safari** menu and select **Preferences**.
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-83.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-83.png"/>
 
 2. Go to the **Privacy** tab and uncheck the &quot;Prevent cross-site tracking&quot; and &quot;Block all cookies&quot; options.
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-84.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-84.png"/>
 
 ##### iPad and iPhone instructions
 
@@ -205,7 +205,7 @@ Step 2: Change Privacy &amp; Security Settings
 
 In the Privacy &amp; Security section of the Setting screen. Make sure the options for &quot;Prevent Cross-Site Tracking&quot; and &quot;Block All Cookies&quot; are turned off.
 
-<img style="display:block;margin:0 auto;" src="../../assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-85.png"/>
+<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-85.png"/>
 
 <br>
 <br>
