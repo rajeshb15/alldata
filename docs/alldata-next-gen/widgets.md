@@ -767,7 +767,7 @@ External accounts that do not have harvesting alerts associated with them allow 
 
 ### Add More Accounts
 
-<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59a.png"/>
+<img src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-59a.png"/>
 
 The Add More Accounts button initiates the process to identify additional accounts (child CFIs) with the previously submitted login credentials at a financial institution (parent CFI). The Add Accounts widget displays an overlay screen showing the progress of the harvest attempt.
 
@@ -783,7 +783,7 @@ If additional accounts are identified, they are automatically added to the user&
 
 ### Delete FI/Accounts
 
-<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62a.png"/>
+<img src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-62a.png"/>
 
 For each parent CFI, a &quot;delete institution&quot; button is available that allows the user to remove the institution and all associated accounts. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
@@ -793,7 +793,7 @@ For each parent CFI, a &quot;delete institution&quot; button is available that a
 
 ##### Delete Account
 
-<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64a.png"/>
+<img src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-64a.png"/>
 
 For each child CFI, a &quot;delete account&quot; button is available that allows the user to remove the account from the parent CFI and no additional child CFIs. After clicking the button, a confirmation button appears that allows the user to confirm or cancel the action.
 
@@ -803,7 +803,7 @@ For each child CFI, a &quot;delete account&quot; button is available that allows
 
 ### Log in to FI Site
 
-<img style="display:block;margin:0 auto;" src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66a.png"/>
+<img src="https://raw.githubusercontent.com/Fiserv/alldata/develop/assets/images/next-gen-widgets-integration-guide/next-gen-widgets-integration-guide-66a.png"/>
 
 For each parent CFI, there is a &quot;log in to financial institution&quot; button that launches another browser tab/window and navigate to the selected financial institutions login screen so that the user can submit their credentials to log in to the FI site.
 
