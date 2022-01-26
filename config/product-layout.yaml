@@ -28,7 +28,7 @@
 # the delivery of this work
 ################################################################################
 header:
-  productionDescription: Fiserv has been in the data aggregation business for more than 20 years. This means some of the largest and most innovative organizations use AllData Aggregation to maximize the power of financial data aggregation. Access consumer-permissioned data covering dozens of vertical markets and account types including bank accounts, liability accounts including credit cards, investment and retirement accounts, as well as insurance and billers.
+  productionDescription: Fiserv has been in the data aggregation business for more than 20 years. This means some of the largest and most innovative organizations use AllData® Aggregation to maximize the power of financial data aggregation. Access consumer-permissioned data covering dozens of vertical markets and account types including bank accounts, liability accounts including credit cards, investment and retirement accounts, as well as insurance and billers.
   whoIsItFor: Anyone looking to easily integrate financial data aggregation API's with new or existing applications, regardless of the underlying technology platform.
 featuredFeatures:
   - title: Account Verification
@@ -58,21 +58,18 @@ featuredFeatures:
       - relatedAPI: 
         title: Sign On 
         description: >
-          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
-          The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
-          This session token is also required to launch the Add Account widget flow.
+          This API signs on to the AllData service, authenticates the user, and generates a session token. The session token is used in subsequent calls and to launch the Add Accounts widget, and it expires after 18 minutes of idle time.
         type: "post"        
         path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
         title: Get Account Details
         description: >
-          This API can be used to fetch detail information about one or more FI login accounts of a user. It can be used to retrieve information about one or more login accounts.
-          If no ID is specified, it returns information about all of user’s FI login accounts.
+          This API fetches detail information about the account(s) associated with the account ID(s) passed to it. If no ID is passed, it returns information for all of the user's accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
         title: Get Bank Account Transactions
-        description: This API is used to fetch the transactions for a banking account. It returns the transactions for the specified date range.
+        description: This API fetches an account's transactions for a given date range.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Money Movement
@@ -102,21 +99,18 @@ featuredFeatures:
       - relatedAPI: 
         title: Sign On 
         description: >
-          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
-          The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
-          This session token is also required to launch the Add Account widget flow.
+          This API signs on to the AllData service, authenticates the user, and generates a session token. The session token is used in subsequent calls and to launch the Add Accounts widget, and it expires after 18 minutes of idle time.
         type: "post"        
         path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
         title: Get Account Details
         description: >
-          This API can be used to fetch detail information about one or more FI login accounts of a user. It can be used to retrieve information about one or more login accounts.
-          If no ID is specified, it returns information about all of user’s FI login accounts.
+          This API fetches detail information about the account(s) associated with the account ID(s) passed to it. If no ID is passed, it returns information for all of the user's accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
         title: Get Bank Account Transactions
-        description: This API is used to fetch the transactions for a banking account. It returns the transactions for the specified date range.
+        description: This API fetches an account's transactions for a given date range.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
   - title: Lending and Account Opening
@@ -143,20 +137,17 @@ featuredFeatures:
       - relatedAPI: 
         title: Sign On 
         description: >
-          This API is used to sign on to the AllData service. It authenticates the user and generates a session token.
-          The session token can be used for subsequent calls and this token will expire after 18 minutes of ideal time.
-          This session token is also required to launch the Add Account widget flow.
+          This API signs on to the AllData service, authenticates the user, and generates a session token. The session token is used in subsequent calls and to launch the Add Accounts widget, and it expires after 18 minutes of idle time.
         type: "post"        
         path: "/WealthManagementWeb/ws/UserMgmt/signon"
       - relatedAPI: 
         title: Get Account Details
         description: >
-          This API can be used to fetch detail information about one or more FI login accounts of a user. It can be used to retrieve information about one or more login accounts.
-          If no ID is specified, it returns information about all of user’s FI login accounts.
+          This API fetches detail information about the account(s) associated with the account ID(s) passed to it. If no ID is passed, it returns information for all of the user's accounts.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getAccountDetails"
       - relatedAPI: 
         title: Get Bank Account Transactions
-        description: This API is used to fetch the transactions for a banking account. It returns the transactions for the specified date range.
+        description: This API fetches an account's transactions for a given date range.
         type: "post"        
         path: "/WealthManagementWeb/ws/AccountDataInq/getBankingTrans"
