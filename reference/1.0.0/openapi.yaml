@@ -10,9 +10,7 @@ paths:
       x-group-name: Account Data Inquiry Service
       x-proxy-name: Account Details
       summary: ' getAccountDetails service'
-      description: "This API can be used to retrieve information about one or more\
-        \ login accounts. If no id is specified, information about all of user’s FI\
-        \ login accounts is returned."
+      description: "This API fetches detail information about the account(s) associated with the account ID(s) passed to it. If no ID is passed, it returns information for all of the user's accounts."
       operationId: getAccountDetails
       requestBody:
         description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
@@ -174,8 +172,7 @@ paths:
       x-group-name: Account Data Inquiry Service
       x-proxy-name: Banking Transactions
       summary: ' getBankingTrans service'
-      description: This API is used to fetch the transactions for a banking account.
-        The transactions for the specified date range will be returned.
+      description: This API fetches an account's transactions for a given date range.
       operationId: getBankingTrans
       requestBody:
         description: "<table> <thead> <th>Element/property</th> <th>Description</th>\
@@ -2189,10 +2186,7 @@ paths:
       x-group-name: User Management Service
       x-proxy-name: Sign On
       summary: ' signon service'
-      description: This API will be used to signon to the PI Service. This API will
-        authenticate the user and generate a session token. The session token can
-        be used for subsequent calls and this token will expire after 18 minutes of
-        ideal time.
+      description: This API signs on to the AllData service, authenticates the user, and generates a session token. The session token is used in subsequent calls and to launch the Add Accounts widget, and it expires after 18 minutes of idle time.
       operationId: signon
       requestBody:
         description: "<table><thead><th>Element / property</th><th>Description</th></thead><tbody><tr><td><b>UserInfo</b></td><td>\
