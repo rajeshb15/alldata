@@ -7925,6 +7925,7 @@ components:
             FIAcctsStmtDetail:
             - FILoginAcctId: 5584789
               FIConsent: NA
+              AcctBankStmtDetail: []
             - FILoginAcctId: 5584806
               FIConsent: enabled
               AcctBankStmtDetail:
@@ -7936,6 +7937,7 @@ components:
                 AvailableBankStatements: 8-2020,9-2020,10-2020,11-2020,12-2020,1-2021,2-2021,3-2021,4-2021,5-2021
             - FILoginAcctId: 5586370
               FIConsent: NA
+              AcctBankStmtDetail: []
         partnerID: 8885504
         version: version1
 
@@ -16623,7 +16625,7 @@ components:
             StatusCode: 0
             Severity: Info
             StatusDesc: Success
-          AddUpdateFILoginHostAcctRs:
+          AddFILoginHostAcctRs:
           - HostAcctStatusID: 7000
             FILoginAcctId: 5496570
             FIHostAcctIds:
@@ -17444,15 +17446,19 @@ components:
     hostAccountsStatusResponse:
       value:
         RqUID: RqUID0
-        SignonRs:
-          Status:
-            StatusCode: '0'
+        Status:
+            StatusCode: 0
             Severity: Info
             StatusDesc: Success
-          CEUserID: '475521'
+        SignonRs:
+          Status:
+            StatusCode: 0
+            Severity: Info
+            StatusDesc: Success
+          CEUserID: 475521
         HostAcctStsInqRs:
           Status:
-            StatusCode: '0'
+            StatusCode: 0
             Severity: Info
             StatusDesc: Success
           HostAcctStatusID: '84594505'
@@ -17736,8 +17742,8 @@ components:
             Severity: Info
             StatusDesc: Success
           CEUserID: 450172
-        partnerID:
-        version:
+        partnerID: 66664000
+        version: version1
 
     pfmcategorizeTransactionRequest:
       value:
@@ -17788,7 +17794,7 @@ components:
           TransCategoryList:
             TransStatus:
             - TransID: 6728644
-              Status:
+              status:
                 StatusCode: 0
                 Severity: Info
                 StatusDesc: Success
