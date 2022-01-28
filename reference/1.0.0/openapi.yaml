@@ -5991,7 +5991,7 @@ components:
       - TargetDate
       type: object
       properties:
-        GoalId: {type: string, example: 6174014, description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully." }
+        GoalId: {type: string, example: '6174014', description: "The identification assigned to the Goal request. This element will be present only of the request that was carried out successfully." }
         GoalName: {type: string, example: 'Buy a car', description: "Enter information for what you'd like to save up for, like a new house, education savings, etc."}
         GoalStatus: {type: string, example: 'Off Schedule', description: "Status of goal requested."}
         TargetAmt: {type: number, format: double, example: 100, description: "It is the amount that need to save."}
@@ -8924,7 +8924,7 @@ components:
               CategoryId: 7
               SubCategoryId: 0
               Frequency: Month
-              Description:
+              Description: ''
               AddedOn: '2019-07-11T05:37:37-07:00'
               ModifiedOn: '2021-12-01T00:00:59-08:00'
             - BudgetId: 5760017
@@ -8935,7 +8935,7 @@ components:
               CategoryId: 11
               SubCategoryId: 0
               Frequency: Month
-              Description:
+              Description: ''
               AddedOn: '2019-07-11T05:37:37-07:00'
               ModifiedOn: '2021-12-01T00:00:59-08:00'
             - BudgetId: 5760016
@@ -8946,7 +8946,7 @@ components:
               CategoryId: 12
               SubCategoryId: 0
               Frequency: Month
-              Description:
+              Description: ''
               AddedOn: '2019-07-11T05:37:37-07:00'
               ModifiedOn: '2021-12-01T00:00:59-08:00'
             - BudgetId: 5760019
@@ -8957,7 +8957,7 @@ components:
               CategoryId: 6
               SubCategoryId: 0
               Frequency: Month
-              Description:
+              Description: ''
               AddedOn: '2019-07-11T05:37:37-07:00'
               ModifiedOn: '2021-12-01T00:00:59-08:00'
             - BudgetId: 5760020
@@ -8968,7 +8968,7 @@ components:
               CategoryId: 5
               SubCategoryId: 0
               Frequency: Month
-              Description:
+              Description: ''
               AddedOn: '2019-07-11T05:37:37-07:00'
               ModifiedOn: '2021-12-01T00:00:59-08:00'
         partnerID: 8885504
@@ -9304,7 +9304,7 @@ components:
             Severity: Info
             StatusDesc: Success
           CEUserID: 1857898
-          SessInfo:
+          SessInfo: ''
           Roles:
           ResetPasswordRequired:
           SecurityQuesSetUpRequired:
@@ -15585,7 +15585,7 @@ components:
                   FirstVestDt: '2008-12-10T12:00:00Z'
                   ExpirationDt: '2017-12-10T12:00:00Z'
                   SharesGranted: 59300
-                  NxtVestDt:
+                  NxtVestDt: ''
                   VestPeriods: 3
                   VestPeriodsPerYr: 1
                   SharesVested: 59300
@@ -16228,7 +16228,7 @@ components:
             Severity: Info
             StatusDesc: Success
           CEUserID: 450172
-          SessInfo:
+          SessInfo: ''
           Roles:
           ResetPasswordRequired:
           SecurityQuesSetUpRequired:
@@ -17725,7 +17725,7 @@ components:
 
     updateHostAccountsResponse:
       value:
-        RqUID:
+        RqUID: ''
         Status:
           StatusCode: 0
           Severity: Info
