@@ -2841,7 +2841,7 @@ components:
         LastUpdateStatusMsg: {type: string }
         LastUpdateStatusFIMsg: {type: string }
         TaxDocumentID: {type: string, example: 'Ywasd182987qsFERvx987rqwLjkNipa71aswf26adfRT=' }
-        ParentError: {type: boolean, example: 'true' }
+        ParentError: {type: boolean, example: true }
         FIInfo: {$ref: '#/components/schemas/FIInfoType' }
         FIUserLoginAcctInfo: {$ref: '#/components/schemas/FIUserLoginAcctInfoType' }
         FIAcctSummary:
@@ -7090,7 +7090,7 @@ components:
       type: object
       properties:
         FIVerifyInfo: {$ref: '#/components/schemas/FIVerifyInfoType' }
-        SensitiveInfoEncrypted: {type: boolean, example: 'false' }
+        SensitiveInfoEncrypted: {type: boolean, example: false }
         RunId: {type: integer, format: int32, example: 18816631 }
         OAuthRqID: {type: string, example: '35109' }
         FILoginAcctId: {type: integer, format: int32, example: 5586467 }
