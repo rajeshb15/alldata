@@ -2587,7 +2587,7 @@ components:
       - CurCode
       type: object
       properties:
-        Amt: {type: number, format: double, example: '100' }
+        Amt: {type: number, format: double, example: 100 }
         CurCode: {type: string, example: 'USD' }
     AssetClassType:
       required:
@@ -2905,7 +2905,7 @@ components:
         ExercisePrice: {$ref: '#/components/schemas/TransactionAmtType' }
         FirstVestDt: {type: string, description: "First Vesting Date of Grant", format: date-time, example: '2020-08-31T00:00:00Z' }
         ExpirationDt: {type: string, description: "Expiration Date of Grant", format: date-time, example: '2020-08-31T00:00:00Z' }
-        SharesGranted: {type: number, description: "Number of shares in the Grant", format: double, example: '94700.0' }
+        SharesGranted: {type: number, description: "Number of shares in the Grant", format: double, example: 94700.0 }
         NxtVestDt: {type: string, format: date-time, example: '2020-08-31T00:00:00Z' }
         VestPeriods: {type: integer, description: "Total number of vesting periods", format: int32, example: '3' }
         VestPeriodsPerYr: {type: integer, description: "Number of vesting periods per year", format: int32, example: '1' }
@@ -2988,7 +2988,7 @@ components:
       - CurCode
       type: object
       properties:
-        Amt: {type: number, format: double, example: '100' }
+        Amt: {type: number, format: double, example: 100 }
         CurCode: { type: string, enum: [HKD,HNL,HTG,HUF,IDR,IEP,ILS,INR,IQD,IRR,ISK,ITL,JMD,JOD,JPY,DEM,DJF,DKK,DOP,ECD,ECS,EUR,EEK,EGP,SVC,ETB,FIM,FJD,FKP,FRF,GBP,GHC,GIP,GMD,GNF,GRD,GTQ,GWP,GYD,BGL,BHD,BIF,BMD,BOB,BRL,BSD,BTN,BWP,BYB,BZD,CAD,KHR,KMF,KYD,XAF,XPF,CLP,CNY,COP,CRC,HRK,CZK,CUP,CVE,CYP,LSL,LTL,LUF,LVL,LYD,MAD,MDL,MGF,MKD,MMK,MNT,MOP,MRO,MTL,MUR,MVR,MWK,KES,KRW,KWD,KZT,LAK,LBP,LRD,MXP,MYR,MZM,NGN,NIO,ANG,NLG,NOK,NPR,NZD,OMR,PEN,PGK,PHP,PKR,PLN,PTE,PYG,AED,RUR,RWF,SAR,SBD,SCR,ESP,SDD,SEK,SGD,SIT,SKK,SLL,SRG,STD,ZAR,LKR,SYP,SZL,CHF,TWD,THB,TJR,TMM,TND,TOP,TRL,TTD,TZS,UGX,USD,UYP,UZS,VEB,VND,VUV,WST,YDR,YER,ZMK,ZRN,ZWD,AFA,DZD,ALL,AMD,AOR,ARS,ATS,AUD,AWG,AZM,BAD,BBD,BDT,BEF]}
     MFAQuestionType:
       required:
@@ -3078,7 +3078,7 @@ components:
       description: "Position and value of the security"
       properties:
         UnitPrice: {$ref: '#/components/schemas/TransactionAmtType' }
-        Units: {type: number, description: "Number of securities.", format: double, example: '5' }
+        Units: {type: number, description: "Number of securities.", format: double, example: 5 }
         MarketValue: {$ref: '#/components/schemas/TransactionAmtType' }
         CostBasis: {$ref: '#/components/schemas/TransactionAmtType' }
     SignonRsType:
@@ -3122,7 +3122,7 @@ components:
       - CurCode
       type: object
       properties:
-        Amt: {type: number, format: double, example: '100' }
+        Amt: {type: number, format: double, example: 100 }
         CurCode: {type: string, example: 'USD' }
     URLType:
       required:
@@ -3150,7 +3150,7 @@ components:
       - Duration
       type: object
       properties:
-        Amt: {type: number, format: double, example: '100' }
+        Amt: {type: number, format: double, example: 100 }
         CurCode: {type: string, enum: [HKD,HNL,HTG,HUF,IDR,IEP,ILS,INR,IQD,IRR,ISK,ITL,JMD,JOD,JPY,DEM,DJF,DKK,DOP,ECD,ECS,EUR,EEK,EGP,SVC,ETB,FIM,FJD,FKP,FRF,GBP,GHC,GIP,GMD,GNF,GRD,GTQ,GWP,GYD,BGL,BHD,BIF,BMD,BOB,BRL,BSD,BTN,BWP,BYB,BZD,CAD,KHR,KMF,KYD,XAF,XPF,CLP,CNY,COP,CRC,HRK,CZK,CUP,CVE,CYP,LSL,LTL,LUF,LVL,LYD,MAD,MDL,MGF,MKD,MMK,MNT,MOP,MRO,MTL,MUR,MVR,MWK,KES,KRW,KWD,KZT,LAK,LBP,LRD,MXP,MYR,MZM,NGN,NIO,ANG,NLG,NOK,NPR,NZD,OMR,PEN,PGK,PHP,PKR,PLN,PTE,PYG,AED,RUR,RWF,SAR,SBD,SCR,ESP,SDD,SEK,SGD,SIT,SKK,SLL,SRG,STD,ZAR,LKR,SYP,SZL,CHF,TWD,THB,TJR,TMM,TND,TOP,TRL,TTD,TZS,UGX,USD,UYP,UZS,VEB,VND,VUV,WST,YDR,YER,ZMK,ZRN,ZWD,AFA,DZD,ALL,AMD,AOR,ARS,ATS,AUD,AWG,AZM,BAD,BBD,BDT,BEF]}
         Duration: {type: string }
     AdminInfoType:
@@ -3726,7 +3726,7 @@ components:
         Commission: {$ref: '#/components/schemas/TransactionAmtType' }
         Desc: {type: string, example: 'Fidelity Advisor 529 Mid Cap Portfolio - Class c(1166)-SYSTEMATIC CONTRIBUTION' }
         SecInfo: {$ref: '#/components/schemas/SecInfoType' }
-        Units: {type: number, format: double, example: '5' }
+        Units: {type: number, format: double, example: 5 }
         UnitPrice: {$ref: '#/components/schemas/TransactionAmtType' }
         CheckNumber: {type: integer, format: int32, example: '5467' }
     InvstAcctTrnInfoType:
