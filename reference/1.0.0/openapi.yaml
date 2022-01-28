@@ -9307,12 +9307,6 @@ components:
             StatusDesc: Success
           CEUserID: 1857898
           SessInfo: ''
-          Roles:
-          ResetPasswordRequired:
-          SecurityQuesSetUpRequired:
-          PasswordExpired:
-          LastSuccessfullLogin:
-          MFAQuestions:
         TaxDocumentInqRs:
           Status:
             StatusCode: 0
@@ -9323,55 +9317,33 @@ components:
           FILoginAcctTaxDocList:
             FILoginAcctTaxDocDetail:
             - FILoginAcctId: 5291042
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
             - FILoginAcctId: 5290978
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
             - FILoginAcctId: 5290980
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
             - FILoginAcctId: 5289749
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
             - FILoginAcctId: 5287207
-              TaxDocumentID:
               FIConsent: enabled
               AcctTaxDocDetail:
               - AcctId: 5287210
-                TaxDocumentID:
             - FILoginAcctId: 5289928
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
             - FILoginAcctId: 5284936
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
             - FILoginAcctId: 5290345
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
             - FILoginAcctId: 5290636
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
             - FILoginAcctId: 5289790
-              TaxDocumentID:
               FIConsent: enabled
               AcctTaxDocDetail:
               - AcctId: 5289796
-                TaxDocumentID:
               - AcctId: 5289797
                 TaxDocumentID: YWxsZGF0YV8yMDE4XzUyODk3OTdfaW52ZXN0Mi5wZGY=
             - FILoginAcctId: 5291247
-              TaxDocumentID:
               FIConsent: NA
-              AcctTaxDocDetail:
         partnerID: 8885504
         version: version1
     
@@ -16231,14 +16203,7 @@ components:
             StatusDesc: Success
           CEUserID: 450172
           SessInfo: ''
-          Roles:
-          ResetPasswordRequired:
-          SecurityQuesSetUpRequired:
-          PasswordExpired:
-          LastSuccessfullLogin:
-          MFAQuestions:
         AddHostAcctsRs:
-          Status:
           AddFILoginHostAcctRs:
           - FILoginAcctId: 708595
             FIHostAcctIds:
