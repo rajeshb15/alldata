@@ -27,7 +27,7 @@ paths:
             schema: 
               $ref: '#/components/schemas/FILoginAcctInfoListInqRqHeader'
             examples:
-              getAccountDetails: {summary: Request Account Details, $ref: '#/components/examples/getAccountDetailsRequest'}
+              getAccountDetails: {$ref: '#/components/examples/getAccountDetailsRequest'}
         required: true
       responses:
         "200":
@@ -37,7 +37,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FILoginAcctInfoListInqRsHeader'
               examples:
-                getAccountDetails: {summary: Response Account Details, $ref: '#/components/examples/getAccountDetailsResponse'}
+                getAccountDetails: {$ref: '#/components/examples/getAccountDetailsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -68,7 +68,7 @@ paths:
             schema:
               $ref: '#/components/schemas/AccountUpdateSummaryRqHeader'
             examples:
-              getAccountUpdateSummary: {summary: Request Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryRequest'}
+              getAccountUpdateSummary: {$ref: '#/components/examples/getAccountUpdateSummaryRequest'}
         required: true
       responses:
         "200":
@@ -78,7 +78,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/AccountUpdateSummaryRsHeader'
               examples:
-                getAccountUpdateSummary: {summary: Response Account Update Summary, $ref: '#/components/examples/getAccountUpdateSummaryResponse'}
+                getAccountUpdateSummary: {$ref: '#/components/examples/getAccountUpdateSummaryResponse'}
         "400":
           description: Bad Request
         "401":
@@ -108,7 +108,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FIAcctSummaryInqRqHeader'
             examples:
-              getAccountsSummary: {summary: Request Accounts Summary, $ref: '#/components/examples/getAccountsSummaryRequest'}
+              getAccountsSummary: {$ref: '#/components/examples/getAccountsSummaryRequest'}
         required: true
       responses:
         "200":
@@ -118,7 +118,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FIAcctSummaryInqRsHeader'
               examples:
-                getAccountsSummary: {summary: Response Accounts Summary, $ref: '#/components/examples/getAccountsSummaryResponse'}
+                getAccountsSummary: {$ref: '#/components/examples/getAccountsSummaryResponse'}
         "400":
           description: Bad Request
         "401":
@@ -146,7 +146,7 @@ paths:
             schema:
               $ref: '#/components/schemas/BankStatementRqHeader'
             examples:
-              getBankStmtDetails: {summary: Request Bank Statement Details, $ref: '#/components/examples/getBankStmtDetailsRequest'}
+              getBankStmtDetails: {$ref: '#/components/examples/getBankStmtDetailsRequest'}
         required: true
       responses:
         "200":
@@ -156,7 +156,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/BankStatementRsHeader'
               examples:
-                getBankStmtDetails: {summary: Response Bank Statement Details, $ref: '#/components/examples/getBankStmtDetailsResponse'}
+                getBankStmtDetails: {$ref: '#/components/examples/getBankStmtDetailsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -192,7 +192,7 @@ paths:
             schema:
               $ref: '#/components/schemas/DepAcctTrnInqRqHeader'
             examples:
-              getBankingTrans: {summary: Request Banking Transactions, $ref: '#/components/examples/getBankingTransRequest'}
+              getBankingTrans: {$ref: '#/components/examples/getBankingTransRequest'}
         required: true
       responses:
         "200":
@@ -202,7 +202,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/DepAcctTrnInqRsHeader'
               examples:
-                getBankingTrans: {summary: Response Banking Transactions, $ref: '#/components/examples/getBankingTransResponse'}
+                getBankingTrans: {$ref: '#/components/examples/getBankingTransResponse'}
         "400":
           description: Bad Request
         "401":
@@ -236,7 +236,7 @@ paths:
             schema:
               $ref: '#/components/schemas/CCAcctTrnInqRqHeader'
             examples:
-              getCreditCardTrans: {summary: Request Credit Card Transactions, $ref: '#/components/examples/getCreditCardTransRequest'}
+              getCreditCardTrans: {$ref: '#/components/examples/getCreditCardTransRequest'}
         required: true
       responses:
         "200":
@@ -246,7 +246,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/CCAcctTrnInqRsHeader'
               examples:
-                getCreditCardTrans: {summary: Response Credit Card Transactions, $ref: '#/components/examples/getCreditCardTransResponse'}
+                getCreditCardTrans: {$ref: '#/components/examples/getCreditCardTransResponse'}
         "400":
           description: Bad Request
         "401":
@@ -285,7 +285,7 @@ paths:
             schema:
               $ref: '#/components/schemas/DeletedTrnInqRqHeader'
             examples:
-              getDeletedTrans: {summary: Request Deleted Transactions, $ref: '#/components/examples/getDeletedTransRequest'}
+              getDeletedTrans: {$ref: '#/components/examples/getDeletedTransRequest'}
         required: true
       responses:
         "200":
@@ -295,7 +295,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/DeletedTrnInqRsHeader'
               examples:
-                getDeletedTrans: {summary: Response Deleted Transactions, $ref: '#/components/examples/getDeletedTransResponse'}
+                getDeletedTrans: {$ref: '#/components/examples/getDeletedTransResponse'}
         "400":
           description: Bad Request
         "401":
@@ -326,7 +326,7 @@ paths:
             schema:
               $ref: '#/components/schemas/EmployerStockOptionRqHeader'
             examples:
-              getEmployerStockOptions: {summary: Request Employer Stock Options, $ref: '#/components/examples/getEmployerStockOptionsRequest'}
+              getEmployerStockOptions: {$ref: '#/components/examples/getEmployerStockOptionsRequest'}
         required: true
       responses:
         "200":
@@ -336,7 +336,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/EmployerStockOptionRsHeader'
               examples:
-                getEmployerStockOptions: {summary: Response Employer Stock Options, $ref: '#/components/examples/getEmployerStockOptionsResponse'}
+                getEmployerStockOptions: {$ref: '#/components/examples/getEmployerStockOptionsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -367,7 +367,7 @@ paths:
             schema:
               $ref: '#/components/schemas/InvAcctPosInqRqHeader'
             examples:
-              getInvestmentPos: {summary: Request Investment Position, $ref: '#/components/examples/getInvestmentPosRequest'}
+              getInvestmentPos: {$ref: '#/components/examples/getInvestmentPosRequest'}
         required: true
       responses:
         "200":
@@ -377,7 +377,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/InvAcctPosInqRsHeader'
               examples:
-                getInvestmentPos: {summary: Response Investment Position, $ref: '#/components/examples/getInvestmentPosResponse'}
+                getInvestmentPos: {$ref: '#/components/examples/getInvestmentPosResponse'}
         "400":
           description: Bad Request
         "401":
@@ -409,7 +409,7 @@ paths:
             schema:
               $ref: '#/components/schemas/InvAcctTrnInqRqHeader'
             examples:
-              getInvestmentTrans: {summary: Request Investment Transactions, $ref: '#/components/examples/getInvestmentTransRequest'}
+              getInvestmentTrans: {$ref: '#/components/examples/getInvestmentTransRequest'}
         required: true
       responses:
         "200":
@@ -419,7 +419,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/InvAcctTrnInqRsHeader'
               examples:
-                getInvestmentTrans: {summary: Response Investment Transactions, $ref: '#/components/examples/getInvestmentTransResponse'}
+                getInvestmentTrans: {$ref: '#/components/examples/getInvestmentTransResponse'}
         "400":
           description: Bad Request
         "401":
@@ -452,7 +452,7 @@ paths:
             schema:
               $ref: '#/components/schemas/OtherAcctTrnInqRqHeader'
             examples:
-              getOtherAccountTrans: {summary: Request getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransRequest'}
+              getOtherAccountTrans: {$ref: '#/components/examples/getOtherAccountTransRequest'}
         required: true
       responses:
         "200":
@@ -462,7 +462,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OtherAcctTrnInqRsHeader'
               examples: 
-                getOtherAccountTrans: {summary: Response getOtherAccountTrans, $ref: '#/components/examples/getOtherAccountTransResponse'}
+                getOtherAccountTrans: {$ref: '#/components/examples/getOtherAccountTransResponse'}
         "400":
           description: Bad Request
         "401":
@@ -490,7 +490,7 @@ paths:
             schema:
               $ref: '#/components/schemas/TaxDocumentInqRqHeader'
             examples: 
-              getTaxDocDetails: {summary: Request TaxDocDetails, $ref: '#/components/examples/getTaxDocDetailsRequest'}          
+              getTaxDocDetails: {$ref: '#/components/examples/getTaxDocDetailsRequest'}          
         required: true
       responses:
         "200":
@@ -500,7 +500,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/TaxDocumentInqRsHeader'
               examples:
-                getTaxDocDetails: {summary: Response TaxDocDetails, $ref: '#/components/examples/getTaxDocDetailsResponse'}
+                getTaxDocDetails: {$ref: '#/components/examples/getTaxDocDetailsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -542,7 +542,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FindTrnsInqRqHeader'
             examples: 
-              getTransactions: {summary: Request getTransactions, $ref: '#/components/examples/getTransactionsRequest'}
+              getTransactions: {$ref: '#/components/examples/getTransactionsRequest'}
         required: true
       responses:
         "200":
@@ -552,7 +552,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FindTrnsInqRsHeader'
               examples: 
-                getTransactions: {summary: Response getTransactions, $ref: '#/components/examples/getTransactionsResponse'}
+                getTransactions: {$ref: '#/components/examples/getTransactionsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -576,7 +576,7 @@ paths:
             schema:
               $ref: '#/components/schemas/PingRqHeader'
             examples: 
-              ping: {summary: Request Ping, $ref: '#/components/examples/pingRequest'}
+              ping: {$ref: '#/components/examples/pingRequest'}
         required: true
       responses:
         "200":
@@ -586,7 +586,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/PingRsHeader'
               examples:
-                ping: {summary: Response Ping, $ref: '#/components/examples/pingResponse'}
+                ping: {$ref: '#/components/examples/pingResponse'}
         "400":
           description: Bad Request
         "401":
@@ -618,7 +618,7 @@ paths:
             schema:
               $ref: '#/components/schemas/AddHostAcctsRqHeader'
             examples:
-              addHostAccounts: {summary: Request Add Host Account, $ref: '#/components/examples/addHostAccountsRequest'}          
+              addHostAccounts: {$ref: '#/components/examples/addHostAccountsRequest'}          
         required: true
       responses:
         "200":
@@ -628,7 +628,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/AddHostAcctsRsHeader'
               examples:
-                addHostAccounts: {summary: Response Add Host Account, $ref: '#/components/examples/addHostAccountsResponse'}
+                addHostAccounts: {$ref: '#/components/examples/addHostAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -664,7 +664,7 @@ paths:
             schema:
               $ref: '#/components/schemas/addUpdateHostAccountsRqHeader'
             examples:
-              addUpdateHostAccounts: {summary: Request Add Update Host Account, $ref: '#/components/examples/addUpdateHostAccountsRequest'}
+              addUpdateHostAccounts: {$ref: '#/components/examples/addUpdateHostAccountsRequest'}
         required: true
       responses:
         "200":
@@ -674,7 +674,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/addUpdateHostAccountsRsHeader'
               examples:
-                addUpdateHostAccounts: {summary: Response Add Update Host Account, $ref: '#/components/examples/addUpdateHostAccountsResponse'}
+                addUpdateHostAccounts: {$ref: '#/components/examples/addUpdateHostAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -703,7 +703,7 @@ paths:
             schema:
               $ref: '#/components/schemas/BankStatementConsentRqHeader'
             examples:
-              bankStatementConsent: {summary: Request Bank Statement Consent, $ref: '#/components/examples/bankStatementConsentRequest'}
+              bankStatementConsent: {$ref: '#/components/examples/bankStatementConsentRequest'}
         required: true
       responses:
         "200":
@@ -713,7 +713,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/BankStatementConsentRsHeader'
               examples:
-                bankStatementConsent: {summary: Response Bank Statement Consent, $ref: '#/components/examples/bankStatementConsentResponse'}
+                bankStatementConsent: {$ref: '#/components/examples/bankStatementConsentResponse'}
         "400":
           description: Bad Request
         "401":
@@ -747,7 +747,7 @@ paths:
             schema:
               $ref: '#/components/schemas/HarvestAddCreateAcctsRqHeader'
             examples:
-              createAccounts: {summary: Request Create Accounts, $ref: '#/components/examples/createAccountsRequest'}
+              createAccounts: {$ref: '#/components/examples/createAccountsRequest'}
         required: true
       responses:
         "200":
@@ -757,7 +757,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HarvestAddCreateAcctsRsHeader'
               examples:
-                createAccounts: {summary: Response Create Accounts, $ref: '#/components/examples/createAccountsResponse'}
+                createAccounts: {$ref: '#/components/examples/createAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -790,7 +790,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FIDeleteRqHeader'
             examples:
-              deleteAccounts: {summary: Request Delete Accounts, $ref: '#/components/examples/deleteAccountsRequest'}
+              deleteAccounts: {$ref: '#/components/examples/deleteAccountsRequest'}
         required: true
       responses:
         "200":
@@ -800,7 +800,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FIDeleteRsHeader'
               examples:
-                deleteAccounts: {summary: Response Delete Accounts, $ref: '#/components/examples/deleteAccountsResponse'}
+                deleteAccounts: {$ref: '#/components/examples/deleteAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -887,7 +887,7 @@ paths:
             schema:
               $ref: '#/components/schemas/HarvestAddStsInqRqHeader'
             examples:
-              getAddAccountStatus: {summary: Request Add Account Status, $ref: '#/components/examples/getAddAccountStatusRequest'}
+              getAddAccountStatus: {$ref: '#/components/examples/getAddAccountStatusRequest'}
         required: true
       responses:
         "200":
@@ -897,7 +897,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HarvestAddStsInqRsHeader'
               examples:
-                getAddAccountStatus: {summary: Response Add Account Status, $ref: '#/components/examples/getAddAccountStatusResponse'}
+                getAddAccountStatus: {$ref: '#/components/examples/getAddAccountStatusResponse'}
         "400":
           description: Bad Request
         "401":
@@ -935,7 +935,7 @@ paths:
             schema:
               $ref: '#/components/schemas/HarvestAddFetchRqHeader'
             examples:
-              getNewAccounts: {summary: Request Get New Accounts, $ref: '#/components/examples/getNewAccountsRequest'}
+              getNewAccounts: {$ref: '#/components/examples/getNewAccountsRequest'}
         required: true
       responses:
         "200":
@@ -945,7 +945,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HarvestAddFetchRsHeader'
               examples:
-                getNewAccounts: {summary: Response Get New Accounts, $ref: '#/components/examples/getNewAccountsResponse'}
+                getNewAccounts: {$ref: '#/components/examples/getNewAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -973,7 +973,7 @@ paths:
             schema:
               $ref: '#/components/schemas/HostAcctStsInqRqHeader'
             examples:
-              hostAccountsStatus: {summary: Request Host Account Status, $ref: '#/components/examples/hostAccountsStatusRequest'}
+              hostAccountsStatus: {$ref: '#/components/examples/hostAccountsStatusRequest'}
         required: true
       responses:
         "200":
@@ -983,7 +983,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HostAcctStsInqRsHeader'
               examples:
-                hostAccountsStatus: {summary: Response Host Account Status, $ref: '#/components/examples/hostAccountsStatusResponse'}
+                hostAccountsStatus: {$ref: '#/components/examples/hostAccountsStatusResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1026,7 +1026,7 @@ paths:
             schema:
               $ref: '#/components/schemas/HarvestAddRqHeader'
             examples:
-              initiateAddAccounts: {summary: Request Initiate Add Account, $ref: '#/components/examples/initiateAddAccountRequest'}
+              initiateAddAccounts: {$ref: '#/components/examples/initiateAddAccountRequest'}
         required: true
       responses:
         "200":
@@ -1036,7 +1036,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HarvestAddRsHeader'
               examples:
-                initiateAddAccounts: {summary: Response Initiate Add Account, $ref: '#/components/examples/initiateAddAccountResponse'}
+                initiateAddAccounts: {$ref: '#/components/examples/initiateAddAccountResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1068,7 +1068,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UserAcctModRqHeader'
             examples:
-              maintainAccount: {summary: Request Maintain Account, $ref: '#/components/examples/maintainAccountRequest'}
+              maintainAccount: {$ref: '#/components/examples/maintainAccountRequest'}
         required: true
       responses:
         "200":
@@ -1078,7 +1078,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserAcctModRsHeader'
               examples:
-                maintainAccount: {summary: Response Maintain Account, $ref: '#/components/examples/maintainAccountResponse'}
+                maintainAccount: {$ref: '#/components/examples/maintainAccountResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1106,7 +1106,7 @@ paths:
             schema:
               $ref: '#/components/schemas/TaxStatementConsentRqHeader'
             examples:
-              taxStatementConsent: {summary: Request Tax Statement Consent, $ref: '#/components/examples/taxStatementConsentRequest'}
+              taxStatementConsent: {$ref: '#/components/examples/taxStatementConsentRequest'}
         required: true
       responses:
         "200":
@@ -1116,7 +1116,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/TaxStatementConsentRsHeader'
               examples:
-                taxStatementConsent: {summary: Response Tax Statement Consent, $ref: '#/components/examples/taxStatementConsentResponse'}
+                taxStatementConsent: {$ref: '#/components/examples/taxStatementConsentResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1149,7 +1149,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UserOFILoginCredentialsModRqHeader'
             examples:
-              updateAccountCredentials: {summary: Request Update Account Credentials, $ref: '#/components/examples/updateAccountCredentialsRequest'}
+              updateAccountCredentials: {$ref: '#/components/examples/updateAccountCredentialsRequest'}
         required: true
       responses:
         "200":
@@ -1159,7 +1159,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserOFILoginCredentialsModRsHeader'
               examples:
-                updateAccountCredentials: {summary: Response Update Account Credentials, $ref: '#/components/examples/updateAccountCredentialsResponse'}
+                updateAccountCredentials: {$ref: '#/components/examples/updateAccountCredentialsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1197,7 +1197,7 @@ paths:
             schema:
               $ref: '#/components/schemas/ModHostAcctsRqHeader'
             examples:
-              updateHostAccounts: {summary: Request Update Host Account, $ref: '#/components/examples/updateHostAccountsRequest'}
+              updateHostAccounts: {$ref: '#/components/examples/updateHostAccountsRequest'}
         required: true
       responses:
         "200":
@@ -1207,7 +1207,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/ModHostAcctsRsHeader'
               examples:
-                updateHostAccounts: {summary: Response Update Host Account, $ref: '#/components/examples/updateHostAccountsResponse'}
+                updateHostAccounts: {$ref: '#/components/examples/updateHostAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1244,7 +1244,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
             examples:
-              categorizeTransactionPfm: {summary: Request Categorize Transaction, $ref: '#/components/examples/pfmcategorizeTransactionRequest'}
+              categorizeTransactionPfm: {$ref: '#/components/examples/pfmcategorizeTransactionRequest'}
         required: true
       responses:
         "200":
@@ -1254,7 +1254,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
               examples:
-                categorizeTransactionPfm: {summary: Response Categorize Transaction, $ref: '#/components/examples/pfmcategorizeTransactionResponse'}
+                categorizeTransactionPfm: {$ref: '#/components/examples/pfmcategorizeTransactionResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1282,7 +1282,7 @@ paths:
             schema:
               $ref: '#/components/schemas/DeleteSubCategoryRqHeader'
             examples:
-              deleteSubCategory: {summary: Request Delete Subcategory, $ref: '#/components/examples/deleteSubCategoryRequest'}
+              deleteSubCategory: {$ref: '#/components/examples/deleteSubCategoryRequest'}
         required: true
       responses:
         "200":
@@ -1292,7 +1292,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/DeleteSubCategoryRsHeader'
               examples:
-                deleteSubCategory: {summary: Response Delete Subcategory, $ref: '#/components/examples/deleteSubCategoryResponse'}
+                deleteSubCategory: {$ref: '#/components/examples/deleteSubCategoryResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1329,7 +1329,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UpdateTxnCategoryRqHeader'
             examples:
-              categorizeTransaction: {summary: Request CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionRequest'}
+              categorizeTransaction: {$ref: '#/components/examples/categorizeTransactionRequest'}
         required: true
       responses:
         "200":
@@ -1339,7 +1339,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UpdateTxnCategoryRsHeader'
               examples:
-                categorizeTransaction: {summary: Response CategorizeTransaction, $ref: '#/components/examples/categorizeTransactionResponse'}
+                categorizeTransaction: {$ref: '#/components/examples/categorizeTransactionResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1372,7 +1372,7 @@ paths:
             schema:
               $ref: '#/components/schemas/BudgetAddRqHeader'
             examples:
-              createBudget: {summary: Request Create Budget, $ref: '#/components/examples/createBudgetRequest'}        
+              createBudget: {$ref: '#/components/examples/createBudgetRequest'}        
         required: true
       responses:
         "200":
@@ -1382,7 +1382,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/BudgetAddRsHeader'
               examples:
-                createBudget: {summary: Response Create Budget, $ref: '#/components/examples/createBudgetResponse'}        
+                createBudget: {$ref: '#/components/examples/createBudgetResponse'}        
         "400":
           description: Bad Request
         "401":
@@ -1412,7 +1412,7 @@ paths:
             schema:
               $ref: '#/components/schemas/BudgetDeleteRqHeader'
             examples:
-              deleteBudget: {summary: Request Delete Budget, $ref: '#/components/examples/deleteBudgetRequest'}                 
+              deleteBudget: {$ref: '#/components/examples/deleteBudgetRequest'}                 
         required: true
       responses:
         "200":
@@ -1422,7 +1422,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/BudgetDeleteRsHeader'
               examples:
-                deleteBudget: {summary: Response Delete Budget, $ref: '#/components/examples/deleteBudgetResponse'}                     
+                deleteBudget: {$ref: '#/components/examples/deleteBudgetResponse'}                     
         "400":
           description: Bad Request
         "401":
@@ -1455,7 +1455,7 @@ paths:
             schema:
               $ref: '#/components/schemas/BudgetEditRqHeader'
             examples:
-              editBudget: {summary: Request Edit Budget, $ref: '#/components/examples/editBudgetRequest'}              
+              editBudget: {$ref: '#/components/examples/editBudgetRequest'}              
         required: true
       responses:
         "200":
@@ -1465,7 +1465,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/BudgetEditRsHeader'
               examples:
-                editBudget: {summary: Response Edit Budget, $ref: '#/components/examples/editBudgetResponse'}                 
+                editBudget: {$ref: '#/components/examples/editBudgetResponse'}                 
         "400":
           description: Bad Request
         "401":
@@ -1494,7 +1494,7 @@ paths:
             schema:
               $ref: '#/components/schemas/BudgetFindRqHeader'
             examples:
-              findBudget: {summary: Request Find Budget, $ref: '#/components/examples/findBudgetRequest'}              
+              findBudget: {$ref: '#/components/examples/findBudgetRequest'}              
         required: true
       responses:
         "200":
@@ -1504,7 +1504,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/BudgetFindRsHeader'
               examples:
-                findBudget: {summary: Response Find Budget, $ref: '#/components/examples/findBudgetResponse'}
+                findBudget: {$ref: '#/components/examples/findBudgetResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1537,8 +1537,8 @@ paths:
             schema:
               $ref: '#/components/schemas/AddOfflineAcctRqHeader'
             examples:
-              AdvisorHome: {summary: Request Add Offline Account Advisor Home, $ref: '#/components/examples/addOfflineAccountAdvisorRequest'}
-              RetailHome: {summary: Request Add Offline Account Retail Home, $ref: '#/components/examples/addOfflineAccountRetailRequest'}
+              AdvisorHome: {$ref: '#/components/examples/addOfflineAccountAdvisorRequest'}
+              RetailHome: {$ref: '#/components/examples/addOfflineAccountRetailRequest'}
         required: true
       responses:
         "200":
@@ -1548,8 +1548,8 @@ paths:
               schema:
                 $ref: '#/components/schemas/AddOfflineAcctRsHeader'
               examples:
-                AdvisorHome: {summary: Response Add Offline Account Advisor Home, $ref: '#/components/examples/addOfflineAccountAdvisorResponse'}
-                RetailHome: {summary: Response Add Offline Account Retail Home, $ref: '#/components/examples/addOfflineAccountRetailResponse'}
+                AdvisorHome: {$ref: '#/components/examples/addOfflineAccountAdvisorResponse'}
+                RetailHome: {$ref: '#/components/examples/addOfflineAccountRetailResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1583,7 +1583,7 @@ paths:
             schema:
               $ref: '#/components/schemas/OfflineAcctModRqHeader'
             examples:
-              updateOfflineAccount: {summary: Request Update Offline Account, $ref: '#/components/examples/updateOfflineAccountRequest'}
+              updateOfflineAccount: {$ref: '#/components/examples/updateOfflineAccountRequest'}
         required: true
       responses:
         "200":
@@ -1593,7 +1593,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/OfflineAcctModRsHeader'
               examples:
-                updateOfflineAccount: {summary: Response Update Offline Account, $ref: '#/components/examples/updateOfflineAccountResponse'}            
+                updateOfflineAccount: {$ref: '#/components/examples/updateOfflineAccountResponse'}            
         "400":
           description: Bad Request
         "401":
@@ -1621,7 +1621,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FIMessagesInfoRqHeader'
             examples:
-              getFIMessageInfo: {summary: Request FI Message Info, $ref: '#/components/examples/getFIMessageInfoRequest'}
+              getFIMessageInfo: {$ref: '#/components/examples/getFIMessageInfoRequest'}
         required: true
       responses:
         "200":
@@ -1631,7 +1631,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FIMessagesInfoRsHeader'
               examples:
-                getFIMessageInfo: {summary: Response FI Message Info, $ref: '#/components/examples/getFIMessageInfoResponse'}
+                getFIMessageInfo: {$ref: '#/components/examples/getFIMessageInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1668,7 +1668,7 @@ paths:
             schema:
               $ref: '#/components/schemas/GoalAddRqHeader'
             examples:
-              createGoal: {summary: Request Create Goal, $ref: '#/components/examples/createGoalRequest'}
+              createGoal: {$ref: '#/components/examples/createGoalRequest'}
         required: true
       responses:
         "200":
@@ -1678,7 +1678,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GoalAddRsHeader'
               examples:
-                createGoal: {summary: Response Create Goal, $ref: '#/components/examples/createGoalResponse'}                
+                createGoal: {$ref: '#/components/examples/createGoalResponse'}                
         "400":
           description: Bad Request
         "401":
@@ -1707,7 +1707,7 @@ paths:
             schema:
               $ref: '#/components/schemas/GoalDeleteRqHeader'
             examples:
-              deleteGoal: {summary: Request Delete Goal, $ref: '#/components/examples/deleteGoalRequest'}              
+              deleteGoal: {$ref: '#/components/examples/deleteGoalRequest'}              
         required: true
       responses:
         "200":
@@ -1717,7 +1717,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GoalDeleteRsHeader'
               examples:
-                deleteGoal: {summary: Response Delete Goal, $ref: '#/components/examples/deleteGoalResponse'}
+                deleteGoal: {$ref: '#/components/examples/deleteGoalResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1754,7 +1754,7 @@ paths:
             schema:
               $ref: '#/components/schemas/GoalEditRqHeader'
             examples:
-              editGoal: {summary: Request Edit Goal, $ref: '#/components/examples/editGoalRequest'}              
+              editGoal: {$ref: '#/components/examples/editGoalRequest'}              
         required: true
       responses:
         "200":
@@ -1764,7 +1764,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GoalEditRsHeader'
               examples:
-                editGoal: {summary: Response Edit Goal, $ref: '#/components/examples/editGoalResponse'}
+                editGoal: {$ref: '#/components/examples/editGoalResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1792,7 +1792,7 @@ paths:
             schema:
               $ref: '#/components/schemas/GoalFindRqHeader'
             examples:
-              findGoal: {summary: Request Find Goal, $ref: '#/components/examples/findGoalRequest'}              
+              findGoal: {$ref: '#/components/examples/findGoalRequest'}              
         required: true
       responses:
         "200":
@@ -1802,7 +1802,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/GoalFindRsHeader'
               examples:
-                findGoal: {summary: Response Find Goal, $ref: '#/components/examples/findGoalResponse'}                  
+                findGoal: {$ref: '#/components/examples/findGoalResponse'}                  
         "400":
           description: Bad Request
         "401":
@@ -1844,7 +1844,7 @@ paths:
             schema:
               $ref: '#/components/schemas/HarvestStsInqRqHeader'
             examples:
-              getHarvestStatus: {summary: Request Harvest Status, $ref: '#/components/examples/getHarvestStatusRequest'}
+              getHarvestStatus: {$ref: '#/components/examples/getHarvestStatusRequest'}
         required: true
       responses:
         "200":
@@ -1854,7 +1854,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HarvestStsInqRsHeader'
               examples:
-                getHarvestStatus: {summary: Response Harvest Status, $ref: '#/components/examples/getHarvestStatusResponse'}
+                getHarvestStatus: {$ref: '#/components/examples/getHarvestStatusResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1892,7 +1892,7 @@ paths:
             schema:
               $ref: '#/components/schemas/HarvestRqHeader'
             examples:
-              updateAccounts: {summary: Request Update Accounts, $ref: '#/components/examples/updateAccountsRequest'}            
+              updateAccounts: {$ref: '#/components/examples/updateAccountsRequest'}            
         required: true
       responses:
         "200":
@@ -1902,7 +1902,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/HarvestRsHeader'
               examples:
-                updateAccounts: {summary: Response Update Accounts, $ref: '#/components/examples/updateAccountsResponse'}
+                updateAccounts: {$ref: '#/components/examples/updateAccountsResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1941,7 +1941,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FIInfoRqHeader'
             examples:
-              getFinancialInstInfo: {summary: Request Financial Institution Info, $ref: '#/components/examples/getFinancialInstInfoRequest'}
+              getFinancialInstInfo: {$ref: '#/components/examples/getFinancialInstInfoRequest'}
         required: true
       responses:
         "200":
@@ -1951,7 +1951,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FIInfoRsHeader'
               examples:
-                getFinancialInstInfo: {summary: Response Financial Institution Info, $ref: '#/components/examples/getFinancialInstInfoResponse'}
+                getFinancialInstInfo: {$ref: '#/components/examples/getFinancialInstInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -1991,7 +1991,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FISearchRqHeader'
             examples:
-              searchFinancialInst: {summary: Request Search Financial Institution, $ref: '#/components/examples/searchFinancialInstRequest'}
+              searchFinancialInst: {$ref: '#/components/examples/searchFinancialInstRequest'}
         required: true
       responses:
         "200":
@@ -2001,7 +2001,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FISearchRsHeader'
               examples:
-                searchFinancialInst: {summary: Response Search Financial Institution, $ref: '#/components/examples/searchFinancialInstResponse'}
+                searchFinancialInst: {$ref: '#/components/examples/searchFinancialInstResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2029,7 +2029,7 @@ paths:
             schema:
               $ref: '#/components/schemas/TxnCategoriesInfoRqHeader'
             examples:
-              getTxnCategoriesInfo: {summary: Request Transactions Categories Info, $ref: '#/components/examples/getTxnCategoriesInfoRequest'}
+              getTxnCategoriesInfo: {$ref: '#/components/examples/getTxnCategoriesInfoRequest'}
             
         required: true
       responses:
@@ -2040,7 +2040,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/TxnCategoriesInfoRsHeader'
               examples:
-                getTxnCategoriesInfo: {summary: Response Transactions Categories Info, $ref: '#/components/examples/getTxnCategoriesInfoResponse'}
+                getTxnCategoriesInfo: {$ref: '#/components/examples/getTxnCategoriesInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2081,7 +2081,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UserAddRqHeader'
             examples:
-              createUser: {summary: Request Create User, $ref: '#/components/examples/createUserRequest'}
+              createUser: {$ref: '#/components/examples/createUserRequest'}
         required: true
       responses:
         "200":
@@ -2091,7 +2091,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserAddRsHeader'
               examples:
-                createUser: {summary: Response Create User, $ref: '#/components/examples/createUserResponse'}
+                createUser: {$ref: '#/components/examples/createUserResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2122,7 +2122,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UserDelRqHeader'
             examples:
-              deleteUser: {summary: Request Delete User, $ref: '#/components/examples/deleteUserRequest'}
+              deleteUser: {$ref: '#/components/examples/deleteUserRequest'}
         required: true
       responses:
         "200":
@@ -2132,7 +2132,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserDelRsHeader'
               examples:
-                deleteUser: {summary: Response Delete User, $ref: '#/components/examples/deleteUserResponse'}
+                deleteUser: {$ref: '#/components/examples/deleteUserResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2160,7 +2160,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UserProfileInqRqHeader'
             examples:
-              getUserProfile: {summary: Request User Profile, $ref: '#/components/examples/getUserProfileRequest'}
+              getUserProfile: {$ref: '#/components/examples/getUserProfileRequest'}
         required: true
       responses:
         "200":
@@ -2170,7 +2170,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserProfileInqRsHeader'
               examples:
-                getUserProfile: {summary: Response User Profile, $ref: '#/components/examples/getUserProfileResponse'}
+                getUserProfile: {$ref: '#/components/examples/getUserProfileResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2199,7 +2199,7 @@ paths:
             schema:
               $ref: '#/components/schemas/SignonRqHeader'
             examples:
-              signon: {summary: Request Sign On, $ref: '#/components/examples/signonRequest'}
+              signon: {$ref: '#/components/examples/signonRequest'}
         required: true
       responses:
         "200":
@@ -2209,7 +2209,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/SignonRsHeader'
               examples:
-                signon: {summary: Response Sign On, $ref: '#/components/examples/signonResponse'}
+                signon: {$ref: '#/components/examples/signonResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2239,7 +2239,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UserPasswordModRqHeader'
             examples:
-              updateUserPassword: {summary: Request Update Password, $ref: '#/components/examples/updateUserPasswordRequest'}
+              updateUserPassword: {$ref: '#/components/examples/updateUserPasswordRequest'}
         required: true
       responses:
         "200":
@@ -2249,7 +2249,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserPasswordModRsHeader'
               examples:
-                updateUserPassword: {summary: Response Update Password, $ref: '#/components/examples/updateUserPasswordResponse'}    
+                updateUserPassword: {$ref: '#/components/examples/updateUserPasswordResponse'}    
         "400":
           description: Bad Request
         "401":
@@ -2278,7 +2278,7 @@ paths:
             schema:
               $ref: '#/components/schemas/UserProfileModRqHeader'
             examples:
-              updateUserProfile: {summary: Request Update Profile, $ref: '#/components/examples/updateUserProfileRequest'}
+              updateUserProfile: {$ref: '#/components/examples/updateUserProfileRequest'}
         required: true
       responses:
         "200":
@@ -2288,7 +2288,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/UserProfileModRsHeader'
               examples:
-                updateUserProfile: {summary: Response Update Profile, $ref: '#/components/examples/updateUserProfileResponse'}
+                updateUserProfile: {$ref: '#/components/examples/updateUserProfileResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2318,7 +2318,7 @@ paths:
             schema:
               $ref: '#/components/schemas/RTVInfoRqHeader'
             examples:
-              RTVInfo: {summary: Request RTV Info, $ref: '#/components/examples/RTVInfoRequest'}
+              RTVInfo: {$ref: '#/components/examples/RTVInfoRequest'}
         required: true
       responses:
         "200":
@@ -2328,7 +2328,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/RTVInfoRsHeader'
               examples:
-                RTVInfo: {summary: Response RTV Info, $ref: '#/components/examples/RTVInfoResponse'}
+                RTVInfo: {$ref: '#/components/examples/RTVInfoResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2359,7 +2359,7 @@ paths:
             schema:
               $ref: '#/components/schemas/AckRTVResultRqHeader'
             examples:
-              AckRTVResult: {summary: Request AckRTV Result, $ref: '#/components/examples/AckRTVResultRequest'}
+              AckRTVResult: {$ref: '#/components/examples/AckRTVResultRequest'}
         required: true
       responses:
         "200":
@@ -2369,7 +2369,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/AckRTVResultRsHeader'
               examples:
-                AckRTVResult: {summary: Response AckRTV Result, $ref: '#/components/examples/AckRTVResultResponse'}
+                AckRTVResult: {$ref: '#/components/examples/AckRTVResultResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2399,7 +2399,7 @@ paths:
             schema:
               $ref: '#/components/schemas/AdvanceRTVEnableFIRqHeader'
             examples:
-              AdvanceRTVEnableFI: {summary: Request Advance RTV Enable FI, $ref: '#/components/examples/AdvanceRTVEnableFIRequest'}
+              AdvanceRTVEnableFI: {$ref: '#/components/examples/AdvanceRTVEnableFIRequest'}
         required: true
       responses:
         "200":
@@ -2409,7 +2409,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/AdvanceRTVEnableFIRsHeader'
               examples:
-                AdvanceRTVEnableFI: {summary: Response Advance RTV Enable FI, $ref: '#/components/examples/AdvanceRTVEnableFIResponse'}
+                AdvanceRTVEnableFI: {$ref: '#/components/examples/AdvanceRTVEnableFIResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2440,7 +2440,7 @@ paths:
             schema:
               $ref: '#/components/schemas/RTVTokenRqHeader'
             examples:
-              RTVToken: {summary: Request RTV Token, $ref: '#/components/examples/RTVTokenRequest'}
+              RTVToken: {$ref: '#/components/examples/RTVTokenRequest'}
         required: true
       responses:
         "200":
@@ -2450,7 +2450,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/RTVTokenRsHeader'
               examples:
-                RTVToken: {summary: Response RTV Token, $ref: '#/components/examples/RTVTokenResponse'}
+                RTVToken: {$ref: '#/components/examples/RTVTokenResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2484,7 +2484,7 @@ paths:
             schema:
               $ref: '#/components/schemas/FISearchRqHeaderType'
             examples:
-              searchFI: {summary: Request Search FI, $ref: '#/components/examples/searchFIRequest'}
+              searchFI: {$ref: '#/components/examples/searchFIRequest'}
         required: true
       responses:
         "200":
@@ -2494,7 +2494,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/FISearchRsHeaderType'
               examples:
-                searchFI: {summary: Response Search FI, $ref: '#/components/examples/searchFIResponse'}
+                searchFI: {$ref: '#/components/examples/searchFIResponse'}
         "400":
           description: Bad Request
         "401":
@@ -2525,7 +2525,7 @@ paths:
             schema:
               $ref: '#/components/schemas/AcctVerificationRqHeader'
             examples:
-              verifyAccount: {summary: Request Verify Account, $ref: '#/components/examples/verifyAccountRequest'}
+              verifyAccount: {$ref: '#/components/examples/verifyAccountRequest'}
         required: true
       responses:
         "200":
@@ -2535,7 +2535,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/AcctVerificationRsHeader'
               examples:
-                verifyAccount: {summary: Response Verify Account, $ref: '#/components/examples/verifyAccountResponse'}
+                verifyAccount: {$ref: '#/components/examples/verifyAccountResponse'}
         "400":
           description: Bad Request
         "401":
